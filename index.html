@@ -119,7 +119,7 @@
         </div>
     </footer>
 
-    <!-- Lògica amb Gamma i Imatges Locals del B03X -->
+    <!-- Lògica amb Filtre d'Autonomia de Rang Complet -->
     <script>
         const carsData = [
             { 
@@ -130,7 +130,8 @@
                 priceMin: 22900, 
                 priceMax: 27900, 
                 rangeText: "310 - 420 km",
-                minRangeVal: 310,
+                minRangeVal: 310, 
+                maxRangeVal: 420, // Afegit per avaluar el top del rang
                 batteryText: "43 kWh | 53 kWh",
                 powerText: "115 CV | 136 CV",
                 trunk: 510,
@@ -150,6 +151,7 @@
                 priceMax: 38490, 
                 rangeText: "350 - 520 km",
                 minRangeVal: 350,
+                maxRangeVal: 520,
                 batteryText: "51 kWh | 64 kWh | 77 kWh",
                 powerText: "170 CV - 435 CV",
                 trunk: 363,
@@ -167,6 +169,7 @@
                 priceMax: 50990, 
                 rangeText: "513 - 629 km",
                 minRangeVal: 513,
+                maxRangeVal: 629,
                 batteryText: "60 kWh | 75 kWh",
                 powerText: "283 CV - 513 CV",
                 trunk: 561,
@@ -184,6 +187,7 @@
                 priceMax: 33400, 
                 rangeText: "300 - 410 km",
                 minRangeVal: 300,
+                maxRangeVal: 410,
                 batteryText: "40 kWh | 52 kWh",
                 powerText: "120 CV | 150 CV",
                 trunk: 326,
@@ -201,6 +205,7 @@
                 priceMax: 68900, 
                 rangeText: "394 - 582 km",
                 minRangeVal: 394,
+                maxRangeVal: 582,
                 batteryText: "58 kWh | 77.4 kWh",
                 powerText: "170 CV - 585 CV",
                 trunk: 490,
@@ -335,7 +340,10 @@
             const filtered = carsData.filter(car => {
                 const matchesText = (car.brand + ' ' + car.model).toLowerCase().includes(query);
                 const matchesBody = bodyType === "" || car.type === bodyType;
-                const matchesRange = car.minRangeVal >= minRange || car.rangeText.includes(minRange);
+                
+                // ARA COMPROVA QUE EL FILTRE MÍNIM NO SUPERI L'AUTONOMIA MÀXIMA DEL COTXE
+                const matchesRange = minRange === 0 || car.maxRangeVal >= minRange;
+                
                 const matchesPrice = car.priceMin <= maxPrice;
                 return matchesText && matchesBody && matchesRange && matchesPrice;
             });
