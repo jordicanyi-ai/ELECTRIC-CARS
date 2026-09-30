@@ -119,16 +119,154 @@
         </div>
     </footer>
 
-    <!-- Lògica de Dades i Filtres -->
+    <!-- Lògica amb Carrusel Interactiu per Targeta -->
     <script>
         const carsData = [
-            { id: 1, brand: "MG", model: "MG4 Electric Standard", type: "Utilitari", price: 24290, rangeReal: 280, battery: 51, dcCharge: 88, trunk: 363 },
-            { id: 2, brand: "Tesla", model: "Model 3 Gran Autonomia", type: "Sedan", price: 44990, rangeReal: 530, battery: 75, dcCharge: 250, trunk: 561 },
-            { id: 3, brand: "Renault", model: "5 E-Tech techno", type: "Utilitari", price: 29300, rangeReal: 310, battery: 52, dcCharge: 100, trunk: 326 },
-            { id: 4, brand: "Kia", model: "EV6 Long Range", type: "SUV", price: 46500, rangeReal: 460, battery: 77.4, dcCharge: 240, trunk: 490 },
-            { id: 5, brand: "Volkswagen", model: "ID.4 Pro", type: "SUV", price: 38500, rangeReal: 410, battery: 77, dcCharge: 135, trunk: 543 },
-            { id: 6, brand: "Volvo", model: "EX30 Single Motor", type: "SUV", price: 36770, rangeReal: 340, battery: 51, dcCharge: 130, trunk: 318 }
+            { 
+                id: 1, 
+                brand: "Leapmotor", 
+                model: "B03X Design Pro", 
+                type: "SUV", 
+                price: 24900, 
+                rangeReal: 340, 
+                battery: 53, 
+                dcCharge: 133, 
+                trunk: 510,
+                images: [
+                    "img/b03x-1.jpg",
+                    "img/b03x-2.jpg",
+                    "img/b03x-3.jpg",
+                    "img/b03x-4.jpg"
+                ]
+            },
+            { 
+                id: 2, 
+                brand: "MG", 
+                model: "MG4 Electric Standard", 
+                type: "Utilitari", 
+                price: 24290, 
+                rangeReal: 280, 
+                battery: 51, 
+                dcCharge: 88, 
+                trunk: 363,
+                images: [
+                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 3, 
+                brand: "Tesla", 
+                model: "Model 3 Gran Autonomia", 
+                type: "Sedan", 
+                price: 44990, 
+                rangeReal: 530, 
+                battery: 75, 
+                dcCharge: 250, 
+                trunk: 561,
+                images: [
+                    "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 4, 
+                brand: "Renault", 
+                model: "5 E-Tech techno", 
+                type: "Utilitari", 
+                price: 29300, 
+                rangeReal: 310, 
+                battery: 52, 
+                dcCharge: 100, 
+                trunk: 326,
+                images: [
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 5, 
+                brand: "Kia", 
+                model: "EV6 Long Range", 
+                type: "SUV", 
+                price: 46500, 
+                rangeReal: 460, 
+                battery: 77.4, 
+                dcCharge: 240, 
+                trunk: 490,
+                images: [
+                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 6, 
+                brand: "Volkswagen", 
+                model: "ID.4 Pro", 
+                type: "SUV", 
+                price: 38500, 
+                rangeReal: 410, 
+                battery: 77, 
+                dcCharge: 135, 
+                trunk: 543,
+                images: [
+                    "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 7, 
+                brand: "Volvo", 
+                model: "EX30 Single Motor", 
+                type: "SUV", 
+                price: 36770, 
+                rangeReal: 340, 
+                battery: 51, 
+                dcCharge: 130, 
+                trunk: 318,
+                images: [
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
+                ]
+            }
         ];
+
+        // Estat per guardar quin index de foto mostra cada cotxe
+        let currentImageIndexes = {};
+
+        function changeSlide(carId, direction, event) {
+            event.stopPropagation();
+            const car = carsData.find(c => c.id === carId);
+            if (!car) return;
+
+            if (currentImageIndexes[carId] === undefined) {
+                currentImageIndexes[carId] = 0;
+            }
+
+            currentImageIndexes[carId] += direction;
+
+            if (currentImageIndexes[carId] >= car.images.length) {
+                currentImageIndexes[carId] = 0;
+            } else if (currentImageIndexes[carId] < 0) {
+                currentImageIndexes[carId] = car.images.length - 1;
+            }
+
+            // Actualitzar la imatge i els punts indicadors visualment
+            const imgElement = document.getElementById(`car-img-${carId}`);
+            if (imgElement) {
+                imgElement.src = car.images[currentImageIndexes[carId]];
+            }
+
+            // Actualitzar puntets indicadors
+            const dotsContainer = document.getElementById(`dots-${carId}`);
+            if (dotsContainer) {
+                dotsContainer.innerHTML = car.images.map((_, i) => `
+                    <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[carId] ? 'bg-white w-3' : 'bg-white/60'}"></span>
+                `).join('');
+            }
+        }
 
         function renderCars(data) {
             const grid = document.getElementById('cars-grid');
@@ -139,48 +277,79 @@
                 return;
             }
 
-            grid.innerHTML = data.map(car => `
-                <div class="bg-white rounded-2xl border border-slate-200/80 p-6 flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-200">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <div>
-                                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">${car.brand}</span>
-                                <h3 class="font-bold text-slate-900 text-base">${car.model}</h3>
-                            </div>
-                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">${car.type}</span>
-                        </div>
-                        
-                        <div class="text-2xl font-black text-slate-900 mb-5">${car.price.toLocaleString()} €</div>
+            grid.innerHTML = data.map(car => {
+                if (currentImageIndexes[car.id] === undefined) {
+                    currentImageIndexes[car.id] = 0;
+                }
+                const activeImgIdx = currentImageIndexes[car.id];
 
-                        <div class="grid grid-cols-2 gap-3 py-4 border-y border-slate-100 text-xs mb-2">
-                            <div class="flex items-center gap-2.5 text-slate-700">
-                                <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
-                                    <i class="fa-solid fa-road text-xs"></i>
+                return `
+                    <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-200">
+                        <div>
+                            <!-- Carrusel / Slider a la miniatura -->
+                            <div class="h-48 w-full bg-slate-100 relative overflow-hidden group">
+                                <img id="car-img-${car.id}" src="${car.images[activeImgIdx]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover transition duration-300">
+                                
+                                <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-xs z-10">
+                                    ${car.type}
+                                </span>
+
+                                <!-- Botons de desplaçament del Carrusel -->
+                                <button onclick="changeSlide(${car.id}, -1, event)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition shadow-md">
+                                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                                </button>
+                                <button onclick="changeSlide(${car.id}, 1, event)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition shadow-md">
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </button>
+
+                                <!-- Indicadors de punts -->
+                                <div id="dots-${car.id}" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 items-center bg-black/30 px-2 py-1 rounded-full backdrop-blur-xs">
+                                    ${car.images.map((_, i) => `
+                                        <span class="w-1.5 h-1.5 rounded-full transition-all ${i === activeImgIdx ? 'bg-white w-3' : 'bg-white/60'}"></span>
+                                    `).join('')}
                                 </div>
-                                <span><strong>${car.rangeReal} km</strong> reals</span>
                             </div>
-                            <div class="flex items-center gap-2.5 text-slate-700">
-                                <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
-                                    <i class="fa-solid fa-battery-half text-xs"></i>
+
+                            <!-- Contingut de la Targeta -->
+                            <div class="p-6">
+                                <div class="mb-2">
+                                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">${car.brand}</span>
+                                    <h3 class="font-bold text-slate-900 text-base">${car.model}</h3>
                                 </div>
-                                <span><strong>${car.battery} kWh</strong> útils</span>
-                            </div>
-                            <div class="flex items-center gap-2.5 text-slate-700">
-                                <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
-                                    <i class="fa-solid fa-bolt text-xs"></i>
+                                
+                                <div class="text-2xl font-black text-slate-900 mb-5">${car.price.toLocaleString()} €</div>
+
+                                <div class="grid grid-cols-2 gap-3 py-4 border-y border-slate-100 text-xs">
+                                    <div class="flex items-center gap-2.5 text-slate-700">
+                                        <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
+                                            <i class="fa-solid fa-road text-xs"></i>
+                                        </div>
+                                        <span><strong>${car.rangeReal} km</strong> reals</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 text-slate-700">
+                                        <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
+                                            <i class="fa-solid fa-battery-half text-xs"></i>
+                                        </div>
+                                        <span><strong>${car.battery} kWh</strong> útils</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 text-slate-700">
+                                        <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
+                                            <i class="fa-solid fa-bolt text-xs"></i>
+                                        </div>
+                                        <span><strong>${car.dcCharge} kW</strong> màx DC</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 text-slate-700">
+                                        <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
+                                            <i class="fa-solid fa-box text-xs"></i>
+                                        </div>
+                                        <span><strong>${car.trunk} L</strong> maleter</span>
+                                    </div>
                                 </div>
-                                <span><strong>${car.dcCharge} kW</strong> màx DC</span>
-                            </div>
-                            <div class="flex items-center gap-2.5 text-slate-700">
-                                <div class="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-emerald-600">
-                                    <i class="fa-solid fa-box text-xs"></i>
-                                </div>
-                                <span><strong>${car.trunk} L</strong> maleter</span>
                             </div>
                         </div>
                     </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function filterCars() {
