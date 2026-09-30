@@ -66,7 +66,7 @@
                 </select>
             </div>
 
-            <!-- Filtro por Plazas (Nuevo) -->
+            <!-- Filtro por Plazas -->
             <div>
                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Plazas Mínimas</label>
                 <select id="seats-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
@@ -321,7 +321,6 @@
                 </div>
             `).join('');
 
-            // Galería ampliada de fotos (interior, exterior, etc.)
             const galleryHtml = car.images.map(img => `
                 <div class="h-28 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100">
                     <img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover hover:scale-110 transition duration-300">
@@ -364,7 +363,6 @@
                 </div>
 
                 <div class="p-6 sm:p-8 space-y-6">
-                    <!-- Precios y Capacidades Principales -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-slate-100">
                         <div>
                             <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
@@ -385,10 +383,9 @@
                         <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
                     </div>
 
-                    <!-- Galería Ampliada (Interior / Exterior) -->
                     <div class="space-y-3">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
-                            <i class="fa-solid fa-images text-emerald-600"></i> Galería de Imágenes (Exterior e Interior)
+                            <i class="fa-solid fa-images text-emerald-600"></i> Galería de Imágenes
                         </h4>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                             ${galleryHtml}
@@ -435,7 +432,6 @@
 
                     <div class="pt-4 flex justify-end gap-3 border-t border-slate-100">
                         <button onclick="closeCarModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl text-xs font-bold transition">Cerrar</button>
-                        <a href="mailto:contacto@electricos.eu?subject=Información%20sobre%20${car.brand}%20${car.model}" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl text-xs font-bold transition shadow-sm">Pedir presupuesto</a>
                     </div>
                 </div>
             `;
