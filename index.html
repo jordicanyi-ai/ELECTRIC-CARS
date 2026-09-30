@@ -142,6 +142,8 @@
                 batteryText: "39,8 kWh | 53 kWh",
                 powerText: "130 kW (177 CV) | 145 kW (197 CV)",
                 trunk: 510,
+                seats: 5,
+                acceleration: "8,6 s (0-100 km/h)",
                 description: "El Leapmotor B03X destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes para la ciudad y trayectos interurbanos.",
                 charging: "Carga rápida CC (30-80%): 16 - 17 min.",
                 brandUrl: "https://www.leapmotor.com",
@@ -154,8 +156,8 @@
                     { name: "Beige Escarcha", hex: "#e5e3d4", border: "#cbd5e1" }
                 ],
                 trims: [
-                    { name: "Pro", price: "22.900 €", battery: "39,8 kWh", power: "130 kW (177 CV)", range: "292 km WLTP" },
-                    { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP" }
+                    { name: "Pro", price: "22.900 €", battery: "39,8 kWh", power: "130 kW (177 CV)", range: "292 km WLTP", accel: "8,6 s" },
+                    { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP", accel: "8,6 s" }
                 ],
                 videos: [
                     { title: "Prueba a fondo y primeras impresiones", url: "https://youtube.com", thumb: "img/b03x-1.jpg" },
@@ -181,6 +183,8 @@
                 batteryText: "51 kWh | 64 kWh | 77 kWh",
                 powerText: "170 CV - 435 CV",
                 trunk: 363,
+                seats: 5,
+                acceleration: "3,8 s - 7,7 s (0-100 km/h)",
                 description: "Uno de los utilitarios eléctricos más vendidos gracias a su plataforma dedicada, comportamiento dinámico excelente y versiones de altas prestaciones (XPower).",
                 charging: "Carga rápida CC hasta 140 kW según versión.",
                 brandUrl: "https://www.mg.es",
@@ -191,9 +195,9 @@
                     { name: "Gris Metalizado", hex: "#475569" }
                 ],
                 trims: [
-                    { name: "Standard", price: "24.290 €", battery: "51 kWh", power: "170 CV", range: "350 km" },
-                    { name: "Comfort / Luxury", price: "29.990 €", battery: "64 kWh", power: "204 CV", range: "450 km" },
-                    { name: "XPower (Deportivo)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km" }
+                    { name: "Standard", price: "24.290 €", battery: "51 kWh", power: "170 CV", range: "350 km", accel: "7,7 s" },
+                    { name: "Comfort / Luxury", price: "29.990 €", battery: "64 kWh", power: "204 CV", range: "450 km", accel: "7,9 s" },
+                    { name: "XPower (Deportivo)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km", accel: "3,8 s" }
                 ],
                 videos: [
                     { title: "¿Por qué arrasa en Europa? Reseña completa", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
@@ -217,6 +221,8 @@
                 batteryText: "60 kWh | 75 kWh",
                 powerText: "283 CV - 513 CV",
                 trunk: 561,
+                seats: 5,
+                acceleration: "3,1 s - 6,1 s (0-100 km/h)",
                 description: "La berlina de referencia mundial en movilidad eléctrica. Ofrece tecnología puntera, eficiencia energética líder y acceso a la red Supercharger.",
                 charging: "Supercarga hasta 250 kW.",
                 brandUrl: "https://www.tesla.com/es_es",
@@ -227,8 +233,8 @@
                     { name: "Rojo Ultra", hex: "#dc2626" }
                 ],
                 trims: [
-                    { name: "Tracción Trasera (Standard)", price: "39.990 €", battery: "60 kWh", power: "283 CV", range: "513 km" },
-                    { name: "Gran Autonomía (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km" }
+                    { name: "Tracción Trasera (Standard)", price: "39.990 €", battery: "60 kWh", power: "283 CV", range: "513 km", accel: "6,1 s" },
+                    { name: "Gran Autonomía (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km", accel: "4,4 s" }
                 ],
                 videos: [
                     { title: "Nuevo Tesla Model 3 (Highland): Cambios clave", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" },
@@ -291,6 +297,7 @@
                         <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-battery-half text-emerald-600 mr-1"></i> ${trim.battery}</span>
                         <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-bolt text-emerald-600 mr-1"></i> ${trim.power}</span>
                         <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-road text-emerald-600 mr-1"></i> ${trim.range}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-stopwatch text-emerald-600 mr-1"></i> 0-100: ${trim.accel}</span>
                     </div>
                 </div>
             `).join('');
@@ -338,14 +345,19 @@
                 </div>
 
                 <div class="p-6 sm:p-8 space-y-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-100 gap-4">
+                    <!-- Precios y Capacidades Principales -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-slate-100">
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida orientativo</span>
-                            <div class="text-3xl font-black text-slate-900">${priceDisplay}</div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
+                            <div class="text-2xl font-black text-slate-900">${priceDisplay}</div>
                         </div>
-                        <div class="text-right">
+                        <div>
                             <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
                             <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Plazas / Seients</span>
+                            <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
                         </div>
                     </div>
 
@@ -374,6 +386,12 @@
                                 <i class="fa-solid fa-charging-station"></i> Sistema de Carga
                             </div>
                             <div class="text-sm font-semibold text-slate-900">${car.charging}</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-1">
+                            <div class="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase">
+                                <i class="fa-solid fa-stopwatch"></i> Aceleración 0-100 km/h
+                            </div>
+                            <div class="text-sm font-semibold text-slate-900">${car.acceleration}</div>
                         </div>
                     </div>
 
