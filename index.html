@@ -286,8 +286,8 @@
                 return `
                     <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-200">
                         <div>
-                            <!-- Carrusel / Slider a la miniatura -->
-                            <div class="h-48 w-full bg-slate-100 relative overflow-hidden group">
+                            <!-- Carrusel / Slider a la miniatura (Ara més alt: h-64) -->
+                            <div class="h-64 w-full bg-slate-100 relative overflow-hidden group">
                                 <img id="car-img-${car.id}" src="${car.images[activeImgIdx]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover transition duration-300">
                                 
                                 <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-xs z-10">
