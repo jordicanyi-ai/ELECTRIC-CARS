@@ -114,7 +114,6 @@
     <!-- Modal de Ficha Detallada del Coche -->
     <div id="car-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 transform transition-all" onclick="event.stopPropagation()">
-            <!-- Contenido inyectado dinámicamente por JavaScript -->
             <div id="modal-content"></div>
         </div>
     </div>
@@ -133,44 +132,46 @@
             { 
                 id: 1, 
                 brand: "Leapmotor", 
-                model: "B03X[cite: 1, 2]", 
+                model: "B03X", 
                 type: "SUV", 
                 priceMin: 22900, 
                 priceMax: 27900, 
-                rangeText: "292 - 382 km[cite: 2]",
+                rangeText: "292 - 382 km",
                 minRangeVal: 292, 
                 maxRangeVal: 382,
-                batteryText: "39,8 kWh | 53 kWh[cite: 2]",
-                powerText: "130 kW (177 CV) | 145 kW (197 CV)[cite: 2]",
+                batteryText: "39,8 kWh | 53 kWh",
+                powerText: "130 kW (177 CV) | 145 kW (197 CV)",
                 trunk: 510,
-                description: "El Leapmotor B03X[cite: 1, 2] destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes para la ciudad y trayectos interurbanos.",
-                charging: "Carga rápida CC (30-80%): 16 - 17 min[cite: 2].",
+                description: "El Leapmotor B03X destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes para la ciudad y trayectos interurbanos.",
+                charging: "Carga rápida CC (30-80%): 16 - 17 min.",
                 brandUrl: "https://www.leapmotor.com",
                 colors: [
-                    { name: "Marrón Bellota[cite: 1]", hex: "#8c7355" },
-                    { name: "Azul Arándano[cite: 1]", hex: "#3b4d66" },
-                    { name: "Plata Estelar[cite: 1]", hex: "#cbd5e1", border: "#94a3b8" },
-                    { name: "Verde alga[cite: 1]", hex: "#233d2c" },
-                    { name: "Gris Tundra[cite: 1]", hex: "#71797e" },
-                    { name: "Beige Escarcha[cite: 1]", hex: "#e5e3d4", border: "#cbd5e1" }
+                    { name: "Marrón Bellota", hex: "#8c7355" },
+                    { name: "Azul Arándano", hex: "#3b4d66" },
+                    { name: "Plata Estelar", hex: "#cbd5e1", border: "#94a3b8" },
+                    { name: "Verde alga", hex: "#233d2c" },
+                    { name: "Gris Tundra", hex: "#71797e" },
+                    { name: "Beige Escarcha", hex: "#e5e3d4", border: "#cbd5e1" }
                 ],
                 trims: [
-                    { name: "Pro[cite: 2]", price: "22.900 €", battery: "39,8 kWh[cite: 2]", power: "130 kW (177 CV)[cite: 2]", range: "292 km WLTP[cite: 2]" },
-                    { name: "ProMax[cite: 2]", price: "27.900 €", battery: "53 kWh[cite: 2]", power: "145 kW (197 CV)[cite: 2]", range: "382 km WLTP[cite: 2]" }
+                    { name: "Pro", price: "22.900 €", battery: "39,8 kWh", power: "130 kW (177 CV)", range: "292 km WLTP" },
+                    { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP" }
                 ],
                 videos: [
-                    { title: "Prueba a fondo y primeras impresiones", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Análisis de consumo y autonomía real", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Prueba a fondo y primeras impresiones", url: "https://youtube.com", thumb: "img/b03x-1.jpg" },
+                    { title: "Análisis de consumo y autonomía real", url: "https://youtube.com", thumb: "img/b03x-2.jpg" }
                 ],
                 images: [
-                    "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                    "img/b03x-1.jpg",
+                    "img/b03x-2.jpg",
+                    "img/b03x-3.jpg",
+                    "img/b03x-4.jpg"
                 ]
             },
             { 
                 id: 2, 
                 brand: "MG", 
-                model: "MG4 Electric Gama", 
+                model: "MG4 Electric", 
                 type: "Utilitario", 
                 priceMin: 24290, 
                 priceMax: 38490, 
@@ -206,7 +207,7 @@
             { 
                 id: 3, 
                 brand: "Tesla", 
-                model: "Model 3 Gama", 
+                model: "Model 3", 
                 type: "Sedan", 
                 priceMin: 39990, 
                 priceMax: 50990, 
@@ -236,75 +237,6 @@
                 images: [
                     "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
                     "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80"
-                ]
-            },
-            { 
-                id: 4, 
-                brand: "Renault", 
-                model: "5 E-Tech Gama", 
-                type: "Utilitario", 
-                priceMin: 27900, 
-                priceMax: 33400, 
-                rangeText: "300 - 410 km",
-                minRangeVal: 300,
-                maxRangeVal: 410,
-                batteryText: "40 kWh | 52 kWh",
-                powerText: "120 CV | 150 CV",
-                trunk: 326,
-                description: "Diseño retro-futurista inconfundible combinado con una agilidad urbana increíble y sistemas de conectividad avanzados de Google integrados.",
-                charging: "Carga bidireccional V2L y V2G disponible.",
-                brandUrl: "https://www.renault.es",
-                colors: [
-                    { name: "Amarillo Pop", hex: "#facc15" },
-                    { name: "Verde Pop", hex: "#84cc16" },
-                    { name: "Azul Nocturne", hex: "#1e3a8a" },
-                    { name: "Negro Estelar", hex: "#0f172a" }
-                ],
-                trims: [
-                    { name: "Urban Range", price: "27.900 €", battery: "40 kWh", power: "120 CV", range: "300 km" },
-                    { name: "Comfort Range", price: "33.400 €", battery: "52 kWh", power: "150 CV", range: "410 km" }
-                ],
-                videos: [
-                    { title: "Primer contacto con el Renault 5 eléctrico", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
-                ],
-                images: [
-                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
-                ]
-            },
-            { 
-                id: 5, 
-                brand: "Kia", 
-                model: "EV6 Gama", 
-                type: "SUV", 
-                priceMin: 44500, 
-                priceMax: 68900, 
-                rangeText: "394 - 582 km",
-                minRangeVal: 394,
-                maxRangeVal: 582,
-                batteryText: "58 kWh | 77.4 kWh",
-                powerText: "170 CV - 585 CV",
-                trunk: 490,
-                description: "Arquitectura de 800V para recargas ultrarrápidas, diseño crossover deportivo y un interior espacioso lleno de materiales sostenibles.",
-                charging: "Recarga ultrarrápida del 10% al 80% en solo 18 minutos.",
-                brandUrl: "https://www.kia.com/es",
-                colors: [
-                    { name: "Gris Interestelar", hex: "#334155" },
-                    { name: "Blanco Glaciar", hex: "#f8fafc", border: "#cbd5e1" },
-                    { name: "Verde Urban", hex: "#065f46" },
-                    { name: "Negro Aurora", hex: "#020617" }
-                ],
-                trims: [
-                    { name: "Air (Estándard)", price: "44.500 €", battery: "58 kWh", power: "170 CV", range: "394 km" },
-                    { name: "GT-Line (Larga Autonomía)", price: "55.000 €", battery: "77.4 kWh", power: "228 CV", range: "528 km" },
-                    { name: "GT (Alto Rendimiento)", price: "68.900 €", battery: "77.4 kWh", power: "585 CV", range: "424 km" }
-                ],
-                videos: [
-                    { title: "Prueba Kia EV6 GT: Superando expectativas", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
-                ],
-                images: [
-                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
                 ]
             }
         ];
@@ -341,7 +273,6 @@
             }
         }
 
-        // Función para abrir la ficha detallada (Modal)
         function openCarModal(carId) {
             const car = carsData.find(c => c.id === carId);
             if (!car) return;
@@ -423,7 +354,6 @@
                         <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
                     </div>
 
-                    <!-- Gamas y versiones -->
                     <div class="space-y-3">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gamas y Versiones Disponibles</h4>
                         <div class="space-y-2.5">
@@ -431,7 +361,6 @@
                         </div>
                     </div>
 
-                    <!-- Colores -->
                     <div class="space-y-3">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Colores Disponibles</h4>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
@@ -448,7 +377,6 @@
                         </div>
                     </div>
 
-                    <!-- Mosaic de Vídeos de Redes / YouTube -->
                     <div class="space-y-3 pt-2">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
                             <i class="fa-brands fa-youtube text-red-600"></i> Vídeos y Reseñas de Redes
@@ -498,7 +426,6 @@
                 return `
                     <div onclick="openCarModal(${car.id})" class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-emerald-500/50 transition duration-300 cursor-pointer group">
                         <div>
-                            <!-- Carrusel / Slider -->
                             <div class="h-64 w-full bg-slate-100 relative overflow-hidden">
                                 <img id="car-img-${car.id}" src="${car.images[activeImgIdx]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
                                 
@@ -520,7 +447,6 @@
                                 </div>
                             </div>
 
-                            <!-- Contenido y Gama -->
                             <div class="p-6">
                                 <div class="mb-2">
                                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">${car.brand}</span>
@@ -552,7 +478,6 @@
                             </div>
                         </div>
 
-                        <!-- Botón inferior -->
                         <div class="px-6 pb-6 pt-0">
                             <div class="w-full bg-slate-50 group-hover:bg-emerald-50 text-slate-600 group-hover:text-emerald-700 font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
                                 Ver ficha técnica completa <i class="fa-solid fa-arrow-right text-[10px]"></i>
