@@ -705,6 +705,9 @@
             document.getElementById('range-val').innerText = minRange + ' km';
             document.getElementById('price-val').innerText = maxPrice === 90000 ? 'Sin límite' : maxPrice.toLocaleString() + ' €';
 
+            // Comprobar si no hay ningún filtro aplicado
+            const isUnfiltered = (query === "" && bodyType === "" && seatsFilter === "" && minRange === 0 && maxPrice === 90000);
+
             const filtered = carsData.filter(car => {
                 const matchesText = (car.brand + ' ' + car.model).toLowerCase().includes(query);
                 const matchesBody = bodyType === "" || car.type === bodyType;
@@ -713,6 +716,15 @@
                 const matchesPrice = car.priceMin <= maxPrice;
                 return matchesText && matchesBody && matchesSeats && matchesRange && matchesPrice;
             });
+
+            // Si no está filtrado, ordenamos alfabéticamente por marca y modelo
+            if (isUnfiltered) {
+                filtered.sort((a, b) => {
+                    const nameA = (a.brand + " " + a.model).toLowerCase();
+                    const nameB = (b.brand + " " + b.model).toLowerCase();
+                    return nameA.localeCompare(nameB);
+                });
+            }
 
             renderCars(filtered);
         }
@@ -726,7 +738,8 @@
             filterCars();
         }
 
-        renderCars(carsData);
+        // Carga inicial aplicando el orden alfabético por defecto al no haber filtros
+        filterCars();
     </script>
 </body>
 </html>
