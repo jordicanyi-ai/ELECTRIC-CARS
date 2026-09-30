@@ -13,7 +13,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
 
-    <!-- Cabecera Rediseñada (Más Atractiva y Moderna) -->
+    <!-- Cabecera Rediseñada -->
     <header class="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3.5">
@@ -47,7 +47,7 @@
             </button>
         </div>
 
-        <!-- Panel de Filtros (Oculto en móvil por defecto para evitar solapamientos) -->
+        <!-- Panel de Filtros -->
         <aside id="filters-panel" class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs h-fit lg:sticky lg:top-24 space-y-6">
             <div class="flex justify-between items-center pb-4 border-b border-slate-100">
                 <h2 class="font-bold text-slate-900 flex items-center gap-2 text-sm uppercase tracking-wider">
@@ -163,6 +163,7 @@
                 powerText: "130 kW (177 CV) | 145 kW (197 CV)",
                 trunk: 510,
                 seats: 5,
+                launchYear: 2026,
                 acceleration: "8,6 s (0-100 km/h)",
                 description: "El Leapmotor B03X destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes para la ciudad y trayectos interurbanos.",
                 charging: "Carga rápida CC (30-80%): 16 - 17 min.",
@@ -204,6 +205,7 @@
                 powerText: "170 CV - 435 CV",
                 trunk: 363,
                 seats: 5,
+                launchYear: 2022,
                 acceleration: "3,8 s - 7,7 s (0-100 km/h)",
                 description: "Uno de los utilitarios eléctricos más vendidos gracias a su plataforma dedicada, comportamiento dinámico excelente y versiones de altas prestaciones (XPower).",
                 charging: "Carga rápida CC hasta 140 kW según versión.",
@@ -243,6 +245,7 @@
                 powerText: "283 CV - 513 CV",
                 trunk: 561,
                 seats: 5,
+                launchYear: 2019,
                 acceleration: "3,1 s - 6,1 s (0-100 km/h)",
                 description: "La berlina de referencia mundial en movilidad eléctrica. Ofrece tecnología puntera, eficiencia energética líder y acceso a la red Supercharger.",
                 charging: "Supercarga hasta 250 kW.",
@@ -271,7 +274,6 @@
 
         let currentImageIndexes = {};
 
-        // Función para desplegar/ocultar los filtros en versión móvil
         function toggleMobileFilters() {
             const panel = document.getElementById('filters-panel');
             const icon = document.getElementById('filter-toggle-icon');
@@ -381,10 +383,11 @@
                 </div>
 
                 <div class="p-6 sm:p-8 space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-slate-100">
+                    <!-- Cuadros de capacidades: Precio, Maletero, Plazas y Año de Lanzamiento -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-6 border-b border-slate-100">
                         <div>
                             <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
-                            <div class="text-2xl font-black text-slate-900">${priceDisplay}</div>
+                            <div class="text-xl font-black text-slate-900">${priceDisplay}</div>
                         </div>
                         <div>
                             <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
@@ -393,6 +396,10 @@
                         <div>
                             <span class="text-xs font-bold uppercase text-slate-400">Plazas</span>
                             <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Lanzamiento España</span>
+                            <div class="text-lg font-bold text-emerald-600">${car.launchYear}</div>
                         </div>
                     </div>
 
