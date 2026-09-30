@@ -66,6 +66,16 @@
                 </select>
             </div>
 
+            <!-- Filtro por Plazas (Nuevo) -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Plazas Mínimas</label>
+                <select id="seats-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
+                    <option value="">Cualquier plaza</option>
+                    <option value="5">5 plazas</option>
+                    <option value="7">7 plazas</option>
+                </select>
+            </div>
+
             <!-- Autonomía mínima -->
             <div>
                 <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
@@ -126,7 +136,7 @@
         </div>
     </footer>
 
-    <!-- Lógica de Búsqueda, Galería y Fichas Clicables (Modals) -->
+    <!-- Lógica de Cerca, Galería y Fichas Clicables (Modals) -->
     <script>
         const carsData = [
             { 
@@ -160,8 +170,8 @@
                     { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP", accel: "8,6 s" }
                 ],
                 videos: [
-                    { title: "Prueba a fondo y primeras impresiones", url: "https://youtube.com", thumb: "img/b03x-1.jpg" },
-                    { title: "Análisis de consumo y autonomía real", url: "https://youtube.com", thumb: "img/b03x-2.jpg" }
+                    { title: "Leapmotor B03X: Prueba completa y detalles del interior", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+review", thumb: "img/b03x-1.jpg" },
+                    { title: "Análisis autonomía y sistema multimedia", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+autonomia", thumb: "img/b03x-2.jpg" }
                 ],
                 images: [
                     "img/b03x-1.jpg",
@@ -200,12 +210,13 @@
                     { name: "XPower (Deportivo)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km", accel: "3,8 s" }
                 ],
                 videos: [
-                    { title: "¿Por qué arrasa en Europa? Reseña completa", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Prueba del explosivo MG4 XPower de 435 CV", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                    { title: "MG4 Electric: Prueba a fondo en español", url: "https://www.youtube.com/results?search_query=MG4+Electric+prueba+espanol", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
+                    { title: "MG4 XPower en circuito y autovía", url: "https://www.youtube.com/results?search_query=MG4+XPower+prueba", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
                 ]
             },
             { 
@@ -237,12 +248,13 @@
                     { name: "Gran Autonomía (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km", accel: "4,4 s" }
                 ],
                 videos: [
-                    { title: "Nuevo Tesla Model 3 (Highland): Cambios clave", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Test de autonomía real en autovía", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Nuevo Tesla Model 3 Highland: Análisis completo", url: "https://www.youtube.com/results?search_query=Tesla+Model+3+Highland+prueba+espanol", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" },
+                    { title: "Test de consumo real y autonomía en autopista", url: "https://www.youtube.com/results?search_query=Tesla+Model+3+autonomia+real", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80"
+                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"
                 ]
             }
         ];
@@ -309,6 +321,13 @@
                 </div>
             `).join('');
 
+            // Galería ampliada de fotos (interior, exterior, etc.)
+            const galleryHtml = car.images.map(img => `
+                <div class="h-28 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100">
+                    <img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                </div>
+            `).join('');
+
             const videosHtml = car.videos.map(video => `
                 <a href="${video.url}" target="_blank" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:border-emerald-500 transition block shadow-xs">
                     <div class="h-32 w-full relative overflow-hidden bg-slate-900">
@@ -356,7 +375,7 @@
                             <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
                         </div>
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Plazas / Seients</span>
+                            <span class="text-xs font-bold uppercase text-slate-400">Plazas</span>
                             <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
                         </div>
                     </div>
@@ -364,6 +383,16 @@
                     <div class="space-y-3">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Descripción General</h4>
                         <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
+                    </div>
+
+                    <!-- Galería Ampliada (Interior / Exterior) -->
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-images text-emerald-600"></i> Galería de Imágenes (Exterior e Interior)
+                        </h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                            ${galleryHtml}
+                        </div>
                     </div>
 
                     <div class="space-y-3">
@@ -397,7 +426,7 @@
 
                     <div class="space-y-3 pt-2">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
-                            <i class="fa-brands fa-youtube text-red-600"></i> Vídeos y Reseñas de Redes
+                            <i class="fa-brands fa-youtube text-red-600"></i> Vídeos y Reseñas de YouTube
                         </h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             ${videosHtml}
@@ -509,6 +538,7 @@
         function filterCars() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const bodyType = document.getElementById('body-filter').value;
+            const seatsFilter = document.getElementById('seats-filter').value;
             const minRange = parseInt(document.getElementById('range-filter').value);
             const maxPrice = parseInt(document.getElementById('price-filter').value);
 
@@ -518,9 +548,10 @@
             const filtered = carsData.filter(car => {
                 const matchesText = (car.brand + ' ' + car.model).toLowerCase().includes(query);
                 const matchesBody = bodyType === "" || car.type === bodyType;
+                const matchesSeats = seatsFilter === "" || car.seats >= parseInt(seatsFilter);
                 const matchesRange = minRange === 0 || car.maxRangeVal >= minRange;
                 const matchesPrice = car.priceMin <= maxPrice;
-                return matchesText && matchesBody && matchesRange && matchesPrice;
+                return matchesText && matchesBody && matchesSeats && matchesRange && matchesPrice;
             });
 
             renderCars(filtered);
@@ -529,6 +560,7 @@
         function resetFilters() {
             document.getElementById('search-input').value = '';
             document.getElementById('body-filter').value = '';
+            document.getElementById('seats-filter').value = '';
             document.getElementById('range-filter').value = 0;
             document.getElementById('price-filter').value = 90000;
             filterCars();
