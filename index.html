@@ -11,23 +11,23 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+<body class="bg-zinc-50 text-zinc-900 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
 
-    <!-- Cabecera Rediseñada -->
-    <header class="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
+    <!-- Cabecera Opción 2: Verd Sostenible & Premium -->
+    <header class="bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-950 text-white border-b border-zinc-800 sticky top-0 z-40 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3.5">
-                <div class="bg-emerald-500 text-slate-950 p-3 rounded-2xl shadow-lg flex items-center justify-center transform hover:scale-105 transition">
+                <div class="bg-emerald-500 text-zinc-950 p-3 rounded-2xl shadow-lg flex items-center justify-center transform hover:scale-105 transition">
                     <i class="fa-solid fa-bolt-lightning text-xl"></i>
                 </div>
                 <div>
                     <h1 class="text-2xl font-black tracking-tight">electricos<span class="text-emerald-400">.eu</span></h1>
-                    <p class="text-xs text-slate-400 font-medium">Comparador independiente de vehículos eléctricos</p>
+                    <p class="text-xs text-zinc-400 font-medium">Comparador independiente de vehículos eléctricos</p>
                 </div>
             </div>
             
             <div class="flex items-center gap-3">
-                <div class="hidden md:flex items-center gap-2 text-xs font-semibold text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700 shadow-inner">
+                <div class="hidden md:flex items-center gap-2 text-xs font-semibold text-zinc-300 bg-zinc-800/80 px-4 py-2 rounded-full border border-zinc-700 shadow-inner">
                     <i class="fa-solid fa-shield-halved text-emerald-400"></i> Datos técnicos neutros y verificados
                 </div>
             </div>
@@ -39,36 +39,36 @@
         
         <!-- Botón Desplegable de Filtros para Móvil -->
         <div class="lg:hidden w-full">
-            <button onclick="toggleMobileFilters()" class="w-full bg-white border border-slate-200 py-3 px-4 rounded-2xl font-bold text-sm text-slate-800 shadow-xs flex items-center justify-between">
+            <button onclick="toggleMobileFilters()" class="w-full bg-white border border-zinc-200 py-3 px-4 rounded-2xl font-bold text-sm text-zinc-800 shadow-xs flex items-center justify-between">
                 <span class="flex items-center gap-2">
                     <i class="fa-solid fa-filter text-emerald-600"></i> Filtrar vehículos
                 </span>
-                <i id="filter-toggle-icon" class="fa-solid fa-chevron-down text-xs text-slate-400 transition"></i>
+                <i id="filter-toggle-icon" class="fa-solid fa-chevron-down text-xs text-zinc-400 transition"></i>
             </button>
         </div>
 
         <!-- Panel de Filtros -->
-        <aside id="filters-panel" class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs h-fit lg:sticky lg:top-24 space-y-6">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-                <h2 class="font-bold text-slate-900 flex items-center gap-2 text-sm uppercase tracking-wider">
+        <aside id="filters-panel" class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-2xl border border-zinc-200/80 shadow-xs h-fit lg:sticky lg:top-24 space-y-6">
+            <div class="flex justify-between items-center pb-4 border-b border-zinc-100">
+                <h2 class="font-bold text-zinc-900 flex items-center gap-2 text-sm uppercase tracking-wider">
                     <i class="fa-solid fa-filter text-emerald-600"></i> Filtros
                 </h2>
-                <button onclick="resetFilters()" class="text-xs font-semibold text-slate-400 hover:text-emerald-600 transition">Limpiar</button>
+                <button onclick="resetFilters()" class="text-xs font-semibold text-zinc-400 hover:text-emerald-600 transition">Limpiar</button>
             </div>
 
             <!-- Búsqueda por texto -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Marca o Modelo</label>
+                <label class="block text-xs font-bold uppercase text-zinc-500 mb-2">Marca o Modelo</label>
                 <div class="relative">
-                    <input type="text" id="search-input" oninput="filterCars()" placeholder="Ej: Leapmotor, Tesla..." class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+                    <input type="text" id="search-input" oninput="filterCars()" placeholder="Ej: Leapmotor, Tesla..." class="w-full pl-9 pr-4 py-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-zinc-400 text-xs"></i>
                 </div>
             </div>
 
             <!-- Filtro por Carrocería -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipo de Vehículo</label>
-                <select id="body-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
+                <label class="block text-xs font-bold uppercase text-zinc-500 mb-2">Tipo de Vehículo</label>
+                <select id="body-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
                     <option value="">Todos los tipos</option>
                     <option value="Utilitario">Utilitario / Compacto</option>
                     <option value="SUV">SUV</option>
@@ -78,8 +78,8 @@
 
             <!-- Filtro por Plazas -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Plazas Mínimas</label>
-                <select id="seats-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
+                <label class="block text-xs font-bold uppercase text-zinc-500 mb-2">Plazas Mínimas</label>
+                <select id="seats-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
                     <option value="">Cualquier plaza</option>
                     <option value="5">5 plazas</option>
                     <option value="7">7 plazas</option>
@@ -88,7 +88,7 @@
 
             <!-- Autonomía mínima -->
             <div>
-                <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
+                <div class="flex justify-between text-xs font-bold uppercase text-zinc-500 mb-2">
                     <span>Autonomía Mínima</span>
                     <span id="range-val" class="text-emerald-600 font-extrabold">0 km</span>
                 </div>
@@ -97,7 +97,7 @@
 
             <!-- Precio máximo -->
             <div>
-                <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
+                <div class="flex justify-between text-xs font-bold uppercase text-zinc-500 mb-2">
                     <span>Precio Máximo</span>
                     <span id="price-val" class="text-emerald-600 font-extrabold">Sin límite</span>
                 </div>
@@ -109,19 +109,19 @@
         <section class="lg:col-span-3 space-y-6">
             
             <!-- Banner Informativo -->
-            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm border border-slate-800">
+            <div class="bg-gradient-to-r from-zinc-900 to-zinc-800 text-white p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm border border-zinc-800">
                 <div class="space-y-1 text-center sm:text-left">
-                    <span class="bg-emerald-500 text-slate-950 text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
+                    <span class="bg-emerald-500 text-zinc-950 text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
                     <h3 class="font-bold text-base sm:text-lg">¿Quieres anunciar tu concesionario en electricos.eu?</h3>
-                    <p class="text-xs text-slate-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
+                    <p class="text-xs text-zinc-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
                 </div>
-                <a href="mailto:contacto@electricos.eu" class="bg-white text-slate-900 hover:bg-emerald-500 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
+                <a href="mailto:contacto@electricos.eu" class="bg-white text-zinc-900 hover:bg-emerald-500 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
                     Contactar
                 </a>
             </div>
 
             <!-- Contador de resultados -->
-            <div class="flex justify-between items-center text-sm text-slate-500 px-1 font-medium">
+            <div class="flex justify-between items-center text-sm text-zinc-500 px-1 font-medium">
                 <span id="results-count">Mostrando resultados</span>
             </div>
 
@@ -132,21 +132,21 @@
     </main>
 
     <!-- Modal de Ficha Detallada del Coche -->
-    <div id="car-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 transform transition-all" onclick="event.stopPropagation()">
+    <div id="car-modal" class="fixed inset-0 bg-zinc-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-zinc-100 transform transition-all" onclick="event.stopPropagation()">
             <div id="modal-content"></div>
         </div>
     </div>
 
     <!-- Pie de página -->
-    <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
+    <footer class="bg-white border-t border-zinc-200 mt-16 py-8 text-center text-xs text-zinc-500">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p class="font-bold text-slate-900 text-sm">electricos.eu</p>
+            <p class="font-bold text-zinc-900 text-sm">electricos.eu</p>
             <p>Datos técnicos neutros y verificados. Sin sesgos comerciales en la información.</p>
         </div>
     </footer>
 
-    <!-- Lógica de Filtros, Galería y Modals -->
+    <!-- Lógica del Comparador -->
     <script>
         const carsData = [
             { 
@@ -320,36 +320,36 @@
                 : `Desde ${car.priceMin.toLocaleString()} €`;
 
             const trimsHtml = car.trims.map(trim => `
-                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div class="bg-zinc-50 p-4 rounded-2xl border border-zinc-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <div>
                         <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">${trim.name}</span>
-                        <div class="text-base font-black text-slate-900">${trim.price}</div>
+                        <div class="text-base font-black text-zinc-900">${trim.price}</div>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-battery-half text-emerald-600 mr-1"></i> ${trim.battery}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-bolt text-emerald-600 mr-1"></i> ${trim.power}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-road text-emerald-600 mr-1"></i> ${trim.range}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-stopwatch text-emerald-600 mr-1"></i> 0-100: ${trim.accel}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-zinc-200 font-medium text-zinc-700"><i class="fa-solid fa-battery-half text-emerald-600 mr-1"></i> ${trim.battery}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-zinc-200 font-medium text-zinc-700"><i class="fa-solid fa-bolt text-emerald-600 mr-1"></i> ${trim.power}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-zinc-200 font-medium text-zinc-700"><i class="fa-solid fa-road text-emerald-600 mr-1"></i> ${trim.range}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-zinc-200 font-medium text-zinc-700"><i class="fa-solid fa-stopwatch text-emerald-600 mr-1"></i> 0-100: ${trim.accel}</span>
                     </div>
                 </div>
             `).join('');
 
             const colorsHtml = car.colors.map(color => `
-                <div class="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
+                <div class="flex items-center gap-2 bg-zinc-50 px-3 py-2 rounded-xl border border-zinc-100">
                     <span class="w-4 h-4 rounded-full shadow-xs inline-block shrink-0" style="background-color: ${color.hex}; ${color.border ? 'border: 1px solid ' + color.border : ''}"></span>
-                    <span class="text-xs font-semibold text-slate-700">${color.name}</span>
+                    <span class="text-xs font-semibold text-zinc-700">${color.name}</span>
                 </div>
             `).join('');
 
             const galleryHtml = car.images.map(img => `
-                <div class="h-28 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100">
+                <div class="h-28 rounded-xl overflow-hidden border border-zinc-200 shadow-xs bg-zinc-100">
                     <img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover hover:scale-110 transition duration-300">
                 </div>
             `).join('');
 
             const videosHtml = car.videos.map(video => `
-                <a href="${video.url}" target="_blank" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:border-emerald-500 transition block shadow-xs">
-                    <div class="h-32 w-full relative overflow-hidden bg-slate-900">
+                <a href="${video.url}" target="_blank" class="group bg-zinc-50 rounded-2xl overflow-hidden border border-zinc-200/80 hover:border-emerald-500 transition block shadow-xs">
+                    <div class="h-32 w-full relative overflow-hidden bg-zinc-900">
                         <img src="${video.thumb}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90">
                         <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
                             <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
@@ -358,22 +358,22 @@
                         </div>
                     </div>
                     <div class="p-3">
-                        <h5 class="text-xs font-bold text-slate-800 group-hover:text-emerald-600 transition line-clamp-2">${video.title}</h5>
+                        <h5 class="text-xs font-bold text-zinc-800 group-hover:text-emerald-600 transition line-clamp-2">${video.title}</h5>
                     </div>
                 </a>
             `).join('');
 
             const modalContent = document.getElementById('modal-content');
             modalContent.innerHTML = `
-                <div class="relative h-72 w-full bg-slate-900">
+                <div class="relative h-72 w-full bg-zinc-900">
                     <img src="${car.images[0]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
                     <button onclick="closeCarModal()" class="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white w-9 h-9 rounded-full flex items-center justify-center transition backdrop-blur-xs">
                         <i class="fa-solid fa-xmark text-sm"></i>
                     </button>
                     <div class="absolute bottom-4 left-6 right-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
                         <div>
-                            <span class="bg-emerald-500 text-slate-950 text-[11px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">${car.type}</span>
+                            <span class="bg-emerald-500 text-zinc-950 text-[11px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">${car.type}</span>
                             <h2 class="text-2xl font-black text-white mt-1">${car.brand} ${car.model}</h2>
                         </div>
                         <a href="${car.brandUrl}" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-xl text-xs font-bold transition backdrop-blur-md flex items-center gap-2">
@@ -383,33 +383,32 @@
                 </div>
 
                 <div class="p-6 sm:p-8 space-y-6">
-                    <!-- Cuadros de capacidades: Precio, Maletero, Plazas y Año de Lanzamiento -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-6 border-b border-slate-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-6 border-b border-zinc-100">
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
-                            <div class="text-xl font-black text-slate-900">${priceDisplay}</div>
+                            <span class="text-xs font-bold uppercase text-zinc-400">Precio de salida</span>
+                            <div class="text-xl font-black text-zinc-900">${priceDisplay}</div>
                         </div>
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
-                            <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
+                            <span class="text-xs font-bold uppercase text-zinc-400">Maletero</span>
+                            <div class="text-lg font-bold text-zinc-700">${car.trunk} Litros</div>
                         </div>
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Plazas</span>
-                            <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
+                            <span class="text-xs font-bold uppercase text-zinc-400">Plazas</span>
+                            <div class="text-lg font-bold text-zinc-700">${car.seats} plazas</div>
                         </div>
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Lanzamiento España</span>
+                            <span class="text-xs font-bold uppercase text-zinc-400">Lanzamiento España</span>
                             <div class="text-lg font-bold text-emerald-600">${car.launchYear}</div>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Descripción General</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
+                        <h4 class="text-xs font-bold uppercase text-zinc-400 tracking-wider">Descripción General</h4>
+                        <p class="text-sm text-zinc-600 leading-relaxed">${car.description}</p>
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
+                        <h4 class="text-xs font-bold uppercase text-zinc-400 tracking-wider flex items-center gap-1.5">
                             <i class="fa-solid fa-images text-emerald-600"></i> Galería de Imágenes
                         </h4>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -418,36 +417,36 @@
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gamas y Versiones Disponibles</h4>
+                        <h4 class="text-xs font-bold uppercase text-zinc-400 tracking-wider">Gamas y Versiones Disponibles</h4>
                         <div class="space-y-2.5">
                             ${trimsHtml}
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Colores Disponibles</h4>
+                        <h4 class="text-xs font-bold uppercase text-zinc-400 tracking-wider">Colores Disponibles</h4>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                             ${colorsHtml}
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-1">
+                        <div class="bg-zinc-50 p-4 rounded-2xl border border-zinc-100 space-y-1">
                             <div class="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase">
                                 <i class="fa-solid fa-charging-station"></i> Sistema de Carga
                             </div>
-                            <div class="text-sm font-semibold text-slate-900">${car.charging}</div>
+                            <div class="text-sm font-semibold text-zinc-900">${car.charging}</div>
                         </div>
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-1">
+                        <div class="bg-zinc-50 p-4 rounded-2xl border border-zinc-100 space-y-1">
                             <div class="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase">
                                 <i class="fa-solid fa-stopwatch"></i> Aceleración 0-100 km/h
                             </div>
-                            <div class="text-sm font-semibold text-slate-900">${car.acceleration}</div>
+                            <div class="text-sm font-semibold text-zinc-900">${car.acceleration}</div>
                         </div>
                     </div>
 
                     <div class="space-y-3 pt-2">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
+                        <h4 class="text-xs font-bold uppercase text-zinc-400 tracking-wider flex items-center gap-1.5">
                             <i class="fa-brands fa-youtube text-red-600"></i> Vídeos y Reseñas de YouTube
                         </h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -455,8 +454,8 @@
                         </div>
                     </div>
 
-                    <div class="pt-4 flex justify-end gap-3 border-t border-slate-100">
-                        <button onclick="closeCarModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl text-xs font-bold transition">Cerrar</button>
+                    <div class="pt-4 flex justify-end gap-3 border-t border-zinc-100">
+                        <button onclick="closeCarModal()" class="bg-zinc-100 hover:bg-zinc-200 text-zinc-700 px-6 py-3 rounded-xl text-xs font-bold transition">Cerrar</button>
                     </div>
                 </div>
             `;
@@ -477,7 +476,7 @@
             document.getElementById('results-count').innerText = `Mostrando ${data.length} gamas de vehículos`;
             
             if (data.length === 0) {
-                grid.innerHTML = `<div class="col-span-2 text-center py-16 text-slate-400 bg-white rounded-2xl border border-slate-200">No se han encontrado coches con estos criterios.</div>`;
+                grid.innerHTML = `<div class="col-span-2 text-center py-16 text-zinc-400 bg-white rounded-2xl border border-zinc-200">No se han encontrado coches con estos criterios.</div>`;
                 return;
             }
 
@@ -492,12 +491,12 @@
                     : `Desde ${car.priceMin.toLocaleString()} €`;
 
                 return `
-                    <div onclick="openCarModal(${car.id})" class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-emerald-500/50 transition duration-300 cursor-pointer group">
+                    <div onclick="openCarModal(${car.id})" class="bg-white rounded-2xl border border-zinc-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-emerald-500/50 transition duration-300 cursor-pointer group">
                         <div>
-                            <div class="h-64 w-full bg-slate-100 relative overflow-hidden">
+                            <div class="h-64 w-full bg-zinc-100 relative overflow-hidden">
                                 <img id="car-img-${car.id}" src="${car.images[activeImgIdx]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
                                 
-                                <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-xs z-10">
+                                <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-zinc-900 text-xs font-bold px-3 py-1 rounded-full shadow-xs z-10">
                                     ${car.type}
                                 </span>
 
@@ -517,37 +516,37 @@
 
                             <div class="p-6">
                                 <div class="mb-2">
-                                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">${car.brand}</span>
-                                    <h3 class="font-bold text-slate-900 text-base group-hover:text-emerald-600 transition">${car.model}</h3>
+                                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-zinc-400">${car.brand}</span>
+                                    <h3 class="font-bold text-zinc-900 text-base group-hover:text-emerald-600 transition">${car.model}</h3>
                                 </div>
                                 
-                                <div class="text-2xl font-black text-slate-900 mb-5">${priceDisplay}</div>
+                                <div class="text-2xl font-black text-zinc-900 mb-5">${priceDisplay}</div>
 
-                                <div class="grid grid-cols-1 gap-2.5 py-4 border-y border-slate-100 text-xs">
-                                    <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
+                                <div class="grid grid-cols-1 gap-2.5 py-4 border-y border-zinc-100 text-xs">
+                                    <div class="flex items-center justify-between text-zinc-700 bg-zinc-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
                                             <i class="fa-solid fa-road w-4"></i> Autonomía:
                                         </div>
-                                        <span class="font-semibold text-slate-900">${car.rangeText}</span>
+                                        <span class="font-semibold text-zinc-900">${car.rangeText}</span>
                                     </div>
-                                    <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
+                                    <div class="flex items-center justify-between text-zinc-700 bg-zinc-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
                                             <i class="fa-solid fa-battery-half w-4"></i> Baterías:
                                         </div>
-                                        <span class="font-semibold text-slate-900">${car.batteryText}</span>
+                                        <span class="font-semibold text-zinc-900">${car.batteryText}</span>
                                     </div>
-                                    <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
+                                    <div class="flex items-center justify-between text-zinc-700 bg-zinc-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
                                             <i class="fa-solid fa-bolt w-4"></i> Motores / Potencia:
                                         </div>
-                                        <span class="font-semibold text-slate-900">${car.powerText}</span>
+                                        <span class="font-semibold text-zinc-900">${car.powerText}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="px-6 pb-6 pt-0">
-                            <div class="w-full bg-slate-50 group-hover:bg-emerald-50 text-slate-600 group-hover:text-emerald-700 font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
+                            <div class="w-full bg-zinc-50 group-hover:bg-emerald-50 text-zinc-600 group-hover:text-emerald-700 font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
                                 Ver ficha técnica completa <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </div>
                         </div>
