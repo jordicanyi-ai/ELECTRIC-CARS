@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>electricos.eu — Cercador Objectiu de Cotxes Elèctrics</title>
+    <title>electricos.eu — Buscador Objetivo de Coches Eléctricos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
 
-    <!-- Capçalera -->
+    <!-- Cabecera -->
     <header class="bg-white/85 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -22,143 +22,145 @@
                 </div>
                 <div>
                     <h1 class="text-xl font-extrabold tracking-tight text-slate-900">electricos<span class="text-emerald-600">.eu</span></h1>
-                    <p class="text-xs text-slate-500 font-medium">Informació tècnica objectiva i neutra</p>
+                    <p class="text-xs text-slate-500 font-medium">Información técnica objetiva y neutra</p>
                 </div>
             </div>
             
             <div class="flex items-center gap-3">
                 <div class="hidden md:flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
-                    <i class="fa-solid fa-check-circle text-emerald-600"></i> Dades tècniques verificades
+                    <i class="fa-solid fa-check-circle text-emerald-600"></i> Datos técnicos verificados
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Contingut Principal -->
+    <!-- Contenido Principal -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-4 gap-8">
         
-        <!-- Panell de Filtres -->
+        <!-- Panel de Filtros -->
         <aside class="lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs h-fit sticky top-24 space-y-6">
             <div class="flex justify-between items-center pb-4 border-b border-slate-100">
                 <h2 class="font-bold text-slate-900 flex items-center gap-2 text-sm uppercase tracking-wider">
-                    <i class="fa-solid fa-filter text-emerald-600"></i> Filtres
+                    <i class="fa-solid fa-filter text-emerald-600"></i> Filtros
                 </h2>
-                <button onclick="resetFilters()" class="text-xs font-semibold text-slate-400 hover:text-emerald-600 transition">Netejar</button>
+                <button onclick="resetFilters()" class="text-xs font-semibold text-slate-400 hover:text-emerald-600 transition">Limpiar</button>
             </div>
 
-            <!-- Cerca per text -->
+            <!-- Búsqueda por texto -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Marca o Model</label>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Marca o Modelo</label>
                 <div class="relative">
-                    <input type="text" id="search-input" oninput="filterCars()" placeholder="Ex: Leapmotor, Tesla..." class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition">
+                    <input type="text" id="search-input" oninput="filterCars()" placeholder="Ej: Leapmotor, Tesla..." class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition">
                     <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
                 </div>
             </div>
 
-            <!-- Filtre per Carrosseria -->
+            <!-- Filtro por Carrocería -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipus de Vehicle</label>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipo de Vehículo</label>
                 <select id="body-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition cursor-pointer">
-                    <option value="">Tots els tipus</option>
-                    <option value="Utilitari">Utilitari / Compacte</option>
+                    <option value="">Todos los tipos</option>
+                    <option value="Utilitario">Utilitario / Compacto</option>
                     <option value="SUV">SUV</option>
-                    <option value="Sedan">Sedan / Berlina</option>
+                    <option value="Sedan">Sedán / Berlina</option>
                 </select>
             </div>
 
-            <!-- Autonomia mínima -->
+            <!-- Autonomía mínima -->
             <div>
                 <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-                    <span>Autonomia Mínima</span>
+                    <span>Autonomía Mínima</span>
                     <span id="range-val" class="text-emerald-600 font-extrabold">0 km</span>
                 </div>
                 <input type="range" id="range-filter" min="0" max="600" step="50" value="0" oninput="filterCars()" class="w-full accent-emerald-600 cursor-pointer">
             </div>
 
-            <!-- Preu màxim -->
+            <!-- Precio máximo -->
             <div>
                 <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-                    <span>Preu Màxim</span>
-                    <span id="price-val" class="text-emerald-600 font-extrabold">Sense límit</span>
+                    <span>Precio Máximo</span>
+                    <span id="price-val" class="text-emerald-600 font-extrabold">Sin límite</span>
                 </div>
                 <input type="range" id="price-filter" min="20000" max="90000" step="5000" value="90000" oninput="filterCars()" class="w-full accent-emerald-600 cursor-pointer">
             </div>
         </aside>
 
-        <!-- Llistat de Cotxes -->
+        <!-- Listado de Coches -->
         <section class="lg:col-span-3 space-y-6">
             
-            <!-- Banner Informatiu -->
+            <!-- Banner Informativo -->
             <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm border border-slate-800">
                 <div class="space-y-1 text-center sm:text-left">
-                    <span class="bg-emerald-500 text-slate-950 text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espai Comercial</span>
-                    <h3 class="font-bold text-base sm:text-lg">Vols anunciar el teu concessionari a electricos.eu?</h3>
-                    <p class="text-xs text-slate-300">Impacte directe a usuaris buscant activament un cotxe elèctric.</p>
+                    <span class="bg-emerald-500 text-slate-950 text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
+                    <h3 class="font-bold text-base sm:text-lg">¿Quieres anunciar tu concesionario en electricos.eu?</h3>
+                    <p class="text-xs text-slate-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
                 </div>
-                <a href="mailto:contacte@electricos.eu" class="bg-white text-slate-900 hover:bg-emerald-500 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
+                <a href="mailto:contacto@electricos.eu" class="bg-white text-slate-900 hover:bg-emerald-500 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
                     Contactar
                 </a>
             </div>
 
-            <!-- Comptador de resultats -->
+            <!-- Contador de resultados -->
             <div class="flex justify-between items-center text-sm text-slate-500 px-1 font-medium">
-                <span id="results-count">Mostrant resultats</span>
+                <span id="results-count">Mostrando resultados</span>
             </div>
 
-            <!-- Graella de Cotxes -->
+            <!-- Parrilla de Coches -->
             <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         </section>
 
     </main>
 
-    <!-- Modal de Fitxa Detallada del Cotxe -->
+    <!-- Modal de Ficha Detallada del Coche -->
     <div id="car-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 transform transition-all" onclick="event.stopPropagation()">
-            <!-- Contingut injectat dinàmicament per JavaScript -->
+            <!-- Contenido inyectado dinámicamente por JavaScript -->
             <div id="modal-content"></div>
         </div>
     </div>
 
-    <!-- Peu de pàgina -->
+    <!-- Pie de página -->
     <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
             <p class="font-bold text-slate-900 text-sm">electricos.eu</p>
-            <p>Dades tècniques neutres i verificades. Sense biaixos comercials en la informació.</p>
+            <p>Datos técnicos neutros y verificados. Sin sesgos comerciales en la información.</p>
         </div>
     </footer>
 
-    <!-- Lògica de Cerca, Galeria i Fitxes Clicables (Modals) -->
+    <!-- Lógica de Búsqueda, Galería y Fichas Clicables (Modals) -->
     <script>
         const carsData = [
             { 
                 id: 1, 
                 brand: "Leapmotor", 
-                model: "B03X Gamma", 
+                model: "B03X[cite: 1, 2]", 
                 type: "SUV", 
                 priceMin: 22900, 
                 priceMax: 27900, 
-                rangeText: "310 - 420 km",
-                minRangeVal: 310, 
-                maxRangeVal: 420,
-                batteryText: "43 kWh | 53 kWh",
-                powerText: "115 CV | 136 CV",
+                rangeText: "292 - 382 km[cite: 2]",
+                minRangeVal: 292, 
+                maxRangeVal: 382,
+                batteryText: "39,8 kWh | 53 kWh[cite: 2]",
+                powerText: "130 kW (177 CV) | 145 kW (197 CV)[cite: 2]",
                 trunk: 510,
-                description: "El Leapmotor B03X destaca per la seva excel·lent relació qualitat-preu dins del segment SUV compacte elèctric, oferint gran habitabilitat i opcions de bateria eficients per a la ciutat i trajectes interurbans.",
-                charging: "Càrrega ràpida CC fins a 80 kW (30-80% en 30 minuts).",
+                description: "El Leapmotor B03X[cite: 1, 2] destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes para la ciudad y trayectos interurbanos.",
+                charging: "Carga rápida CC (30-80%): 16 - 17 min[cite: 2].",
                 brandUrl: "https://www.leapmotor.com",
                 colors: [
-                    { name: "Blanc Glaciar", hex: "#f8fafc", border: "#cbd5e1" },
-                    { name: "Gris Còsmic", hex: "#64748b" },
-                    { name: "Negre Mitjanit", hex: "#0f172a" },
-                    { name: "Verd Esmeralda", hex: "#059669" }
+                    { name: "Marrón Bellota[cite: 1]", hex: "#8c7355" },
+                    { name: "Azul Arándano[cite: 1]", hex: "#3b4d66" },
+                    { name: "Plata Estelar[cite: 1]", hex: "#cbd5e1", border: "#94a3b8" },
+                    { name: "Verde alga[cite: 1]", hex: "#233d2c" },
+                    { name: "Gris Tundra[cite: 1]", hex: "#71797e" },
+                    { name: "Beige Escarcha[cite: 1]", hex: "#e5e3d4", border: "#cbd5e1" }
                 ],
                 trims: [
-                    { name: "Comfort (Accés)", price: "22.900 €", battery: "43 kWh", power: "115 CV", range: "310 km" },
-                    { name: "Design (Llarga Autonomia)", price: "27.900 €", battery: "53 kWh", power: "136 CV", range: "420 km" }
+                    { name: "Pro[cite: 2]", price: "22.900 €", battery: "39,8 kWh[cite: 2]", power: "130 kW (177 CV)[cite: 2]", range: "292 km WLTP[cite: 2]" },
+                    { name: "ProMax[cite: 2]", price: "27.900 €", battery: "53 kWh[cite: 2]", power: "145 kW (197 CV)[cite: 2]", range: "382 km WLTP[cite: 2]" }
                 ],
                 videos: [
-                    { title: "Prova a fons i primeres impressions", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Anàlisi de consum i autonomia real", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Prueba a fondo y primeras impresiones", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
+                    { title: "Análisis de consumo y autonomía real", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
@@ -168,8 +170,8 @@
             { 
                 id: 2, 
                 brand: "MG", 
-                model: "MG4 Electric Gamma", 
-                type: "Utilitari", 
+                model: "MG4 Electric Gama", 
+                type: "Utilitario", 
                 priceMin: 24290, 
                 priceMax: 38490, 
                 rangeText: "350 - 520 km",
@@ -178,23 +180,23 @@
                 batteryText: "51 kWh | 64 kWh | 77 kWh",
                 powerText: "170 CV - 435 CV",
                 trunk: 363,
-                description: "Un dels utilitaris elèctrics més venuts gràcies a la seva plataforma dedicada, comportament dinàmic excel·lent i versions d'altes prestacions (XPower).",
-                charging: "Càrrega ràpida CC fins a 140 kW segons versió.",
+                description: "Uno de los utilitarios eléctricos más vendidos gracias a su plataforma dedicada, comportamiento dinámico excelente y versiones de altas prestaciones (XPower).",
+                charging: "Carga rápida CC hasta 140 kW según versión.",
                 brandUrl: "https://www.mg.es",
                 colors: [
-                    { name: "Taronja Brighton", hex: "#f97316" },
-                    { name: "Negre Guijarro", hex: "#1e293b" },
-                    { name: "Blanc Àrtic", hex: "#f8fafc", border: "#cbd5e1" },
-                    { name: "Gris Metallitzat", hex: "#475569" }
+                    { name: "Naranja Brighton", hex: "#f97316" },
+                    { name: "Negro Guijarro", hex: "#1e293b" },
+                    { name: "Blanco Ártico", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Gris Metalizado", hex: "#475569" }
                 ],
                 trims: [
                     { name: "Standard", price: "24.290 €", battery: "51 kWh", power: "170 CV", range: "350 km" },
                     { name: "Comfort / Luxury", price: "29.990 €", battery: "64 kWh", power: "204 CV", range: "450 km" },
-                    { name: "XPower (Esportiu)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km" }
+                    { name: "XPower (Deportivo)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km" }
                 ],
                 videos: [
-                    { title: "Per què arrasa a Europa? Ressenya completa", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Prova de l'explosiu MG4 XPower de 435 CV", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                    { title: "¿Por qué arrasa en Europa? Reseña completa", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" },
+                    { title: "Prueba del explosivo MG4 XPower de 435 CV", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
@@ -204,7 +206,7 @@
             { 
                 id: 3, 
                 brand: "Tesla", 
-                model: "Model 3 Gamma", 
+                model: "Model 3 Gama", 
                 type: "Sedan", 
                 priceMin: 39990, 
                 priceMax: 50990, 
@@ -214,22 +216,22 @@
                 batteryText: "60 kWh | 75 kWh",
                 powerText: "283 CV - 513 CV",
                 trunk: 561,
-                description: "La berlina de referència mundial en mobilitat elèctrica. Ofereix tecnologia puntera, eficiència energètica líder i accés a la xarxa Supercharger.",
-                charging: "Supercàrrega fins a 250 kW.",
+                description: "La berlina de referencia mundial en movilidad eléctrica. Ofrece tecnología puntera, eficiencia energética líder y acceso a la red Supercharger.",
+                charging: "Supercarga hasta 250 kW.",
                 brandUrl: "https://www.tesla.com/es_es",
                 colors: [
-                    { name: "Blanc Perlat", hex: "#f8fafc", border: "#cbd5e1" },
-                    { name: "Negre Sòlid", hex: "#020617" },
-                    { name: "Gris Mercuri", hex: "#94a3b8" },
-                    { name: "Roig Ultra", hex: "#dc2626" }
+                    { name: "Blanco Perlado", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Negro Sólido", hex: "#020617" },
+                    { name: "Gris Mercurio", hex: "#94a3b8" },
+                    { name: "Rojo Ultra", hex: "#dc2626" }
                 ],
                 trims: [
-                    { name: "Tracció del Darrere (Standard)", price: "39.990 €", battery: "60 kWh", power: "283 CV", range: "513 km" },
-                    { name: "Gran Autonomia (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km" }
+                    { name: "Tracción Trasera (Standard)", price: "39.990 €", battery: "60 kWh", power: "283 CV", range: "513 km" },
+                    { name: "Gran Autonomía (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km" }
                 ],
                 videos: [
-                    { title: "Nou Tesla Model 3 (Highland): Canvis clau", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" },
-                    { title: "Test d'autonomia real a autovia", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Nuevo Tesla Model 3 (Highland): Cambios clave", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" },
+                    { title: "Test de autonomía real en autovía", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
@@ -239,8 +241,8 @@
             { 
                 id: 4, 
                 brand: "Renault", 
-                model: "5 E-Tech Gamma", 
-                type: "Utilitari", 
+                model: "5 E-Tech Gama", 
+                type: "Utilitario", 
                 priceMin: 27900, 
                 priceMax: 33400, 
                 rangeText: "300 - 410 km",
@@ -249,21 +251,21 @@
                 batteryText: "40 kWh | 52 kWh",
                 powerText: "120 CV | 150 CV",
                 trunk: 326,
-                description: "Disseny retro-futurista inconfusible combinat amb una agilitat urbana increïble i sistemes de connectivitat avançats de Google integrats.",
-                charging: "Càrrega bidireccional V2L i V2G disponible.",
+                description: "Diseño retro-futurista inconfundible combinado con una agilidad urbana increíble y sistemas de conectividad avanzados de Google integrados.",
+                charging: "Carga bidireccional V2L y V2G disponible.",
                 brandUrl: "https://www.renault.es",
                 colors: [
-                    { name: "Groc Pop", hex: "#facc15" },
-                    { name: "Verd Pop", hex: "#84cc16" },
-                    { name: "blau Nocture", hex: "#1e3a8a" },
-                    { name: "Negre Estel", hex: "#0f172a" }
+                    { name: "Amarillo Pop", hex: "#facc15" },
+                    { name: "Verde Pop", hex: "#84cc16" },
+                    { name: "Azul Nocturne", hex: "#1e3a8a" },
+                    { name: "Negro Estelar", hex: "#0f172a" }
                 ],
                 trims: [
-                    { name: "urban Range", price: "27.900 €", battery: "40 kWh", power: "120 CV", range: "300 km" },
+                    { name: "Urban Range", price: "27.900 €", battery: "40 kWh", power: "120 CV", range: "300 km" },
                     { name: "Comfort Range", price: "33.400 €", battery: "52 kWh", power: "150 CV", range: "410 km" }
                 ],
                 videos: [
-                    { title: "Primer contacte amb el Renault 5 elèctric", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Primer contacto con el Renault 5 eléctrico", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
@@ -273,7 +275,7 @@
             { 
                 id: 5, 
                 brand: "Kia", 
-                model: "EV6 Gamma", 
+                model: "EV6 Gama", 
                 type: "SUV", 
                 priceMin: 44500, 
                 priceMax: 68900, 
@@ -283,22 +285,22 @@
                 batteryText: "58 kWh | 77.4 kWh",
                 powerText: "170 CV - 585 CV",
                 trunk: 490,
-                description: "Arquitectura de 800V per a recàrregues ultrarràpides, disseny crossover esportiu i un interior espaiós ple de materials sostenibles.",
-                charging: "Recàrrega ultrarràpida de 10% a 80% en només 18 minuts.",
+                description: "Arquitectura de 800V para recargas ultrarrápidas, diseño crossover deportivo y un interior espacioso lleno de materiales sostenibles.",
+                charging: "Recarga ultrarrápida del 10% al 80% en solo 18 minutos.",
                 brandUrl: "https://www.kia.com/es",
                 colors: [
-                    { name: "Gris Interstel·lar", hex: "#334155" },
-                    { name: "Blanc Glaciar", hex: "#f8fafc", border: "#cbd5e1" },
-                    { name: "Verd Urban", hex: "#065f46" },
-                    { name: "Negre Aurora", hex: "#020617" }
+                    { name: "Gris Interestelar", hex: "#334155" },
+                    { name: "Blanco Glaciar", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Verde Urban", hex: "#065f46" },
+                    { name: "Negro Aurora", hex: "#020617" }
                 ],
                 trims: [
-                    { name: "Air (Estàndard)", price: "44.500 €", battery: "58 kWh", power: "170 CV", range: "394 km" },
-                    { name: "GT-Line (Llarga Autonomia)", price: "55.000 €", battery: "77.4 kWh", power: "228 CV", range: "528 km" },
-                    { name: "GT (Alt Rendiment)", price: "68.900 €", battery: "77.4 kWh", power: "585 CV", range: "424 km" }
+                    { name: "Air (Estándard)", price: "44.500 €", battery: "58 kWh", power: "170 CV", range: "394 km" },
+                    { name: "GT-Line (Larga Autonomía)", price: "55.000 €", battery: "77.4 kWh", power: "228 CV", range: "528 km" },
+                    { name: "GT (Alto Rendimiento)", price: "68.900 €", battery: "77.4 kWh", power: "585 CV", range: "424 km" }
                 ],
                 videos: [
-                    { title: "Prova Kia EV6 GT: Superant supercarennis", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
+                    { title: "Prueba Kia EV6 GT: Superando expectativas", url: "https://youtube.com", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
@@ -339,16 +341,15 @@
             }
         }
 
-        // Funció per obrir la fitxa detallada (Modal) amb tota la informació de gammes, colors i vídeos
+        // Función para abrir la ficha detallada (Modal)
         function openCarModal(carId) {
             const car = carsData.find(c => c.id === carId);
             if (!car) return;
 
             const priceDisplay = car.priceMin === car.priceMax 
                 ? `${car.priceMin.toLocaleString()} €` 
-                : `Des de ${car.priceMin.toLocaleString()} €`;
+                : `Desde ${car.priceMin.toLocaleString()} €`;
 
-            // Construir HTML de les diferents gammes
             const trimsHtml = car.trims.map(trim => `
                 <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <div>
@@ -363,7 +364,6 @@
                 </div>
             `).join('');
 
-            // Construir HTML dels colors amb rodonetes
             const colorsHtml = car.colors.map(color => `
                 <div class="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
                     <span class="w-4 h-4 rounded-full shadow-xs inline-block shrink-0" style="background-color: ${color.hex}; ${color.border ? 'border: 1px solid ' + color.border : ''}"></span>
@@ -371,7 +371,6 @@
                 </div>
             `).join('');
 
-            // Construir mosaic de vídeos
             const videosHtml = car.videos.map(video => `
                 <a href="${video.url}" target="_blank" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:border-emerald-500 transition block shadow-xs">
                     <div class="h-32 w-full relative overflow-hidden bg-slate-900">
@@ -410,32 +409,32 @@
                 <div class="p-6 sm:p-8 space-y-6">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-100 gap-4">
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Preu de sortida orientatiu</span>
+                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida orientativo</span>
                             <div class="text-3xl font-black text-slate-900">${priceDisplay}</div>
                         </div>
                         <div class="text-right">
-                            <span class="text-xs font-bold uppercase text-slate-400">Maleter</span>
-                            <div class="text-lg font-bold text-slate-700">${car.trunk} Litres</div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
+                            <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Descripció General</h4>
+                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Descripción General</h4>
                         <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
                     </div>
 
-                    <!-- Gammes i versions -->
+                    <!-- Gamas y versiones -->
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gammes i Versions Disponibles</h4>
+                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gamas y Versiones Disponibles</h4>
                         <div class="space-y-2.5">
                             ${trimsHtml}
                         </div>
                     </div>
 
-                    <!-- Colors -->
+                    <!-- Colores -->
                     <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Colors Disponibles</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                        <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Colores Disponibles</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                             ${colorsHtml}
                         </div>
                     </div>
@@ -443,16 +442,16 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-1">
                             <div class="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase">
-                                <i class="fa-solid fa-charging-station"></i> Sistema de Càrrega
+                                <i class="fa-solid fa-charging-station"></i> Sistema de Carga
                             </div>
                             <div class="text-sm font-semibold text-slate-900">${car.charging}</div>
                         </div>
                     </div>
 
-                    <!-- Mosaic de Vídeos de Xarxes / YouTube -->
+                    <!-- Mosaic de Vídeos de Redes / YouTube -->
                     <div class="space-y-3 pt-2">
                         <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
-                            <i class="fa-brands fa-youtube text-red-600"></i> Vídeos i Ressenyes de Xarxes
+                            <i class="fa-brands fa-youtube text-red-600"></i> Vídeos y Reseñas de Redes
                         </h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             ${videosHtml}
@@ -460,8 +459,8 @@
                     </div>
 
                     <div class="pt-4 flex justify-end gap-3 border-t border-slate-100">
-                        <button onclick="closeCarModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl text-xs font-bold transition">Tancar</button>
-                        <a href="mailto:contacte@electricos.eu?subject=Informació%20sobre%20${car.brand}%20${car.model}" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl text-xs font-bold transition shadow-sm">Demanar pressupost</a>
+                        <button onclick="closeCarModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl text-xs font-bold transition">Cerrar</button>
+                        <a href="mailto:contacto@electricos.eu?subject=Información%20sobre%20${car.brand}%20${car.model}" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl text-xs font-bold transition shadow-sm">Pedir presupuesto</a>
                     </div>
                 </div>
             `;
@@ -479,10 +478,10 @@
 
         function renderCars(data) {
             const grid = document.getElementById('cars-grid');
-            document.getElementById('results-count').innerText = `Mostrant ${data.length} gammes de vehicles`;
+            document.getElementById('results-count').innerText = `Mostrando ${data.length} gamas de vehículos`;
             
             if (data.length === 0) {
-                grid.innerHTML = `<div class="col-span-2 text-center py-16 text-slate-400 bg-white rounded-2xl border border-slate-200">No s'han trobat cotxes amb aquests criteris.</div>`;
+                grid.innerHTML = `<div class="col-span-2 text-center py-16 text-slate-400 bg-white rounded-2xl border border-slate-200">No se han encontrado coches con estos criterios.</div>`;
                 return;
             }
 
@@ -494,7 +493,7 @@
 
                 const priceDisplay = car.priceMin === car.priceMax 
                     ? `${car.priceMin.toLocaleString()} €` 
-                    : `Des de ${car.priceMin.toLocaleString()} €`;
+                    : `Desde ${car.priceMin.toLocaleString()} €`;
 
                 return `
                     <div onclick="openCarModal(${car.id})" class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-emerald-500/50 transition duration-300 cursor-pointer group">
@@ -521,7 +520,7 @@
                                 </div>
                             </div>
 
-                            <!-- Contingut i Gamma -->
+                            <!-- Contenido y Gama -->
                             <div class="p-6">
                                 <div class="mb-2">
                                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">${car.brand}</span>
@@ -533,19 +532,19 @@
                                 <div class="grid grid-cols-1 gap-2.5 py-4 border-y border-slate-100 text-xs">
                                     <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
-                                            <i class="fa-solid fa-road w-4"></i> Autonomia:
+                                            <i class="fa-solid fa-road w-4"></i> Autonomía:
                                         </div>
                                         <span class="font-semibold text-slate-900">${car.rangeText}</span>
                                     </div>
                                     <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
-                                            <i class="fa-solid fa-battery-half w-4"></i> Bateries:
+                                            <i class="fa-solid fa-battery-half w-4"></i> Baterías:
                                         </div>
                                         <span class="font-semibold text-slate-900">${car.batteryText}</span>
                                     </div>
                                     <div class="flex items-center justify-between text-slate-700 bg-slate-50 px-3 py-2 rounded-xl">
                                         <div class="flex items-center gap-2 text-emerald-600 font-bold">
-                                            <i class="fa-solid fa-bolt w-4"></i> Motors / Potència:
+                                            <i class="fa-solid fa-bolt w-4"></i> Motores / Potencia:
                                         </div>
                                         <span class="font-semibold text-slate-900">${car.powerText}</span>
                                     </div>
@@ -553,10 +552,10 @@
                             </div>
                         </div>
 
-                        <!-- Botó inferior indicatiu de clicabilitat -->
+                        <!-- Botón inferior -->
                         <div class="px-6 pb-6 pt-0">
                             <div class="w-full bg-slate-50 group-hover:bg-emerald-50 text-slate-600 group-hover:text-emerald-700 font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
-                                Veure fitxa tècnica completa <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                Ver ficha técnica completa <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </div>
                         </div>
                     </div>
@@ -571,7 +570,7 @@
             const maxPrice = parseInt(document.getElementById('price-filter').value);
 
             document.getElementById('range-val').innerText = minRange + ' km';
-            document.getElementById('price-val').innerText = maxPrice === 90000 ? 'Sense límit' : maxPrice.toLocaleString() + ' €';
+            document.getElementById('price-val').innerText = maxPrice === 90000 ? 'Sin límite' : maxPrice.toLocaleString() + ' €';
 
             const filtered = carsData.filter(car => {
                 const matchesText = (car.brand + ' ' + car.model).toLowerCase().includes(query);
