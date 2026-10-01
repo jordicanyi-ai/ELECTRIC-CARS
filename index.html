@@ -1,110 +1,44 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leapmotor B03X - Ficha Técnica y Colores</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2 {
-            color: #111;
-        }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .colors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .color-item {
-            background: #f1f1f1;
-            padding: 10px;
-            text-align: center;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .specs-table th, .specs-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .specs-table th {
-            background-color: #f4f4f4;
-        }
-        .official-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .official-link:hover {
-            background-color: #004085;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Leapmotor B03X</h1>
-    <p>Benvingut a la fitxa tècnica oficial del Leapmotor B03X. A continuació trobaràs el recull complet amb la gamma de 6 colors disponibles i les dimensions oficials del vehicle.</p>
-
-    <h2>Gamma de 6 Colors Oficials</h2>
-    <div class="colors-grid">
-        <div class="color-item">Marrón Bellota</div>
-        <div class="color-item">Azul Arándano</div>
-        <div class="color-item">Plata Estelar</div>
-        <div class="color-item">Verde alga</div>
-        <div class="color-item">Gris Tundra</div>
-        <div class="color-item">Beige Escarcha</div>
-    </div>
-
-    <h2>Dimensions del Vehicle</h2>
-    <table class="specs-table">
-        <tr>
-            <th>Dimensió</th>
-            <th>Mesura Oficial</th>
-        </tr>
-        <tr>
-            <td>Llargada</td>
-            <td>(Consultar dada exacta / estàndard del model)</td>
-        </tr>
-        <tr>
-            <td>Amplada</td>
-            <td>(Consultar dada exacta / estàndard del model)</td>
-        </tr>
-        <tr>
-            <td>Alçada</td>
-            <td>(Consultar dada exacta / estàndard del model)</td>
-        </tr>
-        <tr>
-            <td>Distància entre eixos</td>
-            <td>(Consultar dada exacta / estàndard del model)</td>
-        </tr>
-    </table>
-
-    <a href="https://www.leapmotor.net/b03x" class="official-link" target="_blank">Visita la web oficial de Leapmotor B03X</a>
-</div>
-
-</body>
-</html>
+{ 
+                id: 1, 
+                brand: "Leapmotor", 
+                model: "B03X", 
+                type: "SUV", 
+                priceMin: 22900, 
+                priceMax: 27900, 
+                rangeText: "292 - 382 km",
+                minRangeVal: 292, 
+                maxRangeVal: 382,
+                batteryText: "39,8 kWh | 53 kWh",
+                powerText: "130 kW (177 CV) | 145 kW (197 CV)",
+                trunk: 510,
+                seats: 5,
+                launchYear: 2026,
+                acceleration: "8,6 s (0-100 km/h)",
+                description: "El Leapmotor B03X destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes.",
+                charging: "Carga rápida CC (30-80%): 16 - 17 min.",
+                brandUrl: "https://www.leapmotor.com",
+                colors: [
+                    { name: "Marrón Bellota", hex: "#8c7355" },
+                    { name: "Azul Arándano", hex: "#3b4d66" },
+                    { name: "Plata Estelar", hex: "#cbd5e1", border: "#94a3b8" },
+                    { name: "Verde alga", hex: "#233d2c" }
+                ],
+                trims: [
+                    { name: "Pro", price: "22.900 €", battery: "39,8 kWh", power: "130 kW (177 CV)", range: "292 km WLTP", accel: "8,6 s" },
+                    { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP", accel: "8,6 s" }
+                ],
+                videos: [
+                    { title: "Leapmotor B03X: Prueba completa y detalles", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+review", thumb: "img/b03x-1.jpg" },
+                    { title: "Análisis autonomía y sistema multimedia", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+autonomia", thumb: "img/b03x-2.jpg" }
+                ],
+                images: [
+                    "img/b03x-1.jpg",
+                    "img/b03x-2.jpg",
+                    "img/b03x-3.jpg",
+                    "img/b03x-4.jpg",
+                    "img/b03x-5.jpg",
+                    "img/b03x-6.jpg",
+                    "img/b03x-7.jpg",
+                    "img/b03x-8.jpg"
+                ]
+            },
