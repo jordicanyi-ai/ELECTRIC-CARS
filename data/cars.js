@@ -17,6 +17,8 @@ const carsData = [
         maxRangeVal: 382,
 
         batteryText: "39,8 - 53 kWh",
+        batteryType: "LFP",
+
         powerText: "177 - 197 CV",
 
         trunk: 510,
@@ -74,6 +76,7 @@ const carsData = [
                 price: "22.900 €",
                 priceValue: 22900,
                 battery: "39,8 kWh",
+                batteryType: "LFP",
                 power: "130 kW (177 CV)",
                 range: "292 km WLTP",
                 rangeValue: 292,
@@ -84,6 +87,7 @@ const carsData = [
                 price: "27.900 €",
                 priceValue: 27900,
                 battery: "53 kWh",
+                batteryType: "LFP",
                 power: "145 kW (197 CV)",
                 range: "382 km WLTP",
                 rangeValue: 382,
@@ -91,6 +95,7 @@ const carsData = [
             }
         ],
 
+        // COLORES
         colors: [
             { name: "Marrón Bellota", hex: "#8c7355" },
             { name: "Azul Arándano", hex: "#3b4d66" },
@@ -100,6 +105,7 @@ const carsData = [
             { name: "Beige Escarcha", hex: "#e5e3d4", border: "#cbd5e1" }
         ],
 
+        // IMÁGENES
         images: [
             "img/b03x-0.jpg",
             "img/b03x-1.jpg",
@@ -124,6 +130,14 @@ const carsData = [
                 thumb: "img/b03x-8.jpg"
             }
         ],
+
+        // MARCA / GRUPO
+        brandInfo: {
+            logo: "img/brands/leapmotor.png",
+            group: "Stellantis",
+            relation: "Alianza estratégica",
+            note: "Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."
+        },
 
         brandUrl: "https://www.leapmotor.com",
 
