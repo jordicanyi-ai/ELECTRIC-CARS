@@ -504,15 +504,11 @@
                             <div>
 
                                 <span class="text-blue-600 text-xs uppercase font-extrabold tracking-wider">
-
                                     ${car.brand}
-
                                 </span>
 
                                 <h3 class="text-2xl font-black mt-1">
-
                                     ${car.model}
-
                                 </h3>
 
                             </div>
@@ -552,9 +548,7 @@
                                 </div>
 
                                 <div class="text-xl font-black mt-1">
-
                                     ${car.rangeText}
-
                                 </div>
 
                                 <div class="text-[10px] text-slate-500">
@@ -574,9 +568,7 @@
                                 </div>
 
                                 <div class="text-xl font-black mt-1">
-
                                     ${car.batteryText}
-
                                 </div>
 
                             </div>
@@ -777,7 +769,6 @@
 
                 <section class="relative">
 
-
                     <div class="h-[285px] sm:h-[355px] bg-slate-900">
 
                         <img src="${car.images[0]}"
@@ -798,7 +789,6 @@
 
 
                     <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
-
 
                         <span class="bg-blue-600 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
                             ${car.type}
@@ -848,7 +838,7 @@
                 <div class="p-5 sm:p-8 space-y-12">
 
 
-                    <!-- RANGE SUMMARY -->
+                    <!-- MAIN DATA -->
 
                     <section>
 
@@ -992,69 +982,50 @@
                     </section>
 
 
-                    <!-- REAL RANGE -->
+                    <!-- PUBLICIDAD / ADSENSE -->
 
-                    <section class="bg-slate-950 text-white rounded-3xl p-6 sm:p-8">
+                    <section>
 
+                        <div
+                            class="w-full min-h-[130px] sm:min-h-[150px]
+                            border border-slate-200
+                            bg-slate-50
+                            rounded-2xl
+                            flex flex-col
+                            items-center
+                            justify-center
+                            text-center
+                            px-5">
 
-                        <span class="text-blue-400 text-xs font-extrabold uppercase tracking-wider">
-                            Uso real
-                        </span>
+                            <span class="text-[9px] uppercase tracking-[0.18em] text-slate-400 mb-3">
+                                Publicidad
+                            </span>
 
+                            <!--
+                            =====================================================
+                            GOOGLE ADSENSE
+                            =====================================================
 
-                        <h3 class="text-2xl font-black mt-1">
-                            Autonomía real
-                        </h3>
+                            Este espacio queda preparado para insertar
+                            posteriormente el bloque responsive de AdSense.
 
+                            Ejemplo futuro:
 
-                        ${
-                            car.realRange.combined
-                            ? `
-                                <div class="grid grid-cols-3 gap-4 mt-6">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-XXXXXXXX"
+                                 data-ad-slot="XXXXXXXX"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
 
-                                    <div>
-                                        <div class="text-2xl font-black">
-                                            ${car.realRange.combined} km
-                                        </div>
-                                        <div class="text-xs text-slate-400">
-                                            Uso mixto
-                                        </div>
-                                    </div>
+                            =====================================================
+                            -->
 
-                                    <div>
-                                        <div class="text-2xl font-black">
-                                            ${car.realRange.highwaySummer} km
-                                        </div>
-                                        <div class="text-xs text-slate-400">
-                                            Autopista verano
-                                        </div>
-                                    </div>
+                            <div class="text-xs text-slate-300">
+                                Espacio publicitario
+                            </div>
 
-                                    <div>
-                                        <div class="text-2xl font-black">
-                                            ${car.realRange.highwayWinter} km
-                                        </div>
-                                        <div class="text-xs text-slate-400">
-                                            Autopista invierno
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            `
-                            :
-                            `
-                                <div class="mt-5 bg-white/5 border border-white/10 rounded-2xl p-5">
-
-                                    <i class="fa-solid fa-flask text-blue-400 mr-2"></i>
-
-                                    <span class="text-sm text-slate-300">
-                                        ${car.realRange.note}
-                                    </span>
-
-                                </div>
-                            `
-                        }
+                        </div>
 
                     </section>
 
@@ -1147,9 +1118,7 @@
 
 
                         <div class="flex flex-wrap gap-x-6 gap-y-4">
-
                             ${colorsHtml}
-
                         </div>
 
                     </section>
@@ -1253,7 +1222,7 @@
                     </section>
 
 
-                    <!-- DATA / SOURCES -->
+                    <!-- DATA -->
 
                     <section class="border-t border-slate-200 pt-7">
 
@@ -1385,13 +1354,9 @@
                 const seatsMatch =
                     !seats || car.seats >= Number(seats);
 
-                // Si alguna versión cumple la autonomía,
-                // mostramos el modelo.
                 const rangeMatch =
                     car.maxRangeVal >= range;
 
-                // Si alguna versión entra en presupuesto,
-                // mostramos el modelo.
                 const priceMatch =
                     car.priceMin <= price;
 
