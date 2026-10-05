@@ -409,9 +409,7 @@
 
                         <button onclick="resetFilters()"
                             class="text-xs font-bold text-blue-600 mt-3">
-
                             Restablecer filtros
-
                         </button>
 
                     </div>
@@ -450,9 +448,7 @@
 
 
                         <span class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
-
                             ${car.type}
-
                         </span>
 
 
@@ -499,7 +495,6 @@
 
                     <div class="p-6">
 
-
                         <div class="flex justify-between gap-4">
 
                             <div>
@@ -538,7 +533,6 @@
 
                         <div class="grid grid-cols-2 gap-3 mt-6">
 
-
                             <div class="bg-blue-50 rounded-2xl p-4">
 
                                 <div class="flex items-center gap-2 text-blue-600 text-xs font-bold">
@@ -572,14 +566,18 @@
                                     ${car.batteryText}
                                 </div>
 
-                            </div>
+                                ${car.batteryType ? `
+                                    <span class="inline-flex mt-2 px-2 py-1 rounded-md bg-slate-200 text-slate-600 text-[10px] font-extrabold uppercase tracking-wider">
+                                        ${car.batteryType}
+                                    </span>
+                                ` : ''}
 
+                            </div>
 
                         </div>
 
 
                         <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-
 
                             <div class="border border-slate-100 rounded-xl p-3">
 
@@ -667,8 +665,17 @@
                     <div class="grid grid-cols-2 gap-3 mt-5 text-sm">
 
                         <div>
-                            <span class="text-slate-400 text-xs block">Batería</span>
+                            <span class="text-slate-400 text-xs block">
+                                Batería
+                            </span>
+
                             <strong>${trim.battery}</strong>
+
+                            ${trim.batteryType ? `
+                                <span class="ml-1 inline-flex px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 text-[9px] font-extrabold uppercase">
+                                    ${trim.batteryType}
+                                </span>
+                            ` : ''}
                         </div>
 
                         <div>
@@ -725,8 +732,6 @@
 
             `).join('');
 
-
-            /* VIDEOS */
 
             const videosHtml = car.videos && car.videos.length
                 ? car.videos.map(video => `
@@ -823,6 +828,80 @@
                 </span>
 
             `).join('');
+
+
+            const brandInfoHtml = car.brandInfo ? `
+
+                <section class="border-t border-slate-200 pt-8">
+
+                    <div class="border border-slate-200 rounded-2xl p-5 sm:p-6 bg-white">
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+
+
+                            <!-- LOGO -->
+
+                            <div
+                                class="w-full sm:w-40 h-20 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-4 shrink-0">
+
+                                <img src="${car.brandInfo.logo}"
+                                    alt="Logo ${car.brand}"
+                                    class="max-w-full max-h-full object-contain">
+
+                            </div>
+
+
+                            <!-- INFO -->
+
+                            <div class="flex-grow">
+
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">
+                                    La marca
+                                </span>
+
+                                <div class="flex flex-wrap items-center gap-2 mt-1">
+
+                                    <h3 class="text-xl font-black">
+                                        ${car.brand}
+                                    </h3>
+
+                                    ${car.brandInfo.relation ? `
+                                        <span
+                                            class="px-2.5 py-1 bg-blue-50 text-blue-600 rounded-full text-[10px] font-extrabold">
+                                            ${car.brandInfo.relation}
+                                        </span>
+                                    ` : ''}
+
+                                </div>
+
+
+                                <div class="mt-3 text-sm">
+
+                                    <span class="text-slate-400">
+                                        Grupo / referencia:
+                                    </span>
+
+                                    <strong class="ml-1">
+                                        ${car.brandInfo.group}
+                                    </strong>
+
+                                </div>
+
+
+                                <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
+                                    ${car.brandInfo.note}
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            ` : '';
 
 
             const modal = document.getElementById('modal-content');
@@ -935,8 +1014,19 @@
                                     ${car.batteryText}
                                 </div>
 
-                                <div class="text-xs text-slate-400">
-                                    Batería
+                                <div class="flex items-center gap-2 mt-1">
+
+                                    <div class="text-xs text-slate-400">
+                                        Batería
+                                    </div>
+
+                                    ${car.batteryType ? `
+                                        <span
+                                            class="px-1.5 py-0.5 rounded bg-slate-200 text-slate-600 text-[9px] font-extrabold uppercase tracking-wider">
+                                            ${car.batteryType}
+                                        </span>
+                                    ` : ''}
+
                                 </div>
 
                             </div>
@@ -1049,7 +1139,7 @@
                     </section>
 
 
-                    <!-- PUBLICIDAD / ADSENSE -->
+                    <!-- PUBLICIDAD -->
 
                     <section>
 
@@ -1068,25 +1158,7 @@
                                 Publicidad
                             </span>
 
-                            <!--
-                            =====================================================
-                            GOOGLE ADSENSE
-                            =====================================================
-
-                            Espacio preparado para insertar posteriormente
-                            un bloque responsive de Google AdSense.
-
-                            Ejemplo:
-
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-XXXXXXXX"
-                                 data-ad-slot="XXXXXXXX"
-                                 data-ad-format="auto"
-                                 data-full-width-responsive="true"></ins>
-
-                            =====================================================
-                            -->
+                            <!-- GOOGLE ADSENSE -->
 
                             <div class="text-xs text-slate-300">
                                 Espacio publicitario
@@ -1247,7 +1319,7 @@
                     ` : ''}
 
 
-                    <!-- EDITORIAL CONCLUSION -->
+                    <!-- CONCLUSION -->
 
                     <section class="border-t border-slate-200 pt-10">
 
@@ -1267,8 +1339,6 @@
 
                         <div class="grid md:grid-cols-2 border border-slate-200 rounded-3xl overflow-hidden bg-white">
 
-
-                            <!-- BEST -->
 
                             <div class="p-6 sm:p-8 md:border-r border-slate-200">
 
@@ -1294,8 +1364,6 @@
 
                             </div>
 
-
-                            <!-- CONSIDERATIONS -->
 
                             <div class="p-6 sm:p-8 border-t md:border-t-0 border-slate-200">
 
@@ -1325,6 +1393,11 @@
                         </div>
 
                     </section>
+
+
+                    <!-- BRAND / AUTOMOTIVE GROUP -->
+
+                    ${brandInfoHtml}
 
 
                     <!-- DATA -->
@@ -1459,13 +1532,9 @@
                 const seatsMatch =
                     !seats || car.seats >= Number(seats);
 
-                // Si alguna versión alcanza la autonomía mínima,
-                // mostramos el modelo.
                 const rangeMatch =
                     car.maxRangeVal >= range;
 
-                // Si alguna versión entra dentro del presupuesto,
-                // mostramos el modelo.
                 const priceMatch =
                     car.priceMin <= price;
 
