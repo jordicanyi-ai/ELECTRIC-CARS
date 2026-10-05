@@ -73,7 +73,7 @@
     <!-- HERO -->
     <section class="bg-white border-b border-slate-200">
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
 
             <div class="max-w-3xl">
 
@@ -521,19 +521,15 @@
                             <div class="text-right">
 
                                 <span class="text-[10px] text-slate-400 uppercase font-bold">
-
-                                    Precio
-
+                                    Precio gama
                                 </span>
 
-                                <div class="font-black text-lg">
-
-                                    ${formatPrice(car.priceMin)}
-
+                                <div class="font-black text-base sm:text-lg whitespace-nowrap">
+                                    ${car.priceText}
                                 </div>
 
                                 <div class="text-[10px] text-slate-400">
-                                    sin ayudas
+                                    IVA incluido · sin ayudas
                                 </div>
 
                             </div>
@@ -658,22 +654,18 @@
 
                 <div class="border border-slate-200 rounded-2xl p-5 bg-white">
 
-                    <div class="flex justify-between items-start gap-3">
+                    <div>
 
-                        <div>
+                        <div class="text-xs text-blue-600 font-extrabold uppercase">
+                            ${trim.name}
+                        </div>
 
-                            <div class="text-xs text-blue-600 font-extrabold uppercase">
-                                ${trim.name}
-                            </div>
+                        <div class="text-xl font-black mt-1">
+                            ${trim.price}
+                        </div>
 
-                            <div class="text-xl font-black mt-1">
-                                ${trim.price}
-                            </div>
-
-                            <div class="text-[10px] text-slate-400">
-                                IVA incluido · Sin ayudas
-                            </div>
-
+                        <div class="text-[10px] text-slate-400">
+                            IVA incluido · Sin ayudas
                         </div>
 
                     </div>
@@ -742,9 +734,9 @@
 
             const positives = car.highlights.map(item => `
 
-                <li class="flex gap-2">
+                <li class="flex gap-3">
 
-                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                    <span class="text-blue-600 font-black text-base leading-5">+</span>
 
                     <span>${item}</span>
 
@@ -755,9 +747,9 @@
 
             const considerations = car.considerations.map(item => `
 
-                <li class="flex gap-2">
+                <li class="flex gap-3">
 
-                    <i class="fa-solid fa-circle-exclamation text-amber-500 mt-1"></i>
+                    <span class="text-slate-400 font-black text-base leading-5">−</span>
 
                     <span>${item}</span>
 
@@ -768,7 +760,7 @@
 
             const idealFor = car.idealFor.map(item => `
 
-                <span class="bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full text-xs font-bold">
+                <span class="bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full text-[11px] font-bold">
                     ${item}
                 </span>
 
@@ -786,7 +778,7 @@
                 <section class="relative">
 
 
-                    <div class="h-[340px] sm:h-[440px] bg-slate-900">
+                    <div class="h-[285px] sm:h-[355px] bg-slate-900">
 
                         <img src="${car.images[0]}"
                             class="w-full h-full object-cover">
@@ -853,7 +845,7 @@
                 </section>
 
 
-                <div class="p-5 sm:p-8 space-y-10">
+                <div class="p-5 sm:p-8 space-y-12">
 
 
                     <!-- RANGE SUMMARY -->
@@ -943,13 +935,13 @@
                     </section>
 
 
-                    <!-- 30 SECONDS -->
+                    <!-- QUICK INTRO -->
 
                     <section>
 
                         <div class="flex items-center gap-2 mb-4">
 
-                            <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                            <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
                                 <i class="fa-solid fa-stopwatch"></i>
                             </div>
 
@@ -960,49 +952,13 @@
                         </div>
 
 
-                        <p class="text-slate-600 leading-relaxed">
+                        <p class="text-slate-600 leading-relaxed max-w-4xl">
                             ${car.description}
                         </p>
 
 
-                        <div class="flex flex-wrap gap-2 mt-4">
-
+                        <div class="flex flex-wrap gap-2 mt-5">
                             ${idealFor}
-
-                        </div>
-
-
-                        <div class="grid md:grid-cols-2 gap-4 mt-6">
-
-
-                            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-
-                                <h4 class="font-black text-emerald-800 mb-3">
-                                    <i class="fa-solid fa-thumbs-up mr-2"></i>
-                                    Lo mejor
-                                </h4>
-
-                                <ul class="space-y-2 text-sm text-emerald-950">
-                                    ${positives}
-                                </ul>
-
-                            </div>
-
-
-                            <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5">
-
-                                <h4 class="font-black text-amber-800 mb-3">
-                                    <i class="fa-solid fa-eye mr-2"></i>
-                                    A tener en cuenta
-                                </h4>
-
-                                <ul class="space-y-2 text-sm text-amber-950">
-                                    ${considerations}
-                                </ul>
-
-                            </div>
-
-
                         </div>
 
                     </section>
@@ -1023,16 +979,14 @@
                             </h3>
 
                             <p class="text-sm text-slate-500 mt-1">
-                                Compara únicamente cuando necesites entrar en detalle.
+                                Elige batería, autonomía y potencia según el uso que necesites.
                             </p>
 
                         </div>
 
 
                         <div class="grid md:grid-cols-2 gap-4">
-
                             ${trimsHtml}
-
                         </div>
 
                     </section>
@@ -1083,6 +1037,7 @@
                                         <div class="text-xs text-slate-400">
                                             Autopista invierno
                                         </div>
+
                                     </div>
 
                                 </div>
@@ -1101,7 +1056,6 @@
                             `
                         }
 
-
                     </section>
 
 
@@ -1109,17 +1063,27 @@
 
                     <section>
 
-                        <h3 class="text-2xl font-black mb-5">
-                            Datos principales
-                        </h3>
+                        <div class="mb-5">
+
+                            <span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">
+                                Ficha técnica
+                            </span>
+
+                            <h3 class="text-2xl font-black mt-1">
+                                Datos principales
+                            </h3>
+
+                        </div>
 
 
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
 
 
-                            <div class="border border-slate-200 rounded-2xl p-4">
+                            <div class="border border-slate-200 rounded-2xl p-5">
 
-                                <span class="text-xs text-slate-400">
+                                <i class="fa-solid fa-ruler-combined text-blue-600 mb-3"></i>
+
+                                <span class="text-xs text-slate-400 block">
                                     Dimensiones
                                 </span>
 
@@ -1130,9 +1094,11 @@
                             </div>
 
 
-                            <div class="border border-slate-200 rounded-2xl p-4">
+                            <div class="border border-slate-200 rounded-2xl p-5">
 
-                                <span class="text-xs text-slate-400">
+                                <i class="fa-solid fa-bolt-lightning text-blue-600 mb-3"></i>
+
+                                <span class="text-xs text-slate-400 block">
                                     Carga rápida
                                 </span>
 
@@ -1143,9 +1109,11 @@
                             </div>
 
 
-                            <div class="border border-slate-200 rounded-2xl p-4">
+                            <div class="border border-slate-200 rounded-2xl p-5">
 
-                                <span class="text-xs text-slate-400">
+                                <i class="fa-solid fa-gauge-high text-blue-600 mb-3"></i>
+
+                                <span class="text-xs text-slate-400 block">
                                     0-100 km/h
                                 </span>
 
@@ -1165,9 +1133,18 @@
 
                     <section>
 
-                        <h3 class="text-2xl font-black mb-5">
-                            Colores
-                        </h3>
+                        <div class="mb-5">
+
+                            <span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">
+                                Personalización
+                            </span>
+
+                            <h3 class="text-2xl font-black mt-1">
+                                Colores disponibles
+                            </h3>
+
+                        </div>
+
 
                         <div class="flex flex-wrap gap-x-6 gap-y-4">
 
@@ -1182,22 +1159,103 @@
 
                     <section>
 
-                        <h3 class="text-2xl font-black mb-5">
-                            Galería
-                        </h3>
+                        <div class="mb-5">
+
+                            <span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">
+                                Imágenes
+                            </span>
+
+                            <h3 class="text-2xl font-black mt-1">
+                                Galería
+                            </h3>
+
+                        </div>
+
 
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-
                             ${galleryHtml}
+                        </div>
+
+                    </section>
+
+
+                    <!-- EDITORIAL CONCLUSION -->
+
+                    <section class="border-t border-slate-200 pt-10">
+
+
+                        <div class="mb-7">
+
+                            <span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">
+                                Conclusión electricos.eu
+                            </span>
+
+                            <h3 class="text-2xl sm:text-3xl font-black mt-1">
+                                Nuestra conclusión
+                            </h3>
+
+                        </div>
+
+
+                        <div class="grid md:grid-cols-2 border border-slate-200 rounded-3xl overflow-hidden bg-white">
+
+
+                            <!-- BEST -->
+
+                            <div class="p-6 sm:p-8 md:border-r border-slate-200">
+
+                                <div class="flex items-center gap-3 mb-5">
+
+                                    <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+
+                                    <h4 class="font-black text-lg">
+                                        Lo mejor
+                                    </h4>
+
+                                </div>
+
+
+                                <ul class="space-y-4 text-sm text-slate-700">
+                                    ${positives}
+                                </ul>
+
+                            </div>
+
+
+                            <!-- CONSIDERATIONS -->
+
+                            <div class="p-6 sm:p-8 border-t md:border-t-0 border-slate-200">
+
+                                <div class="flex items-center gap-3 mb-5">
+
+                                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+
+                                    <h4 class="font-black text-lg">
+                                        A tener en cuenta
+                                    </h4>
+
+                                </div>
+
+
+                                <ul class="space-y-4 text-sm text-slate-700">
+                                    ${considerations}
+                                </ul>
+
+                            </div>
+
 
                         </div>
 
                     </section>
 
 
-                    <!-- DATA CONTROL -->
+                    <!-- DATA / SOURCES -->
 
-                    <section class="border-t border-slate-200 pt-6">
+                    <section class="border-t border-slate-200 pt-7">
 
 
                         <div class="flex flex-col sm:flex-row justify-between gap-5">
@@ -1328,12 +1386,12 @@
                     !seats || car.seats >= Number(seats);
 
                 // Si alguna versión cumple la autonomía,
-                // mostramos el modelo
+                // mostramos el modelo.
                 const rangeMatch =
                     car.maxRangeVal >= range;
 
                 // Si alguna versión entra en presupuesto,
-                // mostramos el modelo
+                // mostramos el modelo.
                 const priceMatch =
                     car.priceMin <= price;
 
