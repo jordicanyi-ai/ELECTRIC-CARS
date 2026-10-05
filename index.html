@@ -621,3 +621,196 @@
             `;
 
             document.getElementById('car-modal').classList.remove('hidden');
+        }
+
+        function closeCarModal() {
+            document.getElementById('car-modal').classList.add('hidden');
+        }
+
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('body-filter').value = '';
+            document.getElementById('seats-filter').value = '';
+            document.getElementById('range-filter').value = 0;
+            document.getElementById('price-filter').value = 90000;
+            filterCars();
+        }
+
+        function filterCars() {
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            const bodyVal = document.getElementById('body-filter').value;
+            const seatsVal = document.getElementById('seats-filter').value;
+            const rangeVal = parseInt(document.getElementById('range-filter').value);
+            const priceVal = parseInt(document.getElementById('price-filter').value);
+
+            document.getElementById('range-val').innerText = rangeVal > 0 ? `${rangeVal} km` : '0 km';
+            document.getElementById('price-val').innerText = priceVal < 90000 ? `${priceVal.toLocaleString()} €` : 'Sin límite';
+
+            const filtered = carsData.filter(car => {
+                const matchSearch = (car.brand + ' ' + car.model).toLowerCase().includes(searchVal);
+                const matchBody = bodyVal === '' || car.type === bodyVal;
+                const matchSeats = seatsVal === '' || car.seats >= parseInt(seatsVal);
+                const matchRange = car.maxRangeVal >= rangeVal;
+                const matchPrice = car.priceMin <= priceVal;
+
+                return matchSearch && matchBody && matchSeats && matchRange && matchPrice;
+            });
+
+            renderGrid(filtered);
+        }
+
+        function renderGrid(cars) {
+            const grid = document.getElementById('cars-grid');
+            const countLabel = document.getElementById('results-count');
+
+            countLabel.innerText = `Mostrando ${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
+
+            if (cars.length === 0 && adsData.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center space-y-3 bg-white rounded-3xl border border-slate-200">
+                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
+                        <p class="font-bold text-slate-700">No se han encontrado vehículos con estos filtros</p>
+                        <button onclick="resetFilters()" class="text-xs font-bold text-blue-600 hover:underline">Restablecer filtros</button>
+                    </div>
+                `;
+                return;
+            }
+
+            // Construimos la parrilla combinando coches y anuncios según su posición
+            let htmlContent = '';
+            let carIndex = 0;
+
+            // Recorremos e intercalamos elementos hasta cubrir todos los coches o insertar anuncios
+            const totalSlots = cars.length + adsData.length;
+            
+            for (let i = 0; i < totalSlots; i++) {
+                // Comprobamos si en esta posición exacta (índice 0, 1, 2...) toca inyectar un anuncio
+                const adToRender = adsData.find(ad => ad.position === i);
+
+                if (adToRender) {
+                    if (adToRender.type === 'custom') {
+                        // Ficha publicitaria personalizada idéntica a la tarjeta de un coche
+                        htmlContent += `
+                            <div class="bg-white rounded-3xl border-2 border-dashed border-blue-300 shadow-xs overflow-hidden flex flex-col justify-between group relative">
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="bg-amber-500 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                                        <i class="fa-solid fa-bullhorn mr-1"></i> ${adToRender.badge}
+                                    </span>
+                                </div>
+                                <div class="relative h-56 bg-slate-900 overflow-hidden">
+                                    <img src="${adToRender.image}" alt="${adToRender.title}" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                                    <div class="absolute bottom-4 left-6 right-6">
+                                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">${adToRender.brand}</span>
+                                        <h3 class="text-xl font-black text-white mt-0.5">${adToRender.title}</h3>
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                                    <p class="text-sm text-slate-600">${adToRender.description}</p>
+                                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                                        <span class="text-xs text-slate-400 font-medium">Contenido Patrocinado</span>
+                                        <a href="${adToRender.ctaUrl}" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs">
+                                            ${adToRender.ctaText}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    } else if (adToRender.type === 'adsense') {
+                        // Tarjeta adaptable para Google AdSense
+                        htmlContent += `
+                            <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs p-6 flex flex-col justify-center items-center min-h-[380px] text-center relative overflow-hidden">
+                                <span class="absolute top-3 right-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Publicidad</span>
+                                <!-- Bloque estándar Google AdSense -->
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adToRender.adsenseClient}" crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle"
+                                     style="display:block; width:100%; height:100%;"
+                                     data-ad-client="${adToRender.adsenseClient}"
+                                     data-ad-slot="${adToRender.adsenseSlot}"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                        `;
+                    }
+                } else if (carIndex < cars.length) {
+                    // Renderizamos el coche correspondiente
+                    const car = cars[carIndex];
+                    if (currentImageIndexes[car.id] === undefined) {
+                        currentImageIndexes[car.id] = 0;
+                    }
+                    const currentImg = car.images[currentImageIndexes[car.id]];
+                    const priceDisplay = car.priceMin === car.priceMax 
+                        ? `${car.priceMin.toLocaleString()} €` 
+                        : `Desde ${car.priceMin.toLocaleString()} €`;
+
+                    htmlContent += `
+                        <div onclick="openCarModal(${car.id})" class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group cursor-pointer">
+                            <div class="relative h-56 bg-slate-900 overflow-hidden">
+                                <img id="car-img-${car.id}" src="${currentImg}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                                
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-white/90 backdrop-blur-md text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">${car.type}</span>
+                                </div>
+
+                                ${car.images.length > 1 ? `
+                                    <button onclick="changeSlide(${car.id}, -1, event)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                                    </button>
+                                    <button onclick="changeSlide(${car.id}, 1, event)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </button>
+                                    <div id="dots-${car.id}" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 items-center">
+                                        ${car.images.map((_, idx) => `
+                                            <span class="w-1.5 h-1.5 rounded-full transition-all ${idx === currentImageIndexes[car.id] ? 'bg-white w-3' : 'bg-white/60'}"></span>
+                                        `).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+
+                            <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                                <div>
+                                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">${car.brand}</div>
+                                    <h3 class="text-xl font-black text-slate-900 mt-0.5">${car.model}</h3>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3 py-3 border-y border-slate-100 text-xs">
+                                    <div class="flex items-center gap-2 text-slate-600 font-medium">
+                                        <i class="fa-solid fa-road text-blue-600"></i>
+                                        <span>${car.rangeText}</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-slate-600 font-medium">
+                                        <i class="fa-solid fa-battery-full text-blue-600"></i>
+                                        <span class="truncate">${car.batteryText}</span>
+                                   </div>
+                                </div>
+
+                                <div class="flex justify-between items-center pt-2">
+                                    <div>
+                                        <span class="text-[10px] uppercase font-bold text-slate-400 block">Precio orientativo</span>
+                                        <span class="text-lg font-black text-slate-900">${priceDisplay}</span>
+                                    </div>
+                                    <span class="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs">
+                                        Ver ficha
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    carIndex++;
+                }
+            }
+
+            grid.innerHTML = htmlContent;
+        }
+
+        // Inicializar renderizado al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid(carsData);
+        });
+    </script>
+</body>
+</html>
