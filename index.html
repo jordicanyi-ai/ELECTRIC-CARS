@@ -108,24 +108,12 @@
         <!-- Listado de Coches -->
         <section class="lg:col-span-3 space-y-6">
             
-            <!-- Banner Informativo -->
-            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-3xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-md border border-slate-800">
-                <div class="space-y-1 text-center sm:text-left">
-                    <span class="bg-blue-600 text-white text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
-                    <h3 class="font-bold text-base sm:text-lg">¿Quieres anunciar tu concesionario en electricos.eu?</h3>
-                    <p class="text-xs text-slate-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
-                </div>
-                <a href="mailto:contacto@electricos.eu" class="bg-white text-slate-900 hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
-                    Contactar
-                </a>
-            </div>
-
             <!-- Contador de resultados -->
             <div class="flex justify-between items-center text-sm text-slate-500 px-1 font-medium">
                 <span id="results-count">Mostrando resultados</span>
             </div>
 
-            <!-- Parrilla de Coches -->
+            <!-- Parrilla de Coches y Anuncios -->
             <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
         </section>
 
@@ -424,6 +412,25 @@
             }
         ];
 
+        // Definición de bloques publicitarios integrados en la parrilla
+        // Puedes cambiar el tipo a 'adsense' o 'custom'
+        const adsData = [
+            {
+                position: 3, // Aparecerá después del tercer coche (índice lógico)
+                type: "custom", // 'custom' para ficha publicitaria propia o 'adsense' para Google AdSense
+                title: "Concesionario Oficial Eléctrico",
+                brand: "Patrocinado",
+                image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+                description: "Promociona tu red de puntos de carga o vehículos en electricos.eu con impacto directo.",
+                badge: "Espacio Comercial",
+                ctaText: "Saber más",
+                ctaUrl: "mailto:contacto@electricos.eu",
+                // Configuración si usaras Adsense puro en este hueco:
+                adsenseClient: "ca-pub-XXXXXXXXXXXXXXXX",
+                adsenseSlot: "1234567890"
+            }
+        ];
+
         let currentImageIndexes = {};
 
         function toggleMobileFilters() {
@@ -602,7 +609,6 @@
                         </div>
                     </div>
 
-                    <!-- Parte inferior de la ventana: Alianza Stellantis a la izquierda y Botón Cerrar a la derecha -->
                     <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-500 bg-slate-50 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-4 rounded-b-3xl border-t border-slate-200/60">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-handshake text-blue-600"></i> Alianza con Grupo Stellantis
@@ -615,132 +621,3 @@
             `;
 
             document.getElementById('car-modal').classList.remove('hidden');
-        }
-
-        function closeCarModal() {
-            document.getElementById('car-modal').classList.add('hidden');
-        }
-
-        function resetFilters() {
-            document.getElementById('search-input').value = '';
-            document.getElementById('body-filter').value = '';
-            document.getElementById('seats-filter').value = '';
-            document.getElementById('range-filter').value = 0;
-            document.getElementById('price-filter').value = 90000;
-            filterCars();
-        }
-
-        function filterCars() {
-            const searchVal = document.getElementById('search-input').value.toLowerCase();
-            const bodyVal = document.getElementById('body-filter').value;
-            const seatsVal = document.getElementById('seats-filter').value;
-            const rangeVal = parseInt(document.getElementById('range-filter').value);
-            const priceVal = parseInt(document.getElementById('price-filter').value);
-
-            // Actualizar etiquetas de los sliders
-            document.getElementById('range-val').innerText = rangeVal > 0 ? `${rangeVal} km` : '0 km';
-            document.getElementById('price-val').innerText = priceVal < 90000 ? `${priceVal.toLocaleString()} €` : 'Sin límite';
-
-            const filtered = carsData.filter(car => {
-                const matchSearch = (car.brand + ' ' + car.model).toLowerCase().includes(searchVal);
-                const matchBody = bodyVal === '' || car.type === bodyVal;
-                const matchSeats = seatsVal === '' || car.seats >= parseInt(seatsVal);
-                const matchRange = car.maxRangeVal >= rangeVal;
-                const matchPrice = car.priceMin <= priceVal;
-
-                return matchSearch && matchBody && matchSeats && matchRange && matchPrice;
-            });
-
-            renderCars(filtered);
-        }
-
-        function renderCars(cars) {
-            const grid = document.getElementById('cars-grid');
-            const countLabel = document.getElementById('results-count');
-
-            countLabel.innerText = `Mostrando ${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
-
-            if (cars.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full py-16 text-center space-y-3 bg-white rounded-3xl border border-slate-200">
-                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
-                        <p class="font-bold text-slate-700">No se han encontrado vehículos con estos filtros</p>
-                        <button onclick="resetFilters()" class="text-xs font-bold text-blue-600 hover:underline">Restablecer filtros</button>
-                    </div>
-                `;
-                return;
-            }
-
-            grid.innerHTML = cars.map(car => {
-                if (currentImageIndexes[car.id] === undefined) {
-                    currentImageIndexes[car.id] = 0;
-                }
-                const currentImg = car.images[currentImageIndexes[car.id]];
-                const priceDisplay = car.priceMin === car.priceMax 
-                    ? `${car.priceMin.toLocaleString()} €` 
-                    : `Desde ${car.priceMin.toLocaleString()} €`;
-
-                return `
-                    <div onclick="openCarModal(${car.id})" class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group cursor-pointer">
-                        <div class="relative h-56 bg-slate-900 overflow-hidden">
-                            <img id="car-img-${car.id}" src="${currentImg}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
-                            
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-white/90 backdrop-blur-md text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">${car.type}</span>
-                            </div>
-
-                            ${car.images.length > 1 ? `
-                                <button onclick="changeSlide(${car.id}, -1, event)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
-                                    <i class="fa-solid fa-chevron-left text-xs"></i>
-                                </button>
-                                <button onclick="changeSlide(${car.id}, 1, event)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </button>
-                                <div id="dots-${car.id}" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 items-center">
-                                    ${car.images.map((_, i) => `
-                                        <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[car.id] ? 'bg-white w-3' : 'bg-white/60'}"></span>
-                                    `).join('')}
-                                </div>
-                            ` : ''}
-                        </div>
-
-                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
-                            <div>
-                                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">${car.brand}</div>
-                                <h3 class="text-xl font-black text-slate-900 mt-0.5">${car.model}</h3>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3 py-3 border-y border-slate-100 text-xs">
-                                <div class="flex items-center gap-2 text-slate-600 font-medium">
-                                    <i class="fa-solid fa-road text-blue-600"></i>
-                                    <span>${car.rangeText}</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-slate-600 font-medium">
-                                    <i class="fa-solid fa-battery-full text-blue-600"></i>
-                                    <span class="truncate">${car.batteryText}</span>
-                               </div>
-                            </div>
-
-                            <div class="flex justify-between items-center pt-2">
-                                <div>
-                                    <span class="text-[10px] uppercase font-bold text-slate-400 block">Precio orientativo</span>
-                                    <span class="text-lg font-black text-slate-900">${priceDisplay}</span>
-                                </div>
-                                <span class="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs">
-                                    Ver ficha
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        // Inicializar renderizado al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCars(carsData);
-        });
-    </script>
-</body>
-</html>
