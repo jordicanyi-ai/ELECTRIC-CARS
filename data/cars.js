@@ -7,8 +7,7 @@ const carsData = [
         type: "SUV",
         launchYear: 2026,
 
-        // RESUM DE GAMMA
-        // Siempre mostramos mínimo-máximo para entender el coche rápidamente
+        // RESUMEN DE GAMA
         priceMin: 22900,
         priceMax: 27900,
         priceText: "22.900 - 27.900 €",
@@ -42,7 +41,7 @@ const carsData = [
         considerations: [
             "La versión de batería pequeña está más orientada a uso urbano y diario",
             "Marca todavía joven en el mercado europeo",
-            "Autonomía real pendiente de completar con más pruebas independientes"
+            "La versión de mayor autonomía supone un salto de precio importante"
         ],
 
         idealFor: [
@@ -57,14 +56,6 @@ const carsData = [
             includesVat: true,
             includesAid: false,
             note: "Precios mostrados con IVA y sin ayudas públicas."
-        },
-
-        // AUTONOMÍA
-        realRange: {
-            combined: null,
-            highwaySummer: null,
-            highwayWinter: null,
-            note: "Datos de autonomía real pendientes de validación."
         },
 
         // CARGA
@@ -120,6 +111,7 @@ const carsData = [
             "img/b03x-8.jpg"
         ],
 
+        // VÍDEOS
         videos: [
             {
                 title: "Leapmotor B03X: Prueba completa y detalles",
