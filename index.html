@@ -1,476 +1,1371 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>electricos.eu — Buscador Objetivo de Coches Eléctricos</title>
+
+    <title>electricos.eu — Comparador independiente de coches eléctricos</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
 
-    <!-- Cabecera -->
-    <header class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-7 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-3.5">
-                <div class="bg-blue-600 text-white p-3 rounded-2xl shadow-lg flex items-center justify-center transform hover:scale-105 transition">
-                    <i class="fa-solid fa-bolt-lightning text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-2xl font-black tracking-tight">electricos<span class="text-blue-400">.eu</span></h1>
-                    <p class="text-xs text-slate-400 font-medium">Comparador independiente de vehículos eléctricos</p>
-                </div>
-            </div>
-            
+<body class="bg-slate-100 text-slate-900 antialiased min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header
+        class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex justify-between items-center">
+
             <div class="flex items-center gap-3">
-                <div class="hidden md:flex items-center gap-2 text-xs font-semibold text-slate-300 bg-slate-900 px-4 py-2 rounded-full border border-slate-800 shadow-inner">
-                    <i class="fa-solid fa-shield-halved text-blue-400"></i> Datos técnicos neutros y verificados
+
+                <div
+                    class="bg-blue-600 text-white w-11 h-11 rounded-2xl flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-bolt-lightning"></i>
                 </div>
+
+                <div>
+                    <h1 class="text-2xl font-black tracking-tight">
+                        electricos<span class="text-blue-400">.eu</span>
+                    </h1>
+
+                    <p class="text-xs text-slate-400">
+                        Comparador independiente de vehículos eléctricos
+                    </p>
+                </div>
+
             </div>
+
+            <div
+                class="hidden md:flex items-center gap-2 text-xs font-semibold text-slate-300 bg-slate-900 px-4 py-2 rounded-full border border-slate-800">
+
+                <i class="fa-solid fa-scale-balanced text-blue-400"></i>
+
+                Precios sin ayudas públicas
+            </div>
+
         </div>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-4 gap-8">
-        
-        <!-- Botón Desplegable de Filtros para Móvil -->
-        <div class="lg:hidden w-full">
-            <button onclick="toggleMobileFilters()" class="w-full bg-white border border-slate-300 py-3.5 px-4 rounded-2xl font-bold text-sm text-slate-800 shadow-sm flex items-center justify-between">
-                <span class="flex items-center gap-2">
-                    <i class="fa-solid fa-filter text-blue-600"></i> Filtrar vehículos
+
+    <!-- HERO -->
+    <section class="bg-white border-b border-slate-200">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+
+            <div class="max-w-3xl">
+
+                <span class="text-blue-600 font-extrabold uppercase tracking-wider text-xs">
+                    Comparador independiente
                 </span>
-                <i id="filter-toggle-icon" class="fa-solid fa-chevron-down text-xs text-slate-400 transition"></i>
-            </button>
+
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight mt-2">
+                    Encuentra el eléctrico que realmente encaja contigo
+                </h2>
+
+                <p class="text-slate-500 mt-3 text-sm sm:text-base leading-relaxed">
+                    Compara precio, autonomía, batería, espacio y versiones sin esconder las cifras
+                    detrás de ayudas públicas.
+                </p>
+
+            </div>
+
         </div>
 
-        <!-- Panel de Filtros -->
-        <aside id="filters-panel" class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs h-fit lg:sticky lg:top-28 space-y-6">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-                <h2 class="font-bold text-slate-900 flex items-center gap-2 text-sm uppercase tracking-wider">
-                    <i class="fa-solid fa-filter text-blue-600"></i> Filtros
+    </section>
+
+
+    <!-- MAIN -->
+    <main
+        class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+
+        <!-- MOBILE FILTER -->
+        <div class="lg:hidden">
+
+            <button onclick="toggleMobileFilters()"
+                class="w-full bg-white border border-slate-300 py-3.5 px-4 rounded-2xl font-bold text-sm flex justify-between">
+
+                <span>
+                    <i class="fa-solid fa-filter text-blue-600 mr-2"></i>
+                    Filtrar vehículos
+                </span>
+
+                <i id="filter-toggle-icon"
+                    class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- FILTERS -->
+        <aside id="filters-panel"
+            class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-3xl border border-slate-200 h-fit lg:sticky lg:top-28 space-y-6">
+
+            <div class="flex justify-between border-b border-slate-100 pb-4">
+
+                <h2 class="font-bold text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-filter text-blue-600 mr-2"></i>
+                    Filtros
                 </h2>
-                <button onclick="resetFilters()" class="text-xs font-semibold text-slate-400 hover:text-blue-600 transition">Limpiar</button>
+
+                <button onclick="resetFilters()"
+                    class="text-xs font-semibold text-slate-400 hover:text-blue-600">
+                    Limpiar
+                </button>
+
             </div>
 
-            <!-- Búsqueda por texto -->
+
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Marca o Modelo</label>
+
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
+                    Marca o modelo
+                </label>
+
                 <div class="relative">
-                    <input type="text" id="search-input" oninput="filterCars()" placeholder="Ej: Leapmotor, Tesla..." class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+
+                    <input id="search-input"
+                        oninput="filterCars()"
+                        type="text"
+                        placeholder="Ej: Leapmotor..."
+                        class="w-full pl-9 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute left-3.5 top-4 text-slate-400 text-xs"></i>
+
                 </div>
+
             </div>
 
-            <!-- Filtro por Carrocería -->
+
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipo de Vehículo</label>
-                <select id="body-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition cursor-pointer">
-                    <option value="">Todos los tipos</option>
+
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
+                    Tipo
+                </label>
+
+                <select id="body-filter"
+                    onchange="filterCars()"
+                    class="w-full py-3 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+
+                    <option value="">Todos</option>
                     <option value="Utilitario">Utilitario / Compacto</option>
                     <option value="SUV">SUV</option>
                     <option value="Sedan">Sedán / Berlina</option>
+
                 </select>
+
             </div>
 
-            <!-- Filtro por Plazas -->
+
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Plazas Mínimas</label>
-                <select id="seats-filter" onchange="filterCars()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition cursor-pointer">
+
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
+                    Plazas mínimas
+                </label>
+
+                <select id="seats-filter"
+                    onchange="filterCars()"
+                    class="w-full py-3 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+
                     <option value="">Cualquier plaza</option>
                     <option value="5">5 plazas</option>
                     <option value="7">7 plazas</option>
+
                 </select>
+
             </div>
 
-            <!-- Autonomía mínima -->
+
             <div>
+
                 <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-                    <span>Autonomía Mínima</span>
-                    <span id="range-val" class="text-blue-600 font-extrabold">0 km</span>
+
+                    <span>Autonomía mínima</span>
+
+                    <span id="range-val"
+                        class="text-blue-600 font-extrabold">
+                        0 km
+                    </span>
+
                 </div>
-                <input type="range" id="range-filter" min="0" max="600" step="50" value="0" oninput="filterCars()" class="w-full accent-blue-600 cursor-pointer">
+
+                <input type="range"
+                    id="range-filter"
+                    min="0"
+                    max="700"
+                    step="50"
+                    value="0"
+                    oninput="filterCars()"
+                    class="w-full accent-blue-600">
+
             </div>
 
-            <!-- Precio máximo -->
+
             <div>
+
                 <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-                    <span>Precio Máximo</span>
-                    <span id="price-val" class="text-blue-600 font-extrabold">Sin límite</span>
+
+                    <span>Precio máximo</span>
+
+                    <span id="price-val"
+                        class="text-blue-600 font-extrabold">
+                        Sin límite
+                    </span>
+
                 </div>
-                <input type="range" id="price-filter" min="20000" max="90000" step="5000" value="90000" oninput="filterCars()" class="w-full accent-blue-600 cursor-pointer">
+
+                <input type="range"
+                    id="price-filter"
+                    min="15000"
+                    max="90000"
+                    step="5000"
+                    value="90000"
+                    oninput="filterCars()"
+                    class="w-full accent-blue-600">
+
+                <p class="text-[10px] text-slate-400 mt-2">
+                    IVA incluido · Sin ayudas públicas
+                </p>
+
             </div>
+
         </aside>
 
-        <!-- Listado de Coches -->
-        <section class="lg:col-span-3 space-y-6">
-            
-            <!-- Banner Informativo -->
-            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-3xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-md border border-slate-800">
-                <div class="space-y-1 text-center sm:text-left">
-                    <span class="bg-blue-600 text-white text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
-                    <h3 class="font-bold text-base sm:text-lg">¿Quieres anunciar tu concesionario en electricos.eu?</h3>
-                    <p class="text-xs text-slate-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
+
+        <!-- CARS -->
+        <section class="lg:col-span-3 space-y-5">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+                    <h2 class="font-black text-xl">
+                        Coches eléctricos
+                    </h2>
+
+                    <p id="results-count"
+                        class="text-sm text-slate-500 mt-1">
+                    </p>
                 </div>
-                <a href="mailto:contacto@electricos.eu" class="bg-white text-slate-900 hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
-                    Contactar
-                </a>
+
             </div>
 
-            <!-- Contador de resultados -->
-            <div class="flex justify-between items-center text-sm text-slate-500 px-1 font-medium">
-                <span id="results-count">Mostrando resultados</span>
+
+            <div id="cars-grid"
+                class="grid grid-cols-1 md:grid-cols-2 gap-7">
             </div>
 
-            <!-- Parrilla de Coches -->
-            <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
         </section>
 
     </main>
 
-    <!-- Modal de Ficha Detallada del Coche -->
-    <div id="car-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto" onclick="closeCarModal()">
-        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 transform transition-all" onclick="event.stopPropagation()">
-            <div id="modal-content"></div>
+
+    <!-- MODAL -->
+    <div id="car-modal"
+        class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden overflow-y-auto"
+        onclick="closeCarModal()">
+
+        <div class="min-h-full flex justify-center sm:items-start p-0 sm:p-5">
+
+            <div
+                class="bg-white sm:rounded-[2rem] max-w-5xl w-full sm:my-5 overflow-hidden shadow-2xl"
+                onclick="event.stopPropagation()">
+
+                <div id="modal-content"></div>
+
+            </div>
+
         </div>
+
     </div>
 
-    <!-- Pie de página -->
-    <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p class="font-bold text-slate-900 text-sm">electricos.eu</p>
-            <p>Datos técnicos neutros y verificados. Sin sesgos comerciales en la información.</p>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 mt-16">
+
+        <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+
+            <p class="font-black">
+                electricos<span class="text-blue-600">.eu</span>
+            </p>
+
+            <p class="text-xs text-slate-400 mt-2">
+                Comparador independiente de vehículos eléctricos.
+            </p>
+
         </div>
+
     </footer>
 
-    <!-- Lógica del Comparador y Base de Datos -->
 
-     <script src="data/cars.js"></script>
-    
+    <!-- DATABASE -->
+    <script src="data/cars.js"></script>
+
+
+    <!-- APP -->
     <script>
-
-       
 
         let currentImageIndexes = {};
 
+
+        function formatPrice(number) {
+            return number.toLocaleString('es-ES') + ' €';
+        }
+
+
         function toggleMobileFilters() {
+
             const panel = document.getElementById('filters-panel');
             const icon = document.getElementById('filter-toggle-icon');
+
             panel.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
         }
 
+
         function changeSlide(carId, direction, event) {
+
             event.stopPropagation();
+
             const car = carsData.find(c => c.id === carId);
+
             if (!car) return;
 
-            if (currentImageIndexes[carId] === undefined) {
+            if (currentImageIndexes[carId] === undefined)
                 currentImageIndexes[carId] = 0;
-            }
 
             currentImageIndexes[carId] += direction;
 
-            if (currentImageIndexes[carId] >= car.images.length) {
+            if (currentImageIndexes[carId] >= car.images.length)
                 currentImageIndexes[carId] = 0;
-            } else if (currentImageIndexes[carId] < 0) {
+
+            if (currentImageIndexes[carId] < 0)
                 currentImageIndexes[carId] = car.images.length - 1;
-            }
 
-            const imgElement = document.getElementById(`car-img-${carId}`);
-            if (imgElement) {
-                imgElement.src = car.images[currentImageIndexes[carId]];
-            }
+            const img = document.getElementById(`car-img-${carId}`);
 
-            const dotsContainer = document.getElementById(`dots-${carId}`);
-            if (dotsContainer) {
-                dotsContainer.innerHTML = car.images.map((_, i) => `
-                    <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[carId] ? 'bg-white w-3' : 'bg-white/60'}"></span>
+            if (img)
+                img.src = car.images[currentImageIndexes[carId]];
+
+            const dots = document.getElementById(`dots-${carId}`);
+
+            if (dots) {
+
+                dots.innerHTML = car.images.map((_, i) => `
+                    <span class="
+                        h-1.5 rounded-full transition-all
+                        ${i === currentImageIndexes[carId]
+                            ? 'bg-white w-5'
+                            : 'bg-white/60 w-1.5'}
+                    "></span>
                 `).join('');
             }
         }
 
+
+        function renderCars(cars) {
+
+            const grid = document.getElementById('cars-grid');
+
+            document.getElementById('results-count').innerText =
+                `${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
+
+
+            if (!cars.length) {
+
+                grid.innerHTML = `
+
+                    <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-slate-200">
+
+                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
+
+                        <p class="font-bold text-slate-700 mt-3">
+                            No encontramos vehículos con estos filtros
+                        </p>
+
+                        <button onclick="resetFilters()"
+                            class="text-xs font-bold text-blue-600 mt-3">
+
+                            Restablecer filtros
+
+                        </button>
+
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            grid.innerHTML = cars.map(car => {
+
+                if (currentImageIndexes[car.id] === undefined)
+                    currentImageIndexes[car.id] = 0;
+
+                const image =
+                    car.images[currentImageIndexes[car.id]];
+
+
+                return `
+
+                <article onclick="openCarModal(${car.id})"
+                    class="bg-white rounded-[1.7rem] overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 cursor-pointer group">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="relative h-60 bg-slate-900 overflow-hidden">
+
+                        <img id="car-img-${car.id}"
+                            src="${image}"
+                            class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
+
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+
+                        <span class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
+
+                            ${car.type}
+
+                        </span>
+
+
+                        ${car.images.length > 1 ? `
+
+                        <button onclick="changeSlide(${car.id},-1,event)"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-9 h-9 rounded-full opacity-0 group-hover:opacity-100 transition">
+
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+
+                        </button>
+
+
+                        <button onclick="changeSlide(${car.id},1,event)"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-9 h-9 rounded-full opacity-0 group-hover:opacity-100 transition">
+
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+
+                        </button>
+
+
+                        <div id="dots-${car.id}"
+                            class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+
+                            ${car.images.map((_, i) => `
+
+                                <span class="
+                                    h-1.5 rounded-full
+                                    ${i === currentImageIndexes[car.id]
+                                        ? 'bg-white w-5'
+                                        : 'bg-white/60 w-1.5'}
+                                "></span>
+
+                            `).join('')}
+
+                        </div>
+
+                        ` : ''}
+
+                    </div>
+
+
+                    <!-- CONTENT -->
+
+                    <div class="p-6">
+
+
+                        <div class="flex justify-between gap-4">
+
+                            <div>
+
+                                <span class="text-blue-600 text-xs uppercase font-extrabold tracking-wider">
+
+                                    ${car.brand}
+
+                                </span>
+
+                                <h3 class="text-2xl font-black mt-1">
+
+                                    ${car.model}
+
+                                </h3>
+
+                            </div>
+
+
+                            <div class="text-right">
+
+                                <span class="text-[10px] text-slate-400 uppercase font-bold">
+
+                                    Precio
+
+                                </span>
+
+                                <div class="font-black text-lg">
+
+                                    ${formatPrice(car.priceMin)}
+
+                                </div>
+
+                                <div class="text-[10px] text-slate-400">
+                                    sin ayudas
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRIMARY SPECS -->
+
+                        <div class="grid grid-cols-2 gap-3 mt-6">
+
+
+                            <div class="bg-blue-50 rounded-2xl p-4">
+
+                                <div class="flex items-center gap-2 text-blue-600 text-xs font-bold">
+
+                                    <i class="fa-solid fa-road"></i>
+                                    AUTONOMÍA
+
+                                </div>
+
+                                <div class="text-xl font-black mt-1">
+
+                                    ${car.rangeText}
+
+                                </div>
+
+                                <div class="text-[10px] text-slate-500">
+                                    WLTP
+                                </div>
+
+                            </div>
+
+
+                            <div class="bg-slate-50 rounded-2xl p-4">
+
+                                <div class="flex items-center gap-2 text-slate-500 text-xs font-bold">
+
+                                    <i class="fa-solid fa-battery-full text-blue-600"></i>
+                                    BATERÍA
+
+                                </div>
+
+                                <div class="text-xl font-black mt-1">
+
+                                    ${car.batteryText}
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+
+
+                            <div class="border border-slate-100 rounded-xl p-3">
+
+                                <i class="fa-solid fa-bolt text-blue-600"></i>
+
+                                <div class="text-xs font-bold mt-1">
+                                    ${car.powerText}
+                                </div>
+
+                            </div>
+
+
+                            <div class="border border-slate-100 rounded-xl p-3">
+
+                                <i class="fa-solid fa-suitcase text-blue-600"></i>
+
+                                <div class="text-xs font-bold mt-1">
+                                    ${car.trunk} L
+                                </div>
+
+                            </div>
+
+
+                            <div class="border border-slate-100 rounded-xl p-3">
+
+                                <i class="fa-solid fa-user-group text-blue-600"></i>
+
+                                <div class="text-xs font-bold mt-1">
+                                    ${car.seats} plazas
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="w-full bg-slate-900 group-hover:bg-blue-600 text-white py-3 rounded-xl text-xs font-bold mt-5 transition">
+
+                            Ver ficha completa
+
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </article>
+
+                `;
+
+            }).join('');
+        }
+
+
         function openCarModal(carId) {
+
             const car = carsData.find(c => c.id === carId);
+
             if (!car) return;
 
-            const priceDisplay = car.priceMin === car.priceMax 
-                ? `${car.priceMin.toLocaleString()} €` 
-                : `Desde ${car.priceMin.toLocaleString()} €`;
 
             const trimsHtml = car.trims.map(trim => `
-                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-                    <div>
-                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">${trim.name}</span>
-                        <div class="text-base font-black text-slate-900">${trim.price}</div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-white">
+
+                    <div class="flex justify-between items-start gap-3">
+
+                        <div>
+
+                            <div class="text-xs text-blue-600 font-extrabold uppercase">
+                                ${trim.name}
+                            </div>
+
+                            <div class="text-xl font-black mt-1">
+                                ${trim.price}
+                            </div>
+
+                            <div class="text-[10px] text-slate-400">
+                                IVA incluido · Sin ayudas
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-battery-half text-blue-600 mr-1"></i> ${trim.battery}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-bolt text-blue-600 mr-1"></i> ${trim.power}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-road text-blue-600 mr-1"></i> ${trim.range}</span>
-                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-stopwatch text-blue-600 mr-1"></i> 0-100: ${trim.accel}</span>
+
+
+                    <div class="grid grid-cols-2 gap-3 mt-5 text-sm">
+
+                        <div>
+                            <span class="text-slate-400 text-xs block">Batería</span>
+                            <strong>${trim.battery}</strong>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 text-xs block">Autonomía</span>
+                            <strong>${trim.range}</strong>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 text-xs block">Potencia</span>
+                            <strong>${trim.power}</strong>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 text-xs block">0-100 km/h</span>
+                            <strong>${trim.accel}</strong>
+                        </div>
+
                     </div>
+
                 </div>
+
             `).join('');
+
 
             const colorsHtml = car.colors.map(color => `
-                <div class="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
-                    <span class="w-4 h-4 rounded-full shadow-xs inline-block shrink-0" style="background-color: ${color.hex}; ${color.border ? 'border: 1px solid ' + color.border : ''}"></span>
-                    <span class="text-xs font-semibold text-slate-700">${color.name}</span>
+
+                <div class="flex items-center gap-2">
+
+                    <span class="w-6 h-6 rounded-full shadow-sm"
+                        style="
+                            background:${color.hex};
+                            ${color.border ? `border:1px solid ${color.border}` : ''}
+                        ">
+                    </span>
+
+                    <span class="text-xs font-semibold text-slate-600">
+                        ${color.name}
+                    </span>
+
                 </div>
+
             `).join('');
+
 
             const galleryHtml = car.images.map(img => `
-                <div class="h-28 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100">
-                    <img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+
+                <div class="rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3]">
+
+                    <img src="${img}"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+
                 </div>
+
             `).join('');
 
-            const videosHtml = car.videos.map(video => `
-                <a href="${video.url}" target="_blank" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:border-blue-500 transition block shadow-xs">
-                    <div class="h-32 w-full relative overflow-hidden bg-slate-900">
-                        <img src="${video.thumb}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90">
-                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                            <div class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <h5 class="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition line-clamp-2">${video.title}</h5>
-                    </div>
-                </a>
+
+            const positives = car.highlights.map(item => `
+
+                <li class="flex gap-2">
+
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+
+                    <span>${item}</span>
+
+                </li>
+
             `).join('');
 
-            const modalContent = document.getElementById('modal-content');
-            modalContent.innerHTML = `
-                <div class="relative h-72 w-full bg-slate-900">
-                    <img src="${car.images[0]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                    <button onclick="closeCarModal()" class="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white w-9 h-9 rounded-full flex items-center justify-center transition backdrop-blur-xs">
-                        <i class="fa-solid fa-xmark text-sm"></i>
+
+            const considerations = car.considerations.map(item => `
+
+                <li class="flex gap-2">
+
+                    <i class="fa-solid fa-circle-exclamation text-amber-500 mt-1"></i>
+
+                    <span>${item}</span>
+
+                </li>
+
+            `).join('');
+
+
+            const idealFor = car.idealFor.map(item => `
+
+                <span class="bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full text-xs font-bold">
+                    ${item}
+                </span>
+
+            `).join('');
+
+
+            const modal = document.getElementById('modal-content');
+
+
+            modal.innerHTML = `
+
+
+                <!-- HERO CAR -->
+
+                <section class="relative">
+
+
+                    <div class="h-[340px] sm:h-[440px] bg-slate-900">
+
+                        <img src="${car.images[0]}"
+                            class="w-full h-full object-cover">
+
+                    </div>
+
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent"></div>
+
+
+                    <button onclick="closeCarModal()"
+                        class="absolute top-5 right-5 w-11 h-11 bg-black/50 hover:bg-black/80 backdrop-blur text-white rounded-full">
+
+                        <i class="fa-solid fa-xmark"></i>
+
                     </button>
-                    <div class="absolute bottom-4 left-6 right-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
-                        <div>
-                            <span class="bg-blue-600 text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">${car.type}</span>
-                            <h2 class="text-2xl font-black text-white mt-1">${car.brand} ${car.model}</h2>
-                        </div>
-                        <a href="${car.brandUrl}" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-xl text-xs font-bold transition backdrop-blur-md flex items-center gap-2">
-                            <i class="fa-solid fa-globe"></i> Web oficial de la marca
-                        </a>
-                    </div>
-                </div>
 
-                <div class="p-6 sm:p-8 space-y-6">
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-6 border-b border-slate-100">
-                        <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
-                            <div class="text-xl font-black text-slate-900">${priceDisplay}</div>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
-                            <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Plazas</span>
-                            <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold uppercase text-slate-400">Lanzamiento</span>
-                            <div class="text-lg font-bold text-slate-700">${car.launchYear}</div>
-                        </div>
-                    </div>
 
-                    <div class="space-y-2">
-                        <h4 class="text-xs font-bold uppercase text-slate-400">Descripción general</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
-                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Dimensiones (L x An x Al)</span>
-                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-ruler-combined text-blue-600 mr-1.5"></i> ${car.dimensions}</p>
+
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
+                            ${car.type}
+                        </span>
+
+
+                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-3">
+
+
+                            <div>
+
+                                <div class="text-sm text-slate-300 font-semibold">
+                                    ${car.brand}
+                                </div>
+
+                                <h2 class="text-4xl sm:text-5xl font-black">
+                                    ${car.model}
+                                </h2>
+
+                            </div>
+
+
+                            <div class="sm:text-right">
+
+                                <div class="text-xs text-slate-300">
+                                    Precio gama
+                                </div>
+
+                                <div class="text-2xl sm:text-3xl font-black">
+                                    ${car.priceText}
+                                </div>
+
+                                <div class="text-xs text-slate-300 mt-1">
+                                    IVA incluido · Sin ayudas públicas
+                                </div>
+
+                            </div>
+
+
                         </div>
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Tiempos de Carga</span>
-                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-charging-station text-blue-600 mr-1.5"></i> ${car.charging}</p>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Aceleración 0-100 km/h</span>
-                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-gauge-high text-blue-600 mr-1.5"></i> ${car.acceleration}</p>
-                        </div>
+
                     </div>
 
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400">Versiones y Acabados disponibles</h4>
-                        <div class="space-y-2">
+                </section>
+
+
+                <div class="p-5 sm:p-8 space-y-10">
+
+
+                    <!-- RANGE SUMMARY -->
+
+                    <section>
+
+                        <div class="grid grid-cols-2 lg:grid-cols-5 gap-3">
+
+
+                            <div class="col-span-2 lg:col-span-1 bg-blue-600 text-white rounded-2xl p-5">
+
+                                <i class="fa-solid fa-road opacity-70"></i>
+
+                                <div class="text-2xl font-black mt-2">
+                                    ${car.rangeText}
+                                </div>
+
+                                <div class="text-xs opacity-80">
+                                    Autonomía WLTP
+                                </div>
+
+                            </div>
+
+
+                            <div class="bg-slate-50 rounded-2xl p-5">
+
+                                <i class="fa-solid fa-battery-full text-blue-600"></i>
+
+                                <div class="text-xl font-black mt-2">
+                                    ${car.batteryText}
+                                </div>
+
+                                <div class="text-xs text-slate-400">
+                                    Batería
+                                </div>
+
+                            </div>
+
+
+                            <div class="bg-slate-50 rounded-2xl p-5">
+
+                                <i class="fa-solid fa-bolt text-blue-600"></i>
+
+                                <div class="text-lg font-black mt-2">
+                                    ${car.powerText}
+                                </div>
+
+                                <div class="text-xs text-slate-400">
+                                    Potencia
+                                </div>
+
+                            </div>
+
+
+                            <div class="bg-slate-50 rounded-2xl p-5">
+
+                                <i class="fa-solid fa-suitcase text-blue-600"></i>
+
+                                <div class="text-xl font-black mt-2">
+                                    ${car.trunk} L
+                                </div>
+
+                                <div class="text-xs text-slate-400">
+                                    Maletero
+                                </div>
+
+                            </div>
+
+
+                            <div class="bg-slate-50 rounded-2xl p-5">
+
+                                <i class="fa-solid fa-user-group text-blue-600"></i>
+
+                                <div class="text-xl font-black mt-2">
+                                    ${car.seats}
+                                </div>
+
+                                <div class="text-xs text-slate-400">
+                                    Plazas
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 30 SECONDS -->
+
+                    <section>
+
+                        <div class="flex items-center gap-2 mb-4">
+
+                            <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-stopwatch"></i>
+                            </div>
+
+                            <h3 class="text-xl font-black">
+                                El ${car.model} en 30 segundos
+                            </h3>
+
+                        </div>
+
+
+                        <p class="text-slate-600 leading-relaxed">
+                            ${car.description}
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+
+                            ${idealFor}
+
+                        </div>
+
+
+                        <div class="grid md:grid-cols-2 gap-4 mt-6">
+
+
+                            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+
+                                <h4 class="font-black text-emerald-800 mb-3">
+                                    <i class="fa-solid fa-thumbs-up mr-2"></i>
+                                    Lo mejor
+                                </h4>
+
+                                <ul class="space-y-2 text-sm text-emerald-950">
+                                    ${positives}
+                                </ul>
+
+                            </div>
+
+
+                            <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+
+                                <h4 class="font-black text-amber-800 mb-3">
+                                    <i class="fa-solid fa-eye mr-2"></i>
+                                    A tener en cuenta
+                                </h4>
+
+                                <ul class="space-y-2 text-sm text-amber-950">
+                                    ${considerations}
+                                </ul>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- VERSIONS -->
+
+                    <section>
+
+                        <div class="mb-5">
+
+                            <span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">
+                                Gama
+                            </span>
+
+                            <h3 class="text-2xl font-black mt-1">
+                                Versiones disponibles
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-1">
+                                Compara únicamente cuando necesites entrar en detalle.
+                            </p>
+
+                        </div>
+
+
+                        <div class="grid md:grid-cols-2 gap-4">
+
                             ${trimsHtml}
-                        </div>
-                    </div>
 
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400">Colores Disponibles</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        </div>
+
+                    </section>
+
+
+                    <!-- REAL RANGE -->
+
+                    <section class="bg-slate-950 text-white rounded-3xl p-6 sm:p-8">
+
+
+                        <span class="text-blue-400 text-xs font-extrabold uppercase tracking-wider">
+                            Uso real
+                        </span>
+
+
+                        <h3 class="text-2xl font-black mt-1">
+                            Autonomía real
+                        </h3>
+
+
+                        ${
+                            car.realRange.combined
+                            ? `
+                                <div class="grid grid-cols-3 gap-4 mt-6">
+
+                                    <div>
+                                        <div class="text-2xl font-black">
+                                            ${car.realRange.combined} km
+                                        </div>
+                                        <div class="text-xs text-slate-400">
+                                            Uso mixto
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-2xl font-black">
+                                            ${car.realRange.highwaySummer} km
+                                        </div>
+                                        <div class="text-xs text-slate-400">
+                                            Autopista verano
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-2xl font-black">
+                                            ${car.realRange.highwayWinter} km
+                                        </div>
+                                        <div class="text-xs text-slate-400">
+                                            Autopista invierno
+                                        </div>
+                                    </div>
+
+                                </div>
+                            `
+                            :
+                            `
+                                <div class="mt-5 bg-white/5 border border-white/10 rounded-2xl p-5">
+
+                                    <i class="fa-solid fa-flask text-blue-400 mr-2"></i>
+
+                                    <span class="text-sm text-slate-300">
+                                        ${car.realRange.note}
+                                    </span>
+
+                                </div>
+                            `
+                        }
+
+
+                    </section>
+
+
+                    <!-- TECH -->
+
+                    <section>
+
+                        <h3 class="text-2xl font-black mb-5">
+                            Datos principales
+                        </h3>
+
+
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+
+                            <div class="border border-slate-200 rounded-2xl p-4">
+
+                                <span class="text-xs text-slate-400">
+                                    Dimensiones
+                                </span>
+
+                                <div class="font-bold mt-1">
+                                    ${car.dimensions}
+                                </div>
+
+                            </div>
+
+
+                            <div class="border border-slate-200 rounded-2xl p-4">
+
+                                <span class="text-xs text-slate-400">
+                                    Carga rápida
+                                </span>
+
+                                <div class="font-bold mt-1">
+                                    ${car.charging}
+                                </div>
+
+                            </div>
+
+
+                            <div class="border border-slate-200 rounded-2xl p-4">
+
+                                <span class="text-xs text-slate-400">
+                                    0-100 km/h
+                                </span>
+
+                                <div class="font-bold mt-1">
+                                    ${car.acceleration}
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- COLORS -->
+
+                    <section>
+
+                        <h3 class="text-2xl font-black mb-5">
+                            Colores
+                        </h3>
+
+                        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
                             ${colorsHtml}
-                        </div>
-                    </div>
 
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400">Galería de Imágenes</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        </div>
+
+                    </section>
+
+
+                    <!-- GALLERY -->
+
+                    <section>
+
+                        <h3 class="text-2xl font-black mb-5">
+                            Galería
+                        </h3>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+
                             ${galleryHtml}
-                        </div>
-                    </div>
 
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold uppercase text-slate-400">Vídeos y Análisis Relacionados</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            ${videosHtml}
                         </div>
-                    </div>
 
-                    <!-- Parte inferior de la ventana: Alianza Stellantis a la izquierda y Botón Cerrar a la derecha -->
-                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-500 bg-slate-50 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-4 rounded-b-3xl border-t border-slate-200/60">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-handshake text-blue-600"></i> Alianza con Grupo Stellantis
+                    </section>
+
+
+                    <!-- DATA CONTROL -->
+
+                    <section class="border-t border-slate-200 pt-6">
+
+
+                        <div class="flex flex-col sm:flex-row justify-between gap-5">
+
+
+                            <div>
+
+                                <div class="flex items-center gap-2">
+
+                                    <i class="fa-solid fa-shield-halved text-blue-600"></i>
+
+                                    <strong class="text-sm">
+                                        Estado de los datos
+                                    </strong>
+
+                                </div>
+
+
+                                <p class="text-xs text-slate-500 mt-2">
+
+                                    ${car.dataStatus.status} ·
+                                    Última comprobación:
+                                    ${car.dataStatus.checkedAt}
+
+                                </p>
+
+
+                                <p class="text-xs text-slate-400 mt-1">
+
+                                    Los precios de electricos.eu se muestran con IVA y sin ayudas públicas.
+
+                                </p>
+
+                            </div>
+
+
+                            <a href="${car.brandUrl}"
+                                target="_blank"
+                                rel="noopener"
+                                class="h-fit border border-slate-300 hover:border-blue-600 hover:text-blue-600 px-4 py-2.5 rounded-xl text-xs font-bold transition">
+
+                                Web oficial
+
+                                <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+
+                            </a>
+
+
                         </div>
-                        <button onclick="closeCarModal()" class="bg-slate-900 hover:bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold transition shadow-xs">
-                            Cerrar ficha
-                        </button>
-                    </div>
+
+                    </section>
+
+
                 </div>
+
             `;
 
+
             document.getElementById('car-modal').classList.remove('hidden');
+
+            document.body.style.overflow = 'hidden';
         }
+
 
         function closeCarModal() {
+
             document.getElementById('car-modal').classList.add('hidden');
+
+            document.body.style.overflow = '';
         }
 
+
         function resetFilters() {
+
             document.getElementById('search-input').value = '';
+
             document.getElementById('body-filter').value = '';
+
             document.getElementById('seats-filter').value = '';
+
             document.getElementById('range-filter').value = 0;
+
             document.getElementById('price-filter').value = 90000;
+
             filterCars();
         }
 
-        function filterCars() {
-            const searchVal = document.getElementById('search-input').value.toLowerCase();
-            const bodyVal = document.getElementById('body-filter').value;
-            const seatsVal = document.getElementById('seats-filter').value;
-            const rangeVal = parseInt(document.getElementById('range-filter').value);
-            const priceVal = parseInt(document.getElementById('price-filter').value);
 
-            // Actualizar etiquetas de los sliders
-            document.getElementById('range-val').innerText = rangeVal > 0 ? `${rangeVal} km` : '0 km';
-            document.getElementById('price-val').innerText = priceVal < 90000 ? `${priceVal.toLocaleString()} €` : 'Sin límite';
+        function filterCars() {
+
+            const search =
+                document.getElementById('search-input').value.toLowerCase();
+
+            const body =
+                document.getElementById('body-filter').value;
+
+            const seats =
+                document.getElementById('seats-filter').value;
+
+            const range =
+                parseInt(document.getElementById('range-filter').value);
+
+            const price =
+                parseInt(document.getElementById('price-filter').value);
+
+
+            document.getElementById('range-val').innerText =
+                range ? `${range} km` : '0 km';
+
+
+            document.getElementById('price-val').innerText =
+                price < 90000
+                    ? formatPrice(price)
+                    : 'Sin límite';
+
 
             const filtered = carsData.filter(car => {
-                const matchSearch = (car.brand + ' ' + car.model).toLowerCase().includes(searchVal);
-                const matchBody = bodyVal === '' || car.type === bodyVal;
-                const matchSeats = seatsVal === '' || car.seats >= parseInt(seatsVal);
-                const matchRange = car.maxRangeVal >= rangeVal;
-                const matchPrice = car.priceMin <= priceVal;
 
-                return matchSearch && matchBody && matchSeats && matchRange && matchPrice;
+                const searchMatch =
+                    `${car.brand} ${car.model}`
+                        .toLowerCase()
+                        .includes(search);
+
+                const bodyMatch =
+                    !body || car.type === body;
+
+                const seatsMatch =
+                    !seats || car.seats >= Number(seats);
+
+                // Si alguna versión cumple la autonomía,
+                // mostramos el modelo
+                const rangeMatch =
+                    car.maxRangeVal >= range;
+
+                // Si alguna versión entra en presupuesto,
+                // mostramos el modelo
+                const priceMatch =
+                    car.priceMin <= price;
+
+
+                return searchMatch &&
+                    bodyMatch &&
+                    seatsMatch &&
+                    rangeMatch &&
+                    priceMatch;
             });
+
 
             renderCars(filtered);
         }
 
-        function renderCars(cars) {
-            const grid = document.getElementById('cars-grid');
-            const countLabel = document.getElementById('results-count');
 
-            countLabel.innerText = `Mostrando ${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
+        document.addEventListener('keydown', event => {
 
-            if (cars.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full py-16 text-center space-y-3 bg-white rounded-3xl border border-slate-200">
-                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
-                        <p class="font-bold text-slate-700">No se han encontrado vehículos con estos filtros</p>
-                        <button onclick="resetFilters()" class="text-xs font-bold text-blue-600 hover:underline">Restablecer filtros</button>
-                    </div>
-                `;
-                return;
-            }
+            if (event.key === 'Escape')
+                closeCarModal();
 
-            grid.innerHTML = cars.map(car => {
-                if (currentImageIndexes[car.id] === undefined) {
-                    currentImageIndexes[car.id] = 0;
-                }
-                const currentImg = car.images[currentImageIndexes[car.id]];
-                const priceDisplay = car.priceMin === car.priceMax 
-                    ? `${car.priceMin.toLocaleString()} €` 
-                    : `Desde ${car.priceMin.toLocaleString()} €`;
-
-                return `
-                    <div onclick="openCarModal(${car.id})" class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group cursor-pointer">
-                        <div class="relative h-56 bg-slate-900 overflow-hidden">
-                            <img id="car-img-${car.id}" src="${currentImg}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
-                            
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-white/90 backdrop-blur-md text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">${car.type}</span>
-                            </div>
-
-                            ${car.images.length > 1 ? `
-                                <button onclick="changeSlide(${car.id}, -1, event)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
-                                    <i class="fa-solid fa-chevron-left text-xs"></i>
-                                </button>
-                                <button onclick="changeSlide(${car.id}, 1, event)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </button>
-                                <div id="dots-${car.id}" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 items-center">
-                                    ${car.images.map((_, i) => `
-                                        <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[car.id] ? 'bg-white w-3' : 'bg-white/60'}"></span>
-                                    `).join('')}
-                                </div>
-                            ` : ''}
-                        </div>
-
-                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
-                            <div>
-                                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">${car.brand}</div>
-                                <h3 class="text-xl font-black text-slate-900 mt-0.5">${car.model}</h3>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3 py-3 border-y border-slate-100 text-xs">
-                                <div class="flex items-center gap-2 text-slate-600 font-medium">
-                                    <i class="fa-solid fa-road text-blue-600"></i>
-                                    <span>${car.rangeText}</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-slate-600 font-medium">
-                                    <i class="fa-solid fa-battery-full text-blue-600"></i>
-                                    <span class="truncate">${car.batteryText}</span>
-                               </div>
-                            </div>
-
-                            <div class="flex justify-between items-center pt-2">
-                                <div>
-                                    <span class="text-[10px] uppercase font-bold text-slate-400 block">Precio orientativo</span>
-                                    <span class="text-lg font-black text-slate-900">${priceDisplay}</span>
-                                </div>
-                                <span class="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs">
-                                    Ver ficha
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        // Inicializar renderizado al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCars(carsData);
         });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            renderCars(carsData);
+
+        });
+
     </script>
+
 </body>
+
 </html>
