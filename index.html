@@ -111,4 +111,636 @@
             <!-- Banner Informativo -->
             <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-3xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-md border border-slate-800">
                 <div class="space-y-1 text-center sm:text-left">
-                    <span
+                    <span class="bg-blue-600 text-white text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full tracking-wider">Espacio Comercial</span>
+                    <h3 class="font-bold text-base sm:text-lg">¿Quieres anunciar tu concesionario en electricos.eu?</h3>
+                    <p class="text-xs text-slate-300">Impacto directo en usuarios buscando activamente un coche eléctrico.</p>
+                </div>
+                <a href="mailto:contacto@electricos.eu" class="bg-white text-slate-900 hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-xs whitespace-nowrap">
+                    Contactar
+                </a>
+            </div>
+
+            <!-- Contador de resultados -->
+            <div class="flex justify-between items-center text-sm text-slate-500 px-1 font-medium">
+                <span id="results-count">Mostrando resultados</span>
+            </div>
+
+            <!-- Parrilla de Coches -->
+            <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </section>
+
+    </main>
+
+    <!-- Modal de Ficha Detallada del Coche -->
+    <div id="car-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4 overflow-y-auto" onclick="closeCarModal()">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 transform transition-all" onclick="event.stopPropagation()">
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-bold text-slate-900 text-sm">electricos.eu</p>
+            <p>Datos técnicos neutros y verificados. Sin sesgos comerciales en la información.</p>
+        </div>
+    </footer>
+
+    <!-- Lógica del Comparador y Base de Datos -->
+    <script>
+        const carsData = [
+            { 
+                id: 1, 
+                brand: "Leapmotor", 
+                model: "B03X", 
+                type: "SUV", 
+                priceMin: 22900, 
+                priceMax: 27900, 
+                rangeText: "292 - 382 km",
+                minRangeVal: 292, 
+                maxRangeVal: 382,
+                batteryText: "39,8 kWh | 53 kWh",
+                powerText: "130 kW (177 CV) | 145 kW (197 CV)",
+                trunk: 510,
+                seats: 5,
+                launchYear: 2026,
+                acceleration: "8,6 s (0-100 km/h)",
+                dimensions: "4,32 m (L) / 1,81 m (An) / 1,62 m (Al)",
+                description: "El Leapmotor B03X destaca por su excelente relación calidad-precio dentro del segmento SUV compacto eléctrico, ofreciendo gran habitabilidad y opciones de batería eficientes.",
+                charging: "Carga rápida CC (30-80%): 16 - 17 min.",
+                brandUrl: "https://www.leapmotor.com",
+                colors: [
+                    { name: "Marrón Bellota", hex: "#8c7355" },
+                    { name: "Azul Arándano", hex: "#3b4d66" },
+                    { name: "Plata Estelar", hex: "#cbd5e1", border: "#94a3b8" },
+                    { name: "Verde alga", hex: "#233d2c" },
+                    { name: "Gris Tundra", hex: "#71797e" },
+                    { name: "Beige Escarcha", hex: "#e5e3d4", border: "#cbd5e1" }
+                ],
+                trims: [
+                    { name: "Pro", price: "22.900 €", battery: "39,8 kWh", power: "130 kW (177 CV)", range: "292 km WLTP", accel: "8,6 s" },
+                    { name: "ProMax", price: "27.900 €", battery: "53 kWh", power: "145 kW (197 CV)", range: "382 km WLTP", accel: "8,6 s" }
+                ],
+                videos: [
+                    { title: "Leapmotor B03X: Prueba completa y detalles", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+review", thumb: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" },
+                    { title: "Análisis autonomía y sistema multimedia", url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+autonomia", thumb: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "img/b03x-1.jpg",
+                    "img/b03x-2.jpg",
+                    "img/b03x-3.jpg",
+                    "img/b03x-4.jpg",
+                    "img/b03x-5.jpg",
+                    "img/b03x-6.jpg",
+                    "img/b03x-7.jpg",
+                    "img/b03x-8.jpg"
+                ]
+            },
+            { 
+                id: 2, 
+                brand: "Leapmotor", 
+                model: "B05", 
+                type: "Utilitario", 
+                priceMin: 20900, 
+                priceMax: 25900, 
+                rangeText: "310 - 410 km",
+                minRangeVal: 310, 
+                maxRangeVal: 410,
+                batteryText: "42 kWh | 55 kWh",
+                powerText: "115 kW (156 CV)",
+                trunk: 380,
+                seats: 5,
+                launchYear: 2026,
+                acceleration: "9,0 s (0-100 km/h)",
+                dimensions: "4,20 m (L) / 1,78 m (An) / 1,55 m (Al)",
+                description: "El Leapmotor B05 es un hatchback compacto totalmente eléctrico diseñado para la movilidad urbana y eficiente, destacando por su gran conectividad y costes contenidos.",
+                charging: "Carga rápida CC (30-80%): 20 min.",
+                brandUrl: "https://www.leapmotor.com",
+                colors: [
+                    { name: "Blanco Glaciar", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Gris Grafito", hex: "#334155" },
+                    { name: "Azul Eléctrico", hex: "#0284c7" }
+                ],
+                trims: [
+                    { name: "Pure", price: "20.900 €", battery: "42 kWh", power: "115 kW (156 CV)", range: "310 km WLTP", accel: "9,0 s" },
+                    { name: "Comfort", price: "25.900 €", battery: "55 kWh", power: "115 kW (156 CV)", range: "410 km WLTP", accel: "9,0 s" }
+                ],
+                videos: [
+                    { title: "Leapmotor B05: Presentación y características", url: "https://www.youtube.com/results?search_query=Leapmotor+B05+electric", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 3, 
+                brand: "Leapmotor", 
+                model: "B10", 
+                type: "SUV", 
+                priceMin: 27900, 
+                priceMax: 33900, 
+                rangeText: "370 - 480 km",
+                minRangeVal: 370, 
+                maxRangeVal: 480,
+                batteryText: "56 kWh | 69 kWh",
+                powerText: "160 kW (218 CV)",
+                trunk: 530,
+                seats: 5,
+                launchYear: 2026,
+                acceleration: "7,5 s (0-100 km/h)",
+                dimensions: "4,51 m (L) / 1,88 m (An) / 1,65 m (Al)",
+                description: "El Leapmotor B10 es un SUV global de tamaño medio enfocado a familias jóvenes, construido sobre la avanzada plataforma tecnológica LEAP 3.5 con asistentes de conducción de última generación.",
+                charging: "Carga rápida CC (30-80%): 18 min.",
+                brandUrl: "https://www.leapmotor.com",
+                colors: [
+                    { name: "Gris Cósmico", hex: "#64748b" },
+                    { name: "Verde Salvia", hex: "#658a77" },
+                    { name: "Blanco Perla", hex: "#f8fafc", border: "#cbd5e1" }
+                ],
+                trims: [
+                    { name: "Design", price: "27.900 €", battery: "56 kWh", power: "160 kW (218 CV)", range: "370 km WLTP", accel: "7,5 s" },
+                    { name: "Top", price: "33.900 €", battery: "69 kWh", power: "160 kW (218 CV)", range: "480 km WLTP", accel: "7,5 s" }
+                ],
+                videos: [
+                    { title: "Leapmotor B10: El nuevo SUV eléctrico global", url: "https://www.youtube.com/results?search_query=Leapmotor+B10+review", thumb: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 4, 
+                brand: "Citroën", 
+                model: "ë-C3", 
+                type: "Utilitario", 
+                priceMin: 22500, 
+                priceMax: 24500, 
+                rangeText: "320 km",
+                minRangeVal: 320, 
+                maxRangeVal: 320,
+                batteryText: "44 kWh LFP",
+                powerText: "83 kW (113 CV)",
+                trunk: 310,
+                seats: 5,
+                launchYear: 2024,
+                acceleration: "11,0 s (0-100 km/h)",
+                dimensions: "4,01 m (L) / 1,76 m (An) / 1,57 m (Al)",
+                description: "El Citroën ë-C3 democratiza la movilidad eléctrica en Europa ofreciendo suspensión Citroën Advanced Comfort, posición de conducción elevada y un precio asequible fabricado en Europa.",
+                charging: "Carga rápida CC 100 kW (20-80%): 26 min.",
+                brandUrl: "https://www.citroen.es",
+                colors: [
+                    { name: "Blanco Banquise", hex: "#ffffff", border: "#cbd5e1" },
+                    { name: "Azul Montecarlo", hex: "#1e3a8a" },
+                    { name: "Gris Elbene", hex: "#94a3b8" },
+                    { name: "Rojo Elixir", hex: "#991b1b" }
+                ],
+                trims: [
+                    { name: "You", price: "22.500 €", battery: "44 kWh", power: "113 CV", range: "320 km", accel: "11,0 s" },
+                    { name: "Max", price: "24.500 €", battery: "44 kWh", power: "113 CV", range: "320 km", accel: "11,0 s" }
+                ],
+                videos: [
+                    { title: "Citroën ë-C3: Prueba del eléctrico barato", url: "https://www.youtube.com/results?search_query=Citroen+eC3+prueba+espanol", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 5, 
+                brand: "Citroën", 
+                model: "ë-C3 Aircross", 
+                type: "SUV", 
+                priceMin: 26490, 
+                priceMax: 29990, 
+                rangeText: "300 - 400 km",
+                minRangeVal: 300, 
+                maxRangeVal: 400,
+                batteryText: "44 kWh | 54 kWh",
+                powerText: "83 kW (113 CV)",
+                trunk: 460,
+                seats: 7,
+                launchYear: 2024,
+                acceleration: "12,0 s (0-100 km/h)",
+                dimensions: "4,39 m (L) / 1,80 m (An) / 1,66 m (Al)",
+                description: "El Citroën ë-C3 Aircross destaca por su versatilidad familiar, ofreciendo una variante de hasta 7 plazas en un formato SUV compacto muy robusto y confortable.",
+                charging: "Carga rápida CC hasta 100 kW.",
+                brandUrl: "https://www.citroen.es",
+                colors: [
+                    { name: "Gris Perla", hex: "#cbd5e1" },
+                    { name: "Negro Perla Nera", hex: "#0f172a" },
+                    { name: "Azul Strikefast", hex: "#2563eb" }
+                ],
+                trims: [
+                    { name: "Standard (5 plazas)", price: "26.490 €", battery: "44 kWh", power: "113 CV", range: "300 km", accel: "12,0 s" },
+                    { name: "Extended Range (7 plazas)", price: "29.990 €", battery: "54 kWh", power: "113 CV", range: "400 km", accel: "12,5 s" }
+                ],
+                videos: [
+                    { title: "Citroën ë-C3 Aircross de 7 plazas", url: "https://www.youtube.com/results?search_query=Citroen+eC3+Aircross+electric", thumb: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 6, 
+                brand: "MG", 
+                model: "MG4 Electric", 
+                type: "Utilitario", 
+                priceMin: 24290, 
+                priceMax: 38490, 
+                rangeText: "350 - 520 km",
+                minRangeVal: 350,
+                maxRangeVal: 520,
+                batteryText: "51 kWh | 64 kWh | 77 kWh",
+                powerText: "170 CV - 435 CV",
+                trunk: 363,
+                seats: 5,
+                launchYear: 2022,
+                acceleration: "3,8 s - 7,7 s (0-100 km/h)",
+                dimensions: "4,28 m (L) / 1,83 m (An) / 1,50 m (Al)",
+                description: "Uno de los utilitarios eléctricos más vendidos gracias a su plataforma dedicada, comportamiento dinámico excelente y versiones de altas prestaciones (XPower).",
+                charging: "Carga rápida CC hasta 140 kW según versión.",
+                brandUrl: "https://www.mg.es",
+                colors: [
+                    { name: "Naranja Brighton", hex: "#f97316" },
+                    { name: "Negro Guijarro", hex: "#1e293b" },
+                    { name: "Blanco Ártico", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Gris Metalizado", hex: "#475569" }
+                ],
+                trims: [
+                    { name: "Standard", price: "24.290 €", battery: "51 kWh", power: "170 CV", range: "350 km", accel: "7,7 s" },
+                    { name: "Comfort / Luxury", price: "29.990 €", battery: "64 kWh", power: "204 CV", range: "450 km", accel: "7,9 s" },
+                    { name: "XPower (Deportivo)", price: "38.490 €", battery: "77 kWh", power: "435 CV", range: "520 km", accel: "3,8 s" }
+                ],
+                videos: [
+                    { title: "MG4 Electric: Prueba a fondo en español", url: "https://www.youtube.com/results?search_query=MG4+Electric+prueba+espanol", thumb: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            { 
+                id: 7, 
+                brand: "Tesla", 
+                model: "Model 3", 
+                type: "Sedan", 
+                priceMin: 39990, 
+                priceMax: 50990, 
+                rangeText: "513 - 629 km",
+                minRangeVal: 513,
+                maxRangeVal: 629,
+                batteryText: "60 kWh | 75 kWh",
+                powerText: "283 CV - 513 CV",
+                trunk: 561,
+                seats: 5,
+                launchYear: 2019,
+                acceleration: "3,1 s - 6,1 s (0-100 km/h)",
+                dimensions: "4,72 m (L) / 1,85 m (An) / 1,44 m (Al)",
+                description: "La berlina de referencia mundial en movilidad eléctrica. Ofrece tecnología puntera, eficiencia energética líder y acceso a la red Supercharger.",
+                charging: "Supercarga hasta 250 kW.",
+                brandUrl: "https://www.tesla.com/es_es",
+                colors: [
+                    { name: "Blanco Perlado", hex: "#f8fafc", border: "#cbd5e1" },
+                    { name: "Negro Sólido", hex: "#020617" },
+                    { name: "Gris Mercurio", hex: "#94a3b8" },
+                    { name: "Rojo Ultra", hex: "#dc2626" }
+                ],
+                trims: [
+                    { name: "Tracción Trasera (Standard)", price: "39.990 €", battery: "60 kWh", power: "283 CV", range: "513 km", accel: "6,1 s" },
+                    { name: "Gran Autonomía (Doble Motor)", price: "50.990 €", battery: "75 kWh", power: "513 CV", range: "629 km", accel: "4,4 s" }
+                ],
+                videos: [
+                    { title: "Nuevo Tesla Model 3 Highland: Análisis completo", url: "https://www.youtube.com/results?search_query=Tesla+Model+3+Highland+prueba+espanol", thumb: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80"
+                ]
+            }
+        ];
+
+        let currentImageIndexes = {};
+
+        function toggleMobileFilters() {
+            const panel = document.getElementById('filters-panel');
+            const icon = document.getElementById('filter-toggle-icon');
+            panel.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function changeSlide(carId, direction, event) {
+            event.stopPropagation();
+            const car = carsData.find(c => c.id === carId);
+            if (!car) return;
+
+            if (currentImageIndexes[carId] === undefined) {
+                currentImageIndexes[carId] = 0;
+            }
+
+            currentImageIndexes[carId] += direction;
+
+            if (currentImageIndexes[carId] >= car.images.length) {
+                currentImageIndexes[carId] = 0;
+            } else if (currentImageIndexes[carId] < 0) {
+                currentImageIndexes[carId] = car.images.length - 1;
+            }
+
+            const imgElement = document.getElementById(`car-img-${carId}`);
+            if (imgElement) {
+                imgElement.src = car.images[currentImageIndexes[carId]];
+            }
+
+            const dotsContainer = document.getElementById(`dots-${carId}`);
+            if (dotsContainer) {
+                dotsContainer.innerHTML = car.images.map((_, i) => `
+                    <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[carId] ? 'bg-white w-3' : 'bg-white/60'}"></span>
+                `).join('');
+            }
+        }
+
+        function openCarModal(carId) {
+            const car = carsData.find(c => c.id === carId);
+            if (!car) return;
+
+            const priceDisplay = car.priceMin === car.priceMax 
+                ? `${car.priceMin.toLocaleString()} €` 
+                : `Desde ${car.priceMin.toLocaleString()} €`;
+
+            const trimsHtml = car.trims.map(trim => `
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">${trim.name}</span>
+                        <div class="text-base font-black text-slate-900">${trim.price}</div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-battery-half text-blue-600 mr-1"></i> ${trim.battery}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-bolt text-blue-600 mr-1"></i> ${trim.power}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-road text-blue-600 mr-1"></i> ${trim.range}</span>
+                        <span class="bg-white px-2.5 py-1 rounded-lg border border-slate-200 font-medium text-slate-700"><i class="fa-solid fa-stopwatch text-blue-600 mr-1"></i> 0-100: ${trim.accel}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            const colorsHtml = car.colors.map(color => `
+                <div class="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
+                    <span class="w-4 h-4 rounded-full shadow-xs inline-block shrink-0" style="background-color: ${color.hex}; ${color.border ? 'border: 1px solid ' + color.border : ''}"></span>
+                    <span class="text-xs font-semibold text-slate-700">${color.name}</span>
+                </div>
+            `).join('');
+
+            const galleryHtml = car.images.map(img => `
+                <div class="h-28 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100">
+                    <img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                </div>
+            `).join('');
+
+            const videosHtml = car.videos.map(video => `
+                <a href="${video.url}" target="_blank" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:border-blue-500 transition block shadow-xs">
+                    <div class="h-32 w-full relative overflow-hidden bg-slate-900">
+                        <img src="${video.thumb}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                            <div class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h5 class="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition line-clamp-2">${video.title}</h5>
+                    </div>
+                </a>
+            `).join('');
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="relative h-72 w-full bg-slate-900">
+                    <img src="${car.images[0]}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <button onclick="closeCarModal()" class="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white w-9 h-9 rounded-full flex items-center justify-center transition backdrop-blur-xs">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                    <div class="absolute bottom-4 left-6 right-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
+                        <div>
+                            <span class="bg-blue-600 text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">${car.type}</span>
+                            <h2 class="text-2xl font-black text-white mt-1">${car.brand} ${car.model}</h2>
+                        </div>
+                        <a href="${car.brandUrl}" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-xl text-xs font-bold transition backdrop-blur-md flex items-center gap-2">
+                            <i class="fa-solid fa-globe"></i> Web oficial de la marca
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-6 border-b border-slate-100">
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Precio de salida</span>
+                            <div class="text-xl font-black text-slate-900">${priceDisplay}</div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Maletero</span>
+                            <div class="text-lg font-bold text-slate-700">${car.trunk} Litros</div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Plazas</span>
+                            <div class="text-lg font-bold text-slate-700">${car.seats} plazas</div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Lanzamiento</span>
+                            <div class="text-lg font-bold text-slate-700">${car.launchYear}</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-bold uppercase text-slate-400">Descripción general</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">${car.description}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Dimensiones (L x An x Al)</span>
+                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-ruler-combined text-blue-600 mr-1.5"></i> ${car.dimensions}</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Tiempos de Carga</span>
+                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-charging-station text-blue-600 mr-1.5"></i> ${car.charging}</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold uppercase text-slate-400 block mb-1">Aceleración 0-100 km/h</span>
+                            <p class="text-sm font-semibold text-slate-800"><i class="fa-solid fa-gauge-high text-blue-600 mr-1.5"></i> ${car.acceleration}</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold uppercase text-slate-400">Versiones y Acabados disponibles</h4>
+                        <div class="space-y-2">
+                            ${trimsHtml}
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold uppercase text-slate-400">Colores Disponibles</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            ${colorsHtml}
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold uppercase text-slate-400">Galería de Imágenes</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            ${galleryHtml}
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold uppercase text-slate-400">Vídeos y Análisis Relacionados</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            ${videosHtml}
+                        </div>
+                    </div>
+
+                    <!-- Parte inferior de la ventana: Alianza Stellantis a la izquierda y Botón Cerrar a la derecha -->
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-500 bg-slate-50 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-4 rounded-b-3xl border-t border-slate-200/60">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-handshake text-blue-600"></i> Alianza con Grupo Stellantis
+                        </div>
+                        <button onclick="closeCarModal()" class="bg-slate-900 hover:bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold transition shadow-xs">
+                            Cerrar ficha
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('car-modal').classList.remove('hidden');
+        }
+
+        function closeCarModal() {
+            document.getElementById('car-modal').classList.add('hidden');
+        }
+
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('body-filter').value = '';
+            document.getElementById('seats-filter').value = '';
+            document.getElementById('range-filter').value = 0;
+            document.getElementById('price-filter').value = 90000;
+            filterCars();
+        }
+
+        function filterCars() {
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            const bodyVal = document.getElementById('body-filter').value;
+            const seatsVal = document.getElementById('seats-filter').value;
+            const rangeVal = parseInt(document.getElementById('range-filter').value);
+            const priceVal = parseInt(document.getElementById('price-filter').value);
+
+            // Actualizar etiquetas de los sliders
+            document.getElementById('range-val').innerText = rangeVal > 0 ? `${rangeVal} km` : '0 km';
+            document.getElementById('price-val').innerText = priceVal < 90000 ? `${priceVal.toLocaleString()} €` : 'Sin límite';
+
+            const filtered = carsData.filter(car => {
+                const matchSearch = (car.brand + ' ' + car.model).toLowerCase().includes(searchVal);
+                const matchBody = bodyVal === '' || car.type === bodyVal;
+                const matchSeats = seatsVal === '' || car.seats >= parseInt(seatsVal);
+                const matchRange = car.maxRangeVal >= rangeVal;
+                const matchPrice = car.priceMin <= priceVal;
+
+                return matchSearch && matchBody && matchSeats && matchRange && matchPrice;
+            });
+
+            renderCars(filtered);
+        }
+
+        function renderCars(cars) {
+            const grid = document.getElementById('cars-grid');
+            const countLabel = document.getElementById('results-count');
+
+            countLabel.innerText = `Mostrando ${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
+
+            if (cars.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center space-y-3 bg-white rounded-3xl border border-slate-200">
+                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
+                        <p class="font-bold text-slate-700">No se han encontrado vehículos con estos filtros</p>
+                        <button onclick="resetFilters()" class="text-xs font-bold text-blue-600 hover:underline">Restablecer filtros</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = cars.map(car => {
+                if (currentImageIndexes[car.id] === undefined) {
+                    currentImageIndexes[car.id] = 0;
+                }
+                const currentImg = car.images[currentImageIndexes[car.id]];
+                const priceDisplay = car.priceMin === car.priceMax 
+                    ? `${car.priceMin.toLocaleString()} €` 
+                    : `Desde ${car.priceMin.toLocaleString()} €`;
+
+                return `
+                    <div onclick="openCarModal(${car.id})" class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group cursor-pointer">
+                        <div class="relative h-56 bg-slate-900 overflow-hidden">
+                            <img id="car-img-${car.id}" src="${currentImg}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                            
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-white/90 backdrop-blur-md text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">${car.type}</span>
+                            </div>
+
+                            ${car.images.length > 1 ? `
+                                <button onclick="changeSlide(${car.id}, -1, event)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                                </button>
+                                <button onclick="changeSlide(${car.id}, 1, event)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </button>
+                                <div id="dots-${car.id}" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 items-center">
+                                    ${car.images.map((_, i) => `
+                                        <span class="w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndexes[car.id] ? 'bg-white w-3' : 'bg-white/60'}"></span>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">${car.brand}</div>
+                                <h3 class="text-xl font-black text-slate-900 mt-0.5">${car.model}</h3>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 py-3 border-y border-slate-100 text-xs">
+                                <div class="flex items-center gap-2 text-slate-600 font-medium">
+                                    <i class="fa-solid fa-road text-blue-600"></i>
+                                    <span>${car.rangeText}</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-600 font-medium">
+                                    <i class="fa-solid fa-battery-full text-blue-600"></i>
+                                    <span class="truncate">${car.batteryText}</span>
+                               </div>
+                            </div>
+
+                            <div class="flex justify-between items-center pt-2">
+                                <div>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400 block">Precio orientativo</span>
+                                    <span class="text-lg font-black text-slate-900">${priceDisplay}</span>
+                                </div>
+                                <span class="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs">
+                                    Ver ficha
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Inicializar renderizado al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCars(carsData);
+        });
+    </script>
+</body>
+</html>
