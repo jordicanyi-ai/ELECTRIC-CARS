@@ -73,7 +73,7 @@ const carsData = [
         colors:[{name:"Amarillo Pop",hex:"#e8d52a"},{name:"Verde Pop",hex:"#58715c"},{name:"Azul Noche",hex:"#1f3d64"},{name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},{name:"Rojo Deseo",hex:"#8f1e2c"}],
         images:["img/cars/renault-5/01.webp","img/cars/renault-5/02.webp","img/cars/renault-5/03.webp","img/cars/renault-5/04.webp","img/cars/renault-5/05.webp","img/cars/renault-5/06.webp","img/cars/renault-5/07.webp","img/cars/renault-5/08.webp"],
         videos:[{title:"Renault 5 E-Tech eléctrico",url:"https://www.youtube.com/results?search_query=Renault+5+E-Tech+prueba",thumb:"img/cars/renault-5/01.webp"}],
-        brandInfo:{logo:""img/brands/renault.png"",group:"Renault Group",relation:"Marca principal",note:"Renault es la marca principal de Renault Group."},
+        brandInfo:{logo:"img/brands/renault.png",group:"Renault Group",relation:"Marca principal",note:"Renault es la marca principal de Renault Group."},
         brandUrl:"https://www.renault.es", dataStatus:{status:"Revisado · fotos oficiales",checkedAt:"06/10/2026"}
     },
 
