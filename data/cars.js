@@ -1,150 +1,272 @@
 const carsData = [
     {
         id: 1,
-
         brand: "Leapmotor",
         model: "B03X",
         type: "SUV",
         launchYear: 2026,
-
-        // RESUMEN DE GAMA
-        priceMin: 22900,
-        priceMax: 27900,
-        priceText: "22.900 - 27.900 €",
-
-        rangeText: "292 - 382 km",
-        minRangeVal: 292,
-        maxRangeVal: 382,
-
-        batteryText: "39,8 - 53 kWh",
-        batteryType: "LFP",
-
-        powerText: "177 - 197 CV",
-
-        trunk: 510,
-        seats: 5,
-
-        acceleration: "8,6 s",
-        dimensions: "4,32 × 1,81 × 1,62 m",
-
-        charging: "30-80% en 16-17 min",
-
-        description:
-            "El Leapmotor B03X es un SUV eléctrico compacto que destaca por combinar un precio contenido, buena habitabilidad y dos opciones de batería. La gama permite elegir entre una versión enfocada al uso diario y otra con mayor autonomía para un uso más polivalente.",
-
-        // VALORACIÓN EDITORIAL
-        highlights: [
-            "Relación precio/equipamiento",
-            "510 litros de maletero",
-            "Dos tamaños de batería",
-            "Formato SUV compacto"
-        ],
-
-        considerations: [
-            "La versión de batería pequeña está más orientada a uso urbano y diario",
-            "Marca todavía joven en el mercado europeo",
-            "La versión de mayor autonomía supone un salto de precio importante"
-        ],
-
-        idealFor: [
-            "Uso diario",
-            "Familias",
-            "Ciudad",
-            "Trayectos interurbanos"
-        ],
-
-        // PRECIO
-        priceInfo: {
-            includesVat: true,
-            includesAid: false,
-            note: "Precios mostrados con IVA y sin ayudas públicas."
-        },
-
-        // CARGA
-        chargingInfo: {
-            dcMax: null,
-            acMax: null,
-            fastChargeText: "30-80% en 16-17 min",
-            connector: "CCS2",
-            v2l: null
-        },
-
-        // VERSIONES
+        priceMin: 22900, priceMax: 27900, priceText: "22.900 - 27.900 €",
+        rangeText: "292 - 382 km", minRangeVal: 292, maxRangeVal: 382,
+        batteryText: "39,8 - 53 kWh", batteryType: "LFP",
+        powerText: "177 - 197 CV", trunk: 510, seats: 5, acceleration: "8,6 s",
+        dimensions: "4,32 × 1,81 × 1,62 m", charging: "30-80% en 16-17 min",
+        description: "SUV eléctrico compacto con dos opciones de batería, buen espacio interior y un posicionamiento de precio contenido.",
+        highlights: ["Relación precio/equipamiento","510 litros de maletero","Dos tamaños de batería","Formato SUV compacto"],
+        considerations: ["La batería pequeña está más orientada al uso diario","Marca todavía joven en Europa","La versión de mayor autonomía supone un salto de precio"],
+        idealFor: ["Uso diario","Familias","Ciudad","Trayectos interurbanos"],
+        priceInfo: { includesVat: true, includesAid: false, note: "Precios mostrados con IVA y sin ayudas públicas." },
+        chargingInfo: { dcMax: null, acMax: null, fastChargeText: "30-80% en 16-17 min", connector: "CCS2", v2l: null },
         trims: [
-            {
-                name: "Pro",
-                price: "22.900 €",
-                priceValue: 22900,
-                battery: "39,8 kWh",
-                batteryType: "LFP",
-                power: "130 kW (177 CV)",
-                range: "292 km WLTP",
-                rangeValue: 292,
-                accel: "8,6 s"
-            },
-            {
-                name: "ProMax",
-                price: "27.900 €",
-                priceValue: 27900,
-                battery: "53 kWh",
-                batteryType: "LFP",
-                power: "145 kW (197 CV)",
-                range: "382 km WLTP",
-                rangeValue: 382,
-                accel: "8,6 s"
-            }
+            { name:"Pro", price:"22.900 €", priceValue:22900, battery:"39,8 kWh", batteryType:"LFP", power:"130 kW (177 CV)", range:"292 km WLTP", rangeValue:292, accel:"8,6 s" },
+            { name:"ProMax", price:"27.900 €", priceValue:27900, battery:"53 kWh", batteryType:"LFP", power:"145 kW (197 CV)", range:"382 km WLTP", rangeValue:382, accel:"8,6 s" }
         ],
+        colors:[{name:"Marrón Bellota",hex:"#8c7355"},{name:"Azul Arándano",hex:"#3b4d66"},{name:"Plata Estelar",hex:"#cbd5e1",border:"#94a3b8"},{name:"Verde Alga",hex:"#233d2c"},{name:"Gris Tundra",hex:"#71797e"},{name:"Beige Escarcha",hex:"#e5e3d4",border:"#cbd5e1"}],
+        images:["img/b03x-0.jpg","img/b03x-1.jpg","img/b03x-3.jpg","img/b03x-4.jpg","img/b03x-5.jpg","img/b03x-6.jpg","img/b03x-7.jpg","img/b03x-8.jpg"],
+        videos:[{title:"Leapmotor B03X: Prueba completa y detalles",url:"https://www.youtube.com/results?search_query=Leapmotor+B03X+review",thumb:"img/b03x-7.jpg"}],
+        brandInfo:{logo:"img/brands/leapmotor.png",group:"Stellantis",relation:"Alianza estratégica",note:"Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."},
+        brandUrl:"https://www.leapmotor.com",
+        dataStatus:{status:"En revisión",checkedAt:"05/10/2026"}
+    },
 
-        // COLORES
-        colors: [
-            { name: "Marrón Bellota", hex: "#8c7355" },
-            { name: "Azul Arándano", hex: "#3b4d66" },
-            { name: "Plata Estelar", hex: "#cbd5e1", border: "#94a3b8" },
-            { name: "Verde Alga", hex: "#233d2c" },
-            { name: "Gris Tundra", hex: "#71797e" },
-            { name: "Beige Escarcha", hex: "#e5e3d4", border: "#cbd5e1" }
+    {
+        id:2, brand:"Citroën", model:"ë-C3", type:"Utilitario / Compacto", launchYear:2026,
+        priceMin:21350, priceMax:28450, priceText:"21.350 - 28.450 €",
+        rangeText:"212 - 325 km", minRangeVal:212, maxRangeVal:325,
+        batteryText:"30 - 44 kWh", batteryType:"LFP", powerText:"113 CV",
+        trunk:310, seats:5, acceleration:"≈11 s", dimensions:"4,02 × 1,76 × 1,58 m",
+        charging:"20-80% en 26-36 min",
+        description:"El ë-C3 es un eléctrico urbano sencillo y confortable, con dos baterías claramente diferenciadas para ciudad o uso más polivalente.",
+        highlights:["Precio de acceso contenido","Suspensión Advanced Comfort","Dos autonomías","Carga DC hasta 100 kW en 44 kWh"],
+        considerations:["La batería de 30 kWh está muy enfocada a ciudad","Prestaciones modestas","Precio anunciado por Citroën suele mezclar ayudas; aquí usamos PVPR sin ayudas"],
+        idealFor:["Ciudad","Primer eléctrico","Uso diario","Segundo coche familiar"],
+        priceInfo:{includesVat:true,includesAid:false,note:"PVPR de referencia sin Plan Auto+ ni CAE."},
+        chargingInfo:{dcMax:"100 kW (44 kWh)",acMax:"11 kW",fastChargeText:"20-80% en 26 min (44 kWh)",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"YOU Urban Range",price:"21.350 €",priceValue:21350,battery:"30 kWh",batteryType:"LFP",power:"83 kW (113 CV)",range:"212 km WLTP",rangeValue:212,accel:"≈11 s"},
+            {name:"PLUS Comfort Range",price:"23.950 €",priceValue:23950,battery:"44 kWh",batteryType:"LFP",power:"83 kW (113 CV)",range:"hasta 325 km WLTP",rangeValue:325,accel:"≈11 s"}
         ],
+        colors:[{name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},{name:"Negro",hex:"#111827"},{name:"Azul",hex:"#6f8795"},{name:"Rojo",hex:"#9f1d2d"}],
+        images:["img/cars/citroen-ec3/01.webp","img/cars/citroen-ec3/02.webp","img/cars/citroen-ec3/03.webp"],
+        videos:[{title:"Citroën ë-C3",url:"https://www.youtube.com/results?search_query=Citroen+e-C3+prueba",thumb:"img/cars/citroen-ec3/01.webp"}],
+        brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Citroën forma parte de Stellantis."},
+        brandUrl:"https://www.citroen.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
 
-        // IMÁGENES
-        images: [
-            "img/b03x-0.jpg",
-            "img/b03x-1.jpg",
-            "img/b03x-3.jpg",
-            "img/b03x-4.jpg",
-            "img/b03x-5.jpg",
-            "img/b03x-6.jpg",
-            "img/b03x-7.jpg",
-            "img/b03x-8.jpg"
+    {
+        id:3, brand:"Renault", model:"5 E-Tech eléctrico", type:"Utilitario / Compacto", launchYear:2026,
+        priceMin:28085, priceMax:36585, priceText:"28.085 - 36.585 €",
+        rangeText:"315 - 430 km", minRangeVal:315, maxRangeVal:430,
+        batteryText:"40 - 52 kWh", batteryType:"NMC", powerText:"120 - 150 CV",
+        trunk:326, seats:5, acceleration:"8,0 - 9,0 s", dimensions:"3,92 × 1,77 × 1,50 m",
+        charging:"15-80% aprox. 30 min",
+        description:"El Renault 5 recupera un nombre histórico en formato eléctrico, con tamaño urbano, diseño muy reconocible y dos baterías para cubrir desde ciudad hasta viajes medios.",
+        highlights:["Diseño distintivo","Hasta 430 km WLTP","Google integrado según acabado","V2L disponible"],
+        considerations:["Maletero correcto, no enorme","Las versiones superiores elevan bastante el precio","Cinco plazas, pero tamaño exterior urbano"],
+        idealFor:["Ciudad","Uso diario","Parejas","Viajes medios"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Importes máximos recomendados con IVA y transporte; sin Auto+, CAE ni promociones."},
+        chargingInfo:{dcMax:"100 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC disponible",connector:"CCS2",v2l:true},
+        trims:[
+            {name:"evolution 40 kWh",price:"28.085 €",priceValue:28085,battery:"40 kWh",batteryType:"NMC",power:"90 kW (120 CV)",range:"315 km WLTP",rangeValue:315,accel:"≈9,0 s"},
+            {name:"evolution 52 kWh",price:"31.085 €",priceValue:31085,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"430 km WLTP",rangeValue:430,accel:"≈8,0 s"},
+            {name:"Roland-Garros 52 kWh",price:"36.585 €",priceValue:36585,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"hasta 430 km WLTP",rangeValue:430,accel:"≈8,0 s"}
         ],
+        colors:[{name:"Amarillo Pop",hex:"#e8d52a"},{name:"Verde Pop",hex:"#58715c"},{name:"Azul Noche",hex:"#1f3d64"},{name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},{name:"Rojo Deseo",hex:"#8f1e2c"}],
+        images:["img/cars/renault-5/01.webp","img/cars/renault-5/02.webp","img/cars/renault-5/03.webp","img/cars/renault-5/04.webp","img/cars/renault-5/05.webp","img/cars/renault-5/06.webp","img/cars/renault-5/07.webp","img/cars/renault-5/08.webp"],
+        videos:[{title:"Renault 5 E-Tech eléctrico",url:"https://www.youtube.com/results?search_query=Renault+5+E-Tech+prueba",thumb:"img/cars/renault-5/01.webp"}],
+        brandInfo:{logo:"",group:"Renault Group",relation:"Marca principal",note:"Renault es la marca principal de Renault Group."},
+        brandUrl:"https://www.renault.es", dataStatus:{status:"Revisado · fotos oficiales",checkedAt:"06/10/2026"}
+    },
 
-        // VÍDEOS
-        videos: [
-            {
-                title: "Leapmotor B03X: Prueba completa y detalles",
-                url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+review",
-                thumb: "img/b03x-7.jpg"
-            },
-            {
-                title: "Análisis autonomía y sistema multimedia",
-                url: "https://www.youtube.com/results?search_query=Leapmotor+B03X+autonomia",
-                thumb: "img/b03x-8.jpg"
-            }
+    {
+        id:4, brand:"Hyundai", model:"INSTER", type:"Utilitario / Compacto", launchYear:2026,
+        priceMin:26840, priceMax:31000, priceText:"26.840 - ≈31.000 €",
+        rangeText:"327 - 370 km", minRangeVal:327, maxRangeVal:370,
+        batteryText:"42 - 49 kWh", batteryType:"NMC", powerText:"97 - 115 CV",
+        trunk:280, seats:4, acceleration:"10,6 - 11,7 s", dimensions:"3,83 × 1,61 × 1,58 m",
+        charging:"10-80% en unos 30 min",
+        description:"El INSTER es un eléctrico urbano de cuatro plazas especialmente compacto por fuera, pero muy aprovechable por dentro gracias a su habitáculo flexible.",
+        highlights:["Hasta 370 km WLTP","Interior muy flexible","Carga 10-80% ~30 min","Tamaño ideal para ciudad"],
+        considerations:["Solo 4 plazas","Maletero contenido","La versión de 49 kWh encarece el conjunto"],
+        idealFor:["Ciudad","Parejas","Uso diario","Espacios de aparcamiento pequeños"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio de acceso PVPR sin descuentos; máximo provisional pendiente de revisar."},
+        chargingInfo:{dcMax:"hasta ~120 kW",acMax:"11 kW",fastChargeText:"10-80% en unos 30 min",connector:"CCS2",v2l:true},
+        trims:[
+            {name:"42 kWh",price:"desde 26.840 €",priceValue:26840,battery:"42 kWh",batteryType:"NMC",power:"71,1 kW (97 CV)",range:"327 km WLTP",rangeValue:327,accel:"11,7 s"},
+            {name:"49 kWh Long Range",price:"≈31.000 €",priceValue:31000,battery:"49 kWh",batteryType:"NMC",power:"84,5 kW (115 CV)",range:"370 km WLTP",rangeValue:370,accel:"10,6 s"}
         ],
+        colors:[{name:"Beige",hex:"#d6c7aa"},{name:"Verde",hex:"#66705c"},{name:"Azul",hex:"#7ba0ba"},{name:"Negro",hex:"#15191d"}],
+        images:["img/cars/hyundai-inster/01.webp","img/cars/hyundai-inster/02.webp","img/cars/hyundai-inster/03.webp"],
+        videos:[{title:"Hyundai INSTER",url:"https://www.youtube.com/results?search_query=Hyundai+INSTER+prueba",thumb:"img/cars/hyundai-inster/01.webp"}],
+        brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Hyundai forma parte de Hyundai Motor Group."},
+        brandUrl:"https://www.hyundai.com/es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
 
-        // MARCA / GRUPO
-        brandInfo: {
-            logo: "img/brands/leapmotor.png",
-            group: "Stellantis",
-            relation: "Alianza estratégica",
-            note: "Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."
-        },
+    {
+        id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2026,
+        priceMin:20140, priceMax:26990, priceText:"20.140 - 26.990 €",
+        rangeText:"220 - 322 km", minRangeVal:220, maxRangeVal:322,
+        batteryText:"30 - 43,2 kWh", batteryType:"LFP Blade", powerText:"88 - 156 CV",
+        trunk:308, seats:5, acceleration:"9,1 - 12,1 s", dimensions:"3,99 × 1,72 × 1,59 m",
+        charging:"DC hasta 85 kW",
+        description:"Urbano eléctrico de BYD con batería Blade LFP, formato compacto y una gama que va desde una versión básica de 30 kWh hasta una Comfort bastante más potente.",
+        highlights:["Precio competitivo","Batería Blade LFP","308 litros de maletero","Disponible con 5 plazas"],
+        considerations:["Autonomía de acceso limitada","La versión Active MY26 sigue figurando con 4 plazas","Comfort sube bastante de precio"],
+        idealFor:["Ciudad","Uso diario","Primer eléctrico","Familias pequeñas"],
+        priceInfo:{includesVat:true,includesAid:false,note:"PVP recomendado Península y Baleares, sin campañas ni ayudas públicas."},
+        chargingInfo:{dcMax:"85 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC",connector:"CCS2",v2l:true},
+        trims:[
+            {name:"Active MY26",price:"20.140 €",priceValue:20140,battery:"30 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"220 km WLTP",rangeValue:220,accel:"11,1 s"},
+            {name:"Boost MY26 5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
+            {name:"Comfort MY26 5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
+        ],
+        colors:[{name:"Azul",hex:"#6c91a8"},{name:"Verde",hex:"#8ea58f"},{name:"Blanco",hex:"#f1f1ed",border:"#cbd5e1"},{name:"Negro",hex:"#1d2227"}],
+        images:["img/cars/byd-dolphin-surf/01.webp","img/cars/byd-dolphin-surf/02.webp","img/cars/byd-dolphin-surf/03.webp"],
+        videos:[{title:"BYD DOLPHIN SURF",url:"https://www.youtube.com/results?search_query=BYD+Dolphin+Surf+prueba",thumb:"img/cars/byd-dolphin-surf/01.webp"}],
+        brandInfo:{logo:"",group:"BYD Company",relation:"Marca del grupo",note:"BYD Auto pertenece a BYD Company."},
+        brandUrl:"https://www.byd.com/es-es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
 
-        brandUrl: "https://www.leapmotor.com",
+    {
+        id:6, brand:"Kia", model:"EV3", type:"SUV", launchYear:2026,
+        priceMin:36930, priceMax:49000, priceText:"≈36.930 - 49.000 €",
+        rangeText:"≈436 - 605 km", minRangeVal:436, maxRangeVal:605,
+        batteryText:"58,3 - 81,4 kWh", batteryType:"NMC", powerText:"204 CV",
+        trunk:460, seats:5, acceleration:"7,5 - 7,7 s", dimensions:"4,30 × 1,85 × 1,56 m",
+        charging:"10-80% en 29-31 min",
+        description:"SUV compacto eléctrico con una de las mejores autonomías de su tamaño, buen maletero y una versión Long Range especialmente interesante para viajar.",
+        highlights:["Hasta 605 km WLTP","460 l + frunk de 25 l","Carga 10-80% ~31 min","V2L disponible"],
+        considerations:["Precios provisionales pendientes de revisión fina","Tracción delantera","La Long Range pesa más"],
+        idealFor:["Familias","Viajes","Uso diario","SUV compacto"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Rango de PVP provisional sin ayudas; revisar antes de publicar como definitivo."},
+        chargingInfo:{dcMax:"~128 kW",acMax:"11 kW",fastChargeText:"10-80% en 29-31 min",connector:"CCS2",v2l:true},
+        trims:[
+            {name:"Standard Range",price:"≈36.930 €",priceValue:36930,battery:"58,3 kWh",batteryType:"NMC",power:"150 kW (204 CV)",range:"≈436 km WLTP",rangeValue:436,accel:"7,5 s"},
+            {name:"Long Range",price:"≈41.900 €",priceValue:41900,battery:"81,4 kWh",batteryType:"NMC",power:"150 kW (204 CV)",range:"605 km WLTP",rangeValue:605,accel:"7,7 s"}
+        ],
+        colors:[{name:"Blanco",hex:"#f5f5f2",border:"#cbd5e1"},{name:"Gris",hex:"#687078"},{name:"Verde",hex:"#65766a"},{name:"Azul",hex:"#3e5d77"}],
+        images:["img/cars/kia-ev3/01.webp","img/cars/kia-ev3/02.webp","img/cars/kia-ev3/03.webp"],
+        videos:[{title:"Kia EV3",url:"https://www.youtube.com/results?search_query=Kia+EV3+prueba",thumb:"img/cars/kia-ev3/01.webp"}],
+        brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Kia forma parte de Hyundai Motor Group."},
+        brandUrl:"https://www.kia.com/es", dataStatus:{status:"En revisión · precio provisional",checkedAt:"06/10/2026"}
+    },
 
-        // CONTROL DE DATOS
-        dataStatus: {
-            status: "En revisión",
-            checkedAt: "05/10/2026"
-        }
+    {
+        id:7, brand:"Škoda", model:"Elroq", type:"SUV", launchYear:2026,
+        priceMin:34500, priceMax:52000, priceText:"≈34.500 - 52.000 €",
+        rangeText:"≈370 - 574 km", minRangeVal:370, maxRangeVal:574,
+        batteryText:"≈52 - 77 kWh útiles", batteryType:"NMC", powerText:"170 - 340 CV",
+        trunk:470, seats:5, acceleration:"según versión", dimensions:"4,49 × 1,88 × 1,63 m",
+        charging:"10-80% aprox. 24-28 min",
+        description:"SUV compacto eléctrico de Škoda con enfoque familiar, buen maletero y una gama de baterías que permite priorizar precio o autonomía.",
+        highlights:["Hasta 574 km WLTP","470 litros de maletero","Habitabilidad familiar","Gama amplia"],
+        considerations:["Precios sin ayudas pendientes de revisión detallada","Autonomía cambia según batería y llanta","Versiones RS elevan mucho potencia y precio"],
+        idealFor:["Familias","Viajes","Uso diario","SUV compacto"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precios provisionales sin ayudas; la web oficial destaca actualmente ofertas con financiación/Auto+."},
+        chargingInfo:{dcMax:"hasta ~175 kW",acMax:"11 kW",fastChargeText:"10-80% aprox. 24-28 min",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"Elroq 50",price:"≈34.500 €",priceValue:34500,battery:"≈52 kWh útiles",batteryType:"NMC",power:"125 kW (170 CV)",range:"≈370 km WLTP",rangeValue:370,accel:"≈9 s"},
+            {name:"Elroq 85",price:"≈41.500 €",priceValue:41500,battery:"≈77 kWh útiles",batteryType:"NMC",power:"210 kW (286 CV)",range:"hasta 574 km WLTP",rangeValue:574,accel:"≈6,6 s"}
+        ],
+        colors:[{name:"Verde",hex:"#7d9a78"},{name:"Gris",hex:"#737a80"},{name:"Azul",hex:"#395a70"},{name:"Blanco",hex:"#f3f4f4",border:"#cbd5e1"}],
+        images:["img/cars/skoda-elroq/01.webp","img/cars/skoda-elroq/02.webp","img/cars/skoda-elroq/03.webp"],
+        videos:[{title:"Škoda Elroq",url:"https://www.youtube.com/results?search_query=Skoda+Elroq+prueba",thumb:"img/cars/skoda-elroq/01.webp"}],
+        brandInfo:{logo:"",group:"Volkswagen Group",relation:"Marca del grupo",note:"Škoda Auto forma parte del Grupo Volkswagen."},
+        brandUrl:"https://www.skoda.es", dataStatus:{status:"En revisión · precio provisional",checkedAt:"06/10/2026"}
+    },
+
+    {
+        id:8, brand:"Volvo", model:"EX30", type:"SUV", launchYear:2027,
+        priceMin:35800, priceMax:52000, priceText:"35.800 - ≈52.000 €",
+        rangeText:"337 - 475 km", minRangeVal:337, maxRangeVal:475,
+        batteryText:"51 - 69 kWh", batteryType:"NMC / según versión", powerText:"272 - 428 CV",
+        trunk:318, seats:5, acceleration:"3,6 - 5,7 s", dimensions:"4,23 × 1,84 × 1,55 m",
+        charging:"10-80% desde 26 min",
+        description:"El SUV más compacto de Volvo combina dimensiones contenidas, mucha potencia y hasta 475 km WLTP en la versión Long Range.",
+        highlights:["Hasta 475 km WLTP","272 CV incluso en acceso","Tamaño compacto","Carga rápida"],
+        considerations:["Maletero contenido para un SUV","Mandos muy centralizados en pantalla","Versiones AWD son muy potentes pero más caras"],
+        idealFor:["Ciudad","Parejas","Uso diario","Viajes"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio oficial de acceso sin computar ayudas públicas; máximo orientativo pendiente de revisar."},
+        chargingInfo:{dcMax:"150-175 kW según versión",acMax:"11 kW",fastChargeText:"10-80% desde 26 min",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"P5 Eléctrico",price:"35.800 €",priceValue:35800,battery:"51 kWh nominal",batteryType:"según versión",power:"200 kW (272 CV)",range:"337 km WLTP",rangeValue:337,accel:"5,7 s"},
+            {name:"P5 Long Range",price:"41.790 €",priceValue:41790,battery:"69 kWh nominal",batteryType:"NMC",power:"200 kW (272 CV)",range:"475 km WLTP",rangeValue:475,accel:"5,3 s"}
+        ],
+        colors:[{name:"Cloud Blue",hex:"#a9c2cf"},{name:"Vapour Grey",hex:"#a8aaa7"},{name:"Onyx Black",hex:"#16191c"},{name:"Crystal White",hex:"#f2f2ef",border:"#cbd5e1"}],
+        images:["img/cars/volvo-ex30/01.webp","img/cars/volvo-ex30/02.webp","img/cars/volvo-ex30/03.webp"],
+        videos:[{title:"Volvo EX30",url:"https://www.youtube.com/results?search_query=Volvo+EX30+prueba",thumb:"img/cars/volvo-ex30/01.webp"}],
+        brandInfo:{logo:"",group:"Geely Holding",relation:"Propiedad mayoritaria",note:"Volvo Cars está controlada por Zhejiang Geely Holding."},
+        brandUrl:"https://www.volvocars.com/es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
+
+    {
+        id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2026,
+        priceMin:40990, priceMax:62000, priceText:"40.990 - ≈62.000 €",
+        rangeText:"525 - ≈622 km", minRangeVal:525, maxRangeVal:622,
+        batteryText:"Capacidad no publicada oficialmente", batteryType:"según versión", powerText:"según versión",
+        trunk:854, seats:5, acceleration:"desde 3,5 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
+        charging:"Supercarga DC hasta ~250 kW según versión",
+        description:"SUV eléctrico familiar de referencia por eficiencia, red de carga y software. La gama cambia con frecuencia, por lo que conviene revisar versiones y precios periódicamente.",
+        highlights:["525 km WLTP desde la versión base","Gran capacidad de carga","Red Supercharger","Software y planificación de ruta"],
+        considerations:["Sin cuadro de instrumentos tradicional","Gama y precios cambian con frecuencia","Capacidad de batería no se comunica de forma convencional"],
+        idealFor:["Familias","Viajes largos","Uso diario","Alta kilometrada"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio de configurador al contado, sin ayudas públicas."},
+        chargingInfo:{dcMax:"hasta ~250 kW",acMax:"11 kW",fastChargeText:"Supercarga rápida",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"Model Y",price:"40.990 €",priceValue:40990,battery:"No publicada",batteryType:"según versión",power:"No publicada",range:"525 km WLTP",rangeValue:525,accel:"7,2 s"},
+            {name:"Long Range / versiones superiores",price:"consultar",priceValue:50000,battery:"No publicada",batteryType:"según versión",power:"No publicada",range:"hasta ≈622 km WLTP",rangeValue:622,accel:"según versión"}
+        ],
+        colors:[{name:"Stealth Grey",hex:"#555b60"},{name:"Pearl White",hex:"#f3f3f0",border:"#cbd5e1"},{name:"Quicksilver",hex:"#a6aaac"},{name:"Ultra Red",hex:"#8c1821"}],
+        images:["img/cars/tesla-model-y/01.webp","img/cars/tesla-model-y/02.webp","img/cars/tesla-model-y/03.webp"],
+        videos:[{title:"Tesla Model Y",url:"https://www.youtube.com/results?search_query=Tesla+Model+Y+2026+prueba",thumb:"img/cars/tesla-model-y/01.webp"}],
+        brandInfo:{logo:"",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
+        brandUrl:"https://www.tesla.com/es_es/modely", dataStatus:{status:"En revisión · gama cambiante",checkedAt:"06/10/2026"}
+    },
+
+    {
+        id:10, brand:"XPENG", model:"G6", type:"SUV", launchYear:2026,
+        priceMin:45193, priceMax:60000, priceText:"45.193 - ≈60.000 €",
+        rangeText:"≈470 - ≈535 km", minRangeVal:470, maxRangeVal:535,
+        batteryText:"68,5 - 80,8 kWh", batteryType:"LFP / NMC según versión", powerText:"según versión",
+        trunk:571, seats:5, acceleration:"según versión", dimensions:"4,76 × 1,92 × 1,65 m",
+        charging:"Carga ultrarrápida 800 V",
+        description:"SUV eléctrico tecnológico con arquitectura de alta tensión y carga muy rápida. Destaca especialmente por relación entre espacio, autonomía y velocidad de recarga.",
+        highlights:["Arquitectura 800 V","571 litros de maletero","Carga ultrarrápida","Buen espacio interior"],
+        considerations:["Marca aún poco implantada frente a fabricantes tradicionales","Precios superiores a compactos generalistas","Autonomías urbanas anunciadas no deben confundirse con WLTP combinado"],
+        idealFor:["Familias","Viajes","Tecnología","Carga rápida"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio del configurador con impuestos/promoción de marca y transporte; sin Auto+ ni CAE."},
+        chargingInfo:{dcMax:"muy alta; según versión",acMax:"11 kW",fastChargeText:"Carga ultrarrápida 800 V",connector:"CCS2",v2l:true},
+        trims:[
+            {name:"RWD 68,5 kWh",price:"45.193 €",priceValue:45193,battery:"68,5 kWh",batteryType:"LFP",power:"pendiente revisión",range:"≈470 km WLTP combinado",rangeValue:470,accel:"pendiente revisión"},
+            {name:"RWD Long Range 80,8 kWh",price:"49.193 €",priceValue:49193,battery:"80,8 kWh",batteryType:"NMC",power:"pendiente revisión",range:"≈535 km WLTP combinado",rangeValue:535,accel:"pendiente revisión"}
+        ],
+        colors:[{name:"Graphite Grey",hex:"#5b6268"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"}],
+        images:["img/cars/xpeng-g6/01.webp","img/cars/xpeng-g6/02.webp","img/cars/xpeng-g6/03.webp"],
+        videos:[{title:"XPENG G6",url:"https://www.youtube.com/results?search_query=XPENG+G6+2026+prueba",thumb:"img/cars/xpeng-g6/01.webp"}],
+        brandInfo:{logo:"",group:"XPeng Inc.",relation:"Fabricante",note:"XPENG es un fabricante independiente chino de vehículos eléctricos."},
+        brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
+
+    {
+        id:11, brand:"Peugeot", model:"E-5008", type:"SUV", launchYear:2026,
+        priceMin:49100, priceMax:60000, priceText:"≈49.100 - 60.000 €",
+        rangeText:"477 - 504 km", minRangeVal:477, maxRangeVal:504,
+        batteryText:"73 kWh", batteryType:"NMC", powerText:"213 - 325 CV",
+        trunk:348, seats:7, acceleration:"según versión", dimensions:"4,79 × 1,90 × 1,69 m",
+        charging:"20-80% en unos 30 min",
+        description:"Gran SUV eléctrico disponible con siete plazas, pensado para familias que necesitan más espacio sin renunciar a una autonomía WLTP de alrededor de 500 km.",
+        highlights:["7 plazas","Hasta 504 km WLTP","916 l en configuración de 5 plazas","Preacondicionamiento de batería"],
+        considerations:["348 l con las 7 plazas en uso","Precio claramente superior a SUV compactos","Gran tamaño exterior"],
+        idealFor:["Familias numerosas","7 plazas","Viajes","Equipaje"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio de acceso de referencia sin ayudas públicas; gama pendiente de revisión completa."},
+        chargingInfo:{dcMax:"hasta ~160 kW",acMax:"11 kW",fastChargeText:"20-80% en unos 30 min",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"Eléctrico 210/213 CV",price:"≈49.100 €",priceValue:49100,battery:"73 kWh",batteryType:"NMC",power:"157 kW (213 CV)",range:"hasta 504 km WLTP",rangeValue:504,accel:"pendiente revisión"},
+            {name:"Dual Motor",price:"≈60.000 €",priceValue:60000,battery:"73 kWh",batteryType:"NMC",power:"239 kW (325 CV)",range:"hasta 477 km WLTP",rangeValue:477,accel:"pendiente revisión"}
+        ],
+        colors:[{name:"Azul Obsession",hex:"#486c7b"},{name:"Azul Ingaro",hex:"#31465a"},{name:"Negro Perla Nera",hex:"#111316"},{name:"Gris Titanium",hex:"#6d7275"},{name:"Blanco Okenite",hex:"#f1f1ed",border:"#cbd5e1"}],
+        images:["img/cars/peugeot-e5008/01.webp","img/cars/peugeot-e5008/02.webp","img/cars/peugeot-e5008/03.webp"],
+        videos:[{title:"Peugeot E-5008",url:"https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",thumb:"img/cars/peugeot-e5008/01.webp"}],
+        brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Peugeot forma parte de Stellantis."},
+        brandUrl:"https://www.peugeot.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
     }
 ];
