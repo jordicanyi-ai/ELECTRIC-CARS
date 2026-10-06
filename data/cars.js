@@ -284,7 +284,7 @@ const carsData = [
         ],
 
         brandInfo:{
-            logo:"",
+            logo:"img/brands/renault.png",
             group:"Renault Group",
             relation:"Marca principal",
             note:"Renault es la marca principal de Renault Group."
