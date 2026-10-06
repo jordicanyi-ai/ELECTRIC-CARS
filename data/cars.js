@@ -22,7 +22,7 @@ const carsData = [
         ],
         colors:[{name:"Marrón Bellota",hex:"#8c7355"},{name:"Azul Arándano",hex:"#3b4d66"},{name:"Plata Estelar",hex:"#cbd5e1",border:"#94a3b8"},{name:"Verde Alga",hex:"#233d2c"},{name:"Gris Tundra",hex:"#71797e"},{name:"Beige Escarcha",hex:"#e5e3d4",border:"#cbd5e1"}],
         images:["img/cars/leapmotor-b03x/b03x-0.jpg","img/cars/leapmotor-b03x/b03x-1.jpg","img/cars/leapmotor-b03x/b03x-3.jpg","img/cars/leapmotor-b03x/b03x-4.jpg","img/cars/leapmotor-b03x/b03x-5.jpg","img/cars/leapmotor-b03x/b03x-6.jpg","img/cars/leapmotor-b03x/b03x-7.jpg","img/cars/leapmotor-b03x/b03x-8.jpg"],
-        videos:[{title:"Leapmotor B03X: Prueba completa y detalles",url:"https://www.youtube.com/results?search_query=Leapmotor+B03X+review",thumb:"img/b03x-7.jpg"}],
+        videos:[{title:"Leapmotor B03X: Prueba completa y detalles",url:"https://www.youtube.com/results?search_query=Leapmotor+B03X+review",thumb:"img/cars/leapmotor-b03x/b03x-7.jpg"}],
         brandInfo:{logo:"img/brands/leapmotor.png",group:"Stellantis",relation:"Alianza estratégica",note:"Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."},
         brandUrl:"https://www.leapmotor.com",
         dataStatus:{status:"En revisión",checkedAt:"05/10/2026"}
