@@ -52,28 +52,166 @@ const carsData = [
         brandUrl:"https://www.citroen.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
     },
 
-    {
-        id:3, brand:"Renault", model:"5 E-Tech eléctrico", type:"Utilitario / Compacto", launchYear:2026,
-        priceMin:28085, priceMax:36585, priceText:"28.085 - 36.585 €",
-        rangeText:"315 - 430 km", minRangeVal:315, maxRangeVal:430,
-        batteryText:"40 - 52 kWh", batteryType:"NMC", powerText:"120 - 150 CV",
-        trunk:326, seats:5, acceleration:"8,0 - 9,0 s", dimensions:"3,92 × 1,77 × 1,50 m",
-        charging:"15-80% aprox. 30 min",
-        description:"El Renault 5 E-Tech eléctrico combina formato urbano, diseño distintivo y una gama amplia de acabados. Las versiones de 40 kWh priorizan precio y uso diario, mientras que las de 52 kWh elevan la autonomía hasta 430 km WLTP.",
-        highlights:["Cinco acabados","Hasta 430 km WLTP","Dos tamaños de batería","V2L disponible"],
-        considerations:["El acabado five actualizado está pendiente de completar precio y especificaciones definitivas","El precio aumenta de forma apreciable en los acabados superiores","Las combinaciones de acabado y batería no son idénticas en toda la gama"],
-        idealFor:["Ciudad","Uso diario","Parejas","Viajes medios"],
-        priceInfo:{includesVat:true,includesAid:false,note:"PVP máximos recomendados con IVA y transporte; sin Auto+, CAE ni promociones. Five pendiente de actualización definitiva."},
-        chargingInfo:{dcMax:"100 kW",acMax:"11 kW",fastChargeText:"15-80% aprox. 30 min",connector:"CCS2",v2l:true},
-        trims:[
-            {name:"five",price:"Próximamente",priceValue:null,battery:"Pendiente actualización",batteryType:"NMC",power:"110 CV (nueva versión anunciada)",range:"Pendiente actualización",rangeValue:null,accel:"Pendiente"},
-            {name:"evolution · 40 kWh",price:"28.085 €",priceValue:28085,battery:"40 kWh",batteryType:"NMC",power:"90 kW (120 CV)",range:"315 km WLTP",rangeValue:315,accel:"≈9,0 s"},
-            {name:"techno · 40 kWh",price:"30.085 €",priceValue:30085,battery:"40 kWh",batteryType:"NMC",power:"90 kW (120 CV)",range:"315 km WLTP",rangeValue:315,accel:"≈9,0 s"},
-            {name:"evolution · 52 kWh",price:"31.085 €",priceValue:31085,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"430 km WLTP",rangeValue:430,accel:"≈8,0 s"},
-            {name:"techno · 52 kWh",price:"33.085 €",priceValue:33085,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"430 km WLTP",rangeValue:430,accel:"≈8,0 s"},
-            {name:"iconic cinq · 52 kWh",price:"35.085 €",priceValue:35085,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"430 km WLTP",rangeValue:430,accel:"≈8,0 s"},
-            {name:"Roland-Garros · 52 kWh",price:"36.585 €",priceValue:36585,battery:"52 kWh",batteryType:"NMC",power:"110 kW (150 CV)",range:"430 km WLTP",rangeValue:430,accel:"≈8,0 s"}
+        {
+        id:3,
+        brand:"Renault",
+        model:"5 E-Tech eléctrico",
+        type:"Utilitario / Compacto",
+        launchYear:2026,
+
+        priceMin:23056,
+        priceMax:36585,
+        priceText:"23.056 - 36.585 €",
+
+        rangeText:"310 - 430 km",
+        minRangeVal:310,
+        maxRangeVal:430,
+
+        batteryText:"40 - 52 kWh",
+        batteryType:"NMC",
+        powerText:"95 - 150 CV",
+
+        trunk:326,
+        seats:5,
+        acceleration:"8,0 - 12,0 s",
+        dimensions:"3,92 × 1,77 × 1,50 m",
+        charging:"15-80% aprox. 30 min según versión",
+
+        description:"El Renault 5 E-Tech eléctrico combina formato urbano, diseño distintivo y una gama amplia de acabados. El five de 95 CV y 40 kWh es actualmente la puerta de entrada, mientras que evolution, techno, iconic cinq y Roland-Garros amplían autonomía, potencia y equipamiento.",
+
+        highlights:[
+            "Cinco acabados",
+            "Hasta 430 km WLTP",
+            "Desde 23.056 € sin ayudas públicas",
+            "V2L disponible según versión"
         ],
+
+        considerations:[
+            "El five actual de 95 CV convive temporalmente con una nueva versión de 110 CV anunciada para finales de 2026",
+            "La carga rápida y algunas funciones dependen de la versión",
+            "Los colores y opciones de personalización dependen del acabado"
+        ],
+
+        idealFor:[
+            "Ciudad",
+            "Uso diario",
+            "Parejas",
+            "Viajes medios"
+        ],
+
+        priceInfo:{
+            includesVat:true,
+            includesAid:false,
+            note:"PVP de referencia con IVA y sin Auto+, CAE ni otras ayudas públicas. La gama está en transición durante 2026."
+        },
+
+        chargingInfo:{
+            dcMax:"100 kW según versión",
+            acMax:"11 kW según versión",
+            fastChargeText:"15-80% aprox. 30 min en versiones compatibles",
+            connector:"CCS2",
+            v2l:"Según versión"
+        },
+
+        trims:[
+            {
+                name:"five · 40 kWh",
+                status:"Actual",
+                price:"23.056 €",
+                priceValue:23056,
+                battery:"40 kWh",
+                batteryType:"NMC",
+                power:"70 kW (95 CV)",
+                range:"310 km WLTP",
+                rangeValue:310,
+                accel:"12,0 s"
+            },
+            {
+                name:"five · 37 kWh",
+                status:"Próximamente",
+                price:"Pendiente",
+                priceValue:null,
+                battery:"37 kWh",
+                batteryType:"Pendiente confirmar",
+                power:"80 kW (110 CV)",
+                range:"Pendiente confirmar",
+                rangeValue:null,
+                accel:"Pendiente"
+            },
+            {
+                name:"evolution · 40 kWh",
+                status:"Actual",
+                price:"28.085 €",
+                priceValue:28085,
+                battery:"40 kWh",
+                batteryType:"NMC",
+                power:"90 kW (120 CV)",
+                range:"315 km WLTP",
+                rangeValue:315,
+                accel:"≈9,0 s"
+            },
+            {
+                name:"techno · 40 kWh",
+                status:"Actual",
+                price:"30.085 €",
+                priceValue:30085,
+                battery:"40 kWh",
+                batteryType:"NMC",
+                power:"90 kW (120 CV)",
+                range:"315 km WLTP",
+                rangeValue:315,
+                accel:"≈9,0 s"
+            },
+            {
+                name:"evolution · 52 kWh",
+                status:"Actual",
+                price:"31.085 €",
+                priceValue:31085,
+                battery:"52 kWh",
+                batteryType:"NMC",
+                power:"110 kW (150 CV)",
+                range:"430 km WLTP",
+                rangeValue:430,
+                accel:"≈8,0 s"
+            },
+            {
+                name:"techno · 52 kWh",
+                status:"Actual",
+                price:"33.085 €",
+                priceValue:33085,
+                battery:"52 kWh",
+                batteryType:"NMC",
+                power:"110 kW (150 CV)",
+                range:"430 km WLTP",
+                rangeValue:430,
+                accel:"≈8,0 s"
+            },
+            {
+                name:"iconic cinq · 52 kWh",
+                status:"Actual",
+                price:"35.085 €",
+                priceValue:35085,
+                battery:"52 kWh",
+                batteryType:"NMC",
+                power:"110 kW (150 CV)",
+                range:"430 km WLTP",
+                rangeValue:430,
+                accel:"≈8,0 s"
+            },
+            {
+                name:"Roland-Garros · 52 kWh",
+                status:"Actual",
+                price:"36.585 €",
+                priceValue:36585,
+                battery:"52 kWh",
+                batteryType:"NMC",
+                power:"110 kW (150 CV)",
+                range:"430 km WLTP",
+                rangeValue:430,
+                accel:"≈8,0 s"
+            }
+        ],
+
         colors:[
             {name:"Amarillo Pop",hex:"#e5d329"},
             {name:"Verde Pop",hex:"#4f755e"},
@@ -83,11 +221,81 @@ const carsData = [
             {name:"Rojo Deseo",hex:"#8e1e2b"},
             {name:"Gris Pizarra",hex:"#62676a"}
         ],
-        images:["img/cars/renault-5/01.webp","img/cars/renault-5/02.webp","img/cars/renault-5/03.webp","img/cars/renault-5/04.webp","img/cars/renault-5/05.webp","img/cars/renault-5/06.webp","img/cars/renault-5/07.webp","img/cars/renault-5/08.webp"],
-        videos:[{title:"Renault 5 E-Tech eléctrico",url:"https://www.youtube.com/results?search_query=Renault+5+E-Tech+prueba",thumb:"img/cars/renault-5/01.webp"}],
-        brandInfo:{logo:"",group:"Renault Group",relation:"Marca principal",note:"Renault es la marca principal de Renault Group."},
+
+        colorAvailability:{
+            note:"La disponibilidad de colores depende del acabado. La ficha muestra conjuntamente todos los colores disponibles en la gama.",
+
+            five:[
+                "Verde Pop",
+                "Negro Brillante"
+            ],
+
+            evolution:[
+                "Amarillo Pop",
+                "Verde Pop",
+                "Blanco Nacarado",
+                "Negro Brillante",
+                "Rojo Deseo",
+                "Gris Pizarra"
+            ],
+
+            techno:[
+                "Amarillo Pop",
+                "Verde Pop",
+                "Azul Noche",
+                "Blanco Nacarado",
+                "Negro Brillante",
+                "Rojo Deseo",
+                "Gris Pizarra"
+            ],
+
+            iconicCinq:[
+                "Amarillo Pop",
+                "Azul Noche",
+                "Negro Brillante",
+                "Rojo Deseo",
+                "Gris Pizarra"
+            ],
+
+            rolandGarros:[
+                "Azul Noche",
+                "Blanco Nacarado",
+                "Gris Pizarra"
+            ]
+        },
+
+        images:[
+            "img/cars/renault-5/01.webp",
+            "img/cars/renault-5/02.webp",
+            "img/cars/renault-5/03.webp",
+            "img/cars/renault-5/04.webp",
+            "img/cars/renault-5/05.webp",
+            "img/cars/renault-5/06.webp",
+            "img/cars/renault-5/07.webp",
+            "img/cars/renault-5/08.webp"
+        ],
+
+        videos:[
+            {
+                title:"Renault 5 E-Tech eléctrico",
+                url:"https://www.youtube.com/results?search_query=Renault+5+E-Tech+prueba",
+                thumb:"img/cars/renault-5/01.webp"
+            }
+        ],
+
+        brandInfo:{
+            logo:"",
+            group:"Renault Group",
+            relation:"Marca principal",
+            note:"Renault es la marca principal de Renault Group."
+        },
+
         brandUrl:"https://www.renault.es",
-        dataStatus:{status:"En revisión · gama 2026 actualizada",checkedAt:"06/10/2026"}
+
+        dataStatus:{
+            status:"En revisión · gama en transición",
+            checkedAt:"06/10/2026"
+        }
     },
 
     {
