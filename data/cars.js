@@ -583,7 +583,7 @@ const carsData = [
     ],
 
     brandInfo: {
-        logo: "",
+        logo: "img/brans/hyundai.png",
         group: "Hyundai Motor Group",
         relation: "Marca del grupo",
         note: "Hyundai forma parte de Hyundai Motor Group."
