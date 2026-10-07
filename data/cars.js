@@ -462,15 +462,17 @@ const carsData = [
     {
         
 
+    
+{
     id: 4,
     brand: "Hyundai",
     model: "INSTER",
     type: "Utilitario / Compacto",
     launchYear: 2025,
 
-    priceMin: 26950,
-    priceMax: 31000,
-    priceText: "26.950 - ≈31.000 €",
+    priceMin: 24706,
+    priceMax: 32416,
+    priceText: "24.706 - 32.416 €",
 
     rangeText: "327 - 370 km",
     minRangeVal: 327,
@@ -486,7 +488,7 @@ const carsData = [
     dimensions: "3,83 × 1,61 × 1,58 m",
     charging: "10-80% en unos 30 min",
 
-    description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina dimensiones exteriores compactas con un interior sorprendentemente versátil. Ofrece dos capacidades de batería, hasta 370 km de autonomía WLTP y tecnología de carga bidireccional V2L.",
+    description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina unas dimensiones exteriores compactas con un habitáculo sorprendentemente versátil. Dispone de dos capacidades de batería, 42 y 49 kWh, ofrece hasta 370 km de autonomía WLTP y cuenta con tecnología de carga bidireccional V2L.",
 
     highlights: [
         "Hasta 370 km de autonomía WLTP",
@@ -497,10 +499,10 @@ const carsData = [
     ],
 
     considerations: [
-        "Homologado únicamente para 4 plazas",
+        "Homologado para 4 plazas",
         "Maletero de 280 litros en configuración estándar",
         "La batería de 49 kWh incrementa el precio",
-        "Prestaciones orientadas principalmente al uso urbano"
+        "Autonomía más limitada que la de eléctricos de segmentos superiores"
     ],
 
     idealFor: [
@@ -514,7 +516,7 @@ const carsData = [
     priceInfo: {
         includesVat: true,
         includesAid: false,
-        note: "Precios orientativos con IVA, sin ayudas. Referencia de 26.950 € para MAXX 42 kWh; precio máximo provisional. Pendiente de verificar el PVP de acceso KLASS y el resto de acabados."
+        note: "PVP de tarifa 2026 con IVA, sin ayudas, descuentos promocionales ni financiación. Precios de referencia publicados; sujetos a revisión según tarifa oficial vigente."
     },
 
     chargingInfo: {
@@ -527,9 +529,9 @@ const carsData = [
 
     trims: [
         {
-            name: "MAXX 42 kWh",
-            price: "26.950 €",
-            priceValue: 26950,
+            name: "KLASS 42 kWh",
+            price: "24.706 €",
+            priceValue: 24706,
             battery: "42 kWh",
             batteryType: "NMC",
             power: "71,1 kW (97 CV)",
@@ -539,28 +541,113 @@ const carsData = [
             seats: 4
         },
         {
-            name: "49 kWh Long Range",
-            price: "≈31.000 €",
-            priceValue: 31000,
+            name: "MAXX 42 kWh",
+            price: "26.406 €",
+            priceValue: 26406,
+            battery: "42 kWh",
+            batteryType: "NMC",
+            power: "71,1 kW (97 CV)",
+            range: "327 km WLTP",
+            rangeValue: 327,
+            accel: "11,7 s",
+            seats: 4
+        },
+        {
+            name: "MAXX 49 kWh 17\"",
+            price: "28.066 €",
+            priceValue: 28066,
             battery: "49 kWh",
             batteryType: "NMC",
             power: "84,5 kW (115 CV)",
-            range: "370 km WLTP",
-            rangeValue: 370,
+            range: "360 km WLTP",
+            rangeValue: 360,
+            accel: "10,6 s",
+            seats: 4
+        },
+        {
+            name: "MAXX Cross 49 kWh",
+            price: "29.215 €",
+            priceValue: 29215,
+            battery: "49 kWh",
+            batteryType: "NMC",
+            power: "84,5 kW (115 CV)",
+            range: "360 km WLTP",
+            rangeValue: 360,
+            accel: "10,6 s",
+            seats: 4
+        },
+        {
+            name: "TECNO 49 kWh",
+            price: "31.016 €",
+            priceValue: 31016,
+            battery: "49 kWh",
+            batteryType: "NMC",
+            power: "84,5 kW (115 CV)",
+            range: "360 km WLTP",
+            rangeValue: 360,
+            accel: "10,6 s",
+            seats: 4
+        },
+        {
+            name: "TECNO 2C 49 kWh",
+            price: "31.316 €",
+            priceValue: 31316,
+            battery: "49 kWh",
+            batteryType: "NMC",
+            power: "84,5 kW (115 CV)",
+            range: "360 km WLTP",
+            rangeValue: 360,
+            accel: "10,6 s",
+            seats: 4
+        },
+        {
+            name: "TECNO Cross 49 kWh",
+            price: "32.416 €",
+            priceValue: 32416,
+            battery: "49 kWh",
+            batteryType: "NMC",
+            power: "84,5 kW (115 CV)",
+            range: "360 km WLTP",
+            rangeValue: 360,
             accel: "10,6 s",
             seats: 4
         }
     ],
 
     colors: [
-        { name: "Atlas White", hex: "#E8E9E7", border: "#CBD5E1" },
-        { name: "Unbleached Ivory", hex: "#D9D0BC" },
-        { name: "Buttercream Yellow Pearl", hex: "#E4DB9D" },
-        { name: "Sienna Orange Metallic", hex: "#B76E49" },
-        { name: "Aero Silver Matte", hex: "#A8ACAA" },
-        { name: "Tomboy Khaki", hex: "#777C69" },
-        { name: "Dusk Blue Matte", hex: "#637C89" },
-        { name: "Abyss Black Pearl", hex: "#191C20" }
+        {
+            name: "Atlas White",
+            hex: "#E8E9E7",
+            border: "#CBD5E1"
+        },
+        {
+            name: "Unbleached Ivory",
+            hex: "#D9D0BC"
+        },
+        {
+            name: "Buttercream Yellow Pearl",
+            hex: "#E4DB9D"
+        },
+        {
+            name: "Sienna Orange Metallic",
+            hex: "#B76E49"
+        },
+        {
+            name: "Aero Silver Matte",
+            hex: "#A8ACAA"
+        },
+        {
+            name: "Tomboy Khaki",
+            hex: "#777C69"
+        },
+        {
+            name: "Dusk Blue Matte",
+            hex: "#637C89"
+        },
+        {
+            name: "Abyss Black Pearl",
+            hex: "#191C20"
+        }
     ],
 
     images: [
@@ -571,7 +658,8 @@ const carsData = [
         "img/cars/hyundai-inster/inster_05.webp",
         "img/cars/hyundai-inster/inster_06.webp",
         "img/cars/hyundai-inster/inster_07.webp",
-        "img/cars/hyundai-inster/inster_08.webp"
+        "img/cars/hyundai-inster/inster_08.webp",
+      
     ],
 
     videos: [
@@ -583,7 +671,7 @@ const carsData = [
     ],
 
     brandInfo: {
-        logo: "img/brans/hyundai.png",
+        logo: "img/brands/hyundai.png",
         group: "Hyundai Motor Group",
         relation: "Marca del grupo",
         note: "Hyundai forma parte de Hyundai Motor Group."
