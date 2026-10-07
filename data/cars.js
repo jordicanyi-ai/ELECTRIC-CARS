@@ -424,7 +424,7 @@ const carsData = [
         priceMin:40990, priceMax:62000, priceText:"40.990 - ≈62.000 €",
         rangeText:"525 - ≈622 km", minRangeVal:525, maxRangeVal:622,
         batteryText:"Capacidad no publicada oficialmente", batteryType:"según versión", powerText:"según versión",
-        trunk:854, frunkText: "114 - 116 L según versión" seats:5, acceleration:"desde 3,5 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
+        trunk:854, frunkText: "114 - 116 L según versión", seats:5, acceleration:"desde 3,5 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta ~250 kW según versión",
         description:"SUV eléctrico familiar de referencia por eficiencia, red de carga y software. La gama cambia con frecuencia, por lo que conviene revisar versiones y precios periódicamente.",
         highlights:["525 km WLTP desde la versión base","Gran capacidad de carga","Red Supercharger","Software y planificación de ruta"],
