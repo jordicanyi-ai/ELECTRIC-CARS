@@ -518,7 +518,7 @@ images: [
 ],
 
         videos:[{title:"BYD DOLPHIN SURF",url:"https://www.youtube.com/results?search_query=BYD+Dolphin+Surf+prueba",thumb:"img/cars/byd-dolphin-surf/dolphin-surf_01.webp"}],
-        brandInfo:{logo:"",group:"BYD Company",relation:"Marca del grupo",note:"BYD Auto pertenece a BYD Company."},
+        brandInfo:{logo:"img/brands/byd.png",group:"BYD Company",relation:"Marca del grupo",note:"BYD Auto pertenece a BYD Company."},
         brandUrl:"https://www.byd.com/es-es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
     },
 
