@@ -46,7 +46,7 @@ const carsData = [
             {name:"PLUS Comfort Range",price:"23.950 €",priceValue:23950,battery:"44 kWh",batteryType:"LFP",power:"83 kW (113 CV)",range:"hasta 325 km WLTP",rangeValue:325,accel:"≈11 s"}
         ],
         colors:[{name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},{name:"Negro",hex:"#111827"},{name:"Azul",hex:"#6f8795"},{name:"Rojo",hex:"#9f1d2d"}],
-        images:["img/cars/citroen-ec3/01.webp","img/cars/citroen-ec3/02.webp","img/cars/citroen-ec3/03.webp"],
+        images:["img/cars/citroen-ec3/c3_01.webp","img/cars/citroen-ec3/c3_02.webp","img/cars/citroen-ec3/c3_03.webp","img/cars/citroen-ec3/c3_04.webp","img/cars/citroen-ec3/c3_05.webp","img/cars/citroen-ec3/c3_06.webp","img/cars/citroen-ec3/c3_07.webp","img/cars/citroen-ec3/c3_08.webp"],
         videos:[{title:"Citroën ë-C3",url:"https://www.youtube.com/results?search_query=Citroen+e-C3+prueba",thumb:"img/cars/citroen-ec3/01.webp"}],
         brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Citroën forma parte de Stellantis."},
         brandUrl:"https://www.citroen.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
