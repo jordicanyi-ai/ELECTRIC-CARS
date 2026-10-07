@@ -1749,7 +1749,9 @@ body {
                                 <i class="fa-solid fa-suitcase text-blue-600"></i>
 
                                 <div class="text-xl font-black mt-2">
-                                    ${car.trunk} L
+                                    ${car.frunkText && car.frunkText !== 'No disponible' && !car.frunkText.includes('Pendiente')
+    ? `${car.trunk} + ${car.frunkText}`
+    : `${car.trunk} L`}
                                 </div>
 
                                 <div class="text-xs text-slate-400">
