@@ -25,7 +25,7 @@ const carsData = [
         videos:[{title:"Leapmotor B03X: Prueba completa y detalles",url:"https://www.youtube.com/results?search_query=Leapmotor+B03X+review",thumb:"img/cars/leapmotor-b03x/b03x-7.jpg"}],
         brandInfo:{logo:"img/brands/leapmotor.png",group:"Stellantis",relation:"Alianza estratégica",note:"Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."},
         brandUrl:"https://www.leapmotor.com",
-        dataStatus:{status:"En revisión",checkedAt:"05/10/2026"}
+         dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     
@@ -456,10 +456,7 @@ const carsData = [
 
         brandUrl:"https://www.renault.es",
 
-        dataStatus:{
-            status:"En revisión · gama en transición",
-            checkedAt:"06/10/2026"
-        }
+        dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -483,7 +480,7 @@ const carsData = [
         images:["img/cars/hyundai-inster/01.webp","img/cars/hyundai-inster/02.webp","img/cars/hyundai-inster/03.webp"],
         videos:[{title:"Hyundai INSTER",url:"https://www.youtube.com/results?search_query=Hyundai+INSTER+prueba",thumb:"img/cars/hyundai-inster/01.webp"}],
         brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Hyundai forma parte de Hyundai Motor Group."},
-        brandUrl:"https://www.hyundai.com/es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.hyundai.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -553,7 +550,7 @@ images: [
         images:["img/cars/kia-ev3/01.webp","img/cars/kia-ev3/02.webp","img/cars/kia-ev3/03.webp"],
         videos:[{title:"Kia EV3",url:"https://www.youtube.com/results?search_query=Kia+EV3+prueba",thumb:"img/cars/kia-ev3/01.webp"}],
         brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Kia forma parte de Hyundai Motor Group."},
-        brandUrl:"https://www.kia.com/es", dataStatus:{status:"En revisión · precio provisional",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.kia.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -577,7 +574,7 @@ images: [
         images:["img/cars/skoda-elroq/01.webp","img/cars/skoda-elroq/02.webp","img/cars/skoda-elroq/03.webp"],
         videos:[{title:"Škoda Elroq",url:"https://www.youtube.com/results?search_query=Skoda+Elroq+prueba",thumb:"img/cars/skoda-elroq/01.webp"}],
         brandInfo:{logo:"",group:"Volkswagen Group",relation:"Marca del grupo",note:"Škoda Auto forma parte del Grupo Volkswagen."},
-        brandUrl:"https://www.skoda.es", dataStatus:{status:"En revisión · precio provisional",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.skoda.es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -601,7 +598,7 @@ images: [
         images:["img/cars/volvo-ex30/01.webp","img/cars/volvo-ex30/02.webp","img/cars/volvo-ex30/03.webp"],
         videos:[{title:"Volvo EX30",url:"https://www.youtube.com/results?search_query=Volvo+EX30+prueba",thumb:"img/cars/volvo-ex30/01.webp"}],
         brandInfo:{logo:"",group:"Geely Holding",relation:"Propiedad mayoritaria",note:"Volvo Cars está controlada por Zhejiang Geely Holding."},
-        brandUrl:"https://www.volvocars.com/es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.volvocars.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -625,7 +622,7 @@ images: [
         images:["img/cars/tesla-model-y/01.webp","img/cars/tesla-model-y/02.webp","img/cars/tesla-model-y/03.webp"],
         videos:[{title:"Tesla Model Y",url:"https://www.youtube.com/results?search_query=Tesla+Model+Y+2026+prueba",thumb:"img/cars/tesla-model-y/01.webp"}],
         brandInfo:{logo:"",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
-        brandUrl:"https://www.tesla.com/es_es/modely", dataStatus:{status:"En revisión · gama cambiante",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.tesla.com/es_es/modely", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -649,7 +646,7 @@ images: [
         images:["img/cars/xpeng-g6/01.webp","img/cars/xpeng-g6/02.webp","img/cars/xpeng-g6/03.webp"],
         videos:[{title:"XPENG G6",url:"https://www.youtube.com/results?search_query=XPENG+G6+2026+prueba",thumb:"img/cars/xpeng-g6/01.webp"}],
         brandInfo:{logo:"",group:"XPeng Inc.",relation:"Fabricante",note:"XPENG es un fabricante independiente chino de vehículos eléctricos."},
-        brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
     {
@@ -673,7 +670,7 @@ images: [
         images:["img/cars/peugeot-e5008/01.webp","img/cars/peugeot-e5008/02.webp","img/cars/peugeot-e5008/03.webp"],
         videos:[{title:"Peugeot E-5008",url:"https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",thumb:"img/cars/peugeot-e5008/01.webp"}],
         brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Peugeot forma parte de Stellantis."},
-        brandUrl:"https://www.peugeot.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+        brandUrl:"https://www.peugeot.es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
     
 {
