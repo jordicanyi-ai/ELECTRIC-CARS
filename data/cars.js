@@ -528,7 +528,7 @@ images: [
         brandInfo:{logo:"img/brands/byd.png",group:"BYD Company",relation:"Marca del grupo",note:"BYD Auto pertenece a BYD Company."},
         brandUrl:"https://www.byd.com/es-es",  dataStatus:{
             status:"Revisado",
-            checkedAt:"07/10/2026"
+            checkedAt:"07/10/2026"}
         
     },
 
