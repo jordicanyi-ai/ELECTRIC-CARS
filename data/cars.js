@@ -769,5 +769,126 @@ const carsData = [
         videos:[{title:"Peugeot E-5008",url:"https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",thumb:"img/cars/peugeot-e5008/01.webp"}],
         brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Peugeot forma parte de Stellantis."},
         brandUrl:"https://www.peugeot.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+    },
+    
+{
+    id: 12,
+    brand: "Citroën",
+    model: "ë-C3 OUTDOOR",
+    type: "Utilitario / Compacto",
+    launchYear: 2026,
+
+    priceMin: null,
+    priceMax: null,
+    priceText: "Precio por confirmar",
+
+    rangeText: "hasta 323 km",
+    minRangeVal: 323,
+    maxRangeVal: 323,
+
+    batteryText: "44 kWh",
+    batteryType: "LFP",
+    powerText: "113 CV",
+
+    trunk: 310,
+    frunkText: "No disponible",
+    seats: 5,
+    acceleration: "≈11 s",
+    dimensions: "4,02 × 1,76 × 1,58 m",
+    charging: "20-80% en unos 26 min",
+
+    description: "Edición especial del Citroën ë-C3 con una estética más aventurera y equipamiento diferenciado. Incorpora paragolpes y elementos exteriores específicos, llantas MAGNETITE de 17 pulgadas, detalles en Rojo Infra y un ambiente interior exclusivo. Mantiene la mecánica eléctrica Comfort Range de 44 kWh y 113 CV.",
+
+    highlights: [
+        "Diseño OUTDOOR exclusivo",
+        "Batería de 44 kWh y hasta 323 km WLTP",
+        "Llantas MAGNETITE de 17 pulgadas",
+        "Asientos Citroën Advanced Comfort",
+        "Detalles exteriores en Rojo Infra",
+        "Navegación 3D"
+    ],
+
+    considerations: [
+        "Comparte mecánica con el ë-C3 Comfort Range",
+        "Las principales diferencias están en el diseño y el equipamiento",
+        "Precio oficial de tarifa pendiente de confirmar"
+    ],
+
+    idealFor: [
+        "Ciudad",
+        "Uso diario",
+        "Diseño diferencial",
+        "Escapadas"
+    ],
+
+    priceInfo: {
+        includesVat: true,
+        includesAid: false,
+        note: "PVPR con IVA y sin ayudas públicas pendiente de confirmar. No se aplican Plan Auto+, CAE ni subvenciones."
+    },
+
+    chargingInfo: {
+        dcMax: "100 kW",
+        acMax: "11 kW",
+        fastChargeText: "20-80% en unos 26 min",
+        connector: "CCS2",
+        v2l: false
+    },
+
+    trims: [
+        {
+            name: "OUTDOOR Comfort Range",
+            price: "Precio por confirmar",
+            priceValue: null,
+            battery: "44 kWh",
+            batteryType: "LFP",
+            power: "83 kW (113 CV)",
+            range: "hasta 323 km WLTP",
+            rangeValue: 323,
+            accel: "≈11 s"
+        }
+    ],
+
+    colors: [
+        { name: "Sequoia Green", hex: "#4f5b4d" },
+        { name: "Negro", hex: "#111827" },
+        { name: "Gris", hex: "#777b78" },
+        { name: "Blanco", hex: "#f4f4f1", border: "#cbd5e1" },
+        { name: "Azul", hex: "#536b78" }
+    ],
+
+    images: [
+        "img/cars/citroen-ec3-outdoor/c3_01.webp",
+        "img/cars/citroen-ec3-outdoor/c3_02.webp",
+        "img/cars/citroen-ec3-outdoor/c3_03.webp",
+        "img/cars/citroen-ec3-outdoor/c3_04.webp",
+        "img/cars/citroen-ec3-outdoor/c3_05.webp",
+        "img/cars/citroen-ec3-outdoor/c3_06.webp",
+        "img/cars/citroen-ec3-outdoor/c3_07.webp",
+        "img/cars/citroen-ec3-outdoor/c3_08.webp"
+    ],
+
+    videos: [
+        {
+            title: "Citroën ë-C3 OUTDOOR",
+            url: "https://www.youtube.com/results?search_query=Citroen+e-C3+Outdoor",
+            thumb: "img/cars/citroen-ec3-outdoor/c3_01.webp"
+        }
+    ],
+
+    brandInfo: {
+        logo: "img/brands/citroen.png",
+        group: "Stellantis",
+        relation: "Marca del grupo",
+        note: "Citroën es una marca francesa que forma parte del grupo Stellantis."
+    },
+
+    brandUrl: "https://www.citroen.es",
+
+    dataStatus: {
+        status: "En revisión · precio pendiente",
+        checkedAt: "07/10/2026"
     }
+}
+
 ];
