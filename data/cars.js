@@ -858,21 +858,21 @@ const carsData = [
     ],
 
     images: [
-        "img/cars/citroen-ec3-outdoor/c3_01.webp",
-        "img/cars/citroen-ec3-outdoor/c3_02.webp",
-        "img/cars/citroen-ec3-outdoor/c3_03.webp",
-        "img/cars/citroen-ec3-outdoor/c3_04.webp",
-        "img/cars/citroen-ec3-outdoor/c3_05.webp",
-        "img/cars/citroen-ec3-outdoor/c3_06.webp",
-        "img/cars/citroen-ec3-outdoor/c3_07.webp",
-        "img/cars/citroen-ec3-outdoor/c3_08.webp"
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_01.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_02.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_3.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_04.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_05.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_06.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_07.webp",
+        "img/cars/citroen-ec3-outdoor/c3_outdoor_08.webp"
     ],
 
     videos: [
         {
             title: "Citroën ë-C3 OUTDOOR",
             url: "https://www.youtube.com/results?search_query=Citroen+e-C3+Outdoor",
-            thumb: "img/cars/citroen-ec3-outdoor/c3_01.webp"
+            thumb: "img/cars/citroen-ec3-outdoor/c3_outdoor_01.webp"
         }
     ],
 
