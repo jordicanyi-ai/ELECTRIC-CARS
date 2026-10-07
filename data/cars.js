@@ -500,9 +500,9 @@ const carsData = [
         priceInfo:{includesVat:true,includesAid:false,note:"PVP recomendado Península y Baleares, sin campañas ni ayudas públicas."},
         chargingInfo:{dcMax:"85 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC",connector:"CCS2",v2l:true},
         trims:[
-            {name:"Active MY26",price:"20.140 €",priceValue:20140,battery:"30 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"220 km WLTP",rangeValue:220,accel:"11,1 s"},
-            {name:"Boost MY26 5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
-            {name:"Comfort MY26 5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
+            {name:"Active MY26  4 plazas",price:"20.140 €",priceValue:20140,battery:"30 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"220 km WLTP",rangeValue:220,accel:"11,1 s"},
+            {name:"Boost MY26  5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
+            {name:"Comfort MY26  5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
         ],
         
 colors: [
