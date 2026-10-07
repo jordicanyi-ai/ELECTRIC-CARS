@@ -737,13 +737,15 @@ priceInfo: {
         }
     ],
 
-    colors: [
-        { name: "Sequoia Green", hex: "#4f5b4d" },
-        { name: "Negro", hex: "#111827" },
-        { name: "Gris", hex: "#777b78" },
-        { name: "Blanco", hex: "#f4f4f1", border: "#cbd5e1" },
-        { name: "Azul", hex: "#536b78" }
-    ],
+    
+colors: [
+    { name: "Negro Perla Nera", hex: "#151719" },
+    { name: "Azul Brillante", hex: "#145b9a" },
+    { name: "Mercury Grey", hex: "#777b7e" },
+    { name: "Roman Green", hex: "#53634e" },
+    { name: "Blanco Polar", hex: "#f4f4f1", border: "#cbd5e1" }
+],
+
 
     images: [
         "img/cars/citroen-ec3-outdoor/c3-outdoor_01.webp",
