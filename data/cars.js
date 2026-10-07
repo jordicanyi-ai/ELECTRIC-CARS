@@ -34,7 +34,7 @@ const carsData = [
         brand:"Citroën",
         model:"ë-C3",
         type:"Utilitario / Compacto",
-        launchYear:2026,
+        launchYear:2024,
 
         priceMin:21350,
         priceMax:28450,
@@ -221,7 +221,7 @@ const carsData = [
         brand:"Renault",
         model:"5 E-Tech eléctrico",
         type:"Utilitario / Compacto",
-        launchYear:2026,
+        launchYear:2024,
 
         priceMin:23056,
         priceMax:36585,
@@ -463,7 +463,7 @@ const carsData = [
     },
 
     {
-        id:4, brand:"Hyundai", model:"INSTER", type:"Utilitario / Compacto", launchYear:2026,
+        id:4, brand:"Hyundai", model:"INSTER", type:"Utilitario / Compacto", launchYear:2025,
         priceMin:26840, priceMax:31000, priceText:"26.840 - ≈31.000 €",
         rangeText:"327 - 370 km", minRangeVal:327, maxRangeVal:370,
         batteryText:"42 - 49 kWh", batteryType:"NMC", powerText:"97 - 115 CV",
@@ -487,7 +487,7 @@ const carsData = [
     },
 
     {
-        id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2026,
+        id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2025,
         priceMin:20140, priceMax:26990, priceText:"20.140 - 26.990 €",
         rangeText:"220 - 322 km", minRangeVal:220, maxRangeVal:322,
         batteryText:"30 - 43,2 kWh", batteryType:"LFP Blade", powerText:"88 - 156 CV",
@@ -512,7 +512,7 @@ const carsData = [
     },
 
     {
-        id:6, brand:"Kia", model:"EV3", type:"SUV", launchYear:2026,
+        id:6, brand:"Kia", model:"EV3", type:"SUV", launchYear:2024,
         priceMin:36930, priceMax:49000, priceText:"≈36.930 - 49.000 €",
         rangeText:"≈436 - 605 km", minRangeVal:436, maxRangeVal:605,
         batteryText:"58,3 - 81,4 kWh", batteryType:"NMC", powerText:"204 CV",
@@ -536,7 +536,7 @@ const carsData = [
     },
 
     {
-        id:7, brand:"Škoda", model:"Elroq", type:"SUV", launchYear:2026,
+        id:7, brand:"Škoda", model:"Elroq", type:"SUV", launchYear:2025,
         priceMin:34500, priceMax:52000, priceText:"≈34.500 - 52.000 €",
         rangeText:"≈370 - 574 km", minRangeVal:370, maxRangeVal:574,
         batteryText:"≈52 - 77 kWh útiles", batteryType:"NMC", powerText:"170 - 340 CV",
@@ -560,7 +560,7 @@ const carsData = [
     },
 
     {
-        id:8, brand:"Volvo", model:"EX30", type:"SUV", launchYear:2027,
+        id:8, brand:"Volvo", model:"EX30", type:"SUV", launchYear:2023,
         priceMin:35800, priceMax:52000, priceText:"35.800 - ≈52.000 €",
         rangeText:"337 - 475 km", minRangeVal:337, maxRangeVal:475,
         batteryText:"51 - 69 kWh", batteryType:"NMC / según versión", powerText:"272 - 428 CV",
@@ -584,7 +584,7 @@ const carsData = [
     },
 
     {
-        id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2026,
+        id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
         priceMin:40990, priceMax:62000, priceText:"40.990 - ≈62.000 €",
         rangeText:"525 - ≈622 km", minRangeVal:525, maxRangeVal:622,
         batteryText:"Capacidad no publicada oficialmente", batteryType:"según versión", powerText:"según versión",
@@ -608,7 +608,7 @@ const carsData = [
     },
 
     {
-        id:10, brand:"XPENG", model:"G6", type:"SUV", launchYear:2026,
+        id:10, brand:"XPENG", model:"G6", type:"SUV", launchYear:2024,
         priceMin:45193, priceMax:60000, priceText:"45.193 - ≈60.000 €",
         rangeText:"≈470 - ≈535 km", minRangeVal:470, maxRangeVal:535,
         batteryText:"68,5 - 80,8 kWh", batteryType:"LFP / NMC según versión", powerText:"según versión",
@@ -632,7 +632,7 @@ const carsData = [
     },
 
     {
-        id:11, brand:"Peugeot", model:"E-5008", type:"SUV", launchYear:2026,
+        id:11, brand:"Peugeot", model:"E-5008", type:"SUV", launchYear:2024,
         priceMin:49100, priceMax:60000, priceText:"≈49.100 - 60.000 €",
         rangeText:"477 - 504 km", minRangeVal:477, maxRangeVal:504,
         batteryText:"73 kWh", batteryType:"NMC", powerText:"213 - 325 CV",
