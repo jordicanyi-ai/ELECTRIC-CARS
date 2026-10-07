@@ -679,9 +679,7 @@ const carsData = [
 
     brandUrl: "https://www.hyundai.com/es/es/modelos/inster.html",
 
-    dataStatus: {
-        status: "En revisión",
-        checkedAt: "08/10/2026"
+    dataStatus:{ status:"Revisado", checkedAt:"08/10/2026" 
     }
 },
 
