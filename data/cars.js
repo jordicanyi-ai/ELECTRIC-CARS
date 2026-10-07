@@ -29,27 +29,305 @@ const carsData = [
     },
 
     {
-        id:2, brand:"Citroën", model:"ë-C3", type:"Utilitario / Compacto", launchYear:2026,
-        priceMin:21350, priceMax:28450, priceText:"21.350 - 28.450 €",
-        rangeText:"212 - 325 km", minRangeVal:212, maxRangeVal:325,
-        batteryText:"30 - 44 kWh", batteryType:"LFP", powerText:"113 CV",
-        trunk:310, frunkText: "No disponible", seats:5, acceleration:"≈11 s", dimensions:"4,02 × 1,76 × 1,58 m",
+            {
+        id:2,
+        brand:"Citroën",
+        model:"ë-C3",
+        type:"Utilitario / Compacto",
+        launchYear:2026,
+
+        priceMin:21350,
+        priceMax:28450,
+        priceText:"21.350 - 28.450 €",
+
+        rangeText:"212 - 325 km",
+        minRangeVal:212,
+        maxRangeVal:325,
+
+        batteryText:"30 - 44 kWh",
+        batteryType:"LFP",
+        powerText:"113 CV",
+
+        trunk:310,
+        frunkText:"No disponible",
+        seats:5,
+        acceleration:"≈11 s",
+        dimensions:"4,02 × 1,76 × 1,58 m",
         charging:"20-80% en 26-36 min",
-        description:"El ë-C3 es un eléctrico urbano sencillo y confortable, con dos baterías claramente diferenciadas para ciudad o uso más polivalente.",
-        highlights:["Precio de acceso contenido","Suspensión Advanced Comfort","Dos autonomías","Carga DC hasta 100 kW en 44 kWh"],
-        considerations:["La batería de 30 kWh está muy enfocada a ciudad","Prestaciones modestas","Precio anunciado por Citroën suele mezclar ayudas; aquí usamos PVPR sin ayudas"],
-        idealFor:["Ciudad","Primer eléctrico","Uso diario","Segundo coche familiar"],
-        priceInfo:{includesVat:true,includesAid:false,note:"PVPR de referencia sin Plan Auto+ ni CAE."},
-        chargingInfo:{dcMax:"100 kW (44 kWh)",acMax:"11 kW",fastChargeText:"20-80% en 26 min (44 kWh)",connector:"CCS2",v2l:false},
-        trims:[
-            {name:"YOU Urban Range",price:"21.350 €",priceValue:21350,battery:"30 kWh",batteryType:"LFP",power:"83 kW (113 CV)",range:"212 km WLTP",rangeValue:212,accel:"≈11 s"},
-            {name:"PLUS Comfort Range",price:"23.950 €",priceValue:23950,battery:"44 kWh",batteryType:"LFP",power:"83 kW (113 CV)",range:"hasta 325 km WLTP",rangeValue:325,accel:"≈11 s"}
+
+        description:"El Citroën ë-C3 es un eléctrico urbano cómodo y asequible, disponible con dos baterías y una gama amplia de acabados. Las versiones Urban Range priorizan precio y ciudad; las Comfort Range ofrecen mayor autonomía y carga rápida de hasta 100 kW.",
+
+        highlights:[
+            "Desde 21.350 € de PVPR sin ayudas",
+            "Hasta 325 km WLTP",
+            "Suspensión Citroën Advanced Comfort según versión",
+            "Gama amplia de acabados y ediciones especiales"
         ],
-        colors:[{name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},{name:"Negro",hex:"#111827"},{name:"Azul",hex:"#6f8795"},{name:"Rojo",hex:"#9f1d2d"}],
-        images:["img/cars/citroen-ec3/c3_01.webp","img/cars/citroen-ec3/c3_02.webp","img/cars/citroen-ec3/c3_03.webp","img/cars/citroen-ec3/c3_04.webp","img/cars/citroen-ec3/c3_05.webp","img/cars/citroen-ec3/c3_06.webp","img/cars/citroen-ec3/c3_07.webp","img/cars/citroen-ec3/c3_08.webp"],
-        videos:[{title:"Citroën ë-C3",url:"https://www.youtube.com/results?search_query=Citroen+e-C3+prueba",thumb:"img/cars/citroen-ec3/c3_01.webp"}],
-        brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Citroën forma parte de Stellantis."},
-        brandUrl:"https://www.citroen.es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
+
+        considerations:[
+            "La batería de 30 kWh está especialmente orientada a ciudad",
+            "La carga DC de la Urban Range queda limitada a 30 kW",
+            "OUTDOOR se muestra en una ficha independiente por su diseño específico"
+        ],
+
+        idealFor:[
+            "Ciudad",
+            "Primer eléctrico",
+            "Uso diario",
+            "Segundo coche familiar"
+        ],
+
+        priceInfo:{
+            includesVat:true,
+            includesAid:false,
+            note:"PVPR de referencia con IVA y sin Plan Auto+, CAE ni otras ayudas públicas. Las promociones de Citroën pueden mostrar importes inferiores al incluir ayudas o campañas."
+        },
+
+        chargingInfo:{
+            dcMax:"30 kW (30 kWh) / 100 kW (44 kWh)",
+            acMax:"11 kW",
+            fastChargeText:"20-80% en 36 min (30 kWh) o 26 min (44 kWh)",
+            connector:"CCS2",
+            v2l:false
+        },
+
+        trims:[
+            {
+                name:"YOU Urban Range",
+                price:"21.350 €",
+                priceValue:21350,
+                battery:"30 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"212 km WLTP",
+                rangeValue:212,
+                accel:"≈11 s"
+            },
+            {
+                name:"PLUS Comfort Range",
+                price:"23.950 €",
+                priceValue:23950,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 325 km WLTP",
+                rangeValue:325,
+                accel:"≈11 s"
+            },
+            {
+                name:"MAX Comfort Range",
+                price:"28.450 €",
+                priceValue:28450,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 325 km WLTP",
+                rangeValue:325,
+                accel:"≈11 s"
+            },
+            {
+                name:"BUSINESS Comfort Range",
+                price:"28.450 €",
+                priceValue:28450,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 325 km WLTP",
+                rangeValue:325,
+                accel:"≈11 s"
+            },
+            {
+                name:"TONIC Urban Range",
+                price:"PVPR pendiente de desglose",
+                priceValue:null,
+                battery:"30 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 215 km WLTP",
+                rangeValue:215,
+                accel:"≈11 s"
+            },
+            {
+                name:"TONIC Comfort Range",
+                price:"PVPR pendiente de desglose",
+                priceValue:null,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 324 km WLTP",
+                rangeValue:324,
+                accel:"≈11 s"
+            },
+            {
+                name:"COLLECTION Comfort Range",
+                price:"27.551 €",
+                priceValue:27551,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 325 km WLTP",
+                rangeValue:325,
+                accel:"≈11 s"
+            }
+        ],
+
+        colors:[
+            {name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},
+            {name:"Negro",hex:"#111827"},
+            {name:"Azul",hex:"#6f8795"},
+            {name:"Rojo",hex:"#9f1d2d"}
+        ],
+
+        images:[
+            "img/cars/citroen-ec3/c3_01.webp",
+            "img/cars/citroen-ec3/c3_02.webp",
+            "img/cars/citroen-ec3/c3_03.webp",
+            "img/cars/citroen-ec3/c3_04.webp",
+            "img/cars/citroen-ec3/c3_05.webp",
+            "img/cars/citroen-ec3/c3_06.webp",
+            "img/cars/citroen-ec3/c3_07.webp",
+            "img/cars/citroen-ec3/c3_08.webp"
+        ],
+
+        videos:[
+            {
+                title:"Citroën ë-C3",
+                url:"https://www.youtube.com/results?search_query=Citroen+e-C3+prueba",
+                thumb:"img/cars/citroen-ec3/c3_01.webp"
+            }
+        ],
+
+        brandInfo:{
+            logo:"",
+            group:"Stellantis",
+            relation:"Marca del grupo",
+            note:"Citroën forma parte de Stellantis."
+        },
+
+        brandUrl:"https://www.citroen.es",
+
+        dataStatus:{
+            status:"Revisado",
+            checkedAt:"07/10/2026"
+        }
+    },
+
+    {
+        id:12,
+        brand:"Citroën",
+        model:"ë-C3 OUTDOOR",
+        type:"Utilitario / Compacto",
+        launchYear:2026,
+
+        priceMin:23950,
+        priceMax:23950,
+        priceText:"23.950 €",
+
+        rangeText:"hasta 323 km",
+        minRangeVal:323,
+        maxRangeVal:323,
+
+        batteryText:"44 kWh",
+        batteryType:"LFP",
+        powerText:"113 CV",
+
+        trunk:310,
+        frunkText:"No disponible",
+        seats:5,
+        acceleration:"≈11 s",
+        dimensions:"4,02 × 1,76 × 1,58 m",
+        charging:"20-80% en unos 26 min",
+
+        description:"Edición específica del ë-C3 con una imagen más aventurera y un habitáculo propio. Mantiene la mecánica eléctrica Comfort Range de 44 kWh y 113 CV, pero añade paragolpes y protecciones específicas, llantas MAGNETITE de 17 pulgadas, detalles Infra Red y ambiente interior Outdoor.",
+
+        highlights:[
+            "Diseño OUTDOOR específico",
+            "44 kWh y hasta 323 km WLTP",
+            "Llantas MAGNETITE de 17 pulgadas",
+            "Asientos Advanced Comfort y ambiente interior exclusivo"
+        ],
+
+        considerations:[
+            "Misma base mecánica que el ë-C3 Comfort Range",
+            "Su principal diferencia está en diseño y equipamiento",
+            "Precio superior a versiones equivalentes de enfoque más urbano"
+        ],
+
+        idealFor:[
+            "Ciudad",
+            "Uso diario",
+            "Diseño diferencial",
+            "Escapadas"
+        ],
+
+        priceInfo:{
+            includesVat:true,
+            includesAid:false,
+            note:"Precio publicado en España antes de ayudas públicas. No se descuentan Plan Auto+, CAE ni otras subvenciones."
+        },
+
+        chargingInfo:{
+            dcMax:"100 kW",
+            acMax:"11 kW",
+            fastChargeText:"20-80% en unos 26 min",
+            connector:"CCS2",
+            v2l:false
+        },
+
+        trims:[
+            {
+                name:"OUTDOOR Comfort Range",
+                price:"23.950 €",
+                priceValue:23950,
+                battery:"44 kWh",
+                batteryType:"LFP",
+                power:"83 kW (113 CV)",
+                range:"hasta 323 km WLTP",
+                rangeValue:323,
+                accel:"≈11 s"
+            }
+        ],
+
+        colors:[
+            {name:"Sequoia Green",hex:"#4f5b4d"},
+            {name:"Negro",hex:"#111827"},
+            {name:"Gris",hex:"#777b78"},
+            {name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},
+            {name:"Azul",hex:"#536b78"}
+        ],
+
+        images:[
+            "img/cars/citroen-ec3-outdoor/c3_01.webp",
+            "img/cars/citroen-ec3-outdoor/c3_02.webp",
+            "img/cars/citroen-ec3-outdoor/c3_03.webp",
+            "img/cars/citroen-ec3-outdoor/c3_04.webp",
+            "img/cars/citroen-ec3-outdoor/c3_05.webp",
+            "img/cars/citroen-ec3-outdoor/c3_06.webp",
+            "img/cars/citroen-ec3-outdoor/c3_07.webp",
+            "img/cars/citroen-ec3-outdoor/c3_08.webp"
+        ],
+
+        videos:[
+            {
+                title:"Citroën ë-C3 OUTDOOR",
+                url:"https://www.youtube.com/results?search_query=Citroen+e-C3+Outdoor",
+                thumb:"img/cars/citroen-ec3-outdoor/c3_01.webp"
+            }
+        ],
+
+        brandInfo:{
+            logo:"",
+            group:"Stellantis",
+            relation:"Marca del grupo",
+            note:"Citroën forma parte de Stellantis."
+        },
+
+        brandUrl:"https://www.citroen.es",
+
+        dataStatus:{
+            status:"Revisado",
+            checkedAt:"07/10/2026"
+        }
     },
 
         {
