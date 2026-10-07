@@ -859,13 +859,13 @@ const carsData = [
 
     images: [
         "img/cars/citroen-ec3-outdoor/c3-outdoor_01.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_02.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_3.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_04.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_05.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_06.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_07.webp",
-        "img/cars/citroen-ec3-outdoor/c3_outdoor_08.webp"
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_02.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_03.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_04.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_05.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_06.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_07.webp",
+        "img/cars/citroen-ec3-outdoor/c3-outdoor_08.webp"
     ],
 
     videos: [
