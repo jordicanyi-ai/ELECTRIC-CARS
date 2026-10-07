@@ -460,28 +460,143 @@ const carsData = [
     },
 
     {
-        id:4, brand:"Hyundai", model:"INSTER", type:"Utilitario / Compacto", launchYear:2025,
-        priceMin:26840, priceMax:31000, priceText:"26.840 - ≈31.000 €",
-        rangeText:"327 - 370 km", minRangeVal:327, maxRangeVal:370,
-        batteryText:"42 - 49 kWh", batteryType:"NMC", powerText:"97 - 115 CV",
-        trunk:280, frunkText: "No disponible", seats:4, acceleration:"10,6 - 11,7 s", dimensions:"3,83 × 1,61 × 1,58 m",
-        charging:"10-80% en unos 30 min",
-        description:"El INSTER es un eléctrico urbano de cuatro plazas especialmente compacto por fuera, pero muy aprovechable por dentro gracias a su habitáculo flexible.",
-        highlights:["Hasta 370 km WLTP","Interior muy flexible","Carga 10-80% ~30 min","Tamaño ideal para ciudad"],
-        considerations:["Solo 4 plazas","Maletero contenido","La versión de 49 kWh encarece el conjunto"],
-        idealFor:["Ciudad","Parejas","Uso diario","Espacios de aparcamiento pequeños"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precio de acceso PVPR sin descuentos; máximo provisional pendiente de revisar."},
-        chargingInfo:{dcMax:"hasta ~120 kW",acMax:"11 kW",fastChargeText:"10-80% en unos 30 min",connector:"CCS2",v2l:true},
-        trims:[
-            {name:"42 kWh",price:"desde 26.840 €",priceValue:26840,battery:"42 kWh",batteryType:"NMC",power:"71,1 kW (97 CV)",range:"327 km WLTP",rangeValue:327,accel:"11,7 s"},
-            {name:"49 kWh Long Range",price:"≈31.000 €",priceValue:31000,battery:"49 kWh",batteryType:"NMC",power:"84,5 kW (115 CV)",range:"370 km WLTP",rangeValue:370,accel:"10,6 s"}
-        ],
-        colors:[{name:"Beige",hex:"#d6c7aa"},{name:"Verde",hex:"#66705c"},{name:"Azul",hex:"#7ba0ba"},{name:"Negro",hex:"#15191d"}],
-        images:["img/cars/hyundai-inster/01.webp","img/cars/hyundai-inster/02.webp","img/cars/hyundai-inster/03.webp"],
-        videos:[{title:"Hyundai INSTER",url:"https://www.youtube.com/results?search_query=Hyundai+INSTER+prueba",thumb:"img/cars/hyundai-inster/01.webp"}],
-        brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Hyundai forma parte de Hyundai Motor Group."},
-        brandUrl:"https://www.hyundai.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
+        
+
+    id: 4,
+    brand: "Hyundai",
+    model: "INSTER",
+    type: "Utilitario / Compacto",
+    launchYear: 2025,
+
+    priceMin: 26950,
+    priceMax: 31000,
+    priceText: "26.950 - ≈31.000 €",
+
+    rangeText: "327 - 370 km",
+    minRangeVal: 327,
+    maxRangeVal: 370,
+
+    batteryText: "42 - 49 kWh",
+    batteryType: "NMC",
+    powerText: "97 - 115 CV",
+
+    trunk: 280,
+    seats: 4,
+    acceleration: "10,6 - 11,7 s",
+    dimensions: "3,83 × 1,61 × 1,58 m",
+    charging: "10-80% en unos 30 min",
+
+    description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina dimensiones exteriores compactas con un interior sorprendentemente versátil. Ofrece dos capacidades de batería, hasta 370 km de autonomía WLTP y tecnología de carga bidireccional V2L.",
+
+    highlights: [
+        "Hasta 370 km de autonomía WLTP",
+        "Interior flexible con asientos traseros deslizantes",
+        "Carga rápida del 10 al 80% en unos 30 minutos",
+        "Función V2L para alimentar dispositivos externos",
+        "Dimensiones compactas ideales para ciudad"
+    ],
+
+    considerations: [
+        "Homologado únicamente para 4 plazas",
+        "Maletero de 280 litros en configuración estándar",
+        "La batería de 49 kWh incrementa el precio",
+        "Prestaciones orientadas principalmente al uso urbano"
+    ],
+
+    idealFor: [
+        "Ciudad",
+        "Parejas",
+        "Familias de hasta 4 personas",
+        "Uso diario",
+        "Aparcamiento en espacios reducidos"
+    ],
+
+    priceInfo: {
+        includesVat: true,
+        includesAid: false,
+        note: "Precios orientativos con IVA, sin ayudas. Referencia de 26.950 € para MAXX 42 kWh; precio máximo provisional. Pendiente de verificar el PVP de acceso KLASS y el resto de acabados."
     },
+
+    chargingInfo: {
+        dcMax: "hasta ~120 kW",
+        acMax: "11 kW",
+        fastChargeText: "10-80% en unos 30 min",
+        connector: "CCS2",
+        v2l: true
+    },
+
+    trims: [
+        {
+            name: "MAXX 42 kWh",
+            price: "26.950 €",
+            priceValue: 26950,
+            battery: "42 kWh",
+            batteryType: "NMC",
+            power: "71,1 kW (97 CV)",
+            range: "327 km WLTP",
+            rangeValue: 327,
+            accel: "11,7 s",
+            seats: 4
+        },
+        {
+            name: "49 kWh Long Range",
+            price: "≈31.000 €",
+            priceValue: 31000,
+            battery: "49 kWh",
+            batteryType: "NMC",
+            power: "84,5 kW (115 CV)",
+            range: "370 km WLTP",
+            rangeValue: 370,
+            accel: "10,6 s",
+            seats: 4
+        }
+    ],
+
+    colors: [
+        { name: "Atlas White", hex: "#E8E9E7", border: "#CBD5E1" },
+        { name: "Unbleached Ivory", hex: "#D9D0BC" },
+        { name: "Buttercream Yellow Pearl", hex: "#E4DB9D" },
+        { name: "Sienna Orange Metallic", hex: "#B76E49" },
+        { name: "Aero Silver Matte", hex: "#A8ACAA" },
+        { name: "Tomboy Khaki", hex: "#777C69" },
+        { name: "Dusk Blue Matte", hex: "#637C89" },
+        { name: "Abyss Black Pearl", hex: "#191C20" }
+    ],
+
+    images: [
+        "img/cars/hyundai-inster/inster_01.webp",
+        "img/cars/hyundai-inster/inster_02.webp",
+        "img/cars/hyundai-inster/inster_03.webp",
+        "img/cars/hyundai-inster/inster_04.webp",
+        "img/cars/hyundai-inster/inster_05.webp",
+        "img/cars/hyundai-inster/inster_06.webp",
+        "img/cars/hyundai-inster/inster_07.webp",
+        "img/cars/hyundai-inster/inster_08.webp"
+    ],
+
+    videos: [
+        {
+            title: "Hyundai INSTER: pruebas y análisis",
+            url: "https://www.youtube.com/results?search_query=Hyundai+INSTER+prueba",
+            thumb: "img/cars/hyundai-inster/inster_01.webp"
+        }
+    ],
+
+    brandInfo: {
+        logo: "",
+        group: "Hyundai Motor Group",
+        relation: "Marca del grupo",
+        note: "Hyundai forma parte de Hyundai Motor Group."
+    },
+
+    brandUrl: "https://www.hyundai.com/es/es/modelos/inster.html",
+
+    dataStatus: {
+        status: "En revisión",
+        checkedAt: "08/10/2026"
+    }
+},
+
 
     {
         id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2025,
