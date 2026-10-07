@@ -773,10 +773,12 @@ priceInfo: {
 
     brandUrl: "https://www.citroen.es",
 
-    dataStatus: {
-        status: "En revisión · precio pendiente",
-        checkedAt: "07/10/2026"
-    }
+    
+dataStatus: {
+    status: "Revisado",
+    checkedAt: "07/10/2026"
+}
+
 }
 
 ];
