@@ -505,8 +505,19 @@ const carsData = [
             {name:"Comfort MY26 5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
         ],
         colors:[{name:"Azul",hex:"#6c91a8"},{name:"Verde",hex:"#8ea58f"},{name:"Blanco",hex:"#f1f1ed",border:"#cbd5e1"},{name:"Negro",hex:"#1d2227"}],
-        images:["img/cars/byd-dolphin-surf/01.webp","img/cars/byd-dolphin-surf/02.webp","img/cars/byd-dolphin-surf/03.webp"],
-        videos:[{title:"BYD DOLPHIN SURF",url:"https://www.youtube.com/results?search_query=BYD+Dolphin+Surf+prueba",thumb:"img/cars/byd-dolphin-surf/01.webp"}],
+        
+images: [
+  "img/cars/byd-dolphin-surf/dolphin-surf_01.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_02.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_03.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_04.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_05.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_06.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_07.webp",
+  "img/cars/byd-dolphin-surf/dolphin-surf_08.webp"
+],
+
+        videos:[{title:"BYD DOLPHIN SURF",url:"https://www.youtube.com/results?search_query=BYD+Dolphin+Surf+prueba",thumb:"img/cars/byd-dolphin-surf/dolphin-surf_01.webp"}],
         brandInfo:{logo:"",group:"BYD Company",relation:"Marca del grupo",note:"BYD Auto pertenece a BYD Company."},
         brandUrl:"https://www.byd.com/es-es", dataStatus:{status:"En revisión",checkedAt:"06/10/2026"}
     },
