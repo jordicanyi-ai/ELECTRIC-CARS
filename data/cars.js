@@ -200,7 +200,7 @@ const carsData = [
         ],
 
         brandInfo:{
-            logo:"",
+            logo:"img/brands/citroen.png",
             group:"Stellantis",
             relation:"Marca del grupo",
             note:"Citroën forma parte de Stellantis."
