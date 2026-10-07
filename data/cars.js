@@ -28,7 +28,7 @@ const carsData = [
         dataStatus:{status:"En revisión",checkedAt:"05/10/2026"}
     },
 
-    {
+    
             {
         id:2,
         brand:"Citroën",
