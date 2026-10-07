@@ -662,9 +662,11 @@ const carsData = [
     type: "Utilitario / Compacto",
     launchYear: 2026,
 
-    priceMin: null,
-    priceMax: null,
-    priceText: "Precio por confirmar",
+    
+    priceMin: 23950,
+    priceMax: 23950,
+    priceText: "23.950 €",
+
 
     rangeText: "hasta 323 km",
     minRangeVal: 323,
@@ -705,11 +707,13 @@ const carsData = [
         "Escapadas"
     ],
 
-    priceInfo: {
-        includesVat: true,
-        includesAid: false,
-        note: "PVPR con IVA y sin ayudas públicas pendiente de confirmar. No se aplican Plan Auto+, CAE ni subvenciones."
-    },
+    
+priceInfo: {
+    includesVat: true,
+    includesAid: false,
+    note: "Precio al contado mostrado en el configurador oficial de Citroën, con IVA. Puede incluir descuentos comerciales. Sin ayudas públicas identificadas en la configuración."
+},
+
 
     chargingInfo: {
         dcMax: "100 kW",
@@ -722,8 +726,8 @@ const carsData = [
     trims: [
         {
             name: "OUTDOOR Comfort Range",
-            price: "Precio por confirmar",
-            priceValue: null,
+            price: "23.950 €",
+            priceValue: 23950,
             battery: "44 kWh",
             batteryType: "LFP",
             power: "83 kW (113 CV)",
