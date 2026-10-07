@@ -504,7 +504,14 @@ const carsData = [
             {name:"Boost MY26 5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
             {name:"Comfort MY26 5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
         ],
-        colors:[{name:"Azul",hex:"#6c91a8"},{name:"Verde",hex:"#8ea58f"},{name:"Blanco",hex:"#f1f1ed",border:"#cbd5e1"},{name:"Negro",hex:"#1d2227"}],
+        
+colors: [
+  { name: "Lime Green", hex: "#B2BD49" },
+  { name: "Ice Blue", hex: "#9DB7D3" },
+  { name: "Skiing White / Apricity White", hex: "#D3D0C7" },
+  { name: "Obsidian Black / Polar Night Black", hex: "#20242B" }
+],
+
         
 images: [
   "img/cars/byd-dolphin-surf/dolphin-surf_01.webp",
