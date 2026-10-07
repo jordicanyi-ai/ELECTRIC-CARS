@@ -463,7 +463,7 @@ const carsData = [
         
 
     
-{
+
     id: 4,
     brand: "Hyundai",
     model: "INSTER",
