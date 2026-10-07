@@ -172,11 +172,13 @@ const carsData = [
         ],
 
         colors:[
-            {name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},
-            {name:"Negro",hex:"#111827"},
-            {name:"Azul",hex:"#6f8795"},
-            {name:"Rojo",hex:"#9f1d2d"}
-        ],
+    {name:"Azul Monte Carlo",hex:"#2f5f87"},
+    {name:"Blanco Polar",hex:"#f4f4f1",border:"#cbd5e1"},
+    {name:"Negro Perla Nera",hex:"#151719"},
+    {name:"Mercury Grey",hex:"#777b7e"},
+    {name:"Azul Brillante",hex:"#537f9b"},
+    {name:"Rojo Elixir",hex:"#8f1f2d"}
+],
 
         images:[
             "img/cars/citroen-ec3/c3_01.webp",
