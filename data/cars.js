@@ -138,7 +138,7 @@ const carsData = [
             },
             {
                 name:"TONIC Urban Range",
-                price:"PVPR pendiente de desglose",
+                price:"Precio por confirmar",
                 priceValue:null,
                 battery:"30 kWh",
                 batteryType:"LFP",
@@ -149,7 +149,7 @@ const carsData = [
             },
             {
                 name:"TONIC Comfort Range",
-                price:"PVPR pendiente de desglose",
+                price:"Precio por confirmar",
                 priceValue:null,
                 battery:"44 kWh",
                 batteryType:"LFP",
