@@ -1281,7 +1281,7 @@ body {
 
                                 <div class="text-xs font-bold mt-1">
                                     ${car.frunkText && car.frunkText !== 'No disponible' && !car.frunkText.includes('Pendiente')
-    ? `${car.trunk} + ${car.frunkText}`
+    ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
     : `${car.trunk} L`}
                                 </div>
 
