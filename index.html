@@ -1657,9 +1657,18 @@ body {
                                     ${car.brand}
                                 </div>
 
-                                <h2 class="text-4xl sm:text-5xl font-black">
-                                    ${car.model}
-                                </h2>
+                               
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+    <h2 class="text-4xl sm:text-5xl font-black">
+        ${car.model}
+    </h2>
+    ${car.launchYear ? `
+        <span class="text-sm sm:text-base font-medium text-slate-300">
+            ${car.launchYear}
+        </span>
+    ` : ''}
+</div>
+
 
                             </div>
 
