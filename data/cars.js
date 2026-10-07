@@ -755,50 +755,6 @@ images: [
     },
 
 
-<!-- TARGETA PUBLICITÀRIA ELECTRICOS.EU -->
-<article class="rounded-2xl overflow-hidden border border-blue-500/30 bg-slate-900 shadow-lg flex flex-col h-full">
-
-  <!-- IMATGE -->
-  <div class="relative">
-    <img
-      src="img/ads/publicidad.webp"
-      alt="Anúnciate en electricos.eu"
-      class="w-full aspect-[16/10] object-cover"
-      loading="lazy"
-    />
-
-    <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">
-      ESPACIO PUBLICITARIO
-    </span>
-  </div>
-
-  <!-- CONTINGUT -->
-  <div class="p-5 flex flex-col flex-1">
-
-    <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
-      ELECTRICOS.EU
-    </p>
-
-    <h3 class="text-xl font-bold text-white leading-tight mb-3">
-      Tu marca, aquí.
-    </h3>
-
-    <p class="text-sm text-slate-300 leading-relaxed mb-5">
-      Llega a personas que están comparando
-      y buscando su próximo coche eléctrico.
-    </p>
-
-    <div class="mt-auto">
-      <a
-        href="mailto:publicidad@electricos.eu?subject=Publicidad%20en%20electricos.eu"
-        class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm py-3 px-4 rounded-xl transition-colors"
-      >
-        ANÚNCIATE AQUÍ →
-      </a>
-    </div>
-
-  </div>
-</article>
 
 
 
