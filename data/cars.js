@@ -214,123 +214,7 @@ const carsData = [
         }
     },
 
-    {
-        id:12,
-        brand:"Citroën",
-        model:"ë-C3 OUTDOOR",
-        type:"Utilitario / Compacto",
-        launchYear:2026,
-
-        priceMin:23950,
-        priceMax:23950,
-        priceText:"23.950 €",
-
-        rangeText:"hasta 323 km",
-        minRangeVal:323,
-        maxRangeVal:323,
-
-        batteryText:"44 kWh",
-        batteryType:"LFP",
-        powerText:"113 CV",
-
-        trunk:310,
-        frunkText:"No disponible",
-        seats:5,
-        acceleration:"≈11 s",
-        dimensions:"4,02 × 1,76 × 1,58 m",
-        charging:"20-80% en unos 26 min",
-
-        description:"Edición específica del ë-C3 con una imagen más aventurera y un habitáculo propio. Mantiene la mecánica eléctrica Comfort Range de 44 kWh y 113 CV, pero añade paragolpes y protecciones específicas, llantas MAGNETITE de 17 pulgadas, detalles Infra Red y ambiente interior Outdoor.",
-
-        highlights:[
-            "Diseño OUTDOOR específico",
-            "44 kWh y hasta 323 km WLTP",
-            "Llantas MAGNETITE de 17 pulgadas",
-            "Asientos Advanced Comfort y ambiente interior exclusivo"
-        ],
-
-        considerations:[
-            "Misma base mecánica que el ë-C3 Comfort Range",
-            "Su principal diferencia está en diseño y equipamiento",
-            "Precio superior a versiones equivalentes de enfoque más urbano"
-        ],
-
-        idealFor:[
-            "Ciudad",
-            "Uso diario",
-            "Diseño diferencial",
-            "Escapadas"
-        ],
-
-        priceInfo:{
-            includesVat:true,
-            includesAid:false,
-            note:"Precio publicado en España antes de ayudas públicas. No se descuentan Plan Auto+, CAE ni otras subvenciones."
-        },
-
-        chargingInfo:{
-            dcMax:"100 kW",
-            acMax:"11 kW",
-            fastChargeText:"20-80% en unos 26 min",
-            connector:"CCS2",
-            v2l:false
-        },
-
-        trims:[
-            {
-                name:"OUTDOOR Comfort Range",
-                price:"23.950 €",
-                priceValue:23950,
-                battery:"44 kWh",
-                batteryType:"LFP",
-                power:"83 kW (113 CV)",
-                range:"hasta 323 km WLTP",
-                rangeValue:323,
-                accel:"≈11 s"
-            }
-        ],
-
-        colors:[
-            {name:"Sequoia Green",hex:"#4f5b4d"},
-            {name:"Negro",hex:"#111827"},
-            {name:"Gris",hex:"#777b78"},
-            {name:"Blanco",hex:"#f4f4f1",border:"#cbd5e1"},
-            {name:"Azul",hex:"#536b78"}
-        ],
-
-        images:[
-            "img/cars/citroen-ec3-outdoor/c3_01.webp",
-            "img/cars/citroen-ec3-outdoor/c3_02.webp",
-            "img/cars/citroen-ec3-outdoor/c3_03.webp",
-            "img/cars/citroen-ec3-outdoor/c3_04.webp",
-            "img/cars/citroen-ec3-outdoor/c3_05.webp",
-            "img/cars/citroen-ec3-outdoor/c3_06.webp",
-            "img/cars/citroen-ec3-outdoor/c3_07.webp",
-            "img/cars/citroen-ec3-outdoor/c3_08.webp"
-        ],
-
-        videos:[
-            {
-                title:"Citroën ë-C3 OUTDOOR",
-                url:"https://www.youtube.com/results?search_query=Citroen+e-C3+Outdoor",
-                thumb:"img/cars/citroen-ec3-outdoor/c3_01.webp"
-            }
-        ],
-
-        brandInfo:{
-            logo:"",
-            group:"Stellantis",
-            relation:"Marca del grupo",
-            note:"Citroën forma parte de Stellantis."
-        },
-
-        brandUrl:"https://www.citroen.es",
-
-        dataStatus:{
-            status:"Revisado",
-            checkedAt:"07/10/2026"
-        }
-    },
+   
 
         {
         id:3,
@@ -872,7 +756,7 @@ const carsData = [
         {
             title: "Citroën ë-C3 OUTDOOR",
             url: "https://www.youtube.com/results?search_query=Citroen+e-C3+Outdoor",
-            thumb: "img/cars/citroen-ec3-outdoor/c3_outdoor_01.webp"
+            thumb: "img/cars/citroen-ec3-outdoor/c3-outdoor_01.webp"
         }
     ],
 
