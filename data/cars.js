@@ -1104,18 +1104,16 @@ priceText: "35.413 - 51.627 €",
   }
 ],
 
-  colors: [
-    { name: "Cloud Blue", hex: "#A9C6D0" },
-    {
-      name: "Crystal White",
-      hex: "#F2F2EF",
-      border: "#CBD5E1"
-    },
-    { name: "Onyx Black", hex: "#191B1E" },
-    { name: "Denim Blue", hex: "#394C65" },
-    { name: "Vapour Grey", hex: "#A5A8A5" },
-    { name: "Sand Dune", hex: "#C9BCA5" }
-  ],
+ 
+colors: [
+  { name: "Onyx Black", hex: "#2D2926" },
+  { name: "Crystal White", hex: "#F1F1F1" },
+  { name: "Denim Blue", hex: "#505B7A" },
+  { name: "Vapour Grey", hex: "#7D8182" },
+  { name: "Sand Dune", hex: "#EDE9DF" },
+  { name: "Cloud Blue", hex: "#CBD6E2" }
+],
+
 
   images: [
     "img/cars/volvo-ex30/volvo-ex30_01.webp",
