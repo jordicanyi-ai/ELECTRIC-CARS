@@ -937,7 +937,18 @@ images: [
             {name:"P5 Long Range",price:"41.790 €",priceValue:41790,battery:"69 kWh nominal",batteryType:"NMC",power:"200 kW (272 CV)",range:"475 km WLTP",rangeValue:475,accel:"5,3 s"}
         ],
         colors:[{name:"Cloud Blue",hex:"#a9c2cf"},{name:"Vapour Grey",hex:"#a8aaa7"},{name:"Onyx Black",hex:"#16191c"},{name:"Crystal White",hex:"#f2f2ef",border:"#cbd5e1"}],
-        images:["img/cars/volvo-ex30/01.webp","img/cars/volvo-ex30/02.webp","img/cars/volvo-ex30/03.webp"],
+       
+images: [
+    "img/cars/volvo-ex30/volvo-ex30_01.webp",
+    "img/cars/volvo-ex30/volvo-ex30_02.webp",
+    "img/cars/volvo-ex30/volvo-ex30_03.webp",
+    "img/cars/volvo-ex30/volvo-ex30_04.webp",
+    "img/cars/volvo-ex30/volvo-ex30_05.webp",
+    "img/cars/volvo-ex30/volvo-ex30_06.webp",
+    "img/cars/volvo-ex30/volvo-ex30_07.webp",
+    "img/cars/volvo-ex30/volvo-ex30_08.webp"
+],
+
         videos:[{title:"Volvo EX30",url:"https://www.youtube.com/results?search_query=Volvo+EX30+prueba",thumb:"img/cars/volvo-ex30/01.webp"}],
         brandInfo:{logo:"",group:"Geely Holding",relation:"Propiedad mayoritaria",note:"Volvo Cars está controlada por Zhejiang Geely Holding."},
         brandUrl:"https://www.volvocars.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
