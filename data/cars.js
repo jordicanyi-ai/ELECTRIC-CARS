@@ -903,9 +903,9 @@ images: [
   type: "SUV",
   launchYear: 2023,
 
-  priceMin: 35413,
-priceMax: 51627,
-priceText: "35.413 - 51.627 €",
+ priceMin: 35412,
+priceMax: 53043,
+priceText: "35.412 - 53.043 €",
 
   rangeText: "337 - 475 km WLTP",
   minRangeVal: 337,
