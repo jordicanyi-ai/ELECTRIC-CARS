@@ -1397,10 +1397,15 @@ colors: [
   ],
 
   images: [
-    "img/cars/peugeot-e5008/01.webp",
-    "img/cars/peugeot-e5008/02.webp",
-    "img/cars/peugeot-e5008/03.webp"
-  ],
+  "img/cars/peugeot-e5008/peugeot-e5008_01.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_02.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_03.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_04.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_05.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_06.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_07.webp",
+  "img/cars/peugeot-e5008/peugeot-e5008_08.webp"
+],
 
   videos: [
     {
