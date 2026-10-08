@@ -730,29 +730,196 @@ images: [
         
     },
 
-    {
-        id:6, brand:"Kia", model:"EV3", type:"SUV", launchYear:2024,
-        priceMin:36930, priceMax:49000, priceText:"≈36.930 - 49.000 €",
-        rangeText:"≈436 - 605 km", minRangeVal:436, maxRangeVal:605,
-        batteryText:"58,3 - 81,4 kWh", batteryType:"NMC", powerText:"204 CV",
-        trunk:460, frunkText: "25 L", seats:5, acceleration:"7,5 - 7,7 s", dimensions:"4,30 × 1,85 × 1,56 m",
-        charging:"10-80% en 29-31 min",
-        description:"SUV compacto eléctrico con una de las mejores autonomías de su tamaño, buen maletero y una versión Long Range especialmente interesante para viajar.",
-        highlights:["Hasta 605 km WLTP","460 l + frunk de 25 l","Carga 10-80% ~31 min","V2L disponible"],
-        considerations:["Precios provisionales pendientes de revisión fina","Tracción delantera","La Long Range pesa más"],
-        idealFor:["Familias","Viajes","Uso diario","SUV compacto"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Rango de PVP provisional sin ayudas; revisar antes de publicar como definitivo."},
-        chargingInfo:{dcMax:"~128 kW",acMax:"11 kW",fastChargeText:"10-80% en 29-31 min",connector:"CCS2",v2l:true},
-        trims:[
-            {name:"Standard Range",price:"≈36.930 €",priceValue:36930,battery:"58,3 kWh",batteryType:"NMC",power:"150 kW (204 CV)",range:"≈436 km WLTP",rangeValue:436,accel:"7,5 s"},
-            {name:"Long Range",price:"≈41.900 €",priceValue:41900,battery:"81,4 kWh",batteryType:"NMC",power:"150 kW (204 CV)",range:"605 km WLTP",rangeValue:605,accel:"7,7 s"}
-        ],
-        colors:[{name:"Blanco",hex:"#f5f5f2",border:"#cbd5e1"},{name:"Gris",hex:"#687078"},{name:"Verde",hex:"#65766a"},{name:"Azul",hex:"#3e5d77"}],
-        images:["img/cars/kia-ev3/01.webp","img/cars/kia-ev3/02.webp","img/cars/kia-ev3/03.webp"],
-        videos:[{title:"Kia EV3",url:"https://www.youtube.com/results?search_query=Kia+EV3+prueba",thumb:"img/cars/kia-ev3/01.webp"}],
-        brandInfo:{logo:"",group:"Hyundai Motor Group",relation:"Marca del grupo",note:"Kia forma parte de Hyundai Motor Group."},
-        brandUrl:"https://www.kia.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
+    
+{
+    id: 6,
+    brand: "Kia",
+    model: "EV3",
+    type: "SUV",
+    launchYear: 2024,
+
+    priceMin: 37020,
+    priceMax: 48795,
+    priceText: "37.020 - 48.795 €",
+
+    rangeText: "436 - 605 km",
+    minRangeVal: 436,
+    maxRangeVal: 605,
+
+    batteryText: "58,3 - 81,4 kWh",
+    batteryType: "NMC",
+    powerText: "204 CV",
+
+    trunk: 460,
+    frunkText: "25 L",
+    seats: 5,
+    acceleration: "7,5 - 7,7 s",
+    dimensions: "4,30 × 1,85 × 1,56 m",
+    charging: "10-80% en 29-31 min",
+
+    description: "El Kia EV3 es un SUV compacto 100% eléctrico que destaca por su autonomía, habitabilidad y tecnología. Ofrece dos baterías de 58,3 y 81,4 kWh, con hasta 605 km de autonomía WLTP. La gama incluye acabados Air, Earth y GT-Line, con un maletero de 460 litros y un compartimento delantero adicional de 25 litros.",
+
+    highlights: [
+        "Hasta 605 km de autonomía WLTP",
+        "Dos baterías disponibles: 58,3 y 81,4 kWh",
+        "Maletero de 460 litros más frunk de 25 litros",
+        "Carga rápida del 10 al 80% en aproximadamente 29-31 minutos",
+        "Tecnología V2L disponible según equipamiento",
+        "Garantía Kia de 7 años o 150.000 km"
+    ],
+
+    considerations: [
+        "Tracción delantera en las versiones de esta gama",
+        "La batería Long Range incrementa el peso y el precio",
+        "La autonomía varía según acabado, llantas y equipamiento",
+        "Los precios corresponden a tarifas de referencia de 2026 y pueden variar"
+    ],
+
+    idealFor: [
+        "Familias",
+        "Viajes largos",
+        "Uso diario",
+        "SUV compacto",
+        "Conductores que priorizan autonomía"
+    ],
+
+    priceInfo: {
+        includesVat: true,
+        includesAid: false,
+        note: "PVP de tarifa de referencia con IVA, sin ayudas públicas, descuentos comerciales ni financiación. Importes correspondientes a referencias de enero de 2026, pendientes de confirmar con la tarifa vigente de octubre de 2026."
     },
+
+    chargingInfo: {
+        dcMax: "hasta 128 kW aprox.",
+        acMax: "11 kW",
+        fastChargeText: "10-80% en aproximadamente 29-31 minutos",
+        connector: "CCS2",
+        v2l: "Según acabado y equipamiento"
+    },
+
+    trims: [
+        {
+            name: "Standard Range Air",
+            price: "37.020 €",
+            priceValue: 37020,
+            battery: "58,3 kWh",
+            batteryType: "NMC",
+            power: "150 kW (204 CV)",
+            range: "436 km WLTP",
+            rangeValue: 436,
+            accel: "7,5 s"
+        },
+        {
+            name: "Standard Range Earth",
+            price: "38.520 €",
+            priceValue: 38520,
+            battery: "58,3 kWh",
+            batteryType: "NMC",
+            power: "150 kW (204 CV)",
+            range: "436 km WLTP aprox.",
+            rangeValue: 436,
+            accel: "7,5 s"
+        },
+        {
+            name: "Long Range Air",
+            price: "41.795 €",
+            priceValue: 41795,
+            battery: "81,4 kWh",
+            batteryType: "NMC",
+            power: "150 kW (204 CV)",
+            range: "605 km WLTP",
+            rangeValue: 605,
+            accel: "7,7 s"
+        },
+        {
+            name: "Long Range Earth",
+            price: "43.295 €",
+            priceValue: 43295,
+            battery: "81,4 kWh",
+            batteryType: "NMC",
+            power: "150 kW (204 CV)",
+            range: "hasta 605 km WLTP",
+            rangeValue: 605,
+            accel: "7,7 s"
+        },
+        {
+            name: "Long Range GT-Line",
+            price: "48.795 €",
+            priceValue: 48795,
+            battery: "81,4 kWh",
+            batteryType: "NMC",
+            power: "150 kW (204 CV)",
+            range: "hasta 563 km WLTP aprox.",
+            rangeValue: 563,
+            accel: "7,7 s"
+        }
+    ],
+
+    colors: [
+        {
+            name: "Clear White",
+            hex: "#F2F2EF",
+            border: "#CBD5E1"
+        },
+        {
+            name: "Snow White Pearl",
+            hex: "#E9E9E4",
+            border: "#CBD5E1"
+        },
+        {
+            name: "Aurora Black Pearl",
+            hex: "#17191C"
+        },
+        {
+            name: "Shale Grey",
+            hex: "#777D7D"
+        },
+        {
+            name: "Ivory Silver",
+            hex: "#B9B9B0"
+        },
+        {
+            name: "Frost Blue",
+            hex: "#8CA7B0"
+        },
+        {
+            name: "Aventurine Green",
+            hex: "#687B69"
+        },
+        {
+            name: "Terracotta",
+            hex: "#B66E53"
+        }
+    ],
+
+    images: [
+        "img/cars/kia-ev3/01.webp",
+        "img/cars/kia-ev3/02.webp",
+        "img/cars/kia-ev3/03.webp"
+    ],
+
+    videos: [
+        {
+            title: "Kia EV3: pruebas y análisis",
+            url: "https://www.youtube.com/results?search_query=Kia+EV3+prueba",
+            thumb: "img/cars/kia-ev3/01.webp"
+        }
+    ],
+
+    brandInfo: {
+        logo: "img/brands/kia.png",
+        group: "Hyundai Motor Group",
+        relation: "Marca del grupo",
+        note: "Kia forma parte de Hyundai Motor Group."
+    },
+
+    brandUrl: "https://www.kia.com/es/modelos/ev3/",
+    dataStatus: {
+        status: "Revisado",
+        checkedAt: "08/10/2026"
+    }
+},
+
 
 
 
