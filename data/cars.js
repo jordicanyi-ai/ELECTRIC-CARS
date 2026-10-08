@@ -1050,7 +1050,7 @@ images: [
     checkedAt: "08/10/2026"
   }
 },
-
+{
         colors:[{name:"Verde",hex:"#7d9a78"},{name:"Gris",hex:"#737a80"},{name:"Azul",hex:"#395a70"},{name:"Blanco",hex:"#f3f4f4",border:"#cbd5e1"}],
         images:["img/cars/skoda-elroq/01.webp","img/cars/skoda-elroq/02.webp","img/cars/skoda-elroq/03.webp"],
         videos:[{title:"Škoda Elroq",url:"https://www.youtube.com/results?search_query=Skoda+Elroq+prueba",thumb:"img/cars/skoda-elroq/01.webp"}],
