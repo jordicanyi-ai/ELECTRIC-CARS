@@ -1223,29 +1223,208 @@ colors: [
         brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
+    
+{
+  id: 11,
+  brand: "Peugeot",
+  model: "E-5008",
+  type: "SUV",
+  launchYear: 2024,
+
+  priceMin: 48716,
+  priceMax: 58496,
+  priceText: "48.716 - 58.496 €",
+
+  rangeText: "477 - 668 km WLTP",
+  minRangeVal: 477,
+  maxRangeVal: 668,
+
+  batteryText: "73 - 97 kWh",
+  batteryType: "NMC",
+  powerText: "210 - 325 CV",
+
+  trunk: 348,
+  frunkText: "No disponible",
+  seats: 7,
+  acceleration: "Según motorización",
+  dimensions: "4,79 × 1,90 × 1,69 m",
+  charging: "20-80% en unos 30 min",
+
+  description:
+    "SUV familiar eléctrico de siete plazas con tres " +
+    "motorizaciones documentadas: Electric 210, " +
+    "Dual Motor 325 y Long Range 230. " +
+    "Destaca por su habitabilidad, el Peugeot Panoramic " +
+    "i-Cockpit y un maletero de hasta 916 litros " +
+    "con cinco plazas en uso.",
+
+  highlights: [
+    "Siete plazas de serie",
+    "Hasta 668 km WLTP en Long Range",
+    "Hasta 916 litros de maletero con cinco plazas",
+    "Panoramic i-Cockpit",
+    "Versiones de tracción delantera y total",
+    "Baterías de 73 y 97 kWh"
+  ],
+
+  considerations: [
+    "348 litros de maletero con las siete plazas",
+    "El Long Range está pendiente de confirmar en el configurador español",
+    "La autonomía depende de la motorización y del acabado",
+    "Las dimensiones pueden dificultar el aparcamiento urbano",
+    "Los precios publicados no incluyen posibles opciones"
+  ],
+
+  idealFor: [
+    "Familias numerosas",
+    "7 plazas",
+    "Viajes largos",
+    "Equipaje",
+    "Uso diario"
+  ],
+
+  priceInfo: {
+    includesVat: true,
+    includesAid: false,
+    note:
+      "PVP de tarifa de referencia publicados para España, " +
+      "con IVA y sin ayudas públicas, financiación ni " +
+      "descuentos promocionales. El intervalo corresponde " +
+      "a las versiones con precio disponible. " +
+      "Long Range pendiente de confirmar."
+  },
+
+  chargingInfo: {
+    dcMax: "Hasta 160 kW aprox.",
+    acMax: "11 kW",
+    fastChargeText: "20-80% en unos 30 min",
+    connector: "CCS2",
+    v2l: false
+  },
+
+  trims: [
     {
-        id:11, brand:"Peugeot", model:"E-5008", type:"SUV", launchYear:2024,
-        priceMin:49100, priceMax:60000, priceText:"≈49.100 - 60.000 €",
-        rangeText:"477 - 504 km", minRangeVal:477, maxRangeVal:504,
-        batteryText:"73 kWh", batteryType:"NMC", powerText:"213 - 325 CV",
-        trunk:348, frunkText: "No disponible", seats:7, acceleration:"según versión", dimensions:"4,79 × 1,90 × 1,69 m",
-        charging:"20-80% en unos 30 min",
-        description:"Gran SUV eléctrico disponible con siete plazas, pensado para familias que necesitan más espacio sin renunciar a una autonomía WLTP de alrededor de 500 km.",
-        highlights:["7 plazas","Hasta 504 km WLTP","916 l en configuración de 5 plazas","Preacondicionamiento de batería"],
-        considerations:["348 l con las 7 plazas en uso","Precio claramente superior a SUV compactos","Gran tamaño exterior"],
-        idealFor:["Familias numerosas","7 plazas","Viajes","Equipaje"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precio de acceso de referencia sin ayudas públicas; gama pendiente de revisión completa."},
-        chargingInfo:{dcMax:"hasta ~160 kW",acMax:"11 kW",fastChargeText:"20-80% en unos 30 min",connector:"CCS2",v2l:false},
-        trims:[
-            {name:"Eléctrico 210/213 CV",price:"≈49.100 €",priceValue:49100,battery:"73 kWh",batteryType:"NMC",power:"157 kW (213 CV)",range:"hasta 504 km WLTP",rangeValue:504,accel:"pendiente revisión"},
-            {name:"Dual Motor",price:"≈60.000 €",priceValue:60000,battery:"73 kWh",batteryType:"NMC",power:"239 kW (325 CV)",range:"hasta 477 km WLTP",rangeValue:477,accel:"pendiente revisión"}
-        ],
-        colors:[{name:"Azul Obsession",hex:"#486c7b"},{name:"Azul Ingaro",hex:"#31465a"},{name:"Negro Perla Nera",hex:"#111316"},{name:"Gris Titanium",hex:"#6d7275"},{name:"Blanco Okenite",hex:"#f1f1ed",border:"#cbd5e1"}],
-        images:["img/cars/peugeot-e5008/01.webp","img/cars/peugeot-e5008/02.webp","img/cars/peugeot-e5008/03.webp"],
-        videos:[{title:"Peugeot E-5008",url:"https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",thumb:"img/cars/peugeot-e5008/01.webp"}],
-        brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Peugeot forma parte de Stellantis."},
-        brandUrl:"https://www.peugeot.es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
+      name: "Allure Electric 210",
+      price: "48.716 €",
+      priceValue: 48716,
+      battery: "73 kWh",
+      batteryType: "NMC",
+      power: "157 kW (210 CV)",
+      range: "Hasta 504 km WLTP",
+      rangeValue: 504,
+      accel: "Pendiente de confirmar"
     },
+    {
+      name: "GT Electric 210",
+      price: "53.316 €",
+      priceValue: 53316,
+      battery: "73 kWh",
+      batteryType: "NMC",
+      power: "157 kW (210 CV)",
+      range: "Hasta 504 km WLTP",
+      rangeValue: 504,
+      accel: "Pendiente de confirmar"
+    },
+    {
+      name: "GT Dual Motor 325",
+      price: "55.316 €",
+      priceValue: 55316,
+      battery: "73 kWh",
+      batteryType: "NMC",
+      power: "239 kW (325 CV)",
+      range: "Hasta 477 km WLTP",
+      rangeValue: 477,
+      accel: "Pendiente de confirmar"
+    },
+    {
+      name: "GT Exclusive Electric 210",
+      price: "56.496 €",
+      priceValue: 56496,
+      battery: "73 kWh",
+      batteryType: "NMC",
+      power: "157 kW (210 CV)",
+      range: "Hasta 504 km WLTP",
+      rangeValue: 504,
+      accel: "Pendiente de confirmar"
+    },
+    {
+      name: "GT Exclusive Dual Motor 325",
+      price: "58.496 €",
+      priceValue: 58496,
+      battery: "73 kWh",
+      batteryType: "NMC",
+      power: "239 kW (325 CV)",
+      range: "Hasta 477 km WLTP",
+      rangeValue: 477,
+      accel: "Pendiente de confirmar"
+    },
+    {
+      name: "Electric 230 Long Range",
+      status: "Disponibilidad por confirmar",
+      price: "Precio por confirmar",
+      priceValue: null,
+      battery: "97 kWh",
+      batteryType: "NMC",
+      power: "170 kW (230 CV)",
+      range: "Hasta 668 km WLTP",
+      rangeValue: 668,
+      accel: "Pendiente de confirmar"
+    }
+  ],
+
+  colors: [
+    {
+      name: "Azul Obsession",
+      hex: "#486C7B"
+    },
+    {
+      name: "Azul Ingaro",
+      hex: "#31465A"
+    },
+    {
+      name: "Negro Perla Nera",
+      hex: "#111316"
+    },
+    {
+      name: "Gris Titanium",
+      hex: "#6D7275"
+    },
+    {
+      name: "Blanco Okenite",
+      hex: "#F1F1ED",
+      border: "#CBD5E1"
+    }
+  ],
+
+  images: [
+    "img/cars/peugeot-e5008/01.webp",
+    "img/cars/peugeot-e5008/02.webp",
+    "img/cars/peugeot-e5008/03.webp"
+  ],
+
+  videos: [
+    {
+      title: "Peugeot E-5008: pruebas y análisis",
+      url: "https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",
+      thumb: "img/cars/peugeot-e5008/01.webp"
+    }
+  ],
+
+  brandInfo: {
+    logo: "",
+    group: "Stellantis",
+    relation: "Marca del grupo",
+    note: "Peugeot forma parte de Stellantis."
+  },
+
+  brandUrl: "https://www.peugeot.es",
+
+  dataStatus: {
+    status: "Revisión parcial",
+    checkedAt: "08/10/2026"
+  }
+},
+,
 
 {
     id: 12,
