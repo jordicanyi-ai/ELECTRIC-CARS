@@ -903,9 +903,9 @@ images: [
   type: "SUV",
   launchYear: 2023,
 
-  priceMin: 35800,
-  priceMax: 47961,
-  priceText: "Desde 35.800 €",
+  priceMin: 35413,
+priceMax: 51627,
+priceText: "35.413 - 51.627 €",
 
   rangeText: "337 - 475 km WLTP",
   minRangeVal: 337,
@@ -969,41 +969,140 @@ images: [
     v2l: false
   },
 
-  trims: [
-    {
-      name: "P5 Eléctrico",
-      price: "Desde 35.800 €",
-      priceValue: 35800,
-      battery: "51 kWh",
-      batteryType: "LFP",
-      power: "200 kW (272 CV)",
-      range: "337 km WLTP",
-      rangeValue: 337,
-      accel: "5,7 s"
-    },
-    {
-      name: "P5 Long Range Eléctrico",
-      price: "Desde 41.790 €",
-      priceValue: 41790,
-      battery: "69 kWh",
-      batteryType: "NMC",
-      power: "200 kW (272 CV)",
-      range: "475 km WLTP",
-      rangeValue: 475,
-      accel: "5,3 s"
-    },
-    {
-      name: "P8 AWD Eléctrico",
-      price: "Desde 47.961 €",
-      priceValue: 47961,
-      battery: "69 kWh",
-      batteryType: "NMC",
-      power: "315 kW (428 CV)",
-      range: "450 km WLTP",
-      rangeValue: 450,
-      accel: "3,6 s"
-    }
-  ],
+ trims: [
+  {
+    name: "P5 Essential",
+    price: "35.413 €",
+    priceValue: 35413,
+    battery: "51 kWh",
+    batteryType: "LFP",
+    power: "272 CV",
+    range: "335 km WLTP",
+    rangeValue: 335,
+    accel: "5,7 s"
+  },
+  {
+    name: "P5 Core",
+    price: "36.562 €",
+    priceValue: 36562,
+    battery: "51 kWh",
+    batteryType: "LFP",
+    power: "272 CV",
+    range: "337 km WLTP",
+    rangeValue: 337,
+    accel: "5,7 s"
+  },
+  {
+    name: "P5 Plus",
+    price: "39.466 €",
+    priceValue: 39466,
+    battery: "51 kWh",
+    batteryType: "LFP",
+    power: "272 CV",
+    range: "337 km WLTP",
+    rangeValue: 337,
+    accel: "5,7 s"
+  },
+  {
+    name: "P5 Plus Black Edition",
+    price: "40.918 €",
+    priceValue: 40918,
+    battery: "51 kWh",
+    batteryType: "LFP",
+    power: "272 CV",
+    range: "337 km WLTP",
+    rangeValue: 337,
+    accel: "5,7 s"
+  },
+  {
+    name: "P5 Long Range Core",
+    price: "41.402 €",
+    priceValue: 41402,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "474 km WLTP",
+    rangeValue: 474,
+    accel: "5,3 s"
+  },
+  {
+    name: "P5 Long Range Plus",
+    price: "44.306 €",
+    priceValue: 44306,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "475 km WLTP",
+    rangeValue: 475,
+    accel: "5,3 s"
+  },
+  {
+    name: "P5 Long Range Plus Black Edition",
+    price: "45.940 €",
+    priceValue: 45940,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "475 km WLTP",
+    rangeValue: 475,
+    accel: "5,3 s"
+  },
+  {
+    name: "P8 AWD Plus",
+    price: "47.573 €",
+    priceValue: 47573,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "428 CV",
+    range: "450 km WLTP",
+    rangeValue: 450,
+    accel: "3,6 s"
+  },
+  {
+    name: "P5 Long Range Ultra",
+    price: "48.299 €",
+    priceValue: 48299,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "475 km WLTP",
+    rangeValue: 475,
+    accel: "5,3 s"
+  },
+  {
+    name: "P5 Long Range Ultra Black Edition",
+    price: "48.965 €",
+    priceValue: 48965,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "474 km WLTP",
+    rangeValue: 474,
+    accel: "5,3 s"
+  },
+  {
+    name: "P8 AWD Ultra",
+    price: "PVP pendiente de confirmar",
+    priceValue: null,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "428 CV",
+    range: "450 km WLTP",
+    rangeValue: 450,
+    accel: "3,6 s"
+  },
+  {
+    name: "P8 AWD Ultra Black Edition",
+    price: "51.627 €",
+    priceValue: 51627,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "428 CV",
+    range: "449 km WLTP",
+    rangeValue: 449,
+    accel: "3,6 s"
+  }
+],
 
   colors: [
     { name: "Cloud Blue", hex: "#A9C6D0" },
