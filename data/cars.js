@@ -1082,8 +1082,8 @@ priceText: "35.413 - 51.627 €",
   },
   {
     name: "P8 AWD Ultra",
-    price: "PVP pendiente de confirmar",
-    priceValue: null,
+    price: "52.014 €",
+    priceValue: 52014,
     battery: "69 kWh",
     batteryType: "NMC",
     power: "428 CV",
@@ -1184,6 +1184,32 @@ trims: [
   { name: "P8 AWD Plus", price: 47573, battery: "69 kWh", power: "428 CV", range: 450 },
   { name: "P8 AWD Ultra", price: null, battery: "69 kWh", power: "428 CV", range: 450 },
   { name: "P8 AWD Ultra Black Edition", price: 51627, battery: "69 kWh", power: "428 CV", range: 449 }
+    
+{
+  name: "P5 Long Range Cross Country Ultra",
+  price: "51.439 €",
+  priceValue: 51439,
+  battery: "69 kWh",
+  batteryType: "NMC",
+  power: "272 CV",
+  range: "Pendiente de confirmar",
+  rangeValue: null,
+  accel: "Pendiente de confirmar"
+},
+
+{
+  name: "P8 AWD Cross Country Ultra",
+  price: "53.043 €",
+  priceValue: 53043,
+  battery: "69 kWh",
+  batteryType: "NMC",
+  power: "428 CV",
+  range: "Pendiente de confirmar",
+  rangeValue: null,
+  accel: "Pendiente de confirmar"
+}
+
+
 ],
 
         colors:[{name:"Cloud Blue",hex:"#a9c2cf"},{name:"Vapour Grey",hex:"#a8aaa7"},{name:"Onyx Black",hex:"#16191c"},{name:"Crystal White",hex:"#f2f2ef",border:"#cbd5e1"}],
