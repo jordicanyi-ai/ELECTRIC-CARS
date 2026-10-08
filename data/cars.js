@@ -1416,7 +1416,7 @@ colors: [
   ],
 
   brandInfo: {
-    logo: "",
+    logo: "img/brands/peugeot.png",
     group: "Stellantis",
     relation: "Marca del grupo",
     note: "Peugeot forma parte de Stellantis."
