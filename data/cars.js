@@ -28,7 +28,6 @@ const carsData = [
          dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
-    
             {
         id:2,
         brand:"Citroën",
@@ -213,8 +212,6 @@ const carsData = [
             checkedAt:"07/10/2026"
         }
     },
-
-   
 
         {
         id:3,
@@ -460,9 +457,6 @@ const carsData = [
     },
 
     {
-        
-
-    
 
     id: 4,
     brand: "Hyundai",
@@ -659,7 +653,7 @@ const carsData = [
         "img/cars/hyundai-inster/inster_06.webp",
         "img/cars/hyundai-inster/inster_07.webp",
         "img/cars/hyundai-inster/inster_08.webp",
-      
+
     ],
 
     videos: [
@@ -679,10 +673,9 @@ const carsData = [
 
     brandUrl: "https://www.hyundai.com/es/es/modelos/inster.html",
 
-    dataStatus:{ status:"Revisado", checkedAt:"08/10/2026" 
+    dataStatus:{ status:"Revisado", checkedAt:"08/10/2026"
     }
 },
-
 
     {
         id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2025,
@@ -702,7 +695,7 @@ const carsData = [
             {name:"Boost MY26  5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
             {name:"Comfort MY26  5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
         ],
-        
+
 colors: [
   { name: "Lime Green", hex: "#B2BD49" },
   { name: "Ice Blue", hex: "#9DB7D3" },
@@ -710,7 +703,6 @@ colors: [
   { name: "Obsidian Black / Polar Night Black", hex: "#20242B" }
 ],
 
-        
 images: [
   "img/cars/byd-dolphin-surf/dolphin-surf_01.webp",
   "img/cars/byd-dolphin-surf/dolphin-surf_02.webp",
@@ -727,10 +719,9 @@ images: [
         brandUrl:"https://www.byd.com/es-es",  dataStatus:{
             status:"Revisado",
             checkedAt:"07/10/2026"}
-        
+
     },
 
-    
 {
     id: 6,
     brand: "Kia",
@@ -768,14 +759,12 @@ images: [
         "Garantía Kia de 7 años o 150.000 km"
     ],
 
-    
 considerations: [
     "La carga rápida es menos potente que en algunos rivales con arquitectura de 800 V",
     "La batería Long Range incrementa el peso y el precio",
     "La autonomía varía según acabado, llantas y equipamiento",
     "El acabado GT-Line tiene un precio considerablemente superior al Air"
 ],
-
 
     idealFor: [
         "Familias",
@@ -857,7 +846,6 @@ considerations: [
         }
     ],
 
-   
 colors: [
     { name: "Aventurine Green", hex: "#687B69" },
     { name: "Terracotta", hex: "#B66E53" },
@@ -874,8 +862,6 @@ colorAvailability: {
     note: "La disponibilidad de colores depende del acabado. Ivory Silver Matte es exclusivo del GT-Line."
 },
 
-
-    
 images: [
     "img/cars/kia-ev3/kia-ev3_01.webp",
     "img/cars/kia-ev3/kia-ev3_02.webp",
@@ -886,7 +872,6 @@ images: [
     "img/cars/kia-ev3/kia-ev3_07.webp",
     "img/cars/kia-ev3/kia-ev3_08.webp"
 ],
-
 
     videos: [
         {
@@ -910,13 +895,6 @@ images: [
     }
 },
 
-
-
-
-
-
-
-    
     {
         id:7, brand:"Škoda", model:"Elroq", type:"SUV", launchYear:2025,
         priceMin:34500, priceMax:52000, priceText:"≈34.500 - 52.000 €",
@@ -1036,7 +1014,7 @@ images: [
         brandInfo:{logo:"",group:"Stellantis",relation:"Marca del grupo",note:"Peugeot forma parte de Stellantis."},
         brandUrl:"https://www.peugeot.es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
-    
+
 {
     id: 12,
     brand: "Citroën",
@@ -1044,11 +1022,9 @@ images: [
     type: "Utilitario / Compacto",
     launchYear: 2026,
 
-    
     priceMin: 23950,
     priceMax: 23950,
     priceText: "23.950 €",
-
 
     rangeText: "hasta 323 km",
     minRangeVal: 323,
@@ -1089,13 +1065,11 @@ images: [
         "Escapadas"
     ],
 
-    
 priceInfo: {
     includesVat: true,
     includesAid: false,
     note: "Precio al contado mostrado en el configurador oficial de Citroën, con IVA. Puede incluir descuentos comerciales. Sin ayudas públicas identificadas en la configuración."
 },
-
 
     chargingInfo: {
         dcMax: "100 kW",
@@ -1119,7 +1093,6 @@ priceInfo: {
         }
     ],
 
-    
 colors: [
     { name: "Negro Perla Nera", hex: "#151719" },
     { name: "Azul Brillante", hex: "#145b9a" },
@@ -1127,7 +1100,6 @@ colors: [
     { name: "Roman Green", hex: "#53634e" },
     { name: "Blanco Polar", hex: "#f4f4f1", border: "#cbd5e1" }
 ],
-
 
     images: [
         "img/cars/citroen-ec3-outdoor/c3-outdoor_01.webp",
@@ -1157,7 +1129,6 @@ colors: [
 
     brandUrl: "https://www.citroen.es",
 
-    
 dataStatus: {
     status: "Revisado",
     checkedAt: "07/10/2026"

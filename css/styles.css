@@ -1,0 +1,84 @@
+@media (max-width: 639px) {
+    #quick-mobile .quick-filter i {
+        display: none;
+    }
+}
+        html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 639px) {
+
+    body > header,
+    body > section,
+    body > main,
+    body > footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #hero-search {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .quick-filter-active {
+            background: #0f172a !important;
+            color: white !important;
+            border-color: #0f172a !important;
+        }
+
+        .compare-selected {
+            background: #2563eb !important;
+            color: white !important;
+            border-color: #2563eb !important;
+        }
+
+   @media (max-width: 639px) {
+
+    #quick-mobile {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        overflow: visible !important;
+        padding-bottom: 0 !important;
+    }
+
+    #quick-mobile .quick-filter {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 10px 8px !important;
+        white-space: nowrap !important;
+    }
+
+    #quick-mobile .quick-filter i {
+        display: none !important;
+    }
+
+    #quick-mobile .quick-filter span {
+        font-size: 11px !important;
+    }
+}
+
+        /* COMPARADOR */
+        #compare-bar { padding-bottom: env(safe-area-inset-bottom); }
+        .compare-modal-scroll { scrollbar-width: thin; }
+        .compare-sticky-label { position: sticky; left: 0; z-index: 10; background: #f8fafc; }
+        @media (max-width: 639px) { .compare-car-chip { max-width: 135px; } }
