@@ -969,7 +969,8 @@ priceText: "35.412 - 53.043 €",
     v2l: false
   },
 
- trims: [
+
+trims: [
   {
     name: "P5 Essential",
     price: "35.413 €",
@@ -1101,8 +1102,31 @@ priceText: "35.412 - 53.043 €",
     range: "449 km WLTP",
     rangeValue: 449,
     accel: "3,6 s"
+  },
+  {
+    name: "P5 Long Range Cross Country Ultra",
+    price: "51.439 €",
+    priceValue: 51439,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "272 CV",
+    range: "Pendiente de confirmar",
+    rangeValue: null,
+    accel: "Pendiente de confirmar"
+  },
+  {
+    name: "P8 AWD Cross Country Ultra",
+    price: "53.043 €",
+    priceValue: 53043,
+    battery: "69 kWh",
+    batteryType: "NMC",
+    power: "428 CV",
+    range: "Pendiente de confirmar",
+    rangeValue: null,
+    accel: "Pendiente de confirmar"
   }
 ],
+
 
  
 colors: [
@@ -1155,80 +1179,7 @@ colors: [
         brandUrl:"https://www.skoda.es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
     },
 
-    {
-        id:8, brand:"Volvo", model:"EX30", type:"SUV", launchYear:2023,
-        priceMin:35800, priceMax:52000, priceText:"35.800 - ≈52.000 €",
-        rangeText:"337 - 475 km", minRangeVal:337, maxRangeVal:475,
-        batteryText:"51 - 69 kWh", batteryType:"NMC / según versión", powerText:"272 - 428 CV",
-        trunk:318, frunkText: "7 L", seats:5, acceleration:"3,6 - 5,7 s", dimensions:"4,23 × 1,84 × 1,55 m",
-        charging:"10-80% desde 26 min",
-        description:"El SUV más compacto de Volvo combina dimensiones contenidas, mucha potencia y hasta 475 km WLTP en la versión Long Range.",
-        highlights:["Hasta 475 km WLTP","272 CV incluso en acceso","Tamaño compacto","Carga rápida"],
-        considerations:["Maletero contenido para un SUV","Mandos muy centralizados en pantalla","Versiones AWD son muy potentes pero más caras"],
-        idealFor:["Ciudad","Parejas","Uso diario","Viajes"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precio oficial de acceso sin computar ayudas públicas; máximo orientativo pendiente de revisar."},
-        chargingInfo:{dcMax:"150-175 kW según versión",acMax:"11 kW",fastChargeText:"10-80% desde 26 min",connector:"CCS2",v2l:false},
-        
-trims: [
-  { name: "P5 Essential", price: 35413, battery: "51 kWh", power: "272 CV", range: 335 },
-  { name: "P5 Core", price: 36562, battery: "51 kWh", power: "272 CV", range: 337 },
-  { name: "P5 Plus", price: 39466, battery: "51 kWh", power: "272 CV", range: 337 },
-  { name: "P5 Plus Black Edition", price: 40918, battery: "51 kWh", power: "272 CV", range: 337 },
-
-  { name: "P5 Long Range Core", price: 41402, battery: "69 kWh", power: "272 CV", range: 474 },
-  { name: "P5 Long Range Plus", price: 44306, battery: "69 kWh", power: "272 CV", range: 475 },
-  { name: "P5 Long Range Plus Black Edition", price: 45940, battery: "69 kWh", power: "272 CV", range: 475 },
-  { name: "P5 Long Range Ultra", price: 48299, battery: "69 kWh", power: "272 CV", range: 475 },
-  { name: "P5 Long Range Ultra Black Edition", price: 48965, battery: "69 kWh", power: "272 CV", range: 474 },
-
-  { name: "P8 AWD Plus", price: 47573, battery: "69 kWh", power: "428 CV", range: 450 },
-  { name: "P8 AWD Ultra", price: null, battery: "69 kWh", power: "428 CV", range: 450 },
-  { name: "P8 AWD Ultra Black Edition", price: 51627, battery: "69 kWh", power: "428 CV", range: 449 }
     
-{
-  name: "P5 Long Range Cross Country Ultra",
-  price: "51.439 €",
-  priceValue: 51439,
-  battery: "69 kWh",
-  batteryType: "NMC",
-  power: "272 CV",
-  range: "Pendiente de confirmar",
-  rangeValue: null,
-  accel: "Pendiente de confirmar"
-},
-
-{
-  name: "P8 AWD Cross Country Ultra",
-  price: "53.043 €",
-  priceValue: 53043,
-  battery: "69 kWh",
-  batteryType: "NMC",
-  power: "428 CV",
-  range: "Pendiente de confirmar",
-  rangeValue: null,
-  accel: "Pendiente de confirmar"
-}
-
-
-],
-
-        colors:[{name:"Cloud Blue",hex:"#a9c2cf"},{name:"Vapour Grey",hex:"#a8aaa7"},{name:"Onyx Black",hex:"#16191c"},{name:"Crystal White",hex:"#f2f2ef",border:"#cbd5e1"}],
-       
-images: [
-    "img/cars/volvo-ex30/volvo-ex30_01.webp",
-    "img/cars/volvo-ex30/volvo-ex30_02.webp",
-    "img/cars/volvo-ex30/volvo-ex30_03.webp",
-    "img/cars/volvo-ex30/volvo-ex30_04.webp",
-    "img/cars/volvo-ex30/volvo-ex30_05.webp",
-    "img/cars/volvo-ex30/volvo-ex30_06.webp",
-    "img/cars/volvo-ex30/volvo-ex30_07.webp",
-    "img/cars/volvo-ex30/volvo-ex30_08.webp"
-],
-
-        videos:[{title:"Volvo EX30",url:"https://www.youtube.com/results?search_query=Volvo+EX30+prueba",thumb:"img/cars/volvo-ex30/01.webp"}],
-        brandInfo:{logo:"",group:"Geely Holding",relation:"Propiedad mayoritaria",note:"Volvo Cars está controlada por Zhejiang Geely Holding."},
-        brandUrl:"https://www.volvocars.com/es", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
-    },
 
     {
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
