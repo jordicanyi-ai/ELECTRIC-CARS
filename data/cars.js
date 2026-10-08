@@ -1411,7 +1411,7 @@ colors: [
     {
       title: "Peugeot E-5008: pruebas y análisis",
       url: "https://www.youtube.com/results?search_query=Peugeot+E-5008+prueba",
-      thumb: "img/cars/peugeot-e5008/01.webp"
+      thumb: "img/cars/peugeot-e5008/peugeot-e5008_01.webp"
     }
   ],
 
