@@ -873,11 +873,18 @@ colorAvailability: {
 },
 
 
-    images: [
-        "img/cars/kia-ev3/01.webp",
-        "img/cars/kia-ev3/02.webp",
-        "img/cars/kia-ev3/03.webp"
-    ],
+    
+images: [
+    "img/cars/kia-ev3/kia-ev3_01.webp",
+    "img/cars/kia-ev3/kia-ev3_02.webp",
+    "img/cars/kia-ev3/kia-ev3_03.webp",
+    "img/cars/kia-ev3/kia-ev3_04.webp",
+    "img/cars/kia-ev3/kia-ev3_05.webp",
+    "img/cars/kia-ev3/kia-ev3_06.webp",
+    "img/cars/kia-ev3/kia-ev3_07.webp",
+    "img/cars/kia-ev3/kia-ev3_08.webp"
+],
+
 
     videos: [
         {
