@@ -895,23 +895,162 @@ images: [
     }
 },
 
+    
+{
+  id: 7,
+  brand: "Volvo",
+  model: "EX30",
+  type: "SUV",
+  launchYear: 2023,
+
+  priceMin: 35800,
+  priceMax: 47961,
+  priceText: "Desde 35.800 €",
+
+  rangeText: "337 - 475 km WLTP",
+  minRangeVal: 337,
+  maxRangeVal: 475,
+
+  batteryText: "51 - 69 kWh",
+  batteryType: "LFP / NMC",
+  powerText: "272 - 428 CV",
+
+  trunk: 318,
+  frunkText: "7 L",
+  seats: 5,
+  acceleration: "3,6 - 5,7 s",
+
+  dimensions: "4,23 × 1,84 × 1,55 m",
+  charging: "10-80% en 26-27 min",
+
+  description:
+    "SUV eléctrico compacto de diseño escandinavo, con " +
+    "tracción trasera o total, prestaciones destacadas " +
+    "y una versión Long Range especialmente interesante " +
+    "para combinar ciudad y viajes.",
+
+  highlights: [
+    "Hasta 475 km de autonomía WLTP",
+    "Hasta 428 CV y 0-100 km/h en 3,6 s",
+    "Carga rápida del 10 al 80% en 26-27 minutos",
+    "Diseño compacto y equipamiento tecnológico"
+  ],
+
+  considerations: [
+    "El maletero de 318 litros es menor que el de algunos rivales",
+    "La mayoría de funciones se gestionan desde la pantalla central",
+    "La versión AWD tiene menor autonomía que la Long Range RWD",
+    "El equipamiento y la autonomía varían según la configuración"
+  ],
+
+  idealFor: [
+    "Ciudad",
+    "Parejas",
+    "Familias pequeñas",
+    "Viajes",
+    "SUV compacto"
+  ],
+
+  priceInfo: {
+    includesVat: true,
+    includesAid: false,
+    note:
+      "Precios de partida publicados por Volvo España " +
+      "para cada motorización. No representan todos los " +
+      "acabados ni opciones. Sin ayudas públicas ni " +
+      "ofertas condicionadas a financiación."
+  },
+
+  chargingInfo: {
+    dcMax: "Hasta 175 kW",
+    acMax: "11 kW",
+    fastChargeText: "10-80% en 26-27 min",
+    connector: "CCS2",
+    v2l: false
+  },
+
+  trims: [
     {
-        id:7, brand:"Škoda", model:"Elroq", type:"SUV", launchYear:2025,
-        priceMin:34500, priceMax:52000, priceText:"≈34.500 - 52.000 €",
-        rangeText:"≈370 - 574 km", minRangeVal:370, maxRangeVal:574,
-        batteryText:"≈52 - 77 kWh útiles", batteryType:"NMC", powerText:"170 - 340 CV",
-        trunk:470, frunkText: "21 L", seats:5, acceleration:"según versión", dimensions:"4,49 × 1,88 × 1,63 m",
-        charging:"10-80% aprox. 24-28 min",
-        description:"SUV compacto eléctrico de Škoda con enfoque familiar, buen maletero y una gama de baterías que permite priorizar precio o autonomía.",
-        highlights:["Hasta 574 km WLTP","470 litros de maletero","Habitabilidad familiar","Gama amplia"],
-        considerations:["Precios sin ayudas pendientes de revisión detallada","Autonomía cambia según batería y llanta","Versiones RS elevan mucho potencia y precio"],
-        idealFor:["Familias","Viajes","Uso diario","SUV compacto"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precios provisionales sin ayudas; la web oficial destaca actualmente ofertas con financiación/Auto+."},
-        chargingInfo:{dcMax:"hasta ~175 kW",acMax:"11 kW",fastChargeText:"10-80% aprox. 24-28 min",connector:"CCS2",v2l:false},
-        trims:[
-            {name:"Elroq 50",price:"≈34.500 €",priceValue:34500,battery:"≈52 kWh útiles",batteryType:"NMC",power:"125 kW (170 CV)",range:"≈370 km WLTP",rangeValue:370,accel:"≈9 s"},
-            {name:"Elroq 85",price:"≈41.500 €",priceValue:41500,battery:"≈77 kWh útiles",batteryType:"NMC",power:"210 kW (286 CV)",range:"hasta 574 km WLTP",rangeValue:574,accel:"≈6,6 s"}
-        ],
+      name: "P5 Eléctrico",
+      price: "Desde 35.800 €",
+      priceValue: 35800,
+      battery: "51 kWh",
+      batteryType: "LFP",
+      power: "200 kW (272 CV)",
+      range: "337 km WLTP",
+      rangeValue: 337,
+      accel: "5,7 s"
+    },
+    {
+      name: "P5 Long Range Eléctrico",
+      price: "Desde 41.790 €",
+      priceValue: 41790,
+      battery: "69 kWh",
+      batteryType: "NMC",
+      power: "200 kW (272 CV)",
+      range: "475 km WLTP",
+      rangeValue: 475,
+      accel: "5,3 s"
+    },
+    {
+      name: "P8 AWD Eléctrico",
+      price: "Desde 47.961 €",
+      priceValue: 47961,
+      battery: "69 kWh",
+      batteryType: "NMC",
+      power: "315 kW (428 CV)",
+      range: "450 km WLTP",
+      rangeValue: 450,
+      accel: "3,6 s"
+    }
+  ],
+
+  colors: [
+    { name: "Cloud Blue", hex: "#A9C6D0" },
+    {
+      name: "Crystal White",
+      hex: "#F2F2EF",
+      border: "#CBD5E1"
+    },
+    { name: "Onyx Black", hex: "#191B1E" },
+    { name: "Denim Blue", hex: "#394C65" },
+    { name: "Vapour Grey", hex: "#A5A8A5" },
+    { name: "Sand Dune", hex: "#C9BCA5" }
+  ],
+
+  images: [
+    "img/cars/volvo-ex30/volvo-ex30_01.webp",
+    "img/cars/volvo-ex30/volvo-ex30_02.webp",
+    "img/cars/volvo-ex30/volvo-ex30_03.webp",
+    "img/cars/volvo-ex30/volvo-ex30_04.webp",
+    "img/cars/volvo-ex30/volvo-ex30_05.webp",
+    "img/cars/volvo-ex30/volvo-ex30_06.webp",
+    "img/cars/volvo-ex30/volvo-ex30_07.webp",
+    "img/cars/volvo-ex30/volvo-ex30_08.webp"
+  ],
+
+  videos: [
+    {
+      title: "Volvo EX30 - Pruebas y opiniones",
+      url: "https://www.youtube.com/results?search_query=Volvo+EX30+prueba",
+      thumb: "img/cars/volvo-ex30/volvo-ex30_01.webp"
+    }
+  ],
+
+  brandInfo: {
+    logo: "img/brands/volvo.png",
+    group: "Geely Holding",
+    relation: "Marca del grupo",
+    note: "Volvo Cars pertenece al grupo Geely Holding."
+  },
+
+  brandUrl: "https://www.volvocars.com/es/",
+  dataStatus: {
+    status: "Revisado",
+    checkedAt: "08/10/2026"
+  }
+},
+
         colors:[{name:"Verde",hex:"#7d9a78"},{name:"Gris",hex:"#737a80"},{name:"Azul",hex:"#395a70"},{name:"Blanco",hex:"#f3f4f4",border:"#cbd5e1"}],
         images:["img/cars/skoda-elroq/01.webp","img/cars/skoda-elroq/02.webp","img/cars/skoda-elroq/03.webp"],
         videos:[{title:"Škoda Elroq",url:"https://www.youtube.com/results?search_query=Skoda+Elroq+prueba",thumb:"img/cars/skoda-elroq/01.webp"}],
