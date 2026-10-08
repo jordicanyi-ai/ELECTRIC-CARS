@@ -890,7 +890,7 @@ images: [
         {
             title: "Kia EV3: pruebas y análisis",
             url: "https://www.youtube.com/results?search_query=Kia+EV3+prueba",
-            thumb: "img/cars/kia-ev3/01.webp"
+            thumb: "img/cars/kia-ev3/kia-ev3_01.webp"
         }
     ],
 
