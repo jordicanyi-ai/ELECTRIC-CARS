@@ -855,42 +855,23 @@ images: [
         }
     ],
 
-    colors: [
-        {
-            name: "Clear White",
-            hex: "#F2F2EF",
-            border: "#CBD5E1"
-        },
-        {
-            name: "Snow White Pearl",
-            hex: "#E9E9E4",
-            border: "#CBD5E1"
-        },
-        {
-            name: "Aurora Black Pearl",
-            hex: "#17191C"
-        },
-        {
-            name: "Shale Grey",
-            hex: "#777D7D"
-        },
-        {
-            name: "Ivory Silver",
-            hex: "#B9B9B0"
-        },
-        {
-            name: "Frost Blue",
-            hex: "#8CA7B0"
-        },
-        {
-            name: "Aventurine Green",
-            hex: "#687B69"
-        },
-        {
-            name: "Terracotta",
-            hex: "#B66E53"
-        }
-    ],
+   
+colors: [
+    { name: "Aventurine Green", hex: "#687B69" },
+    { name: "Terracotta", hex: "#B66E53" },
+    { name: "Frost Blue", hex: "#8CA7B0" },
+    { name: "Shale Grey", hex: "#777D7D" },
+    { name: "Ivory Silver", hex: "#B9B9B0" },
+    { name: "Ivory Silver Matte", hex: "#A9AAA3" },
+    { name: "Aurora Black Pearl", hex: "#17191C" },
+    { name: "Clear White", hex: "#F2F2EF", border: "#CBD5E1" },
+    { name: "Snow White Pearl", hex: "#E9E9E4", border: "#CBD5E1" }
+],
+
+colorAvailability: {
+    note: "La disponibilidad de colores depende del acabado. Ivory Silver Matte es exclusivo del GT-Line."
+},
+
 
     images: [
         "img/cars/kia-ev3/01.webp",
