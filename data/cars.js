@@ -1071,10 +1071,24 @@ images: [
         idealFor:["Ciudad","Parejas","Uso diario","Viajes"],
         priceInfo:{includesVat:true,includesAid:false,note:"Precio oficial de acceso sin computar ayudas públicas; máximo orientativo pendiente de revisar."},
         chargingInfo:{dcMax:"150-175 kW según versión",acMax:"11 kW",fastChargeText:"10-80% desde 26 min",connector:"CCS2",v2l:false},
-        trims:[
-            {name:"P5 Eléctrico",price:"35.800 €",priceValue:35800,battery:"51 kWh nominal",batteryType:"según versión",power:"200 kW (272 CV)",range:"337 km WLTP",rangeValue:337,accel:"5,7 s"},
-            {name:"P5 Long Range",price:"41.790 €",priceValue:41790,battery:"69 kWh nominal",batteryType:"NMC",power:"200 kW (272 CV)",range:"475 km WLTP",rangeValue:475,accel:"5,3 s"}
-        ],
+        
+trims: [
+  { name: "P5 Essential", price: 35413, battery: "51 kWh", power: "272 CV", range: 335 },
+  { name: "P5 Core", price: 36562, battery: "51 kWh", power: "272 CV", range: 337 },
+  { name: "P5 Plus", price: 39466, battery: "51 kWh", power: "272 CV", range: 337 },
+  { name: "P5 Plus Black Edition", price: 40918, battery: "51 kWh", power: "272 CV", range: 337 },
+
+  { name: "P5 Long Range Core", price: 41402, battery: "69 kWh", power: "272 CV", range: 474 },
+  { name: "P5 Long Range Plus", price: 44306, battery: "69 kWh", power: "272 CV", range: 475 },
+  { name: "P5 Long Range Plus Black Edition", price: 45940, battery: "69 kWh", power: "272 CV", range: 475 },
+  { name: "P5 Long Range Ultra", price: 48299, battery: "69 kWh", power: "272 CV", range: 475 },
+  { name: "P5 Long Range Ultra Black Edition", price: 48965, battery: "69 kWh", power: "272 CV", range: 474 },
+
+  { name: "P8 AWD Plus", price: 47573, battery: "69 kWh", power: "428 CV", range: 450 },
+  { name: "P8 AWD Ultra", price: null, battery: "69 kWh", power: "428 CV", range: 450 },
+  { name: "P8 AWD Ultra Black Edition", price: 51627, battery: "69 kWh", power: "428 CV", range: 449 }
+],
+
         colors:[{name:"Cloud Blue",hex:"#a9c2cf"},{name:"Vapour Grey",hex:"#a8aaa7"},{name:"Onyx Black",hex:"#16191c"},{name:"Crystal White",hex:"#f2f2ef",border:"#cbd5e1"}],
        
 images: [
