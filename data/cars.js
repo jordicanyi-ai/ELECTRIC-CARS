@@ -768,12 +768,14 @@ images: [
         "Garantía Kia de 7 años o 150.000 km"
     ],
 
-    considerations: [
-        "Tracción delantera en las versiones de esta gama",
-        "La batería Long Range incrementa el peso y el precio",
-        "La autonomía varía según acabado, llantas y equipamiento",
-        "Los precios corresponden a tarifas de referencia de 2026 y pueden variar"
-    ],
+    
+considerations: [
+    "La carga rápida es menos potente que en algunos rivales con arquitectura de 800 V",
+    "La batería Long Range incrementa el peso y el precio",
+    "La autonomía varía según acabado, llantas y equipamiento",
+    "El acabado GT-Line tiene un precio considerablemente superior al Air"
+],
+
 
     idealFor: [
         "Familias",
