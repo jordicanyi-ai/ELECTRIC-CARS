@@ -1180,7 +1180,7 @@ colors: [
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km", minRangeVal:525, maxRangeVal:609,
         batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"Hasta 460 CV",
-        trunk:854, frunkText:"117 L", seats:5, acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
+        trunk:854, frunkText:"117 L", seats:"5-7", acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW",
         description:"El SUV eléctrico familiar por excelencia y uno de los más vendidos del mundo. Destaca por su avanzado software, el Modo Centinela y su tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. Su gran capacidad de carga y la opción de 7 plazas lo convierten en un referente para las familias.",
         highlights:["Hasta 609 km de autonomía en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
