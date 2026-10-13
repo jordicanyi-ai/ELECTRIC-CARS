@@ -1179,7 +1179,7 @@ colors: [
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km WLTP", minRangeVal:525, maxRangeVal:609,
-        batteryText:"≈57 - 75 kWh útiles (estimados)", batteryType:"LFP / NCM según versión", powerText:"Según versión (Performance: 460 CV)",
+        batteryText:"60 - 75 kWh", batteryType:"LFP / NCM según versión", powerText:"Según versión (Performance: 460 CV)",
         trunk:854, frunkText:"114 - 116 L según versión", seats:5, acceleration:"3,5 - 7,2 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW según versión",
         description:"SUV eléctrico familiar con cuatro versiones disponibles: tracción trasera, Premium Gran autonomía con tracción trasera, Premium Gran autonomía con tracción integral y Performance. La versión Premium de tracción integral permite configurar siete plazas opcionales.",
