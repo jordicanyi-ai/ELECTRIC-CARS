@@ -1199,7 +1199,7 @@ colors: [
         videos:[{title:"Tesla Model Y",url:"https://www.youtube.com/results?search_query=Tesla+Model+Y+2026+prueba",thumb:"img/cars/tesla-model-y/modelY_01.webp"}],
         brandInfo:{logo:"",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
         brandUrl:"https://www.tesla.com/es_es/modely",
-        dataStatus:{status:"Revisado con fuentes oficiales; precios sujetos a cambios",checkedAt:"13/10/2026"}
+        dataStatus:{status:"Revisado",checkedAt:"13/10/2026"}
     },
 
     {
