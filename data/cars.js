@@ -1180,7 +1180,7 @@ colors: [
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km", minRangeVal:525, maxRangeVal:609,
         batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"Hasta 460 CV",
-        trunk:854, frunkText:"115 L", seats:5, acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
+        trunk:854, frunkText:"117 L", seats:5, acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW",
         description:"SUV eléctrico familiar con cuatro versiones disponibles: tracción trasera, Premium Gran autonomía con tracción trasera, Premium Gran autonomía con tracción integral y Performance. La versión Premium de tracción integral permite configurar siete plazas opcionales.",
         highlights:["Hasta 609 km de autonomía en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
