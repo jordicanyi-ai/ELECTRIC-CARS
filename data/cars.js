@@ -1182,7 +1182,7 @@ colors: [
         batteryText:"Capacidad no publicada oficialmente", batteryType:"Según versión", powerText:"Según versión (Performance: 460 CV)",
         trunk:854, frunkText:"114 - 116 L según versión", seats:5, acceleration:"3,5 - 7,2 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW según versión",
-        description:"SUV eléctrico familiar con cuatro versiones configurables en España: tracción trasera, Premium Gran autonomía con tracción trasera, Premium Gran autonomía con tracción integral y Performance. La versión Premium de tracción integral permite configurar siete plazas opcionales.",
+        description:"SUV eléctrico familiar con cuatro versiones disponibles: tracción trasera, Premium Gran autonomía con tracción trasera, Premium Gran autonomía con tracción integral y Performance. La versión Premium de tracción integral permite configurar siete plazas opcionales.",
         highlights:["Hasta 609 km WLTP en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
         considerations:["La tercera fila es opcional y solo está disponible en determinadas versiones","Las autonomías dependen de las llantas y la configuración","Tesla modifica precios y disponibilidad con frecuencia","El precio final puede incluir gastos de destino y documentación"],
         idealFor:["Familias","Viajes largos","Uso diario","Tecnología","7 plazas opcionales"],
