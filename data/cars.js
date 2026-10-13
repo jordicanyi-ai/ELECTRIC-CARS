@@ -1197,7 +1197,7 @@ colors: [
         colors:[{name:"Gris Sigilo",hex:"#555b60"},{name:"Blanco Perla Multicapas",hex:"#f3f3f0",border:"#cbd5e1"},{name:"Negro Diamante",hex:"#171717"},{name:"Azul Costero",hex:"#33546b"},{name:"Quicksilver",hex:"#a6aaac"},{name:"Ultra Red",hex:"#8c1821"}],
         images:["img/cars/tesla-model-y/modelY_01.webp","img/cars/tesla-model-y/modelY_02.webp","img/cars/tesla-model-y/modelY_03.webp","img/cars/tesla-model-y/modelY_04.webp","img/cars/tesla-model-y/modelY_05.webp","img/cars/tesla-model-y/modelY_06.webp","img/cars/tesla-model-y/modelY_07.webp","img/cars/tesla-model-y/modelY_08.webp"],
         videos:[{title:"Tesla Model Y",url:"https://www.youtube.com/results?search_query=Tesla+Model+Y+2026+prueba",thumb:"img/cars/tesla-model-y/modelY_01.webp"}],
-        brandInfo:{logo:"",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
+        brandInfo:{logo:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Teslalogo.png",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
         brandUrl:"https://www.tesla.com/es_es/modely",
         dataStatus:{status:"Revisado",checkedAt:"13/10/2026"}
     },
