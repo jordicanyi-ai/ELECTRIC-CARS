@@ -1177,26 +1177,29 @@ colors: [
 
     {
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
-        priceMin:40990, priceMax:62000, priceText:"40.990 - ≈62.000 €",
-        rangeText:"525 - ≈622 km", minRangeVal:525, maxRangeVal:622,
-        batteryText:"Capacidad no publicada oficialmente", batteryType:"según versión", powerText:"según versión",
-        trunk:854, frunkText: "114 - 116 L según versión", seats:5, acceleration:"desde 3,5 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
-        charging:"Supercarga DC hasta ~250 kW según versión",
-        description:"SUV eléctrico familiar de referencia por eficiencia, red de carga y software. La gama cambia con frecuencia, por lo que conviene revisar versiones y precios periódicamente.",
-        highlights:["525 km WLTP desde la versión base","Gran capacidad de carga","Red Supercharger","Software y planificación de ruta"],
-        considerations:["Sin cuadro de instrumentos tradicional","Gama y precios cambian con frecuencia","Capacidad de batería no se comunica de forma convencional"],
-        idealFor:["Familias","Viajes largos","Uso diario","Alta kilometrada"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precio de configurador al contado, sin ayudas públicas."},
-        chargingInfo:{dcMax:"hasta ~250 kW",acMax:"11 kW",fastChargeText:"Supercarga rápida",connector:"CCS2",v2l:false},
+        priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
+        rangeText:"525 - 609 km WLTP", minRangeVal:525, maxRangeVal:609,
+        batteryText:"Capacidad no publicada oficialmente", batteryType:"Según versión", powerText:"Según versión (Performance: 460 CV)",
+        trunk:854, frunkText:"114 - 116 L según versión", seats:5, acceleration:"3,5 - 7,2 s según versión", dimensions:"4,79 × 1,92 × 1,62 m",
+        charging:"Supercarga DC hasta 250 kW según versión",
+        description:"SUV eléctrico familiar con cuatro versiones disponibles: tracción trasera, Premium Gran autonomía con tracción trasera, Premium Gran autonomía con tracción integral y Performance. La versión Premium de tracción integral permite configurar siete plazas opcionales.",
+        highlights:["Hasta 609 km WLTP en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
+        considerations:["La tercera fila es opcional y solo está disponible en determinadas versiones","Las autonomías dependen de las llantas y la configuración","Tesla modifica precios y disponibilidad con frecuencia","El precio final puede incluir gastos de destino y documentación"],
+        idealFor:["Familias","Viajes largos","Uso diario","Tecnología","7 plazas opcionales"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Precios base de vehículo publicados en el configurador oficial español, con IVA, sin ayudas públicas ni ahorro estimado de combustible. No incluyen opciones ni gastos adicionales de destino y documentación (980 € mostrados en la configuración consultada)."},
+        chargingInfo:{dcMax:"Hasta 250 kW según versión",acMax:"11 kW",fastChargeText:"Supercarga rápida; tiempo según versión y condiciones",connector:"CCS2",v2l:false},
         trims:[
-            {name:"Model Y",price:"40.990 €",priceValue:40990,battery:"No publicada",batteryType:"según versión",power:"No publicada",range:"525 km WLTP",rangeValue:525,accel:"7,2 s"},
-            {name:"Long Range / versiones superiores",price:"consultar",priceValue:50000,battery:"No publicada",batteryType:"según versión",power:"No publicada",range:"hasta ≈622 km WLTP",rangeValue:622,accel:"según versión"}
+            {name:"Model Y Tracción trasera",price:"40.990 €",priceValue:40990,battery:"No publicada oficialmente",batteryType:"Según versión",power:"No publicada oficialmente",range:"525 km WLTP",rangeValue:525,accel:"7,2 s",seats:5},
+            {name:"Model Y Premium Gran autonomía Tracción trasera",price:"50.990 €",priceValue:50990,battery:"No publicada oficialmente",batteryType:"Según versión",power:"No publicada oficialmente",range:"609 km (estimados por Tesla)",rangeValue:609,accel:"5,6 s",seats:5},
+            {name:"Model Y Premium Gran autonomía Tracción integral",price:"52.990 €",priceValue:52990,battery:"No publicada oficialmente",batteryType:"Según versión",power:"No publicada oficialmente",range:"600 km WLTP (según configuración)",rangeValue:600,accel:"Según configuración",seats:"5; 7 opcionales"},
+            {name:"Model Y Performance Tracción integral",price:"62.990 €",priceValue:62990,battery:"No publicada oficialmente",batteryType:"Según versión",power:"460 CV",range:"580 km WLTP",rangeValue:580,accel:"3,5 s",seats:5}
         ],
-        colors:[{name:"Stealth Grey",hex:"#555b60"},{name:"Pearl White",hex:"#f3f3f0",border:"#cbd5e1"},{name:"Quicksilver",hex:"#a6aaac"},{name:"Ultra Red",hex:"#8c1821"}],
+        colors:[{name:"Gris Sigilo",hex:"#555b60"},{name:"Blanco Perla Multicapas",hex:"#f3f3f0",border:"#cbd5e1"},{name:"Negro Diamante",hex:"#171717"},{name:"Azul Costero",hex:"#33546b"},{name:"Quicksilver",hex:"#a6aaac"},{name:"Ultra Red",hex:"#8c1821"}],
         images:["img/cars/tesla-model-y/01.webp","img/cars/tesla-model-y/02.webp","img/cars/tesla-model-y/03.webp"],
         videos:[{title:"Tesla Model Y",url:"https://www.youtube.com/results?search_query=Tesla+Model+Y+2026+prueba",thumb:"img/cars/tesla-model-y/01.webp"}],
         brandInfo:{logo:"",group:"Tesla, Inc.",relation:"Fabricante",note:"Tesla diseña y comercializa sus vehículos directamente."},
-        brandUrl:"https://www.tesla.com/es_es/modely", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
+        brandUrl:"https://www.tesla.com/es_es/modely",
+        dataStatus:{status:"Revisado con fuentes oficiales; precios sujetos a cambios",checkedAt:"13/10/2026"}
     },
 
     {
