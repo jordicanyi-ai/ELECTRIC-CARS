@@ -1179,7 +1179,7 @@ colors: [
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km", minRangeVal:525, maxRangeVal:609,
-        batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"299 - 534 CV",
+        batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"299 - 514 CV",
         trunk:854, frunkText:"117 L", seats:"5-7", acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW",
         description:"El SUV eléctrico familiar por excelencia y uno de los más vendidos del mundo. Destaca por su avanzado software, el Modo Centinela y su tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. Su gran capacidad de carga y la opción de 7 plazas lo convierten en un referente para las familias.",
@@ -1192,7 +1192,7 @@ colors: [
             {name:"Model Y Estándar (RWD)",price:"40.990 €",priceValue:40990,battery:"60 kWh",batteryType:"LFP",power:"299 CV (220 kW)",range:"525 km WLTP",rangeValue:525,accel:"7,2 s",seats:5},
             {name:"Model Y Gran Autonomía (RWD)",price:"50.990 €",priceValue:50990,battery:"75 kWh",batteryType:"NCM",power:"347 CV",range:"609 km (estimados por Tesla)",rangeValue:609,accel:"5,6 s",seats:5},
             {name:"Model Y Gran Autonomía (AWD)",price:"52.990 €",priceValue:52990,battery:"75 kWh",batteryType:"NCM",power:"514 CV",range:"600 km WLTP (según configuración)",rangeValue:600,accel:"Según configuración",seats:"5; 7 opcionales"},
-            {name:"Model Y Performance (AWD)",price:"62.990 €",priceValue:62990,battery:"75 kWh",batteryType:"NCM",power:"460 - 534 CV",range:"580 km WLTP",rangeValue:580,accel:"3,5 s",seats:5}
+            {name:"Model Y Performance (AWD)",price:"62.990 €",priceValue:62990,battery:"75 kWh",batteryType:"NCM",power:"460 CV",range:"580 km WLTP",rangeValue:580,accel:"3,5 s",seats:5}
         ],
         colors:[{name:"Gris Sigilo",hex:"#555b60"},{name:"Blanco Perla Multicapas",hex:"#f3f3f0",border:"#cbd5e1"},{name:"Negro Diamante",hex:"#171717"},{name:"Azul Costero",hex:"#33546b"},{name:"Quicksilver",hex:"#a6aaac"},{name:"Ultra Red",hex:"#8c1821"}],
         images:["img/cars/tesla-model-y/modelY_01.webp","img/cars/tesla-model-y/modelY_02.webp","img/cars/tesla-model-y/modelY_03.webp","img/cars/tesla-model-y/modelY_04.webp","img/cars/tesla-model-y/modelY_05.webp","img/cars/tesla-model-y/modelY_06.webp","img/cars/tesla-model-y/modelY_07.webp","img/cars/tesla-model-y/modelY_08.webp"],
