@@ -1214,6 +1214,7 @@ colors: [
         considerations:["Red comercial más limitada que la de marcas tradicionales","La autonomía WLTP combinada es inferior a las cifras urbanas publicitadas","Precio al contado de Long Range y Performance pendiente de confirmación en España"],
         idealFor:["Familias","Viajes","Tecnología","Carga rápida"],
         priceInfo:{includesVat:true,includesAid:false,note:"Precios oficiales de tarifa usados en la comparativa, con IVA y sin ofertas ni ayudas: Standard Range RWD ≈44.600 €, Long Range RWD ≈47.570 € y AWD Performance ≈53.570 €. Las ofertas/ayudas mostradas por la marca no se descuentan en la ficha."},
+        warranty:{vehicle:"5 años / 120.000 km",battery:"8 años / 160.000 km",capacity:"No especificado en la ficha oficial",source:"https://www.xpeng-auto.es/g6"},
         chargingInfo:{dcMax:"382 - 451 kW",acMax:"11 kW",fastChargeText:"10-80 % en 12 minutos",connector:"CCS2",v2l:true},
         trims:[
             {name:"Standard Range RWD",price:"44.600 €",priceValue:44600,battery:"69 kWh",batteryType:"LFP",power:"252 CV",range:"Hasta 435 km WLTP",rangeValue:435,accel:"6,9 s",seats:5},
