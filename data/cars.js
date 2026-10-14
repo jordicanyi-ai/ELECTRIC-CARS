@@ -5,6 +5,7 @@ const carsData = [
         model: "B03X",
         type: "SUV",
         launchYear: 2026,
+        warranty:{"vehicle":"Hasta 4 años / 120.000 km (según modelo; confirmar B03X)","battery":"Hasta 8 años / 160.000 km (confirmar B03X)","capacity":"Pendiente de confirmar para B03X","source":"https://www.leapmotor.net/es-es/servicios-para-ti","note":"Leapmotor indica coberturas máximas; falta confirmar las condiciones específicas del B03X."},
         priceMin: 22900, priceMax: 27900, priceText: "22.900 - 27.900 €",
         rangeText: "292 - 382 km", minRangeVal: 292, maxRangeVal: 382,
         batteryText: "39,8 - 53 kWh", batteryType: "LFP",
@@ -35,6 +36,7 @@ const carsData = [
         type:"Utilitario / Compacto",
         launchYear:2024,
 
+        warranty:{"vehicle":"2 años (fabricante); hasta 8 años / 160.000 km con We Care*","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.citroen.es/vehiculos-citroen/e-c3.html","note":"*We Care es cobertura adicional condicionada al mantenimiento oficial; no equivale a 8 años de garantía general."},
         priceMin:21350,
         priceMax:28450,
         priceText:"21.350 - 28.450 €",
@@ -220,6 +222,7 @@ const carsData = [
         type:"Utilitario / Compacto",
         launchYear:2024,
 
+        warranty:{"vehicle":"3 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.renault.es/coches-electricos/e-tech-full-electric-plan.html"},
         priceMin:23056,
         priceMax:36585,
         priceText:"23.056 - 36.585 €",
@@ -464,7 +467,8 @@ const carsData = [
     type: "Utilitario / Compacto",
     launchYear: 2025,
 
-    priceMin: 24706,
+    warranty:{"vehicle":"5 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.hyundai.com/es/es/posventa/myHyundaiCare/garantia.html"},
+        priceMin: 24706,
     priceMax: 32416,
     priceText: "24.706 - 32.416 €",
 
@@ -679,6 +683,7 @@ const carsData = [
 
     {
         id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2025,
+        warranty:{"vehicle":"6 años / 150.000 km","battery":"8 años / 250.000 km","capacity":"70 %","source":"https://www.byd.com/es-es/service-maintenance/warranty-policy.html"},
         priceMin:20140, priceMax:26990, priceText:"20.140 - 26.990 €",
         rangeText:"220 - 322 km", minRangeVal:220, maxRangeVal:322,
         batteryText:"30 - 43,2 kWh", batteryType:"LFP Blade", powerText:"88 - 156 CV",
@@ -729,7 +734,8 @@ images: [
     type: "SUV",
     launchYear: 2024,
 
-    priceMin: 37020,
+    warranty:{"vehicle":"7 años / 150.000 km","battery":"8 años / 160.000 km (MY26)","capacity":"70 % (MY26)","source":"https://www.kia.com/es/kia-service/ev-services/mantenimiento-ev-kia/","note":"La ampliación de batería a 8 años / 160.000 km se aplica a modelos nuevos y modelos actuales desde el año-modelo 2026. Versiones anteriores pueden tener otra cobertura."},
+        priceMin: 37020,
     priceMax: 48795,
     priceText: "37.020 - 48.795 €",
 
@@ -903,7 +909,8 @@ images: [
   type: "SUV",
   launchYear: 2023,
 
- priceMin: 35412,
+ warranty:{"vehicle":"3 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.volvocars.com/es/l/servicios/mantenimiento/talleres-oficiales/garantia-piezas-volvo/"},
+        priceMin: 35412,
 priceMax: 53043,
 priceText: "35.412 - 53.043 €",
 
@@ -1177,6 +1184,7 @@ colors: [
 
     {
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
+        warranty:{"vehicle":"4 años / 80.000 km","battery":"8 años / 160.000–192.000 km (según versión)","capacity":"70 %","source":"https://www.tesla.com/es_ES/support/vehicle-warranty","note":"Model Y RWD: 160.000 km; Long Range y Performance: 192.000 km. También cubre la unidad de tracción."},
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km", minRangeVal:525, maxRangeVal:609,
         batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"299 - 514 CV",
@@ -1236,7 +1244,8 @@ colors: [
   type: "SUV",
   launchYear: 2024,
 
-  priceMin: 48716,
+  warranty:{"vehicle":"3 años; hasta 8 años / 160.000 km con Peugeot Care*","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.peugeot.es/gama/peugeot-5008/electrico.html","note":"*Peugeot Care es cobertura adicional condicionada al mantenimiento en red oficial; no es garantía general incondicional."},
+        priceMin: 48716,
   priceMax: 58496,
   priceText: "48.716 - 58.496 €",
 
@@ -1443,7 +1452,8 @@ colors: [
     type: "Utilitario / Compacto",
     launchYear: 2026,
 
-    priceMin: 23950,
+    warranty:{"vehicle":"2 años (fabricante); hasta 8 años / 160.000 km con We Care*","battery":"8 años / 160.000 km","capacity":"70 %","source":"https://www.citroen.es/vehiculos-citroen/e-c3.html","note":"*We Care requiere mantenimiento oficial y cubre componentes concretos."},
+        priceMin: 23950,
     priceMax: 23950,
     priceText: "23.950 €",
 
