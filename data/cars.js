@@ -1220,7 +1220,7 @@ colors: [
             {name:"Long Range RWD",price:"≈47.570 €",priceValue:47570,battery:"81 kWh",batteryType:"LFP",power:"297 CV",range:"Hasta 570 km WLTP",rangeValue:570,accel:"6,7 s",seats:5},
             {name:"AWD Performance",price:"≈53.570 €",priceValue:53570,battery:"81 kWh",batteryType:"LFP",power:"487 CV",range:"Hasta 550 km WLTP",rangeValue:550,accel:"4,1 s",seats:5}
         ],
-        colors:[{name:"Graphite Grey",hex:"#5b6268"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"}],
+        colors:[{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"},{name:"Stellar Purple",hex:"#81758f"},{name:"Graphite Gray",hex:"#555b60"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Black Edition",hex:"#050505"}],
         images:["img/cars/xpeng-g6/xpeng-g6_01.webp","img/cars/xpeng-g6/xpeng-g6_02.webp","img/cars/xpeng-g6/xpeng-g6_03.webp","img/cars/xpeng-g6/xpeng-g6_04.webp","img/cars/xpeng-g6/xpeng-g6_05.webp","img/cars/xpeng-g6/xpeng-g6_06.webp","img/cars/xpeng-g6/xpeng-g6_07.webp","img/cars/xpeng-g6/xpeng-g6_08.webp"],
         videos:[{title:"XPENG G6",url:"https://www.youtube.com/results?search_query=XPENG+G6+2026+prueba",thumb:"img/cars/xpeng-g6/01.webp"}],
         brandInfo:{logo:"",group:"XPeng Inc.",relation:"Fabricante",note:"XPENG es un fabricante independiente chino de vehículos eléctricos."},
