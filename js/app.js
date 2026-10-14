@@ -133,7 +133,13 @@ let currentImageIndexes = {};
                     trunk: car.trunk != null ? `${car.trunk} L` : '—',
                     seats: car.seats != null ? `${car.seats}` : '—',
                     charging: compactCompareCharging(car.chargingInfo?.dcMax || car.charging || '—'),
-                    dimensions: car.dimensions || '—'
+                    dimensions: car.dimensions || '—',
+                warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
+                warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
+                warrantyCapacity: car.warranty?.capacity || 'No especificado',
+                    warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
+                    warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
+                    warrantyCapacity: car.warranty?.capacity || 'No especificado'
                 };
             }
             const trim = car.trims?.[Number(trimIndex)];
@@ -243,7 +249,9 @@ let currentImageIndexes = {};
                 ['Batería', 'battery', 'fa-battery-full'], ['Química', 'batteryType', 'fa-flask'],
                 ['Potencia', 'power', 'fa-bolt'], ['0-100 km/h', 'accel', 'fa-gauge-high'],
                 ['Maletero', 'trunk', 'fa-suitcase'], ['Plazas', 'seats', 'fa-user-group'],
-                ['Carga rápida', 'charging', 'fa-bolt-lightning'], ['Dimensiones', 'dimensions', 'fa-ruler-combined']
+                ['Carga rápida', 'charging', 'fa-bolt-lightning'], ['Dimensiones', 'dimensions', 'fa-ruler-combined'],
+                ['Garantía del vehículo', 'warrantyVehicle', 'fa-shield-halved'], ['Garantía de batería', 'warrantyBattery', 'fa-battery-full'],
+                ['Capacidad garantizada', 'warrantyCapacity', 'fa-percent']
             ];
             const mobileCompare = window.innerWidth < 640;
             const compareLabelWidth = mobileCompare ? 112 : 132;
@@ -1152,6 +1160,16 @@ let currentImageIndexes = {};
 
                         </div>
 
+                    </section>
+
+                    <!-- WARRANTY -->
+                    <section>
+                        <div class="mb-5"><span class="text-blue-600 text-xs font-extrabold uppercase tracking-wider">Cobertura del fabricante</span><h3 class="text-2xl font-black mt-1">Garantía</h3></div>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div class="border border-slate-200 rounded-2xl p-5"><i class="fa-solid fa-shield-halved text-blue-600 mb-3"></i><span class="text-xs text-slate-400 block">Vehículo</span><div class="font-bold mt-1">${car.warranty?.vehicle || 'Pendiente de verificar'}</div></div>
+                            <div class="border border-slate-200 rounded-2xl p-5"><i class="fa-solid fa-battery-full text-blue-600 mb-3"></i><span class="text-xs text-slate-400 block">Batería</span><div class="font-bold mt-1">${car.warranty?.battery || 'Pendiente de verificar'}</div><div class="text-xs text-slate-500 mt-2">Capacidad mínima: ${car.warranty?.capacity || 'No especificada'}</div></div>
+                        </div>
+                        ${car.warranty?.source ? `<a class="text-xs text-blue-600 hover:underline inline-block mt-3" href="${car.warranty.source}" target="_blank" rel="noopener noreferrer">Consultar condiciones oficiales de garantía ↗</a>` : ''}
                     </section>
 
                     <!-- COLORS -->
