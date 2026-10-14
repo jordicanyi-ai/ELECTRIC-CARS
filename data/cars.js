@@ -1443,8 +1443,6 @@ colors: [
     checkedAt: "08/10/2026"
   }
 },
-,
-
 {
     id: 12,
     brand: "Citroën",
