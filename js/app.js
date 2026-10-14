@@ -134,9 +134,6 @@ let currentImageIndexes = {};
                     seats: car.seats != null ? `${car.seats}` : '—',
                     charging: compactCompareCharging(car.chargingInfo?.dcMax || car.charging || '—'),
                     dimensions: car.dimensions || '—',
-                warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
-                warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
-                warrantyCapacity: car.warranty?.capacity || 'No especificado',
                     warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
                     warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
                     warrantyCapacity: car.warranty?.capacity || 'No especificado'
@@ -151,7 +148,10 @@ let currentImageIndexes = {};
                 trunk: car.trunk != null ? `${car.trunk} L` : '—',
                 seats: car.seats != null ? `${car.seats}` : '—',
                 charging: compactCompareCharging(trim.charging || car.chargingInfo?.dcMax || car.charging || '—'),
-                dimensions: car.dimensions || '—'
+                dimensions: car.dimensions || '—',
+                warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
+                warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
+                warrantyCapacity: car.warranty?.capacity || 'No especificado'
             };
         }
 
