@@ -1204,26 +1204,27 @@ colors: [
 
     {
         id:10, brand:"XPENG", model:"G6", type:"SUV", launchYear:2024,
-        priceMin:45193, priceMax:60000, priceText:"45.193 - ≈60.000 €",
-        rangeText:"≈470 - ≈535 km", minRangeVal:470, maxRangeVal:535,
-        batteryText:"68,5 - 80,8 kWh", batteryType:"LFP / NMC según versión", powerText:"según versión",
-        trunk:571, frunkText: "54 L Opción no oficial", seats:5, acceleration:"según versión", dimensions:"4,76 × 1,92 × 1,65 m",
-        charging:"Carga ultrarrápida 800 V",
-        description:"SUV eléctrico tecnológico con arquitectura de alta tensión y carga muy rápida. Destaca especialmente por relación entre espacio, autonomía y velocidad de recarga.",
-        highlights:["Arquitectura 800 V","571 litros de maletero","Carga ultrarrápida","Buen espacio interior"],
-        considerations:["Marca aún poco implantada frente a fabricantes tradicionales","Precios superiores a compactos generalistas","Autonomías urbanas anunciadas no deben confundirse con WLTP combinado"],
+        priceMin:43010, priceMax:49193, priceText:"Desde 43.010 €",
+        rangeText:"470 - 535 km WLTP", minRangeVal:470, maxRangeVal:535,
+        batteryText:"68,5 - 80,8 kWh", batteryType:"LFP", powerText:"252 - 487 CV",
+        trunk:571, frunkText: "No disponible", seats:5, acceleration:"4,1 - 6,9 s", dimensions:"4,76 × 1,92 × 1,65 m",
+        charging:"Carga DC hasta 451 kW (10-80% en 12 min)",
+        description:"SUV coupé eléctrico familiar que destaca por su tecnología, su amplio habitáculo y una de las recargas más rápidas del mercado. Su arquitectura de 800 V permite cargar del 10 al 80 % en 12 minutos, con hasta 535 km de autonomía WLTP combinada. Ofrece asistencia avanzada XPILOT y versiones RWD y AWD.",
+        highlights:["Arquitectura de 800 V","Carga del 10 al 80 % en 12 minutos","571 litros de maletero","Asistencia XPILOT","Hasta 535 km WLTP"],
+        considerations:["Red comercial más limitada que la de marcas tradicionales","La autonomía WLTP combinada es inferior a las cifras urbanas publicitadas","Precio al contado de Long Range y Performance pendiente de confirmación en España"],
         idealFor:["Familias","Viajes","Tecnología","Carga rápida"],
-        priceInfo:{includesVat:true,includesAid:false,note:"Precio del configurador con impuestos/promoción de marca y transporte; sin Auto+ ni CAE."},
-        chargingInfo:{dcMax:"muy alta; según versión",acMax:"11 kW",fastChargeText:"Carga ultrarrápida 800 V",connector:"CCS2",v2l:true},
+        priceInfo:{includesVat:true,includesAid:false,note:"Precio al contado oficial confirmado de RWD Standard Range: 43.010,31 € con IVA, sin financiación ni ayudas Auto+ o CAE. El precio de RWD Long Range (49.193 €) procede de la ficha anterior y está pendiente de reconfirmación; el de AWD Performance, pendiente de confirmar. El precio mínimo de la ficha corresponde solo a la versión Standard."},
+        chargingInfo:{dcMax:"382 - 451 kW",acMax:"11 kW",fastChargeText:"10-80 % en 12 minutos",connector:"CCS2",v2l:true},
         trims:[
-            {name:"RWD 68,5 kWh",price:"45.193 €",priceValue:45193,battery:"68,5 kWh",batteryType:"LFP",power:"pendiente revisión",range:"≈470 km WLTP combinado",rangeValue:470,accel:"pendiente revisión"},
-            {name:"RWD Long Range 80,8 kWh",price:"49.193 €",priceValue:49193,battery:"80,8 kWh",batteryType:"NMC",power:"pendiente revisión",range:"≈535 km WLTP combinado",rangeValue:535,accel:"pendiente revisión"}
+            {name:"RWD Standard Range",price:"43.010 €",priceValue:43010,battery:"68,5 kWh",batteryType:"LFP",power:"252 CV",range:"470 km WLTP",rangeValue:470,accel:"6,9 s",seats:5},
+            {name:"RWD Long Range",price:"Por confirmar",priceValue:null,battery:"80,8 kWh",batteryType:"LFP",power:"292 CV",range:"535 km WLTP",rangeValue:535,accel:"6,7 s",seats:5},
+            {name:"AWD Performance",price:"Por confirmar",priceValue:null,battery:"80,8 kWh",batteryType:"LFP",power:"487 CV",range:"510 km WLTP",rangeValue:510,accel:"4,1 s",seats:5}
         ],
         colors:[{name:"Graphite Grey",hex:"#5b6268"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"}],
-        images:["img/cars/xpeng-g6/01.webp","img/cars/xpeng-g6/02.webp","img/cars/xpeng-g6/03.webp"],
+        images:["img/cars/xpeng-g6/01.webp","img/cars/xpeng-g6/02.webp","img/cars/xpeng-g6/03.webp","https://stwfccmsprodwesteurope01.blob.core.windows.net/xpenges-6808fbd3a23b257b359be9f1-prod/g6launch2025exteriorstellarpurple-1_1757580803929.webp","https://stwfccmsprodwesteurope01.blob.core.windows.net/xpenges-6808fbd3a23b257b359be9f1-prod/f81d0706ac47412d9eb680964a40b834_1761047852897.webp"],
         videos:[{title:"XPENG G6",url:"https://www.youtube.com/results?search_query=XPENG+G6+2026+prueba",thumb:"img/cars/xpeng-g6/01.webp"}],
         brandInfo:{logo:"",group:"XPeng Inc.",relation:"Fabricante",note:"XPENG es un fabricante independiente chino de vehículos eléctricos."},
-        brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{ status:"Revisado", checkedAt:"07/10/2026" }
+        brandUrl:"https://www.xpeng-auto.es/g6", dataStatus:{ status:"Ficha técnica revisada; precios superiores pendientes de confirmación", checkedAt:"14/10/2026" }
     },
 
     
