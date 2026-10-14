@@ -5,6 +5,7 @@ const carsData = [
         model: "B03X",
         type: "SUV",
         launchYear: 2026,
+        warranty:{"vehicle":"Hasta 4 años / 120.000 km","battery":"8 años / 160.000 km","capacity":"70 %"},
         priceMin: 22900, priceMax: 27900, priceText: "22.900 - 27.900 €",
         rangeText: "292 - 382 km", minRangeVal: 292, maxRangeVal: 382,
         batteryText: "39,8 - 53 kWh", batteryType: "LFP",
@@ -34,6 +35,7 @@ const carsData = [
         model:"ë-C3",
         type:"Utilitario / Compacto",
         launchYear:2024,
+        warranty:{"vehicle":"2 años; hasta 8 años / 160.000 km con We Care","battery":"8 años / 160.000 km","capacity":"70 %"},
 
         priceMin:21350,
         priceMax:28450,
@@ -219,6 +221,7 @@ const carsData = [
         model:"5 E-Tech eléctrico",
         type:"Utilitario / Compacto",
         launchYear:2024,
+        warranty:{"vehicle":"3 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %"},
 
         priceMin:23056,
         priceMax:36585,
@@ -463,6 +466,7 @@ const carsData = [
     model: "INSTER",
     type: "Utilitario / Compacto",
     launchYear: 2025,
+        warranty:{"vehicle":"5 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %"},
 
     priceMin: 24706,
     priceMax: 32416,
@@ -679,6 +683,7 @@ const carsData = [
 
     {
         id:5, brand:"BYD", model:"DOLPHIN SURF", type:"Utilitario / Compacto", launchYear:2025,
+        warranty:{"vehicle":"6 años / 150.000 km","battery":"8 años / 250.000 km","capacity":"70 %"},
         priceMin:20140, priceMax:26990, priceText:"20.140 - 26.990 €",
         rangeText:"220 - 322 km", minRangeVal:220, maxRangeVal:322,
         batteryText:"30 - 43,2 kWh", batteryType:"LFP Blade", powerText:"88 - 156 CV",
@@ -728,6 +733,7 @@ images: [
     model: "EV3",
     type: "SUV",
     launchYear: 2024,
+        warranty:{"vehicle":"7 años / 150.000 km","battery":"8 años / 160.000 km","capacity":"70 %"},
 
     priceMin: 37020,
     priceMax: 48795,
@@ -902,6 +908,7 @@ images: [
   model: "EX30",
   type: "SUV",
   launchYear: 2023,
+        warranty:{"vehicle":"3 años / km ilimitados","battery":"8 años / 160.000 km","capacity":"70 %"},
 
  priceMin: 35412,
 priceMax: 53043,
@@ -1177,6 +1184,7 @@ colors: [
 
     {
         id:9, brand:"Tesla", model:"Model Y", type:"SUV", launchYear:2021,
+        warranty:{"vehicle":"4 años / 80.000 km","battery":"8 años / 160.000–192.000 km según versión","capacity":"70 %"},
         priceMin:40990, priceMax:62990, priceText:"40.990 - 62.990 €",
         rangeText:"525 - 609 km", minRangeVal:525, maxRangeVal:609,
         batteryText:"60 - 75 kWh", batteryType:"LFP / NCM", powerText:"299 - 514 CV",
@@ -1235,6 +1243,7 @@ colors: [
   model: "E-5008",
   type: "SUV",
   launchYear: 2024,
+        warranty:{"vehicle":"3 años; hasta 8 años / 160.000 km con Peugeot Care","battery":"8 años / 160.000 km","capacity":"70 %"},
 
   priceMin: 48716,
   priceMax: 58496,
@@ -1442,6 +1451,7 @@ colors: [
     model: "ë-C3 OUTDOOR",
     type: "Utilitario / Compacto",
     launchYear: 2026,
+        warranty:{"vehicle":"2 años; hasta 8 años / 160.000 km con We Care","battery":"8 años / 160.000 km","capacity":"70 %"},
 
     priceMin: 23950,
     priceMax: 23950,
