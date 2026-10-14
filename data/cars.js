@@ -1216,9 +1216,9 @@ colors: [
         priceInfo:{includesVat:true,includesAid:false,note:"Precios oficiales de tarifa usados en la comparativa, con IVA y sin ofertas ni ayudas: Standard Range RWD ≈44.600 €, Long Range RWD ≈47.570 € y AWD Performance ≈53.570 €. Las ofertas/ayudas mostradas por la marca no se descuentan en la ficha."},
         chargingInfo:{dcMax:"382 - 451 kW",acMax:"11 kW",fastChargeText:"10-80 % en 12 minutos",connector:"CCS2",v2l:true},
         trims:[
-            {name:"Standard Range RWD",price:"≈44.600 €",priceValue:44600,battery:"69 kWh",batteryType:"LFP",power:"252 CV",range:"Hasta 435 km WLTP",rangeValue:435,accel:"6,9 s",seats:5},
-            {name:"Long Range RWD",price:"≈47.570 €",priceValue:47570,battery:"81 kWh",batteryType:"LFP",power:"297 CV",range:"Hasta 570 km WLTP",rangeValue:570,accel:"6,7 s",seats:5},
-            {name:"AWD Performance",price:"≈53.570 €",priceValue:53570,battery:"81 kWh",batteryType:"LFP",power:"487 CV",range:"Hasta 550 km WLTP",rangeValue:550,accel:"4,1 s",seats:5}
+            {name:"Standard Range RWD",price:"44.600 €",priceValue:44600,battery:"69 kWh",batteryType:"LFP",power:"252 CV",range:"Hasta 435 km WLTP",rangeValue:435,accel:"6,9 s",seats:5},
+            {name:"Long Range RWD",price:"47.570 €",priceValue:47570,battery:"81 kWh",batteryType:"LFP",power:"297 CV",range:"Hasta 570 km WLTP",rangeValue:570,accel:"6,7 s",seats:5},
+            {name:"AWD Performance",price:"53.570 €",priceValue:53570,battery:"81 kWh",batteryType:"LFP",power:"487 CV",range:"Hasta 550 km WLTP",rangeValue:550,accel:"4,1 s",seats:5}
         ],
         colors:[{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"},{name:"Stellar Purple",hex:"#81758f"},{name:"Graphite Gray",hex:"#555b60"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Black Edition",hex:"#050505"}],
         images:["img/cars/xpeng-g6/xpeng-g6_01.webp","img/cars/xpeng-g6/xpeng-g6_02.webp","img/cars/xpeng-g6/xpeng-g6_03.webp","img/cars/xpeng-g6/xpeng-g6_04.webp","img/cars/xpeng-g6/xpeng-g6_05.webp","img/cars/xpeng-g6/xpeng-g6_06.webp","img/cars/xpeng-g6/xpeng-g6_07.webp","img/cars/xpeng-g6/xpeng-g6_08.webp"],
