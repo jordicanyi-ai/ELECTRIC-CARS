@@ -10,13 +10,13 @@ const carsData = [
         rangeText: "292 - 382 km", minRangeVal: 292, maxRangeVal: 382,
         batteryText: "39,8 - 53 kWh", batteryType: "LFP",
         powerText: "177 - 197 CV", trunk: 510, frunkText: "No disponible", seats: 5, acceleration: "8,6 s",
-        dimensions: "4,32 × 1,81 × 1,62 m", charging: "100 kW (39,8 kWh) / 133 kW (53 kWh) · 30-80% en 16 min",
+        dimensions: "4,32 × 1,81 × 1,62 m", charging: "100 / 133 kW · 30-80% en 16 min",
         description: "SUV eléctrico compacto con dos opciones de batería, buen espacio interior y un posicionamiento de precio contenido.",
         highlights: ["Relación precio/equipamiento","510 litros de maletero","Dos tamaños de batería","Formato SUV compacto"],
         considerations: ["La batería pequeña está más orientada al uso diario","Marca todavía joven en Europa","La versión de mayor autonomía supone un salto de precio"],
         idealFor: ["Uso diario","Familias","Ciudad","Trayectos interurbanos"],
         priceInfo: { includesVat: true, includesAid: false, note: "Precios mostrados con IVA y sin ayudas públicas." },
-        chargingInfo: { dcMax: "100 kW (39,8 kWh) / 133 kW (53 kWh)", acMax: "11 kW", fastChargeText: "30-80% en 16 min", connector: "CCS2", v2l: null },
+        chargingInfo: { dcMax: "100 / 133 kW", acMax: "11 kW", fastChargeText: "30-80% en 16 min", connector: "CCS2", v2l: null },
         trims: [
             { name:"Pro", price:"22.900 €", priceValue:22900, battery:"39,8 kWh", batteryType:"LFP", power:"130 kW (177 CV)", range:"292 km WLTP", rangeValue:292, accel:"8,6 s" },
             { name:"ProMax", price:"27.900 €", priceValue:27900, battery:"53 kWh", batteryType:"LFP", power:"145 kW (197 CV)", range:"382 km WLTP", rangeValue:382, accel:"8,6 s" }
