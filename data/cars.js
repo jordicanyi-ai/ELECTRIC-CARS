@@ -1,5 +1,38 @@
 const carsData = [
     {
+        id:12,
+        brand:"Tesla",
+        model:"Model 3",
+        type:"Berlina",
+        launchYear:2026,
+        warranty:{vehicle:"4 años / 80.000 km",battery:"8 años / 160.000-192.000 km según versión",capacity:"70 %"},
+        priceMin:36990,priceMax:57490,priceText:"36.990 - 57.490 €",
+        rangeText:"572 - 750 km",minRangeVal:572,maxRangeVal:750,
+        batteryText:"Capacidad no publicada oficialmente",batteryType:"Según versión",
+        powerText:"279 - 464 CV",
+        trunk:682,frunkText:"Incluido en el volumen total de 682 L",seats:5,
+        acceleration:"3,1 - 6,2 s",dimensions:"4,72 × 1,85 × 1,44 m",
+        charging:"175 / 250 kW · hasta 286 km recuperados en 15 min",
+        description:"Berlina eléctrica con elevada eficiencia, cuatro versiones y acceso a la red de Supercargadores Tesla. La variante Premium Gran Autonomía de tracción trasera anuncia hasta 750 km WLTP.",
+        highlights:["Hasta 750 km WLTP","Red de Supercargadores","Consumo contenido","682 litros de espacio de carga total"],
+        considerations:["Los 682 L incluyen los espacios delantero y trasero","La capacidad de batería no se publica oficialmente","La tarifa no incluye 980 € de destino y documentación"],
+        idealFor:["Viajes largos","Uso familiar","Autopista","Desplazamientos diarios"],
+        priceInfo:{includesVat:true,includesAid:false,note:"Tarifas oficiales con IVA, sin ayudas ni descuentos. Tesla añade 980 € por destino y documentación; las opciones aumentan el precio."},
+        chargingInfo:{dcMax:"175 / 250 kW",acMax:"11 kW",fastChargeText:"Hasta 286 km de autonomía añadidos en 15 min (según versión); Tesla no publica un tiempo 10-80 % común",connector:"CCS2",v2l:false},
+        trims:[
+            {name:"Tracción trasera",price:"36.990 €",priceValue:36990,battery:"No publicada",batteryType:"No especificada",power:"279 CV",range:"572 km WLTP",rangeValue:572,accel:"6,2 s"},
+            {name:"Premium Gran Autonomía tracción trasera",price:"44.990 €",priceValue:44990,battery:"No publicada",batteryType:"No especificada",power:"304 CV",range:"750 km WLTP",rangeValue:750,accel:"5,2 s"},
+            {name:"Premium Gran Autonomía tracción integral",price:"48.990 €",priceValue:48990,battery:"No publicada",batteryType:"No especificada",power:"392 CV",range:"660 km WLTP",rangeValue:660,accel:"4,0 s"},
+            {name:"Performance tracción integral",price:"57.490 €",priceValue:57490,battery:"No publicada",batteryType:"No especificada",power:"464 CV",range:"571 km WLTP",rangeValue:571,accel:"3,1 s"}
+        ],
+        colors:[{name:"Blanco Perla",hex:"#f5f5f3",border:"#cbd5e1"},{name:"Negro",hex:"#17191b"},{name:"Gris Sigilo",hex:"#53575c"},{name:"Azul",hex:"#28436b"},{name:"Rojo",hex:"#8b1e2d"}],
+        images:["img/ranking/MODEL3.png"],
+        videos:[{title:"Tesla Model 3",url:"https://www.youtube.com/results?search_query=Tesla+Model+3+2026+prueba",thumb:"img/ranking/MODEL3.png"}],
+        brandInfo:{logo:"img/brands/tesla.png",group:"Tesla, Inc.",relation:"Fabricante",note:"Fabricante estadounidense especializado en vehículos eléctricos."},
+        brandUrl:"https://www.tesla.com/es_es/model3",
+        dataStatus:{status:"Revisado",checkedAt:"15/10/2026"}
+    },
+    {
         id: 1,
         brand: "Leapmotor",
         model: "B03X",
