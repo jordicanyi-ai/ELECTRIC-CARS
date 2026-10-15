@@ -1,4 +1,118 @@
 const carsData = [
+{
+    "id": 14,
+    "brand": "Leapmotor",
+    "model": "T03",
+    "type": "Urbano",
+    "launchYear": 2024,
+    "warranty": {
+        "vehicle": "Consultar condiciones vigentes de Leapmotor",
+        "battery": "Consultar condiciones vigentes de Leapmotor",
+        "capacity": "Consultar fabricante"
+    },
+    "priceMin": 19475,
+    "priceMax": 19475,
+    "priceText": "19.475 € (referencia, verificar)",
+    "rangeText": "265 km",
+    "minRangeVal": 265,
+    "maxRangeVal": 265,
+    "batteryText": "37,3 kWh",
+    "batteryType": "LFP",
+    "powerText": "95 CV",
+    "trunk": 210,
+    "frunkText": "No disponible",
+    "seats": 4,
+    "acceleration": "12,7 s",
+    "dimensions": "3,62 × 1,65 × 1,58 m",
+    "charging": "Hasta 45 kW CC",
+    "description": "El Leapmotor T03 es un eléctrico urbano compacto de cuatro plazas con batería de 37,3 kWh y autonomía homologada de hasta 265 km WLTP. Su formato pequeño facilita los desplazamientos y el aparcamiento en ciudad.",
+    "highlights": [
+        "265 km WLTP",
+        "Tamaño urbano compacto",
+        "Techo panorámico",
+        "Batería de 37,3 kWh"
+    ],
+    "considerations": [
+        "Cuatro plazas",
+        "Maletero reducido",
+        "Autonomía principalmente urbana",
+        "Confirmar precio al contado actualizado antes de contratar"
+    ],
+    "idealFor": [
+        "Ciudad",
+        "Uso diario",
+        "Primer eléctrico",
+        "Segundo coche"
+    ],
+    "priceInfo": {
+        "includesVat": true,
+        "includesAid": false,
+        "note": "Precio de referencia pendiente de confirmación actualizada. No se descuentan ayudas públicas; comprobar PVP al contado sin financiación ni CAE."
+    },
+    "chargingInfo": {
+        "dcMax": "45 kW",
+        "acMax": "6,6 kW",
+        "fastChargeText": "30-80 % en aproximadamente 36 min",
+        "connector": "CCS2",
+        "v2l": false
+    },
+    "trims": [
+        {
+            "name": "T03 37,3 kWh",
+            "price": "19.475 € (orientativo)",
+            "priceValue": 19475,
+            "battery": "37,3 kWh",
+            "batteryType": "LFP",
+            "power": "95 CV",
+            "range": "265 km WLTP",
+            "rangeValue": 265,
+            "accel": "12,7 s"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Blanco",
+            "hex": "#f5f5f4",
+            "border": "#cbd5e1"
+        },
+        {
+            "name": "Gris",
+            "hex": "#64748b"
+        },
+        {
+            "name": "Azul",
+            "hex": "#7ca5ba"
+        }
+    ],
+    "images": [
+        "img/cars/leapmotor_t03/t03_01.webp",
+        "img/cars/leapmotor_t03/t03_02.webp",
+        "img/cars/leapmotor_t03/t03_03.webp",
+        "img/cars/leapmotor_t03/t03_04.webp",
+        "img/cars/leapmotor_t03/t03_05.webp",
+        "img/cars/leapmotor_t03/t03_06.webp",
+        "img/cars/leapmotor_t03/t03_07.webp",
+        "img/cars/leapmotor_t03/t03_08.webp"
+    ],
+    "videos": [
+        {
+            "title": "Leapmotor T03",
+            "url": "https://www.youtube.com/results?search_query=Leapmotor+T03+prueba",
+            "thumb": "img/cars/leapmotor_t03/t03_01.webp"
+        }
+    ],
+    "brandInfo": {
+        "logo": "img/brands/leapmotor.png",
+        "group": "Leapmotor International",
+        "relation": "Distribución en Europa con Stellantis",
+        "note": "Marca de vehículos eléctricos con distribución europea mediante Leapmotor International."
+    },
+    "brandUrl": "https://www.leapmotor.net/es-es/modelos/t03",
+    "dataStatus": {
+        "status": "Pendiente de revisar precio",
+        "checkedAt": "15/10/2026"
+    }
+},
     {
         id:13,
         brand:"Tesla",
