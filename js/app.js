@@ -350,6 +350,26 @@ let currentImageIndexes = {};
         }
 
         // Tarjeta de autopromoción: la imagen ocupa toda la tarjeta.
+        function renderAdSenseSlot(slotName = 'display') {
+            return `
+                <div class="w-full min-h-[130px] sm:min-h-[150px] border border-slate-200 bg-slate-50 rounded-2xl flex flex-col items-center justify-center text-center px-3 overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.18em] text-slate-400 mb-2">Publicidad</span>
+                    <ins class="adsbygoogle"
+                        style="display:block;width:100%"
+                        data-ad-client="ca-pub-6691239546545651"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"
+                        data-electricos-slot="${slotName}"></ins>
+                </div>`;
+        }
+
+        function activateAdSenseSlots(root = document) {
+            if (!window.adsbygoogle) return;
+            root.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])').forEach(() => {
+                try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+            });
+        }
+
         function renderAdvertisingCard() {
             return `
                 <a href="mailto:publicidad@electricos.eu?subject=Publicidad%20en%20electricos.eu"
@@ -1070,32 +1090,8 @@ let currentImageIndexes = {};
                     </section>
 
                     <!-- PUBLICIDAD -->
-
                     <section>
-
-                        <div
-                            class="w-full min-h-[130px] sm:min-h-[150px]
-                            border border-slate-200
-                            bg-slate-50
-                            rounded-2xl
-                            flex flex-col
-                            items-center
-                            justify-center
-                            text-center
-                            px-5">
-
-                            <span class="text-[9px] uppercase tracking-[0.18em] text-slate-400 mb-3">
-                                Publicidad
-                            </span>
-
-                            <!-- GOOGLE ADSENSE -->
-
-                            <div class="text-xs text-slate-300">
-                                Espacio publicitario
-                            </div>
-
-                        </div>
-
+                        ${renderAdSenseSlot('vehicle-detail')}
                     </section>
 
                     <!-- TECH -->
@@ -1370,6 +1366,8 @@ let currentImageIndexes = {};
                 </div>
 
             `;
+
+            setTimeout(() => activateAdSenseSlots(modal), 0);
 
             document.getElementById('car-modal').classList.remove('hidden');
 
