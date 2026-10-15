@@ -842,9 +842,11 @@ let currentImageIndexes = {};
                             <div
                                 class="w-full sm:w-40 h-20 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-4 shrink-0">
 
+                                ${car.brand === 'Tesla' && car.model === 'Model 3' ? '<a href="#" onclick="event.preventDefault(); openCarModal(9);" aria-label="Ver Tesla Model Y" class="flex w-full h-full items-center justify-center">' : ''}
                                 <img src="${car.brandInfo.logo}"
                                     alt="Logo ${car.brand}"
                                     class="max-w-full max-h-full object-contain">
+                                ${car.brand === 'Tesla' && car.model === 'Model 3' ? '</a>' : ''}
 
                             </div>
 
