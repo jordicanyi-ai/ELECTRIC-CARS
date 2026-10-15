@@ -25,7 +25,7 @@ const carsData = [
     "acceleration": "12,1 s",
     "dimensions": "3,79 × 1,72 × 1,49 m",
     "charging": "Hasta 50 kW CC (según equipamiento)",
-    "description": "El Renault Twingo E-Tech eléctrico recupera el concepto de coche urbano compacto con cinco puertas, quatre places y un interior modular. La batería de 27,5 kWh ofrece hasta 263 km de autonomía WLTP según versión y configuración.",
+    "description": "El Renault Twingo E-Tech eléctrico recupera el concepto de coche urbano compacto con cinco puertas, cuatro plazas y un interior modular. La batería de 27,5 kWh ofrece hasta 263 km de autonomía WLTP según la versión y la configuración.",
     "highlights": [
         "Hasta 263 km WLTP",
         "Cinco puertas en menos de 3,8 metros",
