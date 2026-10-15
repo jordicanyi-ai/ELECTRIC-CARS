@@ -352,6 +352,24 @@
 
         </section>
 
+        <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+                <div>
+                    <span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Matriculaciones · España</span>
+                    <h2 class="text-2xl sm:text-3xl font-black mt-2">Los eléctricos más vendidos</h2>
+                    <p id="ventas-periodo" class="text-sm text-slate-500 mt-2">Datos pendientes de publicación</p>
+                </div>
+                <div class="flex gap-2" role="group" aria-label="Periodo del ranking">
+                    <button id="ventas-mes-btn" type="button" aria-pressed="true" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white" onclick="showSalesRanking('month')">Último mes</button>
+                    <button id="ventas-ano-btn" type="button" aria-pressed="false" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700" onclick="showSalesRanking('year')">Acumulado anual</button>
+                </div>
+            </div>
+            <div id="ventas-ranking" aria-live="polite" class="space-y-2">
+                <p class="rounded-xl bg-slate-50 p-5 text-slate-600 text-sm">Preparando el ranking con datos oficiales de matriculaciones.</p>
+            </div>
+            <p class="text-xs text-slate-400 mt-5">Fuente: <a href="https://www.dgt.es/" target="_blank" rel="noopener noreferrer" class="underline">DGT</a>. Solo turismos 100 % eléctricos (BEV). Datos publicados, no estimaciones.</p>
+        </section>
+
     </main>
 
     <!-- MODAL -->
@@ -439,6 +457,9 @@
         </div>
 
     </footer>
+
+    <script src="data/sales-ranking.js"></script>
+    <script src="js/sales-ranking.js"></script>
 
     <!-- DATABASE -->
     <script src="data/cars.js"></script>
