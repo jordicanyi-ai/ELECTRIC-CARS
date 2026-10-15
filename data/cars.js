@@ -6,9 +6,9 @@ const carsData = [
     "type": "Urbano",
     "launchYear": 2024,
     "warranty": {
-        "vehicle": "Consultar condiciones vigentes de Leapmotor",
-        "battery": "Consultar condiciones vigentes de Leapmotor",
-        "capacity": "Consultar fabricante"
+        "vehicle": "4 años / 120.000 km",
+        "battery": "8 años / 160.000 km",
+        "capacity": "80 %"
     },
     "priceMin": 19475,
     "priceMax": 19475,
