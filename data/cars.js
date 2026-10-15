@@ -1,5 +1,137 @@
 const carsData = [
 {
+    "id": 15,
+    "brand": "Renault",
+    "model": "Twingo E-Tech eléctrico",
+    "type": "Urbano",
+    "launchYear": 2026,
+    "warranty": {
+        "vehicle": "3 años / kilometraje según condiciones Renault",
+        "battery": "8 años / 160.000 km",
+        "capacity": "70 %"
+    },
+    "priceMin": 19900,
+    "priceMax": 21500,
+    "priceText": "19.900 - 21.500 €",
+    "rangeText": "Hasta 263 km",
+    "minRangeVal": 263,
+    "maxRangeVal": 263,
+    "batteryText": "27,5 kWh",
+    "batteryType": "LFP",
+    "powerText": "82 CV",
+    "trunk": 360,
+    "frunkText": "No disponible",
+    "seats": 4,
+    "acceleration": "12,1 s",
+    "dimensions": "3,79 × 1,72 × 1,49 m",
+    "charging": "Hasta 50 kW CC (según equipamiento)",
+    "description": "El Renault Twingo E-Tech eléctrico recupera el concepto de coche urbano compacto con cinco puertas, quatre places y un interior modular. La batería de 27,5 kWh ofrece hasta 263 km de autonomía WLTP según versión y configuración.",
+    "highlights": [
+        "Hasta 263 km WLTP",
+        "Cinco puertas en menos de 3,8 metros",
+        "Asientos traseros deslizantes",
+        "Hasta 360 litros de maletero"
+    ],
+    "considerations": [
+        "Cuatro plazas",
+        "Autonomía orientada a ciudad y trayectos cortos",
+        "La carga rápida depende del equipamiento"
+    ],
+    "idealFor": [
+        "Ciudad",
+        "Uso diario",
+        "Primer eléctrico",
+        "Segundo coche familiar"
+    ],
+    "priceInfo": {
+        "includesVat": true,
+        "includesAid": false,
+        "note": "Precios de tarifa orientativos con IVA y sin ayudas públicas. Pueden variar según acabado, equipamiento y condiciones comerciales."
+    },
+    "chargingInfo": {
+        "dcMax": "Hasta 50 kW (según equipamiento)",
+        "acMax": "Hasta 11 kW (según equipamiento)",
+        "fastChargeText": "Consultar equipamiento y ficha oficial de la versión",
+        "connector": "CCS2 (si equipa carga CC)",
+        "v2l": null
+    },
+    "trims": [
+        {
+            "name": "Evolution",
+            "price": "19.900 €",
+            "priceValue": 19900,
+            "battery": "27,5 kWh",
+            "batteryType": "LFP",
+            "power": "82 CV",
+            "range": "Hasta 263 km WLTP",
+            "rangeValue": 263,
+            "accel": "12,1 s"
+        },
+        {
+            "name": "Techno",
+            "price": "21.500 €",
+            "priceValue": 21500,
+            "battery": "27,5 kWh",
+            "batteryType": "LFP",
+            "power": "82 CV",
+            "range": "Hasta 263 km WLTP",
+            "rangeValue": 263,
+            "accel": "12,1 s"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Amarillo Mango",
+            "hex": "#e7bd20"
+        },
+        {
+            "name": "Rojo Absoluto",
+            "hex": "#b52632"
+        },
+        {
+            "name": "Verde Absoluto",
+            "hex": "#4b8b67"
+        },
+        {
+            "name": "Negro",
+            "hex": "#191919"
+        },
+        {
+            "name": "Blanco",
+            "hex": "#f5f5f2",
+            "border": "#cbd5e1"
+        }
+    ],
+    "images": [
+        "img/cars/renault-twingo/renault-twingo_01.webp",
+        "img/cars/renault-twingo/renault-twingo_02.webp",
+        "img/cars/renault-twingo/renault-twingo_03.webp",
+        "img/cars/renault-twingo/renault-twingo_04.webp",
+        "img/cars/renault-twingo/renault-twingo_05.webp",
+        "img/cars/renault-twingo/renault-twingo_06.webp",
+        "img/cars/renault-twingo/renault-twingo_07.webp",
+        "img/cars/renault-twingo/renault-twingo_08.webp"
+    ],
+    "videos": [
+        {
+            "title": "Renault Twingo E-Tech eléctrico",
+            "url": "https://www.youtube.com/results?search_query=Renault+Twingo+E-Tech+electrico+2026",
+            "thumb": "img/cars/renault-twingo/renault-twingo_01.webp"
+        }
+    ],
+    "brandInfo": {
+        "logo": "img/brands/renault.png",
+        "group": "Renault Group",
+        "relation": "Marca del grupo",
+        "note": "Renault es una marca de Renault Group."
+    },
+    "brandUrl": "https://www.renault.es/electricos/twingo-e-tech-electrico.html",
+    "dataStatus": {
+        "status": "Revisado parcialmente",
+        "checkedAt": "15/10/2026"
+    }
+},
+{
     "id": 14,
     "brand": "Leapmotor",
     "model": "T03",
