@@ -26,8 +26,8 @@ const carsData = [
             {name:"Performance tracción integral",price:"57.490 €",priceValue:57490,battery:"No publicada",batteryType:"No especificada",power:"464 CV",range:"571 km WLTP",rangeValue:571,accel:"3,1 s"}
         ],
         colors:[{name:"Blanco Perla",hex:"#f5f5f3",border:"#cbd5e1"},{name:"Negro",hex:"#17191b"},{name:"Gris Sigilo",hex:"#53575c"},{name:"Azul",hex:"#28436b"},{name:"Rojo",hex:"#8b1e2d"}],
-        images:["img/ranking/MODEL3.png"],
-        videos:[{title:"Tesla Model 3",url:"https://www.youtube.com/results?search_query=Tesla+Model+3+2026+prueba",thumb:"img/ranking/MODEL3.png"}],
+        images:["img/cars/tesla-model3/Tesla-Model3_01.webp","img/cars/tesla-model3/Tesla-Model3_02.webp","img/cars/tesla-model3/Tesla-Model3_03.webp","img/cars/tesla-model3/Tesla-Model3_04.webp","img/cars/tesla-model3/Tesla-Model3_05.webp","img/cars/tesla-model3/Tesla-Model3_06.webp","img/cars/tesla-model3/Tesla-Model3_07.webp","img/cars/tesla-model3/Tesla-Model3_08.webp"],
+        videos:[{title:"Tesla Model 3",url:"https://www.youtube.com/results?search_query=Tesla+Model+3+2026+prueba",thumb:"img/cars/tesla-model3/Tesla-Model3_01.webp"}],
         brandInfo:{logo:"img/brands/tesla.png",group:"Tesla, Inc.",relation:"Fabricante",note:"Fabricante estadounidense especializado en vehículos eléctricos."},
         brandUrl:"https://www.tesla.com/es_es/model3",
         dataStatus:{status:"Revisado",checkedAt:"15/10/2026"}
