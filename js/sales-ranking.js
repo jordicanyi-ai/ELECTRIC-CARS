@@ -14,6 +14,14 @@
         'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' }
     };
 
+    const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const findCatalogCar = model => {
+        if (typeof carsData === 'undefined' || !Array.isArray(carsData)) return null;
+        const key = normalize(model);
+        return carsData.find(car => normalize(car.brand + ' ' + car.model) === key ||
+            (key === 'renault5' && car.brand === 'Renault' && car.model.startsWith('5 '))) || null;
+    };
+
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 
     function carThumb(model) {
@@ -38,14 +46,26 @@
         period.textContent = item.label || '';
         box.innerHTML = item.models.slice(0, 5).map((row, i) => {
             const name = escapeHtml(row.model);
+            const catalogCar = findCatalogCar(row.model);
             const units = Number(row.units);
             if (!Number.isFinite(units) || units < 0) return '';
-            return '<div class="flex items-center gap-2 sm:gap-4 rounded-xl border p-2.5 sm:p-3 ' + (i === 0 ? 'bg-blue-50 border-blue-100' : 'bg-white border-slate-100') + '">' +
+            return '<div class="flex items-center gap-2 sm:gap-4 rounded-xl border p-2.5 sm:p-3 ' + (i === 0 ? 'bg-blue-50 border-blue-100' : 'bg-white border-slate-100') + (catalogCar ? ' cursor-pointer hover:border-blue-300 hover:shadow-sm transition' : '') + '"' + (catalogCar ? ' role="button" tabindex="0" aria-label="Ver ficha de ' + name + '" data-car-id="' + catalogCar.id + '"' : '') + '>' +
                 '<span class="w-7 sm:w-9 text-center text-lg sm:text-xl font-black text-blue-600">' + (i + 1) + '</span>' +
                 carThumb(row.model) +
                 '<span class="flex-1 min-w-0 font-bold text-sm sm:text-base leading-tight">' + name + '</span>' +
                 '<span class="font-black text-slate-900 whitespace-nowrap text-sm sm:text-base">' + fmt.format(units) + ' <small class="text-slate-400 font-medium hidden sm:inline">uds.</small></span></div>';
         }).join('');
     };
+    box.addEventListener('click', event => {
+        const row = event.target.closest('[data-car-id]');
+        if (row && typeof openCarModal === 'function') openCarModal(Number(row.dataset.carId));
+    });
+    box.addEventListener('keydown', event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        const row = event.target.closest('[data-car-id]');
+        if (!row || typeof openCarModal !== 'function') return;
+        event.preventDefault();
+        openCarModal(Number(row.dataset.carId));
+    });
     window.showSalesRanking('month');
 })();
