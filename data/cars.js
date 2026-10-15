@@ -13,7 +13,7 @@ const carsData = [
         trunk:594,frunkText:"88 L",seats:5,
         acceleration:"3,1 - 6,2 s",dimensions:"4,72 × 1,85 × 1,44 m",
         charging:"175 / 250 kW · hasta 286 km recuperados en 15 min",
-        description:"Berlina eléctrica de referencia y uno de los coches eléctricos más vendidos en España. Destaca por su elevada eficiencia, tecnología, amplia autonomía y acceso a la red de Supercargadores Tesla. La variante Premium Gran Autonomía de tracción trasera anuncia hasta 750 km WLTP.",
+        description:"Berlina eléctrica de referencia y uno de los coches eléctricos más vendidos en España. Destaca por su elevada eficiencia, amplia autonomía, acceso a la red de Supercargadores Tesla y avanzado software. Incorpora el Modo Centinela y tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. La variante Premium Gran Autonomía de tracción trasera anuncia hasta 750 km WLTP.",
         highlights:["Hasta 750 km WLTP","Red de Supercargadores","Consumo contenido","594 L de maletero + 88 L de frunk"],
         considerations:["Red de talleres oficiales y puntos de venta limitada en España","Muchas funciones dependen de la pantalla central","La versión de acceso ofrece menos equipamiento de confort","La tarifa no incluye 980 € de destino y documentación"],
         idealFor:["Viajes largos","Uso familiar","Autopista","Desplazamientos diarios"],
