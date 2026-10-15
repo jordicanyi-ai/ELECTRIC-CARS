@@ -12,7 +12,7 @@ const carsData = [
     },
     "priceMin": 19475,
     "priceMax": 19475,
-    "priceText": "19.475 € (referencia, verificar)",
+    "priceText": "19.475 €",
     "rangeText": "265 km",
     "minRangeVal": 265,
     "maxRangeVal": 265,
@@ -59,7 +59,7 @@ const carsData = [
     "trims": [
         {
             "name": "T03 37,3 kWh",
-            "price": "19.475 € (orientativo)",
+            "price": "19.475 €",
             "priceValue": 19475,
             "battery": "37,3 kWh",
             "batteryType": "LFP",
