@@ -6,9 +6,12 @@
     const fmt = new Intl.NumberFormat('es-ES');
 
     const localCars = {
-        'Tesla Model Y': { image: 'img/cars/tesla-model-y/modelY_01.webp', search: 'Tesla Model Y' },
-        'BYD Dolphin Surf': { image: 'img/cars/byd-dolphin-surf/dolphin-surf_01.webp', search: 'BYD Dolphin Surf' },
-        'Kia EV3': { image: 'img/cars/kia-ev3/kia-ev3_01.webp', search: 'Kia EV3' }
+        'Tesla Model 3': { image: 'img/ranking/MODEL3.png' },
+        'Tesla Model Y': { image: 'img/ranking/MODELY.png' },
+        'BYD Dolphin Surf': { image: 'img/ranking/DOLPHINSURF.png' },
+        'Kia EV3': { image: 'img/ranking/EV3.png' },
+        'BYD Atto 3': { image: 'img/ranking/ATTO3.png' },
+        'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' }
     };
 
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -33,7 +36,7 @@
             return;
         }
         period.textContent = item.label || '';
-        box.innerHTML = item.models.slice(0, 10).map((row, i) => {
+        box.innerHTML = item.models.slice(0, 5).map((row, i) => {
             const name = escapeHtml(row.model);
             const units = Number(row.units);
             if (!Number.isFinite(units) || units < 0) return '';
