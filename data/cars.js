@@ -752,7 +752,7 @@ images: [
     seats: 5,
     acceleration: "7,5 - 7,7 s",
     dimensions: "4,30 × 1,85 × 1,56 m",
-    charging: "10-80% en 29-31 min",
+    charging: "102 kW (58,3 kWh) / 128 kW (81,4 kWh) · 10-80% en 29-31 min",
 
     description: "El Kia EV3 es un SUV compacto 100% eléctrico que destaca por su autonomía, habitabilidad y tecnología. Ofrece dos baterías de 58,3 y 81,4 kWh, con hasta 605 km de autonomía WLTP. La gama incluye acabados Air, Earth y GT-Line, con un maletero de 460 litros y un compartimento delantero adicional de 25 litros.",
 
@@ -787,7 +787,7 @@ considerations: [
     },
 
     chargingInfo: {
-        dcMax: "hasta 128 kW aprox.",
+        dcMax: "102 kW (58,3 kWh) / 128 kW (81,4 kWh)",
         acMax: "11 kW",
         fastChargeText: "10-80% en aproximadamente 29-31 minutos",
         connector: "CCS2",
