@@ -54,7 +54,7 @@ const carsData = [
         seats:5,
         acceleration:"≈11 s",
         dimensions:"4,02 × 1,76 × 1,58 m",
-        charging:"20-80% en 26-36 min",
+        charging: "30 / 100 kW · 20-80% en 36 / 26 min",
 
         description:"El Citroën ë-C3 es un eléctrico urbano cómodo y asequible, disponible con dos baterías y una gama amplia de acabados. Las versiones Urban Range priorizan precio y ciudad; las Comfort Range ofrecen mayor autonomía y carga rápida de hasta 100 kW.",
 
@@ -239,7 +239,7 @@ const carsData = [
         seats:5,
         acceleration:"8,0 - 12,0 s",
         dimensions:"3,92 × 1,77 × 1,50 m",
-        charging:"15-80% aprox. 30 min según versión",
+        charging: "Hasta 100 kW (excepto Five) · 15-80% en 30 min",
 
         description:"El Renault 5 E-Tech eléctrico combina formato urbano, diseño distintivo y una gama amplia de acabados. El five de 95 CV y 40 kWh es actualmente la puerta de entrada, mientras que evolution, techno, iconic cinq y Roland-Garros amplían autonomía, potencia y equipamiento.",
 
@@ -484,7 +484,7 @@ const carsData = [
     seats: 4,
     acceleration: "10,6 - 11,7 s",
     dimensions: "3,83 × 1,61 × 1,58 m",
-    charging: "10-80% en unos 30 min",
+    charging: "73 / 85 kW · 10-80% en 30 min",
 
     description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina unas dimensiones exteriores compactas con un habitáculo sorprendentemente versátil. Dispone de dos capacidades de batería, 42 y 49 kWh, ofrece hasta 370 km de autonomía WLTP y cuenta con tecnología de carga bidireccional V2L.",
 
@@ -518,7 +518,7 @@ const carsData = [
     },
 
     chargingInfo: {
-        dcMax: "hasta ~120 kW",
+        dcMax: "73 / 85 kW",
         acMax: "11 kW",
         fastChargeText: "10-80% en unos 30 min",
         connector: "CCS2",
@@ -688,13 +688,13 @@ const carsData = [
         rangeText:"220 - 322 km", minRangeVal:220, maxRangeVal:322,
         batteryText:"30 - 43,2 kWh", batteryType:"LFP Blade", powerText:"88 - 156 CV",
         trunk:308, frunkText: "No disponible", seats:5, acceleration:"9,1 - 12,1 s", dimensions:"3,99 × 1,72 × 1,59 m",
-        charging:"DC hasta 85 kW",
+        charging: "65 / 85 kW · 10-80% en 30-31 min",
         description:"Urbano eléctrico de BYD con batería Blade LFP, formato compacto y una gama que va desde una versión básica de 30 kWh hasta una Comfort bastante más potente.",
         highlights:["Precio competitivo","Batería Blade LFP","308 litros de maletero","Disponible con 5 plazas"],
         considerations:["Autonomía de acceso limitada","La versión Active MY26 sigue figurando con 4 plazas","Comfort sube bastante de precio"],
         idealFor:["Ciudad","Uso diario","Primer eléctrico","Familias pequeñas"],
         priceInfo:{includesVat:true,includesAid:false,note:"PVP recomendado Península y Baleares, sin campañas ni ayudas públicas."},
-        chargingInfo:{dcMax:"85 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC",connector:"CCS2",v2l:true},
+        chargingInfo:{dcMax: "65 / 85 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC",connector:"CCS2",v2l:true},
         trims:[
             {name:"Active MY26  4 plazas",price:"20.140 €",priceValue:20140,battery:"30 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"220 km WLTP",rangeValue:220,accel:"11,1 s"},
             {name:"Boost MY26  5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
@@ -928,7 +928,7 @@ priceText: "35.412 - 53.043 €",
   acceleration: "3,6 - 5,7 s",
 
   dimensions: "4,23 × 1,84 × 1,55 m",
-  charging: "10-80% en 26-27 min",
+  charging: "Hasta 175 kW · 10-80% en 26-27 min",
 
   description:
     "SUV eléctrico compacto de diseño escandinavo, con " +
@@ -1262,7 +1262,7 @@ colors: [
   seats: 7,
   acceleration: "Según motorización",
   dimensions: "4,79 × 1,90 × 1,69 m",
-  charging: "20-80% en unos 30 min",
+  charging: "Hasta 160 kW · 20-80% en unos 30 min",
 
   description:
     "SUV familiar eléctrico de siete plazas con tres " +
@@ -1309,7 +1309,7 @@ colors: [
   },
 
   chargingInfo: {
-    dcMax: "Hasta 160 kW aprox.",
+    dcMax: "Hasta 160 kW",
     acMax: "11 kW",
     fastChargeText: "20-80% en unos 30 min",
     connector: "CCS2",
@@ -1468,7 +1468,7 @@ colors: [
     seats: 5,
     acceleration: "≈11 s",
     dimensions: "4,02 × 1,76 × 1,58 m",
-    charging: "20-80% en unos 26 min",
+    charging: "Hasta 100 kW · 20-80% en unos 26 min",
 
     description: "Edición especial del Citroën ë-C3 con una estética más aventurera y equipamiento diferenciado. Incorpora paragolpes y elementos exteriores específicos, llantas MAGNETITE de 17 pulgadas, detalles en Rojo Infra y un ambiente interior exclusivo. Mantiene la mecánica eléctrica Comfort Range de 44 kWh y 113 CV.",
 
