@@ -1,5 +1,617 @@
 const carsData = [
 {
+  "id": 16,
+  "brand": "BYD",
+  "model": "DOLPHIN",
+  "type": "Compacto",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 427 km WLTP",
+  "minRangeVal": 427,
+  "maxRangeVal": 427,
+  "batteryText": "60.4 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "204 CV",
+  "trunk": 364,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,29 × 1,77 × 1,57 m",
+  "charging": "Consultar versión",
+  "description": "El BYD DOLPHIN es un compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es/coches-electricos/dolphin",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 17,
+  "brand": "BYD",
+  "model": "ATTO 2",
+  "type": "SUV urbano",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 320 km WLTP",
+  "minRangeVal": 320,
+  "maxRangeVal": 320,
+  "batteryText": "45.1 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "177 CV",
+  "trunk": 400,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,31 × 1,83 × 1,68 m",
+  "charging": "Consultar versión",
+  "description": "El BYD ATTO 2 es un suv urbano 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 18,
+  "brand": "BYD",
+  "model": "ATTO 3",
+  "type": "SUV compacto",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 420 km WLTP",
+  "minRangeVal": 420,
+  "maxRangeVal": 420,
+  "batteryText": "60.5 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "204 CV",
+  "trunk": 440,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,46 × 1,88 × 1,62 m",
+  "charging": "Consultar versión",
+  "description": "El BYD ATTO 3 es un suv compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 19,
+  "brand": "BYD",
+  "model": "ATTO 3 EVO",
+  "type": "SUV compacto",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Autonomía WLTP pendiente de verificar",
+  "minRangeVal": null,
+  "maxRangeVal": null,
+  "batteryText": "Consultar versión",
+  "batteryType": "Blade Battery",
+  "powerText": "Hasta 449 CV",
+  "trunk": 490,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "Consultar versión",
+  "charging": "Consultar versión",
+  "description": "El BYD ATTO 3 EVO es un suv compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 20,
+  "brand": "BYD",
+  "model": "SEAL",
+  "type": "Berlina",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 570 km WLTP",
+  "minRangeVal": 570,
+  "maxRangeVal": 570,
+  "batteryText": "82.5 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "Hasta 530 CV",
+  "trunk": 400,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,80 × 1,88 × 1,46 m",
+  "charging": "Consultar versión",
+  "description": "El BYD SEAL es un berlina 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 21,
+  "brand": "BYD",
+  "model": "SEAL U EV",
+  "type": "SUV familiar",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 500 km WLTP",
+  "minRangeVal": 500,
+  "maxRangeVal": 500,
+  "batteryText": "87 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "218 CV",
+  "trunk": 552,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,79 × 1,89 × 1,67 m",
+  "charging": "Consultar versión",
+  "description": "El BYD SEAL U EV es un suv familiar 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 22,
+  "brand": "BYD",
+  "model": "SEALION 7",
+  "type": "SUV coupé",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 502 km WLTP",
+  "minRangeVal": 502,
+  "maxRangeVal": 502,
+  "batteryText": "Consultar versión",
+  "batteryType": "Blade Battery",
+  "powerText": "Hasta 530 CV",
+  "trunk": 520,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,83 × 1,93 × 1,62 m",
+  "charging": "Consultar versión",
+  "description": "El BYD SEALION 7 es un suv coupé 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 23,
+  "brand": "BYD",
+  "model": "TANG",
+  "type": "SUV 7 plazas",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 530 km WLTP",
+  "minRangeVal": 530,
+  "maxRangeVal": 530,
+  "batteryText": "108.8 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "517 CV",
+  "trunk": 235,
+  "frunkText": "Consultar versión",
+  "seats": 7,
+  "acceleration": "Consultar versión",
+  "dimensions": "4,97 × 1,96 × 1,75 m",
+  "charging": "Consultar versión",
+  "description": "El BYD TANG es un suv 7 plazas 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Familias numerosas",
+    "Viajes"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
+  "id": 24,
+  "brand": "BYD",
+  "model": "HAN",
+  "type": "Berlina grande",
+  "launchYear": null,
+  "warranty": {
+    "vehicle": "Consultar condiciones vigentes",
+    "battery": "Consultar condiciones vigentes",
+    "capacity": "Consultar garantía"
+  },
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio sin ayudas pendiente de verificar",
+  "rangeText": "Hasta 521 km WLTP",
+  "minRangeVal": 521,
+  "maxRangeVal": 521,
+  "batteryText": "85.4 kWh",
+  "batteryType": "Blade Battery",
+  "powerText": "517 CV",
+  "trunk": 410,
+  "frunkText": "Consultar versión",
+  "seats": 5,
+  "acceleration": "Consultar versión",
+  "dimensions": "5,00 × 1,91 × 1,50 m",
+  "charging": "Consultar versión",
+  "description": "El BYD HAN es un berlina grande 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "highlights": [
+    "Propulsión 100 % eléctrica",
+    "Tecnología de batería BYD",
+    "Ficha disponible para comparar"
+  ],
+  "considerations": [
+    "Precios al contado con IVA y sin ayudas pendientes de verificar",
+    "Comprobar la versión y sus datos homologados"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Movilidad eléctrica"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar versión",
+    "acMax": "Consultar versión",
+    "fastChargeText": "Consultar versión",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/byd.png",
+    "group": "BYD Company",
+    "relation": "Fabricante",
+    "note": "Marca de vehículos eléctricos de BYD Company."
+  },
+  "brandUrl": "https://www.byd.com/es-es",
+  "dataStatus": {
+    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "checkedAt": "16/10/2026"
+  }
+},
+{
     "id": 15,
     "brand": "Renault",
     "model": "Twingo E-Tech eléctrico",
