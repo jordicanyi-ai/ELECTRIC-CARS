@@ -6,9 +6,9 @@ const carsData = [
   "type": "Compacto",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 36690,
   "priceMax": 38690,
@@ -74,9 +74,9 @@ const carsData = [
   "type": "SUV urbano",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 29990,
   "priceMax": 36200,
@@ -142,9 +142,9 @@ const carsData = [
   "type": "SUV compacto",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 38990,
   "priceMax": 38990,
@@ -210,9 +210,9 @@ const carsData = [
   "type": "SUV compacto",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 42990,
   "priceMax": 45990,
@@ -278,9 +278,9 @@ const carsData = [
   "type": "Berlina",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 41990,
   "priceMax": 52490,
@@ -346,9 +346,9 @@ const carsData = [
   "type": "SUV familiar",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 43790,
   "priceMax": 47290,
@@ -414,9 +414,9 @@ const carsData = [
   "type": "SUV coupé",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 47990,
   "priceMax": 54390,
@@ -482,9 +482,9 @@ const carsData = [
   "type": "SUV 7 plazas",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 72000,
   "priceMax": 72000,
@@ -550,9 +550,9 @@ const carsData = [
   "type": "Berlina grande",
   "launchYear": null,
   "warranty": {
-    "vehicle": "Consultar condiciones vigentes",
-    "battery": "Consultar condiciones vigentes",
-    "capacity": "Consultar garantía"
+    "vehicle": "6 años / 150.000 km",
+    "battery": "8 años / 250.000 km",
+    "capacity": "70 %"
   },
   "priceMin": 69990,
   "priceMax": 69990,
