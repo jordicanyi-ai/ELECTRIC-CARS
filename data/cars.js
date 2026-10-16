@@ -10,9 +10,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 36690,
+  "priceMax": 38690,
+  "priceText": "36.690 € - 38.690 €",
   "rangeText": "Hasta 427 km WLTP",
   "minRangeVal": 427,
   "maxRangeVal": 427,
@@ -42,7 +42,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -51,7 +51,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Comfort","price":"36.690 €","priceValue":36690,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"38.690 €","priceValue":38690,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -63,7 +63,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es/coches-electricos/dolphin",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -78,9 +78,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 29990,
+  "priceMax": 36200,
+  "priceText": "29.990 € - 36.200 €",
   "rangeText": "Hasta 320 km WLTP",
   "minRangeVal": 320,
   "maxRangeVal": 320,
@@ -110,7 +110,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -119,7 +119,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Active","price":"29.990 €","priceValue":29990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Boost","price":"31.990 €","priceValue":31990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Comfort","price":"36.200 €","priceValue":36200,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -131,7 +131,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -146,9 +146,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 38990,
+  "priceMax": 38990,
+  "priceText": "38.990 €",
   "rangeText": "Hasta 420 km WLTP",
   "minRangeVal": 420,
   "maxRangeVal": 420,
@@ -178,7 +178,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Referencia histórica: confirmar disponibilidad y tarifa vigente."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -187,7 +187,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Versión de acceso (referencia histórica)","price":"38.990 €","priceValue":38990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -199,7 +199,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -214,9 +214,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 42990,
+  "priceMax": 45990,
+  "priceText": "42.990 € - 45.990 €",
   "rangeText": "Autonomía WLTP pendiente de verificar",
   "minRangeVal": null,
   "maxRangeVal": null,
@@ -246,7 +246,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -255,7 +255,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Design","price":"42.990 €","priceValue":42990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"45.990 €","priceValue":45990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -267,7 +267,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -282,9 +282,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 41990,
+  "priceMax": 52490,
+  "priceText": "41.990 € - 52.490 €",
   "rangeText": "Hasta 570 km WLTP",
   "minRangeVal": 570,
   "maxRangeVal": 570,
@@ -314,7 +314,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -323,7 +323,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Comfort","price":"41.990 €","priceValue":41990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"49.490 €","priceValue":49490,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"52.490 €","priceValue":52490,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -335,7 +335,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -350,9 +350,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 43790,
+  "priceMax": 47290,
+  "priceText": "43.790 € - 47.290 €",
   "rangeText": "Hasta 500 km WLTP",
   "minRangeVal": 500,
   "maxRangeVal": 500,
@@ -382,7 +382,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -391,7 +391,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Comfort","price":"43.790 €","priceValue":43790,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"47.290 €","priceValue":47290,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -403,7 +403,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -418,9 +418,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 47990,
+  "priceMax": 54390,
+  "priceText": "47.990 € - 54.390 €",
   "rangeText": "Hasta 502 km WLTP",
   "minRangeVal": 502,
   "maxRangeVal": 502,
@@ -450,7 +450,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -459,7 +459,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Comfort","price":"47.990 €","priceValue":47990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"51.500 €","priceValue":51500,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"54.390 €","priceValue":54390,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -471,7 +471,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -486,9 +486,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 72000,
+  "priceMax": 72000,
+  "priceText": "72.000 €",
   "rangeText": "Hasta 530 km WLTP",
   "minRangeVal": 530,
   "maxRangeVal": 530,
@@ -518,7 +518,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -527,7 +527,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Tang","price":"72.000 €","priceValue":72000,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -539,7 +539,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
@@ -554,9 +554,9 @@ const carsData = [
     "battery": "Consultar condiciones vigentes",
     "capacity": "Consultar garantía"
   },
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Precio sin ayudas pendiente de verificar",
+  "priceMin": 69990,
+  "priceMax": 69990,
+  "priceText": "69.990 €",
   "rangeText": "Hasta 521 km WLTP",
   "minRangeVal": 521,
   "maxRangeVal": 521,
@@ -586,7 +586,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio no publicado hasta confirmar PVP al contado con IVA, sin ayudas ni financiación condicionada."
+    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Referencia histórica: confirmar disponibilidad y tarifa vigente."
   },
   "chargingInfo": {
     "dcMax": "Consultar versión",
@@ -595,7 +595,7 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [],
+  "trims": [{"name":"Versión de acceso (referencia histórica)","price":"69.990 €","priceValue":69990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
   "images": [],
   "videos": [],
@@ -607,7 +607,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Ficha provisional: datos y precio pendientes de contrastar",
+    "status": "Precio de tarifa localizado; resto de datos por contrastar",
     "checkedAt": "16/10/2026"
   }
 },
