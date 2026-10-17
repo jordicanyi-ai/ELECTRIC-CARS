@@ -6,9 +6,9 @@ const carsData = [
   type: "SUV compacto",
   launchYear: 2026,
   warranty: {
-    vehicle: "Consultar condiciones Toyota España",
-    battery: "Consultar condiciones Toyota España",
-    capacity: "Consultar condiciones de garantía"
+    vehicle: "3 años / 100.000 km · Toyota Relax hasta 15 años / 250.000 km*",
+    battery: "8 años / 160.000 km · ampliable hasta 10 años / 1.000.000 km*",
+    capacity: "70 % mínimo · *Ampliaciones sujetas a condiciones y mantenimiento Toyota"
   },
   priceMin: 36375,
   priceMax: 43425,
