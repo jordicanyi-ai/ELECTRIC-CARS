@@ -25,7 +25,7 @@ const carsData = [
   acceleration: "Según versión",
   dimensions: "4,53 × 1,87 × 1,595 m",
   charging: "150 kW CC · 10-80 % en unos 28 min",
-  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. El Electric 250 tiene un precio anunciado de 36.375 €, con IVA y promociones comerciales incluidas, sin descontar ayudas públicas.",
+  description: "El Toyota C-HR+ es el tercer modelo 100 % eléctrico de la marca japonesa y el más económico de su gama eléctrica. Este SUV compacto de diseño coupé ofrece cinco plazas y versiones de tracción delantera o total.",
   highlights: ["Consumo homologado: 13,4 kWh/100 km (4x2) y 15,7 kWh/100 km (4x4)", "SUV 100 % eléctrico de cinco plazas", "Batería de 77 kWh en los acabados españoles anunciados", "Advance de 224 CV y Spirit AWD-i de 343 CV"],
   considerations: ["No confundir con el Toyota C-HR híbrido", "Comprobar las condiciones comerciales de los precios anunciados", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
   idealFor: ["Uso familiar", "Ciudad y carretera", "Viajes"],
