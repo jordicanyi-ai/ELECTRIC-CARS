@@ -45,7 +45,17 @@ const carsData = [
     { name: "Electric 250 4x2 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "Hasta 607 km WLTP", rangeValue: 607, accel: "Consultar versión" },
     { name: "Electric 350 AWD-i 4x4 77 kWh", price: "43.425 €", priceValue: 43425, battery: "77 kWh", batteryType: "Iones de litio", power: "343 CV", range: "Hasta 501 km WLTP", rangeValue: 501, accel: "5,2 s (0-100 km/h)" }
   ],
-  colors: [],
+  colors: [
+    { name: "Gris Manhattan (Advance)", hex: "#888B8C", code: "1H5" },
+    { name: "Blanco Perlado Iceberg (Advance)", hex: "#F1F0EB", code: "089" },
+    { name: "Negro Cosmo (Advance)", hex: "#202124", code: "218" },
+    { name: "Gris Lunar (Advance)", hex: "#879194", code: "6Y1" },
+    { name: "Rojo Persa (Advance)", hex: "#A84736", code: "4Z3" },
+    { name: "Bi-tono Gris Manhattan (Spirit)", hex: "#888B8C", code: "2YY" },
+    { name: "Bi-tono Blanco Perlado Iceberg (Spirit)", hex: "#F1F0EB", code: "2PS" },
+    { name: "Bi-tono Gris Lunar (Spirit)", hex: "#879194", code: "M66" },
+    { name: "Bi-tono Rojo Persa (Spirit)", hex: "#A84736", code: "M67" }
+  ],
   images: [],
   videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: ""}],
   brandInfo: {
