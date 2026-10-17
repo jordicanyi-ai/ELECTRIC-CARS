@@ -10,29 +10,29 @@ const carsData = [
     battery: "Consultar condiciones Toyota España",
     capacity: "Consultar condiciones de garantía"
   },
-  priceMin: null,
-  priceMax: null,
-  priceText: "Precio de tarifa por confirmar",
-  rangeText: "Hasta 600 km WLTP (según versión; cifra orientativa)",
-  minRangeVal: null,
-  maxRangeVal: null,
-  batteryText: "57,7 / 77 kWh (según versión)",
+  priceMin: 36375,
+  priceMax: 36375,
+  priceText: "Desde 36.375 € al contado",
+  rangeText: "Hasta 607 km WLTP",
+  minRangeVal: 501,
+  maxRangeVal: 607,
+  batteryText: "77 kWh",
   batteryType: "Iones de litio",
-  powerText: "Según motorización",
+  powerText: "224 / 343 CV",
   trunk: 416,
   frunkText: "No confirmado",
   seats: 5,
   acceleration: "Según versión",
-  dimensions: "4,52 × 1,87 × 1,60 m (aprox.)",
-  charging: "CCS2; potencia según versión",
-  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. Los precios españoles al contado, con IVA y sin ayudas, están pendientes de contrastar con el configurador oficial.",
-  highlights: ["SUV 100 % eléctrico de cinco plazas", "Opciones de batería de 57,7 y 77 kWh", "Versiones de tracción delantera y total según mercado"],
-  considerations: ["No confundir con el Toyota C-HR híbrido", "Precios españoles sin ayudas pendientes de verificación", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
+  dimensions: "4,53 × 1,87 × 1,595 m",
+  charging: "CCS2 · 10-80 % en unos 28 min",
+  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. El Advance parte de 36.375 € al contado, con IVA y promociones comerciales incluidas, sin descontar ayudas públicas.",
+  highlights: ["SUV 100 % eléctrico de cinco plazas", "Batería de 77 kWh en los acabados españoles anunciados", "Advance de 224 CV y Spirit AWD-i de 343 CV"],
+  considerations: ["No confundir con el Toyota C-HR híbrido", "El precio de Spirit al contado requiere confirmación actualizada", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
   idealFor: ["Uso familiar", "Ciudad y carretera", "Viajes"],
   priceInfo: {
     includesVat: true,
     includesAid: false,
-    note: "No se muestra un precio numérico hasta verificar el PVP español con IVA, al contado y sin ayudas ni financiación."
+    note: "Precio Advance al contado anunciado por Toyota España, con IVA y promociones comerciales incluidas, sin restar ayudas públicas. Oferta vigente hasta 31/10/2026. Spirit: consultar precio al contado actualizado."
   },
   chargingInfo: {
     dcMax: "Según versión",
@@ -42,8 +42,8 @@ const carsData = [
     v2l: null
   },
   trims: [
-    { name: "Batería 57,7 kWh (configuración por confirmar en España)", price: "Por confirmar", priceValue: null, battery: "57,7 kWh", batteryType: "Iones de litio", power: "Consultar versión", range: "Pendiente de confirmar WLTP España", rangeValue: null, accel: "Consultar versión" },
-    { name: "Batería 77 kWh (configuración por confirmar en España)", price: "Por confirmar", priceValue: null, battery: "77 kWh", batteryType: "Iones de litio", power: "Consultar versión", range: "Pendiente de confirmar WLTP España", rangeValue: null, accel: "Consultar versión" }
+    { name: "Electric 250 Advance 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "Hasta 607 km WLTP", rangeValue: 607, accel: "Consultar versión" },
+    { name: "Electric 350 AWD-i Spirit 77 kWh", price: "Consultar precio al contado", priceValue: null, battery: "77 kWh", batteryType: "Iones de litio", power: "343 CV", range: "Hasta 501 km WLTP", rangeValue: 501, accel: "5,2 s (0-100 km/h)" }
   ],
   colors: [],
   images: [],
@@ -55,7 +55,7 @@ const carsData = [
     note: "Toyota es un fabricante japonés de automóviles."
   },
   brandUrl: "https://www.toyota.es",
-  dataStatus: { status: "Ficha inicial: precios y versiones españolas pendientes de contrastar", checkedAt: "17/10/2026" }
+  dataStatus: { status: "Advance: precio oficial al contado contrastado; Spirit pendiente", checkedAt: "17/10/2026" }
 },
 
 {
