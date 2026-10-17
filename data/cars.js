@@ -12,7 +12,7 @@ const carsData = [
   },
   priceMin: 36375,
   priceMax: 43425,
-  priceText: "Desde 36.375 € - 43.425 €",
+  priceText: "36.375 € - 43.425 €",
   rangeText: "Hasta 607 km WLTP",
   minRangeVal: 501,
   maxRangeVal: 607,
@@ -20,14 +20,14 @@ const carsData = [
   batteryType: "Iones de litio",
   powerText: "224 / 343 CV",
   trunk: 416,
-  frunkText: "No confirmado",
+  frunkText: "No disponible",
   seats: 5,
   acceleration: "Según versión",
   dimensions: "4,53 × 1,87 × 1,595 m",
-  charging: "CCS2 · 10-80 % en unos 28 min",
-  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. El Advance parte de 36.375 € al contado, con IVA y promociones comerciales incluidas, sin descontar ayudas públicas.",
+  charging: "150 kW CC · 10-80 % en unos 28 min",
+  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. El Electric 250 tiene un precio anunciado de 36.375 €, con IVA y promociones comerciales incluidas, sin descontar ayudas públicas.",
   highlights: ["Consumo homologado: 13,4 kWh/100 km (4x2) y 15,7 kWh/100 km (4x4)", "SUV 100 % eléctrico de cinco plazas", "Batería de 77 kWh en los acabados españoles anunciados", "Advance de 224 CV y Spirit AWD-i de 343 CV"],
-  considerations: ["No confundir con el Toyota C-HR híbrido", "El precio de Spirit al contado requiere confirmación actualizada", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
+  considerations: ["No confundir con el Toyota C-HR híbrido", "Comprobar las condiciones comerciales de los precios anunciados", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
   idealFor: ["Uso familiar", "Ciudad y carretera", "Viajes"],
   priceInfo: {
     includesVat: true,
@@ -35,9 +35,9 @@ const carsData = [
     note: "Precios «desde» mostrados en el configurador oficial Toyota España: 36.375 € (Electric 250 4x2) y 43.425 € (Electric 350 AWD-i 4x4). En las capturas, «Método de pago» indica respectivamente 36.975 € y 43.625 €. Confirmar condiciones de cada importe; no se han restado ayudas públicas."
   },
   chargingInfo: {
-    dcMax: "Según versión",
+    dcMax: "150 kW",
     acMax: "Según versión",
-    fastChargeText: "Consultar versión",
+    fastChargeText: "10-80 % en unos 28 min",
     connector: "CCS2",
     v2l: null
   },
@@ -55,7 +55,7 @@ const carsData = [
     note: "Toyota es un fabricante japonés de automóviles."
   },
   brandUrl: "https://www.toyota.es",
-  dataStatus: { status: "Precios «desde» y autonomías contrastados con capturas del configurador Toyota España", checkedAt: "17/10/2026" }
+  dataStatus: { status: "Precios y autonomías contrastados con capturas del configurador Toyota España", checkedAt: "17/10/2026" }
 },
 
 {
