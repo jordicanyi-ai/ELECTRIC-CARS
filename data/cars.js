@@ -1,5 +1,64 @@
 const carsData = [
 {
+  id: 18,
+  brand: "Toyota",
+  model: "C-HR+",
+  type: "SUV compacto",
+  launchYear: 2026,
+  warranty: {
+    vehicle: "Consultar condiciones Toyota España",
+    battery: "Consultar condiciones Toyota España",
+    capacity: "Consultar condiciones de garantía"
+  },
+  priceMin: null,
+  priceMax: null,
+  priceText: "Precio de tarifa por confirmar",
+  rangeText: "Hasta 600 km WLTP (según versión; cifra orientativa)",
+  minRangeVal: null,
+  maxRangeVal: null,
+  batteryText: "57,7 / 77 kWh (según versión)",
+  batteryType: "Iones de litio",
+  powerText: "Según motorización",
+  trunk: 416,
+  frunkText: "No confirmado",
+  seats: 5,
+  acceleration: "Según versión",
+  dimensions: "4,52 × 1,87 × 1,60 m (aprox.)",
+  charging: "CCS2; potencia según versión",
+  description: "El Toyota C-HR+ es un SUV 100 % eléctrico, distinto del C-HR híbrido. Ofrece varias configuraciones de batería y tracción, con un diseño de estilo coupé y cinco plazas. Los precios españoles al contado, con IVA y sin ayudas, están pendientes de contrastar con el configurador oficial.",
+  highlights: ["SUV 100 % eléctrico de cinco plazas", "Opciones de batería de 57,7 y 77 kWh", "Versiones de tracción delantera y total según mercado"],
+  considerations: ["No confundir con el Toyota C-HR híbrido", "Precios españoles sin ayudas pendientes de verificación", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
+  idealFor: ["Uso familiar", "Ciudad y carretera", "Viajes"],
+  priceInfo: {
+    includesVat: true,
+    includesAid: false,
+    note: "No se muestra un precio numérico hasta verificar el PVP español con IVA, al contado y sin ayudas ni financiación."
+  },
+  chargingInfo: {
+    dcMax: "Según versión",
+    acMax: "Según versión",
+    fastChargeText: "Consultar versión",
+    connector: "CCS2",
+    v2l: null
+  },
+  trims: [
+    { name: "Batería 57,7 kWh (configuración por confirmar en España)", price: "Por confirmar", priceValue: null, battery: "57,7 kWh", batteryType: "Iones de litio", power: "Consultar versión", range: "Pendiente de confirmar WLTP España", rangeValue: null, accel: "Consultar versión" },
+    { name: "Batería 77 kWh (configuración por confirmar en España)", price: "Por confirmar", priceValue: null, battery: "77 kWh", batteryType: "Iones de litio", power: "Consultar versión", range: "Pendiente de confirmar WLTP España", rangeValue: null, accel: "Consultar versión" }
+  ],
+  colors: [],
+  images: [],
+  videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: ""}],
+  brandInfo: {
+    logo: "",
+    group: "Toyota Motor Corporation",
+    relation: "Fabricante",
+    note: "Toyota es un fabricante japonés de automóviles."
+  },
+  brandUrl: "https://www.toyota.es",
+  dataStatus: { status: "Ficha inicial: precios y versiones españolas pendientes de contrastar", checkedAt: "17/10/2026" }
+},
+
+{
   "id": 16,
   "brand": "BYD",
   "model": "DOLPHIN",
