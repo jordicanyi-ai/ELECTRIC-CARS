@@ -190,7 +190,7 @@ const carsData = [
   },
   "trims": [{"name":"Active","price":"29.990 €","priceValue":29990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Boost","price":"31.990 €","priceValue":31990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Comfort","price":"36.200 €","priceValue":36200,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
   "colors": [],
-  "images": [],
+  "images": ["img/cars/byd-atto2/Byd_Atto2_01.webp", "img/cars/byd-atto2/Byd_Atto2_02.webp", "img/cars/byd-atto2/Byd_Atto2_03.webp", "img/cars/byd-atto2/Byd_Atto2_04.webp", "img/cars/byd-atto2/Byd_Atto2_05.webp", "img/cars/byd-atto2/Byd_Atto2_06.webp", "img/cars/byd-atto2/Byd_Atto2_07.webp", "img/cars/byd-atto2/Byd_Atto2_08.webp"],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
