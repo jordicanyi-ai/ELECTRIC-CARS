@@ -556,7 +556,16 @@ const carsData = [
     }
   ],
   "colors": [],
-  "images": [],
+  "images": [
+    "img/cars/byd-seal-uev/byd-seal-uev_01.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_02.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_03.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_04.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_05.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_06.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_07.webp",
+    "img/cars/byd-seal-uev/byd-seal-uev_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
