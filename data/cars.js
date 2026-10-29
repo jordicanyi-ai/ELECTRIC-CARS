@@ -555,7 +555,33 @@ const carsData = [
       "accel": "Consultar versión"
     }
   ],
-  "colors": [],
+  "colors": [
+    {
+      "name": "Delan Black",
+      "hex": "#1E2024"
+    },
+    {
+      "name": "Time Grey",
+      "hex": "#777E85"
+    },
+    {
+      "name": "Snow White",
+      "hex": "#F2F1ED",
+      "border": "#CBD5E1"
+    },
+    {
+      "name": "Emperor Red",
+      "hex": "#8C2836"
+    },
+    {
+      "name": "Tian Qing",
+      "hex": "#7295A0"
+    },
+    {
+      "name": "Boundless Cloud",
+      "hex": "#B5B7B5"
+    }
+  ],
   "images": [
     "img/cars/byd-seal-uev/byd-seal-uev_01.webp",
     "img/cars/byd-seal-uev/byd-seal-uev_02.webp",
