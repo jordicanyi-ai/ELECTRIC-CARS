@@ -704,7 +704,7 @@ let currentImageIndexes = {};
                 return `
                 <div class="flex items-center gap-2">
                     <span class="inline-block w-6 h-6 shrink-0 rounded-full shadow-sm"
-                        style="background-color:${hex || '#CBD5E1'}; border:1px solid ${border || 'rgba(15,23,42,.12)'}">
+                        style="background:${typeof color === 'object' && color.secondaryHex ? `linear-gradient(135deg, ${hex || '#CBD5E1'} 0 50%, ${color.secondaryHex} 50% 100%)` : (hex || '#CBD5E1')}; border:1px solid ${border || 'rgba(15,23,42,.12)'}">
                     </span>
                     <span class="text-xs font-semibold text-slate-600">${name || ''}</span>
                 </div>`;
