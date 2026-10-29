@@ -51,10 +51,10 @@ const carsData = [
     { name: "Negro Cosmo (Advance)", hex: "#202124", code: "218" },
     { name: "Gris Lunar (Advance)", hex: "#879194", code: "6Y1" },
     { name: "Rojo Persa (Advance)", hex: "#A84736", code: "4Z3" },
-    { name: "Bi-tono Gris Manhattan (Spirit)", hex: "#888B8C", code: "2YY" },
-    { name: "Bi-tono Blanco Perlado Iceberg (Spirit)", hex: "#F1F0EB", code: "2PS" },
-    { name: "Bi-tono Gris Lunar (Spirit)", hex: "#879194", code: "M66" },
-    { name: "Bi-tono Rojo Persa (Spirit)", hex: "#A84736", code: "M67" }
+    { name: "Bi-tono Gris Manhattan (Spirit)", hex: "#888B8C", secondaryHex: "#202124", code: "2YY" },
+    { name: "Bi-tono Blanco Perlado Iceberg (Spirit)", hex: "#F1F0EB", secondaryHex: "#202124", code: "2PS" },
+    { name: "Bi-tono Gris Lunar (Spirit)", hex: "#879194", secondaryHex: "#202124", code: "M66" },
+    { name: "Bi-tono Rojo Persa (Spirit)", hex: "#A84736", secondaryHex: "#202124", code: "M67" }
   ],
   images: ["img/cars/toyota-chr+/toyota-chr+_01.webp", "img/cars/toyota-chr+/toyota-chr+_02.webp", "img/cars/toyota-chr+/toyota-chr+_03.webp", "img/cars/toyota-chr+/toyota-chr+_04.webp", "img/cars/toyota-chr+/toyota-chr+_05.webp", "img/cars/toyota-chr+/toyota-chr+_06.webp", "img/cars/toyota-chr+/toyota-chr+_07.webp", "img/cars/toyota-chr+/toyota-chr+_08.webp"],
   videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: "img/cars/toyota-chr+/toyota-chr+_01.webp"}],
