@@ -455,7 +455,16 @@ const carsData = [
       "hex": "#8B2539"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/byd-seal/byd-seal_01.webp",
+    "img/cars/byd-seal/byd-seal_02.webp",
+    "img/cars/byd-seal/byd-seal_03.webp",
+    "img/cars/byd-seal/byd-seal_04.webp",
+    "img/cars/byd-seal/byd-seal_05.webp",
+    "img/cars/byd-seal/byd-seal_06.webp",
+    "img/cars/byd-seal/byd-seal_07.webp",
+    "img/cars/byd-seal/byd-seal_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
