@@ -956,7 +956,7 @@ const carsData = [
     "status": "Ficha técnica completada con datos del fabricante; precio PVP de referencia",
     "checkedAt": "29/10/2026"
   },
-  "discontinued": true
+  "discontinued": false
 },
 {
   "id": 24,
