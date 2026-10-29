@@ -329,7 +329,8 @@ const carsData = [
   "dataStatus": {
     "status": "Especificaciones contrastadas; precio histórico pendiente de actualización",
     "checkedAt": "29/10/2026"
-  }
+  },
+  "discontinued": true
 },
 {
   "id": 19,
@@ -905,9 +906,44 @@ const carsData = [
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [{"name":"Flagship AWD","price":"72.000 €","priceValue":72000,"battery":"108,8 kWh","batteryType":"LFP Blade","power":"517 CV","range":"530 km WLTP","rangeValue":530,"accel":"4,9 s"}],
-  "colors": [{"name":"Snow White","hex":"#F2F2EF","border":"#D9DDE3"},{"name":"Mountain Grey","hex":"#777B80"},{"name":"Silver Sand Black","hex":"#242528"}],
-  "images": ["img/cars/byd-tang/byd-tang_01.webp","img/cars/byd-tang/byd-tang_02.webp","img/cars/byd-tang/byd-tang_03.webp","img/cars/byd-tang/byd-tang_04.webp","img/cars/byd-tang/byd-tang_05.webp","img/cars/byd-tang/byd-tang_06.webp","img/cars/byd-tang/byd-tang_07.webp","img/cars/byd-tang/byd-tang_08.webp"],
+  "trims": [
+    {
+      "name": "Flagship AWD",
+      "price": "72.000 €",
+      "priceValue": 72000,
+      "battery": "108,8 kWh",
+      "batteryType": "LFP Blade",
+      "power": "517 CV",
+      "range": "530 km WLTP",
+      "rangeValue": 530,
+      "accel": "4,9 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Snow White",
+      "hex": "#F2F2EF",
+      "border": "#D9DDE3"
+    },
+    {
+      "name": "Mountain Grey",
+      "hex": "#777B80"
+    },
+    {
+      "name": "Silver Sand Black",
+      "hex": "#242528"
+    }
+  ],
+  "images": [
+    "img/cars/byd-tang/byd-tang_01.webp",
+    "img/cars/byd-tang/byd-tang_02.webp",
+    "img/cars/byd-tang/byd-tang_03.webp",
+    "img/cars/byd-tang/byd-tang_04.webp",
+    "img/cars/byd-tang/byd-tang_05.webp",
+    "img/cars/byd-tang/byd-tang_06.webp",
+    "img/cars/byd-tang/byd-tang_07.webp",
+    "img/cars/byd-tang/byd-tang_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
@@ -919,7 +955,8 @@ const carsData = [
   "dataStatus": {
     "status": "Ficha técnica completada con datos del fabricante; precio PVP de referencia",
     "checkedAt": "29/10/2026"
-  }
+  },
+  "discontinued": true
 },
 {
   "id": 24,
@@ -1046,7 +1083,8 @@ const carsData = [
   "dataStatus": {
     "status": "Ficha técnica contrastada; modelo descatalogado y precios históricos",
     "checkedAt": "29/10/2026"
-  }
+  },
+  "discontinued": true
 },
 {
     "id": 15,
