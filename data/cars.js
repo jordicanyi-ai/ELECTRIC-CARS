@@ -617,55 +617,105 @@ const carsData = [
   "brand": "BYD",
   "model": "HAN",
   "type": "Berlina grande",
-  "launchYear": null,
+  "launchYear": 2023,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
     "capacity": "70 %"
   },
   "priceMin": 69990,
-  "priceMax": 69990,
-  "priceText": "69.990 €",
-  "rangeText": "Hasta 521 km WLTP",
+  "priceMax": 73620,
+  "priceText": "69.990 - 73.620 €",
+  "rangeText": "521 km WLTP",
   "minRangeVal": 521,
   "maxRangeVal": 521,
-  "batteryText": "85.4 kWh",
-  "batteryType": "Blade Battery",
+  "batteryText": "85,4 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
   "powerText": "517 CV",
   "trunk": 410,
-  "frunkText": "Consultar versión",
+  "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "3,9 s",
   "dimensions": "5,00 × 1,91 × 1,50 m",
-  "charging": "Consultar versión",
-  "description": "El BYD HAN es un berlina grande 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "120 kW CC · 30-80 % en 30 min",
+  "description": "El BYD HAN es una berlina eléctrica de representación con dos motores, tracción integral AWD y 517 CV. Su batería Blade LFP de 85,4 kWh ofrece 521 km de autonomía homologada WLTP. Destaca por su equipamiento de confort y su aceleración de 0 a 100 km/h en 3,9 segundos. Modelo descatalogado en España; los precios mostrados son referencias históricas, no ofertas actuales.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "517 CV, tracción integral AWD y aceleración de 0 a 100 km/h en 3,9 s",
+    "Batería Blade LFP de 85,4 kWh y 521 km WLTP",
+    "Habitáculo amplio, 5 plazas y equipamiento de alta gama"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "Modelo descatalogado en España: no existe una tarifa de venta nueva vigente confirmada",
+    "Los precios indicados son tarifas históricas con IVA y sin ayudas",
+    "Carga rápida máxima de 120 kW CC; maletero de 410 L"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Quien busque una berlina eléctrica grande y potente",
+    "Viajes y uso familiar de cinco plazas"
   ],
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Referencia histórica: confirmar disponibilidad y tarifa vigente."
+    "note": "Precios históricos de tarifa española (2025), con IVA y sin ayudas públicas. Modelo descatalogado: no son precios de venta actuales."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "120 kW",
+    "acMax": "7 kW (ficha Executive España 2025)",
+    "fastChargeText": "30-80 % en 30 min (CC, 120 kW)",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Versión de acceso (referencia histórica)","price":"69.990 €","priceValue":69990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
-  "colors": [],
+  "trims": [
+    {
+      "name": "HAN AWD Executive",
+      "price": "69.990 € (histórico)",
+      "priceValue": 69990,
+      "battery": "85,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "517 CV",
+      "range": "521 km WLTP",
+      "rangeValue": 521,
+      "accel": "3,9 s"
+    },
+    {
+      "name": "HAN AWD Emerald Edition",
+      "price": "73.620 € (histórico)",
+      "priceValue": 73620,
+      "battery": "85,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "517 CV",
+      "range": "521 km WLTP",
+      "rangeValue": 521,
+      "accel": "3,9 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Snow White",
+      "hex": "#F0F0ED",
+      "border": "#CBD5E1"
+    },
+    {
+      "name": "Time Grey",
+      "hex": "#858A90"
+    },
+    {
+      "name": "Space Black",
+      "hex": "#202226"
+    },
+    {
+      "name": "AI Blue",
+      "hex": "#466481"
+    },
+    {
+      "name": "Emperor Red",
+      "hex": "#91332D"
+    },
+    {
+      "name": "Mountain Green",
+      "hex": "#52645B"
+    }
+  ],
   "images": [],
   "videos": [],
   "brandInfo": {
@@ -674,10 +724,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/car/han",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Ficha técnica contrastada; modelo descatalogado y precios históricos",
+    "checkedAt": "29/10/2026"
   }
 },
 {
