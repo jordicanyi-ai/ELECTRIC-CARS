@@ -73,7 +73,7 @@ const carsData = [
   "brand": "BYD",
   "model": "DOLPHIN",
   "type": "Compacto",
-  "launchYear": null,
+  "launchYear": 2023,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -85,28 +85,29 @@ const carsData = [
   "rangeText": "427 km WLTP",
   "minRangeVal": 427,
   "maxRangeVal": 427,
-  "batteryText": "60.4 kWh",
-  "batteryType": "Blade Battery",
+  "batteryText": "60,4 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
   "powerText": "204 CV",
   "trunk": 364,
-  "frunkText": "Consultar versión",
+  "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "7,0 s",
   "dimensions": "4,29 × 1,77 × 1,57 m",
-  "charging": "Consultar versión",
-  "description": "El BYD DOLPHIN es un compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "110 kW CC · 10-80 % en aprox. 36 min",
+  "description": "El BYD DOLPHIN es un compacto eléctrico de cinco plazas con batería Blade LFP de 60,4 kWh, 204 CV y 427 km de autonomía combinada WLTP. Los acabados Comfort y Design comparten mecánica y carga rápida de 110 kW; el Design añade techo panorámico y asientos delanteros ventilados.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "427 km de autonomía combinada WLTP",
+    "Batería Blade LFP de 60,4 kWh y 204 CV",
+    "Carga rápida CC de 110 kW y función V2L"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "Maletero de 364 litros y sin maletero delantero",
+    "El Design mejora el equipamiento, pero no la autonomía",
+    "Precios de tarifa orientativos sin ayudas; comprobar la tarifa vigente"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Desplazamientos diarios y viajes de media distancia",
+    "Familias que buscan un compacto eléctrico de cinco plazas"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -114,13 +115,36 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "110 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en aprox. 36 min",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Comfort","price":"36.690 €","priceValue":36690,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"38.690 €","priceValue":38690,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
+  "trims": [
+    {
+      "name": "Comfort",
+      "price": "36.690 €",
+      "priceValue": 36690,
+      "battery": "60,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "204 CV",
+      "range": "427 km WLTP",
+      "rangeValue": 427,
+      "accel": "7,0 s"
+    },
+    {
+      "name": "Design",
+      "price": "38.690 €",
+      "priceValue": 38690,
+      "battery": "60,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "204 CV",
+      "range": "427 km WLTP",
+      "rangeValue": 427,
+      "accel": "7,0 s"
+    }
+  ],
   "colors": [],
   "images": [],
   "videos": [],
@@ -132,8 +156,8 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es/coches-electricos/dolphin",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Datos técnicos contrastados; PVP de tarifa de referencia de julio de 2025, pendiente de actualización",
+    "checkedAt": "29/10/2026"
   }
 },
 {
