@@ -154,8 +154,8 @@ const carsData = [
     "capacity": "Consultar condiciones Kia"
   },
   "priceMin": 42765,
-  "priceMax": 48040,
-  "priceText": "42.765–48.040 €",
+  "priceMax": 52990,
+  "priceText": "42.765–52.990 €",
   "rangeText": "456–633 km WLTP",
   "minRangeVal": 456,
   "maxRangeVal": 633,
@@ -185,7 +185,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "PVP de referencia sin descuentos ni ayudas, según Carwow. Verificar antes de actualizar."
+    "note": ""
   },
   "chargingInfo": {
     "dcMax": "Consultar ficha por batería",
@@ -216,6 +216,17 @@ const carsData = [
       "range": "633 km WLTP",
       "rangeValue": 633,
       "accel": "7,7 s"
+    },
+    {
+      "name": "GT-Line 81,4 kWh",
+      "price": "52.990 €",
+      "priceValue": 52990,
+      "battery": "81,4 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "616 km WLTP",
+      "rangeValue": 616,
+      "accel": "7,8 s"
     }
   ],
   "colors": [
