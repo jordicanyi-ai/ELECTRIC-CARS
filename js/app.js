@@ -691,24 +691,22 @@ let currentImageIndexes = {};
 
             `).join('');
 
-            const colorsHtml = car.colors.map(color => `
-
+            const colorsHtml = (car.colors || []).map(color => {
+                const name = typeof color === 'string' ? color : color.name;
+                const hex = typeof color === 'string' ? ({
+                    'Snow White': '#F2F2EF',
+                    'Mountain Grey': '#777B80',
+                    'Silver Sand Black': '#242528'
+                }[color] || '#CBD5E1') : color.hex;
+                const border = typeof color === 'string' ? '#CBD5E1' : color.border;
+                return `
                 <div class="flex items-center gap-2">
-
-                    <span class="w-6 h-6 rounded-full shadow-sm"
-                        style="
-                            background:${color.hex};
-                            ${color.border ? `border:1px solid ${color.border}` : ''}
-                        ">
+                    <span class="inline-block w-6 h-6 shrink-0 rounded-full shadow-sm"
+                        style="background-color:${hex || '#CBD5E1'}; border:1px solid ${border || 'rgba(15,23,42,.12)'}">
                     </span>
-
-                    <span class="text-xs font-semibold text-slate-600">
-                        ${color.name}
-                    </span>
-
-                </div>
-
-            `).join('');
+                    <span class="text-xs font-semibold text-slate-600">${name || ''}</span>
+                </div>`;
+            }).join('');
 
             const galleryHtml = car.images.map((img, index) => `
 
