@@ -583,7 +583,16 @@ const carsData = [
       "border": "#CBD5E1"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/byd-sealion7/byd-sealion7_01.webp",
+    "img/cars/byd-sealion7/byd-sealion7_02.webp",
+    "img/cars/byd-sealion7/byd-sealion7_03.webp",
+    "img/cars/byd-sealion7/byd-sealion7_04.webp",
+    "img/cars/byd-sealion7/byd-sealion7_05.webp",
+    "img/cars/byd-sealion7/byd-sealion7_06.webp",
+    "img/cars/byd-sealion7/byd-sealion7_07.webp",
+    "img/cars/byd-sealion7/byd-sealion7_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
