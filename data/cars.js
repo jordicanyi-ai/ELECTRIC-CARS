@@ -1,5 +1,141 @@
 const carsData = [
 {
+  "id": 26,
+  "brand": "Kia",
+  "model": "EV4",
+  "type": "Compacto",
+  "launchYear": 2025,
+  "warranty": {
+    "vehicle": "7 años / 150.000 km",
+    "battery": "7 años / 150.000 km",
+    "capacity": "Consultar condiciones Kia"
+  },
+  "priceMin": 38715,
+  "priceMax": 38715,
+  "priceText": "38.715 € (Air 58,3 kWh; otras versiones pendientes de PVP)",
+  "rangeText": "440–625 km WLTP",
+  "minRangeVal": 440,
+  "maxRangeVal": 625,
+  "batteryText": "58,3–81,4 kWh",
+  "batteryType": "Iones de litio",
+  "powerText": "204 CV",
+  "trunk": 435,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "7,4–7,8 s",
+  "dimensions": "4,43 × 1,86 × 1,485 m",
+  "charging": "CC · 10–80 % en 29–31 min",
+  "description": "El Kia EV4 de cinco puertas es un compacto eléctrico de tracción delantera, con 204 CV, batería de 58,3 o 81,4 kWh y hasta 625 km WLTP según versión. Ofrece cinco plazas y 435 litros de maletero. No confundir con el EV4 Fastback, que tiene carrocería y autonomías diferentes.",
+  "highlights": [
+    "Hasta 625 km WLTP con batería de 81,4 kWh y llantas de 17 pulgadas",
+    "435 litros de maletero y cinco plazas",
+    "Carga rápida del 10 al 80 % en 29–31 minutos"
+  ],
+  "considerations": [
+    "Las versiones de 19 pulgadas y GT-Line homologan menos autonomía",
+    "PVP al contado verificado solo para Air 58,3 kWh; no usar precios promocionales con ayudas",
+    "Galería fotográfica pendiente de subir"
+  ],
+  "idealFor": [
+    "Uso diario y viajes",
+    "Familias que prefieren un compacto a un SUV"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "38.715 €: PVP al contado sin ofertas ni ayudas observado en España el 21/10/2026 para Air 58,3 kWh. Resto de acabados pendientes de contraste de precio actual."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar ficha por batería",
+    "acMax": "10,5 kW",
+    "fastChargeText": "10–80 % en 29 min (58,3 kWh) / 31 min (81,4 kWh)",
+    "connector": "CCS2",
+    "v2l": true
+  },
+  "trims": [
+    {
+      "name": "Air 58,3 kWh",
+      "price": "38.715 €",
+      "priceValue": 38715,
+      "battery": "58,3 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "440 km WLTP",
+      "rangeValue": 440,
+      "accel": "7,4 s"
+    },
+    {
+      "name": "Air 81,4 kWh",
+      "price": "Consultar PVP",
+      "priceValue": null,
+      "battery": "81,4 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "625 km WLTP",
+      "rangeValue": 625,
+      "accel": "7,7 s"
+    },
+    {
+      "name": "GT-Line 81,4 kWh",
+      "price": "Consultar PVP",
+      "priceValue": null,
+      "battery": "81,4 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "584 km WLTP",
+      "rangeValue": 584,
+      "accel": "7,8 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Cassa White",
+      "hex": "#E9E9E5"
+    },
+    {
+      "name": "Wolf Gray",
+      "hex": "#92999C"
+    },
+    {
+      "name": "Magma Red",
+      "hex": "#B22F30"
+    },
+    {
+      "name": "Ivory Silver Matt",
+      "hex": "#B7B9B3"
+    },
+    {
+      "name": "Deluxe White",
+      "hex": "#F4F3ED"
+    },
+    {
+      "name": "Penta Metal",
+      "hex": "#56595B"
+    },
+    {
+      "name": "Blue Flame",
+      "hex": "#4C6D9A"
+    },
+    {
+      "name": "Black Pearl",
+      "hex": "#191B1F"
+    }
+  ],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 de cinco puertas se fabrica en Europa."
+  },
+  "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
+  "dataStatus": {
+    "status": "Ficha técnica Kia España MY26; PVP base comprobado octubre 2026. Fotografías pendientes.",
+    "checkedAt": "29/10/2026"
+  }
+},
+{
   id: 25,
   brand: "Toyota",
   model: "C-HR+",
