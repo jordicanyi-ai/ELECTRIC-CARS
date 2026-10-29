@@ -117,8 +117,8 @@ let currentImageIndexes = {};
             chips.innerHTML = selected.map(car => `
                 <div class="compare-car-chip shrink-0 inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-xl pl-2 pr-1.5 py-1.5">
                     <img src="${car.images?.[0] || ''}" alt="" class="w-8 h-8 rounded-lg object-cover bg-slate-700">
-                    <span class="text-[10px] sm:text-xs font-bold text-white truncate">${car.brand} ${car.model}</span>
-                    <button onclick="removeFromCompare(${car.id},event)" class="w-6 h-6 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 shrink-0" aria-label="Quitar ${car.brand} ${car.model}">
+                    <span class="text-[10px] sm:text-xs font-bold text-white truncate">${car.brand} ${car.model.toLocaleUpperCase('es-ES')}</span>
+                    <button onclick="removeFromCompare(${car.id},event)" class="w-6 h-6 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 shrink-0" aria-label="Quitar ${car.brand} ${car.model.toLocaleUpperCase('es-ES')}">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>`).join('');
@@ -271,10 +271,10 @@ let currentImageIndexes = {};
                             ${selections.map(({car,value}) => `
                                 <div class="border-b border-l border-slate-200 p-3 sm:p-4 bg-white">
                                     <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-100">
-                                        <img src="${car.images?.[0] || ''}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover">
+                                        <img src="${car.images?.[0] || ''}" alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}" class="w-full h-full object-cover">
                                         <button onclick="removeFromCompare(${car.id},event)" class="absolute top-2 right-2 w-7 h-7 bg-black/60 text-white rounded-full"><i class="fa-solid fa-xmark text-xs"></i></button>
                                     </div>
-                                    <div class="mt-3"><div class="text-[9px] text-blue-600 font-extrabold uppercase tracking-wider">${car.brand}</div><div class="font-black text-sm leading-tight mt-0.5">${car.model}</div></div>
+                                    <div class="mt-3"><div class="text-[9px] text-blue-600 font-extrabold uppercase tracking-wider">${car.brand}</div><div class="font-black text-sm leading-tight mt-0.5">${car.model.toLocaleUpperCase('es-ES')}</div></div>
                                     <select id="compare-version-${car.id}" data-selected="${value}" onchange="updateCompareVersion(${car.id},this.value)" class="w-full mt-3 bg-slate-50 border border-slate-200 rounded-lg px-2 py-2 text-[10px] font-bold focus:outline-none focus:border-blue-500">${compareSelectOptions(car,value)}</select>
                                 </div>`).join('')}
                             ${rows.map(([label,key,icon]) => `
@@ -432,7 +432,7 @@ let currentImageIndexes = {};
 
                         <img id="car-img-${car.id}"
                             src="${image}"
-                            alt="${car.brand} ${car.model}"
+                            alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -490,7 +490,7 @@ let currentImageIndexes = {};
                                 </span>
 
                                 <h3 class="text-2xl font-black mt-1">
-                                    ${car.model}
+                                    ${car.model.toLocaleUpperCase('es-ES')}
                                 </h3>
 
                             </div>
@@ -711,10 +711,10 @@ let currentImageIndexes = {};
             const galleryHtml = car.images.map((img, index) => `
 
                 <button type="button" onclick="openLightbox(${car.id}, ${index})"
-                    aria-label="Ampliar fotografía ${index + 1} de ${car.brand} ${car.model}"
+                    aria-label="Ampliar fotografía ${index + 1} de ${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
                     class="block w-full text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group">
                     <img src="${img}"
-                        alt="${car.brand} ${car.model}"
+                        alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </button>
 
@@ -886,7 +886,7 @@ let currentImageIndexes = {};
                     <div class="h-[285px] sm:h-[355px] bg-slate-900">
 
                         <img src="${car.images[0]}"
-                            alt="${car.brand} ${car.model}"
+                            alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
                             class="w-full h-full object-cover">
 
                     </div>
@@ -915,7 +915,7 @@ let currentImageIndexes = {};
                                 </div>
 
                                 <h2 class="text-4xl sm:text-5xl font-black">
-                                    ${car.model}
+                                    ${car.model.toLocaleUpperCase('es-ES')}
                                 </h2>
 
                             </div>
@@ -1048,7 +1048,7 @@ let currentImageIndexes = {};
                             </div>
 
                             <h3 class="text-xl font-black">
-                                El ${car.model} en 30 segundos
+                                El ${car.model.toLocaleUpperCase('es-ES')} en 30 segundos
                             </h3>
 
                         </div>
@@ -1225,7 +1225,7 @@ let currentImageIndexes = {};
                             </span>
 
                             <h3 class="text-2xl font-black mt-1">
-                                Vídeos del ${car.model}
+                                Vídeos del ${car.model.toLocaleUpperCase('es-ES')}
                             </h3>
 
                             <p class="text-sm text-slate-500 mt-1">
@@ -1508,7 +1508,7 @@ let currentImageIndexes = {};
             const filtered = carsData.filter(car => {
 
                 const searchMatch =
-                    `${car.brand} ${car.model}`
+                    `${car.brand} ${car.model.toLocaleUpperCase('es-ES')}`
                         .toLowerCase()
                         .includes(search);
 
