@@ -145,7 +145,26 @@ const carsData = [
       "accel": "7,0 s"
     }
   ],
-  "colors": [],
+  "colors": [
+    {
+      "name": "Cream White",
+      "hex": "#E9E5D9",
+      "border": true
+    },
+    {
+      "name": "Skiing White",
+      "hex": "#F7F8F7",
+      "border": true
+    },
+    {
+      "name": "Urban Grey",
+      "hex": "#777C80"
+    },
+    {
+      "name": "Jet Black",
+      "hex": "#191B20"
+    }
+  ],
   "images": [
     "img/cars/byd-dolphin/byd-dolphin_01.webp",
     "img/cars/byd-dolphin/byd-dolphin_02.webp",
@@ -165,7 +184,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es/coches-electricos/dolphin",
   "dataStatus": {
-    "status": "Datos técnicos contrastados; PVP de tarifa de referencia de julio de 2025, pendiente de actualización",
+    "status": "Datos técnicos y colores 2025 contrastados con BYD España; precios de tarifa sujetos a actualización",
     "checkedAt": "29/10/2026"
   }
 },
