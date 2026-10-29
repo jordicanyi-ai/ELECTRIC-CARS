@@ -576,7 +576,7 @@ let currentImageIndexes = {};
                                 <i class="fa-solid fa-suitcase text-blue-600"></i>
 
                                 <div class="text-xs font-bold mt-1">
-                                    ${car.frunkText && car.frunkText !== 'No disponible' && !car.frunkText.includes('Pendiente')
+                                    ${car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|no disponible|pendiente)/i.test(car.frunkText.trim())
     ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
     : `${car.trunk} L`}
                                 </div>
@@ -1010,7 +1010,7 @@ let currentImageIndexes = {};
                                 <i class="fa-solid fa-suitcase text-blue-600"></i>
 
                                 <div class="text-xl font-black mt-2">
-                                    ${car.frunkText && car.frunkText !== 'No disponible' && !car.frunkText.includes('Pendiente')
+                                    ${car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|no disponible|pendiente)/i.test(car.frunkText.trim())
     ? `${car.trunk} + ${car.frunkText}`
     : `${car.trunk} L`}
                                 </div>
