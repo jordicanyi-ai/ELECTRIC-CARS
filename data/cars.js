@@ -352,16 +352,16 @@ const carsData = [
   "batteryType": "LFP (BYD Blade Battery)",
   "powerText": "313 - 449 CV",
   "trunk": 490,
-  "frunkText": "95 L",
+  "frunkText": "101 L",
   "seats": 5,
   "acceleration": "3,9 - 5,5 s",
   "dimensions": "4,46 × 1,88 × 1,62 m",
   "charging": "220 kW CC · 10-80 % en 25 min",
-  "description": "El BYD ATTO 3 EVO es un SUV compacto eléctrico de 2026 con arquitectura de 800 V, batería Blade LFP de 74,8 kWh y carga rápida de 220 kW. El Design tiene tracción trasera, 313 CV y 510 km WLTP; el Excellence ofrece tracción total, 449 CV y 470 km WLTP. Cuenta con 490 litros de maletero y 95 litros de espacio delantero.",
+  "description": "El BYD ATTO 3 EVO es un SUV compacto eléctrico de 2026 con arquitectura de 800 V, batería Blade LFP de 74,8 kWh y carga rápida de 220 kW. El Design tiene tracción trasera, 313 CV y 510 km WLTP; el Excellence ofrece tracción total, 449 CV y 470 km WLTP. Cuenta con 490 litros de maletero y 101 litros de espacio delantero.",
   "highlights": [
     "Batería Blade de 74,8 kWh y 510 km WLTP",
     "Carga rápida de 220 kW: del 10 al 80 % en 25 minutos",
-    "Maletero de 490 L más frunk de 95 L"
+    "Maletero de 490 L más frunk de 101 L"
   ],
   "considerations": [
     "La versión Excellence AWD homologa 470 km, frente a los 510 km del Design",
@@ -408,7 +408,33 @@ const carsData = [
       "accel": "3,9 s"
     }
   ],
-  "colors": [],
+  "colors": [
+    {
+      "name": "Iris Blue",
+      "hex": "#6C8395"
+    },
+    {
+      "name": "Obsidian Black",
+      "hex": "#17191D"
+    },
+    {
+      "name": "Time Grey",
+      "hex": "#85888B"
+    },
+    {
+      "name": "Atlantis Blue",
+      "hex": "#294E69"
+    },
+    {
+      "name": "Ruby Red",
+      "hex": "#8D2031"
+    },
+    {
+      "name": "Skiing White",
+      "hex": "#F2F1ED",
+      "border": true
+    }
+  ],
   "images": [
     "img/cars/byd-atto3-evo/byd-atto3-evo_01.webp",
     "img/cars/byd-atto3-evo/byd-atto3-evo_02.webp",
