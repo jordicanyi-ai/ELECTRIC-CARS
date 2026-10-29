@@ -734,9 +734,9 @@ const carsData = [
   "trunk": 425,
   "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "9,3–9,6 s",
   "dimensions": "4,79 × 1,89 × 1,67 m",
-  "charging": "Hasta 140 kW CC · 30-80 % en 28 min",
+  "charging": "115–140 kW CC · 30–80 % en aprox. 28 min",
   "description": "El BYD SEAL U EV es un SUV familiar 100 % eléctrico de cinco plazas, diferente del híbrido enchufable SEAL U DM-i. Se ofrece en las versiones Comfort, con batería Blade LFP de 71,8 kWh y 420 km WLTP, y Design, con 87 kWh y 500 km WLTP. Ambas desarrollan 218 CV y disponen de 425 litros de maletero.",
   "highlights": [
     "500 km WLTP en la versión Design",
@@ -758,7 +758,7 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Hasta 140 kW",
+    "dcMax": "115 kW (Comfort) / 140 kW (Design)",
     "acMax": "11 kW",
     "fastChargeText": "30-80 % en 28 min (según versión)",
     "connector": "CCS2",
@@ -774,7 +774,7 @@ const carsData = [
       "power": "218 CV",
       "range": "420 km WLTP",
       "rangeValue": 420,
-      "accel": "Consultar versión"
+      "accel": "9,3 s"
     },
     {
       "name": "Design",
@@ -785,7 +785,7 @@ const carsData = [
       "power": "218 CV",
       "range": "500 km WLTP",
       "rangeValue": 500,
-      "accel": "Consultar versión"
+      "accel": "9,6 s"
     }
   ],
   "colors": [
@@ -834,7 +834,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es/car/seal-u",
   "dataStatus": {
-    "status": "Especificaciones y PVPR contrastados con BYD España; comprobar precios vigentes",
+    "status": "Especificaciones contrastadas; PVP recomendado sin ayudas, sujeto a actualización",
     "checkedAt": "29/10/2026"
   }
 },
