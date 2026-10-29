@@ -895,6 +895,8 @@ let currentImageIndexes = {};
 
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent"></div>
 
+                    ${car.discontinued ? `<span class="absolute top-5 left-5 z-10 rounded-md bg-red-700/95 px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-white shadow-lg">Descatalogado</span>` : ""}
+
                     <button onclick="closeCarModal()"
                         class="absolute top-5 right-5 w-11 h-11 bg-black/50 hover:bg-black/80 backdrop-blur text-white rounded-full">
 
