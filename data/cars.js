@@ -483,7 +483,7 @@ const carsData = [
   "brand": "BYD",
   "model": "SEAL U EV",
   "type": "SUV familiar",
-  "launchYear": null,
+  "launchYear": 2024,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -492,31 +492,32 @@ const carsData = [
   "priceMin": 43790,
   "priceMax": 47290,
   "priceText": "43.790 € - 47.290 €",
-  "rangeText": "Hasta 500 km WLTP",
-  "minRangeVal": 500,
+  "rangeText": "420 - 500 km WLTP",
+  "minRangeVal": 420,
   "maxRangeVal": 500,
-  "batteryText": "87 kWh",
-  "batteryType": "Blade Battery",
+  "batteryText": "71,8 - 87 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
   "powerText": "218 CV",
-  "trunk": 552,
-  "frunkText": "Consultar versión",
+  "trunk": 425,
+  "frunkText": "No disponible",
   "seats": 5,
   "acceleration": "Consultar versión",
   "dimensions": "4,79 × 1,89 × 1,67 m",
-  "charging": "Consultar versión",
-  "description": "El BYD SEAL U EV es un suv familiar 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "Hasta 140 kW CC · 30-80 % en 28 min",
+  "description": "El BYD SEAL U EV es un SUV familiar 100 % eléctrico de cinco plazas, diferente del híbrido enchufable SEAL U DM-i. Se ofrece en las versiones Comfort, con batería Blade LFP de 71,8 kWh y 420 km WLTP, y Design, con 87 kWh y 500 km WLTP. Ambas desarrollan 218 CV y disponen de 425 litros de maletero.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Hasta 500 km WLTP en la versión Design",
+    "Interior amplio y cinco plazas con maletero de 425 L",
+    "Batería Blade LFP, bomba de calor y función V2L"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "No confundir el SEAL U EV con el SEAL U DM-i híbrido enchufable",
+    "La versión Comfort homologa 420 km WLTP; Design alcanza 500 km",
+    "Precios de tarifa sin ayudas ni descuentos sujetos a confirmación en concesionario"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Familias que buscan espacio y confort",
+    "Uso diario y viajes con cinco ocupantes"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -524,13 +525,36 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "Hasta 140 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "30-80 % en 28 min (según versión)",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Comfort","price":"43.790 €","priceValue":43790,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"47.290 €","priceValue":47290,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
+  "trims": [
+    {
+      "name": "Comfort",
+      "price": "43.790 €",
+      "priceValue": 43790,
+      "battery": "71,8 kWh",
+      "batteryType": "LFP Blade",
+      "power": "218 CV",
+      "range": "420 km WLTP",
+      "rangeValue": 420,
+      "accel": "Consultar versión"
+    },
+    {
+      "name": "Design",
+      "price": "47.290 €",
+      "priceValue": 47290,
+      "battery": "87 kWh",
+      "batteryType": "LFP Blade",
+      "power": "218 CV",
+      "range": "500 km WLTP",
+      "rangeValue": 500,
+      "accel": "Consultar versión"
+    }
+  ],
   "colors": [],
   "images": [],
   "videos": [],
@@ -540,10 +564,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/car/seal-u",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Especificaciones y PVPR contrastados con BYD España; comprobar precios vigentes",
+    "checkedAt": "29/10/2026"
   }
 },
 {
