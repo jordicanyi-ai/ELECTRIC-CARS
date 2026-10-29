@@ -276,7 +276,25 @@ const carsData = [
       "accel": "7,9 s"
     }
   ],
-  "colors": [],
+  "colors": [
+    {
+      "name": "Climbing Grey",
+      "hex": "#A3A6A2"
+    },
+    {
+      "name": "Hiking Green",
+      "hex": "#A6B8A3"
+    },
+    {
+      "name": "Skiing White",
+      "hex": "#F1F2EF",
+      "border": true
+    },
+    {
+      "name": "Cosmos Black",
+      "hex": "#1B1D20"
+    }
+  ],
   "images": [
     "img/cars/byd-atto2/Byd_Atto2_01.webp",
     "img/cars/byd-atto2/Byd_Atto2_02.webp",
