@@ -12,7 +12,7 @@ const carsData = [
   },
   "priceMin": 38715,
   "priceMax": 38715,
-  "priceText": "38.715 € (Air 58,3 kWh; otras versiones pendientes de PVP)",
+  "priceText": "38.715 €",
   "rangeText": "440–625 km WLTP",
   "minRangeVal": 440,
   "maxRangeVal": 625,
@@ -33,7 +33,6 @@ const carsData = [
   ],
   "considerations": [
     "Las versiones de 19 pulgadas y GT-Line homologan menos autonomía",
-    "PVP al contado verificado solo para Air 58,3 kWh; no usar precios promocionales con ayudas",
     "Galería fotográfica pendiente de subir"
   ],
   "idealFor": [
@@ -43,7 +42,7 @@ const carsData = [
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "38.715 €: PVP al contado sin ofertas ni ayudas observado en España el 21/10/2026 para Air 58,3 kWh. Resto de acabados pendientes de contraste de precio actual."
+    "note": ""
   },
   "chargingInfo": {
     "dcMax": "Consultar ficha por batería",
