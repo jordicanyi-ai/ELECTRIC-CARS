@@ -56,7 +56,7 @@ const carsData = [
     { name: "Bi-tono Gris Lunar (Spirit)", hex: "#879194", code: "M66" },
     { name: "Bi-tono Rojo Persa (Spirit)", hex: "#A84736", code: "M67" }
   ],
-  images: [],
+  images: ["img/cars/toyota-chr+/toyota-chr+_01.webp", "img/cars/toyota-chr+/toyota-chr+_02.webp", "img/cars/toyota-chr+/toyota-chr+_03.webp", "img/cars/toyota-chr+/toyota-chr+_04.webp", "img/cars/toyota-chr+/toyota-chr+_05.webp", "img/cars/toyota-chr+/toyota-chr+_06.webp", "img/cars/toyota-chr+/toyota-chr+_07.webp", "img/cars/toyota-chr+/toyota-chr+_08.webp"],
   videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: ""}],
   brandInfo: {
     logo: "",
