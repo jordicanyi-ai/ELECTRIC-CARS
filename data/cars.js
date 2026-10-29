@@ -597,7 +597,7 @@ const carsData = [
     "v2l": null
   },
   "trims": [{"name":"Flagship AWD","price":"72.000 €","priceValue":72000,"battery":"108,8 kWh","batteryType":"LFP Blade","power":"517 CV","range":"530 km WLTP","rangeValue":530,"accel":"4,9 s"}],
-  "colors": [],
+  "colors": ["Snow White", "Mountain Grey", "Silver Sand Black"],
   "images": ["img/cars/byd-tang/byd-tang_01.webp","img/cars/byd-tang/byd-tang_02.webp","img/cars/byd-tang/byd-tang_03.webp","img/cars/byd-tang/byd-tang_04.webp","img/cars/byd-tang/byd-tang_05.webp","img/cars/byd-tang/byd-tang_06.webp","img/cars/byd-tang/byd-tang_07.webp","img/cars/byd-tang/byd-tang_08.webp"],
   "videos": [],
   "brandInfo": {
