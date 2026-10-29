@@ -336,7 +336,7 @@ const carsData = [
   "brand": "BYD",
   "model": "ATTO 3 EVO",
   "type": "SUV compacto",
-  "launchYear": null,
+  "launchYear": 2026,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -345,31 +345,32 @@ const carsData = [
   "priceMin": 42990,
   "priceMax": 45990,
   "priceText": "42.990 € - 45.990 €",
-  "rangeText": "Autonomía WLTP pendiente de verificar",
-  "minRangeVal": null,
-  "maxRangeVal": null,
-  "batteryText": "Consultar versión",
-  "batteryType": "Blade Battery",
-  "powerText": "Hasta 449 CV",
+  "rangeText": "470 - 510 km WLTP",
+  "minRangeVal": 470,
+  "maxRangeVal": 510,
+  "batteryText": "74,8 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
+  "powerText": "313 - 449 CV",
   "trunk": 490,
-  "frunkText": "Consultar versión",
+  "frunkText": "95 L",
   "seats": 5,
-  "acceleration": "Consultar versión",
-  "dimensions": "Consultar versión",
-  "charging": "Consultar versión",
-  "description": "El BYD ATTO 3 EVO es un suv compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "acceleration": "3,9 - 5,5 s",
+  "dimensions": "4,46 × 1,88 × 1,62 m",
+  "charging": "220 kW CC · 10-80 % en 25 min",
+  "description": "El BYD ATTO 3 EVO es un SUV compacto eléctrico de 2026 con arquitectura de 800 V, batería Blade LFP de 74,8 kWh y carga rápida de 220 kW. El Design tiene tracción trasera, 313 CV y 510 km WLTP; el Excellence ofrece tracción total, 449 CV y 470 km WLTP. Cuenta con 490 litros de maletero y 95 litros de espacio delantero.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Batería Blade de 74,8 kWh y hasta 510 km WLTP",
+    "Carga rápida de 220 kW: del 10 al 80 % en 25 minutos",
+    "Maletero de 490 L más frunk de 95 L"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "La versión Excellence AWD homologa 470 km, frente a los 510 km del Design",
+    "El precio de 42.990 a 45.990 € es PVPR sin ayudas; las ofertas anunciadas por BYD pueden incluir financiación y subvenciones",
+    "No confundir con el ATTO 3 original, que tiene otra batería y carga rápida inferior"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Familias que buscan un SUV compacto eléctrico con espacio adicional",
+    "Quien viaje con frecuencia y valore recargas rápidas"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -377,13 +378,36 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "220 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en 25 min",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Design","price":"42.990 €","priceValue":42990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"45.990 €","priceValue":45990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
+  "trims": [
+    {
+      "name": "Design RWD",
+      "price": "42.990 €",
+      "priceValue": 42990,
+      "battery": "74,8 kWh",
+      "batteryType": "LFP Blade",
+      "power": "313 CV",
+      "range": "510 km WLTP",
+      "rangeValue": 510,
+      "accel": "5,5 s"
+    },
+    {
+      "name": "Excellence AWD",
+      "price": "45.990 €",
+      "priceValue": 45990,
+      "battery": "74,8 kWh",
+      "batteryType": "LFP Blade",
+      "power": "449 CV",
+      "range": "470 km WLTP",
+      "rangeValue": 470,
+      "accel": "3,9 s"
+    }
+  ],
   "colors": [],
   "images": [],
   "videos": [],
@@ -393,10 +417,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/car/atto3.html",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Datos de gama, precios PVPR y especificaciones contrastados con BYD España",
+    "checkedAt": "29/10/2026"
   }
 },
 {
