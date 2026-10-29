@@ -13,7 +13,7 @@ const carsData = [
   priceMin: 36375,
   priceMax: 43425,
   priceText: "36.375 € - 43.425 €",
-  rangeText: "607 km WLTP",
+  rangeText: "501–607 km WLTP",
   minRangeVal: 501,
   maxRangeVal: 607,
   batteryText: "77 kWh",
@@ -22,12 +22,12 @@ const carsData = [
   trunk: 416,
   frunkText: "No disponible",
   seats: 5,
-  acceleration: "Según versión",
+  acceleration: "5,2–7,4 s",
   dimensions: "4,53 × 1,87 × 1,595 m",
   charging: "150 kW CC · 10-80 % en unos 28 min",
-  description: "El Toyota C-HR+ es el tercer modelo 100 % eléctrico de la marca japonesa y el más económico de su gama eléctrica. Este SUV compacto de diseño coupé ofrece cinco plazas y versiones de tracción delantera o total.",
+  description: "El Toyota C-HR+ es un SUV 100 % eléctrico de cinco plazas y 416 litros de maletero. La versión Advance de tracción delantera ofrece 224 CV y 607 km WLTP; la Spirit AWD-i tiene 343 CV, tracción total y 501 km WLTP. Ambas utilizan una batería de 77 kWh y admiten carga rápida de 150 kW CC.",
   highlights: ["Consumo homologado: 13,4 kWh/100 km (4x2) y 15,7 kWh/100 km (4x4)", "SUV 100 % eléctrico de cinco plazas", "Batería de 77 kWh en los acabados españoles anunciados", "Advance de 224 CV y Spirit AWD-i de 343 CV"],
-  considerations: ["No confundir con el Toyota C-HR híbrido", "Comprobar las condiciones comerciales de los precios anunciados", "Autonomía y potencia definitivas dependen de la homologación y el acabado"],
+  considerations: ["No confundir con el Toyota C-HR híbrido", "Comprobar las condiciones comerciales de los precios anunciados", "La versión Spirit prioriza prestaciones y tracción total, con menor autonomía WLTP"],
   idealFor: ["Uso familiar", "Ciudad y carretera", "Viajes"],
   priceInfo: {
     includesVat: true,
@@ -36,13 +36,13 @@ const carsData = [
   },
   chargingInfo: {
     dcMax: "150 kW",
-    acMax: "Según versión",
+    acMax: "11 kW (Advance) / 22 kW (Spirit)",
     fastChargeText: "10-80 % en unos 28 min",
     connector: "CCS2",
     v2l: null
   },
   trims: [
-    { name: "Electric 250 4x2 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "607 km WLTP", rangeValue: 607, accel: "Consultar versión" },
+    { name: "Electric 250 4x2 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "607 km WLTP", rangeValue: 607, accel: "7,4 s (0-100 km/h)" },
     { name: "Electric 350 AWD-i 4x4 77 kWh", price: "43.425 €", priceValue: 43425, battery: "77 kWh", batteryType: "Iones de litio", power: "343 CV", range: "501 km WLTP", rangeValue: 501, accel: "5,2 s (0-100 km/h)" }
   ],
   colors: [
@@ -65,7 +65,7 @@ const carsData = [
     note: "Toyota es un fabricante japonés de automóviles."
   },
   brandUrl: "https://www.toyota.es",
-  dataStatus: { status: "Precios y autonomías contrastados con capturas del configurador Toyota España", checkedAt: "17/10/2026" }
+  dataStatus: { status: "Especificaciones verificadas con Toyota España; PVP Spirit pendiente de comprobación actualizada", checkedAt: "29/10/2026" }
 },
 
 {
