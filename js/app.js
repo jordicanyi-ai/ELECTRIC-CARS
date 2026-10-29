@@ -437,6 +437,8 @@ let currentImageIndexes = {};
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
+                        ${car.discontinued ? `<span class="absolute top-4 right-4 z-10 rounded-md bg-red-700/95 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-lg">Descatalogado</span>` : ""}
+
                         <span class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
                             ${car.type}
                         </span>
