@@ -2,7 +2,7 @@ const carsData = [
 {
   "id": 26,
   "brand": "Kia",
-  "model": "EV4",
+  "model": "EV4 Hatchback",
   "type": "Compacto",
   "launchYear": 2025,
   "warranty": {
@@ -25,15 +25,14 @@ const carsData = [
   "acceleration": "7,4–7,8 s",
   "dimensions": "4,43 × 1,86 × 1,485 m",
   "charging": "CC · 10–80 % en 29–31 min",
-  "description": "El Kia EV4 de cinco puertas es un compacto eléctrico de tracción delantera, con 204 CV, batería de 58,3 o 81,4 kWh y hasta 625 km WLTP según versión. Ofrece cinco plazas y 435 litros de maletero. No confundir con el EV4 Fastback, que tiene carrocería y autonomías diferentes.",
+  "description": "El Kia EV4 de cinco puertas es un compacto eléctrico de tracción delantera, con 204 CV, batería de 58,3 o 81,4 kWh y hasta 625 km WLTP según versión. Ofrece cinco plazas y 435 litros de maletero. ",
   "highlights": [
     "Hasta 625 km WLTP con batería de 81,4 kWh y llantas de 17 pulgadas",
     "435 litros de maletero y cinco plazas",
     "Carga rápida del 10 al 80 % en 29–31 minutos"
   ],
   "considerations": [
-    "Las versiones de 19 pulgadas y GT-Line homologan menos autonomía",
-    "Galería fotográfica pendiente de subir"
+    "Las versiones de 19 pulgadas y GT-Line homologan menos autonomía"
   ],
   "idealFor": [
     "Uso diario y viajes",
@@ -139,10 +138,134 @@ const carsData = [
   },
   "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
   "dataStatus": {
-    "status": "Ficha técnica Kia España MY26; PVP base comprobado octubre 2026. Galería de ocho imágenes enlazada.",
+    "status": "Ficha técnica Kia España MY26. Galería de ocho imágenes enlazada.",
     "checkedAt": "29/10/2026"
   }
 },
+{
+  "id": 27,
+  "brand": "Kia",
+  "model": "EV4 Fastback",
+  "type": "Berlina",
+  "launchYear": 2025,
+  "warranty": {
+    "vehicle": "7 años / 150.000 km",
+    "battery": "7 años / 150.000 km",
+    "capacity": "Consultar condiciones Kia"
+  },
+  "priceMin": 42765,
+  "priceMax": 48040,
+  "priceText": "42.765–48.040 €",
+  "rangeText": "456–633 km WLTP",
+  "minRangeVal": 456,
+  "maxRangeVal": 633,
+  "batteryText": "58,3–81,4 kWh",
+  "batteryType": "Iones de litio",
+  "powerText": "204 CV",
+  "trunk": 490,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "7,4–7,8 s",
+  "dimensions": "4,73 × 1,86 × 1,48 m",
+  "charging": "CC · 10–80 % en 29–31 min",
+  "description": "El Kia EV4 Fastback es una berlina eléctrica de cuatro puertas con tracción delantera, 204 CV, baterías de 58,3 y 81,4 kWh, autonomía de 456 a 633 km WLTP y maletero de 490 litros. Su carrocería alargada y aerodinámica se diferencia del EV4 Hatchback.",
+  "highlights": [
+    "633 km WLTP con batería de 81,4 kWh y llantas de 17 pulgadas",
+    "490 litros de maletero y cinco plazas",
+    "Carga rápida del 10 al 80 % en 29–31 minutos"
+  ],
+  "considerations": [
+    "La autonomía varía según batería, llantas y acabado",
+    "El Fastback tiene carrocería de cuatro puertas, distinta del Hatchback"
+  ],
+  "idealFor": [
+    "Uso diario y viajes",
+    "Familias que prefieren un compacto a un SUV"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de referencia sin descuentos ni ayudas, según Carwow. Verificar antes de actualizar."
+  },
+  "chargingInfo": {
+    "dcMax": "Consultar ficha por batería",
+    "acMax": "10,5 kW",
+    "fastChargeText": "10–80 % en 29 min (58,3 kWh) / 31 min (81,4 kWh)",
+    "connector": "CCS2",
+    "v2l": true
+  },
+  "trims": [
+    {
+      "name": "Earth Launch Edition 58,3 kWh",
+      "price": "42.765 €",
+      "priceValue": 42765,
+      "battery": "58,3 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "456 km WLTP",
+      "rangeValue": 456,
+      "accel": "7,4 s"
+    },
+    {
+      "name": "Earth Launch Edition 81,4 kWh",
+      "price": "48.040 €",
+      "priceValue": 48040,
+      "battery": "81,4 kWh",
+      "batteryType": "Iones de litio",
+      "power": "204 CV",
+      "range": "633 km WLTP",
+      "rangeValue": 633,
+      "accel": "7,7 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Cassa White",
+      "hex": "#E9E9E5"
+    },
+    {
+      "name": "Wolf Gray",
+      "hex": "#92999C"
+    },
+    {
+      "name": "Magma Red",
+      "hex": "#B22F30"
+    },
+    {
+      "name": "Ivory Silver Matt",
+      "hex": "#B7B9B3"
+    },
+    {
+      "name": "Deluxe White",
+      "hex": "#F4F3ED"
+    },
+    {
+      "name": "Penta Metal",
+      "hex": "#56595B"
+    },
+    {
+      "name": "Blue Flame",
+      "hex": "#4C6D9A"
+    },
+    {
+      "name": "Black Pearl",
+      "hex": "#191B1F"
+    }
+  ],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 Fastback es una berlina de cuatro puertas."
+  },
+  "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
+  "dataStatus": {
+    "status": "Ficha técnica Kia España MY26; precios PVP de referencia. Galería fotográfica pendiente.",
+    "checkedAt": "29/10/2026"
+  }
+}
 {
   id: 25,
   brand: "Toyota",
