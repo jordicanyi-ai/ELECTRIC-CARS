@@ -193,7 +193,7 @@ const carsData = [
   "brand": "BYD",
   "model": "ATTO 2",
   "type": "SUV urbano",
-  "launchYear": null,
+  "launchYear": 2025,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -202,31 +202,32 @@ const carsData = [
   "priceMin": 29990,
   "priceMax": 36200,
   "priceText": "29.990 € - 36.200 €",
-  "rangeText": "320 km WLTP",
-  "minRangeVal": 320,
-  "maxRangeVal": 320,
-  "batteryText": "45.1 kWh",
-  "batteryType": "Blade Battery",
-  "powerText": "177 CV",
+  "rangeText": "312–430 km WLTP",
+  "minRangeVal": 312,
+  "maxRangeVal": 430,
+  "batteryText": "45,1–64,8 kWh",
+  "batteryType": "LFP (Blade Battery)",
+  "powerText": "177–204 CV",
   "trunk": 400,
-  "frunkText": "Consultar versión",
+  "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "7,9 s",
   "dimensions": "4,31 × 1,83 × 1,68 m",
-  "charging": "Consultar versión",
-  "description": "El BYD ATTO 2 es un suv urbano 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "65–155 kW CC · 10–80 % en 37–25 min",
+  "description": "El BYD ATTO 2 es un SUV eléctrico de cinco plazas con tracción delantera. Las versiones Active y Boost ofrecen 312 km WLTP con batería Blade LFP de 45,1 kWh y 177 CV; la Comfort aumenta a 430 km WLTP, 64,8 kWh y 204 CV, con carga rápida de 155 kW y maletero de 450 litros.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Autonomía combinada WLTP de 312 a 430 km según versión",
+    "Batería Blade LFP y bomba de calor de serie",
+    "La Comfort ofrece 155 kW CC y 450 litros de maletero"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "Active y Boost cargan a 65 kW CC y ofrecen 400 litros de maletero",
+    "La versión Comfort tiene un precio superior, pero mucha más autonomía",
+    "Precios PVP de referencia sin ayudas ni descuentos condicionados"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Uso diario y desplazamientos urbanos",
+    "Familias que buscan un SUV compacto; Comfort para viajes"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -234,15 +235,58 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "65–155 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10–80 % en 37 min (Active/Boost) o 25 min (Comfort)",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Active","price":"29.990 €","priceValue":29990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Boost","price":"31.990 €","priceValue":31990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Comfort","price":"36.200 €","priceValue":36200,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
+  "trims": [
+    {
+      "name": "Active",
+      "price": "29.990 €",
+      "priceValue": 29990,
+      "battery": "45,1 kWh",
+      "batteryType": "LFP Blade",
+      "power": "177 CV",
+      "range": "312 km WLTP",
+      "rangeValue": 312,
+      "accel": "7,9 s"
+    },
+    {
+      "name": "Boost",
+      "price": "31.990 €",
+      "priceValue": 31990,
+      "battery": "45,1 kWh",
+      "batteryType": "LFP Blade",
+      "power": "177 CV",
+      "range": "312 km WLTP",
+      "rangeValue": 312,
+      "accel": "7,9 s"
+    },
+    {
+      "name": "Comfort",
+      "price": "36.200 €",
+      "priceValue": 36200,
+      "battery": "64,8 kWh",
+      "batteryType": "LFP Blade",
+      "power": "204 CV",
+      "range": "430 km WLTP",
+      "rangeValue": 430,
+      "accel": "7,9 s"
+    }
+  ],
   "colors": [],
-  "images": ["img/cars/byd-atto2/Byd_Atto2_01.webp", "img/cars/byd-atto2/Byd_Atto2_02.webp", "img/cars/byd-atto2/Byd_Atto2_03.webp", "img/cars/byd-atto2/Byd_Atto2_04.webp", "img/cars/byd-atto2/Byd_Atto2_05.webp", "img/cars/byd-atto2/Byd_Atto2_06.webp", "img/cars/byd-atto2/Byd_Atto2_07.webp", "img/cars/byd-atto2/Byd_Atto2_08.webp"],
+  "images": [
+    "img/cars/byd-atto2/Byd_Atto2_01.webp",
+    "img/cars/byd-atto2/Byd_Atto2_02.webp",
+    "img/cars/byd-atto2/Byd_Atto2_03.webp",
+    "img/cars/byd-atto2/Byd_Atto2_04.webp",
+    "img/cars/byd-atto2/Byd_Atto2_05.webp",
+    "img/cars/byd-atto2/Byd_Atto2_06.webp",
+    "img/cars/byd-atto2/Byd_Atto2_07.webp",
+    "img/cars/byd-atto2/Byd_Atto2_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
@@ -250,10 +294,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/coches-electricos/atto-2",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Especificaciones y PVP recomendados contrastados con BYD España; verificar tarifa vigente al comprar",
+    "checkedAt": "29/10/2026"
   }
 },
 {
