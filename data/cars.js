@@ -276,7 +276,7 @@ const carsData = [
     "status": "Ficha técnica Kia España MY26; precios PVP de referencia. Galería fotográfica pendiente.",
     "checkedAt": "29/10/2026"
   }
-}
+},
 {
   id: 25,
   brand: "Toyota",
