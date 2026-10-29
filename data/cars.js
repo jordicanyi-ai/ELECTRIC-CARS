@@ -345,7 +345,7 @@ const carsData = [
   "brand": "BYD",
   "model": "SEAL",
   "type": "Berlina",
-  "launchYear": null,
+  "launchYear": 2023,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -354,31 +354,32 @@ const carsData = [
   "priceMin": 41990,
   "priceMax": 52490,
   "priceText": "41.990 € - 52.490 €",
-  "rangeText": "Hasta 570 km WLTP",
-  "minRangeVal": 570,
+  "rangeText": "460 - 570 km WLTP",
+  "minRangeVal": 460,
   "maxRangeVal": 570,
-  "batteryText": "82.5 kWh",
-  "batteryType": "Blade Battery",
-  "powerText": "Hasta 530 CV",
-  "trunk": 400,
-  "frunkText": "Consultar versión",
+  "batteryText": "61,4 - 82,5 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
+  "powerText": "228 - 530 CV",
+  "trunk": 485,
+  "frunkText": "72 L",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "3,8 - 7,5 s",
   "dimensions": "4,80 × 1,88 × 1,46 m",
-  "charging": "Consultar versión",
-  "description": "El BYD SEAL es un berlina 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "110 - 150 kW CC · 10-80 % en aprox. 37 min",
+  "description": "El BYD SEAL es una berlina eléctrica de cinco plazas actualizada en 2026. Ofrece tres versiones con tracción trasera o total, baterías Blade LFP de 61,4 y 82,5 kWh y entre 460 y 570 km de autonomía WLTP. La actualización aumenta el maletero trasero a 485 litros y el delantero a 72 litros.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Hasta 570 km de autonomía WLTP en Design",
+    "Maletero de 485 L y frunk de 72 L en el modelo actualizado de 2026",
+    "Hasta 530 CV y aceleración de 0 a 100 km/h en 3,8 s"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "La versión Excellence AWD prioriza prestaciones y homologa 520 km WLTP, menos que Design",
+    "La carga rápida máxima es de 110 kW en Comfort y 150 kW en Design y Excellence",
+    "Las unidades anteriores a la actualización de 2026 tienen maleteros de 400 + 53 L"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Quien busque una berlina eléctrica eficiente para viajar",
+    "Conductores que valoren prestaciones y tecnología"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -386,14 +387,74 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "110 - 150 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en aproximadamente 37 min (según versión)",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Comfort","price":"41.990 €","priceValue":41990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"49.490 €","priceValue":49490,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"52.490 €","priceValue":52490,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
-  "colors": [],
+  "trims": [
+    {
+      "name": "Comfort RWD",
+      "price": "41.990 €",
+      "priceValue": 41990,
+      "battery": "61,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "228 CV",
+      "range": "460 km WLTP",
+      "rangeValue": 460,
+      "accel": "7,5 s"
+    },
+    {
+      "name": "Design RWD",
+      "price": "49.490 €",
+      "priceValue": 49490,
+      "battery": "82,5 kWh",
+      "batteryType": "LFP Blade",
+      "power": "313 CV",
+      "range": "570 km WLTP",
+      "rangeValue": 570,
+      "accel": "5,9 s"
+    },
+    {
+      "name": "Excellence AWD",
+      "price": "52.490 €",
+      "priceValue": 52490,
+      "battery": "82,5 kWh",
+      "batteryType": "LFP Blade",
+      "power": "530 CV",
+      "range": "520 km WLTP",
+      "rangeValue": 520,
+      "accel": "3,8 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Atlantis Grey",
+      "hex": "#75818A"
+    },
+    {
+      "name": "Indigo Grey",
+      "hex": "#58657A"
+    },
+    {
+      "name": "Obsidian Black",
+      "hex": "#202226"
+    },
+    {
+      "name": "Polar White",
+      "hex": "#F2F2EF",
+      "border": "#CBD5E1"
+    },
+    {
+      "name": "Lavender Grey",
+      "hex": "#9C98A9"
+    },
+    {
+      "name": "Ruby Red",
+      "hex": "#8B2539"
+    }
+  ],
   "images": [],
   "videos": [],
   "brandInfo": {
@@ -402,10 +463,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/coches-electricos/seal",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Gama y PVP recomendados contrastados con BYD España (actualización 2026)",
+    "checkedAt": "29/10/2026"
   }
 },
 {
