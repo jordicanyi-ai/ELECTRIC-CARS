@@ -716,7 +716,16 @@ const carsData = [
       "hex": "#52645B"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/byd-han/byd-han_01.webp",
+    "img/cars/byd-han/byd-han_02.webp",
+    "img/cars/byd-han/byd-han_03.webp",
+    "img/cars/byd-han/byd-han_04.webp",
+    "img/cars/byd-han/byd-han_05.webp",
+    "img/cars/byd-han/byd-han_06.webp",
+    "img/cars/byd-han/byd-han_07.webp",
+    "img/cars/byd-han/byd-han_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
