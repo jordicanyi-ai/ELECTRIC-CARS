@@ -13,7 +13,7 @@ const carsData = [
   priceMin: 36375,
   priceMax: 43425,
   priceText: "36.375 € - 43.425 €",
-  rangeText: "Hasta 607 km WLTP",
+  rangeText: "607 km WLTP",
   minRangeVal: 501,
   maxRangeVal: 607,
   batteryText: "77 kWh",
@@ -42,8 +42,8 @@ const carsData = [
     v2l: null
   },
   trims: [
-    { name: "Electric 250 4x2 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "Hasta 607 km WLTP", rangeValue: 607, accel: "Consultar versión" },
-    { name: "Electric 350 AWD-i 4x4 77 kWh", price: "43.425 €", priceValue: 43425, battery: "77 kWh", batteryType: "Iones de litio", power: "343 CV", range: "Hasta 501 km WLTP", rangeValue: 501, accel: "5,2 s (0-100 km/h)" }
+    { name: "Electric 250 4x2 77 kWh", price: "36.375 €", priceValue: 36375, battery: "77 kWh", batteryType: "Iones de litio", power: "224 CV", range: "607 km WLTP", rangeValue: 607, accel: "Consultar versión" },
+    { name: "Electric 350 AWD-i 4x4 77 kWh", price: "43.425 €", priceValue: 43425, battery: "77 kWh", batteryType: "Iones de litio", power: "343 CV", range: "501 km WLTP", rangeValue: 501, accel: "5,2 s (0-100 km/h)" }
   ],
   colors: [
     { name: "Gris Manhattan (Advance)", hex: "#888B8C", code: "1H5" },
@@ -82,7 +82,7 @@ const carsData = [
   "priceMin": 36690,
   "priceMax": 38690,
   "priceText": "36.690 € - 38.690 €",
-  "rangeText": "Hasta 427 km WLTP",
+  "rangeText": "427 km WLTP",
   "minRangeVal": 427,
   "maxRangeVal": 427,
   "batteryText": "60.4 kWh",
@@ -150,7 +150,7 @@ const carsData = [
   "priceMin": 29990,
   "priceMax": 36200,
   "priceText": "29.990 € - 36.200 €",
-  "rangeText": "Hasta 320 km WLTP",
+  "rangeText": "320 km WLTP",
   "minRangeVal": 320,
   "maxRangeVal": 320,
   "batteryText": "45.1 kWh",
@@ -427,7 +427,7 @@ const carsData = [
   "charging": "110 - 150 kW CC · 10-80 % en aprox. 37 min",
   "description": "El BYD SEAL es una berlina eléctrica de cinco plazas actualizada en 2026. Ofrece tres versiones con tracción trasera o total, baterías Blade LFP de 61,4 y 82,5 kWh y entre 460 y 570 km de autonomía WLTP. La actualización aumenta el maletero trasero a 485 litros y el delantero a 72 litros.",
   "highlights": [
-    "Hasta 570 km de autonomía WLTP en Design",
+    "570 km de autonomía WLTP en Design",
     "Maletero de 485 L y frunk de 72 L en el modelo actualizado de 2026",
     "Hasta 530 CV y aceleración de 0 a 100 km/h en 3,8 s"
   ],
@@ -565,7 +565,7 @@ const carsData = [
   "charging": "Hasta 140 kW CC · 30-80 % en 28 min",
   "description": "El BYD SEAL U EV es un SUV familiar 100 % eléctrico de cinco plazas, diferente del híbrido enchufable SEAL U DM-i. Se ofrece en las versiones Comfort, con batería Blade LFP de 71,8 kWh y 420 km WLTP, y Design, con 87 kWh y 500 km WLTP. Ambas desarrollan 218 CV y disponen de 425 litros de maletero.",
   "highlights": [
-    "Hasta 500 km WLTP en la versión Design",
+    "500 km WLTP en la versión Design",
     "Interior amplio y cinco plazas con maletero de 425 L",
     "Batería Blade LFP, bomba de calor y función V2L"
   ],
@@ -692,7 +692,7 @@ const carsData = [
   "charging": "150 - 230 kW CC · 10-80 % en 24-32 min",
   "description": "El BYD SEALION 7 es un SUV coupé eléctrico de cinco plazas con batería Blade LFP, 520 litros de maletero y 58 litros de frunk. Se ofrece con tracción trasera Comfort de 313 CV y dos versiones de tracción total de 530 CV. Su autonomía homologada oscila entre 456 y 502 km WLTP y admite carga rápida de hasta 230 kW en la versión Excellence AWD.",
   "highlights": [
-    "Hasta 502 km WLTP y batería Blade LFP de 82,5 a 91,3 kWh",
+    "502 km WLTP y batería Blade LFP de 82,5 a 91,3 kWh",
     "Maletero de 520 L más frunk de 58 L",
     "Hasta 530 CV y 0-100 km/h en 4,5 s en las versiones AWD"
   ],
@@ -1003,7 +1003,7 @@ const carsData = [
     "priceMin": 19900,
     "priceMax": 21500,
     "priceText": "19.900 - 21.500 €",
-    "rangeText": "Hasta 263 km",
+    "rangeText": "263 km",
     "minRangeVal": 263,
     "maxRangeVal": 263,
     "batteryText": "27,5 kWh",
@@ -1015,9 +1015,9 @@ const carsData = [
     "acceleration": "12,1 s",
     "dimensions": "3,79 × 1,72 × 1,49 m",
     "charging": "Hasta 50 kW CC (según equipamiento)",
-    "description": "El Renault Twingo E-Tech eléctrico recupera el concepto de coche urbano compacto con cinco puertas, cuatro plazas y un interior modular. La batería de 27,5 kWh ofrece hasta 263 km de autonomía WLTP según la versión y la configuración.",
+    "description": "El Renault Twingo E-Tech eléctrico recupera el concepto de coche urbano compacto con cinco puertas, cuatro plazas y un interior modular. La batería de 27,5 kWh ofrece 263 km de autonomía WLTP según la versión y la configuración.",
     "highlights": [
-        "Hasta 263 km WLTP",
+        "263 km WLTP",
         "Cinco puertas en menos de 3,8 metros",
         "Asientos traseros deslizantes",
         "Hasta 360 litros de maletero"
@@ -1053,7 +1053,7 @@ const carsData = [
             "battery": "27,5 kWh",
             "batteryType": "LFP",
             "power": "82 CV",
-            "range": "Hasta 263 km WLTP",
+            "range": "263 km WLTP",
             "rangeValue": 263,
             "accel": "12,1 s"
         },
@@ -1064,7 +1064,7 @@ const carsData = [
             "battery": "27,5 kWh",
             "batteryType": "LFP",
             "power": "82 CV",
-            "range": "Hasta 263 km WLTP",
+            "range": "263 km WLTP",
             "rangeValue": 263,
             "accel": "12,1 s"
         }
@@ -1147,7 +1147,7 @@ const carsData = [
     "acceleration": "12,7 s",
     "dimensions": "3,62 × 1,65 × 1,58 m",
     "charging": "Hasta 45 kW CC",
-    "description": "El Leapmotor T03 es un eléctrico urbano compacto de cuatro plazas con batería de 37,3 kWh y autonomía homologada de hasta 265 km WLTP. Su formato pequeño facilita los desplazamientos y el aparcamiento en ciudad.",
+    "description": "El Leapmotor T03 es un eléctrico urbano compacto de cuatro plazas con batería de 37,3 kWh y autonomía homologada de 265 km WLTP. Su formato pequeño facilita los desplazamientos y el aparcamiento en ciudad.",
     "highlights": [
         "265 km WLTP",
         "Tamaño urbano compacto",
@@ -1248,13 +1248,13 @@ const carsData = [
         powerText:"279 - 464 CV",
         trunk:594,frunkText:"88 L",seats:5,
         acceleration:"3,1 - 6,2 s",dimensions:"4,72 × 1,85 × 1,44 m",
-        charging:"175 / 250 kW · hasta 286 km recuperados en 15 min",
-        description:"Berlina eléctrica de referencia y uno de los coches eléctricos más vendidos en España. Destaca por su elevada eficiencia, amplia autonomía, acceso a la red de Supercargadores Tesla y avanzado software. Incorpora el Modo Centinela y tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. La variante Premium Gran Autonomía de tracción trasera anuncia hasta 750 km WLTP.",
-        highlights:["Hasta 750 km WLTP","Red de Supercargadores","Consumo contenido","594 L de maletero + 88 L de frunk"],
+        charging:"175 / 250 kW · 286 km recuperados en 15 min",
+        description:"Berlina eléctrica de referencia y uno de los coches eléctricos más vendidos en España. Destaca por su elevada eficiencia, amplia autonomía, acceso a la red de Supercargadores Tesla y avanzado software. Incorpora el Modo Centinela y tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. La variante Premium Gran Autonomía de tracción trasera anuncia 750 km WLTP.",
+        highlights:["750 km WLTP","Red de Supercargadores","Consumo contenido","594 L de maletero + 88 L de frunk"],
         considerations:["Red de talleres oficiales y puntos de venta limitada en España","Muchas funciones dependen de la pantalla central","La versión de acceso ofrece menos equipamiento de confort","La tarifa no incluye 980 € de destino y documentación"],
         idealFor:["Viajes largos","Uso familiar","Autopista","Desplazamientos diarios"],
         priceInfo:{includesVat:true,includesAid:false,note:"Tarifas oficiales con IVA, sin ayudas ni descuentos. Tesla añade 980 € por destino y documentación; las opciones aumentan el precio."},
-        chargingInfo:{dcMax:"175 / 250 kW",acMax:"11 kW",fastChargeText:"Hasta 286 km de autonomía añadidos en 15 min (según versión); Tesla no publica un tiempo 10-80 % común",connector:"CCS2",v2l:false},
+        chargingInfo:{dcMax:"175 / 250 kW",acMax:"11 kW",fastChargeText:"286 km de autonomía añadidos en 15 min (según versión); Tesla no publica un tiempo 10-80 % común",connector:"CCS2",v2l:false},
         trims:[
             {name:"RWD",price:"36.990 €",priceValue:36990,battery:"62,5 kWh",batteryType:"LFP",power:"279 CV",range:"572 km WLTP",rangeValue:572,accel:"6,2 s"},
             {name:"Premium Gran Autonomía RWD",price:"44.990 €",priceValue:44990,battery:"79 kWh",batteryType:"NMC",power:"304 CV",range:"750 km WLTP",rangeValue:750,accel:"5,2 s"},
@@ -1329,7 +1329,7 @@ const carsData = [
 
         highlights:[
             "Desde 21.350 € de PVPR sin ayudas",
-            "Hasta 325 km WLTP",
+            "325 km WLTP",
             "Suspensión Citroën Advanced Comfort según versión",
             "Gama amplia de acabados y ediciones especiales"
         ],
@@ -1380,7 +1380,7 @@ const carsData = [
                 battery:"44 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 325 km WLTP",
+                range:"325 km WLTP",
                 rangeValue:325,
                 accel:"≈11 s"
             },
@@ -1391,7 +1391,7 @@ const carsData = [
                 battery:"44 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 325 km WLTP",
+                range:"325 km WLTP",
                 rangeValue:325,
                 accel:"≈11 s"
             },
@@ -1402,7 +1402,7 @@ const carsData = [
                 battery:"44 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 325 km WLTP",
+                range:"325 km WLTP",
                 rangeValue:325,
                 accel:"≈11 s"
             },
@@ -1413,7 +1413,7 @@ const carsData = [
                 battery:"30 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 215 km WLTP",
+                range:"215 km WLTP",
                 rangeValue:215,
                 accel:"≈11 s"
             },
@@ -1424,7 +1424,7 @@ const carsData = [
                 battery:"44 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 324 km WLTP",
+                range:"324 km WLTP",
                 rangeValue:324,
                 accel:"≈11 s"
             },
@@ -1435,7 +1435,7 @@ const carsData = [
                 battery:"44 kWh",
                 batteryType:"LFP",
                 power:"83 kW (113 CV)",
-                range:"hasta 325 km WLTP",
+                range:"325 km WLTP",
                 rangeValue:325,
                 accel:"≈11 s"
             }
@@ -1514,7 +1514,7 @@ const carsData = [
 
         highlights:[
             "Cinco acabados",
-            "Hasta 430 km WLTP",
+            "430 km WLTP",
             "Desde 23.056 € sin ayudas públicas",
             "V2L disponible según versión"
         ],
@@ -1755,10 +1755,10 @@ const carsData = [
     dimensions: "3,83 × 1,61 × 1,58 m",
     charging: "73 / 85 kW · 10-80% en 30 min",
 
-    description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina unas dimensiones exteriores compactas con un habitáculo sorprendentemente versátil. Dispone de dos capacidades de batería, 42 y 49 kWh, ofrece hasta 370 km de autonomía WLTP y cuenta con tecnología de carga bidireccional V2L.",
+    description: "El Hyundai INSTER es un SUV urbano 100% eléctrico de cuatro plazas que combina unas dimensiones exteriores compactas con un habitáculo sorprendentemente versátil. Dispone de dos capacidades de batería, 42 y 49 kWh, ofrece 370 km de autonomía WLTP y cuenta con tecnología de carga bidireccional V2L.",
 
     highlights: [
-        "Hasta 370 km de autonomía WLTP",
+        "370 km de autonomía WLTP",
         "Interior flexible con asientos traseros deslizantes",
         "Carga rápida del 10 al 80% en unos 30 minutos",
         "Función V2L para alimentar dispositivos externos",
@@ -1966,8 +1966,8 @@ const carsData = [
         chargingInfo:{dcMax: "65 / 85 kW",acMax:"11 kW",fastChargeText:"Carga rápida CC",connector:"CCS2",v2l:true},
         trims:[
             {name:"Active MY26  4 plazas",price:"20.140 €",priceValue:20140,battery:"30 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"220 km WLTP",rangeValue:220,accel:"11,1 s"},
-            {name:"Boost MY26  5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"12,1 s"},
-            {name:"Comfort MY26  5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"hasta 322 km WLTP",rangeValue:322,accel:"9,1 s"}
+            {name:"Boost MY26  5 plazas",price:"24.490 €",priceValue:24490,battery:"43,2 kWh",batteryType:"LFP Blade",power:"65 kW (88 CV)",range:"322 km WLTP",rangeValue:322,accel:"12,1 s"},
+            {name:"Comfort MY26  5 plazas",price:"26.990 €",priceValue:26990,battery:"43,2 kWh",batteryType:"LFP Blade",power:"115 kW (156 CV)",range:"322 km WLTP",rangeValue:322,accel:"9,1 s"}
         ],
 
 colors: [
@@ -2023,10 +2023,10 @@ images: [
     dimensions: "4,30 × 1,85 × 1,56 m",
     charging: "102 / 128 kW · 10-80% en 29-31 min",
 
-    description: "El Kia EV3 es un SUV compacto 100% eléctrico que destaca por su autonomía, habitabilidad y tecnología. Ofrece dos baterías de 58,3 y 81,4 kWh, con hasta 605 km de autonomía WLTP. La gama incluye acabados Air, Earth y GT-Line, con un maletero de 460 litros y un compartimento delantero adicional de 25 litros.",
+    description: "El Kia EV3 es un SUV compacto 100% eléctrico que destaca por su autonomía, habitabilidad y tecnología. Ofrece dos baterías de 58,3 y 81,4 kWh, con 605 km de autonomía WLTP. La gama incluye acabados Air, Earth y GT-Line, con un maletero de 460 litros y un compartimento delantero adicional de 25 litros.",
 
     highlights: [
-        "Hasta 605 km de autonomía WLTP",
+        "605 km de autonomía WLTP",
         "Dos baterías disponibles: 58,3 y 81,4 kWh",
         "Maletero de 460 litros más frunk de 25 litros",
         "Carga rápida del 10 al 80% en aproximadamente 29-31 minutos",
@@ -2104,7 +2104,7 @@ considerations: [
             battery: "81,4 kWh",
             batteryType: "NMC",
             power: "150 kW (204 CV)",
-            range: "hasta 605 km WLTP",
+            range: "605 km WLTP",
             rangeValue: 605,
             accel: "7,7 s"
         },
@@ -2115,7 +2115,7 @@ considerations: [
             battery: "81,4 kWh",
             batteryType: "NMC",
             power: "150 kW (204 CV)",
-            range: "hasta 563 km WLTP aprox.",
+            range: "563 km WLTP aprox.",
             rangeValue: 563,
             accel: "7,7 s"
         }
@@ -2206,7 +2206,7 @@ priceText: "35.412 - 53.043 €",
     "para combinar ciudad y viajes.",
 
   highlights: [
-    "Hasta 475 km de autonomía WLTP",
+    "475 km de autonomía WLTP",
     "Hasta 428 CV y 0-100 km/h en 3,6 s",
     "Carga rápida del 10 al 80% en 26-27 minutos",
     "Diseño compacto y equipamiento tecnológico"
@@ -2460,7 +2460,7 @@ colors: [
         trunk:854, frunkText:"117 L", seats:"5-7", acceleration:"3,5 - 7,2 s", dimensions:"4,79 × 1,92 × 1,62 m",
         charging:"Supercarga DC hasta 250 kW",
         description:"El SUV eléctrico familiar por excelencia y uno de los más vendidos del mundo. Destaca por su avanzado software, el Modo Centinela y su tecnología de conducción autónoma, todavía pendiente de autorización completa en Europa. Su gran capacidad de carga y la opción de 7 plazas lo convierten en un referente para las familias.",
-        highlights:["Hasta 609 km de autonomía en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
+        highlights:["609 km de autonomía en Premium Gran autonomía con tracción trasera","Amplio espacio de carga","Red Tesla Supercharger","Planificación de rutas y actualizaciones remotas","Opción de siete plazas en Premium AWD"],
         considerations:["La tercera fila es opcional y solo está disponible en determinadas versiones","Las autonomías dependen de las llantas y la configuración","Tesla modifica precios y disponibilidad con frecuencia","El precio final puede incluir gastos de destino y documentación"],
         idealFor:["Familias","Viajes largos","Uso diario","Tecnología","7 plazas opcionales"],
         priceInfo:{includesVat:true,includesAid:false,note:"Precios base de vehículo publicados en el configurador oficial español, con IVA, sin ayudas públicas ni ahorro estimado de combustible. No incluyen opciones ni gastos adicionales de destino y documentación (980 € mostrados en la configuración consultada)."},
@@ -2486,17 +2486,17 @@ colors: [
         batteryText:"69 - 81 kWh", batteryType:"LFP", powerText:"252 - 487 CV",
         trunk:571, frunkText: "No disponible", seats:5, acceleration:"4,1 - 6,9 s", dimensions:"4,76 × 1,92 × 1,65 m",
         charging:"Carga DC hasta 451 kW (10-80% en 12 min)",
-        description:"SUV coupé eléctrico familiar que destaca por su tecnología, su amplio habitáculo y una de las recargas más rápidas del mercado. Su arquitectura de 800 V permite cargar del 10 al 80 % en 12 minutos, con hasta 535 km de autonomía WLTP combinada. Ofrece asistencia avanzada XPILOT y versiones RWD y AWD.",
-        highlights:["Arquitectura de 800 V","Carga del 10 al 80 % en 12 minutos","571 litros de maletero","Asistencia XPILOT","Hasta 535 km WLTP"],
+        description:"SUV coupé eléctrico familiar que destaca por su tecnología, su amplio habitáculo y una de las recargas más rápidas del mercado. Su arquitectura de 800 V permite cargar del 10 al 80 % en 12 minutos, con 535 km de autonomía WLTP combinada. Ofrece asistencia avanzada XPILOT y versiones RWD y AWD.",
+        highlights:["Arquitectura de 800 V","Carga del 10 al 80 % en 12 minutos","571 litros de maletero","Asistencia XPILOT","535 km WLTP"],
         considerations:["Red comercial más limitada que la de marcas tradicionales","La autonomía WLTP combinada es inferior a las cifras urbanas publicitadas","Precio al contado de Long Range y Performance pendiente de confirmación en España"],
         idealFor:["Familias","Viajes","Tecnología","Carga rápida"],
         priceInfo:{includesVat:true,includesAid:false,note:"Precios oficiales de tarifa usados en la comparativa, con IVA y sin ofertas ni ayudas: Standard Range RWD ≈44.600 €, Long Range RWD ≈47.570 € y AWD Performance ≈53.570 €. Las ofertas/ayudas mostradas por la marca no se descuentan en la ficha."},
         warranty:{vehicle:"5 años / 120.000 km",battery:"8 años / 160.000 km",capacity:"No especificado en la ficha oficial",source:"https://www.xpeng-auto.es/g6"},
         chargingInfo:{dcMax:"382 - 451 kW",acMax:"11 kW",fastChargeText:"10-80 % en 12 minutos",connector:"CCS2",v2l:true},
         trims:[
-            {name:"Standard Range RWD",price:"44.600 €",priceValue:44600,battery:"69 kWh",batteryType:"LFP",power:"252 CV",range:"Hasta 435 km WLTP",rangeValue:435,accel:"6,9 s",seats:5},
-            {name:"Long Range RWD",price:"47.570 €",priceValue:47570,battery:"81 kWh",batteryType:"LFP",power:"297 CV",range:"Hasta 570 km WLTP",rangeValue:570,accel:"6,7 s",seats:5},
-            {name:"AWD Performance",price:"53.570 €",priceValue:53570,battery:"81 kWh",batteryType:"LFP",power:"487 CV",range:"Hasta 550 km WLTP",rangeValue:550,accel:"4,1 s",seats:5}
+            {name:"Standard Range RWD",price:"44.600 €",priceValue:44600,battery:"69 kWh",batteryType:"LFP",power:"252 CV",range:"435 km WLTP",rangeValue:435,accel:"6,9 s",seats:5},
+            {name:"Long Range RWD",price:"47.570 €",priceValue:47570,battery:"81 kWh",batteryType:"LFP",power:"297 CV",range:"570 km WLTP",rangeValue:570,accel:"6,7 s",seats:5},
+            {name:"AWD Performance",price:"53.570 €",priceValue:53570,battery:"81 kWh",batteryType:"LFP",power:"487 CV",range:"550 km WLTP",rangeValue:550,accel:"4,1 s",seats:5}
         ],
         colors:[{name:"Arctic White",hex:"#f3f4f3",border:"#cbd5e1"},{name:"Stellar Purple",hex:"#81758f"},{name:"Graphite Gray",hex:"#555b60"},{name:"Silver Frost",hex:"#b8bdc0"},{name:"Midnight Black",hex:"#11161b"},{name:"Black Edition",hex:"#050505"}],
         images:["img/cars/xpeng-g6/xpeng-g6_01.webp","img/cars/xpeng-g6/xpeng-g6_02.webp","img/cars/xpeng-g6/xpeng-g6_03.webp","img/cars/xpeng-g6/xpeng-g6_04.webp","img/cars/xpeng-g6/xpeng-g6_05.webp","img/cars/xpeng-g6/xpeng-g6_06.webp","img/cars/xpeng-g6/xpeng-g6_07.webp","img/cars/xpeng-g6/xpeng-g6_08.webp"],
@@ -2543,7 +2543,7 @@ colors: [
 
   highlights: [
     "Siete plazas de serie",
-    "Hasta 668 km WLTP en Long Range",
+    "668 km WLTP en Long Range",
     "Hasta 916 litros de maletero con cinco plazas",
     "Panoramic i-Cockpit",
     "Versiones de tracción delantera y total",
@@ -2593,7 +2593,7 @@ colors: [
       battery: "73 kWh",
       batteryType: "NMC",
       power: "157 kW (210 CV)",
-      range: "Hasta 504 km WLTP",
+      range: "504 km WLTP",
       rangeValue: 504,
       accel: "Pendiente de confirmar"
     },
@@ -2604,7 +2604,7 @@ colors: [
       battery: "73 kWh",
       batteryType: "NMC",
       power: "157 kW (210 CV)",
-      range: "Hasta 504 km WLTP",
+      range: "504 km WLTP",
       rangeValue: 504,
       accel: "Pendiente de confirmar"
     },
@@ -2615,7 +2615,7 @@ colors: [
       battery: "73 kWh",
       batteryType: "NMC",
       power: "239 kW (325 CV)",
-      range: "Hasta 477 km WLTP",
+      range: "477 km WLTP",
       rangeValue: 477,
       accel: "Pendiente de confirmar"
     },
@@ -2626,7 +2626,7 @@ colors: [
       battery: "73 kWh",
       batteryType: "NMC",
       power: "157 kW (210 CV)",
-      range: "Hasta 504 km WLTP",
+      range: "504 km WLTP",
       rangeValue: 504,
       accel: "Pendiente de confirmar"
     },
@@ -2637,7 +2637,7 @@ colors: [
       battery: "73 kWh",
       batteryType: "NMC",
       power: "239 kW (325 CV)",
-      range: "Hasta 477 km WLTP",
+      range: "477 km WLTP",
       rangeValue: 477,
       accel: "Pendiente de confirmar"
     },
@@ -2649,7 +2649,7 @@ colors: [
       battery: "97 kWh",
       batteryType: "NMC",
       power: "170 kW (230 CV)",
-      range: "Hasta 668 km WLTP",
+      range: "668 km WLTP",
       rangeValue: 668,
       accel: "Pendiente de confirmar"
     }
@@ -2724,7 +2724,7 @@ colors: [
     priceMax: 23950,
     priceText: "23.950 €",
 
-    rangeText: "hasta 323 km",
+    rangeText: "323 km",
     minRangeVal: 323,
     maxRangeVal: 323,
 
@@ -2743,7 +2743,7 @@ colors: [
 
     highlights: [
         "Diseño OUTDOOR exclusivo",
-        "Batería de 44 kWh y hasta 323 km WLTP",
+        "Batería de 44 kWh y 323 km WLTP",
         "Llantas MAGNETITE de 17 pulgadas",
         "Asientos Citroën Advanced Comfort",
         "Detalles exteriores en Rojo Infra",
@@ -2785,7 +2785,7 @@ priceInfo: {
             battery: "44 kWh",
             batteryType: "LFP",
             power: "83 kW (113 CV)",
-            range: "hasta 323 km WLTP",
+            range: "323 km WLTP",
             rangeValue: 323,
             accel: "≈11 s"
         }
