@@ -1510,6 +1510,7 @@ let currentImageIndexes = {};
                     : 'Sin límite';
 
             const filtered = carsData.filter(car => {
+                if (!Array.isArray(car.images) || !car.images.length) return false;
 
                 const searchMatch =
                     `${car.brand} ${car.model.toLocaleUpperCase('es-ES')}`
