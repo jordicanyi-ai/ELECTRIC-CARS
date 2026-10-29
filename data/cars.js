@@ -309,14 +309,14 @@ const carsData = [
     }
   ],
   "images": [
-    "img/cars/byd-atto3/byd-atto3_01.webp",
-    "img/cars/byd-atto3/byd-atto3_02.webp",
-    "img/cars/byd-atto3/byd-atto3_03.webp",
-    "img/cars/byd-atto3/byd-atto3_04.webp",
-    "img/cars/byd-atto3/byd-atto3_05.webp",
-    "img/cars/byd-atto3/byd-atto3_06.webp",
-    "img/cars/byd-atto3/byd-atto3_07.webp",
-    "img/cars/byd-atto3/byd-atto3_08.webp"
+    "img/cars/byd-atto3/byd-att3_01.webp",
+    "img/cars/byd-atto3/byd-att3_02.webp",
+    "img/cars/byd-atto3/byd-att3_03.webp",
+    "img/cars/byd-atto3/byd-att3_04.webp",
+    "img/cars/byd-atto3/byd-att3_05.webp",
+    "img/cars/byd-atto3/byd-att3_06.webp",
+    "img/cars/byd-atto3/byd-att3_07.webp",
+    "img/cars/byd-atto3/byd-att3_08.webp"
   ],
   "videos": [],
   "brandInfo": {
