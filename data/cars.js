@@ -121,7 +121,16 @@ const carsData = [
       "hex": "#191B1F"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/kia-ev4/kia-ev4_01.webp",
+    "img/cars/kia-ev4/kia-ev4_02.webp",
+    "img/cars/kia-ev4/kia-ev4_03.webp",
+    "img/cars/kia-ev4/kia-ev4_04.webp",
+    "img/cars/kia-ev4/kia-ev4_05.webp",
+    "img/cars/kia-ev4/kia-ev4_06.webp",
+    "img/cars/kia-ev4/kia-ev4_07.webp",
+    "img/cars/kia-ev4/kia-ev4_08.jpeg"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/kia.png",
@@ -131,7 +140,7 @@ const carsData = [
   },
   "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
   "dataStatus": {
-    "status": "Ficha técnica Kia España MY26; PVP base comprobado octubre 2026. Fotografías pendientes.",
+    "status": "Ficha técnica Kia España MY26; PVP base comprobado octubre 2026. Galería de ocho imágenes enlazada.",
     "checkedAt": "29/10/2026"
   }
 },
