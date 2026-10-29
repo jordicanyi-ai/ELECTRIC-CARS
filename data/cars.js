@@ -359,7 +359,7 @@ const carsData = [
   "charging": "220 kW CC · 10-80 % en 25 min",
   "description": "El BYD ATTO 3 EVO es un SUV compacto eléctrico de 2026 con arquitectura de 800 V, batería Blade LFP de 74,8 kWh y carga rápida de 220 kW. El Design tiene tracción trasera, 313 CV y 510 km WLTP; el Excellence ofrece tracción total, 449 CV y 470 km WLTP. Cuenta con 490 litros de maletero y 95 litros de espacio delantero.",
   "highlights": [
-    "Batería Blade de 74,8 kWh y hasta 510 km WLTP",
+    "Batería Blade de 74,8 kWh y 510 km WLTP",
     "Carga rápida de 220 kW: del 10 al 80 % en 25 minutos",
     "Maletero de 490 L más frunk de 95 L"
   ],
@@ -409,7 +409,16 @@ const carsData = [
     }
   ],
   "colors": [],
-  "images": [],
+  "images": [
+    "img/cars/byd-atto3-evo/byd-atto3-evo_01.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_02.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_03.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_04.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_05.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_06.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_07.webp",
+    "img/cars/byd-atto3-evo/byd-atto3-evo_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
@@ -419,7 +428,7 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es/car/atto3.html",
   "dataStatus": {
-    "status": "Datos de gama, precios PVPR y especificaciones contrastados con BYD España",
+    "status": "Especificaciones y PVPR verificados con ficha oficial BYD España",
     "checkedAt": "29/10/2026"
   }
 },
