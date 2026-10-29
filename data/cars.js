@@ -57,9 +57,9 @@ const carsData = [
     { name: "Bi-tono Rojo Persa (Spirit)", hex: "#A84736", code: "M67" }
   ],
   images: ["img/cars/toyota-chr+/toyota-chr+_01.webp", "img/cars/toyota-chr+/toyota-chr+_02.webp", "img/cars/toyota-chr+/toyota-chr+_03.webp", "img/cars/toyota-chr+/toyota-chr+_04.webp", "img/cars/toyota-chr+/toyota-chr+_05.webp", "img/cars/toyota-chr+/toyota-chr+_06.webp", "img/cars/toyota-chr+/toyota-chr+_07.webp", "img/cars/toyota-chr+/toyota-chr+_08.webp"],
-  videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: ""}],
+  videos: [{title: "Toyota C-HR+ eléctrico: vídeos y pruebas", url: "https://www.youtube.com/results?search_query=Toyota+C-HR%2B+electrico+prueba", thumb: "img/cars/toyota-chr+/toyota-chr+_01.webp"}],
   brandInfo: {
-    logo: "",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg",
     group: "Toyota Motor Corporation",
     relation: "Fabricante",
     note: "Toyota es un fabricante japonés de automóviles."
