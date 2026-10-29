@@ -481,7 +481,7 @@ const carsData = [
   "brand": "BYD",
   "model": "SEALION 7",
   "type": "SUV coupé",
-  "launchYear": null,
+  "launchYear": 2024,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -490,31 +490,32 @@ const carsData = [
   "priceMin": 47990,
   "priceMax": 54390,
   "priceText": "47.990 € - 54.390 €",
-  "rangeText": "Hasta 502 km WLTP",
-  "minRangeVal": 502,
+  "rangeText": "456 - 502 km WLTP",
+  "minRangeVal": 456,
   "maxRangeVal": 502,
-  "batteryText": "Consultar versión",
-  "batteryType": "Blade Battery",
-  "powerText": "Hasta 530 CV",
+  "batteryText": "82,5 - 91,3 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
+  "powerText": "313 - 530 CV",
   "trunk": 520,
-  "frunkText": "Consultar versión",
+  "frunkText": "58 L",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "4,5 - 6,7 s",
   "dimensions": "4,83 × 1,93 × 1,62 m",
-  "charging": "Consultar versión",
-  "description": "El BYD SEALION 7 es un suv coupé 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "150 - 230 kW CC · 10-80 % en 24-32 min",
+  "description": "El BYD SEALION 7 es un SUV coupé eléctrico de cinco plazas con batería Blade LFP, 520 litros de maletero y 58 litros de frunk. Se ofrece con tracción trasera Comfort de 313 CV y dos versiones de tracción total de 530 CV. Su autonomía homologada oscila entre 456 y 502 km WLTP y admite carga rápida de hasta 230 kW en la versión Excellence AWD.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Hasta 502 km WLTP y batería Blade LFP de 82,5 a 91,3 kWh",
+    "Maletero de 520 L más frunk de 58 L",
+    "Hasta 530 CV y 0-100 km/h en 4,5 s en las versiones AWD"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "La versión Design AWD homologa 456 km WLTP, menos que Comfort (482 km)",
+    "La carga rápida de 230 kW es exclusiva de Excellence AWD; Comfort y Design admiten 150 kW",
+    "Los precios indicados son PVP recomendados sin ayudas ni financiación; pueden variar según tarifa"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Familias que buscan un SUV eléctrico amplio de cinco plazas",
+    "Quien valore prestaciones, equipamiento y autonomía para viajar"
   ],
   "priceInfo": {
     "includesVat": true,
@@ -522,14 +523,66 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "150 - 230 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en 32 min (Comfort/Design) o 24 min (Excellence)",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Comfort","price":"47.990 €","priceValue":47990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Design","price":"51.500 €","priceValue":51500,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"},{"name":"Excellence","price":"54.390 €","priceValue":54390,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
-  "colors": [],
+  "trims": [
+    {
+      "name": "Comfort RWD",
+      "price": "47.990 €",
+      "priceValue": 47990,
+      "battery": "82,5 kWh",
+      "batteryType": "LFP Blade",
+      "power": "313 CV",
+      "range": "482 km WLTP",
+      "rangeValue": 482,
+      "accel": "6,7 s"
+    },
+    {
+      "name": "Design AWD",
+      "price": "51.500 €",
+      "priceValue": 51500,
+      "battery": "82,5 kWh",
+      "batteryType": "LFP Blade",
+      "power": "530 CV",
+      "range": "456 km WLTP",
+      "rangeValue": 456,
+      "accel": "4,5 s"
+    },
+    {
+      "name": "Excellence AWD",
+      "price": "54.390 €",
+      "priceValue": 54390,
+      "battery": "91,3 kWh",
+      "batteryType": "LFP Blade",
+      "power": "530 CV",
+      "range": "502 km WLTP",
+      "rangeValue": 502,
+      "accel": "4,5 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Atlantis Grey",
+      "hex": "#77858C"
+    },
+    {
+      "name": "Indigo Grey",
+      "hex": "#4D596C"
+    },
+    {
+      "name": "Obsidian Black",
+      "hex": "#202225"
+    },
+    {
+      "name": "Polar White",
+      "hex": "#F2F1ED",
+      "border": "#CBD5E1"
+    }
+  ],
   "images": [],
   "videos": [],
   "brandInfo": {
@@ -538,10 +591,10 @@ const carsData = [
     "relation": "Fabricante",
     "note": "Marca de vehículos eléctricos de BYD Company."
   },
-  "brandUrl": "https://www.byd.com/es-es",
+  "brandUrl": "https://www.byd.com/es-es/coches-electricos/sealion-7",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Datos contrastados con ficha técnica y precios publicados por BYD España",
+    "checkedAt": "29/10/2026"
   }
 },
 {
