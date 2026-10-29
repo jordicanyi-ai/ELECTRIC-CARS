@@ -209,7 +209,7 @@ const carsData = [
   "brand": "BYD",
   "model": "ATTO 3",
   "type": "SUV compacto",
-  "launchYear": null,
+  "launchYear": 2023,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -218,46 +218,96 @@ const carsData = [
   "priceMin": 38990,
   "priceMax": 38990,
   "priceText": "38.990 €",
-  "rangeText": "Hasta 420 km WLTP",
+  "rangeText": "420 km WLTP",
   "minRangeVal": 420,
   "maxRangeVal": 420,
-  "batteryText": "60.5 kWh",
-  "batteryType": "Blade Battery",
+  "batteryText": "60,4 kWh",
+  "batteryType": "LFP (BYD Blade Battery)",
   "powerText": "204 CV",
   "trunk": 440,
-  "frunkText": "Consultar versión",
+  "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "Consultar versión",
+  "acceleration": "7,3 s",
   "dimensions": "4,46 × 1,88 × 1,62 m",
-  "charging": "Consultar versión",
-  "description": "El BYD ATTO 3 es un suv compacto 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "88 kW CC · 10-80 % en aprox. 44 min",
+  "description": "El BYD ATTO 3 es un SUV compacto eléctrico de cinco plazas con tracción delantera, motor de 204 CV y batería Blade LFP de 60,4 kWh. Homologa 420 km WLTP y ofrece un maletero de 440 litros. Se comercializó en España en acabados Comfort y Design; no debe confundirse con el posterior ATTO 3 EVO.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "420 km de autonomía WLTP y batería Blade LFP de 60,4 kWh",
+    "204 CV y aceleración de 0 a 100 km/h en 7,3 s",
+    "440 litros de maletero y equipamiento familiar"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "No dispone de maletero delantero (frunk)",
+    "La carga rápida se limita a 88 kW CC",
+    "Precio de referencia histórico: confirmar disponibilidad y precio actual, especialmente tras la llegada del ATTO 3 EVO"
   ],
   "idealFor": [
-    "Uso diario",
-    "Movilidad eléctrica"
+    "Familias que buscan un SUV compacto de cinco plazas",
+    "Conducción diaria y desplazamientos interurbanos"
   ],
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Referencia histórica: confirmar disponibilidad y tarifa vigente."
+    "note": "38.990 € como referencia de tarifa histórica; no se ha confirmado el precio actual de unidades disponibles. No incluye ayudas ni descuentos condicionados."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "88 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en aproximadamente 44 min",
     "connector": "CCS2",
-    "v2l": null
+    "v2l": true
   },
-  "trims": [{"name":"Versión de acceso (referencia histórica)","price":"38.990 €","priceValue":38990,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
-  "colors": [],
+  "trims": [
+    {
+      "name": "Comfort",
+      "price": "Consultar tarifa",
+      "priceValue": null,
+      "battery": "60,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "204 CV",
+      "range": "420 km WLTP",
+      "rangeValue": 420,
+      "accel": "7,3 s"
+    },
+    {
+      "name": "Design",
+      "price": "Consultar tarifa",
+      "priceValue": null,
+      "battery": "60,4 kWh",
+      "batteryType": "LFP Blade",
+      "power": "204 CV",
+      "range": "420 km WLTP",
+      "rangeValue": 420,
+      "accel": "7,3 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Surfing Blue",
+      "hex": "#6A99B4"
+    },
+    {
+      "name": "Climbing Grey",
+      "hex": "#81888B"
+    },
+    {
+      "name": "Skiing White",
+      "hex": "#F0F0EC",
+      "border": "#CBD5E1"
+    },
+    {
+      "name": "Parkour Red",
+      "hex": "#99343C"
+    },
+    {
+      "name": "Exploring Green",
+      "hex": "#52776F"
+    },
+    {
+      "name": "Cosmos Black",
+      "hex": "#202226"
+    }
+  ],
   "images": [],
   "videos": [],
   "brandInfo": {
@@ -268,8 +318,8 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Especificaciones contrastadas; precio histórico pendiente de actualización",
+    "checkedAt": "29/10/2026"
   }
 },
 {
