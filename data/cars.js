@@ -549,7 +549,7 @@ const carsData = [
   "brand": "BYD",
   "model": "TANG",
   "type": "SUV 7 plazas",
-  "launchYear": null,
+  "launchYear": 2025,
   "warranty": {
     "vehicle": "6 años / 150.000 km",
     "battery": "8 años / 250.000 km",
@@ -558,27 +558,27 @@ const carsData = [
   "priceMin": 72000,
   "priceMax": 72000,
   "priceText": "72.000 €",
-  "rangeText": "Hasta 530 km WLTP",
+  "rangeText": "530 km WLTP",
   "minRangeVal": 530,
   "maxRangeVal": 530,
-  "batteryText": "108.8 kWh",
-  "batteryType": "Blade Battery",
+  "batteryText": "108,8 kWh",
+  "batteryType": "LFP Blade Battery",
   "powerText": "517 CV",
   "trunk": 235,
-  "frunkText": "Consultar versión",
+  "frunkText": "No",
   "seats": 7,
-  "acceleration": "Consultar versión",
+  "acceleration": "4,9 s",
   "dimensions": "4,97 × 1,96 × 1,75 m",
-  "charging": "Consultar versión",
-  "description": "El BYD TANG es un suv 7 plazas 100 % eléctrico. La autonomía, la batería y el equipamiento dependen del acabado. Esta ficha está en preparación y no muestra precios ni características sin confirmar para la versión española.",
+  "charging": "170 kW DC · 11 kW AC · 10–80 % en 46 min",
+  "description": "El BYD TANG Flagship AWD es un SUV eléctrico de siete plazas con tracción total, batería Blade LFP de 108,8 kWh y 530 km de autonomía WLTP. Ofrece 517 CV, una aceleración de 0 a 100 km/h en 4,9 segundos y un habitáculo amplio para viajar en familia.",
   "highlights": [
-    "Propulsión 100 % eléctrica",
-    "Tecnología de batería BYD",
-    "Ficha disponible para comparar"
+    "Siete plazas y tracción total AWD",
+    "Batería Blade LFP de 108,8 kWh",
+    "517 CV y 530 km de autonomía WLTP"
   ],
   "considerations": [
-    "Precios al contado con IVA y sin ayudas pendientes de verificar",
-    "Comprobar la versión y sus datos homologados"
+    "Precio elevado frente a otros SUV familiares eléctricos",
+    "Maletero de 235 L con las siete plazas en uso"
   ],
   "idealFor": [
     "Familias numerosas",
@@ -590,15 +590,15 @@ const carsData = [
     "note": "PVP recomendado en España con IVA, sin ayudas públicas ni descuentos condicionados. Confirmar tarifa vigente antes de contratar."
   },
   "chargingInfo": {
-    "dcMax": "Consultar versión",
-    "acMax": "Consultar versión",
-    "fastChargeText": "Consultar versión",
+    "dcMax": "170 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "10–80 % en 46 min · 30–80 % en 30 min",
     "connector": "CCS2",
     "v2l": null
   },
-  "trims": [{"name":"Tang","price":"72.000 €","priceValue":72000,"battery":"Consultar ficha de la versión","batteryType":"LFP Blade / consultar versión","power":"Consultar versión","range":"Consultar versión","rangeValue":null,"accel":"Consultar versión"}],
+  "trims": [{"name":"Flagship AWD","price":"72.000 €","priceValue":72000,"battery":"108,8 kWh","batteryType":"LFP Blade","power":"517 CV","range":"530 km WLTP","rangeValue":530,"accel":"4,9 s"}],
   "colors": [],
-  "images": [],
+  "images": ["img/cars/byd-tang/byd-tang_01.webp","img/cars/byd-tang/byd-tang_02.webp","img/cars/byd-tang/byd-tang_03.webp","img/cars/byd-tang/byd-tang_04.webp","img/cars/byd-tang/byd-tang_05.webp","img/cars/byd-tang/byd-tang_06.webp","img/cars/byd-tang/byd-tang_07.webp","img/cars/byd-tang/byd-tang_08.webp"],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
@@ -608,8 +608,8 @@ const carsData = [
   },
   "brandUrl": "https://www.byd.com/es-es",
   "dataStatus": {
-    "status": "Precio de tarifa localizado; resto de datos por contrastar",
-    "checkedAt": "16/10/2026"
+    "status": "Ficha técnica completada con datos del fabricante; precio PVP de referencia",
+    "checkedAt": "29/10/2026"
   }
 },
 {
