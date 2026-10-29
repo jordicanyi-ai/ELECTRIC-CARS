@@ -146,7 +146,16 @@ const carsData = [
     }
   ],
   "colors": [],
-  "images": [],
+  "images": [
+    "img/cars/byd-dolphin/byd-dolphin_01.webp",
+    "img/cars/byd-dolphin/byd-dolphin_02.webp",
+    "img/cars/byd-dolphin/byd-dolphin_03.webp",
+    "img/cars/byd-dolphin/byd-dolphin_04.webp",
+    "img/cars/byd-dolphin/byd-dolphin_05.webp",
+    "img/cars/byd-dolphin/byd-dolphin_06.webp",
+    "img/cars/byd-dolphin/byd-dolphin_07.webp",
+    "img/cars/byd-dolphin/byd-dolphin_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/byd.png",
