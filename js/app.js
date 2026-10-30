@@ -668,7 +668,7 @@ let currentImageIndexes = {};
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '<a href="#" onclick="event.preventDefault(); openCarModal(9);" aria-label="Ver Tesla Model Y" class="flex w-full h-full items-center justify-center">' : ''}
                                 <img src="${car.brandInfo.logo}"
                                     alt="Logo ${car.brand.toLocaleUpperCase('es-ES')}"
-                                    class="${car.brand === 'Peugeot' ? 'w-28 h-28 max-w-none max-h-none shrink-0' : 'max-w-full max-h-full'} object-contain">
+                                    class="${car.brand === 'Peugeot' ? 'w-28 h-28 max-w-none max-h-none shrink-0' : car.brand === 'Kia' ? 'max-w-full max-h-full scale-[1.15]' : 'max-w-full max-h-full'} object-contain">
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '</a>' : ''}
 
                             </div>
