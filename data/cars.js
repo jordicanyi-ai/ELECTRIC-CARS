@@ -1,5 +1,176 @@
 const carsData = [
 {
+  "id": 30,
+  "brand": "Volkswagen",
+  "model": "ID. Polo",
+  "type": "Utilitario",
+  "launchYear": 2026,
+  "priceMin": 25995,
+  "priceMax": 38920,
+  "priceText": "25.995–38.920 €",
+  "rangeText": "318–449 km WLTP",
+  "minRangeVal": 318,
+  "maxRangeVal": 449,
+  "batteryText": "37–52 kWh útiles",
+  "batteryType": "LFP / NMC",
+  "powerText": "116–211 CV",
+  "trunk": 441,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "7,1–10,6 s",
+  "dimensions": "4,053 × 1,816 × 1,530 m",
+  "charging": "90–105 kW CC · 10–80 % en 23–24 min",
+  "description": "Utilitario eléctrico de cinco plazas fabricado en Martorell. Combina 441 litros de maletero con batería LFP de 37 kWh o NMC de 52 kWh útiles. Los acabados Match, Life y Style ofrecen potencias de 116, 135 y 211 CV. La autonomía homologada varía según versión y equipamiento. El ID. Polo GTI es una variante deportiva específica.",
+  "highlights": [
+    "441 litros de maletero en una carrocería de 4,05 metros",
+    "Carga en alterna de 11 kW y carga rápida de serie",
+    "Función V2L de 3,6 kW con adaptador específico",
+    "Mandos físicos para las funciones principales"
+  ],
+  "considerations": [
+    "La batería de 37 kWh prioriza el uso diario frente a los viajes largos",
+    "Los 17.900 € publicitados incluyen ayudas y condiciones de financiación",
+    "La autonomía y el equipamiento cambian con el acabado y las llantas",
+    "Los precios de tarifa pueden diferir de las ofertas de cada concesionario"
+  ],
+  "idealFor": [
+    "Uso diario y ciudad",
+    "Familias que buscan maletero con tamaño exterior contenido"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP con impuestos sin restar Plan Auto+, CAES ni bonificaciones financieras. Match: 25.995 € observado en configurador oficial el 30/10/2026. Resto: tarifas de lanzamiento publicadas para España, pendientes de actualización individual en configurador."
+  },
+  "chargingInfo": {
+    "dcMax": "90 kW (37 kWh) / 105 kW (52 kWh)",
+    "acMax": "11 kW",
+    "fastChargeText": "10–80 % en 23 min (37 kWh) / 24 min (52 kWh)",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": true
+  },
+  "warranty": {
+    "vehicle": "Hasta 8 años / 160.000 km con ID. Care para particulares, según condiciones",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://garantias.vged.es/garantía-para-baterías-de-alto-voltaje-para-vehiculos-bev-y-phev-de-volkswagen-ag"
+  },
+  "trims": [
+    {
+      "name": "Match 116 CV · 37 kWh",
+      "price": "25.995 €",
+      "priceValue": 25995,
+      "battery": "37 kWh útiles",
+      "batteryType": "LFP",
+      "power": "116 CV",
+      "range": "323 km WLTP",
+      "rangeValue": 323,
+      "accel": "10,6 s"
+    },
+    {
+      "name": "Life 116 CV · 37 kWh",
+      "price": "28.860 €",
+      "priceValue": 28860,
+      "battery": "37 kWh útiles",
+      "batteryType": "LFP",
+      "power": "116 CV",
+      "range": "318 km WLTP",
+      "rangeValue": 318,
+      "accel": "Consultar versión"
+    },
+    {
+      "name": "Style 135 CV · 37 kWh",
+      "price": "33.900 €",
+      "priceValue": 33900,
+      "battery": "37 kWh útiles",
+      "batteryType": "LFP",
+      "power": "135 CV",
+      "range": "326 km WLTP",
+      "rangeValue": 326,
+      "accel": "Consultar versión"
+    },
+    {
+      "name": "Life 211 CV · 52 kWh",
+      "price": "35.070 €",
+      "priceValue": 35070,
+      "battery": "52 kWh útiles",
+      "batteryType": "NMC",
+      "power": "211 CV",
+      "range": "449 km WLTP",
+      "rangeValue": 449,
+      "accel": "7,1 s"
+    },
+    {
+      "name": "Style 211 CV · 52 kWh",
+      "price": "38.920 €",
+      "priceValue": 38920,
+      "battery": "52 kWh útiles",
+      "batteryType": "NMC",
+      "power": "211 CV",
+      "range": "447 km WLTP",
+      "rangeValue": 447,
+      "accel": "7,1 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Rojo Tornado",
+      "hex": "#B3212B"
+    },
+    {
+      "name": "Blanco Polar",
+      "hex": "#F4F4F0"
+    },
+    {
+      "name": "Amarillo Eléctrico",
+      "hex": "#DFE440"
+    },
+    {
+      "name": "Azul Océano",
+      "hex": "#486FA3"
+    },
+    {
+      "name": "Gris Grafito",
+      "hex": "#666A6C"
+    },
+    {
+      "name": "Negro Noche",
+      "hex": "#191C21"
+    },
+    {
+      "name": "Plata",
+      "hex": "#C1C5C9"
+    }
+  ],
+  "images": [
+    "img/cars/vw-idpolo/vw-idpolo_01.webp",
+    "img/cars/vw-idpolo/vw-idpolo_02.webp",
+    "img/cars/vw-idpolo/vw-idpolo_03.webp",
+    "img/cars/vw-idpolo/vw-idpolo_04.webp",
+    "img/cars/vw-idpolo/vw-idpolo_05.webp",
+    "img/cars/vw-idpolo/vw-idpolo_06.webp",
+    "img/cars/vw-idpolo/vw-idpolo_07.webp",
+    "img/cars/vw-idpolo/vw-idpolo_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/volkswagen.svg",
+    "group": "Grupo Volkswagen",
+    "relation": "Marca del grupo",
+    "note": "Volkswagen es una marca alemana del Grupo Volkswagen. El ID. Polo se fabrica en Martorell, España."
+  },
+  "brandUrl": "https://www.volkswagen.es/es/modelos/id-polo.html",
+  "dataStatus": {
+    "status": "Revisado · tarifas según fuente y versión",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.volkswagen.es/es/configurador.html/__app/id-polo.app",
+    "https://www.volkswagen.es/es/modelos/id-polo.html",
+    "https://www.autonocion.com/prueba-volkswagen-id-polo/"
+  ]
+},
+{
   "id": 29,
   "brand": "Peugeot",
   "model": "E-208",
