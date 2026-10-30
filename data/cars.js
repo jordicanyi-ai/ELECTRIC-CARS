@@ -20,7 +20,7 @@ const carsData = [
   "acceleration": "7,1 - 9,8 s",
   "dimensions": "4,17 m de largo",
   "charging": "88 - 105 kW CC",
-  "description": "El Škoda Epiq es un SUV eléctrico urbano del segmento B que busca combinar un tamaño fácil de manejar en ciudad con espacio suficiente para el día a día. Mide unos 4,17 metros de largo, ofrece cinco plazas y destaca por un maletero de 475 litros, una capacidad generosa para su categoría. Se fabrica en Navarra y cuenta con dos propuestas mecánicas: una versión de acceso de 135 CV con batería LFP de 38,5 kWh y 324 km de autonomía WLTP, y otra de 210 CV con batería NMC de 55 kWh y 437 km WLTP. Esta última acelera de 0 a 100 km/h en 7,1 segundos. Su enfoque práctico puede resultar interesante para quienes buscan un coche compacto para aparcar, pero no quieren renunciar a un buen maletero ni a realizar desplazamientos por carretera. Como siempre, conviene comparar la autonomía y el precio de la versión concreta, sin contar ayudas ni descuentos por financiación.",
+  "description": "El Škoda Epiq es un SUV eléctrico urbano de 4,17 metros, fabricado en Navarra, que destaca por sus cinco plazas y un amplio maletero de 475 litros. Ofrece dos opciones: 135 CV y 324 km WLTP, o 210 CV y 437 km WLTP. La versión más potente acelera de 0 a 100 km/h en 7,1 segundos. Una opción práctica para quienes buscan un coche fácil de aparcar, pero con espacio y autonomía para salir de la ciudad.",
   "highlights": [
     "475 litros de maletero",
     "324 - 437 km WLTP combinados",
