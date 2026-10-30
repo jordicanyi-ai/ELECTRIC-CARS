@@ -189,7 +189,8 @@ const carsData = [
     "brandInfo": {
       "group": "Nissan Motor Corporation",
       "relation": "Fabricante japonés",
-      "logo": "img/brands/nissan-dark.svg"
+      "logo": "img/brands/nissan-dark.svg",
+      "note": "Marca japonesa fundada en 1933. El Nissan LEAF fue uno de los primeros coches eléctricos de gran difusión mundial, lanzado en 2010. Su tercera generación adopta una carrocería crossover y se fabrica en Sunderland, Reino Unido."
     },
     "brandUrl": "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf.html",
     "sources": [
