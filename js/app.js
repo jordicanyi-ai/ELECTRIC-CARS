@@ -1312,6 +1312,31 @@ let currentImageIndexes = {};
             return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es-ES').trim();
         }
 
+        function carBodyCategories(type) {
+            const value = normalizeCarSearch(type);
+            if (/suv|crossover/.test(value)) return ['suv'];
+            if (/sedan|berlina/.test(value)) return ['berlina'];
+            if (/furgoneta|monovolumen/.test(value)) return ['furgoneta'];
+            return [...(/utilitario|urbano/.test(value) ? ['utilitario'] : []), ...(/compacto/.test(value) ? ['compacto'] : [])];
+        }
+
+        function carMatchesSearch(car, query) {
+            const aliases = {
+                utilitari: 'utilitario', utilitaris: 'utilitario', utilitarios: 'utilitario', utilitaria: 'utilitario',
+                urbans: 'utilitario', urbano: 'utilitario', urbanos: 'utilitario', urba: 'utilitario',
+                compact: 'compacto', compactes: 'compacto', compactos: 'compacto',
+                suvs: 'suv', crossover: 'suv', crossovers: 'suv',
+                sedan: 'berlina', sedans: 'berlina', berline: 'berlina', berlinas: 'berlina', berlines: 'berlina',
+                furgonetes: 'furgoneta', furgonetas: 'furgoneta', monovolumen: 'furgoneta', monovolumenes: 'furgoneta', monovolum: 'furgoneta', monovolums: 'furgoneta'
+            };
+            const name = normalizeCarSearch(`${car.brand} ${car.model}`);
+            const categories = carBodyCategories(car.type);
+            return normalizeCarSearch(query).split(/\s+/).filter(Boolean).every(token => {
+                const category = aliases[token] || (['utilitario', 'compacto', 'suv', 'berlina', 'furgoneta'].includes(token) ? token : null);
+                return category ? categories.includes(category) : `${name} ${normalizeCarSearch(car.type)}`.includes(token);
+            });
+        }
+
         function filterCars() {
             updateFilterState();
 
@@ -1344,10 +1369,10 @@ let currentImageIndexes = {};
                 if (document.body.dataset.catalogueView === 'ranking' && car.upcoming) return false;
 
                 const searchMatch =
-                    normalizeCarSearch(`${car.brand} ${car.model}`).includes(search);
+                    carMatchesSearch(car, search);
 
                 const bodyMatch =
-                    !body || (body === 'Utilitario / Compacto' ? /utilitario|compacto|urbano/i.test(car.type) : body === 'Sedan' ? /sed[aá]n|berlina/i.test(car.type) : body === 'SUV' ? /suv/i.test(car.type) : car.type === body);
+                    !body || carBodyCategories(car.type).includes(body);
 
                 const seatsMatch =
                     !seats || Math.max(...(String(car.seats).match(/\d+/g) || []).map(Number)) >= Number(seats);

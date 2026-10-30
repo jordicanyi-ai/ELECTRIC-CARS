@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261030-spring-price">
+    <link rel="stylesheet" href="css/styles.css?v=20261030-body-search">
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
@@ -40,8 +40,8 @@
             <div class="search-row">
                 <label class="catalogue-search" for="hero-search">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                    <span class="sr-only">Buscar marca o modelo</span>
-                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca o modelo" autocomplete="off" aria-controls="cars-grid">
+                    <span class="sr-only">Buscar marca, modelo o tipo de coche</span>
+                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca, modelo o tipo de coche" autocomplete="off" aria-controls="cars-grid">
                 </label>
                 <button type="button" id="filters-toggle" class="filter-toggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="filters-panel"><i class="fa-solid fa-filter" aria-hidden="true"></i> Filtros <span id="active-filter-count" hidden></span><i id="filter-toggle-icon" class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
             </div>
@@ -53,7 +53,7 @@
             </div>
             <div id="filters-panel" hidden>
                 <div class="filter-fields">
-                    <div class="filter-field"><label for="body-filter">Tipo de coche</label><select id="body-filter" onchange="filterCars()"><option value="">Todos</option><option value="Utilitario / Compacto">Utilitario / Compacto</option><option value="SUV">SUV</option><option value="Furgoneta">Furgoneta</option><option value="Sedan">Sedán / Berlina</option></select></div>
+                    <div class="filter-field"><label for="body-filter">Tipo de coche</label><select id="body-filter" onchange="filterCars()"><option value="">Todos</option><option value="utilitario">Utilitario / Urbano</option><option value="compacto">Compacto</option><option value="suv">SUV / Crossover</option><option value="berlina">Sedán / Berlina</option><option value="furgoneta">Furgoneta / Monovolumen</option></select></div>
                     <div class="filter-field"><label for="seats-filter">Plazas mínimas</label><select id="seats-filter" onchange="filterCars()"><option value="">Cualquiera</option><option value="5">5 plazas</option><option value="6">6 plazas</option><option value="7">7 plazas</option></select></div>
                     <div class="filter-field"><label for="trunk-filter">Maletero mínimo</label><select id="trunk-filter" onchange="filterCars()"><option value="0">Cualquiera</option><option value="300">300 L</option><option value="400">400 L</option><option value="500">500 L</option><option value="600">600 L</option></select></div>
                     <div class="filter-field"><label for="range-filter">Autonomía mínima <output id="range-val" for="range-filter">0 km</output></label><input type="range" id="range-filter" min="0" max="700" step="50" value="0" oninput="filterCars()"></div>
@@ -200,16 +200,16 @@
     </footer>
 
     <!-- DATABASE -->
-    <script src="data/cars.js?v=20261030-spring-price"></script>
+    <script src="data/cars.js?v=20261030-body-search"></script>
     <script src="data/sales-ranking.js?v=20261015-1"></script>
     <script src="js/sales-ranking.js?v=20261015-5"></script>
 
     <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
-    <script src="data/vehicle-sales.js?v=20261030-spring-price"></script>
-    <script src="js/vehicle-sales.js?v=20261030-spring-price"></script>
+    <script src="data/vehicle-sales.js?v=20261030-body-search"></script>
+    <script src="js/vehicle-sales.js?v=20261030-body-search"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261030-spring-price"></script>
+    <script src="js/app.js?v=20261030-body-search"></script>
 
     <script>
         window.addEventListener('load', function () {
