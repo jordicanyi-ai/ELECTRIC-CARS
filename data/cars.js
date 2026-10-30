@@ -649,16 +649,44 @@ const carsData = [
     },
     "colors": [
       {
+        "name": "Saturn Beige Matte",
+        "hex": "#B8A88E"
+      },
+      {
+        "name": "Terra Green Matte",
+        "hex": "#647767"
+      },
+      {
+        "name": "Atom Grey Matte",
+        "hex": "#74787A"
+      },
+      {
+        "name": "Morning Dew Grey",
+        "hex": "#A8ADAB"
+      },
+      {
+        "name": "Cyber Silver Metallic",
+        "hex": "#B9C0C5"
+      },
+      {
+        "name": "Pulsar Ruby",
+        "hex": "#792F40"
+      },
+      {
+        "name": "Laser Red Metallic",
+        "hex": "#AD2637"
+      },
+      {
+        "name": "Future Green Metallic",
+        "hex": "#678570"
+      },
+      {
+        "name": "Digital White Metallic",
+        "hex": "#ECEBE7"
+      },
+      {
         "name": "Meta Black Metallic",
-        "hex": "#17191B"
-      },
-      {
-        "name": "Ruby Red",
-        "hex": "#9B2936"
-      },
-      {
-        "name": "Interstellar Blue",
-        "hex": "#344D72"
+        "hex": "#1C2022"
       }
     ],
     "images": [
@@ -686,7 +714,7 @@ const carsData = [
     },
     "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
     "dataStatus": {
-      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
+      "status": "Colores y techos actualizados a partir de referencias; disponibilidad según versión y mercado",
       "checkedAt": "30/10/2026"
     },
     "sources": [
@@ -694,8 +722,22 @@ const carsData = [
       "https://www.carwow.es/smart/smart-5",
       "https://media.smart.com/es-ES/assets/categories/4619/",
       "https://es.smart.com/es/products/",
-      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
-    ]
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/",
+      "https://www.carwow.es/smart/smart-5/colores",
+      "https://citywestcountry.co.uk/smart-5-colours/",
+      "https://www.zigwheels.ae/new-cars/smart/5/colors"
+    ],
+    "roofColors": [
+      {
+        "name": "Eclipse Black",
+        "hex": "#17191C"
+      },
+      {
+        "name": "Radiant Red",
+        "hex": "#B82636"
+      }
+    ],
+    "colorNotes": "Disponibilidad por acabado y mercado. Terra Green Matte: Summit Edition. Pro y Pro+: paleta básica, incluida Black Collection. Premium, Pulse y BRABUS: acceso a acabados mate y detalles específicos según versión. Los techos a contraste y acentos rojos BRABUS dependen de la configuración."
   },
   {
     "id": 41,
