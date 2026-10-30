@@ -1,0 +1,65 @@
+{
+  "type": "Crossover",
+  "batteryType": "NMC",
+  "frunkText": "Pendiente de verificar",
+  "chargingInfo": {
+    "connector": "CCS2 / Tipo 2",
+    "v2l": "Según acabado"
+  },
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio al contado con IVA y sin ayudas públicas pendiente de confirmar en configurador o tarifa oficial española. No utilizar importes promocionales condicionados a financiación o CAE."
+  },
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo"
+  },
+  "dataStatus": {
+    "status": "Borrador pendiente de precios y fotografías",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 36,
+  "brand": "Kia",
+  "model": "EV6",
+  "launchYear": 2021,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Pendiente de confirmar sin ayudas ni financiación",
+  "rangeText": "Autonomía WLTP según versión; máximo anunciado 582 km",
+  "minRangeVal": null,
+  "maxRangeVal": 582,
+  "batteryText": "62,9 / 84 kWh",
+  "powerText": "Según motorización",
+  "trunk": null,
+  "seats": 5,
+  "acceleration": "Según versión",
+  "dimensions": "Pendiente de verificar",
+  "charging": "10–80 % en aprox. 18 min (condiciones óptimas)",
+  "description": "Crossover eléctrico de cinco plazas con arquitectura de carga ultrarrápida y opciones de tracción trasera o total. La gama renovada incluye baterías de 62,9 y 84 kWh.",
+  "highlights": [
+    "Carga ultrarrápida en unos 18 minutos",
+    "Opciones RWD y AWD",
+    "Baterías de 62,9 y 84 kWh",
+    "Función V2L según equipamiento"
+  ],
+  "considerations": [
+    "No confundir la versión GT con el acabado GT-Line",
+    "Precios sin financiación ni ayudas pendientes de comprobación",
+    "Autonomía y potencia dependen de batería, ruedas y tracción"
+  ],
+  "idealFor": [
+    "Viajes largos",
+    "Quien prioriza carga rápida"
+  ],
+  "trims": [],
+  "colors": [],
+  "brandUrl": "https://www.kia.com/es/modelos/ev6/descubrelo/",
+  "sources": [
+    "https://www.kia.com/es/modelos/ev6/descubrelo/",
+    "https://www.kia.com/es/modelos/modelos-kia/"
+  ]
+}
