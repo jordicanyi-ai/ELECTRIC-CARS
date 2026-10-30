@@ -190,7 +190,7 @@ const carsData = [
       "group": "Nissan Motor Corporation",
       "relation": "Fabricante japonés",
       "logo": "img/brands/nissan-dark.svg",
-      "note": "Fabricante japonés fundado en 1933, con sede en Yokohama. Nissan forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica, innovación y fabricación de automóviles para mercados internacionales."
+      "note": "Nissan es un fabricante japonés fundado en 1933, con sede en Yokohama. Forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica."
     },
     "brandUrl": "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf.html",
     "sources": [
@@ -270,7 +270,7 @@ const carsData = [
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
       "relation": "Empresa conjunta",
-      "note": "smart es una empresa conjunta de Mercedes-Benz y Geely.",
+      "note": "smart es una marca de automóviles eléctricos desarrollada conjuntamente por Mercedes-Benz y Geely, con una propuesta centrada en el diseño y la movilidad urbana.",
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
@@ -521,7 +521,8 @@ const carsData = [
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
       "relation": "Empresa conjunta",
-      "logo": "img/brands/smart.svg"
+      "logo": "img/brands/smart.svg",
+      "note": "smart es una marca de automóviles eléctricos desarrollada conjuntamente por Mercedes-Benz y Geely, con una propuesta centrada en el diseño y la movilidad urbana."
     },
     "brandUrl": "https://es.smart.com/es/models/",
     "upcoming": true,
@@ -599,7 +600,7 @@ const carsData = [
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
       "relation": "Empresa conjunta",
-      "note": "smart es una empresa conjunta de Mercedes-Benz y Geely.",
+      "note": "smart es una marca de automóviles eléctricos desarrollada conjuntamente por Mercedes-Benz y Geely, con una propuesta centrada en el diseño y la movilidad urbana.",
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
@@ -916,7 +917,7 @@ const carsData = [
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
       "relation": "Empresa conjunta",
-      "note": "smart es una marca desarrollada por Mercedes-Benz y Geely.",
+      "note": "smart es una marca de automóviles eléctricos desarrollada conjuntamente por Mercedes-Benz y Geely, con una propuesta centrada en el diseño y la movilidad urbana.",
       "logo": "img/brands/smart.svg"
     },
     "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
@@ -1109,7 +1110,7 @@ const carsData = [
       "logo": "img/brands/mini.svg",
       "group": "BMW Group",
       "relation": "Marca del grupo",
-      "note": "MINI es una marca británica del BMW Group."
+      "note": "MINI es una marca de origen británico perteneciente al BMW Group, reconocida por sus vehículos compactos y su diseño característico."
     },
     "brandUrl": "https://www.mini.es/es_ES/home/range/mini-cooper-electrico.html",
     "dataStatus": {
@@ -1227,7 +1228,7 @@ const carsData = [
       "logo": "img/brands/skoda.svg",
       "group": "Grupo Volkswagen",
       "relation": "Marca del grupo",
-      "note": "Škoda es una marca checa del Grupo Volkswagen. El Epiq se fabrica en Navarra, España."
+      "note": "Škoda es un fabricante de automóviles de origen checo perteneciente al Grupo Volkswagen."
     },
     "warranty": {
       "vehicle": "3 años sin límite de km + 1 año adicional (máximo 60.000 km)",
@@ -1438,7 +1439,7 @@ const carsData = [
       "logo": "img/brands/renault.png",
       "group": "Renault Group",
       "relation": "Marca del grupo",
-      "note": "Renault es una marca francesa perteneciente a Renault Group."
+      "note": "Renault es un fabricante francés de automóviles y la marca principal de Renault Group, con una amplia trayectoria en vehículos eléctricos."
     },
     "brandUrl": "https://www.renault.es/electricos/r4-e-tech-electrico.html",
     "sources": [
@@ -1577,7 +1578,7 @@ const carsData = [
       "logo": "img/brands/leapmotor.png",
       "group": "Leapmotor International / Stellantis",
       "relation": "Distribución europea con Stellantis",
-      "note": "Marca china de vehículos eléctricos distribuida en Europa por Leapmotor International, empresa conjunta con Stellantis."
+      "note": "Leapmotor es un fabricante chino de vehículos eléctricos. Su expansión comercial internacional se realiza a través de Leapmotor International, una empresa conjunta con Stellantis."
     },
     "brandUrl": "https://www.leapmotor.net/es-es/modelos/b05",
     "sources": [
@@ -1626,7 +1627,7 @@ const carsData = [
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group."
+      "note": "Kia es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "dataStatus": {
       "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
@@ -1798,7 +1799,7 @@ const carsData = [
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group."
+      "note": "Kia es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "dataStatus": {
       "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
@@ -2109,7 +2110,7 @@ const carsData = [
       "logo": "img/brands/lancia.svg",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Lancia es una marca italiana de Stellantis. El Ypsilon se fabrica en Zaragoza, España."
+      "note": "Lancia es una histórica marca italiana de automóviles que pertenece al grupo Stellantis."
     },
     "brandUrl": "https://www.lancia.es/modelos/ypsilon-elettrica",
     "dataStatus": {
@@ -2309,7 +2310,7 @@ const carsData = [
       "logo": "img/brands/nissan-dark.svg",
       "group": "Nissan",
       "relation": "Alianza Renault–Nissan–Mitsubishi",
-      "note": "Fabricante japonés fundado en 1933, con sede en Yokohama. Nissan forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica, innovación y fabricación de automóviles para mercados internacionales."
+      "note": "Nissan es un fabricante japonés fundado en 1933, con sede en Yokohama. Forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica."
     },
     "brandUrl": "https://micra.nissan.es/",
     "dataStatus": {
@@ -2496,7 +2497,7 @@ const carsData = [
       "logo": "img/brands/fiat.svg",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Fiat es una marca italiana del grupo Stellantis. El 500e se fabrica en Mirafiori, Turín, Italia."
+      "note": "Fiat es un fabricante italiano de automóviles, fundado en Turín, que forma parte del grupo Stellantis."
     },
     "brandUrl": "https://www.fiat.es/modelos/fiat-500-electrico",
     "dataStatus": {
@@ -2650,7 +2651,7 @@ const carsData = [
       "logo": "img/brands/fiat.svg",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Fiat es una marca italiana del grupo Stellantis. El Grande Panda se fabrica en Kragujevac, Serbia."
+      "note": "Fiat es un fabricante italiano de automóviles, fundado en Turín, que forma parte del grupo Stellantis."
     },
     "brandUrl": "https://www.fiat.es/modelos/grande-panda-electrico",
     "dataStatus": {
@@ -2788,7 +2789,7 @@ const carsData = [
       "logo": "img/brands/opel.svg",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Opel es una marca alemana de Stellantis. El Corsa se fabrica en Zaragoza, España."
+      "note": "Opel es una marca alemana de automóviles perteneciente al grupo Stellantis."
     },
     "brandUrl": "https://www.opel.es/coches/gama-corsa/nuevo-corsa/resumen.html",
     "dataStatus": {
@@ -2965,7 +2966,7 @@ const carsData = [
       "logo": "img/brands/volkswagen.svg",
       "group": "Grupo Volkswagen",
       "relation": "Marca del grupo",
-      "note": "Volkswagen es una marca alemana del Grupo Volkswagen. El ID. Polo se fabrica en Martorell, España."
+      "note": "Volkswagen es un fabricante alemán de automóviles y una de las marcas principales del Grupo Volkswagen."
     },
     "brandUrl": "https://www.volkswagen.es/es/modelos/id-polo.html",
     "dataStatus": {
@@ -3159,7 +3160,7 @@ const carsData = [
       "logo": "img/brands/peugeot.png",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Peugeot es una marca francesa del grupo Stellantis. El E-208 se fabrica en Zaragoza (España)."
+      "note": "Peugeot es un fabricante francés de automóviles perteneciente al grupo Stellantis."
     },
     "brandUrl": "https://www.peugeot.es/gama/peugeot-208/electrico.html",
     "dataStatus": {
@@ -3290,7 +3291,7 @@ const carsData = [
       "logo": "img/brands/dacia.svg",
       "group": "Renault Group",
       "relation": "Marca del grupo",
-      "note": "Marca de origen rumano perteneciente a Renault Group. Esta generación del Spring se fabrica en Eslovenia."
+      "note": "Dacia es una marca de automóviles de origen rumano perteneciente a Renault Group, conocida por su enfoque práctico y accesible."
     },
     "brandUrl": "https://www.dacia.es",
     "dataStatus": {
@@ -3443,7 +3444,7 @@ const carsData = [
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 de cinco puertas se fabrica en Europa."
+      "note": "Kia es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
     "dataStatus": {
@@ -3583,7 +3584,7 @@ const carsData = [
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 Fastback es una berlina de cuatro puertas."
+      "note": "Kia es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
     "dataStatus": {
@@ -3742,7 +3743,7 @@ const carsData = [
       "logo": "img/brands/toyota.svg",
       "group": "Toyota Motor Corporation",
       "relation": "Fabricante",
-      "note": "Toyota es un fabricante japonés de automóviles."
+      "note": "Toyota es un fabricante japonés de automóviles y forma parte de Toyota Motor Corporation."
     },
     "brandUrl": "https://www.toyota.es",
     "dataStatus": {
@@ -3868,7 +3869,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/coches-electricos/dolphin",
     "dataStatus": {
@@ -4004,7 +4005,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/coches-electricos/atto-2",
     "dataStatus": {
@@ -4137,7 +4138,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es",
     "dataStatus": {
@@ -4271,7 +4272,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/car/atto3.html",
     "dataStatus": {
@@ -4415,7 +4416,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/coches-electricos/seal",
     "dataStatus": {
@@ -4548,7 +4549,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/car/seal-u",
     "dataStatus": {
@@ -4684,7 +4685,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/coches-electricos/sealion-7",
     "dataStatus": {
@@ -4793,7 +4794,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es",
     "dataStatus": {
@@ -4927,7 +4928,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Fabricante",
-      "note": "Marca de vehículos eléctricos de BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es/car/han",
     "dataStatus": {
@@ -5060,7 +5061,7 @@ const carsData = [
       "logo": "img/brands/renault.png",
       "group": "Renault Group",
       "relation": "Marca del grupo",
-      "note": "Renault es una marca de Renault Group."
+      "note": "Renault es un fabricante francés de automóviles y la marca principal de Renault Group, con una amplia trayectoria en vehículos eléctricos."
     },
     "brandUrl": "https://www.renault.es/electricos/twingo-e-tech-electrico.html",
     "dataStatus": {
@@ -5174,7 +5175,7 @@ const carsData = [
       "logo": "img/brands/leapmotor.png",
       "group": "Leapmotor International",
       "relation": "Distribución en Europa con Stellantis",
-      "note": "Marca de vehículos eléctricos con distribución europea mediante Leapmotor International."
+      "note": "Leapmotor es un fabricante chino de vehículos eléctricos. Su expansión comercial internacional se realiza a través de Leapmotor International, una empresa conjunta con Stellantis."
     },
     "brandUrl": "https://www.leapmotor.net/es-es/modelos/t03",
     "dataStatus": {
@@ -5329,7 +5330,7 @@ const carsData = [
       "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Teslalogo.png",
       "group": "Tesla, Inc.",
       "relation": "Fabricante",
-      "note": "Fabricante estadounidense especializado en vehículos eléctricos."
+      "note": "Tesla es un fabricante estadounidense especializado en vehículos eléctricos, baterías y tecnologías energéticas."
     },
     "brandUrl": "https://www.tesla.com/es_es/model3",
     "dataStatus": {
@@ -5466,7 +5467,7 @@ const carsData = [
       "logo": "img/brands/leapmotor.png",
       "group": "Stellantis",
       "relation": "Alianza estratégica",
-      "note": "Stellantis es el principal accionista individual de Leapmotor y lidera Leapmotor International fuera de China."
+      "note": "Leapmotor es un fabricante chino de vehículos eléctricos. Su expansión comercial internacional se realiza a través de Leapmotor International, una empresa conjunta con Stellantis."
     },
     "brandUrl": "https://www.leapmotor.com",
     "dataStatus": {
@@ -5657,7 +5658,7 @@ const carsData = [
       "logo": "img/brands/citroen.png",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Citroën forma parte de Stellantis."
+      "note": "Citroën es un fabricante francés de automóviles que forma parte del grupo Stellantis."
     },
     "brandUrl": "https://www.citroen.es",
     "dataStatus": {
@@ -5907,7 +5908,7 @@ const carsData = [
       "logo": "img/brands/renault.png",
       "group": "Renault Group",
       "relation": "Marca principal",
-      "note": "Renault es la marca principal de Renault Group."
+      "note": "Renault es un fabricante francés de automóviles y la marca principal de Renault Group, con una amplia trayectoria en vehículos eléctricos."
     },
     "brandUrl": "https://www.renault.es",
     "dataStatus": {
@@ -6115,7 +6116,7 @@ const carsData = [
       "logo": "img/brands/hyundai.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Hyundai forma parte de Hyundai Motor Group."
+      "note": "Hyundai es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "brandUrl": "https://www.hyundai.com/es/es/modelos/inster.html",
     "dataStatus": {
@@ -6253,7 +6254,7 @@ const carsData = [
       "logo": "img/brands/byd.png",
       "group": "BYD Company",
       "relation": "Marca del grupo",
-      "note": "BYD Auto pertenece a BYD Company."
+      "note": "BYD es un fabricante chino de automóviles y tecnologías de baterías, perteneciente a BYD Company, especializado en vehículos electrificados."
     },
     "brandUrl": "https://www.byd.com/es-es",
     "dataStatus": {
@@ -6442,7 +6443,7 @@ const carsData = [
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
       "relation": "Marca del grupo",
-      "note": "Kia forma parte de Hyundai Motor Group."
+      "note": "Kia es un fabricante surcoreano de automóviles que forma parte de Hyundai Motor Group."
     },
     "brandUrl": "https://www.kia.com/es/modelos/ev3/",
     "dataStatus": {
@@ -6711,7 +6712,7 @@ const carsData = [
       "logo": "img/brands/volvo.png",
       "group": "Geely Holding",
       "relation": "Marca del grupo",
-      "note": "Volvo Cars pertenece al grupo Geely Holding."
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
     },
     "brandUrl": "https://www.volvocars.com/es/",
     "dataStatus": {
@@ -6876,7 +6877,7 @@ const carsData = [
       "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Teslalogo.png",
       "group": "Tesla, Inc.",
       "relation": "Fabricante",
-      "note": "Tesla diseña y comercializa sus vehículos directamente."
+      "note": "Tesla es un fabricante estadounidense especializado en vehículos eléctricos, baterías y tecnologías energéticas."
     },
     "brandUrl": "https://www.tesla.com/es_es/modely",
     "dataStatus": {
@@ -7028,7 +7029,7 @@ const carsData = [
       "logo": "img/brands/XPeng.png",
       "group": "XPeng Inc.",
       "relation": "Fabricante",
-      "note": "XPENG es un fabricante independiente chino de vehículos eléctricos."
+      "note": "XPENG es un fabricante chino de automóviles eléctricos especializado en tecnología, conectividad y sistemas de asistencia a la conducción."
     },
     "brandUrl": "https://www.xpeng-auto.es/g6",
     "dataStatus": {
@@ -7210,7 +7211,7 @@ const carsData = [
       "logo": "img/brands/peugeot.png",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Peugeot forma parte de Stellantis."
+      "note": "Peugeot es un fabricante francés de automóviles perteneciente al grupo Stellantis."
     },
     "brandUrl": "https://www.peugeot.es",
     "dataStatus": {
@@ -7333,7 +7334,7 @@ const carsData = [
       "logo": "img/brands/citroen.png",
       "group": "Stellantis",
       "relation": "Marca del grupo",
-      "note": "Citroën es una marca francesa que forma parte del grupo Stellantis."
+      "note": "Citroën es un fabricante francés de automóviles que forma parte del grupo Stellantis."
     },
     "brandUrl": "https://www.citroen.es",
     "dataStatus": {
