@@ -356,8 +356,32 @@ const carsData = [
     },
     "colors": [
       {
-        "name": "Deep Jade Black Metallic",
-        "hex": "#1B2423"
+        "name": "Photon Orange Metallic",
+        "hex": "#E87932"
+      },
+      {
+        "name": "Electric Blue Matte",
+        "hex": "#3E6D99"
+      },
+      {
+        "name": "Digital White Metallic",
+        "hex": "#EEEDE7"
+      },
+      {
+        "name": "Meta Black Metallic",
+        "hex": "#1B1E21"
+      },
+      {
+        "name": "Cyber Silver Metallic",
+        "hex": "#B9C0C6"
+      },
+      {
+        "name": "Laser Red Metallic",
+        "hex": "#AD2937"
+      },
+      {
+        "name": "Future Green Metallic",
+        "hex": "#68816F"
       }
     ],
     "priceInfo": {
@@ -372,7 +396,7 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
+      "status": "Colores y opciones bitono añadidos; disponibilidad por acabado sujeta a configurador",
       "checkedAt": "30/10/2026"
     },
     "id": 45,
@@ -489,7 +513,18 @@ const carsData = [
       "acMax": "7,4 - 22 kW",
       "fastChargeText": "10-80 % en 30 min",
       "connector": "CCS2"
-    }
+    },
+    "roofColors": [
+      {
+        "name": "Eclipse Black",
+        "hex": "#17191C"
+      },
+      {
+        "name": "Radiant Red",
+        "hex": "#B42332"
+      }
+    ],
+    "colorNotes": "Opciones bitono con techo Eclipse Black o Radiant Red según acabado. BRABUS puede incorporar detalles rojos en paragolpes y retrovisores. Pro: selección habitual Digital White y Meta Black; Premium y BRABUS: gama ampliada, sujeta a configuración comercial."
   },
   {
     "brand": "smart",
