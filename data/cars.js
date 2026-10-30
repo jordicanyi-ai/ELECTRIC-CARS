@@ -47,7 +47,7 @@ const carsData = [
   "powerText": "170–650 CV",
   "trunk": 490,
   "seats": 5,
-  "acceleration": "Según versión",
+  "acceleration": "3,5 s–8,7 s",
   "dimensions": "4,695 × 1,890 × 1,550 m (aprox.; según versión)",
   "charging": "10–80 % en aprox. 18 min (condiciones óptimas)",
   "description": "Crossover eléctrico de cinco plazas con arquitectura de carga ultrarrápida y opciones de tracción trasera o total. La gama renovada incluye baterías de 62,9 y 84 kWh.",
@@ -75,6 +75,7 @@ const carsData = [
       "battery": "62,9 kWh",
       "batteryType": "NMC",
       "power": "170 CV",
+      "accel": "8,7 s",
       "range": "428 km WLTP"
     },
     {
@@ -84,6 +85,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "229 CV",
+      "accel": "7,7 s",
       "range": "582 km WLTP"
     },
     {
@@ -93,6 +95,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "229 CV",
+      "accel": "7,7 s",
       "range": "560 km WLTP"
     },
     {
@@ -102,6 +105,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "325 CV",
+      "accel": "5,3 s",
       "range": "522 km WLTP"
     },
     {
@@ -111,6 +115,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "650 CV",
+      "accel": "3,5 s",
       "range": "450 km WLTP"
     }
   ],
@@ -202,7 +207,7 @@ const carsData = [
   "powerText": "204–509 CV",
   "trunk": 333,
   "seats": 7,
-  "acceleration": "Consultar especificaciones por versión",
+  "acceleration": "4,6 s–8,2 s",
   "dimensions": "5,015 × 1,980 × 1,780 m (según versión)",
   "charging": "10–80 % en aprox. 24 min (condiciones óptimas)",
   "description": "SUV eléctrico familiar de seis o siete plazas según configuración. Gama con baterías de 76,1 y 99,8 kWh y versiones de tracción trasera o total. La capacidad del maletero depende de la posición de los asientos.",
@@ -230,6 +235,7 @@ const carsData = [
       "battery": "76,1 kWh",
       "batteryType": "NMC",
       "power": "218 CV",
+      "accel": "8,2 s",
       "range": "443 km WLTP"
     },
     {
@@ -239,6 +245,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "204 CV",
+      "accel": "9,4 s",
       "range": "563 km WLTP"
     },
     {
@@ -248,6 +255,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
+      "accel": "6,0 s",
       "range": "505 km WLTP"
     },
     {
@@ -257,6 +265,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
+      "accel": "5,0 s",
       "range": "505 km WLTP"
     },
     {
@@ -266,6 +275,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
+      "accel": "5,0 s",
       "range": "505 km WLTP"
     },
     {
@@ -275,6 +285,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "509 CV",
+      "accel": "4,6 s",
       "range": "510 km WLTP"
     },
     {
@@ -284,6 +295,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "509 CV",
+      "accel": "4,6 s",
       "range": "510 km WLTP"
     }
   ],
