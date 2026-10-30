@@ -408,9 +408,9 @@ let currentImageIndexes = {};
                 const name = `${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}`;
                 const priceText = car.priceMin == null ? car.priceText : car.priceText.replace(/€/g, '').trim().replace(/\s*[-–]\s*/g, '–').replace(/\s+/g, ' ') + ' €';
                 const rangeText = car.rangeText.replace(/\s*WLTP/gi, '').replace(/\s*[-–]\s*/g, '–');
-                const trunk = car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
+                const trunk = car.trunk != null && Number.isFinite(Number(car.trunk)) && car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
                     ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
-                    : `${car.trunk} L`;
+                    : (car.trunk == null || !Number.isFinite(Number(car.trunk)) ? 'Pendiente de confirmar' : `${car.trunk} L`);
                 return `<article class="car-card${car.discontinued ? ' is-discontinued' : ''}">
                     <div class="car-photo">
                         <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
@@ -465,7 +465,7 @@ let currentImageIndexes = {};
                         </div>
 
                         <div class="text-xl font-black mt-1">
-                            ${trim.price}
+                            ${trim.price || 'Precio por confirmar'}
                         </div>
 
                         <div class="text-[10px] text-slate-400">
@@ -836,9 +836,9 @@ let currentImageIndexes = {};
                                 <i class="fa-solid fa-suitcase text-blue-600"></i>
 
                                 <div class="text-xl font-black mt-2">
-                                    ${car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|no disponible|pendiente)/i.test(car.frunkText.trim())
+                                    ${car.trunk != null && Number.isFinite(Number(car.trunk)) && car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|no disponible|pendiente)/i.test(car.frunkText.trim())
     ? `${car.trunk} + ${car.frunkText}`
-    : `${car.trunk} L`}
+    : (car.trunk == null || !Number.isFinite(Number(car.trunk)) ? 'Pendiente de confirmar' : `${car.trunk} L`)}
                                 </div>
 
                                 <div class="text-xs text-slate-400">
