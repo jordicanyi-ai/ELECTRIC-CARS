@@ -1,0 +1,150 @@
+{
+  "id": 35,
+  "brand": "Lancia",
+  "model": "Ypsilon Eléctrico",
+  "type": "Utilitario",
+  "launchYear": 2024,
+  "priceMin": 30182,
+  "priceMax": 38000,
+  "priceText": "30.182–38.000 €",
+  "rangeText": "418–425 km WLTP",
+  "minRangeVal": 418,
+  "maxRangeVal": 425,
+  "batteryText": "54 kWh",
+  "batteryType": "NMC",
+  "powerText": "156 CV",
+  "trunk": 309,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "8,2 s",
+  "dimensions": "4,075 × 1,768 × 1,435 m",
+  "charging": "100 kW CC · 20–80 % en 27 min",
+  "description": "Utilitario eléctrico de cinco plazas con motor de 156 CV, batería NMC de 54 kWh (51 útiles) y 309 litros de maletero. La gama se organiza en Ypsilon, LX y HF Line, con una autonomía combinada de 418 a 425 km según configuración.",
+  "highlights": [
+    "418–425 km de autonomía WLTP combinada",
+    "Dos pantallas de 10,25 pulgadas y sistema S.A.L.A.",
+    "Climatizador automático y luces Full LED",
+    "Carga de 100 kW y V2L opcional con cargador de 11 kW"
+  ],
+  "considerations": [
+    "El acabado HF Line de 156 CV no es el deportivo HF de 280 CV",
+    "Cargador AC de 11 kW con V2L y bomba de calor opcionales",
+    "El precio y la autonomía cambian con acabado, color y equipamiento"
+  ],
+  "idealFor": [
+    "Ciudad y desplazamientos diarios",
+    "Quien busca un utilitario con interior cuidado"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios observados en el configurador Lancia España el 30/10/2026: Ypsilon 30.182 € y HF Line 35.381 € con promoción comercial; LX 38.000 € recomendado. IVA, transporte y descuentos comerciales incluidos; gastos de matriculación excluidos. No se restan ayudas públicas ni se utilizan cuotas financiadas. Condiciones y disponibilidad a confirmar en concesionario."
+  },
+  "chargingInfo": {
+    "dcMax": "100 kW",
+    "acMax": "7,4 kW de serie / 11 kW opcional",
+    "fastChargeText": "20–80 % en 27 min",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": "Opcional con cargador AC de 11 kW"
+  },
+  "warranty": {
+    "vehicle": "Consultar condiciones de garantía Lancia España",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.lancia.es/modelos/ypsilon-elettrica"
+  },
+  "trims": [
+    {
+      "name": "Ypsilon",
+      "price": "30.182 €",
+      "priceValue": 30182,
+      "battery": "54 kWh (51 útiles)",
+      "batteryType": "NMC",
+      "power": "156 CV",
+      "range": "425 km WLTP",
+      "rangeValue": 425,
+      "accel": "8,2 s"
+    },
+    {
+      "name": "HF Line",
+      "price": "35.381 €",
+      "priceValue": 35381,
+      "battery": "54 kWh (51 útiles)",
+      "batteryType": "NMC",
+      "power": "156 CV",
+      "range": "418 km WLTP",
+      "rangeValue": 418,
+      "accel": "8,2 s"
+    },
+    {
+      "name": "LX",
+      "price": "38.000 €",
+      "priceValue": 38000,
+      "battery": "54 kWh (51 útiles)",
+      "batteryType": "NMC",
+      "power": "156 CV",
+      "range": "421 km WLTP",
+      "rangeValue": 421,
+      "accel": "8,2 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Bianco Quarzo",
+      "hex": "#E8E9E5"
+    },
+    {
+      "name": "Verde Giada",
+      "hex": "#82A69C"
+    },
+    {
+      "name": "Blu Lancia",
+      "hex": "#1A3F76"
+    },
+    {
+      "name": "Nero Ardesia",
+      "hex": "#181B20"
+    },
+    {
+      "name": "Grigio Granito",
+      "hex": "#7A8085"
+    },
+    {
+      "name": "Bianco Quarzo / techo negro",
+      "hex": "#E8E9E5",
+      "secondaryHex": "#17191C"
+    },
+    {
+      "name": "Verde Giada / techo negro",
+      "hex": "#82A69C",
+      "secondaryHex": "#17191C"
+    },
+    {
+      "name": "Blu Lancia / techo negro",
+      "hex": "#1A3F76",
+      "secondaryHex": "#17191C"
+    },
+    {
+      "name": "Grigio Granito / techo negro",
+      "hex": "#7A8085",
+      "secondaryHex": "#17191C"
+    }
+  ],
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/lancia.svg",
+    "group": "Stellantis",
+    "relation": "Marca del grupo",
+    "note": "Lancia es una marca italiana de Stellantis. El Ypsilon se fabrica en Zaragoza, España."
+  },
+  "brandUrl": "https://www.lancia.es/modelos/ypsilon-elettrica",
+  "dataStatus": {
+    "status": "Preparado; pendiente de fotografías",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.lancia.es/modelos/ypsilon-elettrica",
+    "https://www.lancia.es/omni/configurador"
+  ]
+}
