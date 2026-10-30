@@ -58,7 +58,7 @@ const carsData = [
   ],
   "considerations": [
     "No confundir la versión GT con el acabado GT-Line",
-    "Precios sin financiación ni ayudas pendientes de comprobación",
+    Precios de tarifa con IVA y sin ayudas; promociones comerciales aparte,
     "Autonomía y potencia dependen de batería, ruedas y tracción",
     "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
@@ -73,7 +73,7 @@ const carsData = [
       "priceValue": 48995,
       "battery": "62,9 kWh",
       "power": "170 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "Air RWD 84 kWh",
@@ -81,7 +81,7 @@ const carsData = [
       "priceValue": 52500,
       "battery": "84 kWh",
       "power": "229 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT-Line RWD 84 kWh",
@@ -89,7 +89,7 @@ const carsData = [
       "priceValue": 58050,
       "battery": "84 kWh",
       "power": "229 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT-Line AWD 84 kWh",
@@ -97,7 +97,7 @@ const carsData = [
       "priceValue": 62075,
       "battery": "84 kWh",
       "power": "325 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT AWD 84 kWh",
@@ -105,10 +105,43 @@ const carsData = [
       "priceValue": 71090,
       "battery": "84 kWh",
       "power": "650 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     }
   ],
-  "colors": [],
+  "colors": [
+  {
+    "name": "Blanco Snow White Pearl",
+    "hex": "#F0F0EC"
+  },
+  {
+    "name": "Gris Wolf Grey",
+    "hex": "#777A7C"
+  },
+  {
+    "name": "Gris Interstellar Grey",
+    "hex": "#92979B"
+  },
+  {
+    "name": "Negro Aurora Black Pearl",
+    "hex": "#14161A"
+  },
+  {
+    "name": "Azul Yacht Blue",
+    "hex": "#17477E"
+  },
+  {
+    "name": "Rojo Runway Red",
+    "hex": "#A62235"
+  },
+  {
+    "name": "Verde Jungle Green",
+    "hex": "#47605B"
+  },
+  {
+    "name": "Gris Moonscape Matte",
+    "hex": "#676B6D"
+  }
+],
   "brandUrl": "https://www.kia.com/es/modelos/ev6/descubrelo/",
   "sources": [
     "https://www.kia.com/es/modelos/ev6/especificaciones/",
@@ -162,7 +195,7 @@ const carsData = [
   "powerText": "204–509 CV",
   "trunk": 333,
   "seats": 7,
-  "acceleration": "Pendiente de verificar",
+  "acceleration": "Consultar especificaciones por versión",
   "dimensions": "5,015 × 1,980 × 1,780 m (según versión)",
   "charging": "10–80 % en aprox. 24 min (condiciones óptimas)",
   "description": "SUV eléctrico familiar de seis o siete plazas según configuración. Gama con baterías de 76,1 y 99,8 kWh y versiones de tracción trasera o total. La capacidad del maletero depende de la posición de los asientos.",
@@ -174,7 +207,7 @@ const carsData = [
   ],
   "considerations": [
     "Algunas configuraciones tienen seis plazas: confirmar por acabado",
-    "Precio al contado sin ayudas pendiente de comprobar",
+    Los precios de tarifa pueden diferir de las ofertas comerciales al contado,
     "Autonomía y maletero cambian según versión y asientos",
     "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
@@ -189,7 +222,7 @@ const carsData = [
       "priceValue": 66475,
       "battery": "76,1 kWh",
       "power": "218 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "Earth RWD 99,8 kWh · 7 plazas",
@@ -197,7 +230,7 @@ const carsData = [
       "priceValue": 74475,
       "battery": "99,8 kWh",
       "power": "204 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "Earth AWD 99,8 kWh · 7 plazas",
@@ -205,7 +238,7 @@ const carsData = [
       "priceValue": 77475,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 7 plazas",
@@ -213,7 +246,7 @@ const carsData = [
       "priceValue": 86545,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 6 plazas",
@@ -221,7 +254,7 @@ const carsData = [
       "priceValue": 87645,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT AWD 99,8 kWh · 7 plazas",
@@ -229,7 +262,7 @@ const carsData = [
       "priceValue": 94505,
       "battery": "99,8 kWh",
       "power": "509 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     },
     {
       "name": "GT AWD 99,8 kWh · 6 plazas",
@@ -237,10 +270,43 @@ const carsData = [
       "priceValue": 95605,
       "battery": "99,8 kWh",
       "power": "509 CV",
-      "range": "WLTP según configuración; consultar ficha oficial"
+      "range": Autonomía WLTP variable según configuración
     }
   ],
-  "colors": [],
+  "colors": [
+  {
+    "name": "Blanco Snow White Pearl",
+    "hex": "#F0F0EC"
+  },
+  {
+    "name": "Negro Aurora Black Pearl",
+    "hex": "#151719"
+  },
+  {
+    "name": "Gris Pebble Grey",
+    "hex": "#7C8081"
+  },
+  {
+    "name": "Azul Ocean Blue",
+    "hex": "#23527C"
+  },
+  {
+    "name": "Plata Iceberg Green",
+    "hex": "#A5B2B1"
+  },
+  {
+    "name": "Verde Iceberg Green",
+    "hex": "#778F85"
+  },
+  {
+    "name": "Azul Flare Blue",
+    "hex": "#285D86"
+  },
+  {
+    "name": "Gris Ivory Silver Matte",
+    "hex": "#929596"
+  }
+],
   "brandUrl": "https://www.kia.com/es/modelos/ev9/descubrelo/",
   "sources": [
     "https://www.kia.com/es/modelos/ev9/especificaciones/",
