@@ -1,5 +1,253 @@
 const carsData = [
 {
+  "type": "Crossover",
+  "batteryType": "NMC",
+  "frunkText": "Según tracción; verificar capacidad",
+  "chargingInfo": {
+    "connector": "CCS2 / Tipo 2",
+    "v2l": "Según acabado"
+  },
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de tarifa de cinco versiones en España, con IVA y sin descontar ayudas ni promociones vinculadas a financiación. Los descuentos comerciales al contado pueden variar por concesionario. Referencia: fichasyprecios.motor.elpais.com/kia/ev6/ y Kia España, consulta 30/10/2026."
+  },
+  "images": [
+    "img/cars/kia-ev6/kia-ev6_01.webp",
+    "img/cars/kia-ev6/kia-ev6_02.webp",
+    "img/cars/kia-ev6/kia-ev6_03.webp",
+    "img/cars/kia-ev6/kia-ev6_04.webp",
+    "img/cars/kia-ev6/kia-ev6_05.webp",
+    "img/cars/kia-ev6/kia-ev6_06.webp",
+    "img/cars/kia-ev6/kia-ev6_07.webp",
+    "img/cars/kia-ev6/kia-ev6_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo"
+  },
+  "dataStatus": {
+    "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 36,
+  "brand": "Kia",
+  "model": "EV6",
+  "launchYear": 2021,
+  "priceMin": 48995,
+  "priceMax": 71090,
+  "priceText": "48.995–71.090 €",
+  "rangeText": "428–582 km WLTP (según versión)",
+  "minRangeVal": 428,
+  "maxRangeVal": 582,
+  "batteryText": "62,9 / 84 kWh",
+  "powerText": "170–650 CV",
+  "trunk": 490,
+  "seats": 5,
+  "acceleration": "Según versión",
+  "dimensions": "4,695 × 1,890 × 1,550 m (aprox.; según versión)",
+  "charging": "10–80 % en aprox. 18 min (condiciones óptimas)",
+  "description": "Crossover eléctrico de cinco plazas con arquitectura de carga ultrarrápida y opciones de tracción trasera o total. La gama renovada incluye baterías de 62,9 y 84 kWh.",
+  "highlights": [
+    "Carga ultrarrápida en unos 18 minutos",
+    "Opciones RWD y AWD",
+    "Baterías de 62,9 y 84 kWh",
+    "Función V2L según equipamiento"
+  ],
+  "considerations": [
+    "No confundir la versión GT con el acabado GT-Line",
+    "Precios sin financiación ni ayudas pendientes de comprobación",
+    "Autonomía y potencia dependen de batería, ruedas y tracción",
+    "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
+  ],
+  "idealFor": [
+    "Viajes largos",
+    "Quien prioriza carga rápida"
+  ],
+  "trims": [
+    {
+      "name": "Air RWD 62,9 kWh",
+      "price": "48.995 €",
+      "priceValue": 48995,
+      "battery": "62,9 kWh",
+      "power": "170 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Air RWD 84 kWh",
+      "price": "52.500 €",
+      "priceValue": 52500,
+      "battery": "84 kWh",
+      "power": "229 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line RWD 84 kWh",
+      "price": "58.050 €",
+      "priceValue": 58050,
+      "battery": "84 kWh",
+      "power": "229 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 84 kWh",
+      "price": "62.075 €",
+      "priceValue": 62075,
+      "battery": "84 kWh",
+      "power": "325 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 84 kWh",
+      "price": "71.090 €",
+      "priceValue": 71090,
+      "battery": "84 kWh",
+      "power": "650 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    }
+  ],
+  "colors": [],
+  "brandUrl": "https://www.kia.com/es/modelos/ev6/descubrelo/",
+  "sources": [
+    "https://www.kia.com/es/modelos/ev6/especificaciones/",
+    "https://fichasyprecios.motor.elpais.com/kia/ev6/"
+  ]
+},
+{
+  "type": "SUV",
+  "batteryType": "NMC",
+  "frunkText": "Disponible; capacidad según tracción",
+  "chargingInfo": {
+    "connector": "CCS2 / Tipo 2",
+    "v2l": "Según acabado"
+  },
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de tarifa por versión con IVA, sin ayudas públicas ni financiación, según listado español consultado el 30/10/2026. Precios comerciales al contado pueden ser inferiores. Fuente: carwow.es/kia/ev9; confirmar tarifa en concesionario."
+  },
+  "images": [
+    "img/cars/kia-ev9/kia-ev9_01.webp",
+    "img/cars/kia-ev9/kia-ev9_02.webp",
+    "img/cars/kia-ev9/kia-ev9_03.webp",
+    "img/cars/kia-ev9/kia-ev9_04.webp",
+    "img/cars/kia-ev9/kia-ev9_05.webp",
+    "img/cars/kia-ev9/kia-ev9_06.webp",
+    "img/cars/kia-ev9/kia-ev9_07.webp",
+    "img/cars/kia-ev9/kia-ev9_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo"
+  },
+  "dataStatus": {
+    "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 37,
+  "brand": "Kia",
+  "model": "EV9",
+  "launchYear": 2023,
+  "priceMin": 66475,
+  "priceMax": 95605,
+  "priceText": "66.475–95.605 €",
+  "rangeText": "Autonomía WLTP según versión (hasta 563 km)",
+  "minRangeVal": 443,
+  "maxRangeVal": 563,
+  "batteryText": "76,1 / 99,8 kWh",
+  "powerText": "204–509 CV",
+  "trunk": 333,
+  "seats": 7,
+  "acceleration": "Pendiente de verificar",
+  "dimensions": "5,015 × 1,980 × 1,780 m (según versión)",
+  "charging": "10–80 % en aprox. 24 min (condiciones óptimas)",
+  "description": "SUV eléctrico familiar de seis o siete plazas según configuración. Gama con baterías de 76,1 y 99,8 kWh y versiones de tracción trasera o total. La capacidad del maletero depende de la posición de los asientos.",
+  "highlights": [
+    "Hasta siete plazas",
+    "Amplio habitáculo familiar",
+    "Carga rápida 10–80 % en unos 24 minutos",
+    "Tracción integral disponible"
+  ],
+  "considerations": [
+    "Algunas configuraciones tienen seis plazas: confirmar por acabado",
+    "Precio al contado sin ayudas pendiente de comprobar",
+    "Autonomía y maletero cambian según versión y asientos",
+    "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
+  ],
+  "idealFor": [
+    "Familias numerosas",
+    "Viajes con equipaje"
+  ],
+  "trims": [
+    {
+      "name": "Air RWD 76,1 kWh · 7 plazas",
+      "price": "66.475 €",
+      "priceValue": 66475,
+      "battery": "76,1 kWh",
+      "power": "218 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Earth RWD 99,8 kWh · 7 plazas",
+      "price": "74.475 €",
+      "priceValue": 74475,
+      "battery": "99,8 kWh",
+      "power": "204 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Earth AWD 99,8 kWh · 7 plazas",
+      "price": "77.475 €",
+      "priceValue": 77475,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 99,8 kWh · 7 plazas",
+      "price": "86.545 €",
+      "priceValue": 86545,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 99,8 kWh · 6 plazas",
+      "price": "87.645 €",
+      "priceValue": 87645,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 99,8 kWh · 7 plazas",
+      "price": "94.505 €",
+      "priceValue": 94505,
+      "battery": "99,8 kWh",
+      "power": "509 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 99,8 kWh · 6 plazas",
+      "price": "95.605 €",
+      "priceValue": 95605,
+      "battery": "99,8 kWh",
+      "power": "509 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    }
+  ],
+  "colors": [],
+  "brandUrl": "https://www.kia.com/es/modelos/ev9/descubrelo/",
+  "sources": [
+    "https://www.kia.com/es/modelos/ev9/especificaciones/",
+    "https://www.carwow.es/kia/ev9"
+  ]
+},
+{
   "id": 35,
   "brand": "Lancia",
   "model": "Ypsilon Eléctrico",
