@@ -1,5 +1,187 @@
 const carsData = [
 {
+  "id": 33,
+  "brand": "Fiat",
+  "model": "500e",
+  "type": "Utilitario urbano",
+  "launchYear": 2020,
+  "priceMin": 22400,
+  "priceMax": 32900,
+  "priceText": "22.400–32.900 €",
+  "rangeText": "190–326 km WLTP",
+  "minRangeVal": 190,
+  "maxRangeVal": 326,
+  "batteryText": "23,8 / 42 kWh",
+  "batteryType": "Ion-litio",
+  "powerText": "95–118 CV",
+  "trunk": 185,
+  "frunkText": "No disponible",
+  "seats": 4,
+  "acceleration": "9,0–9,5 s",
+  "dimensions": "3,632 × 1,683 × 1,527 m",
+  "charging": "50 / 85 kW CC · 0–80 % en 30 / 35 min",
+  "description": "Utilitario eléctrico de cuatro plazas disponible como Berlina de techo fijo, Cabrio con capota de lona y 3+1 con una pequeña puerta trasera adicional en el lado del acompañante. Dos baterías y potencias de 95 o 118 CV; precios y autonomía dependen de la carrocería y el acabado.",
+  "highlights": [
+    "Solo 3,63 metros de longitud",
+    "Dos baterías para distintos usos y presupuestos",
+    "Carga en alterna de 11 kW",
+    "Diseño compacto y siete colores de carrocería"
+  ],
+  "considerations": [
+    "Cuatro plazas y maletero de 185 litros; 550 litros con asientos abatidos",
+    "Pop e Icon de 95 CV: 190 km WLTP y carga rápida de 50 kW",
+    "Cabrio y 3+1 cuestan más y ofrecen menor autonomía que el Berlina equivalente",
+    "Las fotografías muestran el Cabrio; el Hybrid y el Abarth no están incluidos"
+  ],
+  "idealFor": [
+    "Ciudad y aparcamiento en espacios pequeños",
+    "Una o dos personas que buscan un segundo coche"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios con promoción del configurador Fiat España observados el 30/10/2026, sin restar ayudas ni utilizar cuotas financiadas. Incluyen IVA, transporte y descuentos comerciales; gastos de matriculación no incluidos. Promoción hasta fin de mes y sujeta a disponibilidad. La oferta específica al contado de la web puede diferir del configurador."
+  },
+  "chargingInfo": {
+    "dcMax": "50 kW (23,8 kWh) / 85 kW (42 kWh)",
+    "acMax": "11 kW",
+    "fastChargeText": "0–80 % en 30 min (23,8 kWh) / 35 min (42 kWh)",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": false
+  },
+  "warranty": {
+    "vehicle": "3 años, según condiciones de Fiat",
+    "battery": "Consultar condiciones de garantía Fiat para la batería de tracción",
+    "capacity": "Consultar condiciones",
+    "source": "https://www.fiat.es/mopar/garantia"
+  },
+  "trims": [
+    {
+      "name": "Berlina · Pop 95 CV",
+      "price": "22.400 €",
+      "priceValue": 22400,
+      "battery": "23,8 kWh",
+      "batteryType": "Ion-litio",
+      "power": "95 CV",
+      "range": "190 km WLTP",
+      "rangeValue": 190,
+      "accel": "9,5 s"
+    },
+    {
+      "name": "Berlina · Icon 95 CV",
+      "price": "23.900 €",
+      "priceValue": 23900,
+      "battery": "23,8 kWh",
+      "batteryType": "Ion-litio",
+      "power": "95 CV",
+      "range": "190 km WLTP",
+      "rangeValue": 190,
+      "accel": "9,5 s"
+    },
+    {
+      "name": "Berlina · Icon 118 CV",
+      "price": "26.900 €",
+      "priceValue": 26900,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "326 km WLTP",
+      "rangeValue": 326,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "Berlina · La Prima 118 CV",
+      "price": "29.901 €",
+      "priceValue": 29901,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "319 km WLTP",
+      "rangeValue": 319,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "3+1 · La Prima 118 CV",
+      "price": "31.400 €",
+      "priceValue": 31400,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "310 km WLTP",
+      "rangeValue": 310,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "Cabrio · La Prima 118 CV",
+      "price": "32.900 €",
+      "priceValue": 32900,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "300 km WLTP",
+      "rangeValue": 300,
+      "accel": "9,0 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "(RED)",
+      "hex": "#C42C32"
+    },
+    {
+      "name": "Blanco Gelato",
+      "hex": "#E9E8DF"
+    },
+    {
+      "name": "Negro Onyx",
+      "hex": "#18191A"
+    },
+    {
+      "name": "Verde Océano",
+      "hex": "#687F79"
+    },
+    {
+      "name": "Rosa Gold",
+      "hex": "#B99688"
+    },
+    {
+      "name": "Azul Celestial",
+      "hex": "#98B1BD"
+    },
+    {
+      "name": "Amarillo oro",
+      "hex": "#D7AD45"
+    }
+  ],
+  "images": [
+    "img/cars/fiat-500e/fiat-500e_01.webp",
+    "img/cars/fiat-500e/fiat-500e_02.webp",
+    "img/cars/fiat-500e/fiat-500e_03.webp",
+    "img/cars/fiat-500e/fiat-500e_04.webp",
+    "img/cars/fiat-500e/fiat-500e_05.webp",
+    "img/cars/fiat-500e/fiat-500e_06.webp",
+    "img/cars/fiat-500e/fiat-500e_07.webp",
+    "img/cars/fiat-500e/fiat-500e_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/fiat.svg",
+    "group": "Stellantis",
+    "relation": "Marca del grupo",
+    "note": "Fiat es una marca italiana del grupo Stellantis. El 500e se fabrica en Mirafiori, Turín, Italia."
+  },
+  "brandUrl": "https://www.fiat.es/modelos/fiat-500-electrico",
+  "dataStatus": {
+    "status": "Revisado",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.fiat.es/omni/configurador",
+    "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/500e/AF_CATALOGO-FIAT-500-ELECTRICO-297X210_Oct25.pdf"
+  ],
+  "galleryNote": "Las fotografías muestran la carrocería Cabrio con capota de lona."
+},
+{
   "id": 32,
   "brand": "Fiat",
   "model": "Grande Panda Eléctrico",

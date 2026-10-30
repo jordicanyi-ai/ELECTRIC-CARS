@@ -1,12 +1,12 @@
 {
   "id": 33,
   "brand": "Fiat",
-  "model": "500e Berlina",
+  "model": "500e",
   "type": "Utilitario urbano",
   "launchYear": 2020,
   "priceMin": 22400,
-  "priceMax": 29901,
-  "priceText": "22.400–29.901 €",
+  "priceMax": 32900,
+  "priceText": "22.400–32.900 €",
   "rangeText": "190–326 km WLTP",
   "minRangeVal": 190,
   "maxRangeVal": 326,
@@ -19,7 +19,7 @@
   "acceleration": "9,0–9,5 s",
   "dimensions": "3,632 × 1,683 × 1,527 m",
   "charging": "50 / 85 kW CC · 0–80 % en 30 / 35 min",
-  "description": "Utilitario eléctrico de cuatro plazas y tres puertas, pensado para ciudad. La versión de 95 CV ofrece 190 km WLTP; la de 118 CV amplía la autonomía hasta 326 km según acabado. Esta ficha corresponde al Berlina con techo fijo.",
+  "description": "Utilitario eléctrico de cuatro plazas disponible como Berlina de techo fijo, Cabrio con capota de lona y 3+1 con una pequeña puerta trasera adicional en el lado del acompañante. Dos baterías y potencias de 95 o 118 CV; precios y autonomía dependen de la carrocería y el acabado.",
   "highlights": [
     "Solo 3,63 metros de longitud",
     "Dos baterías para distintos usos y presupuestos",
@@ -27,10 +27,10 @@
     "Diseño compacto y siete colores de carrocería"
   ],
   "considerations": [
-    "Cuatro plazas y acceso trasero por las puertas delanteras",
-    "Maletero de 185 litros; los 550 litros corresponden a asientos abatidos",
+    "Cuatro plazas y maletero de 185 litros; 550 litros con asientos abatidos",
     "Pop e Icon de 95 CV: 190 km WLTP y carga rápida de 50 kW",
-    "Cabrio, 3+1, Hybrid y Abarth no están incluidos en esta ficha"
+    "Cabrio y 3+1 cuestan más y ofrecen menor autonomía que el Berlina equivalente",
+    "Las fotografías muestran el Cabrio; el Hybrid y el Abarth no están incluidos"
   ],
   "idealFor": [
     "Ciudad y aparcamiento en espacios pequeños",
@@ -50,13 +50,13 @@
   },
   "warranty": {
     "vehicle": "3 años, según condiciones de Fiat",
-    "battery": "Pendiente de confirmar condiciones vigentes de la batería",
+    "battery": "Consultar condiciones de garantía Fiat para la batería de tracción",
     "capacity": "Consultar condiciones",
     "source": "https://www.fiat.es/mopar/garantia"
   },
   "trims": [
     {
-      "name": "Pop 95 CV",
+      "name": "Berlina · Pop 95 CV",
       "price": "22.400 €",
       "priceValue": 22400,
       "battery": "23,8 kWh",
@@ -67,7 +67,7 @@
       "accel": "9,5 s"
     },
     {
-      "name": "Icon 95 CV",
+      "name": "Berlina · Icon 95 CV",
       "price": "23.900 €",
       "priceValue": 23900,
       "battery": "23,8 kWh",
@@ -78,7 +78,7 @@
       "accel": "9,5 s"
     },
     {
-      "name": "Icon 118 CV",
+      "name": "Berlina · Icon 118 CV",
       "price": "26.900 €",
       "priceValue": 26900,
       "battery": "42 kWh",
@@ -89,7 +89,7 @@
       "accel": "9,0 s"
     },
     {
-      "name": "La Prima 118 CV",
+      "name": "Berlina · La Prima 118 CV",
       "price": "29.901 €",
       "priceValue": 29901,
       "battery": "42 kWh",
@@ -97,6 +97,28 @@
       "power": "118 CV",
       "range": "319 km WLTP",
       "rangeValue": 319,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "3+1 · La Prima 118 CV",
+      "price": "31.400 €",
+      "priceValue": 31400,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "310 km WLTP",
+      "rangeValue": 310,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "Cabrio · La Prima 118 CV",
+      "price": "32.900 €",
+      "priceValue": 32900,
+      "battery": "42 kWh",
+      "batteryType": "Ion-litio",
+      "power": "118 CV",
+      "range": "300 km WLTP",
+      "rangeValue": 300,
       "accel": "9,0 s"
     }
   ],
@@ -130,7 +152,16 @@
       "hex": "#D7AD45"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/fiat-500e/fiat-500e_01.webp",
+    "img/cars/fiat-500e/fiat-500e_02.webp",
+    "img/cars/fiat-500e/fiat-500e_03.webp",
+    "img/cars/fiat-500e/fiat-500e_04.webp",
+    "img/cars/fiat-500e/fiat-500e_05.webp",
+    "img/cars/fiat-500e/fiat-500e_06.webp",
+    "img/cars/fiat-500e/fiat-500e_07.webp",
+    "img/cars/fiat-500e/fiat-500e_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/fiat.svg",
@@ -140,11 +171,12 @@
   },
   "brandUrl": "https://www.fiat.es/modelos/fiat-500-electrico",
   "dataStatus": {
-    "status": "Preparado; pendiente de fotografías y garantía de batería",
+    "status": "Revisado",
     "checkedAt": "30/10/2026"
   },
   "sources": [
     "https://www.fiat.es/omni/configurador",
     "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/500e/AF_CATALOGO-FIAT-500-ELECTRICO-297X210_Oct25.pdf"
-  ]
+  ],
+  "galleryNote": "Las fotografías muestran la carrocería Cabrio con capota de lona."
 }

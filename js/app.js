@@ -1033,6 +1033,7 @@ let currentImageIndexes = {};
 
                         </div>
 
+                        ${car.galleryNote ? `<p class="text-sm text-slate-500 mb-4">${car.galleryNote}</p>` : ''}
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                             ${galleryHtml}
                         </div>
