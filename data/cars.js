@@ -8,7 +8,7 @@ const carsData = [
   "upcoming": true,
   "priceMin": null,
   "priceMax": null,
-  "priceText": "Precio pendiente",
+  "priceText": "−20.000 € previsto",
   "rangeText": "250 km WLTP",
   "minRangeVal": 250,
   "maxRangeVal": 250,
