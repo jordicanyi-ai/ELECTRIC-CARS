@@ -72,7 +72,7 @@ const carsData = [
       "name": "Air RWD 62,9 kWh",
       "price": "48.995 €",
       "priceValue": 48995,
-      "battery": "62,9 kWh",
+      "battery": "62,9 kWh · NMC",
       "power": "170 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -80,7 +80,7 @@ const carsData = [
       "name": "Air RWD 84 kWh",
       "price": "52.500 €",
       "priceValue": 52500,
-      "battery": "84 kWh",
+      "battery": "84 kWh · NMC",
       "power": "229 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -88,7 +88,7 @@ const carsData = [
       "name": "GT-Line RWD 84 kWh",
       "price": "58.050 €",
       "priceValue": 58050,
-      "battery": "84 kWh",
+      "battery": "84 kWh · NMC",
       "power": "229 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -96,7 +96,7 @@ const carsData = [
       "name": "GT-Line AWD 84 kWh",
       "price": "62.075 €",
       "priceValue": 62075,
-      "battery": "84 kWh",
+      "battery": "84 kWh · NMC",
       "power": "325 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -104,7 +104,7 @@ const carsData = [
       "name": "GT AWD 84 kWh",
       "price": "71.090 €",
       "priceValue": 71090,
-      "battery": "84 kWh",
+      "battery": "84 kWh · NMC",
       "power": "650 CV",
       "range": "Autonomía WLTP variable según configuración"
     }
