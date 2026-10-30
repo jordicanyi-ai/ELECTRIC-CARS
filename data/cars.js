@@ -1,5 +1,154 @@
 const carsData = [
 {
+  "id": 32,
+  "brand": "Fiat",
+  "model": "Grande Panda Eléctrico",
+  "type": "Utilitario",
+  "launchYear": 2025,
+  "priceMin": 22950,
+  "priceMax": 27450,
+  "priceText": "22.950–27.450 €",
+  "rangeText": "320 km WLTP",
+  "minRangeVal": 320,
+  "maxRangeVal": 320,
+  "batteryText": "44 kWh",
+  "batteryType": "LFP",
+  "powerText": "113 CV",
+  "trunk": 361,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "11,0 s",
+  "dimensions": "3,999 × 1,763 × 1,576 m",
+  "charging": "100 kW CC · 20–80 % en 27 min",
+  "description": "Utilitario eléctrico de cinco plazas con batería LFP de 44 kWh, motor de 113 CV y 320 km WLTP. Ofrece 361 litros de maletero en una carrocería de cuatro metros, con un diseño inspirado en el Panda original. La gama española se organiza en los acabados Pop, Icon y La Prima.",
+  "highlights": [
+    "361 litros de maletero y cinco plazas en cuatro metros",
+    "Carga rápida de 100 kW",
+    "Diseño reconocible y siete colores de carrocería",
+    "Cable de carga retráctil integrado según configuración"
+  ],
+  "considerations": [
+    "Los 412 litros de otras versiones corresponden al híbrido; el eléctrico ofrece 361",
+    "La carga en alterna de 11 kW y el cable retráctil dependen de la configuración",
+    "La pantalla central y el equipamiento de confort cambian con el acabado",
+    "Autonomía más apropiada para uso diario que para viajes largos frecuentes"
+  ],
+  "idealFor": [
+    "Ciudad y desplazamientos diarios",
+    "Familias que buscan un utilitario práctico"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios con promoción del configurador oficial Fiat España observados el 30/10/2026: Pop 22.950 €, Icon 24.450 €, La Prima 27.450 €. Incluyen IVA, transporte y descuentos comerciales; no se restan ayudas ni se emplean cuotas o precios financiados. Gastos de matriculación no incluidos."
+  },
+  "chargingInfo": {
+    "dcMax": "100 kW",
+    "acMax": "7 kW / 11 kW según configuración",
+    "fastChargeText": "20–80 % en 27 min",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": false
+  },
+  "warranty": {
+    "vehicle": "3 años, según condiciones de Fiat",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.fiat.es/mopar/garantia"
+  },
+  "trims": [
+    {
+      "name": "Pop",
+      "price": "22.950 €",
+      "priceValue": 22950,
+      "battery": "44 kWh",
+      "batteryType": "LFP",
+      "power": "113 CV",
+      "range": "320 km WLTP",
+      "rangeValue": 320,
+      "accel": "11,0 s"
+    },
+    {
+      "name": "Icon",
+      "price": "24.450 €",
+      "priceValue": 24450,
+      "battery": "44 kWh",
+      "batteryType": "LFP",
+      "power": "113 CV",
+      "range": "320 km WLTP",
+      "rangeValue": 320,
+      "accel": "11,0 s"
+    },
+    {
+      "name": "La Prima",
+      "price": "27.450 €",
+      "priceValue": 27450,
+      "battery": "44 kWh",
+      "batteryType": "LFP",
+      "power": "113 CV",
+      "range": "320 km WLTP",
+      "rangeValue": 320,
+      "accel": "11,0 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Amarillo Limone",
+      "hex": "#E8CA26"
+    },
+    {
+      "name": "Bronce Luna",
+      "hex": "#9C7958"
+    },
+    {
+      "name": "Azul Acqua",
+      "hex": "#9DB9BC"
+    },
+    {
+      "name": "Azul Lago",
+      "hex": "#285B8A"
+    },
+    {
+      "name": "Rojo Passione",
+      "hex": "#B7202D"
+    },
+    {
+      "name": "Negro Cinema",
+      "hex": "#171B1D"
+    },
+    {
+      "name": "Blanco Gelato",
+      "hex": "#EEEDE5"
+    }
+  ],
+  "images": [
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_01.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_02.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_03.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_04.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_05.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_06.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_07.webp",
+    "img/cars/fiat-grandepanda/Fiat-GrandePanda_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/fiat.svg",
+    "group": "Stellantis",
+    "relation": "Marca del grupo",
+    "note": "Fiat es una marca italiana del grupo Stellantis. El Grande Panda se fabrica en Kragujevac, Serbia."
+  },
+  "brandUrl": "https://www.fiat.es/modelos/grande-panda-electrico",
+  "dataStatus": {
+    "status": "Revisado",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.fiat.es/omni/configurador",
+    "https://www.fiat.es/content/dam/fiat2023/cross/models/grande-panda-electric/model/trim-comparison/es/FIAT_Grande_PandaBEV_Comparativa-Acabados.pdf",
+    "https://www.fiat.es/mundo-fiat/noticias-y-eventos/gran-panda-a-la-conquista-del-segmento-b"
+  ]
+},
+{
   "id": 31,
   "brand": "Opel",
   "model": "Corsa Electric",
