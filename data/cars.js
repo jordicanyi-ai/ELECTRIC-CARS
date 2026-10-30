@@ -58,7 +58,7 @@ const carsData = [
   ],
   "considerations": [
     "No confundir la versión GT con el acabado GT-Line",
-    Precios de tarifa con IVA y sin ayudas; promociones comerciales aparte,
+    "Precios de tarifa con IVA y sin ayudas; promociones comerciales aparte",
     "Autonomía y potencia dependen de batería, ruedas y tracción",
     "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
@@ -207,7 +207,7 @@ const carsData = [
   ],
   "considerations": [
     "Algunas configuraciones tienen seis plazas: confirmar por acabado",
-    Los precios de tarifa pueden diferir de las ofertas comerciales al contado,
+    "Los precios de tarifa pueden diferir de las ofertas comerciales al contado",
     "Autonomía y maletero cambian según versión y asientos",
     "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
