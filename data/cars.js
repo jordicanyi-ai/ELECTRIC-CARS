@@ -1,5 +1,210 @@
 const carsData = [
   {
+    "id": 46,
+    "brand": "Nissan",
+    "model": "Leaf",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 37080,
+    "priceMax": 48880,
+    "priceText": "37.080 - 48.880 €",
+    "rangeText": "445 - 623 km",
+    "minRangeVal": 445,
+    "maxRangeVal": 623,
+    "batteryText": "52 - 75 kWh",
+    "batteryType": "NMC",
+    "powerText": "177 - 218 CV",
+    "trunk": 437,
+    "frunkText": "No disponible",
+    "acceleration": "7,6 - 8,6 s",
+    "dimensions": "4,35 × 1,81 × 1,55 m",
+    "charging": "105 - 150 kW CC; 20-80 % en unos 30 min",
+    "description": "La tercera generación del Nissan LEAF estrena carrocería crossover de 4,35 metros, cinco plazas y 437 litros de maletero. Ofrece baterías de 52 y 75 kWh con motores de 177 y 218 CV, respectivamente. La batería grande homologa hasta 623 km WLTP en la versión más eficiente. Incorpora conector CCS, carga rápida de 105 o 150 kW, función V2L y tecnologías de asistencia como ProPILOT. Es una opción interesante para uso familiar y viajes, aunque la autonomía varía mucho según batería y acabado.",
+    "highlights": [
+      "437 litros de maletero",
+      "Hasta 623 km WLTP en versión 75 kWh",
+      "Carga rápida CCS de 105 o 150 kW",
+      "Tecnología V2L y ProPILOT"
+    ],
+    "considerations": [
+      "No tiene frunk",
+      "Autonomía y equipamiento dependen de la versión",
+      "Precios de tarifa sin ayudas, promociones ni financiación"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes",
+      "Uso diario"
+    ],
+    "trims": [
+      {
+        "name": "Engage 52 kWh",
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "177 CV",
+        "range": "Hasta 445 km WLTP (según acabado; pendiente de homologación)",
+        "priceValue": 37080,
+        "price": "37.080 €",
+        "rangeValue": 445,
+        "accel": "8,6 s"
+      },
+      {
+        "name": "Engage+ 52 kWh",
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "177 CV",
+        "range": "Hasta 445 km WLTP (según acabado; pendiente de homologación)",
+        "priceValue": 38580,
+        "price": "38.580 €",
+        "rangeValue": 445,
+        "accel": "8,6 s"
+      },
+      {
+        "name": "Advance 52 kWh",
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "177 CV",
+        "range": "Hasta 445 km WLTP (según acabado; pendiente de homologación)",
+        "priceValue": 42560,
+        "price": "42.560 €",
+        "rangeValue": 445,
+        "accel": "8,6 s"
+      },
+      {
+        "name": "Evolve 52 kWh",
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "177 CV",
+        "range": "Hasta 445 km WLTP (según acabado; pendiente de homologación)",
+        "priceValue": 44480,
+        "price": "44.480 €",
+        "rangeValue": 445,
+        "accel": "8,6 s"
+      },
+      {
+        "name": "Engage 75 kWh",
+        "battery": "75 kWh",
+        "batteryType": "NMC",
+        "power": "218 CV",
+        "range": "Hasta 623 km WLTP (según acabado)",
+        "priceValue": 42080,
+        "price": "42.080 €",
+        "rangeValue": 623,
+        "accel": "7,6 s"
+      },
+      {
+        "name": "Engage+ 75 kWh",
+        "battery": "75 kWh",
+        "batteryType": "NMC",
+        "power": "218 CV",
+        "range": "Hasta 623 km WLTP (según acabado)",
+        "priceValue": 43580,
+        "price": "43.580 €",
+        "rangeValue": 623,
+        "accel": "7,6 s"
+      },
+      {
+        "name": "Advance 75 kWh",
+        "battery": "75 kWh",
+        "batteryType": "NMC",
+        "power": "218 CV",
+        "range": "Hasta 623 km WLTP (según acabado)",
+        "priceValue": 46960,
+        "price": "46.960 €",
+        "rangeValue": 623,
+        "accel": "7,6 s"
+      },
+      {
+        "name": "Evolve 75 kWh",
+        "battery": "75 kWh",
+        "batteryType": "NMC",
+        "power": "218 CV",
+        "range": "Hasta 623 km WLTP (según acabado)",
+        "priceValue": 48880,
+        "price": "48.880 €",
+        "rangeValue": 623,
+        "accel": "7,6 s"
+      }
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa en España con IVA, sin ayudas ni financiación. No confundir con ofertas Nissan que descuentan CAE, Plan Auto+ o exigen financiar."
+    },
+    "chargingInfo": {
+      "dcMax": "105 kW (52 kWh) / 150 kW (75 kWh)",
+      "acMax": "11 kW",
+      "fastChargeText": "20-80 % en unos 30 minutos",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años (consultar programa Nissan+)",
+      "battery": "8 años / 160.000 km (confirmar condiciones)",
+      "source": "https://www.nissan.es/"
+    },
+    "colors": [
+      {
+        "name": "Turquoise",
+        "hex": "#43A9B0"
+      },
+      {
+        "name": "Fuji Sunset Red",
+        "hex": "#A8413C"
+      },
+      {
+        "name": "Kori White",
+        "hex": "#EDECE8"
+      },
+      {
+        "name": "Sukumo Blue",
+        "hex": "#3D658B"
+      },
+      {
+        "name": "Katana Grey",
+        "hex": "#737B82"
+      },
+      {
+        "name": "Skyliner Grey",
+        "hex": "#B3B7B7"
+      }
+    ],
+    "images": [
+      "img/cars/nissan-leaf/nissan-leaf_01.webp",
+      "img/cars/nissan-leaf/nissan-leaf_02.webp",
+      "img/cars/nissan-leaf/nissan-leaf_03.webp",
+      "img/cars/nissan-leaf/nissan-leaf_04.webp",
+      "img/cars/nissan-leaf/nissan-leaf_05.webp",
+      "img/cars/nissan-leaf/nissan-leaf_06.webp",
+      "img/cars/nissan-leaf/nissan-leaf_07.webp",
+      "img/cars/nissan-leaf/nissan-leaf_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Nuevo Nissan LEAF 2026 - pruebas",
+        "url": "https://www.youtube.com/results?search_query=nuevo+Nissan+Leaf+2026+prueba",
+        "thumb": "img/cars/nissan-leaf/nissan-leaf_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "Nissan Motor Corporation",
+      "relation": "Fabricante japonés"
+    },
+    "brandUrl": "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf.html",
+    "sources": [
+      "https://spain.nissannews.com/es-ES/releases/nissan-leaf-bateria-de-52-o-de-75-kwh-una-opcion-para-cada-necesidad",
+      "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf/precios-y-versiones.html",
+      "https://www.coches.com/coches-nuevos/Nissan-Leaf/",
+      "https://www.km77.com/coches/nissan/leaf/2026/datos",
+      "https://leaf.nissan.es/"
+    ],
+    "dataStatus": {
+      "status": "Publicado con 8 fotos, colores y tarifas de catálogo contrastadas",
+      "checkedAt": "30/10/2026"
+    },
+    "colorNotes": "Colores mostrados en la web oficial española de Nissan; varias configuraciones con techo negro. Disponibilidad por acabado."
+  },
+  {
     "brand": "smart",
     "launchYear": 2023,
     "type": "SUV",
