@@ -1,5 +1,137 @@
 const carsData = [
 {
+  "id": 31,
+  "brand": "Opel",
+  "model": "Corsa Electric",
+  "type": "Utilitario",
+  "launchYear": 2023,
+  "priceMin": 27550,
+  "priceMax": 30950,
+  "priceText": "27.550–30.950 €",
+  "rangeText": "354–428 km WLTP",
+  "minRangeVal": 354,
+  "maxRangeVal": 428,
+  "batteryText": "50–51 kWh",
+  "batteryType": "Iones de litio",
+  "powerText": "136–156 CV",
+  "trunk": 267,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "8,1–8,7 s",
+  "dimensions": "4,061 × 1,765 × 1,435 m",
+  "charging": "100 kW CC · 20–80 % en unos 30 min",
+  "description": "Utilitario eléctrico de cinco plazas con el frontal Opel Vizor y 267 litros de maletero. La gama eléctrica convencional disponible en el configurador español combina el acabado Edition de 136 CV y el GS de 156 CV. Las dos versiones admiten carga rápida de 100 kW. El Corsa GSE es una variante deportiva específica.",
+  "highlights": [
+    "Tamaño contenido para ciudad y desplazamientos diarios",
+    "Hasta 428 km WLTP en el GS configurado",
+    "Carga rápida de 100 kW en las dos versiones"
+  ],
+  "considerations": [
+    "Maletero de 267 litros y espacio trasero ajustado para uso familiar",
+    "El cargador trifásico de 11 kW y la bomba de calor son opcionales",
+    "La autonomía depende del equipamiento y las llantas"
+  ],
+  "idealFor": [
+    "Ciudad y uso diario",
+    "Escapadas con un utilitario de cinco plazas"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios al contado del configurador oficial Opel España el 30/10/2026, con impuestos y descuentos comerciales. No se descuentan ayudas ni se utilizan precios financiados."
+  },
+  "chargingInfo": {
+    "dcMax": "100 kW",
+    "acMax": "7,4 kW de serie / 11 kW opcional",
+    "fastChargeText": "20–80 % en unos 30 min",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": false
+  },
+  "warranty": {
+    "vehicle": "3 años; ampliable hasta 8 años / 160.000 km con mantenimiento en la red Opel y según condiciones",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.opel.es/maintenance-services/warranties-care/8-year-warranty.html"
+  },
+  "trims": [
+    {
+      "name": "Edition Electric 136",
+      "price": "27.550 €",
+      "priceValue": 27550,
+      "battery": "50 kWh",
+      "batteryType": "Iones de litio",
+      "power": "136 CV",
+      "range": "354 km WLTP",
+      "rangeValue": 354,
+      "accel": "8,7 s"
+    },
+    {
+      "name": "GS Electric 156",
+      "price": "30.950 €",
+      "priceValue": 30950,
+      "battery": "51 kWh",
+      "batteryType": "Iones de litio",
+      "power": "156 CV",
+      "range": "428 km WLTP",
+      "rangeValue": 428,
+      "accel": "8,1 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Voltaik Blue",
+      "hex": "#2765AC"
+    },
+    {
+      "name": "Karbon Black",
+      "hex": "#181B1E"
+    },
+    {
+      "name": "Kontur White",
+      "hex": "#F2F1E9"
+    },
+    {
+      "name": "Kristall Silver",
+      "hex": "#BCC1C4"
+    },
+    {
+      "name": "Grafik Grey",
+      "hex": "#7C8288"
+    },
+    {
+      "name": "Arktis White",
+      "hex": "#F4F5F1"
+    }
+  ],
+  "images": [
+    "img/cars/opel-corsa/opel-corsa-01.webp",
+    "img/cars/opel-corsa/opel-corsa-02.webp",
+    "img/cars/opel-corsa/opel-corsa-03.webp",
+    "img/cars/opel-corsa/opel-corsa-04.webp",
+    "img/cars/opel-corsa/opel-corsa-05.webp",
+    "img/cars/opel-corsa/opel-corsa-06.webp",
+    "img/cars/opel-corsa/opel-corsa-07.webp",
+    "img/cars/opel-corsa/opel-corsa-08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/opel.svg",
+    "group": "Stellantis",
+    "relation": "Marca del grupo",
+    "note": "Opel es una marca alemana de Stellantis. El Corsa se fabrica en Zaragoza, España."
+  },
+  "brandUrl": "https://www.opel.es/coches/gama-corsa/nuevo-corsa/resumen.html",
+  "dataStatus": {
+    "status": "Revisado · gama 136–156 CV",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://store.opel.es/selector/configurable/corsa-berlina",
+    "https://store.opel.es/selector/configurable/corsa-berlina/gs",
+    "https://www.opel.es/hub/datasheet/corsa-my26-es.html"
+  ]
+},
+{
   "id": 30,
   "brand": "Volkswagen",
   "model": "ID. Polo",
