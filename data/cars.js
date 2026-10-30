@@ -1,5 +1,192 @@
 const carsData = [
 {
+  "id": 29,
+  "brand": "Peugeot",
+  "model": "E-208",
+  "type": "Utilitario",
+  "launchYear": 2023,
+  "priceMin": 29270,
+  "priceMax": 35900,
+  "priceText": "29.270–35.900 €",
+  "rangeText": "363–433 km WLTP",
+  "minRangeVal": 363,
+  "maxRangeVal": 433,
+  "batteryText": "46,3–48,1 kWh útiles",
+  "batteryType": "Iones de litio",
+  "powerText": "136–156 CV",
+  "trunk": 309,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "8,2–9,0 s",
+  "dimensions": "4,055 × 1,745 × 1,430 m",
+  "charging": "100 kW CC · 20–80 % en 25–27 min",
+  "description": "Utilitario eléctrico de cinco plazas con dos motores, de 136 y 156 CV, y autonomía de 363 a 433 km WLTP según versión. El diseño renovado incorpora la firma luminosa de tres garras y el i-Cockpit con volante compacto. La gama aquí recogida corresponde a las versiones convencionales; el GTi es una variante deportiva específica.",
+  "highlights": [
+    "433 km WLTP en el Style de 156 CV",
+    "Carga rápida de 100 kW y 20–80 % en 25–27 minutos",
+    "V2L en el motor de 156 CV, con adaptador accesorio"
+  ],
+  "considerations": [
+    "Comprueba la postura de conducción y la visibilidad del cuadro sobre el volante",
+    "La autonomía cambia con el motor, el acabado y las llantas",
+    "Maletero: 309 litros según Peugeot; 265 litros según medición VDA publicada por km77",
+    "El cargador de 11 kW es opcional; de serie incorpora 7,4 kW"
+  ],
+  "idealFor": [
+    "Ciudad y desplazamientos diarios",
+    "Escapadas con un coche de tamaño contenido"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios al contado del configurador oficial español, consultados el 30/10/2026. Incluyen impuestos y posibles descuentos comerciales; no se utilizan precios financiados ni se descuentan ayudas públicas."
+  },
+  "chargingInfo": {
+    "dcMax": "100 kW",
+    "acMax": "7,4 kW de serie / 11 kW opcional",
+    "fastChargeText": "20–80 % en 25 min (136 CV) / 27 min (156 CV)",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": true,
+    "note": "V2L solo en 156 CV con adaptador accesorio"
+  },
+  "warranty": {
+    "vehicle": "Hasta 8 años / 160.000 km con Peugeot Care, sujeto a mantenimiento y condiciones",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.peugeot.es/gama/peugeot-208/electrico.html"
+  },
+  "trims": [
+    {
+      "name": "Style 136",
+      "price": "29.270 €",
+      "priceValue": 29270,
+      "battery": "46,3 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "136 CV",
+      "range": "363 km WLTP",
+      "rangeValue": 363,
+      "accel": "9,0 s",
+      "charging": "100 kW CC"
+    },
+    {
+      "name": "Style 156",
+      "price": "30.270 €",
+      "priceValue": 30270,
+      "battery": "48,1 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "156 CV",
+      "range": "433 km WLTP",
+      "rangeValue": 433,
+      "accel": "8,2 s",
+      "charging": "100 kW CC"
+    },
+    {
+      "name": "Allure Plus 136",
+      "price": "30.570 €",
+      "priceValue": 30570,
+      "battery": "46,3 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "136 CV",
+      "range": "363 km WLTP",
+      "rangeValue": 363,
+      "accel": "9,0 s",
+      "charging": "100 kW CC"
+    },
+    {
+      "name": "Allure Plus 156",
+      "price": "31.570 €",
+      "priceValue": 31570,
+      "battery": "48,1 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "156 CV",
+      "range": "431 km WLTP",
+      "rangeValue": 431,
+      "accel": "8,2 s",
+      "charging": "100 kW CC"
+    },
+    {
+      "name": "GT Plus 156",
+      "price": "33.620 €",
+      "priceValue": 33620,
+      "battery": "48,1 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "156 CV",
+      "range": "424 km WLTP",
+      "rangeValue": 424,
+      "accel": "8,2 s",
+      "charging": "100 kW CC"
+    },
+    {
+      "name": "GT Exclusive 156",
+      "price": "35.900 €",
+      "priceValue": 35900,
+      "battery": "48,1 kWh útiles",
+      "batteryType": "Iones de litio",
+      "power": "156 CV",
+      "range": "424 km WLTP",
+      "rangeValue": 424,
+      "accel": "8,2 s",
+      "charging": "100 kW CC"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Amarillo Águeda",
+      "hex": "#CED52B"
+    },
+    {
+      "name": "Azul Vértigo",
+      "hex": "#146FB4"
+    },
+    {
+      "name": "Rojo Elixir",
+      "hex": "#A71E29"
+    },
+    {
+      "name": "Negro Perla Nera",
+      "hex": "#17191C"
+    },
+    {
+      "name": "Gris Selenium",
+      "hex": "#929996"
+    },
+    {
+      "name": "Gris Artense",
+      "hex": "#BFC3C5"
+    },
+    {
+      "name": "Blanco Okenite",
+      "hex": "#EAE9E4"
+    }
+  ],
+  "images": [
+    "img/cars/peugeot-e208/peugeot-e208_01.webp",
+    "img/cars/peugeot-e208/peugeot-e208_02.webp",
+    "img/cars/peugeot-e208/peugeot-e208_03.webp",
+    "img/cars/peugeot-e208/peugeot-e208_04.webp",
+    "img/cars/peugeot-e208/peugeot-e208_05.webp",
+    "img/cars/peugeot-e208/peugeot-e208_06.webp",
+    "img/cars/peugeot-e208/peugeot-e208_07.webp",
+    "img/cars/peugeot-e208/peugeot-e208_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/peugeot.png",
+    "group": "Stellantis",
+    "relation": "Marca del grupo",
+    "note": "Peugeot es una marca francesa del grupo Stellantis. El E-208 se fabrica en Zaragoza (España)."
+  },
+  "brandUrl": "https://www.peugeot.es/gama/peugeot-208/electrico.html",
+  "dataStatus": {
+    "status": "Revisado · gama 136–156 CV",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://store.peugeot.es/selector/configurable/208-5-puertas",
+    "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf"
+  ]
+},
+{
   "id": 28,
   "brand": "Dacia",
   "model": "Spring (2027)",
