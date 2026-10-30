@@ -15,8 +15,44 @@ const carsData = [
     },
     "colors": [
       {
-        "name": "Deep Jade Black Metallic",
-        "hex": "#1B2423"
+        "name": "Digital White Metallic",
+        "hex": "#F1F0E9"
+      },
+      {
+        "name": "Ceramic Cream Metallic",
+        "hex": "#E7DCC9"
+      },
+      {
+        "name": "Cyber Silver Metallic",
+        "hex": "#B9C0C4"
+      },
+      {
+        "name": "Atom Grey-Matte",
+        "hex": "#7C7D7D"
+      },
+      {
+        "name": "Meta Black Metallic",
+        "hex": "#1C2022"
+      },
+      {
+        "name": "Laser Red Metallic",
+        "hex": "#B62635"
+      },
+      {
+        "name": "Lumen Yellow",
+        "hex": "#E6CE43"
+      },
+      {
+        "name": "Quantum Blue Metallic",
+        "hex": "#4C6388"
+      },
+      {
+        "name": "Future Green Metallic",
+        "hex": "#688A75"
+      },
+      {
+        "name": "Photon Orange",
+        "hex": "#DA693A"
       }
     ],
     "priceInfo": {
@@ -31,7 +67,7 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
+      "status": "Colores actualizados; disponibilidad según acabado y mercado",
       "checkedAt": "30/10/2026"
     },
     "id": 44,
@@ -135,7 +171,9 @@ const carsData = [
       "https://es.smart.com/es/models/hashtag-one/",
       "https://www.carwow.es/smart/smart-1",
       "https://es.smart.com/es/products/",
-      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/",
+      "https://sg.smart.com/configuration-hashtag-one?models=smart-%231_pro%2B%2Csmart-%231_brabus",
+      "https://www.carwow.co.uk/smart/1/colours"
     ],
     "images": [
       "img/cars/smart-1/smart-1_01.webp",
