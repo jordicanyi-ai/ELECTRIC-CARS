@@ -75,7 +75,7 @@ const carsData = [
       "battery": "62,9 kWh",
       "batteryType": "NMC",
       "power": "170 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "428 km WLTP"
     },
     {
       "name": "Air RWD 84 kWh",
@@ -84,7 +84,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "229 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "582 km WLTP"
     },
     {
       "name": "GT-Line RWD 84 kWh",
@@ -93,7 +93,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "229 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "560 km WLTP"
     },
     {
       "name": "GT-Line AWD 84 kWh",
@@ -102,7 +102,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "325 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "522 km WLTP"
     },
     {
       "name": "GT AWD 84 kWh",
@@ -111,7 +111,7 @@ const carsData = [
       "battery": "84 kWh",
       "batteryType": "NMC",
       "power": "650 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "450 km WLTP"
     }
   ],
   "colors": [
@@ -230,7 +230,7 @@ const carsData = [
       "battery": "76,1 kWh",
       "batteryType": "NMC",
       "power": "218 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "443 km WLTP"
     },
     {
       "name": "Earth RWD 99,8 kWh · 7 plazas",
@@ -239,7 +239,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "204 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "563 km WLTP"
     },
     {
       "name": "Earth AWD 99,8 kWh · 7 plazas",
@@ -248,7 +248,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "505 km WLTP"
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 7 plazas",
@@ -257,7 +257,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "505 km WLTP"
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 6 plazas",
@@ -266,7 +266,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "385 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "505 km WLTP"
     },
     {
       "name": "GT AWD 99,8 kWh · 7 plazas",
@@ -275,7 +275,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "509 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "510 km WLTP"
     },
     {
       "name": "GT AWD 99,8 kWh · 6 plazas",
@@ -284,7 +284,7 @@ const carsData = [
       "battery": "99,8 kWh",
       "batteryType": "NMC",
       "power": "509 CV",
-      "range": "Autonomía WLTP variable según configuración"
+      "range": "510 km WLTP"
     }
   ],
   "colors": [
