@@ -67,6 +67,12 @@ const carsData = [
     "Viajes largos",
     "Quien prioriza carga rápida"
   ],
+  "warranty": {
+    "vehicle": "7 años / 150.000 km",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.kia.com/es/kia-service/ev-services/mantenimiento-ev-kia/"
+  },
   "trims": [
     {
       "name": "Air RWD 62,9 kWh",
@@ -227,6 +233,12 @@ const carsData = [
     "Familias numerosas",
     "Viajes con equipaje"
   ],
+  "warranty": {
+    "vehicle": "7 años / 150.000 km",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.kia.com/es/kia-service/ev-services/mantenimiento-ev-kia/"
+  },
   "trims": [
     {
       "name": "Air RWD 76,1 kWh · 7 plazas",
