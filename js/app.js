@@ -1,59 +1,69 @@
 let currentImageIndexes = {};
         let compareCars = new Set();
 
-        function syncHeroSearch() {
-            const value = document.getElementById('hero-search').value;
-            document.getElementById('search-input').value = value;
-            filterCars();
-        }
+        let catalogueSort = 'random';
 
-        function syncSidebarSearch() {
-            const value = document.getElementById('search-input').value;
-            document.getElementById('hero-search').value = value;
+        function syncHeroSearch() {
             filterCars();
         }
 
         function clearQuickFilterState() {
+            document.querySelectorAll('.quick-filter').forEach(button => button.setAttribute('aria-pressed', 'false'));
+        }
+
+        function updateFilterState() {
+            const values = {
+                body: document.getElementById('body-filter').value,
+                seats: document.getElementById('seats-filter').value,
+                trunk: Number(document.getElementById('trunk-filter').value),
+                range: Number(document.getElementById('range-filter').value),
+                price: Number(document.getElementById('price-filter').value)
+            };
+            const count = Number(Boolean(values.body)) + Number(Boolean(values.seats)) + Number(values.trunk > 0) + Number(values.range > 0) + Number(values.price < 90000);
+            const badge = document.getElementById('active-filter-count');
+            badge.hidden = count === 0;
+            badge.textContent = count;
+            clearQuickFilterState();
             document.querySelectorAll('.quick-filter').forEach(button => {
-                button.classList.remove('ring-2', 'ring-blue-400', 'bg-slate-900');
+                const key = button.dataset.quick;
+                const active = key === 'all' ? count === 0 && !document.getElementById('hero-search').value.trim()
+                    : key === '30000' ? values.price === 30000
+                    : key === '500' ? values.range === 500
+                    : key === '7' && values.seats === '7';
+                button.setAttribute('aria-pressed', String(active));
             });
         }
 
         function applyQuickFilter(type, value, button) {
-            resetFilters(false);
-            clearQuickFilterState();
-
-            if (type === 'price') {
-                document.getElementById('price-filter').value = value;
-            }
-
-            if (type === 'range') {
-                document.getElementById('range-filter').value = value;
-            }
-
-            if (type === 'family') {
-                document.getElementById('seats-filter').value = '5';
-            }
-
-            if (type === 'body') {
-                document.getElementById('body-filter').value = value;
-            }
-
-            if (type === 'seats') {
-                document.getElementById('seats-filter').value = String(value);
-            }
-
-            if (button) {
-                button.classList.add('ring-2', 'ring-blue-400', 'bg-slate-900');
-            }
-
+            const field = document.getElementById(`${type === 'body' ? 'body' : type}-filter`);
+            if (!field) return;
+            const same = button?.getAttribute('aria-pressed') === 'true';
+            field.value = same ? (type === 'price' ? 90000 : type === 'range' ? 0 : '') : String(value);
             filterCars();
-
-            document.getElementById('cars-grid').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
         }
+
+        function setCatalogueView(view) {
+            const previous = document.body.dataset.catalogueView;
+            if (view === 'ranking' && previous !== 'ranking') catalogueSort = document.getElementById('sort-filter').value;
+            document.body.dataset.catalogueView = view;
+            document.getElementById('catalogue-view-btn').setAttribute('aria-pressed', String(view === 'catalogue'));
+            document.getElementById('ranking-view-btn').setAttribute('aria-pressed', String(view === 'ranking'));
+            document.getElementById('ranking-panel').hidden = view !== 'ranking';
+            if (view === 'catalogue') document.getElementById('sort-filter').value = catalogueSort;
+            updateRankingMetric();
+        }
+
+        function updateRankingMetric() {
+            const metric = document.getElementById('ranking-metric').value;
+            const explanations = {
+                priceAsc: 'Orden por precio de acceso, sin ayudas. Compara versiones equivalentes antes de decidir.',
+                rangeDesc: 'Orden por autonomía máxima WLTP de cada modelo. No equivale a autonomía real en autopista y puede corresponder a la versión más cara.',
+                trunkDesc: 'Orden por capacidad del maletero trasero. No suma el frunk; comprueba el espacio con todas las plazas en uso.'
+            };
+            document.getElementById('ranking-explanation').textContent = explanations[metric] + ' Se muestran los modelos con fotos que cumplen tus filtros; los descatalogados están identificados.';
+            filterCars();
+        }
+
 
         function toggleCompare(carId, event) {
             if (event) event.stopPropagation();
@@ -68,6 +78,13 @@ let currentImageIndexes = {};
             }
             filterCars();
             renderCompareBar();
+        }
+
+        function toggleDetailCompare(carId, button, event) {
+            toggleCompare(carId, event);
+            const selected = compareCars.has(carId);
+            button.setAttribute('aria-pressed', String(selected));
+            button.innerHTML = `<i class="fa-solid ${selected ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${selected ? 'Añadido al comparador' : 'Añadir al comparador'}`;
         }
 
         function showCompareMessage(message) {
@@ -106,6 +123,7 @@ let currentImageIndexes = {};
             const button = document.getElementById('compare-open-button');
             if (!bar || !chips || !count || !button) return;
             const selected = [...compareCars].map(id => carsData.find(car => car.id === id)).filter(Boolean);
+            document.body.classList.toggle('has-compare-bar', selected.length > 0);
             if (!selected.length) {
                 bar.classList.add('hidden');
                 return;
@@ -261,7 +279,7 @@ let currentImageIndexes = {};
             modal.innerHTML = `
                 <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200 px-4 sm:px-7 py-4 flex items-center justify-between">
                     <div><span class="text-[10px] text-blue-600 font-extrabold uppercase tracking-[0.16em]">electricos.eu</span><h2 class="text-xl sm:text-2xl font-black mt-0.5">Comparar vehículos</h2></div>
-                    <button onclick="closeCompareModal()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="closeCompareModal()" aria-label="Cerrar comparador" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                 <div class="px-4 sm:px-7 pt-5"><p class="text-xs sm:text-sm text-slate-500">Compara la gama completa o elige una versión concreta de cada modelo.</p></div>
                 <div class="compare-modal-scroll overflow-x-auto pb-3 mt-5">
@@ -302,12 +320,9 @@ let currentImageIndexes = {};
         }
 
         function toggleMobileFilters() {
-
             const panel = document.getElementById('filters-panel');
-            const icon = document.getElementById('filter-toggle-icon');
-
-            panel.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
+            panel.hidden = !panel.hidden;
+            document.getElementById('filters-toggle').setAttribute('aria-expanded', String(!panel.hidden));
         }
 
         function changeSlide(carId, direction, event) {
@@ -336,17 +351,7 @@ let currentImageIndexes = {};
 
             const dots = document.getElementById(`dots-${carId}`);
 
-            if (dots) {
-
-                dots.innerHTML = car.images.map((_, i) => `
-                    <span class="
-                        h-1.5 rounded-full transition-all
-                        ${i === currentImageIndexes[carId]
-                            ? 'bg-white w-5'
-                            : 'bg-white/60 w-1.5'}
-                    "></span>
-                `).join('');
-            }
+            if (dots) dots.innerHTML = car.images.map((_,i) => `<span class="${i === currentImageIndexes[carId] ? 'current' : ''}"></span>`).join('');
         }
 
         // Tarjeta de autopromoción: la imagen ocupa toda la tarjeta.
@@ -384,251 +389,51 @@ let currentImageIndexes = {};
         }
 
         function renderCars(cars) {
-
             const grid = document.getElementById('cars-grid');
-
-            document.getElementById('results-count').innerText =
-                `${cars.length} ${cars.length === 1 ? 'vehículo' : 'vehículos'}`;
-
+            const isRanking = document.body.dataset.catalogueView === 'ranking';
+            const metric = document.getElementById('ranking-metric').value;
+            const rankMetric = car => metric === 'rangeDesc' ? car.maxRangeVal : metric === 'trunkDesc' ? car.trunk : car.priceMin;
+            document.getElementById('results-count').textContent = `${cars.length} ${cars.length === 1 ? 'coche' : 'coches'}${isRanking ? ' en este ranking' : ''}`;
             if (!cars.length) {
-
-                grid.innerHTML = `
-
-                    <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-slate-200">
-
-                        <i class="fa-solid fa-car-side text-4xl text-slate-300"></i>
-
-                        <p class="font-bold text-slate-700 mt-3">
-                            No encontramos vehículos con estos filtros
-                        </p>
-
-                        <button onclick="resetFilters()"
-                            class="text-xs font-bold text-blue-600 mt-3">
-                            Restablecer filtros
-                        </button>
-
-                    </div>
-                `;
-
+                grid.innerHTML = `<div class="empty-results"><i class="fa-solid fa-car-side" aria-hidden="true"></i><p>No encontramos coches con estos filtros</p><button type="button" onclick="resetFilters()">Limpiar búsqueda y filtros</button></div>`;
                 return;
             }
-
+            let position = 1;
             grid.innerHTML = cars.map((car, index) => {
-
-                if (currentImageIndexes[car.id] === undefined)
-                    currentImageIndexes[car.id] = 0;
-
-                const image =
-                    car.images[currentImageIndexes[car.id]];
-
-                return `
-
-                <article onclick="openCarModal(${car.id})"
-                    class="bg-white rounded-[1.7rem] overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 cursor-pointer group">
-
-                    <!-- IMAGE -->
-
-                    <div class="relative h-60 bg-slate-900 overflow-hidden">
-
-                        <img id="car-img-${car.id}"
-                            src="${image}"
-                            alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
-                            class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-
-                        ${car.discontinued ? `<span class="absolute top-4 right-4 z-10 rounded-md bg-red-700/95 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-lg">Descatalogado</span>` : ""}
-
-                        <span class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
-                            ${car.type}
-                        </span>
-
-                        ${car.images.length > 1 ? `
-
-                        <button onclick="changeSlide(${car.id},-1,event)"
-                            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-9 h-9 rounded-full opacity-0 group-hover:opacity-100 transition">
-
-                            <i class="fa-solid fa-chevron-left text-xs"></i>
-
-                        </button>
-
-                        <button onclick="changeSlide(${car.id},1,event)"
-                            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-9 h-9 rounded-full opacity-0 group-hover:opacity-100 transition">
-
-                            <i class="fa-solid fa-chevron-right text-xs"></i>
-
-                        </button>
-
-                        <div id="dots-${car.id}"
-                            class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
-
-                            ${car.images.map((_, i) => `
-
-                                <span class="
-                                    h-1.5 rounded-full
-                                    ${i === currentImageIndexes[car.id]
-                                        ? 'bg-white w-5'
-                                        : 'bg-white/60 w-1.5'}
-                                "></span>
-
-                            `).join('')}
-
-                        </div>
-
-                        ` : ''}
-
+                if (index === 0 || rankMetric(car) !== rankMetric(cars[index - 1])) position = index + 1;
+                if (currentImageIndexes[car.id] === undefined) currentImageIndexes[car.id] = 0;
+                const selected = compareCars.has(car.id);
+                const name = `${car.brand} ${car.model}`;
+                const priceText = car.priceText.replace(/€/g, '').trim().replace(/\s*[-–]\s*/g, '–').replace(/\s+/g, ' ') + ' €';
+                const rangeText = car.rangeText.replace(/\s*WLTP/gi, '').replace(/\s*[-–]\s*/g, '–');
+                const trunk = car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
+                    ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
+                    : `${car.trunk} L`;
+                return `<article class="car-card${car.discontinued ? ' is-discontinued' : ''}">
+                    <div class="car-photo">
+                        <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
+                        ${isRanking ? `<span class="car-position">#${position} · ${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : 'Maletero'}</span>` : `<span class="car-type">${car.type}</span>`}
+                        ${car.discontinued ? '<span class="car-discontinued">Descatalogado</span>' : ''}
+                        ${car.images.length > 1 ? `<button type="button" class="car-arrow car-arrow-prev" onclick="changeSlide(${car.id},-1,event)" aria-label="Foto anterior de ${name}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeSlide(${car.id},1,event)" aria-label="Foto siguiente de ${name}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button><div id="dots-${car.id}" class="car-dots" aria-hidden="true">${car.images.map((_,i) => `<span class="${i === currentImageIndexes[car.id] ? 'current' : ''}"></span>`).join('')}</div>` : ''}
                     </div>
-
-                    <!-- CONTENT -->
-
-                    <div class="p-6">
-
-                        <div class="flex justify-between gap-4">
-
-                            <div>
-
-                                <span class="text-blue-600 text-xs uppercase font-extrabold tracking-wider">
-                                    ${car.brand}
-                                </span>
-
-                                <h3 class="text-2xl font-black mt-1">
-                                    ${car.model.toLocaleUpperCase('es-ES')}
-                                </h3>
-
-                            </div>
-
-                            <div class="text-right">
-
-                                <span class="text-[10px] text-slate-400 uppercase font-bold">
-                                    Precio gama
-                                </span>
-
-                                <div class="font-black text-base sm:text-lg whitespace-nowrap">
-                                    ${car.priceText}
-                                </div>
-
-                                <div class="text-[10px] text-slate-400">
-                                    IVA incluido · sin ayudas
-                                </div>
-
-                            </div>
-
+                    <div class="car-content">
+                        <div class="car-brand">${car.brand}</div>
+                        <h2 class="car-title"><button type="button" onclick="openCarModal(${car.id})">${car.model}</button></h2>
+                        <div class="car-primary-specs">
+                            <div><i class="fa-solid fa-tag" aria-hidden="true"></i><strong>${priceText}</strong><small>Precio sin ayudas</small></div>
+                            <div><i class="fa-solid fa-road" aria-hidden="true"></i><strong>${rangeText}</strong><small>Autonomía WLTP</small></div>
                         </div>
-
-                        <!-- PRIMARY SPECS -->
-
-                        <div class="grid grid-cols-2 gap-3 mt-6">
-
-                            <div class="bg-blue-50 rounded-2xl p-4">
-
-                                <div class="flex items-center gap-2 text-blue-600 text-xs font-bold">
-
-                                    <i class="fa-solid fa-road"></i>
-                                    AUTONOMÍA
-
-                                </div>
-
-                                <div class="text-xl font-black mt-1">
-                                    ${car.rangeText}
-                                </div>
-
-                                <div class="text-[10px] text-slate-500">
-                                    WLTP
-                                </div>
-
-                            </div>
-
-                            <div class="bg-slate-50 rounded-2xl p-4">
-
-                                <div class="flex items-center gap-2 text-slate-500 text-xs font-bold">
-
-                                    <i class="fa-solid fa-battery-full text-blue-600"></i>
-                                    BATERÍA
-
-                                </div>
-
-                                <div class="text-xl font-black mt-1">
-                                    ${car.batteryText}
-                                </div>
-
-                                ${car.batteryType ? `
-                                    <span class="inline-flex mt-2 px-2 py-1 rounded-md bg-slate-200 text-slate-600 text-[10px] font-extrabold uppercase tracking-wider">
-                                        ${car.batteryType}
-                                    </span>
-                                ` : ''}
-
-                            </div>
-
+                        <div class="car-secondary-specs">
+                            <div><i class="fa-solid fa-bolt" aria-hidden="true"></i><strong>${car.powerText}</strong><small>Potencia</small></div>
+                            <div><i class="fa-solid fa-suitcase" aria-hidden="true"></i><strong>${trunk}</strong><small>Maletero${trunk.includes('+') ? ' + frunk' : ''}</small></div>
+                            <div><i class="fa-solid fa-user-group" aria-hidden="true"></i><strong>${car.seats}</strong><small>Plazas</small></div>
                         </div>
-
-                        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-
-                            <div class="border border-slate-100 rounded-xl p-3">
-
-                                <i class="fa-solid fa-bolt text-blue-600"></i>
-
-                                <div class="text-xs font-bold mt-1">
-                                    ${car.powerText}
-                                </div>
-
-                            </div>
-
-                            <div class="border border-slate-100 rounded-xl p-3">
-
-                                <i class="fa-solid fa-suitcase text-blue-600"></i>
-
-                                <div class="text-xs font-bold mt-1">
-                                    ${car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|no disponible|pendiente)/i.test(car.frunkText.trim())
-    ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
-    : `${car.trunk} L`}
-                                </div>
-
-                            </div>
-
-                            <div class="border border-slate-100 rounded-xl p-3">
-
-                                <i class="fa-solid fa-user-group text-blue-600"></i>
-
-                                <div class="text-xs font-bold mt-1">
-                                    ${car.seats} plazas
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex gap-2 mt-5">
-
-                            <button
-                                class="flex-1 bg-slate-900 group-hover:bg-blue-600 text-white py-3 rounded-xl text-xs font-bold transition">
-
-                                Ver ficha
-
-                                <i class="fa-solid fa-arrow-right ml-2"></i>
-
-                            </button>
-
-                            <button onclick="toggleCompare(${car.id},event)"
-                                class="w-12 border ${compareCars.has(car.id) ? 'compare-selected' : 'border-slate-200 text-slate-500 hover:border-blue-500 hover:text-blue-600'} rounded-xl transition"
-                                title="Añadir a comparar">
-
-                                <i class="fa-solid ${compareCars.has(car.id) ? 'fa-check' : 'fa-code-compare'}"></i>
-
-                            </button>
-
-                        </div>
-
+                        <div class="car-actions"><button type="button" class="car-open" onclick="openCarModal(${car.id})">Ver ficha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="car-compare${selected ? ' compare-selected' : ''}" onclick="toggleCompare(${car.id},event)" aria-pressed="${selected}" aria-label="${selected ? 'Quitar' : 'Añadir'} ${name} ${selected ? 'del' : 'al'} comparador"><i class="fa-solid ${selected ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${selected ? 'Añadido' : 'Comparar'}</button></div>
                     </div>
-
-                </article>
-
-                `;
-
-            }).reduce((html, card, index) => {
-                // Mostrar una única tarjeta publicitaria después del sexto vehículo.
-                return html + card + (index === 5 ? renderAdvertisingCard() : '');
-            }, '');
+                </article>`;
+            }).reduce((html, card, index) => html + card + (index === 5 ? renderAdvertisingCard() : ''), '');
         }
+
 
         function openCarModal(carId) {
 
@@ -883,9 +688,9 @@ let currentImageIndexes = {};
 
                 <!-- HERO CAR -->
 
-                <section class="relative">
+                <section class="relative detail-hero">
 
-                    <div class="h-[285px] sm:h-[355px] bg-slate-900">
+                    <div class="h-[285px] sm:h-[355px] detail-hero-image">
 
                         <img src="${car.images[0]}"
                             alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
@@ -893,18 +698,18 @@ let currentImageIndexes = {};
 
                     </div>
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent"></div>
+
 
                     ${car.discontinued ? `<span class="absolute top-5 left-5 z-10 rounded-md bg-red-700/95 px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-white shadow-lg">Descatalogado</span>` : ""}
 
                     <button onclick="closeCarModal()"
-                        class="absolute top-5 right-5 w-11 h-11 bg-black/50 hover:bg-black/80 backdrop-blur text-white rounded-full">
+                        aria-label="Cerrar ficha" class="detail-close absolute top-5 right-5 w-11 h-11 bg-black/50 hover:bg-black/80 backdrop-blur text-white rounded-full">
 
                         <i class="fa-solid fa-xmark"></i>
 
                     </button>
 
-                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                    <div class="detail-identity p-6 sm:p-8">
 
                         <span class="bg-blue-600 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase">
                             ${car.type}
@@ -921,6 +726,7 @@ let currentImageIndexes = {};
                                 <h2 class="text-4xl sm:text-5xl font-black">
                                     ${car.model.toLocaleUpperCase('es-ES')}
                                 </h2>
+                                ${car.launchYear ? `<p class="detail-launch">Lanzamiento · ${car.launchYear}</p>` : ''}
 
                             </div>
 
@@ -954,7 +760,7 @@ let currentImageIndexes = {};
 
                         <div class="grid grid-cols-2 lg:grid-cols-5 gap-3">
 
-                            <div class="col-span-2 lg:col-span-1 bg-blue-600 text-white rounded-2xl p-5">
+                            <div class="detail-range-stat col-span-2 lg:col-span-1 bg-blue-600 text-white rounded-2xl p-5">
 
                                 <i class="fa-solid fa-road opacity-70"></i>
 
@@ -1318,6 +1124,9 @@ let currentImageIndexes = {};
 
                     ${brandInfoHtml}
 
+                    <section>
+                        <button type="button" class="detail-compare" onclick="toggleDetailCompare(${car.id},this,event)" aria-pressed="${compareCars.has(car.id)}"><i class="fa-solid ${compareCars.has(car.id) ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${compareCars.has(car.id) ? 'Añadido al comparador' : 'Añadir al comparador'}</button>
+                    </section>
                     <!-- DATA -->
 
                     <section class="border-t border-slate-200 pt-7">
@@ -1456,13 +1265,12 @@ let currentImageIndexes = {};
 
         function resetFilters(runFilter = true) {
 
-            document.getElementById('search-input').value = '';
-
             document.getElementById('hero-search').value = '';
 
             document.getElementById('body-filter').value = '';
 
             document.getElementById('seats-filter').value = '';
+            document.getElementById('trunk-filter').value = '0';
 
             document.getElementById('range-filter').value = 0;
 
@@ -1484,10 +1292,15 @@ let currentImageIndexes = {};
         }
         shuffledCarIds.forEach((id, index) => randomCarOrder.set(id, index));
 
+        function normalizeCarSearch(value) {
+            return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es-ES').trim();
+        }
+
         function filterCars() {
+            updateFilterState();
 
             const search =
-                document.getElementById('search-input').value.toLowerCase();
+                normalizeCarSearch(document.getElementById('hero-search').value);
 
             const body =
                 document.getElementById('body-filter').value;
@@ -1509,19 +1322,18 @@ let currentImageIndexes = {};
                     ? formatPrice(price)
                     : 'Sin límite';
 
+            const minTrunk = Number(document.getElementById('trunk-filter').value);
             const filtered = carsData.filter(car => {
                 if (!Array.isArray(car.images) || !car.images.length) return false;
 
                 const searchMatch =
-                    `${car.brand} ${car.model.toLocaleUpperCase('es-ES')}`
-                        .toLowerCase()
-                        .includes(search);
+                    normalizeCarSearch(`${car.brand} ${car.model}`).includes(search);
 
                 const bodyMatch =
-                    !body || car.type === body;
+                    !body || (body === 'Utilitario / Compacto' ? /utilitario|compacto|urbano/i.test(car.type) : body === 'Sedan' ? /sed[aá]n|berlina/i.test(car.type) : body === 'SUV' ? /suv/i.test(car.type) : car.type === body);
 
                 const seatsMatch =
-                    !seats || car.seats >= Number(seats);
+                    !seats || Math.max(...(String(car.seats).match(/\d+/g) || []).map(Number)) >= Number(seats);
 
                 const rangeMatch =
                     car.maxRangeVal >= range;
@@ -1533,10 +1345,10 @@ let currentImageIndexes = {};
                     bodyMatch &&
                     seatsMatch &&
                     rangeMatch &&
-                    priceMatch;
+                    priceMatch && Number(car.trunk) >= minTrunk;
             });
 
-            const sort = document.getElementById('sort-filter').value;
+            const sort = document.body.dataset.catalogueView === 'ranking' ? document.getElementById('ranking-metric').value : document.getElementById('sort-filter').value;
 
             filtered.sort((a, b) => {
 

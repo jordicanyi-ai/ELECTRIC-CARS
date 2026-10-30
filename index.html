@@ -1,355 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6691239546545651" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>electricos.eu — Comparador independiente de coches eléctricos</title>
-
+    <title>electricos.eu — Comparador de coches eléctricos</title>
+    <meta name="description" content="Compara coches eléctricos por precio sin ayudas, autonomía WLTP, maletero y plazas. Encuentra los modelos que encajan con tus necesidades.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6691239546545651" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=20261030-clear-1">
 </head>
-
-<body class="bg-slate-100 text-slate-900 antialiased min-h-screen flex flex-col">
-
-    <!-- HEADER -->
-    <header
-        class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex justify-between items-center">
-
-            <div class="flex items-center gap-3">
-
-                <div class="w-[72px] h-[72px] sm:w-[76px] sm:h-[76px] rounded-2xl overflow-hidden shadow-lg shrink-0">
-                    <img src="img/electricos-logo.png"
-                        alt="electricos.eu"
-                        class="w-full h-full object-cover sm:object-cover">
-                </div>
-
-                <div>
-                    <h1 class="text-2xl font-black tracking-tight">
-                        electricos<span class="text-blue-400">.eu</span>
-                    </h1>
-
-                    <p class="text-xs text-slate-400">
-                        Comparador independiente de vehículos eléctricos
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="flex items-center gap-4 sm:gap-5 ml-4 text-white">
-                <a href="mailto:electricos.eu@gmail.com" aria-label="Enviar correo a electricos.eu" title="electricos.eu@gmail.com" class="hover:text-blue-400 transition">
-                    <i class="fa-solid fa-envelope text-lg"></i>
-                </a>
-                <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube @electricoseu" class="hover:text-blue-400 transition">
-                    <i class="fa-brands fa-youtube text-base"></i>
-                </a>
-                <a href="https://www.instagram.com/electricos.eu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @electricos.eu" class="hover:text-blue-400 transition">
-                    <i class="fa-brands fa-instagram text-base"></i>
-                </a>
-                <a href="https://www.tiktok.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="TikTok @electricoseu" class="hover:text-blue-400 transition">
-                    <i class="fa-brands fa-tiktok text-sm"></i>
-                </a>
-            </div>
-
+<body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
+    <a href="#hero-search" class="skip-link">Ir al buscador</a>
+    <header class="site-header">
+        <div class="site-width header-inner">
+            <a href="./" class="site-brand" aria-label="electricos.eu, inicio">
+                <img src="img/electricos-logo.png" alt="" width="42" height="42">
+                <span>electricos<span class="brand-suffix">.eu</span></span>
+            </a>
+            <nav class="header-links" aria-label="Redes y contacto">
+                <a href="mailto:electricos.eu@gmail.com" aria-label="Correo electrónico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/electricos.eu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            </nav>
         </div>
     </header>
-
-    <!-- HERO -->
-<section class="relative border-b border-slate-800 overflow-hidden bg-slate-950">
-
-    <!-- FOTO A TODO EL ANCHO -->
-    <div class="absolute inset-0">
-        <img src="img/hero-electricos.jpg"
-            alt="Carga de un vehículo eléctrico"
-            class="w-full h-full object-cover object-[70%_center] sm:object-center">
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/5"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-slate-950/10"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-14">
-        <div class="max-w-2xl">
-
-            <div class="flex items-center gap-2 mb-2 sm:mb-4">
-                <span class="inline-flex items-center gap-2 text-blue-400 font-extrabold uppercase tracking-wider text-[10px] sm:text-[11px]">
-                    <i class="fa-solid fa-bolt"></i>
-                    Comparador independiente
-                </span>
+    <main class="site-width catalogue-main">
+        <section class="catalogue-intro" aria-labelledby="page-title">
+            <h1 id="page-title">COMPARADOR DE<br class="mobile-title-break"> COCHES ELÉCTRICOS</h1>
+            <div class="catalogue-tabs" role="group" aria-label="Explorar coches">
+                <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="setCatalogueView('catalogue')">Catálogo</button>
+                <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="setCatalogueView('ranking')"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
             </div>
-
-            <h2 class="text-[2rem] sm:text-5xl lg:text-[3.45rem] leading-[1.02] font-black tracking-tight text-white max-w-3xl">
-                Encuentra tu<br class="sm:hidden">
-                <span class="text-blue-400">coche eléctrico</span>
-            </h2>
-
-            <p class="sm:hidden text-slate-300 mt-3 text-[13px] leading-relaxed">
-                Compara precio, autonomía, batería y espacio.
-            </p>
-
-            <p class="hidden sm:block text-slate-300 mt-4 text-base leading-relaxed max-w-2xl">
-                Compara precios reales sin ayudas públicas, autonomía, batería, espacio y versiones.
-                Primero entiende el coche; después compara.
-            </p>
-
-            <!-- BUSCADOR -->
-            <div class="relative mt-4 sm:mt-6 max-w-2xl">
-                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input id="hero-search" oninput="syncHeroSearch()" type="text"
-                    placeholder="Busca una marca o modelo..."
-                    class="w-full bg-white/95 border border-white/30 rounded-2xl pl-12 pr-5 py-3.5 sm:py-5 text-sm sm:text-base text-slate-900 font-semibold focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-400 transition">
-            </div>
-
-            <!-- TRUST -->
-            <div class="hidden sm:flex flex-wrap gap-x-5 gap-y-2 mt-4 text-[11px] font-semibold text-slate-300">
-                <span><i class="fa-solid fa-tag text-blue-400 mr-1.5"></i>Precios sin ayudas</span>
-                <span><i class="fa-solid fa-road text-blue-400 mr-1.5"></i>Autonomía WLTP</span>
-                <span><i class="fa-solid fa-shield-halved text-blue-400 mr-1.5"></i>Datos revisados</span>
-            </div>
-
-            <!-- ACCESOS RAPIDOS -->
-            <div class="mt-5 sm:mt-6">
-                <div class="hidden sm:flex items-center justify-between mb-2 max-w-2xl">
-                    <span class="text-[10px] uppercase tracking-[0.16em] font-extrabold text-slate-300">Accesos rápidos</span>
-                    <span class="text-[10px] text-slate-400">Empieza por lo que te importa</span>
-                </div>
-
-                <div id="quick-mobile" class="flex flex-nowrap sm:flex-wrap overflow-x-auto sm:overflow-visible hide-scrollbar gap-2 pb-1">
-                    <button data-quick="25000" onclick="applyQuickFilter('price',25000,this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-3 py-2 transition">
-                        <i class="fa-solid fa-euro-sign text-blue-400 text-[10px]"></i><span class="font-bold text-[11px]">Hasta 25.000 €</span>
-                    </button>
-                    <button data-quick="30000" onclick="applyQuickFilter('price',30000,this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-2.5 py-1.5 transition">
-                        <i class="fa-solid fa-euro-sign text-blue-400 text-[10px]"></i><span class="font-bold text-[10px]">Hasta 30.000 €</span>
-                    </button>
-                    <button data-quick="400" onclick="applyQuickFilter('range',400,this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-3 py-2 transition">
-                        <span class="font-bold text-[11px]">+400 km</span>
-                    </button>
-                    <button data-quick="500" onclick="applyQuickFilter('range',500,this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-3 py-2 transition">
-                        <i class="fa-solid fa-road text-blue-400 text-[10px]"></i><span class="font-bold text-[11px]">+500 km</span>
-                    </button>
-                    <button data-quick="suv" onclick="applyQuickFilter('body','SUV',this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-3 py-2 transition">
-                        <i class="fa-solid fa-car-side text-blue-400 text-[10px]"></i><span class="font-bold text-[11px]">SUV</span>
-                    </button>
-                    <button data-quick="7" onclick="applyQuickFilter('seats',7,this)" class="quick-filter shrink-0 inline-flex items-center gap-2 bg-slate-950/85 text-white border border-slate-700 rounded-full px-3 py-2 transition">
-                        <i class="fa-solid fa-user-group text-blue-400 text-[10px]"></i><span class="font-bold text-[11px]">7 plazas</span>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- MAIN -->
-    <main
-        class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-4 gap-8">
-
-        <!-- MOBILE FILTER -->
-        <div class="lg:hidden">
-
-            <button onclick="toggleMobileFilters()"
-                class="w-full bg-white border border-slate-300 py-3.5 px-4 rounded-2xl font-bold text-sm flex justify-between">
-
-                <span>
-                    <i class="fa-solid fa-filter text-blue-600 mr-2"></i>
-                    Filtrar vehículos
-                </span>
-
-                <i id="filter-toggle-icon"
-                    class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-
-            </button>
-
-        </div>
-
-        <!-- FILTERS -->
-        <aside id="filters-panel"
-            class="hidden lg:block lg:col-span-1 bg-white p-6 rounded-3xl border border-slate-200 h-fit lg:sticky lg:top-28 space-y-6">
-
-            <div class="flex justify-between border-b border-slate-100 pb-4">
-
-                <h2 class="font-bold text-sm uppercase tracking-wider">
-                    <i class="fa-solid fa-filter text-blue-600 mr-2"></i>
-                    Filtros
-                </h2>
-
-                <button onclick="resetFilters()"
-                    class="text-xs font-semibold text-slate-400 hover:text-blue-600">
-                    Limpiar
-                </button>
-
-            </div>
-
-            <div>
-
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
-                    Marca o modelo
+        </section>
+        <section class="catalogue-controls" aria-label="Buscar y filtrar coches">
+            <div class="search-row">
+                <label class="catalogue-search" for="hero-search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span class="sr-only">Buscar marca o modelo</span>
+                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca o modelo" autocomplete="off" aria-controls="cars-grid">
                 </label>
-
-                <div class="relative">
-
-                    <input id="search-input"
-                        oninput="syncSidebarSearch()"
-                        type="text"
-                        placeholder="Ej: Leapmotor..."
-                        class="w-full pl-9 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
-
-                    <i
-                        class="fa-solid fa-magnifying-glass absolute left-3.5 top-4 text-slate-400 text-xs"></i>
-
+                <button type="button" id="filters-toggle" class="filter-toggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="filters-panel"><i class="fa-solid fa-filter" aria-hidden="true"></i> Filtros <span id="active-filter-count" hidden></span><i id="filter-toggle-icon" class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+            </div>
+            <div id="quick-mobile" class="quick-filters" role="group" aria-label="Filtros rápidos">
+                <button type="button" data-quick="all" onclick="resetFilters()" class="quick-filter" aria-pressed="true"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Todos</button>
+                <button type="button" data-quick="30000" onclick="applyQuickFilter('price',30000,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> 30.000 € o menos</button>
+                <button type="button" data-quick="500" onclick="applyQuickFilter('range',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 500 km o más</button>
+                <button type="button" data-quick="7" onclick="applyQuickFilter('seats',7,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 7 plazas</button>
+            </div>
+            <div id="filters-panel" hidden>
+                <div class="filter-fields">
+                    <div class="filter-field"><label for="body-filter">Tipo de coche</label><select id="body-filter" onchange="filterCars()"><option value="">Todos</option><option value="Utilitario / Compacto">Utilitario / Compacto</option><option value="SUV">SUV</option><option value="Furgoneta">Furgoneta</option><option value="Sedan">Sedán / Berlina</option></select></div>
+                    <div class="filter-field"><label for="seats-filter">Plazas mínimas</label><select id="seats-filter" onchange="filterCars()"><option value="">Cualquiera</option><option value="5">5 plazas</option><option value="6">6 plazas</option><option value="7">7 plazas</option></select></div>
+                    <div class="filter-field"><label for="trunk-filter">Maletero mínimo</label><select id="trunk-filter" onchange="filterCars()"><option value="0">Cualquiera</option><option value="300">300 L</option><option value="400">400 L</option><option value="500">500 L</option><option value="600">600 L</option></select></div>
+                    <div class="filter-field"><label for="range-filter">Autonomía mínima <output id="range-val" for="range-filter">0 km</output></label><input type="range" id="range-filter" min="0" max="700" step="50" value="0" oninput="filterCars()"></div>
+                    <div class="filter-field"><label for="price-filter">Precio máximo <output id="price-val" for="price-filter">Sin límite</output></label><input type="range" id="price-filter" min="15000" max="90000" step="5000" value="90000" oninput="filterCars()"></div>
+                    <div class="filter-reset"><button type="button" onclick="resetFilters()"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Limpiar filtros</button><small>Precios sin ayudas públicas</small></div>
                 </div>
-
             </div>
-
-            <div>
-
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
-                    Tipo
-                </label>
-
-                <select id="body-filter"
-                    onchange="filterCars()"
-                    class="w-full py-3 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
-
-                    <option value="">Todos</option>
-                    <option value="Utilitario / Compacto">Utilitario / Compacto</option>
-                    <option value="SUV">SUV</option>
-                    <option value="Furgoneta">Furgoneta</option>
-                    <option value="Sedan">Sedán / Berlina</option>
-
-                </select>
-
+            <div id="ranking-panel" hidden>
+                <label for="ranking-metric">¿Qué es lo más importante para ti?</label>
+                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option></select>
+                <p id="ranking-explanation">Orden por precio de acceso, sin ayudas. Compara versiones equivalentes antes de decidir.</p>
             </div>
-
-            <div>
-
-                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">
-                    Plazas mínimas
-                </label>
-
-                <select id="seats-filter"
-                    onchange="filterCars()"
-                    class="w-full py-3 px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
-
-                    <option value="">Cualquier plaza</option>
-                    <option value="5">5 plazas</option>
-                    <option value="6">6 plazas</option>
-                    <option value="7">7 plazas</option>
-
-                </select>
-
+        </section>
+        <section id="catalogue-results" aria-label="Resultados del catálogo">
+            <div class="results-toolbar">
+                <p id="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+                <label class="sort-control" for="sort-filter"><span>Ordenar</span><select id="sort-filter" onchange="filterCars()"><option value="random">Aleatorio</option><option value="priceAsc">Precio: menor primero</option><option value="rangeDesc">Autonomía: mayor primero</option><option value="trunkDesc">Maletero: mayor primero</option><option value="brandAsc">Marca: A–Z</option></select></label>
             </div>
-
-            <div>
-
-                <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-
-                    <span>Autonomía mínima</span>
-
-                    <span id="range-val"
-                        class="text-blue-600 font-extrabold">
-                        0 km
-                    </span>
-
-                </div>
-
-                <input type="range"
-                    id="range-filter"
-                    min="0"
-                    max="700"
-                    step="50"
-                    value="0"
-                    oninput="filterCars()"
-                    class="w-full accent-blue-600">
-
-            </div>
-
-            <div>
-
-                <div class="flex justify-between text-xs font-bold uppercase text-slate-500 mb-2">
-
-                    <span>Precio máximo</span>
-
-                    <span id="price-val"
-                        class="text-blue-600 font-extrabold">
-                        Sin límite
-                    </span>
-
-                </div>
-
-                <input type="range"
-                    id="price-filter"
-                    min="15000"
-                    max="90000"
-                    step="5000"
-                    value="90000"
-                    oninput="filterCars()"
-                    class="w-full accent-blue-600">
-
-                <p class="text-[10px] text-slate-400 mt-2">
-                    IVA incluido · Sin ayudas públicas
-                </p>
-
-            </div>
-
-        </aside>
-
-        <!-- CARS -->
-        <section class="lg:col-span-3 space-y-5">
-
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-
-                <div>
-                    <span class="text-blue-600 text-[10px] font-extrabold uppercase tracking-[0.16em]">
-                        Comparador
-                    </span>
-
-                    <h2 class="font-black text-2xl mt-1">
-                        Todos los eléctricos
-                    </h2>
-
-                    <p id="results-count"
-                        class="text-sm text-slate-500 mt-1">
-                    </p>
-                </div>
-
-                <div class="flex items-center gap-2">
-                    <label for="sort-filter" class="text-xs font-bold text-slate-400 hidden sm:block">
-                        Ordenar:
-                    </label>
-
-                    <select id="sort-filter"
-                        onchange="filterCars()"
-                        class="bg-white border border-slate-200 rounded-xl px-3 py-2.5 text-xs font-bold focus:outline-none focus:border-blue-500">
-                        <option value="random">Orden aleatorio</option>
-                        <option value="priceAsc">Precio: menor primero</option>
-                        <option value="rangeDesc">Autonomía: mayor primero</option>
-                        <option value="trunkDesc">Maletero: mayor primero</option>
-                        <option value="brandAsc">Marca: A-Z</option>
-                    </select>
-                </div>
-
-            </div>
-
-            
-            <div id="cars-grid"
-                class="grid grid-cols-1 md:grid-cols-2 gap-7">
-            </div>
-
-            <div class="w-full min-h-[110px] border border-slate-200 bg-slate-50 rounded-2xl flex flex-col items-center justify-center text-center px-3 overflow-hidden">
-                <span class="text-[9px] uppercase tracking-[0.18em] text-slate-400 mb-2">Publicidad</span>
-                <ins class="adsbygoogle" style="display:block;width:100%" data-ad-client="ca-pub-6691239546545651" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            </div>
-
+            <div id="cars-grid" class="cars-grid"></div>
+            <div class="catalogue-ad"><span>Publicidad</span><ins class="adsbygoogle" style="display:block;width:100%" data-ad-client="ca-pub-6691239546545651" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
         </section>
 
         <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
@@ -373,7 +96,7 @@
     </main>
 
     <!-- MODAL -->
-    <div id="car-modal"
+    <div id="car-modal" role="dialog" aria-modal="true" aria-label="Ficha del coche"
         class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden overflow-y-auto"
         onclick="closeCarModal()">
 
@@ -383,7 +106,7 @@
                 class="bg-white sm:rounded-[2rem] max-w-5xl w-full sm:my-5 overflow-hidden shadow-2xl"
                 onclick="event.stopPropagation()">
 
-                <div id="modal-content"></div>
+                <div id="modal-content" class="vehicle-detail"></div>
 
             </div>
 
@@ -429,7 +152,7 @@
     </div>
 
     <!-- COMPARE MODAL -->
-    <div id="compare-modal" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-[60] hidden overflow-y-auto" onclick="closeCompareModal()">
+    <div id="compare-modal" role="dialog" aria-modal="true" aria-label="Comparar vehículos" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-[60] hidden overflow-y-auto" onclick="closeCompareModal()">
         <div class="min-h-full flex justify-center sm:items-start p-0 sm:p-5">
             <div class="bg-white sm:rounded-[2rem] max-w-6xl w-full sm:my-5 min-h-screen sm:min-h-0 overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
                 <div id="compare-modal-content"></div>
@@ -438,7 +161,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 mt-16">
+    <footer class="site-footer bg-white border-t border-slate-200 mt-16">
 
         <div class="max-w-7xl mx-auto px-4 py-10 text-center">
 
@@ -449,6 +172,11 @@
             <p class="text-xs text-slate-400 mt-2">
                 Comparador independiente de vehículos eléctricos.
             </p>
+            <nav class="header-links justify-center mt-3" aria-label="Redes sociales">
+                <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/electricos.eu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            </nav>
 
             <p class="text-[11px] text-slate-400 mt-4">
                 © 2026 electricos.eu · Todos los derechos reservados.
@@ -459,12 +187,12 @@
     </footer>
 
     <!-- DATABASE -->
-    <script src="data/cars.js?v=20261029-ev4-recovery-cff3"></script>
+    <script src="data/cars.js?v=20261030-clear-1"></script>
     <script src="data/sales-ranking.js?v=20261015-1"></script>
     <script src="js/sales-ranking.js?v=20261015-5"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261029-ev4-recovery-cff3"></script>
+    <script src="js/app.js?v=20261030-clear-1"></script>
 
     <script>
         window.addEventListener('load', function () {
