@@ -1,0 +1,173 @@
+{
+  "id": 39,
+  "brand": "Renault",
+  "model": "4 E-Tech eléctrico",
+  "type": "Utilitario / Crossover",
+  "launchYear": 2025,
+  "priceMin": 30737,
+  "priceMax": 38850,
+  "priceText": "30.737 - 38.850 €",
+  "rangeText": "308 - 409 km",
+  "minRangeVal": 308,
+  "maxRangeVal": 409,
+  "batteryText": "40 - 52 kWh",
+  "batteryType": "NMC",
+  "powerText": "120 - 150 CV",
+  "trunk": 420,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "9,2 s (120 CV); pendiente confirmar 150 CV",
+  "dimensions": "4,14 × 1,80 × 1,55 m",
+  "charging": "80 / 100 kW CC · 15-80 % en 30 min",
+  "description": "El Renault 4 E-Tech eléctrico recupera el espíritu práctico del R4 con cinco puertas, 420 litros de maletero, diseño crossover y dos baterías de 40 y 52 kWh. La gama ofrece techo fijo o versiones plein sud con techo de lona corredizo.",
+  "highlights": [
+    "420 litros de maletero",
+    "308 - 409 km WLTP",
+    "Carga rápida 15-80 % en 30 minutos",
+    "Techo de lona eléctrico disponible en plein sud"
+  ],
+  "considerations": [
+    "La versión de 40 kWh ofrece menos autonomía para viajes largos",
+    "El techo de lona plein sud incrementa el precio",
+    "La cifra WLTP de 409 km corresponde a una configuración concreta"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Uso familiar",
+    "Viajes ocasionales",
+    "Uso diario"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios de tarifa publicados por fichasyprecios.motor.elpais.com y motor.es; no aplicar precios promocionales, financiación, Programa Auto+ ni CAE. Verificar posibles actualizaciones antes de publicar."
+  },
+  "chargingInfo": {
+    "dcMax": "80 / 100 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "15-80 % en 30 min",
+    "connector": "CCS2",
+    "v2l": "Disponible según versión y equipamiento"
+  },
+  "warranty": {
+    "vehicle": "3 años (kilometraje sujeto a condiciones Renault)",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.renault.es/electricos/r4-e-tech-electrico/motores.html"
+  },
+  "trims": [
+    {
+      "name": "evolution · autonomía urbana",
+      "price": "30.737 €",
+      "priceValue": 30737,
+      "battery": "40 kWh",
+      "batteryType": "NMC",
+      "power": "120 CV",
+      "range": "308 km WLTP",
+      "rangeValue": 308,
+      "accel": "9,2 s"
+    },
+    {
+      "name": "evolution · autonomía confort",
+      "price": "32.371 €",
+      "priceValue": 32371,
+      "battery": "52 kWh",
+      "batteryType": "NMC",
+      "power": "150 CV",
+      "range": "409 km WLTP",
+      "rangeValue": 409
+    },
+    {
+      "name": "techno · autonomía confort",
+      "price": "34.281 €",
+      "priceValue": 34281,
+      "battery": "52 kWh",
+      "batteryType": "NMC",
+      "power": "150 CV",
+      "range": "409 km WLTP",
+      "rangeValue": 409
+    },
+    {
+      "name": "iconic · autonomía confort",
+      "price": "37.737 €",
+      "priceValue": 37737,
+      "battery": "52 kWh",
+      "batteryType": "NMC",
+      "power": "150 CV",
+      "range": "409 km WLTP",
+      "rangeValue": 409
+    },
+    {
+      "name": "techno plein sud · autonomía confort",
+      "price": "36.850 €",
+      "priceValue": 36850,
+      "battery": "52 kWh",
+      "batteryType": "NMC",
+      "power": "150 CV",
+      "range": "Pendiente de verificar WLTP específico"
+    },
+    {
+      "name": "iconic plein sud · autonomía confort",
+      "price": "38.850 €",
+      "priceValue": 38850,
+      "battery": "52 kWh",
+      "batteryType": "NMC",
+      "power": "150 CV",
+      "range": "Pendiente de verificar WLTP específico"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Verde Hauts-de-France",
+      "hex": "#789476"
+    },
+    {
+      "name": "Azul Nube",
+      "hex": "#7D9FBD"
+    },
+    {
+      "name": "Rojo Carmín",
+      "hex": "#9D2632"
+    },
+    {
+      "name": "Negro Brillante",
+      "hex": "#151515"
+    },
+    {
+      "name": "Blanco Glaciar",
+      "hex": "#F0F0EA"
+    },
+    {
+      "name": "Gris Urbano",
+      "hex": "#858B8F"
+    },
+    {
+      "name": "Marrón Terracota",
+      "hex": "#906A56"
+    }
+  ],
+  "images": [],
+  "videos": [
+    {
+      "title": "Renault 4 E-Tech eléctrico - vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=Renault+4+E-Tech+electrico+coche+prueba"
+    }
+  ],
+  "brandInfo": {
+    "logo": "img/brands/renault.png",
+    "group": "Renault Group",
+    "relation": "Marca del grupo",
+    "note": "Renault es una marca francesa perteneciente a Renault Group."
+  },
+  "brandUrl": "https://www.renault.es/electricos/r4-e-tech-electrico.html",
+  "sources": [
+    "https://www.renault.es/electricos/r4-e-tech-electrico.html",
+    "https://www.renault.es/electricos/r4-e-tech-electrico/motores.html",
+    "https://fichasyprecios.motor.elpais.com/renault/4-e-tech-electric/",
+    "https://prensa.renault.es/renault-4-e-tech-electrico-plein-sud-la-version-descapotable-de-renault-4-disponible-para-su-pedido-desde-xx-xxx-euros/?lang=spa"
+  ],
+  "dataStatus": {
+    "status": "Borrador: pendiente de fotografías y comprobación final de WLTP por acabado y colores",
+    "checkedAt": "30/10/2026"
+  }
+}
