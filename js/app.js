@@ -380,11 +380,7 @@ let currentImageIndexes = {};
                 <a href="mailto:electricos.eu@gmail.com?subject=Publicidad%20en%20electricos.eu"
                    aria-label="Solicitar información publicitaria en electricos.eu"
                    class="car-card advertising-card">
-                    <img src="img/ads/publicidad.webp"
-                         alt="Tu marca, en el lugar adecuado. Solicita información publicitaria en electricos.eu"
-                         loading="lazy"
-                         class="advertising-image"
-                         onerror="this.alt='Imagen publicitaria no disponible';">
+                    <span class="advertising-copy">Anúnciate aquí</span>
                 </a>`;
         }
 

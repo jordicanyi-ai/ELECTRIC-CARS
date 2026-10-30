@@ -842,13 +842,22 @@ body[data-catalogue-view=ranking] .sort-control{
 .advertising-card {
     position: relative;
     min-height: 0;
-    background: #0b1322;
+    background: #edf3ff;
+    color: var(--electric-blue);
 }
-.advertising-image {
+.advertising-card:hover {
+    background: #e3edff;
+}
+.advertising-copy {
     position: absolute;
     inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
