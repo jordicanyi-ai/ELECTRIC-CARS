@@ -375,13 +375,15 @@ let currentImageIndexes = {};
             });
         }
 
-        function renderAdvertisingCard() {
-            return `
-                <a href="mailto:electricos.eu@gmail.com?subject=Publicidad%20en%20electricos.eu"
-                   aria-label="Solicitar información publicitaria en electricos.eu"
-                   class="car-card advertising-card">
-                    <span class="advertising-copy">Anúnciate aquí</span>
-                </a>`;
+        // Add the display unit's data-ad-slot value from AdSense to activate catalogue ads.
+        const catalogueAdSlot = '';
+
+        function renderCatalogueAdSenseSlot(position) {
+            const configured = /^\d+$/.test(catalogueAdSlot);
+            return `<aside class="catalogue-inline-ad" aria-label="Publicidad">
+                <span class="catalogue-ad-label">Publicidad</span>
+                ${configured ? `<ins class="adsbygoogle catalogue-ad-unit" style="display:block;width:100%" data-ad-client="ca-pub-6691239546545651" data-ad-slot="${catalogueAdSlot}" data-electricos-slot="catalogue-${position}"></ins>` : '<div class="catalogue-ad-unit" aria-hidden="true"></div>'}
+            </aside>`;
         }
 
         function renderCars(cars) {
@@ -395,7 +397,7 @@ let currentImageIndexes = {};
                 return;
             }
             let position = 1;
-            grid.innerHTML = cars.map((car, index) => {
+            const cardsHtml = cars.map((car, index) => {
                 if (index === 0 || rankMetric(car) !== rankMetric(cars[index - 1])) position = index + 1;
                 if (currentImageIndexes[car.id] === undefined) currentImageIndexes[car.id] = 0;
                 const selected = compareCars.has(car.id);
@@ -427,7 +429,18 @@ let currentImageIndexes = {};
                         <div class="car-actions"><button type="button" class="car-open" onclick="openCarModal(${car.id})">Ver ficha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="car-compare${selected ? ' compare-selected' : ''}" onclick="toggleCompare(${car.id},event)" aria-pressed="${selected}" aria-label="${selected ? 'Quitar' : 'Añadir'} ${name} ${selected ? 'del' : 'al'} comparador"><i class="fa-solid ${selected ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${selected ? 'Añadido' : 'Comparar'}</button></div>
                     </div>
                 </article>`;
-            }).reduce((html, card, index) => html + card + (index === 5 ? renderAdvertisingCard() : ''), '');
+            });
+            grid.innerHTML = cardsHtml.reduce((html, card, index) => {
+                if (index % 6 === 0) html += '<div class="catalogue-batch">';
+                html += card;
+                const endOfBatch = (index + 1) % 6 === 0;
+                if (endOfBatch || index === cardsHtml.length - 1) html += '</div>';
+                if (endOfBatch) html += renderCatalogueAdSenseSlot(index + 1);
+                return html;
+            }, '');
+            if (/^\d+$/.test(catalogueAdSlot)) {
+                requestAnimationFrame(() => activateAdSenseSlots(grid));
+            }
         }
 
 

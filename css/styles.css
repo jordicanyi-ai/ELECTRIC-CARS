@@ -328,7 +328,7 @@ input[type=range]{
 body[data-catalogue-view=ranking] .sort-control{
     display:none}
 
-.cars-grid{
+.catalogue-batch{
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:22px;
@@ -667,7 +667,7 @@ body[data-catalogue-view=ranking] .sort-control{
 }
 
 @media(max-width:1023px){
-    .cars-grid{
+    .catalogue-batch{
     grid-template-columns:repeat(2,minmax(0,1fr))}
 .car-primary-specs strong{
     font-size:16px}
@@ -756,7 +756,7 @@ body[data-catalogue-view=ranking] .sort-control{
     font-size:11px;
     padding:9px 6px;
     max-width:180px}
-.cars-grid{
+.catalogue-batch{
     grid-template-columns:1fr;
     gap:20px}
 .car-card{
@@ -864,4 +864,38 @@ body[data-catalogue-view=ranking] .sort-control{
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -1px;
+}
+
+/* Each six-car batch has equal card heights; ads sit on independent thin rows. */
+.cars-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+}
+.catalogue-inline-ad {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 12px;
+    border: 1px solid #e0e7ee;
+    border-radius: 8px;
+    background: #f7f9fb;
+}
+.catalogue-ad-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--electric-muted);
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.catalogue-ad-unit {
+    width: 100%;
+    height: 90px;
+}
+@media (max-width: 639px) {
+    .cars-grid { gap: 20px; }
+    .catalogue-inline-ad { padding: 7px 8px; }
+    .catalogue-ad-unit { height: 50px; }
 }
