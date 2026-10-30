@@ -15,36 +15,8 @@ const carsData = [
     },
     "colors": [
       {
-        "name": "Digital White",
-        "hex": "#EDEDE9"
-      },
-      {
-        "name": "Meta Black",
-        "hex": "#17191B"
-      },
-      {
-        "name": "Cyber Silver",
-        "hex": "#B4BBC0"
-      },
-      {
-        "name": "Laser Red",
-        "hex": "#A82C37"
-      },
-      {
-        "name": "Lumen Yellow",
-        "hex": "#E1C83E"
-      },
-      {
-        "name": "Quantum Blue",
-        "hex": "#45667D"
-      },
-      {
-        "name": "Future Green",
-        "hex": "#687B6D"
-      },
-      {
-        "name": "Atom Grey Matte",
-        "hex": "#818184"
+        "name": "Deep Jade Black Metallic",
+        "hex": "#1B2423"
       }
     ],
     "priceInfo": {
@@ -59,7 +31,7 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
+      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
       "checkedAt": "30/10/2026"
     },
     "id": 44,
@@ -264,40 +236,7 @@ const carsData = [
         "rangeValue": 290
       }
     ],
-    "colors": [
-      {
-        "name": "Digital White",
-        "hex": "#EDEDE9"
-      },
-      {
-        "name": "Meta Black",
-        "hex": "#17191B"
-      },
-      {
-        "name": "Cyber Silver",
-        "hex": "#B4BBC0"
-      },
-      {
-        "name": "Laser Red",
-        "hex": "#A82C37"
-      },
-      {
-        "name": "Lumen Yellow",
-        "hex": "#E1C83E"
-      },
-      {
-        "name": "Quantum Blue",
-        "hex": "#45667D"
-      },
-      {
-        "name": "Future Green",
-        "hex": "#687B6D"
-      },
-      {
-        "name": "Atom Grey Matte",
-        "hex": "#818184"
-      }
-    ],
+    "colors": [],
     "images": [
       "img/cars/smart-2/smart-2_01.webp",
       "img/cars/smart-2/smart-2_02.webp",
@@ -323,11 +262,12 @@ const carsData = [
     "brandUrl": "https://es.smart.com/es/models/",
     "upcoming": true,
     "dataStatus": {
-      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
+      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
       "checkedAt": "30/10/2026"
     },
     "sources": [
-      "https://media.smart.com/en-GB/273046-world-premiere-of-the-smart-2-as-reinvention-of-the-urban-two-seater/"
+      "https://media.smart.com/en-GB/273046-world-premiere-of-the-smart-2-as-reinvention-of-the-urban-two-seater/",
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
     ],
     "warranty": {
       "vehicle": "3 años",
@@ -359,36 +299,8 @@ const carsData = [
     },
     "colors": [
       {
-        "name": "Digital White",
-        "hex": "#EDEDE9"
-      },
-      {
-        "name": "Meta Black",
-        "hex": "#17191B"
-      },
-      {
-        "name": "Cyber Silver",
-        "hex": "#B4BBC0"
-      },
-      {
-        "name": "Laser Red",
-        "hex": "#A82C37"
-      },
-      {
-        "name": "Lumen Yellow",
-        "hex": "#E1C83E"
-      },
-      {
-        "name": "Quantum Blue",
-        "hex": "#45667D"
-      },
-      {
-        "name": "Future Green",
-        "hex": "#687B6D"
-      },
-      {
-        "name": "Atom Grey Matte",
-        "hex": "#818184"
+        "name": "Deep Jade Black Metallic",
+        "hex": "#1B2423"
       }
     ],
     "priceInfo": {
@@ -403,7 +315,7 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
+      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
       "checkedAt": "30/10/2026"
     },
     "id": 45,
@@ -645,36 +557,16 @@ const carsData = [
     },
     "colors": [
       {
-        "name": "Digital White",
-        "hex": "#EDEDE9"
-      },
-      {
-        "name": "Meta Black",
+        "name": "Meta Black Metallic",
         "hex": "#17191B"
       },
       {
-        "name": "Cyber Silver",
-        "hex": "#B4BBC0"
+        "name": "Ruby Red",
+        "hex": "#9B2936"
       },
       {
-        "name": "Laser Red",
-        "hex": "#A82C37"
-      },
-      {
-        "name": "Lumen Yellow",
-        "hex": "#E1C83E"
-      },
-      {
-        "name": "Quantum Blue",
-        "hex": "#45667D"
-      },
-      {
-        "name": "Future Green",
-        "hex": "#687B6D"
-      },
-      {
-        "name": "Atom Grey Matte",
-        "hex": "#818184"
+        "name": "Interstellar Blue",
+        "hex": "#344D72"
       }
     ],
     "images": [
@@ -702,7 +594,7 @@ const carsData = [
     },
     "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
     "dataStatus": {
-      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
+      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
       "checkedAt": "30/10/2026"
     },
     "sources": [
