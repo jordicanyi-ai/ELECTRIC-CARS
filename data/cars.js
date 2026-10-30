@@ -31,7 +31,7 @@ const carsData = [
     "Cuatro plazas y maletero de 185 litros; 550 litros con asientos abatidos",
     "Pop e Icon de 95 CV: 190 km WLTP y carga rápida de 50 kW",
     "Cabrio y 3+1 cuestan más y ofrecen menor autonomía que el Berlina equivalente",
-    "Las fotografías muestran el Cabrio; el Hybrid y el Abarth no están incluidos"
+    "El Hybrid y el Abarth no están incluidos en esta ficha"
   ],
   "idealFor": [
     "Ciudad y aparcamiento en espacios pequeños",
@@ -178,8 +178,7 @@ const carsData = [
   "sources": [
     "https://www.fiat.es/omni/configurador",
     "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/500e/AF_CATALOGO-FIAT-500-ELECTRICO-297X210_Oct25.pdf"
-  ],
-  "galleryNote": "Las fotografías muestran la carrocería Cabrio con capota de lona."
+  ]
 },
 {
   "id": 32,

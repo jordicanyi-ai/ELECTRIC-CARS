@@ -31,4 +31,4 @@ Esperar ocho fotos del Berlina techo fijo, exterior e interior. Conservar nombre
 
 ## Gama unificada aprobada
 
-Se publica una sola ficha Fiat 500e con seis combinaciones. Comprobado en el configurador: 3+1 La Prima 118 CV 31.400 €, 310 km WLTP; Cabrio La Prima 118 CV 32.900 €, 300 km WLTP. Ambos 42 kWh. Se conservan las cuatro versiones Berlina verificadas previamente. Las ocho fotografías aportadas muestran el Cabrio y se indica expresamente en la galería. El borrador queda como copia de la ficha incorporada. Garantía de batería: consultar condiciones vigentes; no se inventa una cobertura a partir de la garantía anticorrosión.
+Se publica una sola ficha Fiat 500e con seis combinaciones. Comprobado en el configurador: 3+1 La Prima 118 CV 31.400 €, 310 km WLTP; Cabrio La Prima 118 CV 32.900 €, 300 km WLTP. Ambos 42 kWh. Se conservan las cuatro versiones Berlina verificadas previamente. El usuario confirma que las fotografías mezclan variantes; se elimina la atribución exclusiva al Cabrio. El borrador queda como copia de la ficha incorporada. Garantía de batería: consultar condiciones vigentes; no se inventa una cobertura a partir de la garantía anticorrosión.
