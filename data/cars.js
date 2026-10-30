@@ -49,10 +49,9 @@ const carsData = [{
     "v2l": null
   },
   "warranty": {
-    "vehicle": "4 años (límite de kilometraje por confirmar)",
+    "vehicle": "Hasta 4 años / 120.000 km",
     "battery": "8 años / 160.000 km",
-    "capacity": "No publicada; consultar condiciones oficiales",
-    "source": "https://www.leapmotor.net/es-es/modelos/b05"
+    "capacity": "70 %"
   },
   "trims": [
     {
@@ -128,7 +127,7 @@ const carsData = [{
     "https://www.km77.com/coches/leapmotor/b05/2026/estandar/estandar/b05-bev-671-kwh-promax/datos"
   ],
   "dataStatus": {
-    "status": "Revisado; condiciones de garantía por confirmar",
+    "status": "Revisado",
     "checkedAt": "30/10/2026"
   }
 },
