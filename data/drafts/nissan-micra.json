@@ -19,7 +19,7 @@
   "acceleration": "8,0–9,0 s",
   "dimensions": "3,974 × 1,830 × 1,499 m",
   "charging": "80 / 100 kW CC · 15–80 % en 30 min",
-  "description": "Utilitario eléctrico de cinco puertas y cinco plazas con dos baterías de 40 y 52 kWh. Combina un maletero de 326 litros con motores de 120 o 150 CV. Google integrado, bomba de calor y asistentes dependen de la versión.",
+  "description": "Utilitario eléctrico de cinco puertas y cinco plazas con baterías de 40 o 52 kWh, motores de 120 o 150 CV y 326 litros de maletero. La gama española se organiza en Acenta, N-Connecta y Tekna; Google integrado y los asistentes de conducción varían según acabado.",
   "highlights": [
     "Dos baterías de 40 y 52 kWh",
     "Cinco plazas y 326 litros de maletero",
@@ -28,7 +28,7 @@
   ],
   "considerations": [
     "Los 439–574 km anunciados en portada son urbanos, no WLTP combinados",
-    "Los precios comerciales dependen de condiciones de campaña y entrega de vehículo usado",
+    "Precios de campaña sin ayudas, condicionados a entregar un vehículo usado; preentrega y matriculación no incluidas",
     "Google integrado y ProPILOT no son de serie en toda la gama"
   ],
   "idealFor": [
@@ -38,7 +38,7 @@
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Importes calculados a partir del precio al contado oficial de octubre de 2026, restituyendo 4.500 € de Auto+ y 900 € de CAE. No son tarifas publicadas directamente sin ayudas: se mantienen descuentos comerciales y la condición de entrega de usado de la campaña. Confirmar precio al contado sin entrega antes de publicar."
+    "note": "Precios de campaña al contado calculados a partir de la oferta oficial de octubre de 2026, sumando los 4.500 € de Auto+ y 900 € de CAE que la marca ya descuenta: 26.000 / 28.100 / 31.050 / 34.050 €. Con IVA y descuentos comerciales; sin financiación ni ayudas descontadas. La campaña exige entrega de vehículo usado y excluye preentrega y matriculación. No son tarifas incondicionales: consulta el precio sin entrega en concesionario."
   },
   "chargingInfo": {
     "dcMax": "80 kW (40 kWh) / 100 kW (52 kWh)",
@@ -123,19 +123,68 @@
     {
       "name": "Neptune Blue",
       "hex": "#A3C6CE"
+    },
+    {
+      "name": "Moon White / techo negro",
+      "hex": "#EEEDE8",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Mercury Grey / techo negro",
+      "hex": "#72777A",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Orion Blue / techo negro",
+      "hex": "#183E6B",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Mars Red / techo negro",
+      "hex": "#B52533",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Neptune Blue / techo negro",
+      "hex": "#A3C6CE",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Moon White / techo gris",
+      "hex": "#EEEDE8",
+      "secondaryHex": "#767B80"
+    },
+    {
+      "name": "Galaxy Black / techo gris",
+      "hex": "#1B1D21",
+      "secondaryHex": "#767B80"
+    },
+    {
+      "name": "Orion Blue / techo gris",
+      "hex": "#183E6B",
+      "secondaryHex": "#767B80"
     }
   ],
-  "images": [],
+  "images": [
+    "img/cars/nissan-micra/Nissan-Micra_01.webp",
+    "img/cars/nissan-micra/Nissan-Micra_02.webp",
+    "img/cars/nissan-micra/Nissan-Micra_03.webp",
+    "img/cars/nissan-micra/Nissan-Micra_04.webp",
+    "img/cars/nissan-micra/Nissan-Micra_05.webp",
+    "img/cars/nissan-micra/Nissan-Micra_06.webp",
+    "img/cars/nissan-micra/Nissan-Micra_07.webp",
+    "img/cars/nissan-micra/Nissan-Micra_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/nissan.svg",
     "group": "Nissan",
     "relation": "Alianza Renault–Nissan–Mitsubishi",
-    "note": "Marca japonesa. El Micra eléctrico comparte plataforma AmpR Small con el Renault 5 y se fabrica en Douai, Francia. La alianza no equivale a un único grupo automovilístico."
+    "note": "Marca japonesa. El Micra eléctrico comparte plataforma AmpR Small con el Renault 5 y se fabrica en Douai, Francia."
   },
   "brandUrl": "https://micra.nissan.es/",
   "dataStatus": {
-    "status": "Borrador; confirmar precio sin entrega de usado y garantía de batería antes de publicar",
+    "status": "Revisado; precio de campaña condicionado a entrega de usado",
     "checkedAt": "30/10/2026"
   },
   "sources": [

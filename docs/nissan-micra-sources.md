@@ -24,3 +24,7 @@ Condiciones del contenido oficial: Acenta 40 al contado 20.600 €, N-Connecta 4
 En el borrador se han restituido matemáticamente Auto+ y CAE: 26.000 / 28.100 / 31.050 / 34.050 €. Son cálculos documentados, NO tarifas sin ayudas leídas directamente. No publicar como precio incondicional: falta confirmar al contado sin entrega o explicar claramente esa condición comercial. No inventar el descuento por entrega.
 
 Vehículo: 3 años de fábrica; Nissan+ renovable con mantenimiento red, máximo 10 años / 200.000 km para particulares y condiciones. No equivale a garantía integral de diez años. Pendiente garantía específica de batería/capacidad, no inferir de Nissan+.
+
+## Incorporación de fotografías
+
+Ocho imágenes verificadas visualmente del nuevo Micra eléctrico: img/cars/nissan-micra/Nissan-Micra_01.webp a _08.webp. Se publica gama con precios derivados sin Auto+/CAE y se explica expresamente la condición comercial de entrega de usado en consideraciones y detalle de precio; no se presenta como tarifa incondicional. Se añaden las ocho combinaciones bitono del catálogo además de seis colores monotono. Garantía específica de batería queda como consulta de condiciones, sin inventar cobertura.

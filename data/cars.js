@@ -1,5 +1,199 @@
 const carsData = [
 {
+  "id": 34,
+  "brand": "Nissan",
+  "model": "Micra",
+  "type": "Utilitario urbano",
+  "launchYear": 2025,
+  "priceMin": 26000,
+  "priceMax": 34050,
+  "priceText": "26.000–34.050 €",
+  "rangeText": "317–415 km WLTP",
+  "minRangeVal": 317,
+  "maxRangeVal": 415,
+  "batteryText": "40 / 52 kWh",
+  "batteryType": "Ion-litio",
+  "powerText": "120–150 CV",
+  "trunk": 326,
+  "frunkText": "No disponible",
+  "seats": 5,
+  "acceleration": "8,0–9,0 s",
+  "dimensions": "3,974 × 1,830 × 1,499 m",
+  "charging": "80 / 100 kW CC · 15–80 % en 30 min",
+  "description": "Utilitario eléctrico de cinco puertas y cinco plazas con baterías de 40 o 52 kWh, motores de 120 o 150 CV y 326 litros de maletero. La gama española se organiza en Acenta, N-Connecta y Tekna; Google integrado y los asistentes de conducción varían según acabado.",
+  "highlights": [
+    "Dos baterías de 40 y 52 kWh",
+    "Cinco plazas y 326 litros de maletero",
+    "Carga en alterna de 11 kW y función V2L",
+    "Google integrado según acabado"
+  ],
+  "considerations": [
+    "Los 439–574 km anunciados en portada son urbanos, no WLTP combinados",
+    "Precios de campaña sin ayudas, condicionados a entregar un vehículo usado; preentrega y matriculación no incluidas",
+    "Google integrado y ProPILOT no son de serie en toda la gama"
+  ],
+  "idealFor": [
+    "Ciudad y desplazamientos diarios",
+    "Quien busca un utilitario de cinco plazas"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios de campaña al contado calculados a partir de la oferta oficial de octubre de 2026, sumando los 4.500 € de Auto+ y 900 € de CAE que la marca ya descuenta: 26.000 / 28.100 / 31.050 / 34.050 €. Con IVA y descuentos comerciales; sin financiación ni ayudas descontadas. La campaña exige entrega de vehículo usado y excluye preentrega y matriculación. No son tarifas incondicionales: consulta el precio sin entrega en concesionario."
+  },
+  "chargingInfo": {
+    "dcMax": "80 kW (40 kWh) / 100 kW (52 kWh)",
+    "acMax": "11 kW",
+    "fastChargeText": "15–80 % en 30 min",
+    "connector": "CCS2 / Tipo 2",
+    "v2l": true
+  },
+  "warranty": {
+    "vehicle": "3 años de fábrica; Nissan+ hasta 10 años / 200.000 km con mantenimiento en red y condiciones",
+    "battery": "Consultar condiciones específicas de batería de tracción",
+    "capacity": "Consultar condiciones",
+    "source": "https://micra.nissan.es/"
+  },
+  "trims": [
+    {
+      "name": "Acenta 40 kWh",
+      "price": "26.000 €",
+      "priceValue": 26000,
+      "battery": "40 kWh",
+      "batteryType": "Ion-litio",
+      "power": "120 CV",
+      "range": "317 km WLTP",
+      "rangeValue": 317,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "N-Connecta 40 kWh",
+      "price": "28.100 €",
+      "priceValue": 28100,
+      "battery": "40 kWh",
+      "batteryType": "Ion-litio",
+      "power": "120 CV",
+      "range": "317 km WLTP",
+      "rangeValue": 317,
+      "accel": "9,0 s"
+    },
+    {
+      "name": "N-Connecta 52 kWh",
+      "price": "31.050 €",
+      "priceValue": 31050,
+      "battery": "52 kWh",
+      "batteryType": "Ion-litio",
+      "power": "150 CV",
+      "range": "415 km WLTP",
+      "rangeValue": 415,
+      "accel": "8,0 s"
+    },
+    {
+      "name": "Tekna 52 kWh",
+      "price": "34.050 €",
+      "priceValue": 34050,
+      "battery": "52 kWh",
+      "batteryType": "Ion-litio",
+      "power": "150 CV",
+      "range": "415 km WLTP",
+      "rangeValue": 415,
+      "accel": "8,0 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Moon White",
+      "hex": "#EEEDE8"
+    },
+    {
+      "name": "Mercury Grey",
+      "hex": "#72777A"
+    },
+    {
+      "name": "Galaxy Black",
+      "hex": "#1B1D21"
+    },
+    {
+      "name": "Orion Blue",
+      "hex": "#183E6B"
+    },
+    {
+      "name": "Mars Red",
+      "hex": "#B52533"
+    },
+    {
+      "name": "Neptune Blue",
+      "hex": "#A3C6CE"
+    },
+    {
+      "name": "Moon White / techo negro",
+      "hex": "#EEEDE8",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Mercury Grey / techo negro",
+      "hex": "#72777A",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Orion Blue / techo negro",
+      "hex": "#183E6B",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Mars Red / techo negro",
+      "hex": "#B52533",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Neptune Blue / techo negro",
+      "hex": "#A3C6CE",
+      "secondaryHex": "#181A1C"
+    },
+    {
+      "name": "Moon White / techo gris",
+      "hex": "#EEEDE8",
+      "secondaryHex": "#767B80"
+    },
+    {
+      "name": "Galaxy Black / techo gris",
+      "hex": "#1B1D21",
+      "secondaryHex": "#767B80"
+    },
+    {
+      "name": "Orion Blue / techo gris",
+      "hex": "#183E6B",
+      "secondaryHex": "#767B80"
+    }
+  ],
+  "images": [
+    "img/cars/nissan-micra/Nissan-Micra_01.webp",
+    "img/cars/nissan-micra/Nissan-Micra_02.webp",
+    "img/cars/nissan-micra/Nissan-Micra_03.webp",
+    "img/cars/nissan-micra/Nissan-Micra_04.webp",
+    "img/cars/nissan-micra/Nissan-Micra_05.webp",
+    "img/cars/nissan-micra/Nissan-Micra_06.webp",
+    "img/cars/nissan-micra/Nissan-Micra_07.webp",
+    "img/cars/nissan-micra/Nissan-Micra_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/nissan.svg",
+    "group": "Nissan",
+    "relation": "Alianza Renault–Nissan–Mitsubishi",
+    "note": "Marca japonesa. El Micra eléctrico comparte plataforma AmpR Small con el Renault 5 y se fabrica en Douai, Francia."
+  },
+  "brandUrl": "https://micra.nissan.es/",
+  "dataStatus": {
+    "status": "Revisado; precio de campaña condicionado a entrega de usado",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://micra.nissan.es/",
+    "https://www-europe.nissan-cdn.net/content/dam/Nissan/es/brochures/E-Catalogo_Nissan_Micra_ES.pdf"
+  ]
+},
+{
   "id": 33,
   "brand": "Fiat",
   "model": "500e",

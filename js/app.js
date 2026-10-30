@@ -646,6 +646,7 @@ let currentImageIndexes = {};
                 'XPENG': 'China · XPENG',
                 'Peugeot': 'Francia · Stellantis',
                 'Fiat': 'Italia · Stellantis',
+                'Nissan': 'Japón · Nissan',
                 'Opel': 'Alemania · Stellantis',
                 'Volkswagen': 'Alemania · Grupo Volkswagen',
                 'Dacia': 'Rumanía · Renault Group (Francia)'
