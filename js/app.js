@@ -659,12 +659,12 @@ let currentImageIndexes = {};
                             <!-- LOGO -->
 
                             <div
-                                class="w-full sm:w-40 ${car.brand === 'Peugeot' ? 'h-28 p-2 overflow-hidden' : 'h-20 p-4'} rounded-xl bg-white border border-slate-100 flex items-center justify-center shrink-0">
+                                class="w-full sm:w-40 ${car.brand === 'Peugeot' ? 'h-24 p-2 overflow-hidden' : 'h-20 p-4'} rounded-xl bg-white border border-slate-100 flex items-center justify-center shrink-0">
 
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '<a href="#" onclick="event.preventDefault(); openCarModal(9);" aria-label="Ver Tesla Model Y" class="flex w-full h-full items-center justify-center">' : ''}
                                 <img src="${car.brandInfo.logo}"
                                     alt="Logo ${car.brand}"
-                                    class="${car.brand === 'Peugeot' ? 'w-40 h-40 max-w-none max-h-none shrink-0' : 'max-w-full max-h-full'} object-contain">
+                                    class="${car.brand === 'Peugeot' ? 'w-28 h-28 max-w-none max-h-none shrink-0' : 'max-w-full max-h-full'} object-contain">
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '</a>' : ''}
 
                             </div>
