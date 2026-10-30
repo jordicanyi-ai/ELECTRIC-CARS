@@ -7,6 +7,7 @@ const carsData = [
   "launchYear": 2027,
   "upcoming": true,
   "priceMin": null,
+  "estimatedPrice": 20000,
   "priceMax": null,
   "priceText": "−20.000 € previsto",
   "rangeText": "250 km WLTP",

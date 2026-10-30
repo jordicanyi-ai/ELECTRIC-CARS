@@ -1356,7 +1356,7 @@ let currentImageIndexes = {};
                     car.maxRangeVal >= range;
 
                 const priceMatch =
-                    car.priceMin == null ? price >= 90000 : car.priceMin <= price;
+                    (car.priceMin ?? car.estimatedPrice) == null ? price >= 90000 : (car.priceMin ?? car.estimatedPrice) <= price;
 
                 return searchMatch &&
                     bodyMatch &&
@@ -1381,7 +1381,7 @@ let currentImageIndexes = {};
                 if (sort === 'brandAsc')
                     return `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, 'es');
 
-                return (a.priceMin ?? Infinity) - (b.priceMin ?? Infinity);
+                return (a.priceMin ?? a.estimatedPrice ?? Infinity) - (b.priceMin ?? b.estimatedPrice ?? Infinity);
             });
 
             renderCars(filtered);
