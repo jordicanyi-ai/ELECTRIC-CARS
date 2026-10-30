@@ -1,0 +1,65 @@
+{
+  "type": "SUV",
+  "batteryType": "NMC",
+  "frunkText": "Pendiente de verificar",
+  "chargingInfo": {
+    "connector": "CCS2 / Tipo 2",
+    "v2l": "Según acabado"
+  },
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio al contado con IVA y sin ayudas públicas pendiente de confirmar en configurador o tarifa oficial española. No utilizar importes promocionales condicionados a financiación o CAE."
+  },
+  "images": [],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/kia.png",
+    "group": "Hyundai Motor Group",
+    "relation": "Marca del grupo"
+  },
+  "dataStatus": {
+    "status": "Borrador pendiente de precios y fotografías",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 37,
+  "brand": "Kia",
+  "model": "EV9",
+  "launchYear": 2023,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Pendiente de confirmar sin ayudas ni financiación",
+  "rangeText": "Hasta 505 km WLTP según gama anunciada por Kia España",
+  "minRangeVal": null,
+  "maxRangeVal": 505,
+  "batteryText": "99,8 kWh (versión AWD consultada)",
+  "powerText": "384 CV (AWD consultada)",
+  "trunk": null,
+  "seats": 7,
+  "acceleration": "Pendiente de verificar",
+  "dimensions": "Pendiente de verificar",
+  "charging": "10–80 % en aprox. 24 min (condiciones óptimas)",
+  "description": "SUV eléctrico grande con hasta siete plazas, diseñado para familias y viajes. La versión AWD de 99,8 kWh consultada declara 384 CV; otras configuraciones deben contrastarse por separado.",
+  "highlights": [
+    "Hasta siete plazas",
+    "Amplio habitáculo familiar",
+    "Carga rápida 10–80 % en unos 24 minutos",
+    "Tracción integral disponible"
+  ],
+  "considerations": [
+    "Algunas configuraciones tienen seis plazas: confirmar por acabado",
+    "Precio al contado sin ayudas pendiente de comprobar",
+    "Autonomía y maletero cambian según versión y asientos"
+  ],
+  "idealFor": [
+    "Familias numerosas",
+    "Viajes con equipaje"
+  ],
+  "trims": [],
+  "colors": [],
+  "brandUrl": "https://www.kia.com/es/modelos/ev9/descubrelo/",
+  "sources": [
+    "https://www.kia.com/es/modelos/modelos-kia/",
+    "https://www.kia.com/es/concesionarios/autoconsa/modelos/ev9/especificaciones/"
+  ]
+}
