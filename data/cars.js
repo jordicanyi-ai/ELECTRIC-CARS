@@ -1,5 +1,182 @@
 const carsData = [
 {
+  "id": 41,
+  "brand": "MINI",
+  "model": "Cooper Electric",
+  "type": "Urbano",
+  "launchYear": 2024,
+  "priceMin": 28150,
+  "priceMax": 40650,
+  "priceText": "28.150 - 40.650 €",
+  "rangeText": "293 - 402 km",
+  "minRangeVal": 293,
+  "maxRangeVal": 402,
+  "batteryText": "40,7 - 54,2 kWh",
+  "batteryType": "NMC (iones de litio)",
+  "powerText": "184 - 258 CV",
+  "trunk": 210,
+  "frunkText": "No disponible",
+  "seats": 4,
+  "acceleration": "5,9 - 7,3 s",
+  "dimensions": "3,86 × 1,76 × 1,46 m",
+  "charging": "75 - 95 kW CC · 10-80 % en 28-30 min",
+  "description": "El MINI Cooper Electric es un urbano eléctrico de tres puertas y cuatro plazas que conserva el diseño característico de la marca. Mide 3,86 metros y tiene un maletero de 210 litros, por lo que resulta más práctico en ciudad que para familias. El Cooper E ofrece 184 CV y unos 300 km WLTP; el SE aumenta a 218 CV y se acerca a los 400 km. La gama incluye además el deportivo John Cooper Works de 258 CV. Destaca por su agilidad, el interior digital con pantalla circular y la posibilidad de personalizar carrocería y techo.",
+  "highlights": [
+    "Tamaño compacto de 3,86 m",
+    "Diseño e interior con pantalla OLED circular",
+    "Tres motorizaciones eléctricas, incluida JCW",
+    "Autonomía WLTP de hasta 402 km según configuración"
+  ],
+  "considerations": [
+    "Solo cuatro plazas y tres puertas",
+    "Maletero de 210 litros",
+    "El Cooper E tiene menos autonomía para viajes frecuentes",
+    "Los acabados y opciones pueden elevar el precio"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Parejas",
+    "Conducción dinámica",
+    "Uso diario"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios de referencia de la web española de MINI para acabados de acceso (E Essential, SE y JCW), sin descontar ayudas ni financiación. MINI también publica 29.810 € al contado para una oferta E de septiembre de 2026; comprobar configuración y vigencia antes de actualizar tarifas."
+  },
+  "chargingInfo": {
+    "dcMax": "75 kW (E) / 95 kW (SE y JCW)",
+    "acMax": "11 kW",
+    "fastChargeText": "10-80 % en aproximadamente 28-30 minutos",
+    "connector": "CCS2"
+  },
+  "warranty": {
+    "vehicle": "3 años sin límite de kilómetros",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 %",
+    "source": "https://www.mini.es/es_ES/home/services/service-and-repair/warranties.html"
+  },
+  "trims": [
+    {
+      "name": "Cooper E · Essential",
+      "price": "28.150 €",
+      "priceValue": 28150,
+      "battery": "40,7 kWh brutos / 36,6 kWh útiles",
+      "batteryType": "NMC",
+      "power": "184 CV",
+      "range": "293 - 305 km WLTP",
+      "rangeValue": 305,
+      "accel": "7,3 s"
+    },
+    {
+      "name": "Cooper SE",
+      "price": "30.350 €",
+      "priceValue": 30350,
+      "battery": "54,2 kWh brutos / 49,2 kWh útiles",
+      "batteryType": "NMC",
+      "power": "218 CV",
+      "range": "387 - 402 km WLTP",
+      "rangeValue": 402,
+      "accel": "6,7 s"
+    },
+    {
+      "name": "John Cooper Works Electric",
+      "price": "40.650 €",
+      "priceValue": 40650,
+      "battery": "54,2 kWh brutos / 49,2 kWh útiles",
+      "batteryType": "NMC",
+      "power": "258 CV",
+      "range": "364 - 371 km WLTP",
+      "rangeValue": 371,
+      "accel": "5,9 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Blazing Blue",
+      "hex": "#426B9C"
+    },
+    {
+      "name": "British Racing Green",
+      "hex": "#173B32"
+    },
+    {
+      "name": "Chili Red II",
+      "hex": "#B71F2D"
+    },
+    {
+      "name": "Indigo Sunset Blue",
+      "hex": "#45536F"
+    },
+    {
+      "name": "Inspired White",
+      "hex": "#EEEDE5"
+    },
+    {
+      "name": "Legend Grey",
+      "hex": "#666D72"
+    },
+    {
+      "name": "Melting Silver III",
+      "hex": "#B4B6B1"
+    },
+    {
+      "name": "Midnight Black II",
+      "hex": "#17191B"
+    },
+    {
+      "name": "Nanuq White",
+      "hex": "#F4F3EC"
+    },
+    {
+      "name": "Ocean Wave Green",
+      "hex": "#8AB6A8"
+    },
+    {
+      "name": "Statement Grey",
+      "hex": "#9B9C97"
+    },
+    {
+      "name": "Sunny Side Yellow",
+      "hex": "#EACD37"
+    }
+  ],
+  "images": [
+    "img/cars/mini-cooperSE/mini-cooperse_01.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_02.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_03.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_04.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_05.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_06.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_07.webp",
+    "img/cars/mini-cooperSE/mini-cooperse_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "MINI Cooper Electric - vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=MINI+Cooper+Electric+2026+prueba",
+      "thumb": "img/cars/mini-cooperSE/mini-cooperse_01.webp"
+    }
+  ],
+  "brandInfo": {
+    "logo": "img/brands/mini.svg",
+    "group": "BMW Group",
+    "relation": "Marca del grupo",
+    "note": "MINI es una marca británica del BMW Group."
+  },
+  "brandUrl": "https://www.mini.es/es_ES/home/range/mini-cooper-electrico.html",
+  "dataStatus": {
+    "status": "Fotografías enlazadas; precios orientativos pendientes de revisión",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.mini.es/es_ES/home/range/mini-cooper-electrico.html",
+    "https://www.mini.es/es_ES/home/electromovilidad/gama-electrica-mini.html",
+    "https://www.mini.es/es_ES/home/services/service-and-repair/warranties.html",
+    "https://www.carwow.es/mini/cooper-electrico/colores"
+  ]
+},
+{
   "id": 40,
   "brand": "Škoda",
   "model": "Epiq",
