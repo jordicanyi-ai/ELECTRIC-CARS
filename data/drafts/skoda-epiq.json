@@ -1,0 +1,108 @@
+{
+  "id": 40,
+  "brand": "Škoda",
+  "model": "Epiq",
+  "type": "SUV",
+  "launchYear": 2026,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Pendiente de confirmar PVP sin ayudas ni financiación",
+  "rangeText": "324 - 437 km",
+  "minRangeVal": 324,
+  "maxRangeVal": 437,
+  "batteryText": "38,5 - 55 kWh",
+  "batteryType": "LFP / NMC",
+  "powerText": "135 - 210 CV",
+  "trunk": 475,
+  "frunkText": "Opcional con Pack Premium (según acabado)",
+  "seats": 5,
+  "acceleration": "7,1 - 9,8 s",
+  "dimensions": "4,17 m de largo",
+  "charging": "88 - 105 kW CC",
+  "description": "SUV eléctrico urbano del segmento B fabricado en Navarra, con 475 litros de maletero y dos baterías disponibles.",
+  "highlights": [
+    "475 litros de maletero",
+    "324 - 437 km WLTP combinados",
+    "Fabricado en Navarra",
+    "Batería LFP en versión de acceso"
+  ],
+  "considerations": [
+    "Los precios publicitarios de acceso incluyen ayudas, CAE y financiación",
+    "El frunk depende del equipamiento opcional",
+    "La autonomía varía según batería y acabado"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Uso diario",
+    "Familias pequeñas"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Pendiente de contrastar PVP de tarifa al contado con IVA, sin Plan Auto+, CAE ni bonificación por financiación. No usar precio promocional de 18.500 €."
+  },
+  "chargingInfo": {
+    "dcMax": "88 / 105 kW",
+    "fastChargeText": "10-80 %: 23 - 24 min",
+    "connector": "CCS2"
+  },
+  "trims": [
+    {
+      "name": "Epiq 40 Urban",
+      "price": "Pendiente",
+      "priceValue": null,
+      "battery": "38,5 kWh",
+      "batteryType": "LFP",
+      "power": "135 CV",
+      "range": "324 km WLTP",
+      "rangeValue": 324,
+      "accel": "9,8 s"
+    },
+    {
+      "name": "Epiq 40 Selection",
+      "price": "Pendiente",
+      "priceValue": null,
+      "battery": "38,5 kWh",
+      "batteryType": "LFP",
+      "power": "135 CV",
+      "range": "324 km WLTP",
+      "rangeValue": 324,
+      "accel": "9,8 s"
+    },
+    {
+      "name": "Epiq 55",
+      "price": "Pendiente",
+      "priceValue": null,
+      "battery": "55 kWh",
+      "batteryType": "NMC",
+      "power": "210 CV",
+      "range": "437 km WLTP",
+      "rangeValue": 437,
+      "accel": "7,1 s"
+    },
+    {
+      "name": "Epiq Sportline",
+      "price": "Pendiente",
+      "priceValue": null,
+      "battery": "38,5 / 55 kWh",
+      "batteryType": "LFP / NMC",
+      "power": "135 / 210 CV",
+      "range": "Según versión",
+      "rangeValue": null,
+      "accel": "7,1 - 9,8 s"
+    }
+  ],
+  "images": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/results?search_query=Skoda+Epiq+2026+prueba",
+      "title": "Vídeos Škoda Epiq"
+    }
+  ],
+  "brandUrl": "https://www.skoda.es/modelos/epiq/epiq",
+  "dataStatus": "Borrador; pendiente de fotografías y precios sin ayudas",
+  "sources": [
+    "https://comunicacion.skoda.es/2026/09/15/el-skoda-epiq-amplia-su-gama-con-una-nueva-version-de-acceso-desde-18-500-euros/",
+    "https://comunicacion.skoda.es/2026/10/12/skoda-amplia-su-gama-electrica-el-nuevo-epiq-sportline-debuta-con-un-exterior-de-estilo-dinamico/"
+  ]
+}
