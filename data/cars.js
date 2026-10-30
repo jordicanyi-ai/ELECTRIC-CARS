@@ -73,7 +73,7 @@ const carsData = [
       "priceValue": 48995,
       "battery": "62,9 kWh",
       "power": "170 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "Air RWD 84 kWh",
@@ -81,7 +81,7 @@ const carsData = [
       "priceValue": 52500,
       "battery": "84 kWh",
       "power": "229 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT-Line RWD 84 kWh",
@@ -89,7 +89,7 @@ const carsData = [
       "priceValue": 58050,
       "battery": "84 kWh",
       "power": "229 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT-Line AWD 84 kWh",
@@ -97,7 +97,7 @@ const carsData = [
       "priceValue": 62075,
       "battery": "84 kWh",
       "power": "325 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT AWD 84 kWh",
@@ -105,7 +105,7 @@ const carsData = [
       "priceValue": 71090,
       "battery": "84 kWh",
       "power": "650 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     }
   ],
   "colors": [
@@ -222,7 +222,7 @@ const carsData = [
       "priceValue": 66475,
       "battery": "76,1 kWh",
       "power": "218 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "Earth RWD 99,8 kWh · 7 plazas",
@@ -230,7 +230,7 @@ const carsData = [
       "priceValue": 74475,
       "battery": "99,8 kWh",
       "power": "204 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "Earth AWD 99,8 kWh · 7 plazas",
@@ -238,7 +238,7 @@ const carsData = [
       "priceValue": 77475,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 7 plazas",
@@ -246,7 +246,7 @@ const carsData = [
       "priceValue": 86545,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT-Line AWD 99,8 kWh · 6 plazas",
@@ -254,7 +254,7 @@ const carsData = [
       "priceValue": 87645,
       "battery": "99,8 kWh",
       "power": "385 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT AWD 99,8 kWh · 7 plazas",
@@ -262,7 +262,7 @@ const carsData = [
       "priceValue": 94505,
       "battery": "99,8 kWh",
       "power": "509 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     },
     {
       "name": "GT AWD 99,8 kWh · 6 plazas",
@@ -270,7 +270,7 @@ const carsData = [
       "priceValue": 95605,
       "battery": "99,8 kWh",
       "power": "509 CV",
-      "range": Autonomía WLTP variable según configuración
+      "range": "Autonomía WLTP variable según configuración"
     }
   ],
   "colors": [
