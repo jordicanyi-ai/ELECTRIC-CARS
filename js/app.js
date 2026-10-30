@@ -43,6 +43,10 @@ let currentImageIndexes = {};
         }
 
         function setCatalogueView(view) {
+            document.querySelector('.catalogue-controls').hidden = false;
+            document.getElementById('catalogue-results').hidden = false;
+            document.getElementById('vehicle-sales').hidden = true;
+            document.getElementById('sales-view-btn').setAttribute('aria-pressed', 'false');
             const previous = document.body.dataset.catalogueView;
             if (view === 'ranking' && previous !== 'ranking') catalogueSort = document.getElementById('sort-filter').value;
             document.body.dataset.catalogueView = view;
@@ -1132,6 +1136,8 @@ let currentImageIndexes = {};
                     <!-- BRAND / AUTOMOTIVE GROUP -->
 
                     ${brandInfoHtml}
+
+                    ${window.renderModelSaleLinks ? window.renderModelSaleLinks(car.id) : ''}
 
                     <section>
                         <button type="button" class="detail-compare" onclick="toggleDetailCompare(${car.id},this,event)" aria-pressed="${compareCars.has(car.id)}"><i class="fa-solid ${compareCars.has(car.id) ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${compareCars.has(car.id) ? 'Añadido al comparador' : 'Añadir al comparador'}</button>

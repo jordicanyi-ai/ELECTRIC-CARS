@@ -899,3 +899,41 @@ body[data-catalogue-view=ranking] .sort-control{
     .catalogue-inline-ad { padding: 7px 8px; }
     .catalogue-ad-unit { height: 50px; }
 }
+
+/* Managed dealership stock. Hidden until approved public units are available. */
+.sales-heading { margin: 22px 0 18px; }
+.sales-heading h2 { font-size: 27px; font-weight: 800; letter-spacing: -.7px; }
+.sales-heading p, .sale-content p { color: var(--electric-muted); font-size: 12px; line-height: 1.5; }
+.sales-filters { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
+.sales-filters > div { min-width: 0; }
+.sales-filters label { display: block; font-size: 12px; margin-bottom: 7px; font-weight: 700; }
+.sales-filters input, .sales-filters select { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--electric-border); border-radius: 8px; background: #fff; color: var(--electric-ink); font-size: 14px; }
+#sales-results-count { margin: 18px 0 12px; color: var(--electric-muted); font-size: 13px; }
+#sales-model-note button, .sale-model-link { min-height: 44px; background: none; color: var(--electric-blue); font-size: 12px; font-weight: 700; }
+.sales-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.sale-card { min-width: 0; border: 1px solid var(--electric-border); border-radius: 13px; overflow: hidden; display: flex; flex-direction: column; background: #fff; }
+.sale-card > img { width: 100%; height: 210px; object-fit: cover; background: #edf2f5; }
+.sale-content { flex: 1; display: flex; flex-direction: column; padding: 17px; gap: 8px; }
+.sale-condition { color: var(--electric-blue); font-size: 11px; font-weight: 700; }
+.sale-content h3 { font-size: 21px; line-height: 1.2; font-weight: 800; letter-spacing: -.5px; overflow-wrap: anywhere; }
+.sale-price { font-size: 25px; font-weight: 800; margin-top: 3px; }
+.sale-facts { display: flex; flex-wrap: wrap; gap: 7px 12px; font-size: 12px; padding: 11px 0; border-block: 1px solid #e3eaf1; }
+.sale-dealer { font-weight: 700; }
+.sale-actions { margin-top: auto; padding-top: 9px; display: flex; gap: 8px; flex-wrap: wrap; }
+.sale-contact, .sale-phone { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 45px; padding: 10px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.sale-contact { flex: 1; background: var(--electric-blue); color: #fff; }
+.sale-phone { border: 1px solid var(--electric-border); color: var(--electric-blue); }
+.sales-empty { grid-column: 1 / -1; padding: 30px 16px; text-align: center; font-size: 14px; color: var(--electric-muted); background: #f7f9fb; border-radius: 10px; }
+.model-sale-link { padding: 20px; background: #edf3ff; border: 1px solid #d6e3ff; border-radius: 12px; }
+.model-sale-link h3 { font-size: 20px; font-weight: 800; }
+.model-sale-link p { color: var(--electric-muted); font-size: 13px; margin: 8px 0 12px; }
+.model-sale-link button { min-height: 44px; padding: 10px 14px; background: var(--electric-blue); color: #fff; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.model-sale-link button i { margin-left: 7px; }
+@media (max-width: 1023px) { .sales-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) {
+    .sales-filters { grid-template-columns: 1fr 1fr; }
+    .sales-filters > div:first-child { grid-column: 1 / -1; }
+    .sales-filters input, .sales-filters select { font-size: 16px; }
+    .sales-grid { grid-template-columns: 1fr; }
+    .catalogue-tabs { flex-wrap: wrap; column-gap: 18px; }
+}

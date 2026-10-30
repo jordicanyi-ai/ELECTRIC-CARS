@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261030-clear-6">
+    <link rel="stylesheet" href="css/styles.css?v=20261030-sales-1">
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
@@ -33,6 +33,7 @@
             <div class="catalogue-tabs" role="group" aria-label="Explorar coches">
                 <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="setCatalogueView('catalogue')">Catálogo</button>
                 <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="setCatalogueView('ranking')"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
+                <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
         </section>
         <section class="catalogue-controls" aria-label="Buscar y filtrar coches">
@@ -73,6 +74,18 @@
             </div>
             <div id="cars-grid" class="cars-grid"></div>
 
+        </section>
+
+        <section id="vehicle-sales" hidden aria-labelledby="vehicle-sales-title">
+            <div class="sales-heading"><h2 id="vehicle-sales-title">Coches en venta</h2><p>Unidades de concesionarios. Contacta directamente con el profesional.</p></div>
+            <div class="sales-filters">
+                <div><label for="sales-search">Modelo o ubicación</label><input id="sales-search" type="search" placeholder="Marca, modelo o localidad" oninput="filterVehicleSales()"></div>
+                <div><label for="sales-condition">Estado</label><select id="sales-condition" onchange="filterVehicleSales()"><option value="">Todos</option><option value="new">Nuevo</option><option value="demo">Demostración</option><option value="used">Ocasión</option></select></div>
+                <div><label for="sales-price">Precio máximo</label><select id="sales-price" onchange="filterVehicleSales()"><option value="">Sin límite</option><option value="20000">20.000 €</option><option value="30000">30.000 €</option><option value="40000">40.000 €</option><option value="50000">50.000 €</option></select></div>
+            </div>
+            <div id="sales-model-note" hidden><button type="button" onclick="clearSalesModel()">Ver unidades de todos los modelos</button></div>
+            <p id="sales-results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div id="sales-grid" class="sales-grid"></div>
         </section>
 
         <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
@@ -187,12 +200,16 @@
     </footer>
 
     <!-- DATABASE -->
-    <script src="data/cars.js?v=20261030-clear-6"></script>
+    <script src="data/cars.js?v=20261030-sales-1"></script>
     <script src="data/sales-ranking.js?v=20261015-1"></script>
     <script src="js/sales-ranking.js?v=20261015-5"></script>
 
+    <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
+    <script src="data/vehicle-sales.js?v=20261030-sales-1"></script>
+    <script src="js/vehicle-sales.js?v=20261030-sales-1"></script>
+
     <!-- APP -->
-    <script src="js/app.js?v=20261030-clear-6"></script>
+    <script src="js/app.js?v=20261030-sales-1"></script>
 
     <script>
         window.addEventListener('load', function () {
