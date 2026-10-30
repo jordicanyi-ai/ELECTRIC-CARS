@@ -188,7 +188,8 @@ const carsData = [
     ],
     "brandInfo": {
       "group": "Nissan Motor Corporation",
-      "relation": "Fabricante japonés"
+      "relation": "Fabricante japonés",
+      "logo": "img/brands/nissan-dark.svg"
     },
     "brandUrl": "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf.html",
     "sources": [
