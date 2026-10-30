@@ -1,7 +1,7 @@
 {
   "type": "Crossover",
   "batteryType": "NMC",
-  "frunkText": "Pendiente de verificar",
+  "frunkText": "Según tracción; verificar capacidad",
   "chargingInfo": {
     "connector": "CCS2 / Tipo 2",
     "v2l": "Según acabado"
@@ -9,7 +9,7 @@
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio al contado con IVA y sin ayudas públicas pendiente de confirmar en configurador o tarifa oficial española. No utilizar importes promocionales condicionados a financiación o CAE."
+    "note": "PVP de tarifa de cinco versiones en España, con IVA y sin descontar ayudas ni promociones vinculadas a financiación. Los descuentos comerciales al contado pueden variar por concesionario. Referencia: fichasyprecios.motor.elpais.com/kia/ev6/ y Kia España, consulta 30/10/2026."
   },
   "images": [
     "img/cars/kia-ev6/kia-ev6_01.webp",
@@ -28,25 +28,25 @@
     "relation": "Marca del grupo"
   },
   "dataStatus": {
-    "status": "Fotografías enlazadas; pendientes precios y versiones",
+    "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
     "checkedAt": "30/10/2026"
   },
   "id": 36,
   "brand": "Kia",
   "model": "EV6",
   "launchYear": 2021,
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Pendiente de confirmar sin ayudas ni financiación",
-  "rangeText": "Autonomía WLTP según versión; máximo anunciado 582 km",
-  "minRangeVal": null,
+  "priceMin": 48995,
+  "priceMax": 71090,
+  "priceText": "48.995–71.090 €",
+  "rangeText": "428–582 km WLTP (según versión)",
+  "minRangeVal": 428,
   "maxRangeVal": 582,
   "batteryText": "62,9 / 84 kWh",
-  "powerText": "Según motorización",
-  "trunk": null,
+  "powerText": "170–650 CV",
+  "trunk": 490,
   "seats": 5,
   "acceleration": "Según versión",
-  "dimensions": "Pendiente de verificar",
+  "dimensions": "4,695 × 1,890 × 1,550 m (aprox.; según versión)",
   "charging": "10–80 % en aprox. 18 min (condiciones óptimas)",
   "description": "Crossover eléctrico de cinco plazas con arquitectura de carga ultrarrápida y opciones de tracción trasera o total. La gama renovada incluye baterías de 62,9 y 84 kWh.",
   "highlights": [
@@ -58,17 +58,59 @@
   "considerations": [
     "No confundir la versión GT con el acabado GT-Line",
     "Precios sin financiación ni ayudas pendientes de comprobación",
-    "Autonomía y potencia dependen de batería, ruedas y tracción"
+    "Autonomía y potencia dependen de batería, ruedas y tracción",
+    "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
   "idealFor": [
     "Viajes largos",
     "Quien prioriza carga rápida"
   ],
-  "trims": [],
+  "trims": [
+    {
+      "name": "Air RWD 62,9 kWh",
+      "price": "48.995 €",
+      "priceValue": 48995,
+      "battery": "62,9 kWh",
+      "power": "170 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Air RWD 84 kWh",
+      "price": "52.500 €",
+      "priceValue": 52500,
+      "battery": "84 kWh",
+      "power": "229 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line RWD 84 kWh",
+      "price": "58.050 €",
+      "priceValue": 58050,
+      "battery": "84 kWh",
+      "power": "229 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 84 kWh",
+      "price": "62.075 €",
+      "priceValue": 62075,
+      "battery": "84 kWh",
+      "power": "325 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 84 kWh",
+      "price": "71.090 €",
+      "priceValue": 71090,
+      "battery": "84 kWh",
+      "power": "650 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    }
+  ],
   "colors": [],
   "brandUrl": "https://www.kia.com/es/modelos/ev6/descubrelo/",
   "sources": [
-    "https://www.kia.com/es/modelos/ev6/descubrelo/",
-    "https://www.kia.com/es/modelos/modelos-kia/"
+    "https://www.kia.com/es/modelos/ev6/especificaciones/",
+    "https://fichasyprecios.motor.elpais.com/kia/ev6/"
   ]
 }
