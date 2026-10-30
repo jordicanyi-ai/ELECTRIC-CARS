@@ -11,7 +11,16 @@
     "includesAid": false,
     "note": "Precio al contado con IVA y sin ayudas públicas pendiente de confirmar en configurador o tarifa oficial española. No utilizar importes promocionales condicionados a financiación o CAE."
   },
-  "images": [],
+  "images": [
+    "img/cars/kia-ev9/kia-ev9_01.webp",
+    "img/cars/kia-ev9/kia-ev9_02.webp",
+    "img/cars/kia-ev9/kia-ev9_03.webp",
+    "img/cars/kia-ev9/kia-ev9_04.webp",
+    "img/cars/kia-ev9/kia-ev9_05.webp",
+    "img/cars/kia-ev9/kia-ev9_06.webp",
+    "img/cars/kia-ev9/kia-ev9_07.webp",
+    "img/cars/kia-ev9/kia-ev9_08.webp"
+  ],
   "videos": [],
   "brandInfo": {
     "logo": "img/brands/kia.png",
@@ -19,7 +28,7 @@
     "relation": "Marca del grupo"
   },
   "dataStatus": {
-    "status": "Borrador pendiente de precios y fotografías",
+    "status": "Fotografías enlazadas; pendientes precios y versiones",
     "checkedAt": "30/10/2026"
   },
   "id": 37,
