@@ -1,7 +1,7 @@
 {
   "type": "SUV",
   "batteryType": "NMC",
-  "frunkText": "Pendiente de verificar",
+  "frunkText": "Disponible; capacidad según tracción",
   "chargingInfo": {
     "connector": "CCS2 / Tipo 2",
     "v2l": "Según acabado"
@@ -9,7 +9,7 @@
   "priceInfo": {
     "includesVat": true,
     "includesAid": false,
-    "note": "Precio al contado con IVA y sin ayudas públicas pendiente de confirmar en configurador o tarifa oficial española. No utilizar importes promocionales condicionados a financiación o CAE."
+    "note": "PVP de tarifa por versión con IVA, sin ayudas públicas ni financiación, según listado español consultado el 30/10/2026. Precios comerciales al contado pueden ser inferiores. Fuente: carwow.es/kia/ev9; confirmar tarifa en concesionario."
   },
   "images": [
     "img/cars/kia-ev9/kia-ev9_01.webp",
@@ -28,27 +28,27 @@
     "relation": "Marca del grupo"
   },
   "dataStatus": {
-    "status": "Fotografías enlazadas; pendientes precios y versiones",
+    "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
     "checkedAt": "30/10/2026"
   },
   "id": 37,
   "brand": "Kia",
   "model": "EV9",
   "launchYear": 2023,
-  "priceMin": null,
-  "priceMax": null,
-  "priceText": "Pendiente de confirmar sin ayudas ni financiación",
-  "rangeText": "Hasta 505 km WLTP según gama anunciada por Kia España",
-  "minRangeVal": null,
-  "maxRangeVal": 505,
-  "batteryText": "99,8 kWh (versión AWD consultada)",
-  "powerText": "384 CV (AWD consultada)",
-  "trunk": null,
+  "priceMin": 66475,
+  "priceMax": 95605,
+  "priceText": "66.475–95.605 €",
+  "rangeText": "Autonomía WLTP según versión (hasta 563 km)",
+  "minRangeVal": 443,
+  "maxRangeVal": 563,
+  "batteryText": "76,1 / 99,8 kWh",
+  "powerText": "204–509 CV",
+  "trunk": 333,
   "seats": 7,
   "acceleration": "Pendiente de verificar",
-  "dimensions": "Pendiente de verificar",
+  "dimensions": "5,015 × 1,980 × 1,780 m (según versión)",
   "charging": "10–80 % en aprox. 24 min (condiciones óptimas)",
-  "description": "SUV eléctrico grande con hasta siete plazas, diseñado para familias y viajes. La versión AWD de 99,8 kWh consultada declara 384 CV; otras configuraciones deben contrastarse por separado.",
+  "description": "SUV eléctrico familiar de seis o siete plazas según configuración. Gama con baterías de 76,1 y 99,8 kWh y versiones de tracción trasera o total. La capacidad del maletero depende de la posición de los asientos.",
   "highlights": [
     "Hasta siete plazas",
     "Amplio habitáculo familiar",
@@ -58,17 +58,75 @@
   "considerations": [
     "Algunas configuraciones tienen seis plazas: confirmar por acabado",
     "Precio al contado sin ayudas pendiente de comprobar",
-    "Autonomía y maletero cambian según versión y asientos"
+    "Autonomía y maletero cambian según versión y asientos",
+    "PVP de tarifa sin ayudas; las ofertas comerciales al contado pueden ser distintas"
   ],
   "idealFor": [
     "Familias numerosas",
     "Viajes con equipaje"
   ],
-  "trims": [],
+  "trims": [
+    {
+      "name": "Air RWD 76,1 kWh · 7 plazas",
+      "price": "66.475 €",
+      "priceValue": 66475,
+      "battery": "76,1 kWh",
+      "power": "218 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Earth RWD 99,8 kWh · 7 plazas",
+      "price": "74.475 €",
+      "priceValue": 74475,
+      "battery": "99,8 kWh",
+      "power": "204 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "Earth AWD 99,8 kWh · 7 plazas",
+      "price": "77.475 €",
+      "priceValue": 77475,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 99,8 kWh · 7 plazas",
+      "price": "86.545 €",
+      "priceValue": 86545,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT-Line AWD 99,8 kWh · 6 plazas",
+      "price": "87.645 €",
+      "priceValue": 87645,
+      "battery": "99,8 kWh",
+      "power": "385 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 99,8 kWh · 7 plazas",
+      "price": "94.505 €",
+      "priceValue": 94505,
+      "battery": "99,8 kWh",
+      "power": "509 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    },
+    {
+      "name": "GT AWD 99,8 kWh · 6 plazas",
+      "price": "95.605 €",
+      "priceValue": 95605,
+      "battery": "99,8 kWh",
+      "power": "509 CV",
+      "range": "WLTP según configuración; consultar ficha oficial"
+    }
+  ],
   "colors": [],
   "brandUrl": "https://www.kia.com/es/modelos/ev9/descubrelo/",
   "sources": [
-    "https://www.kia.com/es/modelos/modelos-kia/",
-    "https://www.kia.com/es/concesionarios/autoconsa/modelos/ev9/especificaciones/"
+    "https://www.kia.com/es/modelos/ev9/especificaciones/",
+    "https://www.carwow.es/kia/ev9"
   ]
 }
