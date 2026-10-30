@@ -74,8 +74,8 @@ let currentImageIndexes = {};
             if (compareCars.has(carId)) {
                 compareCars.delete(carId);
             } else {
-                if (compareCars.size >= 3) {
-                    showCompareMessage('Puedes comparar un máximo de 3 vehículos.');
+                if (compareCars.size >= 4) {
+                    showCompareMessage('Puedes comparar un máximo de 4 vehículos.');
                     return;
                 }
                 compareCars.add(carId);
@@ -133,7 +133,7 @@ let currentImageIndexes = {};
                 return;
             }
             bar.classList.remove('hidden');
-            count.textContent = `${selected.length} de 3 vehículos`;
+            count.textContent = `${selected.length} de 4 vehículos`;
             button.disabled = selected.length < 2;
             button.textContent = selected.length < 2 ? 'Selecciona otro' : `Comparar ${selected.length} vehículos`;
             chips.innerHTML = selected.map(car => `
@@ -277,7 +277,7 @@ let currentImageIndexes = {};
             ];
             const mobileCompare = window.innerWidth < 640;
             const compareLabelWidth = mobileCompare ? 112 : 132;
-            const compareCarWidth = mobileCompare ? 178 : 210;
+            const compareCarWidth = mobileCompare ? 178 : (selectedCars.length === 4 ? 195 : 210);
             const minWidth = compareLabelWidth + selectedCars.length * compareCarWidth;
 
             modal.innerHTML = `
@@ -285,8 +285,8 @@ let currentImageIndexes = {};
                     <div><span class="text-[10px] text-blue-600 font-extrabold uppercase tracking-[0.16em]">electricos.eu</span><h2 class="text-xl sm:text-2xl font-black mt-0.5">Comparar vehículos</h2></div>
                     <button onclick="closeCompareModal()" aria-label="Cerrar comparador" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <div class="px-4 sm:px-7 pt-5"><p class="text-xs sm:text-sm text-slate-500">Compara la gama completa o elige una versión concreta de cada modelo.</p></div>
-                <div class="compare-modal-scroll overflow-x-auto pb-3 mt-5">
+                <div class="px-4 sm:px-7 pt-5"><p class="text-xs sm:text-sm text-slate-500">Compara la gama completa o elige una versión concreta de cada modelo. <span class="sm:hidden font-semibold text-blue-600">Desliza horizontalmente para ver los demás coches.</span></p></div>
+                <div class="compare-modal-scroll overflow-x-auto pb-3 mt-5" tabindex="0" aria-label="Tabla comparativa, desplaza horizontalmente para ver los vehículos">
                     <div style="min-width:${minWidth}px" class="px-4 sm:px-7">
                         <div class="grid gap-0" style="grid-template-columns:${compareLabelWidth}px repeat(${selectedCars.length}, minmax(${compareCarWidth}px,1fr));">
                             <div class="compare-sticky-label border-b border-slate-200"></div>
