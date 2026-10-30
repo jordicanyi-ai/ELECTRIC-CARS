@@ -26,7 +26,8 @@ const carsData = [
   "brandInfo": {
     "logo": "img/brands/kia.png",
     "group": "Hyundai Motor Group",
-    "relation": "Marca del grupo"
+    "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group."
   },
   "dataStatus": {
     "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
@@ -175,7 +176,8 @@ const carsData = [
   "brandInfo": {
     "logo": "img/brands/kia.png",
     "group": "Hyundai Motor Group",
-    "relation": "Marca del grupo"
+    "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group."
   },
   "dataStatus": {
     "status": "Revisado con PVP de tarifa; autonomía por acabado pendiente de desglose",
@@ -1746,6 +1748,7 @@ const carsData = [
     "logo": "img/brands/kia.png",
     "group": "Hyundai Motor Group",
     "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group.",
     "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 de cinco puertas se fabrica en Europa."
   },
   "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
@@ -1881,6 +1884,7 @@ const carsData = [
     "logo": "img/brands/kia.png",
     "group": "Hyundai Motor Group",
     "relation": "Marca del grupo",
+    "note": "Kia es una marca surcoreana perteneciente a Hyundai Motor Group.",
     "note": "Kia es una marca surcoreana del Hyundai Motor Group; el EV4 Fastback es una berlina de cuatro puertas."
   },
   "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
