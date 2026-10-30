@@ -72,7 +72,8 @@ const carsData = [
       "name": "Air RWD 62,9 kWh",
       "price": "48.995 €",
       "priceValue": 48995,
-      "battery": "62,9 kWh · NMC",
+      "battery": "62,9 kWh",
+      "batteryType": "NMC",
       "power": "170 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -80,7 +81,8 @@ const carsData = [
       "name": "Air RWD 84 kWh",
       "price": "52.500 €",
       "priceValue": 52500,
-      "battery": "84 kWh · NMC",
+      "battery": "84 kWh",
+      "batteryType": "NMC",
       "power": "229 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -88,7 +90,8 @@ const carsData = [
       "name": "GT-Line RWD 84 kWh",
       "price": "58.050 €",
       "priceValue": 58050,
-      "battery": "84 kWh · NMC",
+      "battery": "84 kWh",
+      "batteryType": "NMC",
       "power": "229 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -96,7 +99,8 @@ const carsData = [
       "name": "GT-Line AWD 84 kWh",
       "price": "62.075 €",
       "priceValue": 62075,
-      "battery": "84 kWh · NMC",
+      "battery": "84 kWh",
+      "batteryType": "NMC",
       "power": "325 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -104,7 +108,8 @@ const carsData = [
       "name": "GT AWD 84 kWh",
       "price": "71.090 €",
       "priceValue": 71090,
-      "battery": "84 kWh · NMC",
+      "battery": "84 kWh",
+      "batteryType": "NMC",
       "power": "650 CV",
       "range": "Autonomía WLTP variable según configuración"
     }
@@ -222,7 +227,8 @@ const carsData = [
       "name": "Air RWD 76,1 kWh · 7 plazas",
       "price": "66.475 €",
       "priceValue": 66475,
-      "battery": "76,1 kWh · NMC",
+      "battery": "76,1 kWh",
+      "batteryType": "NMC",
       "power": "218 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -230,7 +236,8 @@ const carsData = [
       "name": "Earth RWD 99,8 kWh · 7 plazas",
       "price": "74.475 €",
       "priceValue": 74475,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "204 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -238,7 +245,8 @@ const carsData = [
       "name": "Earth AWD 99,8 kWh · 7 plazas",
       "price": "77.475 €",
       "priceValue": 77475,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -246,7 +254,8 @@ const carsData = [
       "name": "GT-Line AWD 99,8 kWh · 7 plazas",
       "price": "86.545 €",
       "priceValue": 86545,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -254,7 +263,8 @@ const carsData = [
       "name": "GT-Line AWD 99,8 kWh · 6 plazas",
       "price": "87.645 €",
       "priceValue": 87645,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -262,7 +272,8 @@ const carsData = [
       "name": "GT AWD 99,8 kWh · 7 plazas",
       "price": "94.505 €",
       "priceValue": 94505,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "509 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -270,7 +281,8 @@ const carsData = [
       "name": "GT AWD 99,8 kWh · 6 plazas",
       "price": "95.605 €",
       "priceValue": 95605,
-      "battery": "99,8 kWh · NMC",
+      "battery": "99,8 kWh",
+      "batteryType": "NMC",
       "power": "509 CV",
       "range": "Autonomía WLTP variable según configuración"
     }
