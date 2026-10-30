@@ -67,11 +67,15 @@ input[type=range]{
     letter-spacing:-1px;
     white-space:nowrap;
     color:var(--electric-ink)}
-.site-brand img{
+.brand-icon{
+    display:block;
+    flex-shrink:0;
     width:42px;
     height:42px;
-    border-radius:10px;
-    object-fit:cover}
+    background:var(--electric-blue);
+    -webkit-mask:url('../img/electricos-logo.png') center / 190% no-repeat;
+    mask:url('../img/electricos-logo.png') center / 190% no-repeat;
+}
 .brand-suffix{
     color:var(--electric-blue)}
 .header-links{
@@ -677,7 +681,7 @@ body[data-catalogue-view=ranking] .sort-control{
 .site-brand{
     font-size:21px;
     gap:8px}
-.site-brand img{
+.brand-icon{
     width:36px;
     height:36px}
 .site-header .header-links a:not(:first-child){
