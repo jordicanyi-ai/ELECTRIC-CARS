@@ -190,7 +190,7 @@ const carsData = [
       "group": "Nissan Motor Corporation",
       "relation": "Fabricante japonés",
       "logo": "img/brands/nissan-dark.svg",
-      "note": "Marca japonesa fundada en 1933. El Nissan LEAF fue uno de los primeros coches eléctricos de gran difusión mundial, lanzado en 2010. Su tercera generación adopta una carrocería crossover y se fabrica en Sunderland, Reino Unido."
+      "note": "Fabricante japonés fundado en 1933, con sede en Yokohama. Nissan forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica, innovación y fabricación de automóviles para mercados internacionales."
     },
     "brandUrl": "https://www.nissan.es/vehiculos/nuevos-vehiculos/leaf.html",
     "sources": [
@@ -2309,7 +2309,7 @@ const carsData = [
       "logo": "img/brands/nissan-dark.svg",
       "group": "Nissan",
       "relation": "Alianza Renault–Nissan–Mitsubishi",
-      "note": "Marca japonesa. El Micra eléctrico comparte plataforma AmpR Small con el Renault 5 y se fabrica en Douai, Francia."
+      "note": "Fabricante japonés fundado en 1933, con sede en Yokohama. Nissan forma parte de la Alianza Renault–Nissan–Mitsubishi y cuenta con una larga trayectoria en movilidad eléctrica, innovación y fabricación de automóviles para mercados internacionales."
     },
     "brandUrl": "https://micra.nissan.es/",
     "dataStatus": {
