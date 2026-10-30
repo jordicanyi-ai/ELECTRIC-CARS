@@ -1,5 +1,137 @@
-const carsData = [
-{"id":38,"brand":"Leapmotor","model":"B05","type":"Compacto","launchYear":2026,"priceMin":27400,"priceMax":31400,"priceText":"27.400–31.400 €","rangeText":"401–482 km","minRangeVal":401,"maxRangeVal":482,"batteryText":"56,2–67,1 kWh","batteryType":"LFP","powerText":"218 CV","trunk":345,"frunkText":"No confirmado","seats":5,"acceleration":"6,6–7,5 s","dimensions":"4,43 × 1,88 × 1,52 m","charging":"156–174 kW CC · 30–80 % en 16–18 min","description":"Compacto eléctrico de cinco plazas con carrocería de inspiración coupé, puertas sin marco y propulsión trasera. Dos versiones de 218 CV con baterías LFP de 56,2 y 67,1 kWh, pantalla central de 14,6 pulgadas y maletero de 345 litros.","highlights":["401–482 km WLTP","Carga rápida del 30 al 80 % en 16–18 minutos","218 CV y propulsión trasera","Pantalla central de 14,6 pulgadas y puertas sin marco"],"considerations":["345 litros de maletero","El acabado Design añade techo panorámico y más equipamiento","El precio de tarifa puede diferir de promociones comerciales y ofertas de concesionarios"],"idealFor":["Uso diario","Carretera","Quien busca un compacto eléctrico equipado"],"priceInfo":{"includesVat":true,"includesAid":false,"note":"PVP de tarifa sin promociones, financiación ni ayudas públicas: 27.400–31.400 €, según Carwow España. Otras fuentes publican tarifas diferentes; comprobar antes de cerrar la ficha."},"chargingInfo":{"dcMax":"156 / 174 kW","acMax":"11 kW","fastChargeText":"30–80 % en 16 / 18 min","connector":"CCS2","v2l":null},"warranty":{"vehicle":"4 años / 120.000 km","battery":"8 años / 160.000 km","capacity":"No confirmada","source":"https://www.carwow.es/leapmotor/b05/caracteristicas-tecnicas"},"trims":[{"name":"Life Pro","price":"27.400 €","priceValue":27400,"battery":"56,2 kWh","batteryType":"LFP","power":"218 CV","range":"401 km WLTP","rangeValue":401,"accel":"7,5 s","charging":"156 kW CC · 30–80 % en 16 min"},{"name":"Design ProMax","price":"31.400 €","priceValue":31400,"battery":"67,1 kWh","batteryType":"LFP","power":"218 CV","range":"482 km WLTP","rangeValue":482,"accel":"6,6 s","charging":"174 kW CC · 30–80 % en 18 min"}],"colors":[{"name":"Amarillo Relámpago","hex":"#E8C527"},{"name":"Azul Noche Estrellada","hex":"#253F64"},{"name":"Gris Brisa","hex":"#90959A"},{"name":"Negro Metálico","hex":"#1B1C20"},{"name":"Plata Estelar","hex":"#C3C8CC"}],"images":["img/cars/leapmotor-b05/leapmotor-b05_01.webp","img/cars/leapmotor-b05/leapmotor-b05_02.webp","img/cars/leapmotor-b05/leapmotor-b05_03.webp","img/cars/leapmotor-b05/leapmotor-b05_04.webp","img/cars/leapmotor-b05/leapmotor-b05_05.webp","img/cars/leapmotor-b05/leapmotor-b05_06.webp","img/cars/leapmotor-b05/leapmotor-b05_07.webp","img/cars/leapmotor-b05/leapmotor-b05_08.webp"],"videos":[],"brandInfo":{"logo":"img/brands/leapmotor.png","group":"Leapmotor International / Stellantis","relation":"Distribución europea con Stellantis","note":"Marca china de vehículos eléctricos distribuida en Europa por Leapmotor International, empresa conjunta con Stellantis."},"brandUrl":"https://www.leapmotor.net/es-es/modelos/b05","sources":["https://www.leapmotor.net/es-es/modelos/b05","https://www.carwow.es/leapmotor/b05","https://www.carwow.es/leapmotor/b05/caracteristicas-tecnicas"],"dataStatus":{"status":"Ficha preparada; pendiente de fotografías y verificación final de precios","checkedAt":"30/10/2026"}},
+const carsData = [{
+  "id": 38,
+  "brand": "Leapmotor",
+  "model": "B05",
+  "type": "Compacto",
+  "launchYear": 2026,
+  "priceMin": 26900,
+  "priceMax": 30900,
+  "priceText": "26.900–30.900 €",
+  "rangeText": "401–482 km",
+  "minRangeVal": 401,
+  "maxRangeVal": 482,
+  "batteryText": "56,2–67,1 kWh",
+  "batteryType": "LFP",
+  "powerText": "218 CV",
+  "trunk": 345,
+  "frunkText": "No especificado",
+  "seats": 5,
+  "acceleration": "6,6–7,5 s",
+  "dimensions": "4,43 × 1,88 × 1,52 m",
+  "charging": "156–174 kW CC · 30–80 % en 16–18 min",
+  "description": "Compacto eléctrico de cinco plazas con carrocería de inspiración coupé, puertas sin marco y propulsión trasera. Dos versiones de 218 CV con baterías LFP de 56,2 y 67,1 kWh, pantalla central de 14,6 pulgadas y maletero de 345 litros.",
+  "highlights": [
+    "401–482 km WLTP",
+    "Carga rápida del 30 al 80 % en 16–18 minutos",
+    "218 CV y propulsión trasera",
+    "Pantalla central de 14,6 pulgadas y puertas sin marco"
+  ],
+  "considerations": [
+    "345 litros de maletero",
+    "El acabado Design añade techo panorámico y más equipamiento",
+    "El precio de tarifa puede diferir de promociones comerciales y ofertas de concesionarios"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Carretera",
+    "Quien busca un compacto eléctrico equipado"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de tarifa 06/2026, IVA incluido, sin ayudas, promociones ni financiación, según km77. El precio anunciado por Leapmotor incluye descuentos y ayudas y no es comparable con esta tarifa."
+  },
+  "chargingInfo": {
+    "dcMax": "156 / 174 kW",
+    "acMax": "11 kW",
+    "fastChargeText": "30–80 % en 16 / 18 min",
+    "connector": "CCS2",
+    "v2l": null
+  },
+  "warranty": {
+    "vehicle": "4 años (límite de kilometraje por confirmar)",
+    "battery": "8 años / 160.000 km",
+    "capacity": "No publicada; consultar condiciones oficiales",
+    "source": "https://www.leapmotor.net/es-es/modelos/b05"
+  },
+  "trims": [
+    {
+      "name": "Life Pro",
+      "price": "26.900 €",
+      "priceValue": 26900,
+      "battery": "56,2 kWh",
+      "batteryType": "LFP",
+      "power": "218 CV",
+      "range": "401 km WLTP",
+      "rangeValue": 401,
+      "accel": "7,5 s",
+      "charging": "156 kW CC · 30–80 % en 16 min"
+    },
+    {
+      "name": "Design ProMax",
+      "price": "30.900 €",
+      "priceValue": 30900,
+      "battery": "67,1 kWh",
+      "batteryType": "LFP",
+      "power": "218 CV",
+      "range": "482 km WLTP",
+      "rangeValue": 482,
+      "accel": "6,6 s",
+      "charging": "174 kW CC · 30–80 % en 18 min"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Amarillo Relámpago",
+      "hex": "#E8C527"
+    },
+    {
+      "name": "Azul Noche Estrellada",
+      "hex": "#253F64"
+    },
+    {
+      "name": "Gris Brisa",
+      "hex": "#90959A"
+    },
+    {
+      "name": "Negro Metálico",
+      "hex": "#1B1C20"
+    },
+    {
+      "name": "Plata Estelar",
+      "hex": "#C3C8CC"
+    }
+  ],
+  "images": [
+    "img/cars/leapmotor-b05/leapmotor-b05_01.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_02.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_03.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_04.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_05.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_06.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_07.webp",
+    "img/cars/leapmotor-b05/leapmotor-b05_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/leapmotor.png",
+    "group": "Leapmotor International / Stellantis",
+    "relation": "Distribución europea con Stellantis",
+    "note": "Marca china de vehículos eléctricos distribuida en Europa por Leapmotor International, empresa conjunta con Stellantis."
+  },
+  "brandUrl": "https://www.leapmotor.net/es-es/modelos/b05",
+  "sources": [
+    "https://www.leapmotor.net/es-es/modelos/b05",
+    "https://www.carwow.es/leapmotor/b05",
+    "https://www.carwow.es/leapmotor/b05/caracteristicas-tecnicas",
+    "https://www.km77.com/coches/leapmotor/b05/2026/estandar/estandar/b05-bev-562-kwh-lifepro/datos",
+    "https://www.km77.com/coches/leapmotor/b05/2026/estandar/estandar/b05-bev-671-kwh-promax/datos"
+  ],
+  "dataStatus": {
+    "status": "Revisado; condiciones de garantía por confirmar",
+    "checkedAt": "30/10/2026"
+  }
+},
 {
   "type": "Crossover",
   "batteryType": "NMC",
