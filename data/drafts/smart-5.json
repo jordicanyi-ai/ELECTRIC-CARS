@@ -1,0 +1,129 @@
+{
+  "brand": "smart",
+  "type": "SUV",
+  "seats": 5,
+  "launchYear": 2025,
+  "id": 42,
+  "model": "#5",
+  "priceMin": 54360,
+  "priceMax": 64870,
+  "priceText": "54.360 - 64.870 €",
+  "rangeText": "465 - 590 km",
+  "minRangeVal": 465,
+  "maxRangeVal": 590,
+  "batteryText": "76 - 100 kWh",
+  "batteryType": "LFP / NMC",
+  "powerText": "340 - 646 CV",
+  "trunk": 630,
+  "frunkText": "47 - 72 L según versión",
+  "acceleration": "3,8 - 6,9 s",
+  "dimensions": "4,70 × 1,92 × 1,71 m",
+  "charging": "Hasta 400 kW CC; 10-80 % en 18 min (100 kWh)",
+  "description": "El smart #5 es un SUV eléctrico familiar de 4,70 metros con cinco plazas y un maletero de 630 litros. Según la versión ofrece entre 465 y 590 km de autonomía WLTP y un maletero delantero de 47 a 72 litros. Su plataforma de 800 V permite cargas rápidas, mientras que el BRABUS de tracción total alcanza 646 CV y acelera de 0 a 100 km/h en 3,8 segundos. Destaca por el espacio interior y la tecnología, aunque su tamaño y precio lo alejan del smart urbano original.",
+  "highlights": [
+    "Maletero de 630 litros",
+    "Autonomía de 465 a 590 km WLTP",
+    "Carga rápida de 800 V en versiones de 100 kWh",
+    "BRABUS con 646 CV y tracción total"
+  ],
+  "considerations": [
+    "SUV grande, no es un urbano pequeño",
+    "El precio y la autonomía dependen del acabado",
+    "La versión BRABUS tiene mayor consumo"
+  ],
+  "idealFor": [
+    "Familias",
+    "Viajes",
+    "Uso mixto"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de referencia en España sin ayudas ni financiación. Los importes publicados pueden variar según versión y ofertas."
+  },
+  "chargingInfo": {
+    "dcMax": "Hasta 400 kW",
+    "acMax": "22 kW (versiones de 100 kWh)",
+    "fastChargeText": "10-80 % en 18 min (batería de 100 kWh)",
+    "connector": "CCS2"
+  },
+  "trims": [
+    {
+      "name": "Pro",
+      "price": "Consultar PVP vigente",
+      "battery": "76 kWh",
+      "power": "340 CV",
+      "range": "465 km WLTP",
+      "rangeValue": 465
+    },
+    {
+      "name": "Pro+",
+      "price": "54.360 €",
+      "priceValue": 54360,
+      "battery": "100 kWh",
+      "power": "363 CV",
+      "range": "590 km WLTP",
+      "rangeValue": 590,
+      "accel": "6,5 s"
+    },
+    {
+      "name": "Premium",
+      "price": "58.860 €",
+      "priceValue": 58860,
+      "battery": "100 kWh",
+      "power": "363 CV",
+      "range": "590 km WLTP",
+      "rangeValue": 590,
+      "accel": "6,5 s"
+    },
+    {
+      "name": "Premium AWD",
+      "price": "61.360 €",
+      "priceValue": 61360,
+      "battery": "100 kWh",
+      "power": "588 CV",
+      "range": "540 km WLTP",
+      "rangeValue": 540,
+      "accel": "4,9 s"
+    },
+    {
+      "name": "BRABUS",
+      "price": "64.870 €",
+      "priceValue": 64870,
+      "battery": "100 kWh",
+      "power": "646 CV",
+      "range": "540 km WLTP",
+      "rangeValue": 540,
+      "accel": "3,8 s"
+    }
+  ],
+  "warranty": {
+    "vehicle": "3 años",
+    "battery": "8 años / 200.000 km",
+    "capacity": "70 %",
+    "source": "https://es.smart.com/es/models/hashtag-five/specifications/"
+  },
+  "colors": [],
+  "images": [],
+  "videos": [
+    {
+      "title": "smart #5 - pruebas y vídeos",
+      "url": "https://www.youtube.com/results?search_query=smart+5+BRABUS+prueba"
+    }
+  ],
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta",
+    "note": "smart es una marca desarrollada por Mercedes-Benz y Geely."
+  },
+  "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
+  "dataStatus": {
+    "status": "Borrador pendiente de fotografías oficiales y revisión de colores",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://es.smart.com/es/models/hashtag-five/specifications/",
+    "https://www.carwow.es/smart/smart-5",
+    "https://media.smart.com/es-ES/assets/categories/4619/"
+  ]
+}
