@@ -1,0 +1,63 @@
+{
+  "id": 43,
+  "brand": "smart",
+  "model": "#2",
+  "type": "Urbano",
+  "launchYear": 2027,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio no anunciado",
+  "rangeText": "Pendiente de homologación",
+  "minRangeVal": 0,
+  "maxRangeVal": 0,
+  "batteryText": "No anunciado",
+  "powerText": "No anunciado",
+  "trunk": null,
+  "frunkText": "Sin confirmar",
+  "seats": 2,
+  "acceleration": "No anunciada",
+  "dimensions": "Ultracompacto de dos plazas; medidas definitivas pendientes",
+  "charging": "Pendiente de confirmación",
+  "description": "El smart #2 recupera el concepto del pequeño fortwo en formato totalmente eléctrico. Es un biplaza pensado para circular y aparcar con facilidad en ciudad. smart ha confirmado su desarrollo y su llegada comercial prevista para 2027, pero el precio y los datos técnicos definitivos siguen pendientes de publicación. No debe confundirse con el smart EQ fortwo, cuya producción terminó en 2024.",
+  "highlights": [
+    "Biplaza urbano eléctrico",
+    "Sucesor conceptual del fortwo",
+    "Tamaño ultracompacto"
+  ],
+  "considerations": [
+    "Todavía no está a la venta",
+    "Precio, autonomía y batería pendientes de confirmación"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Desplazamientos cortos"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio oficial todavía no anunciado; no se muestra estimación."
+  },
+  "trims": [],
+  "colors": [],
+  "images": [],
+  "videos": [
+    {
+      "title": "smart #2 - novedades",
+      "url": "https://www.youtube.com/results?search_query=smart+2+electric+2026"
+    }
+  ],
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta"
+  },
+  "brandUrl": "https://es.smart.com/es/models/",
+  "upcoming": true,
+  "dataStatus": {
+    "status": "Próximo lanzamiento; pendiente de datos oficiales y fotos",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://es.smart.com/es/about-us/legacy-cars-fortwo/",
+    "https://es.smart.com/es/models/"
+  ]
+}
