@@ -139,8 +139,8 @@ let currentImageIndexes = {};
             chips.innerHTML = selected.map(car => `
                 <div class="compare-car-chip shrink-0 inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-xl pl-2 pr-1.5 py-1.5">
                     <img src="${car.images?.[0] || ''}" alt="" class="w-8 h-8 rounded-lg object-cover bg-slate-700">
-                    <span class="text-[10px] sm:text-xs font-bold text-white truncate">${car.brand} ${car.model.toLocaleUpperCase('es-ES')}</span>
-                    <button onclick="removeFromCompare(${car.id},event)" class="w-6 h-6 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 shrink-0" aria-label="Quitar ${car.brand} ${car.model.toLocaleUpperCase('es-ES')}">
+                    <span class="text-[10px] sm:text-xs font-bold text-white truncate">${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}</span>
+                    <button onclick="removeFromCompare(${car.id},event)" class="w-6 h-6 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 shrink-0" aria-label="Quitar ${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>`).join('');
@@ -293,10 +293,10 @@ let currentImageIndexes = {};
                             ${selections.map(({car,value}) => `
                                 <div class="border-b border-l border-slate-200 p-3 sm:p-4 bg-white">
                                     <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-100">
-                                        <img src="${car.images?.[0] || ''}" alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}" class="w-full h-full object-cover">
+                                        <img src="${car.images?.[0] || ''}" alt="${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}" class="w-full h-full object-cover">
                                         <button onclick="removeFromCompare(${car.id},event)" class="absolute top-2 right-2 w-7 h-7 bg-black/60 text-white rounded-full"><i class="fa-solid fa-xmark text-xs"></i></button>
                                     </div>
-                                    <div class="mt-3"><div class="text-[9px] text-blue-600 font-extrabold uppercase tracking-wider">${car.brand}</div><div class="font-black text-sm leading-tight mt-0.5">${car.model.toLocaleUpperCase('es-ES')}</div></div>
+                                    <div class="mt-3"><div class="text-[9px] text-blue-600 font-extrabold uppercase tracking-wider">${car.brand.toLocaleUpperCase('es-ES')}</div><div class="font-black text-sm leading-tight mt-0.5">${car.model.toLocaleUpperCase('es-ES')}</div></div>
                                     <select id="compare-version-${car.id}" data-selected="${value}" onchange="updateCompareVersion(${car.id},this.value)" class="w-full mt-3 bg-slate-50 border border-slate-200 rounded-lg px-2 py-2 text-[10px] font-bold focus:outline-none focus:border-blue-500">${compareSelectOptions(car,value)}</select>
                                 </div>`).join('')}
                             ${rows.map(([label,key,icon]) => `
@@ -405,7 +405,7 @@ let currentImageIndexes = {};
                 if (index === 0 || rankMetric(car) !== rankMetric(cars[index - 1])) position = index + 1;
                 if (currentImageIndexes[car.id] === undefined) currentImageIndexes[car.id] = 0;
                 const selected = compareCars.has(car.id);
-                const name = `${car.brand} ${car.model}`;
+                const name = `${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}`;
                 const priceText = car.priceMin == null ? car.priceText : car.priceText.replace(/€/g, '').trim().replace(/\s*[-–]\s*/g, '–').replace(/\s+/g, ' ') + ' €';
                 const rangeText = car.rangeText.replace(/\s*WLTP/gi, '').replace(/\s*[-–]\s*/g, '–');
                 const trunk = car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
@@ -419,8 +419,8 @@ let currentImageIndexes = {};
                         ${car.images.length > 1 ? `<button type="button" class="car-arrow car-arrow-prev" onclick="changeSlide(${car.id},-1,event)" aria-label="Foto anterior de ${name}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeSlide(${car.id},1,event)" aria-label="Foto siguiente de ${name}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button><div id="dots-${car.id}" class="car-dots" aria-hidden="true">${car.images.map((_,i) => `<span class="${i === currentImageIndexes[car.id] ? 'current' : ''}"></span>`).join('')}</div>` : ''}
                     </div>
                     <div class="car-content">
-                        <div class="car-brand">${car.brand}</div>
-                        <h2 class="car-title"><button type="button" onclick="openCarModal(${car.id})">${car.model}</button></h2>
+                        <div class="car-brand">${car.brand.toLocaleUpperCase('es-ES')}</div>
+                        <h2 class="car-title"><button type="button" onclick="openCarModal(${car.id})">${car.model.toLocaleUpperCase('es-ES')}</button></h2>
                         <div class="car-primary-specs">
                             <div><i class="fa-solid fa-tag" aria-hidden="true"></i><strong>${priceText}</strong><small>Precio sin ayudas</small></div>
                             <div><i class="fa-solid fa-road" aria-hidden="true"></i><strong>${rangeText}</strong><small>Autonomía WLTP</small></div>
@@ -531,10 +531,10 @@ let currentImageIndexes = {};
             const galleryHtml = car.images.map((img, index) => `
 
                 <button type="button" onclick="openLightbox(${car.id}, ${index})"
-                    aria-label="Ampliar fotografía ${index + 1} de ${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
+                    aria-label="Ampliar fotografía ${index + 1} de ${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}"
                     class="block w-full text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group">
                     <img src="${img}"
-                        alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
+                        alt="${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </button>
 
@@ -667,7 +667,7 @@ let currentImageIndexes = {};
 
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '<a href="#" onclick="event.preventDefault(); openCarModal(9);" aria-label="Ver Tesla Model Y" class="flex w-full h-full items-center justify-center">' : ''}
                                 <img src="${car.brandInfo.logo}"
-                                    alt="Logo ${car.brand}"
+                                    alt="Logo ${car.brand.toLocaleUpperCase('es-ES')}"
                                     class="${car.brand === 'Peugeot' ? 'w-28 h-28 max-w-none max-h-none shrink-0' : 'max-w-full max-h-full'} object-contain">
                                 ${car.brand === 'Tesla' && car.model === 'Model 3' ? '</a>' : ''}
 
@@ -682,7 +682,7 @@ let currentImageIndexes = {};
                                 </span>
 
                                 <div class="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                                    <h3 class="text-xl font-black">${car.brand}</h3>
+                                    <h3 class="text-xl font-black">${car.brand.toLocaleUpperCase('es-ES')}</h3>
                                     <span class="text-xs sm:text-sm font-medium text-slate-500">${brandLabels[car.brand] || car.brandInfo.group || ''}</span>
                                 </div>
 
@@ -711,7 +711,7 @@ let currentImageIndexes = {};
                     <div class="h-[285px] sm:h-[355px] detail-hero-image">
 
                         <img src="${car.images[0]}"
-                            alt="${car.brand} ${car.model.toLocaleUpperCase('es-ES')}"
+                            alt="${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}"
                             class="w-full h-full object-cover">
 
                     </div>
@@ -738,7 +738,7 @@ let currentImageIndexes = {};
                             <div>
 
                                 <div class="text-sm text-slate-300 font-semibold">
-                                    ${car.brand}
+                                    ${car.brand.toLocaleUpperCase('es-ES')}
                                 </div>
 
                                 <h2 class="text-4xl sm:text-5xl font-black">
@@ -1238,8 +1238,8 @@ let currentImageIndexes = {};
             img.style.transform = 'scale(1)';
             img.style.transformOrigin = 'center center';
             img.src = lightboxCar.images[lightboxIndex];
-            img.alt = `${lightboxCar.brand} ${lightboxCar.model}, foto ${lightboxIndex + 1}`;
-            document.getElementById('lightbox-title').textContent = `${lightboxCar.brand} ${lightboxCar.model}`;
+            img.alt = `${lightboxCar.brand.toLocaleUpperCase('es-ES')} ${lightboxCar.model.toLocaleUpperCase('es-ES')}, foto ${lightboxIndex + 1}`;
+            document.getElementById('lightbox-title').textContent = `${lightboxCar.brand.toLocaleUpperCase('es-ES')} ${lightboxCar.model.toLocaleUpperCase('es-ES')}`;
             document.getElementById('lightbox-count').textContent = `${lightboxIndex + 1} / ${lightboxCar.images.length}`;
             document.getElementById('lightbox-zoom').innerHTML = '<i class="fa-solid fa-magnifying-glass-plus"></i> Zoom';
         }
@@ -1334,7 +1334,7 @@ let currentImageIndexes = {};
                 sedan: 'berlina', sedans: 'berlina', berline: 'berlina', berlinas: 'berlina', berlines: 'berlina',
                 furgonetes: 'furgoneta', furgonetas: 'furgoneta', monovolumen: 'furgoneta', monovolumenes: 'furgoneta', monovolum: 'furgoneta', monovolums: 'furgoneta'
             };
-            const name = normalizeCarSearch(`${car.brand} ${car.model}`);
+            const name = normalizeCarSearch(`${car.brand.toLocaleUpperCase('es-ES')} ${car.model.toLocaleUpperCase('es-ES')}`);
             const categories = carBodyCategories(car.type);
             return normalizeCarSearch(query).split(/\s+/).filter(Boolean).every(token => {
                 const category = aliases[token] || (['utilitario', 'compacto', 'suv', 'berlina', 'furgoneta'].includes(token) ? token : null);

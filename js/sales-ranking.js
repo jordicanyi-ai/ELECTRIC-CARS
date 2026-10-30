@@ -45,7 +45,7 @@
         }
         period.textContent = item.label || '';
         box.innerHTML = item.models.slice(0, 5).map((row, i) => {
-            const name = escapeHtml(row.model);
+            const name = escapeHtml(row.model.toLocaleUpperCase('es-ES'));
             const catalogCar = findCatalogCar(row.model);
             const units = Number(row.units);
             if (!Number.isFinite(units) || units < 0) return '';
