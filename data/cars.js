@@ -1,5 +1,109 @@
 const carsData = [
 {
+  "id": 40,
+  "brand": "Škoda",
+  "model": "Epiq",
+  "type": "SUV",
+  "launchYear": 2026,
+  "priceMin": 26925,
+  "priceMax": 36101,
+  "priceText": "26.925 - 36.101 €",
+  "rangeText": "324 - 437 km",
+  "minRangeVal": 324,
+  "maxRangeVal": 437,
+  "batteryText": "38,5 - 55 kWh",
+  "batteryType": "LFP / NMC",
+  "powerText": "135 - 210 CV",
+  "trunk": 475,
+  "frunkText": "Opcional con Pack Premium (según acabado)",
+  "seats": 5,
+  "acceleration": "7,1 - 9,8 s",
+  "dimensions": "4,17 m de largo",
+  "charging": "88 - 105 kW CC",
+  "description": "SUV eléctrico urbano del segmento B fabricado en Navarra, con 475 litros de maletero y dos baterías disponibles.",
+  "highlights": [
+    "475 litros de maletero",
+    "324 - 437 km WLTP combinados",
+    "Fabricado en Navarra",
+    "Batería LFP en versión de acceso"
+  ],
+  "considerations": [
+    "Los precios publicitarios de acceso incluyen ayudas, CAE y financiación",
+    "El frunk depende del equipamiento opcional",
+    "La autonomía varía según batería y acabado"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Uso diario",
+    "Familias pequeñas"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios al contado con IVA y sin ayudas, CAE ni financiación, calculados a partir de los precios al contado de Škoda (25.924,60 € y 35.101,19 €, que incluyen 1.000 € de CAE). Valores redondeados; confirmar en concesionario. Acabados intermedios sin PVP verificado."
+  },
+  "chargingInfo": {
+    "dcMax": "88 / 105 kW",
+    "fastChargeText": "10-80 %: 23 - 24 min",
+    "connector": "CCS2"
+  },
+  "trims": [
+    {
+      "name": "Epiq 40 Urban · 135 CV",
+      "price": "26.925 €",
+      "priceValue": 26925,
+      "battery": "38,5 kWh (37 kWh útiles)",
+      "batteryType": "LFP",
+      "power": "135 CV",
+      "range": "324 km WLTP",
+      "rangeValue": 324,
+      "accel": "9,8 s"
+    },
+    {
+      "name": "Epiq 55 First Edition · 210 CV",
+      "price": "36.101 €",
+      "priceValue": 36101,
+      "battery": "55 kWh (52 kWh útiles)",
+      "batteryType": "NMC",
+      "power": "210 CV",
+      "range": "437 km WLTP",
+      "rangeValue": 437,
+      "accel": "7,1 s"
+    }
+  ],
+  "images": [
+    "img/cars/skoda-epiq/skoda-epiq_01.webp",
+    "img/cars/skoda-epiq/skoda-epiq_02.webp",
+    "img/cars/skoda-epiq/skoda-epiq_03.webp",
+    "img/cars/skoda-epiq/skoda-epiq_04.webp",
+    "img/cars/skoda-epiq/skoda-epiq_05.webp",
+    "img/cars/skoda-epiq/skoda-epiq_06.webp",
+    "img/cars/skoda-epiq/skoda-epiq_07.webp",
+    "img/cars/skoda-epiq/skoda-epiq_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "Škoda Epiq - vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=Skoda+Epiq+2026+prueba",
+      "thumb": "img/cars/skoda-epiq/skoda-epiq_01.webp"
+    }
+  ],
+  "brandUrl": "https://www.skoda.es/modelos/epiq/epiq",
+  "dataStatus": {
+    "status": "Precios al contado de versiones verificadas; resto pendiente",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://www.skoda.es/modelos/epiq/epiq"
+  ],
+  "brandInfo": {
+    "logo": "img/brands/skoda.png",
+    "group": "Grupo Volkswagen",
+    "relation": "Marca del grupo",
+    "note": "Škoda es una marca checa del Grupo Volkswagen. El Epiq se fabrica en Navarra, España."
+  }
+},
+{
   "id": 39,
   "brand": "Renault",
   "model": "4 E-Tech eléctrico",
