@@ -222,7 +222,7 @@ const carsData = [
       "name": "Air RWD 76,1 kWh · 7 plazas",
       "price": "66.475 €",
       "priceValue": 66475,
-      "battery": "76,1 kWh",
+      "battery": "76,1 kWh · NMC",
       "power": "218 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -230,7 +230,7 @@ const carsData = [
       "name": "Earth RWD 99,8 kWh · 7 plazas",
       "price": "74.475 €",
       "priceValue": 74475,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "204 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -238,7 +238,7 @@ const carsData = [
       "name": "Earth AWD 99,8 kWh · 7 plazas",
       "price": "77.475 €",
       "priceValue": 77475,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -246,7 +246,7 @@ const carsData = [
       "name": "GT-Line AWD 99,8 kWh · 7 plazas",
       "price": "86.545 €",
       "priceValue": 86545,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -254,7 +254,7 @@ const carsData = [
       "name": "GT-Line AWD 99,8 kWh · 6 plazas",
       "price": "87.645 €",
       "priceValue": 87645,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "385 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -262,7 +262,7 @@ const carsData = [
       "name": "GT AWD 99,8 kWh · 7 plazas",
       "price": "94.505 €",
       "priceValue": 94505,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "509 CV",
       "range": "Autonomía WLTP variable según configuración"
     },
@@ -270,7 +270,7 @@ const carsData = [
       "name": "GT AWD 99,8 kWh · 6 plazas",
       "price": "95.605 €",
       "priceValue": 95605,
-      "battery": "99,8 kWh",
+      "battery": "99,8 kWh · NMC",
       "power": "509 CV",
       "range": "Autonomía WLTP variable según configuración"
     }
