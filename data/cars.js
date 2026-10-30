@@ -1,5 +1,129 @@
 const carsData = [
 {
+  "id": 28,
+  "brand": "Dacia",
+  "model": "Spring (2027)",
+  "type": "Utilitario / Compacto",
+  "launchYear": 2027,
+  "upcoming": true,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio pendiente",
+  "rangeText": "250 km WLTP",
+  "minRangeVal": 250,
+  "maxRangeVal": 250,
+  "batteryText": "27,5 kWh útiles",
+  "batteryType": "LFP",
+  "powerText": "60 kW (82 CV)",
+  "trunk": 337,
+  "frunkText": "18 L opcional",
+  "seats": 4,
+  "acceleration": "12,1 s",
+  "dimensions": "3,85 × 1,74 × 1,49 m",
+  "charging": "CC opcional: 50 kW · 15–80 % en 28 min",
+  "description": "Segunda generación del Dacia Spring, completamente nueva y fabricada en Novo Mesto (Eslovenia) sobre la plataforma RGEV small. Ofrece cuatro plazas, batería LFP de 27,5 kWh útiles y 250 km WLTP. Primeras entregas previstas a principios de 2027; tarifas españolas definitivas pendientes.",
+  "highlights": [
+    "337 litros de maletero; frunk opcional de 18 litros",
+    "Carrocería más ancha y banqueta trasera abatible 50/50",
+    "Consumo anunciado de 12,7 kWh/100 km WLTP"
+  ],
+  "considerations": [
+    "Autonomía orientada a ciudad y desplazamientos diarios",
+    "La carga rápida y la función V2L requieren equipamiento opcional",
+    "Dacia anuncia la gama por debajo de 20.000 € sin ayudas; no es una tarifa definitiva",
+    "Garantías específicas de la nueva generación pendientes de publicación en España"
+  ],
+  "idealFor": [
+    "Ciudad y trayectos diarios",
+    "Conductores con posibilidad de cargar en casa"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio definitivo para España pendiente. Dacia anuncia toda la gama por debajo de 20.000 € sin ayudas públicas."
+  },
+  "chargingInfo": {
+    "dcMax": "50 kW (opcional)",
+    "acMax": "6,6 kW de serie / 11 kW opcional",
+    "fastChargeText": "15–80 % en 28 min con carga CC opcional",
+    "connector": "Tipo 2 / CCS2 con carga rápida opcional",
+    "v2l": "Opcional con Pack Charge"
+  },
+  "warranty": {
+    "vehicle": "Pendiente de condiciones para España",
+    "battery": "Pendiente de condiciones de la nueva generación",
+    "capacity": "Pendiente de confirmar"
+  },
+  "trims": [
+    {
+      "name": "Expression",
+      "price": "Precio pendiente",
+      "priceValue": null,
+      "battery": "27,5 kWh útiles",
+      "batteryType": "LFP",
+      "power": "60 kW (82 CV)",
+      "range": "250 km WLTP",
+      "rangeValue": 250,
+      "accel": "12,1 s"
+    },
+    {
+      "name": "Journey",
+      "price": "Precio pendiente",
+      "priceValue": null,
+      "battery": "27,5 kWh útiles",
+      "batteryType": "LFP",
+      "power": "60 kW (82 CV)",
+      "range": "250 km WLTP",
+      "rangeValue": 250,
+      "accel": "12,1 s"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Agave",
+      "hex": "#8AABAC"
+    },
+    {
+      "name": "Schist Grey",
+      "hex": "#777C7C"
+    },
+    {
+      "name": "Diamond Black",
+      "hex": "#202322"
+    },
+    {
+      "name": "Glacier White",
+      "hex": "#F1F2EF"
+    }
+  ],
+  "images": [
+    "img/cars/dacia-spring/dacia-spring_01.webp",
+    "img/cars/dacia-spring/dacia-spring_02.webp",
+    "img/cars/dacia-spring/dacia-spring_03.webp",
+    "img/cars/dacia-spring/dacia-spring_04.webp",
+    "img/cars/dacia-spring/dacia-spring_05.webp",
+    "img/cars/dacia-spring/dacia-spring_06.webp",
+    "img/cars/dacia-spring/dacia-spring_07.webp",
+    "img/cars/dacia-spring/dacia-spring_08.webp"
+  ],
+  "videos": [],
+  "brandInfo": {
+    "logo": "img/brands/dacia.svg",
+    "group": "Renault Group",
+    "relation": "Marca del grupo",
+    "note": "Marca de origen rumano perteneciente a Renault Group. Esta generación del Spring se fabrica en Eslovenia."
+  },
+  "brandUrl": "https://www.dacia.es",
+  "dataStatus": {
+    "status": "Próximo lanzamiento · datos anunciados por Dacia",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://prensa.dacia.es/nuevo-dacia-spring-100-electrico-100-dacia/?lang=spa",
+    "https://www.km77.com/coches/dacia/spring/2027/estandar/informacion/listado-completo"
+  ]
+},
+{
   "id": 26,
   "brand": "Kia",
   "model": "EV4 Hatchback",

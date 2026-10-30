@@ -406,7 +406,7 @@ let currentImageIndexes = {};
                 if (currentImageIndexes[car.id] === undefined) currentImageIndexes[car.id] = 0;
                 const selected = compareCars.has(car.id);
                 const name = `${car.brand} ${car.model}`;
-                const priceText = car.priceText.replace(/€/g, '').trim().replace(/\s*[-–]\s*/g, '–').replace(/\s+/g, ' ') + ' €';
+                const priceText = car.priceMin == null ? car.priceText : car.priceText.replace(/€/g, '').trim().replace(/\s*[-–]\s*/g, '–').replace(/\s+/g, ' ') + ' €';
                 const rangeText = car.rangeText.replace(/\s*WLTP/gi, '').replace(/\s*[-–]\s*/g, '–');
                 const trunk = car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
                     ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
@@ -415,7 +415,7 @@ let currentImageIndexes = {};
                     <div class="car-photo">
                         <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
                         ${isRanking ? `<span class="car-position">#${position} · ${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : 'Maletero'}</span>` : `<span class="car-type">${car.type}</span>`}
-                        ${car.discontinued ? '<span class="car-discontinued">Descatalogado</span>' : ''}
+                        ${car.discontinued ? '<span class="car-discontinued">Descatalogado</span>' : car.upcoming ? '<span class="car-discontinued" style="background:#2456cd">Próximamente · 2027</span>' : ''}
                         ${car.images.length > 1 ? `<button type="button" class="car-arrow car-arrow-prev" onclick="changeSlide(${car.id},-1,event)" aria-label="Foto anterior de ${name}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeSlide(${car.id},1,event)" aria-label="Foto siguiente de ${name}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button><div id="dots-${car.id}" class="car-dots" aria-hidden="true">${car.images.map((_,i) => `<span class="${i === currentImageIndexes[car.id] ? 'current' : ''}"></span>`).join('')}</div>` : ''}
                     </div>
                     <div class="car-content">
@@ -427,7 +427,7 @@ let currentImageIndexes = {};
                         </div>
                         <div class="car-secondary-specs">
                             <div><i class="fa-solid fa-bolt" aria-hidden="true"></i><strong>${car.powerText}</strong><small>Potencia</small></div>
-                            <div><i class="fa-solid fa-suitcase" aria-hidden="true"></i><strong>${trunk}</strong><small>Maletero${trunk.includes('+') ? ' + frunk' : ''}</small></div>
+                            <div><i class="fa-solid fa-suitcase" aria-hidden="true"></i><strong>${trunk}</strong><small>Maletero${trunk.includes('+') ? ' + frunk' : ''}${/opcional/i.test(car.frunkText || '') ? ' opcional' : ''}</small></div>
                             <div><i class="fa-solid fa-user-group" aria-hidden="true"></i><strong>${car.seats}</strong><small>Plazas</small></div>
                         </div>
                         <div class="car-actions"><button type="button" class="car-open" onclick="openCarModal(${car.id})">Ver ficha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="car-compare${selected ? ' compare-selected' : ''}" onclick="toggleCompare(${car.id},event)" aria-pressed="${selected}" aria-label="${selected ? 'Quitar' : 'Añadir'} ${name} ${selected ? 'del' : 'al'} comparador"><i class="fa-solid ${selected ? 'fa-check' : 'fa-code-compare'}" aria-hidden="true"></i> ${selected ? 'Añadido' : 'Comparar'}</button></div>
@@ -644,7 +644,8 @@ let currentImageIndexes = {};
                 'Volvo': 'Suecia · Grupo Geely (China)',
                 'Tesla': 'Estados Unidos · Tesla',
                 'XPENG': 'China · XPENG',
-                'Peugeot': 'Francia · Stellantis'
+                'Peugeot': 'Francia · Stellantis',
+                'Dacia': 'Rumanía · Renault Group (Francia)'
             };
 
             const brandInfoHtml = car.brandInfo ? `
@@ -739,7 +740,7 @@ let currentImageIndexes = {};
                                 <h2 class="text-4xl sm:text-5xl font-black">
                                     ${car.model.toLocaleUpperCase('es-ES')}
                                 </h2>
-                                ${car.launchYear ? `<p class="detail-launch">Lanzamiento · ${car.launchYear}</p>` : ''}
+                                ${car.launchYear ? `<p class="detail-launch">${car.upcoming ? 'Próximamente ·' : 'Lanzamiento ·'} ${car.launchYear}</p>` : ''}
 
                             </div>
 
@@ -1340,6 +1341,7 @@ let currentImageIndexes = {};
             const minTrunk = Number(document.getElementById('trunk-filter').value);
             const filtered = carsData.filter(car => {
                 if (!Array.isArray(car.images) || !car.images.length) return false;
+                if (document.body.dataset.catalogueView === 'ranking' && car.upcoming) return false;
 
                 const searchMatch =
                     normalizeCarSearch(`${car.brand} ${car.model}`).includes(search);
@@ -1354,7 +1356,7 @@ let currentImageIndexes = {};
                     car.maxRangeVal >= range;
 
                 const priceMatch =
-                    car.priceMin <= price;
+                    car.priceMin == null ? price >= 90000 : car.priceMin <= price;
 
                 return searchMatch &&
                     bodyMatch &&
@@ -1379,7 +1381,7 @@ let currentImageIndexes = {};
                 if (sort === 'brandAsc')
                     return `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, 'es');
 
-                return a.priceMin - b.priceMin;
+                return (a.priceMin ?? Infinity) - (b.priceMin ?? Infinity);
             });
 
             renderCars(filtered);
