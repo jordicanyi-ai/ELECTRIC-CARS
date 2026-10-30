@@ -687,7 +687,7 @@ let currentImageIndexes = {};
                                 </div>
 
                                 <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
-                                    ${car.brandInfo.note}
+                                    ${car.brandInfo.note || ''}
                                 </p>
 
                             </div>
