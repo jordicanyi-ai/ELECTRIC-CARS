@@ -328,7 +328,8 @@ body[data-catalogue-view=ranking] .sort-control{
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:22px;
-    align-items:start}
+    align-items:stretch;
+    grid-auto-rows:1fr}
 .car-card{
     background:#fff;
     border:1px solid #ccd9e3;
@@ -819,4 +820,35 @@ body[data-catalogue-view=ranking] .sort-control{
 .vehicle-detail .detail-identity > span {
     background: #edf3ff;
     color: var(--electric-blue);
+}
+
+/* Advertising uses the same grid row height and frame as the vehicle cards. */
+.car-card {
+    display: flex;
+    flex-direction: column;
+}
+.car-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.car-actions {
+    margin-top: auto;
+    padding-top: 15px;
+}
+.car-secondary-specs {
+    margin-bottom: 0;
+}
+.advertising-card {
+    position: relative;
+    min-height: 0;
+    background: #0b1322;
+}
+.advertising-image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

@@ -379,11 +379,11 @@ let currentImageIndexes = {};
             return `
                 <a href="mailto:electricos.eu@gmail.com?subject=Publicidad%20en%20electricos.eu"
                    aria-label="Solicitar información publicitaria en electricos.eu"
-                   class="block self-start rounded-[1.7rem] overflow-hidden border border-blue-200 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer bg-slate-950">
+                   class="car-card advertising-card">
                     <img src="img/ads/publicidad.webp"
                          alt="Tu marca, en el lugar adecuado. Solicita información publicitaria en electricos.eu"
                          loading="lazy"
-                         class="block w-full h-auto"
+                         class="advertising-image"
                          onerror="this.alt='Imagen publicitaria no disponible';">
                 </a>`;
         }
