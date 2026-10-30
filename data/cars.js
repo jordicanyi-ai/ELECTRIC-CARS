@@ -17,7 +17,7 @@ const carsData = [
   "trunk": 420,
   "frunkText": "No disponible",
   "seats": 5,
-  "acceleration": "9,2 s (120 CV); consultar versión de 150 CV",
+  "acceleration": "8,2 - 9,2 s",
   "dimensions": "4,14 × 1,80 × 1,55 m",
   "charging": "80 / 100 kW CC · 15-80 % en 30 min",
   "description": "El Renault 4 E-Tech eléctrico recupera el espíritu práctico del R4 con cinco puertas, 420 litros de maletero, diseño crossover y dos baterías de 40 y 52 kWh. La gama ofrece techo fijo o versiones plein sud con techo de lona corredizo.",
@@ -76,7 +76,8 @@ const carsData = [
       "batteryType": "NMC",
       "power": "150 CV",
       "range": "409 km WLTP",
-      "rangeValue": 409
+      "rangeValue": 409,
+      "accel": "8,2 s"
     },
     {
       "name": "techno · autonomía confort",
@@ -86,7 +87,8 @@ const carsData = [
       "batteryType": "NMC",
       "power": "150 CV",
       "range": "409 km WLTP",
-      "rangeValue": 409
+      "rangeValue": 409,
+      "accel": "8,2 s"
     },
     {
       "name": "iconic · autonomía confort",
@@ -96,7 +98,8 @@ const carsData = [
       "batteryType": "NMC",
       "power": "150 CV",
       "range": "409 km WLTP",
-      "rangeValue": 409
+      "rangeValue": 409,
+      "accel": "8,2 s"
     },
     {
       "name": "techno plein sud · autonomía confort",
@@ -106,7 +109,8 @@ const carsData = [
       "batteryType": "NMC",
       "power": "150 CV",
       "range": "392 km WLTP",
-      "rangeValue": 392
+      "rangeValue": 392,
+      "accel": "8,2 s"
     },
     {
       "name": "iconic plein sud · autonomía confort",
@@ -116,7 +120,8 @@ const carsData = [
       "batteryType": "NMC",
       "power": "150 CV",
       "range": "392 km WLTP (referencia Plein Sud)",
-      "rangeValue": 392
+      "rangeValue": 392,
+      "accel": "8,2 s"
     }
   ],
   "colors": [
