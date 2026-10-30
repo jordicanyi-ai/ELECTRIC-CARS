@@ -50,7 +50,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precios españoles sin ayudas pendientes de comprobación. No se muestra un importe no verificado."
+      "note": "PVP sin oferta con IVA, sin ayudas ni financiación. Fuentes: Carwow España y tienda smart. Los acabados sin PVP comprobado se muestran sin precio."
     },
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
@@ -59,14 +59,14 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "Revisado; precios por acabado pendientes de confirmación",
+      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
       "checkedAt": "30/10/2026"
     },
     "id": 44,
     "model": "#1",
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Consultar precio al contado",
+    "priceMin": 37900,
+    "priceMax": 54420,
+    "priceText": "37.900 - 54.420 €",
     "rangeText": "310 - 440 km",
     "minRangeVal": 310,
     "maxRangeVal": 440,
@@ -98,7 +98,9 @@ const carsData = [
         "power": "272 CV",
         "range": "310 km WLTP",
         "rangeValue": 310,
-        "accel": "6,7 s"
+        "accel": "6,7 s",
+        "priceValue": 37900,
+        "price": "37.900 €"
       },
       {
         "name": "Pro",
@@ -107,7 +109,9 @@ const carsData = [
         "power": "272 CV",
         "range": "310 km WLTP",
         "rangeValue": 310,
-        "accel": "6,7 s"
+        "accel": "6,7 s",
+        "priceValue": 40400,
+        "price": "40.400 €"
       },
       {
         "name": "Pro+",
@@ -116,7 +120,9 @@ const carsData = [
         "power": "272 CV",
         "range": "420 km WLTP",
         "rangeValue": 420,
-        "accel": "6,7 s"
+        "accel": "6,7 s",
+        "priceValue": 45400,
+        "price": "45.400 €"
       },
       {
         "name": "Pro+ Black Collection",
@@ -125,7 +131,9 @@ const carsData = [
         "power": "272 CV",
         "range": "420 km WLTP",
         "rangeValue": 420,
-        "accel": "6,7 s"
+        "accel": "6,7 s",
+        "priceValue": 46000,
+        "price": "46.000 €"
       },
       {
         "name": "Premium",
@@ -134,7 +142,9 @@ const carsData = [
         "power": "272 CV",
         "range": "440 km WLTP",
         "rangeValue": 440,
-        "accel": "6,7 s"
+        "accel": "6,7 s",
+        "priceValue": 48910,
+        "price": "48.910 €"
       },
       {
         "name": "BRABUS",
@@ -143,12 +153,17 @@ const carsData = [
         "power": "428 CV",
         "range": "400 km WLTP",
         "rangeValue": 400,
-        "accel": "3,9 s"
+        "accel": "3,9 s",
+        "priceValue": 54420,
+        "price": "54.420 €"
       }
     ],
     "brandUrl": "https://es.smart.com/es/models/hashtag-one/",
     "sources": [
-      "https://es.smart.com/es/models/hashtag-one/"
+      "https://es.smart.com/es/models/hashtag-one/",
+      "https://www.carwow.es/smart/smart-1",
+      "https://es.smart.com/es/products/",
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
     ],
     "images": [
       "img/cars/smart-1/smart-1_01.webp",
@@ -213,7 +228,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precio oficial todavía no anunciado; no se muestra estimación."
+      "note": "smart todavía no ha publicado un PVP español verificable."
     },
     "trims": [
       {
@@ -308,7 +323,7 @@ const carsData = [
     "brandUrl": "https://es.smart.com/es/models/",
     "upcoming": true,
     "dataStatus": {
-      "status": "Presentado; homologación y precio español pendientes",
+      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
       "checkedAt": "30/10/2026"
     },
     "sources": [
@@ -379,7 +394,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precios españoles sin ayudas pendientes de comprobación. No se muestra un importe no verificado."
+      "note": "PVP sin oferta con IVA, sin ayudas ni financiación. Fuentes: Carwow España y tienda smart. Los acabados sin PVP comprobado se muestran sin precio."
     },
     "brandInfo": {
       "group": "Mercedes-Benz / Geely",
@@ -388,14 +403,14 @@ const carsData = [
       "logo": "img/brands/smart.svg"
     },
     "dataStatus": {
-      "status": "Revisado; precios por acabado pendientes de confirmación",
+      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
       "checkedAt": "30/10/2026"
     },
     "id": 45,
     "model": "#3",
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Consultar precio al contado",
+    "priceMin": 42610,
+    "priceMax": 55970,
+    "priceText": "42.610 - 55.970 €",
     "rangeText": "325 - 455 km",
     "minRangeVal": 325,
     "maxRangeVal": 455,
@@ -427,7 +442,9 @@ const carsData = [
         "power": "272 CV",
         "range": "325 km WLTP",
         "rangeValue": 325,
-        "accel": "5,8 s"
+        "accel": "5,8 s",
+        "priceValue": 42610,
+        "price": "42.610 €"
       },
       {
         "name": "Pro+",
@@ -436,7 +453,9 @@ const carsData = [
         "power": "272 CV",
         "range": "435 km WLTP",
         "rangeValue": 435,
-        "accel": "5,8 s"
+        "accel": "5,8 s",
+        "priceValue": 47610,
+        "price": "47.610 €"
       },
       {
         "name": "Pro+ Black Collection",
@@ -445,7 +464,9 @@ const carsData = [
         "power": "272 CV",
         "range": "435 km WLTP",
         "rangeValue": 435,
-        "accel": "5,8 s"
+        "accel": "5,8 s",
+        "priceValue": 48210,
+        "price": "48.210 €"
       },
       {
         "name": "Premium",
@@ -454,7 +475,9 @@ const carsData = [
         "power": "272 CV",
         "range": "455 km WLTP",
         "rangeValue": 455,
-        "accel": "5,8 s"
+        "accel": "5,8 s",
+        "priceValue": 50460,
+        "price": "50.460 €"
       },
       {
         "name": "BRABUS",
@@ -463,12 +486,17 @@ const carsData = [
         "power": "428 CV",
         "range": "415 km WLTP",
         "rangeValue": 415,
-        "accel": "3,7 s"
+        "accel": "3,7 s",
+        "priceValue": 55970,
+        "price": "55.970 €"
       }
     ],
     "brandUrl": "https://es.smart.com/es/models/hashtag-three/",
     "sources": [
-      "https://es.smart.com/es/models/hashtag-three/"
+      "https://es.smart.com/es/models/hashtag-three/",
+      "https://www.carwow.es/smart/smart-3",
+      "https://es.smart.com/es/products/",
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
     ],
     "images": [
       "img/cars/smart-3/smart-3_01.webp",
@@ -535,7 +563,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "PVP de referencia en España sin ayudas ni financiación. Los importes publicados pueden variar según versión y ofertas."
+      "note": "PVP sin oferta con IVA, sin ayudas ni financiación. Fuentes: Carwow España y tienda smart. Los acabados sin PVP comprobado se muestran sin precio."
     },
     "chargingInfo": {
       "dcMax": "400 kW",
@@ -560,7 +588,9 @@ const carsData = [
         "power": "363 CV",
         "range": "590 km WLTP",
         "rangeValue": 590,
-        "accel": "6,5 s"
+        "accel": "6,5 s",
+        "priceValue": 54360,
+        "price": "54.360 €"
       },
       {
         "name": "Pro+ Black Collection",
@@ -569,7 +599,9 @@ const carsData = [
         "power": "363 CV",
         "range": "590 km WLTP",
         "rangeValue": 590,
-        "accel": "6,5 s"
+        "accel": "6,5 s",
+        "priceValue": 54960,
+        "price": "54.960 €"
       },
       {
         "name": "Premium",
@@ -578,7 +610,9 @@ const carsData = [
         "power": "363 CV",
         "range": "590 km WLTP",
         "rangeValue": 590,
-        "accel": "6,5 s"
+        "accel": "6,5 s",
+        "priceValue": 58860,
+        "price": "58.860 €"
       },
       {
         "name": "Premium AWD",
@@ -587,7 +621,9 @@ const carsData = [
         "power": "588 CV",
         "range": "540 km WLTP",
         "rangeValue": 540,
-        "accel": "4,9 s"
+        "accel": "4,9 s",
+        "priceValue": 61360,
+        "price": "61.360 €"
       },
       {
         "name": "BRABUS",
@@ -596,7 +632,9 @@ const carsData = [
         "power": "646 CV",
         "range": "540 km WLTP",
         "rangeValue": 540,
-        "accel": "3,8 s"
+        "accel": "3,8 s",
+        "priceValue": 64870,
+        "price": "64.870 €"
       }
     ],
     "warranty": {
@@ -664,13 +702,15 @@ const carsData = [
     },
     "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
     "dataStatus": {
-      "status": "Revisado; precios por acabado pendientes de confirmación",
+      "status": "PVP sin descuentos revisados; colores sujetos a configuración por acabado",
       "checkedAt": "30/10/2026"
     },
     "sources": [
       "https://es.smart.com/es/models/hashtag-five/specifications/",
       "https://www.carwow.es/smart/smart-5",
-      "https://media.smart.com/es-ES/assets/categories/4619/"
+      "https://media.smart.com/es-ES/assets/categories/4619/",
+      "https://es.smart.com/es/products/",
+      "https://media.smart.com/es-ES/268753-la-gama-smart-actualiza-su-gama-con-una-version-con-traccion-integral-awd-en-su-modelo-smart-5-premium-anade-la-version-black-collecti/"
     ]
   },
   {
