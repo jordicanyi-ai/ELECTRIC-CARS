@@ -1,5 +1,446 @@
 const carsData = [
 {
+  "brand": "smart",
+  "launchYear": 2023,
+  "type": "SUV",
+  "seats": 5,
+  "frunkText": "15 L",
+  "batteryType": "NMC",
+  "charging": "150 kW CC · 10-80 % en unos 30 min",
+  "warranty": {
+    "vehicle": "3 años (consultar condiciones)",
+    "battery": "8 años / 200.000 km",
+    "capacity": "70 %"
+  },
+  "colors": [],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios españoles sin ayudas pendientes de comprobación. No se muestra un importe no verificado."
+  },
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta",
+    "note": "smart es una empresa conjunta de Mercedes-Benz y Geely.",
+    "logo": "img/brands/smart.svg"
+  },
+  "dataStatus": {
+    "status": "Fotografías enlazadas; tarifas y colores por verificar",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 44,
+  "model": "#1",
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Consultar precio al contado",
+  "rangeText": "310 - 440 km",
+  "minRangeVal": 310,
+  "maxRangeVal": 440,
+  "batteryText": "49 - 66 kWh",
+  "powerText": "272 - 428 CV",
+  "trunk": 323,
+  "acceleration": "3,9 - 6,7 s",
+  "dimensions": "4,27 × 1,82 × 1,64 m",
+  "description": "El smart #1 es un SUV eléctrico compacto de 4,27 metros, cinco plazas y 323 litros de maletero. La gama combina versiones de tracción trasera con la BRABUS de tracción total, que desarrolla 428 CV y acelera de 0 a 100 km/h en 3,9 segundos. Su autonomía WLTP depende de la batería y el acabado. Destaca por el equipamiento digital y la facilidad de uso diario, aunque su maletero es discreto para un SUV.",
+  "highlights": [
+    "SUV compacto de cinco plazas",
+    "Versión BRABUS de 428 CV",
+    "Interior digital y maniobrabilidad urbana"
+  ],
+  "considerations": [
+    "Maletero de 323 litros",
+    "Autonomía y precio variables según versión"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Parejas",
+    "Uso mixto"
+  ],
+  "trims": [
+    {
+      "name": "Pro",
+      "battery": "49 kWh",
+      "power": "272 CV",
+      "range": "310 km WLTP",
+      "rangeValue": 310
+    },
+    {
+      "name": "Pro+",
+      "battery": "66 kWh",
+      "power": "272 CV",
+      "range": "420 km WLTP",
+      "rangeValue": 420
+    },
+    {
+      "name": "Premium",
+      "battery": "66 kWh",
+      "power": "272 CV",
+      "range": "440 km WLTP",
+      "rangeValue": 440
+    },
+    {
+      "name": "Pulse",
+      "battery": "66 kWh",
+      "power": "428 CV",
+      "range": "400 km WLTP",
+      "rangeValue": 400
+    },
+    {
+      "name": "BRABUS",
+      "battery": "66 kWh",
+      "power": "428 CV",
+      "range": "400 km WLTP",
+      "rangeValue": 400,
+      "accel": "3,9 s"
+    }
+  ],
+  "brandUrl": "https://es.smart.com/es/models/hashtag-one/",
+  "sources": [
+    "https://es.smart.com/es/models/hashtag-one/"
+  ],
+  "images": [
+    "img/cars/smart-1/smart-1_01.webp",
+    "img/cars/smart-1/smart-1_02.webp",
+    "img/cars/smart-1/smart-1_03.webp",
+    "img/cars/smart-1/smart-1_04.webp",
+    "img/cars/smart-1/smart-1_05.webp",
+    "img/cars/smart-1/smart-1_06.webp",
+    "img/cars/smart-1/smart-1_07.webp",
+    "img/cars/smart-1/smart-1_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "smart #1 - vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=smart+%231+prueba",
+      "thumb": "img/cars/smart-1/smart-1_01.webp"
+    }
+  ]
+},
+{
+  "id": 43,
+  "brand": "smart",
+  "model": "#2",
+  "type": "Urbano",
+  "launchYear": 2027,
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Precio no anunciado",
+  "rangeText": "Pendiente de homologación",
+  "minRangeVal": 0,
+  "maxRangeVal": 0,
+  "batteryText": "No anunciado",
+  "powerText": "No anunciado",
+  "trunk": null,
+  "frunkText": "Sin confirmar",
+  "seats": 2,
+  "acceleration": "No anunciada",
+  "dimensions": "Ultracompacto de dos plazas; medidas definitivas pendientes",
+  "charging": "Pendiente de confirmación",
+  "description": "El smart #2 recupera el concepto del pequeño fortwo en formato totalmente eléctrico. Es un biplaza pensado para circular y aparcar con facilidad en ciudad. smart ha confirmado su desarrollo y su llegada comercial prevista para 2027, pero el precio y los datos técnicos definitivos siguen pendientes de publicación. No debe confundirse con el smart EQ fortwo, cuya producción terminó en 2024.",
+  "highlights": [
+    "Biplaza urbano eléctrico",
+    "Sucesor conceptual del fortwo",
+    "Tamaño ultracompacto"
+  ],
+  "considerations": [
+    "Todavía no está a la venta",
+    "Precio, autonomía y batería pendientes de confirmación"
+  ],
+  "idealFor": [
+    "Ciudad",
+    "Desplazamientos cortos"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precio oficial todavía no anunciado; no se muestra estimación."
+  },
+  "trims": [],
+  "colors": [],
+  "images": [
+    "img/cars/smart-2/smart-2_01.webp",
+    "img/cars/smart-2/smart-2_02.webp",
+    "img/cars/smart-2/smart-2_03.webp",
+    "img/cars/smart-2/smart-2_04.webp",
+    "img/cars/smart-2/smart-2_05.webp",
+    "img/cars/smart-2/smart-2_06.webp",
+    "img/cars/smart-2/smart-2_07.webp",
+    "img/cars/smart-2/smart-2_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "smart #2 - novedades",
+      "url": "https://www.youtube.com/results?search_query=smart+2+electric+2026",
+      "thumb": "img/cars/smart-2/smart-2_01.webp"
+    }
+  ],
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta",
+    "logo": "img/brands/smart.svg"
+  },
+  "brandUrl": "https://es.smart.com/es/models/",
+  "upcoming": true,
+  "dataStatus": {
+    "status": "Próximamente: datos técnicos y precios aún no anunciados",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://es.smart.com/es/about-us/legacy-cars-fortwo/",
+    "https://es.smart.com/es/models/"
+  ]
+},
+{
+  "brand": "smart",
+  "launchYear": 2023,
+  "type": "SUV",
+  "seats": 5,
+  "frunkText": "15 L",
+  "batteryType": "NMC",
+  "charging": "150 kW CC · 10-80 % en unos 30 min",
+  "warranty": {
+    "vehicle": "3 años (consultar condiciones)",
+    "battery": "8 años / 200.000 km",
+    "capacity": "70 %"
+  },
+  "colors": [],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Precios españoles sin ayudas pendientes de comprobación. No se muestra un importe no verificado."
+  },
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta",
+    "note": "smart es una empresa conjunta de Mercedes-Benz y Geely.",
+    "logo": "img/brands/smart.svg"
+  },
+  "dataStatus": {
+    "status": "Fotografías enlazadas; tarifas y colores por verificar",
+    "checkedAt": "30/10/2026"
+  },
+  "id": 45,
+  "model": "#3",
+  "priceMin": null,
+  "priceMax": null,
+  "priceText": "Consultar precio al contado",
+  "rangeText": "325 - 455 km",
+  "minRangeVal": 325,
+  "maxRangeVal": 455,
+  "batteryText": "49 - 66 kWh",
+  "powerText": "272 - 428 CV",
+  "trunk": 370,
+  "acceleration": "3,7 - 6,7 s",
+  "dimensions": "4,40 × 1,84 × 1,56 m",
+  "description": "El smart #3 es un SUV eléctrico de estilo coupé, con 4,40 metros de longitud, cinco plazas y un maletero de 370 litros. Comparte tecnología con el #1, pero ofrece una carrocería más baja y aerodinámica. Hay versiones de tracción trasera y una BRABUS de 428 CV con tracción total, capaz de acelerar de 0 a 100 km/h en 3,7 segundos. Su autonomía WLTP alcanza los 455 km según versión.",
+  "highlights": [
+    "Diseño SUV coupé",
+    "Hasta 455 km WLTP",
+    "BRABUS de 428 CV"
+  ],
+  "considerations": [
+    "Línea de techo más baja",
+    "Precio de cada acabado por verificar"
+  ],
+  "idealFor": [
+    "Uso diario",
+    "Viajes",
+    "Conducción dinámica"
+  ],
+  "trims": [
+    {
+      "name": "Pro",
+      "battery": "49 kWh",
+      "power": "272 CV",
+      "range": "325 km WLTP",
+      "rangeValue": 325
+    },
+    {
+      "name": "Pro+",
+      "battery": "66 kWh",
+      "power": "272 CV",
+      "range": "435 km WLTP",
+      "rangeValue": 435
+    },
+    {
+      "name": "Premium",
+      "battery": "66 kWh",
+      "power": "272 CV",
+      "range": "455 km WLTP",
+      "rangeValue": 455
+    },
+    {
+      "name": "BRABUS",
+      "battery": "66 kWh",
+      "power": "428 CV",
+      "range": "415 km WLTP",
+      "rangeValue": 415,
+      "accel": "3,7 s"
+    }
+  ],
+  "brandUrl": "https://es.smart.com/es/models/hashtag-three/",
+  "sources": [
+    "https://es.smart.com/es/models/hashtag-three/"
+  ],
+  "images": [
+    "img/cars/smart-3/smart-3_01.webp",
+    "img/cars/smart-3/smart-3_02.webp",
+    "img/cars/smart-3/smart-3_03.webp",
+    "img/cars/smart-3/smart-3_04.webp",
+    "img/cars/smart-3/smart-3_05.webp",
+    "img/cars/smart-3/smart-3_06.webp",
+    "img/cars/smart-3/smart-3_07.webp",
+    "img/cars/smart-3/smart-3_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "smart #3 - vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=smart+%233+prueba",
+      "thumb": "img/cars/smart-3/smart-3_01.webp"
+    }
+  ]
+},
+{
+  "brand": "smart",
+  "type": "SUV",
+  "seats": 5,
+  "launchYear": 2025,
+  "id": 42,
+  "model": "#5",
+  "priceMin": 54360,
+  "priceMax": 64870,
+  "priceText": "54.360 - 64.870 €",
+  "rangeText": "465 - 590 km",
+  "minRangeVal": 465,
+  "maxRangeVal": 590,
+  "batteryText": "76 - 100 kWh",
+  "batteryType": "LFP / NMC",
+  "powerText": "340 - 646 CV",
+  "trunk": 630,
+  "frunkText": "47 - 72 L según versión",
+  "acceleration": "3,8 - 6,9 s",
+  "dimensions": "4,70 × 1,92 × 1,71 m",
+  "charging": "Hasta 400 kW CC; 10-80 % en 18 min (100 kWh)",
+  "description": "El smart #5 es un SUV eléctrico familiar de 4,70 metros con cinco plazas y un maletero de 630 litros. Según la versión ofrece entre 465 y 590 km de autonomía WLTP y un maletero delantero de 47 a 72 litros. Su plataforma de 800 V permite cargas rápidas, mientras que el BRABUS de tracción total alcanza 646 CV y acelera de 0 a 100 km/h en 3,8 segundos. Destaca por el espacio interior y la tecnología, aunque su tamaño y precio lo alejan del smart urbano original.",
+  "highlights": [
+    "Maletero de 630 litros",
+    "Autonomía de 465 a 590 km WLTP",
+    "Carga rápida de 800 V en versiones de 100 kWh",
+    "BRABUS con 646 CV y tracción total"
+  ],
+  "considerations": [
+    "SUV grande, no es un urbano pequeño",
+    "El precio y la autonomía dependen del acabado",
+    "La versión BRABUS tiene mayor consumo"
+  ],
+  "idealFor": [
+    "Familias",
+    "Viajes",
+    "Uso mixto"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "PVP de referencia en España sin ayudas ni financiación. Los importes publicados pueden variar según versión y ofertas."
+  },
+  "chargingInfo": {
+    "dcMax": "Hasta 400 kW",
+    "acMax": "22 kW (versiones de 100 kWh)",
+    "fastChargeText": "10-80 % en 18 min (batería de 100 kWh)",
+    "connector": "CCS2"
+  },
+  "trims": [
+    {
+      "name": "Pro",
+      "price": "Consultar PVP vigente",
+      "battery": "76 kWh",
+      "power": "340 CV",
+      "range": "465 km WLTP",
+      "rangeValue": 465
+    },
+    {
+      "name": "Pro+",
+      "price": "54.360 €",
+      "priceValue": 54360,
+      "battery": "100 kWh",
+      "power": "363 CV",
+      "range": "590 km WLTP",
+      "rangeValue": 590,
+      "accel": "6,5 s"
+    },
+    {
+      "name": "Premium",
+      "price": "58.860 €",
+      "priceValue": 58860,
+      "battery": "100 kWh",
+      "power": "363 CV",
+      "range": "590 km WLTP",
+      "rangeValue": 590,
+      "accel": "6,5 s"
+    },
+    {
+      "name": "Premium AWD",
+      "price": "61.360 €",
+      "priceValue": 61360,
+      "battery": "100 kWh",
+      "power": "588 CV",
+      "range": "540 km WLTP",
+      "rangeValue": 540,
+      "accel": "4,9 s"
+    },
+    {
+      "name": "BRABUS",
+      "price": "64.870 €",
+      "priceValue": 64870,
+      "battery": "100 kWh",
+      "power": "646 CV",
+      "range": "540 km WLTP",
+      "rangeValue": 540,
+      "accel": "3,8 s"
+    }
+  ],
+  "warranty": {
+    "vehicle": "3 años",
+    "battery": "8 años / 200.000 km",
+    "capacity": "70 %",
+    "source": "https://es.smart.com/es/models/hashtag-five/specifications/"
+  },
+  "colors": [],
+  "images": [
+    "img/cars/smart-5/smart-5_01.webp",
+    "img/cars/smart-5/smart-5_02.webp",
+    "img/cars/smart-5/smart-5_03.webp",
+    "img/cars/smart-5/smart-5_04.webp",
+    "img/cars/smart-5/smart-5_05.webp",
+    "img/cars/smart-5/smart-5_06.webp",
+    "img/cars/smart-5/smart-5_07.webp",
+    "img/cars/smart-5/smart-5_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "smart #5 - pruebas y vídeos",
+      "url": "https://www.youtube.com/results?search_query=smart+5+BRABUS+prueba",
+      "thumb": "img/cars/smart-5/smart-5_01.webp"
+    }
+  ],
+  "brandInfo": {
+    "group": "Mercedes-Benz / Geely",
+    "relation": "Empresa conjunta",
+    "note": "smart es una marca desarrollada por Mercedes-Benz y Geely.",
+    "logo": "img/brands/smart.svg"
+  },
+  "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
+  "dataStatus": {
+    "status": "Fotos enlazadas; colores y precios por revisar",
+    "checkedAt": "30/10/2026"
+  },
+  "sources": [
+    "https://es.smart.com/es/models/hashtag-five/specifications/",
+    "https://www.carwow.es/smart/smart-5",
+    "https://media.smart.com/es-ES/assets/categories/4619/"
+  ]
+},
+{
   "id": 41,
   "brand": "MINI",
   "model": "Cooper Electric",
