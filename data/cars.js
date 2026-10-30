@@ -224,12 +224,14 @@ const carsData = [
       "Solo 2,75 metros y dos plazas",
       "290 km WLTP provisionales",
       "Batería LFP de 35,8 kWh",
-      "Carga rápida de 65 kW"
+      "Carga rápida de 65 kW",
+      "Couture Edition: 999 unidades, techo Platinum Gold y emblemas dorados"
     ],
     "considerations": [
       "Autonomía pendiente de homologación",
       "Precio español y maletero no anunciados",
-      "Solo dos plazas"
+      "Solo dos plazas",
+      "Atelier White Matte exclusivo de Couture Edition; los colores de presentación pueden cambiar en la gama comercial"
     ],
     "idealFor": [
       "Ciudad",
@@ -274,7 +276,24 @@ const carsData = [
         "rangeValue": 290
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Rojo Brillante",
+        "hex": "#C8242D"
+      },
+      {
+        "name": "Amarillo Vibrante",
+        "hex": "#EBCB28"
+      },
+      {
+        "name": "Oro Bronce / Champán",
+        "hex": "#BCA17A"
+      },
+      {
+        "name": "Atelier White Matte",
+        "hex": "#E9E7E1"
+      }
+    ],
     "images": [
       "img/cars/smart-2/smart-2_01.webp",
       "img/cars/smart-2/smart-2_02.webp",
@@ -300,7 +319,7 @@ const carsData = [
     "brandUrl": "https://es.smart.com/es/models/",
     "upcoming": true,
     "dataStatus": {
-      "status": "Precios revisados; solo colores confirmados por smart (muestras aproximadas)",
+      "status": "Colores de presentación; disponibilidad comercial pendiente de confirmación",
       "checkedAt": "30/10/2026"
     },
     "sources": [
