@@ -431,9 +431,9 @@ let currentImageIndexes = {};
                 </article>`;
             });
             grid.innerHTML = cardsHtml.reduce((html, card, index) => {
-                if (index % 6 === 0) html += '<div class="catalogue-batch">';
+                if (index % 9 === 0) html += '<div class="catalogue-batch">';
                 html += card;
-                const endOfBatch = (index + 1) % 6 === 0;
+                const endOfBatch = (index + 1) % 9 === 0;
                 if (endOfBatch || index === cardsHtml.length - 1) html += '</div>';
                 if (endOfBatch) html += renderCatalogueAdSenseSlot(index + 1);
                 return html;

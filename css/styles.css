@@ -866,7 +866,7 @@ body[data-catalogue-view=ranking] .sort-control{
     letter-spacing: -1px;
 }
 
-/* Each six-car batch has equal card heights; ads sit on independent thin rows. */
+/* Each nine-car batch has equal card heights; ads sit on independent thin rows. */
 .cars-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
