@@ -94,14 +94,49 @@ const carsData = [
     "checkedAt": "30/10/2026"
   },
   "sources": [
-    "https://www.skoda.es/modelos/epiq/epiq"
+    "https://www.skoda.es/modelos/epiq/epiq",
+    "https://www.skoda.es/servicios-posventa/garantias",
+    "https://www.skoda.es/electricos_hibridos/emobility-faq-baterias",
+    "https://www.carwow.es/skoda/epiq/colores"
   ],
   "brandInfo": {
-    "logo": "img/brands/skoda.png",
+    "logo": "img/brands/skoda.svg",
     "group": "Grupo Volkswagen",
     "relation": "Marca del grupo",
     "note": "Škoda es una marca checa del Grupo Volkswagen. El Epiq se fabrica en Navarra, España."
-  }
+  },
+  "warranty": {
+    "vehicle": "3 años sin límite de km + 1 año adicional (máximo 60.000 km)",
+    "battery": "8 años / 160.000 km",
+    "capacity": "70 % (consultar condiciones de batería)",
+    "source": "https://www.skoda.es/servicios-posventa/garantias"
+  },
+  "colors": [
+    {
+      "name": "Gris Marble",
+      "hex": "#A9ABA7"
+    },
+    {
+      "name": "Blanco Platino",
+      "hex": "#E8E8E1"
+    },
+    {
+      "name": "Negro Mystery",
+      "hex": "#17191B"
+    },
+    {
+      "name": "Plata Pebble",
+      "hex": "#B9BEC0"
+    },
+    {
+      "name": "Rojo Jasper",
+      "hex": "#9B3038"
+    },
+    {
+      "name": "Verde Timiano",
+      "hex": "#6C8066"
+    }
+  ]
 },
 {
   "id": 39,
