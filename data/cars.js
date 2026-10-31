@@ -311,14 +311,14 @@ const carsData = [
       }
     ],
     "images": [
-      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_08.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_01.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_02.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_03.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_04.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_05.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_06.webp",
-      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_07.webp"
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_07.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_08.webp"
     ],
     "brandUrl": "https://www.volkswagen-comerciales.es/es/modelos/id-buzz-cargo.html",
     "sources": [
