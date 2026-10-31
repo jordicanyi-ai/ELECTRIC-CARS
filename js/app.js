@@ -63,7 +63,8 @@ let currentImageIndexes = {};
                 priceAsc: 'Orden por precio de acceso, sin ayudas. Compara versiones equivalentes antes de decidir.',
                 rangeDesc: 'Orden por autonomía máxima WLTP de cada modelo. No equivale a autonomía real en autopista y puede corresponder a la versión más cara.',
                 trunkDesc: 'Orden por capacidad del maletero trasero. No suma el frunk; comprueba el espacio con todas las plazas en uso.',
-                powerDesc: 'Orden por la potencia máxima anunciada en CV de cada modelo. Puede corresponder a una versión superior.'
+                powerDesc: 'Orden por la potencia máxima anunciada en CV de cada modelo. Puede corresponder a una versión superior.',
+                accelerationAsc: 'Orden por el menor tiempo anunciado de 0 a 100 km/h. Puede corresponder a la versión más potente; los modelos sin dato aparecen al final.'
             };
             document.getElementById('ranking-explanation').textContent = explanations[metric] + ' Se muestran los modelos con fotos que cumplen tus filtros; los descatalogados están identificados.';
             filterCars();
@@ -399,11 +400,17 @@ let currentImageIndexes = {};
             return kw.length ? Math.round(Math.max(...kw) * 1.35962) : null;
         }
 
+        function bestAcceleration(car) {
+            const values = String(car.acceleration || '').match(/\d+(?:[.,]\d+)?/g);
+            if (!values) return null;
+            return Math.min(...values.map(value => Number(value.replace(',', '.'))));
+        }
+
         function renderCars(cars) {
             const grid = document.getElementById('cars-grid');
             const isRanking = document.body.dataset.catalogueView === 'ranking';
             const metric = document.getElementById('ranking-metric').value;
-            const rankMetric = car => metric === 'rangeDesc' ? car.maxRangeVal : metric === 'trunkDesc' ? car.trunk : metric === 'powerDesc' ? maxPowerCv(car) : car.priceMin;
+            const rankMetric = car => metric === 'rangeDesc' ? car.maxRangeVal : metric === 'trunkDesc' ? car.trunk : metric === 'powerDesc' ? maxPowerCv(car) : metric === 'accelerationAsc' ? bestAcceleration(car) : car.priceMin;
             document.getElementById('results-count').textContent = `${cars.length} ${cars.length === 1 ? 'coche' : 'coches'}${isRanking ? ' en este ranking' : ''}`;
             if (!cars.length) {
                 grid.innerHTML = `<div class="empty-results"><i class="fa-solid fa-car-side" aria-hidden="true"></i><p>No encontramos coches con estos filtros</p><button type="button" onclick="resetFilters()">Limpiar búsqueda y filtros</button></div>`;
@@ -423,14 +430,14 @@ let currentImageIndexes = {};
                 return `<article class="car-card${car.discontinued ? ' is-discontinued' : ''}">
                     <div class="car-photo">
                         <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
-                        ${isRanking ? `<span class="car-position"><strong class="car-rank-number">#${position}</strong><span class="car-rank-label">${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : metric === 'powerDesc' ? 'Potencia' : 'Maletero'}</span></span>` : `<span class="car-type">${car.type}</span>`}
+                        ${isRanking ? `<span class="car-position"><strong class="car-rank-number">#${position}</strong><span class="car-rank-label">${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : metric === 'powerDesc' ? 'Potencia' : metric === 'accelerationAsc' ? '0–100 km/h' : 'Maletero'}</span></span>` : `<span class="car-type">${car.type}</span>`}
                         ${car.discontinued ? '<span class="car-discontinued">Descatalogado</span>' : car.upcoming ? '<span class="car-discontinued" style="background:#2456cd">Próximamente · 2027</span>' : ''}
                         ${car.images.length > 1 ? `<button type="button" class="car-arrow car-arrow-prev" onclick="changeSlide(${car.id},-1,event)" aria-label="Foto anterior de ${name}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeSlide(${car.id},1,event)" aria-label="Foto siguiente de ${name}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button><div id="dots-${car.id}" class="car-dots" aria-hidden="true">${car.images.map((_,i) => `<span class="${i === currentImageIndexes[car.id] ? 'current' : ''}"></span>`).join('')}</div>` : ''}
                     </div>
                     <div class="car-content">
                         <div class="car-brand">${car.brand.toLocaleUpperCase('es-ES')}</div>
                         <h2 class="car-title"><button type="button" onclick="openCarModal(${car.id})">${car.model.toLocaleUpperCase('es-ES')}</button></h2>
-                        ${isRanking ? `<div class="ranking-featured-value"><span>${metric === 'priceAsc' ? 'PRECIO DESDE' : metric === 'rangeDesc' ? 'AUTONOMÍA MÁXIMA' : metric === 'trunkDesc' ? 'MALETERO' : 'POTENCIA MÁXIMA'}</span><strong>${metric === 'priceAsc' ? (car.priceMin == null ? 'Sin precio' : car.priceMin.toLocaleString('es-ES') + ' €') : metric === 'rangeDesc' ? car.maxRangeVal + ' km' : metric === 'trunkDesc' ? (car.trunk == null ? 'Sin datos' : car.trunk + ' L') : (maxPowerCv(car) == null ? 'Sin datos' : maxPowerCv(car) + ' CV')}</strong></div>` : ''}
+                        ${isRanking ? `<div class="ranking-featured-value"><span>${metric === 'priceAsc' ? 'PRECIO DESDE' : metric === 'rangeDesc' ? 'AUTONOMÍA MÁXIMA' : metric === 'trunkDesc' ? 'MALETERO' : metric === 'powerDesc' ? 'POTENCIA MÁXIMA' : '0–100 KM/H'}</span><strong>${metric === 'priceAsc' ? (car.priceMin == null ? 'Sin precio' : car.priceMin.toLocaleString('es-ES') + ' €') : metric === 'rangeDesc' ? car.maxRangeVal + ' km' : metric === 'trunkDesc' ? (car.trunk == null ? 'Sin datos' : car.trunk + ' L') : (maxPowerCv(car) == null ? 'Sin datos' : maxPowerCv(car) + ' CV') : (bestAcceleration(car) == null ? 'Sin datos' : bestAcceleration(car).toLocaleString('es-ES') + ' s')}</strong></div>` : ''}
                         <div class="car-primary-specs">
                             <div><i class="fa-solid fa-tag" aria-hidden="true"></i><strong>${priceText}</strong><small>Precio sin ayudas</small></div>
                             <div><i class="fa-solid fa-road" aria-hidden="true"></i><strong>${rangeText}</strong><small>Autonomía WLTP</small></div>
@@ -1420,6 +1427,9 @@ let currentImageIndexes = {};
 
                 if (sort === 'powerDesc')
                     return (maxPowerCv(b) ?? -1) - (maxPowerCv(a) ?? -1);
+
+                if (sort === 'accelerationAsc')
+                    return (bestAcceleration(a) ?? Infinity) - (bestAcceleration(b) ?? Infinity);
 
                 if (sort === 'brandAsc')
                     return `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, 'es');
