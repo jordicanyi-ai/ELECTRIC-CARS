@@ -12,12 +12,12 @@ const carsData = [
     "minRangeVal": 415,
     "maxRangeVal": 628,
     "batteryText": "52–79 kWh útiles",
-    "batteryType": "NMC (todas las versiones)",
+    "batteryType": "LFP (50 y 58 kWh) / NMC (79 kWh)",
     "powerText": "170–231 CV",
     "trunk": 385,
     "frunkText": "No disponible",
     "seats": 5,
-    "acceleration": "7,6 s (231 CV)",
+    "acceleration": "7,1–8,6 s (0–100 km/h, según versión)",
     "dimensions": "4,287 × 1,809 × 1,554 m",
     "charging": "CC 105–183 kW según batería",
     "description": "El Volkswagen ID.3 Neo es la renovación de 2026 del compacto eléctrico ID.3. Estrena diseño, interior y sistema de propulsión, con tres baterías NMC de 52, 58 y 79 kWh y versiones de 170, 190 y 231 CV. Tracción trasera.",
@@ -62,20 +62,22 @@ const carsData = [
         "price": "35.800 €",
         "priceValue": 35800,
         "battery": "50 kWh",
-        "batteryType": "NMC",
+        "batteryType": "LFP",
         "power": "170 CV",
         "range": "415 km WLTP",
-        "rangeValue": 415
+        "rangeValue": 415,
+        "accel": "8,6 s"
       },
       {
         "name": "Life 58 kWh",
         "price": "38.750 €",
         "priceValue": 38750,
         "battery": "58 kWh",
-        "batteryType": "NMC",
+        "batteryType": "LFP",
         "power": "190 CV",
         "range": "492 km WLTP",
-        "rangeValue": 492
+        "rangeValue": 492,
+        "accel": "8,0 s"
       },
       {
         "name": "Life 79 kWh",
@@ -85,17 +87,19 @@ const carsData = [
         "batteryType": "NMC",
         "power": "231 CV",
         "range": "628 km WLTP",
-        "rangeValue": 628
+        "rangeValue": 628,
+        "accel": "7,1 s"
       },
       {
         "name": "Style 58 kWh",
         "price": "42.600 €",
         "priceValue": 42600,
         "battery": "58 kWh",
-        "batteryType": "NMC",
+        "batteryType": "LFP",
         "power": "190 CV",
         "range": "492 km WLTP",
-        "rangeValue": 492
+        "rangeValue": 492,
+        "accel": "8,0 s"
       },
       {
         "name": "Style 79 kWh",
@@ -105,7 +109,8 @@ const carsData = [
         "batteryType": "NMC",
         "power": "231 CV",
         "range": "628 km WLTP",
-        "rangeValue": 628
+        "rangeValue": 628,
+        "accel": "7,1 s"
       }
     ],
     "colors": [
