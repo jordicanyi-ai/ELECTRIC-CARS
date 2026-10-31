@@ -1,5 +1,122 @@
 const carsData = [
   {
+    "id": 47,
+    "brand": "Citroën",
+    "model": "ë-Berlingo",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2024,
+    "seats": 7,
+    "priceMin": 37230,
+    "priceMax": 40880,
+    "priceText": "37.230 - 40.880 €",
+    "rangeText": "335 - 343 km",
+    "minRangeVal": 335,
+    "maxRangeVal": 343,
+    "batteryText": "54 kWh (50 kWh útiles aprox.)",
+    "batteryType": "NMC",
+    "powerText": "136 CV",
+    "trunk": 775,
+    "frunkText": "No disponible",
+    "acceleration": "11,2 s",
+    "dimensions": "4,40 - 4,75 × 1,85 × 1,82 m",
+    "charging": "100 kW CC; 0-80 % en unos 30 min",
+    "description": "El Citroën ë-Berlingo de pasajeros es un monovolumen eléctrico familiar disponible en carrocerías M y XL, con hasta siete plazas según configuración. Destaca por las puertas laterales correderas, el espacio interior y su modularidad. Monta un motor de 136 CV y batería de 54 kWh, con autonomías WLTP que varían según versión.",
+    "highlights": [
+      "Carrocerías M y XL y posibilidad de siete plazas",
+      "Puertas correderas y habitáculo versátil",
+      "Hasta 343 km WLTP según homologación",
+      "Carga rápida CC de 100 kW"
+    ],
+    "considerations": [
+      "Las siete plazas dependen de la configuración y longitud elegidas",
+      "La autonomía en autopista puede ser notablemente inferior a la WLTP",
+      "Precios de referencia sin ayudas ni financiación; confirmar tarifa y promociones vigentes"
+    ],
+    "idealFor": [
+      "Familias numerosas",
+      "Transporte de pasajeros",
+      "Uso diario",
+      "Ocio y equipaje"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa orientativos para las versiones M1 de pasajeros, IVA incluido, sin ayudas públicas ni descuentos condicionados. Verificar precio final en configurador y concesionario."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "0-80 % en aproximadamente 30 min",
+      "connector": "CCS2",
+      "v2l": false
+    },
+    "trims": [
+      {
+        "name": "PLUS M",
+        "price": "37.230 €",
+        "priceValue": 37230,
+        "battery": "54 kWh",
+        "power": "100 kW (136 CV)",
+        "range": "343 km WLTP",
+        "rangeValue": 343,
+        "accel": "11,2 s"
+      },
+      {
+        "name": "PLUS XL",
+        "price": "38.230 €",
+        "priceValue": 38230,
+        "battery": "54 kWh",
+        "power": "100 kW (136 CV)",
+        "range": "337 km WLTP",
+        "rangeValue": 337,
+        "accel": "11,2 s"
+      },
+      {
+        "name": "MAX M",
+        "price": "39.880 €",
+        "priceValue": 39880,
+        "battery": "54 kWh",
+        "power": "100 kW (136 CV)",
+        "range": "339 km WLTP",
+        "rangeValue": 339,
+        "accel": "11,2 s"
+      },
+      {
+        "name": "MAX XL",
+        "price": "40.880 €",
+        "priceValue": 40880,
+        "battery": "54 kWh",
+        "power": "100 kW (136 CV)",
+        "range": "335 km WLTP",
+        "rangeValue": 335,
+        "accel": "11,2 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/citroen-eberlingo/citroen-eberlingo_01.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_02.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_03.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_04.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_05.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_06.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_07.webp",
+      "img/cars/citroen-eberlingo/citroen-eberlingo_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Citroën es un fabricante francés de automóviles que forma parte del grupo Stellantis."
+    },
+    "brandUrl": "https://www.citroen.es",
+    "dataStatus": {
+      "status": "Pendiente de verificar fotografías y tarifa",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 46,
     "brand": "Nissan",
     "model": "Leaf",
