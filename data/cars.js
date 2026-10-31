@@ -98,7 +98,46 @@ const carsData = [
     "accel": "10,7 s"
   }
 ],
-  "colors": [],
+  "colors": [
+  {
+    "name": "Clear White",
+    "hex": "#F3F2ED",
+    "border": "#CBD5E1"
+  },
+  {
+    "name": "Snow White Pearl",
+    "hex": "#E9E9E5",
+    "border": "#CBD5E1"
+  },
+  {
+    "name": "Steel Grey",
+    "hex": "#777E83"
+  },
+  {
+    "name": "Aurora Black Pearl",
+    "hex": "#181A1E"
+  },
+  {
+    "name": "Cityscape Green",
+    "hex": "#6C8179"
+  },
+  {
+    "name": "Runway Red",
+    "hex": "#A63C41"
+  },
+  {
+    "name": "Soft Mint",
+    "hex": "#A7C6C1"
+  },
+  {
+    "name": "Lakehouse Grey",
+    "hex": "#8A969C"
+  },
+  {
+    "name": "Frost Blue",
+    "hex": "#9DB9C9"
+  }
+],
     "images": [
       "img/cars/kia-pv5/kia-pv5_01.webp",
       "img/cars/kia-pv5/kia-pv5_02.webp",
@@ -220,7 +259,34 @@ const carsData = [
     "accel": "12,4 s"
   }
 ],
-  "colors": [],
+  "colors": [
+  {
+    "name": "Clear White",
+    "hex": "#F3F2ED",
+    "border": "#CBD5E1"
+  },
+  {
+    "name": "Snow White Pearl",
+    "hex": "#E9E9E5",
+    "border": "#CBD5E1"
+  },
+  {
+    "name": "Steel Grey",
+    "hex": "#777E83"
+  },
+  {
+    "name": "Aurora Black Pearl",
+    "hex": "#181A1E"
+  },
+  {
+    "name": "Cityscape Green",
+    "hex": "#6C8179"
+  },
+  {
+    "name": "Soft Mint",
+    "hex": "#A7C6C1"
+  }
+],
     "images": [
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_01.webp",
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_02.webp",
