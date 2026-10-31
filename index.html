@@ -52,6 +52,10 @@
                 <button type="button" data-quick="30000" onclick="applyQuickFilter('price',30000,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> 30.000 € o menos</button>
                 <button type="button" data-quick="500" onclick="applyQuickFilter('range',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 500 km o más</button>
                 <button type="button" data-quick="7" onclick="applyQuickFilter('seats',7,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 7 plazas</button>
+                <button type="button" data-quick="suv" onclick="applyQuickFilter('body','suv',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car-side" aria-hidden="true"></i> SUV</button>
+                <button type="button" data-quick="utilitario" onclick="applyQuickFilter('body','utilitario',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car" aria-hidden="true"></i> Urbanos</button>
+                <button type="button" data-quick="trunk500" onclick="applyQuickFilter('trunk',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-suitcase" aria-hidden="true"></i> Maletero +500 L</button>
+                <button type="button" data-quick="400" onclick="applyQuickFilter('range',400,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 400 km o más</button>
             </div>
             <div id="filters-panel" hidden>
                 <div class="filter-fields">
@@ -211,7 +215,7 @@
     <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261031-acceleration-fix"></script>
+    <script src="js/app.js?v=20261031-quick-filters"></script>
 
     <script>
         window.addEventListener('load', function () {
