@@ -1,5 +1,115 @@
 const carsData = [
   {
+    "id": 57,
+    "brand": "MG",
+    "model": "MG4 Urban",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "priceMin": 25490,
+    "priceMax": 30900,
+    "priceText": "25.490–30.900 €",
+    "rangeText": "325–418 km",
+    "minRangeVal": 325,
+    "maxRangeVal": 418,
+    "batteryText": "43–54 kWh",
+    "batteryType": "LFP (confirmar química exacta por versión)",
+    "powerText": "149 CV",
+    "trunk": 500,
+    "frunkText": "No confirmado",
+    "seats": 5,
+    "acceleration": "9,6 s",
+    "dimensions": "4,395 × 1,842 × 1,549 m",
+    "charging": "CC, 82 kW; 10–80 % en 28 min",
+    "description": "El MG4 Urban es un compacto eléctrico de cinco plazas orientado al uso familiar, con un maletero de más de 500 litros y una autonomía WLTP de 325 a 418 km. Es un modelo distinto del MG4 EV 2026.",
+    "highlights": [
+      "Precio de tarifa desde 25.490 € sin ayudas ni descuentos",
+      "Maletero de más de 500 litros",
+      "Cinco plazas y 4,395 metros de longitud",
+      "Pantalla central de 12,8 pulgadas y conectividad inalámbrica Apple CarPlay y Android Auto",
+      "Bomba de calor, función V2L y cinco estrellas Euro NCAP"
+    ],
+    "considerations": [
+      "Autonomía de 325 km WLTP en la batería de acceso",
+      "Potencia de carga rápida de 82 kW",
+      "No confundir con el MG4 EV, que es otro modelo",
+      "La versión con batería semisólida fue anunciada para finales de 2026, pero no se incluye sin precio oficial"
+    ],
+    "idealFor": [
+      "Familias",
+      "Uso urbano",
+      "Compacto espacioso",
+      "Precio accesible"
+    ],
+    "warranty": {
+      "vehicle": "7 años / 150.000 km",
+      "battery": "7 años / 150.000 km",
+      "capacity": "Consultar condiciones MG"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifas oficiales MG España anunciadas el 28/04/2026, con IVA, sin ayudas, descuentos comerciales ni financiación. No confundir con el precio publicitario de 16.790 € condicionado."
+    },
+    "chargingInfo": {
+      "dcMax": "82 kW",
+      "acMax": "Consultar ficha por versión",
+      "fastChargeText": "10–80 % en 28 min",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "Comfort 43 kWh",
+        "price": "25.490 €",
+        "priceValue": 25490,
+        "battery": "43 kWh",
+        "power": "149 CV",
+        "range": "325 km WLTP",
+        "rangeValue": 325
+      },
+      {
+        "name": "Comfort 54 kWh",
+        "price": "27.900 €",
+        "priceValue": 27900,
+        "battery": "54 kWh",
+        "power": "149 CV",
+        "range": "418 km WLTP",
+        "rangeValue": 418
+      },
+      {
+        "name": "Premium 54 kWh",
+        "price": "30.900 €",
+        "priceValue": 30900,
+        "battery": "54 kWh",
+        "power": "149 CV",
+        "range": "418 km WLTP",
+        "rangeValue": 418
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/mg4-urban/mg4-urban_01.webp",
+      "img/cars/mg4-urban/mg4-urban_02.webp",
+      "img/cars/mg4-urban/mg4-urban_03.webp",
+      "img/cars/mg4-urban/mg4-urban_04.webp",
+      "img/cars/mg4-urban/mg4-urban_05.webp",
+      "img/cars/mg4-urban/mg4-urban_06.webp",
+      "img/cars/mg4-urban/mg4-urban_07.webp",
+      "img/cars/mg4-urban/mg4-urban_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/mg.svg",
+      "group": "SAIC Motor",
+      "relation": "Marca del grupo",
+      "note": "MG Motor pertenece a SAIC Motor."
+    },
+    "brandUrl": "https://www.mgmotor.es/",
+    "dataStatus": {
+      "status": "Precios y datos principales verificados con MG España; pendientes fotos y colores de catálogo",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 56,
     "brand": "MG",
     "model": "MG4 EV",
