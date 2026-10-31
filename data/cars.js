@@ -118,6 +118,11 @@ const carsData = [
     "dataStatus": {
       "status": "Química LFP verificada; precios y fotografías pendientes de comprobación",
       "checkedAt": "31/10/2026"
+    },
+    "warranty": {
+      "vehicle": "3 años de garantía del fabricante; Citroën We Care hasta 8 años / 160.000 km para componentes esenciales, sujeto a mantenimiento oficial y condiciones del programa",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %"
     }
   },
   {
