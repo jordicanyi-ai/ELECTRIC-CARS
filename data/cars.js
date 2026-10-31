@@ -124,14 +124,14 @@ const carsData = [
     ],
     "videos": [],
     "brandInfo": {
-      "logo": "",
+      "logo": "img/brands/cupra.svg",
       "group": "Volkswagen Group",
       "relation": "Marca de SEAT S.A.",
       "note": "CUPRA pertenece a SEAT S.A., empresa del Grupo Volkswagen."
     },
     "brandUrl": "https://www.cupra.com/es-es/coches/born",
     "dataStatus": {
-      "status": "Precios, autonomía y seis colores verificados en fuentes oficiales; pendientes ocho fotografías y archivo del logotipo",
+      "status": "Precios, autonomía y seis colores verificados en fuentes oficiales; ocho fotografías verificadas y logotipo CUPRA añadido",
       "checkedAt": "31/10/2026"
     }
   },
