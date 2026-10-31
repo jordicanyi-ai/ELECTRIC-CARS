@@ -1,5 +1,114 @@
 const carsData = [
   {
+    "id": 53,
+    "brand": "Geely",
+    "model": "E2",
+    "type": "Utilitario / Compacto",
+    "launchYear": 2026,
+    "priceMin": 20990,
+    "priceMax": 27490,
+    "priceText": "20.990–27.490 €",
+    "rangeText": "252–345 km",
+    "minRangeVal": 252,
+    "maxRangeVal": 345,
+    "batteryText": "35–47 kWh",
+    "batteryType": "LFP",
+    "powerText": "82–116 CV",
+    "trunk": 375,
+    "frunkText": "70 L",
+    "seats": 5,
+    "acceleration": "11,5–14,2 s",
+    "dimensions": "4,14 × 1,80 × 1,58 m",
+    "charging": "60–80 kW CC · 30–80 % en unos 25 min",
+    "description": "El Geely E2 es un compacto eléctrico de cinco plazas con propulsión trasera, suspensión trasera multibrazo y dos baterías LFP. Destaca por su espacio interior y un maletero delantero de 70 litros.",
+    "highlights": [
+      "Precio de tarifa desde 20.990 € sin ayudas ni descuentos",
+      "Maletero delantero de 70 litros",
+      "Tracción trasera y suspensión multibrazo",
+      "Hasta 345 km WLTP en ciclo combinado"
+    ],
+    "considerations": [
+      "La versión PRO de 35 kWh homologa 252 km WLTP y está más orientada a recorridos cortos",
+      "La carga rápida alcanza 60 u 80 kW según batería",
+      "Los 497 km anunciados para ciudad no corresponden a autonomía WLTP combinada"
+    ],
+    "idealFor": [
+      "Ciudad",
+      "Uso diario",
+      "Primer eléctrico",
+      "Compacto asequible"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios PVP de tarifa en España, con IVA y sin descuentos, ayudas públicas ni financiación. Fuente: motor.es y Carwow, octubre de 2026."
+    },
+    "chargingInfo": {
+      "dcMax": "60 kW (35 kWh) / 80 kW (47 kWh)",
+      "acMax": "6,6 kW",
+      "fastChargeText": "30–80 % en unos 25 minutos",
+      "connector": "CCS2",
+      "v2l": true
+    },
+    "trims": [
+      {
+        "name": "PRO",
+        "price": "20.990 €",
+        "priceValue": 20990,
+        "battery": "35 kWh",
+        "batteryType": "LFP",
+        "power": "82 CV",
+        "range": "252 km WLTP",
+        "rangeValue": 252,
+        "accel": "14,2 s"
+      },
+      {
+        "name": "PRO+",
+        "price": "24.990 €",
+        "priceValue": 24990,
+        "battery": "47 kWh",
+        "batteryType": "LFP",
+        "power": "116 CV",
+        "range": "345 km WLTP",
+        "rangeValue": 345,
+        "accel": "11,5 s"
+      },
+      {
+        "name": "MAX+",
+        "price": "27.490 €",
+        "priceValue": 27490,
+        "battery": "47 kWh",
+        "batteryType": "LFP",
+        "power": "116 CV",
+        "range": "345 km WLTP",
+        "rangeValue": 345,
+        "accel": "11,5 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/geely-e2/geely-e2_01.webp",
+      "img/cars/geely-e2/geely-e2_02.webp",
+      "img/cars/geely-e2/geely-e2_03.webp",
+      "img/cars/geely-e2/geely-e2_04.webp",
+      "img/cars/geely-e2/geely-e2_05.webp",
+      "img/cars/geely-e2/geely-e2_06.webp",
+      "img/cars/geely-e2/geely-e2_07.webp",
+      "img/cars/geely-e2/geely-e2_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Geely Auto es una marca del grupo automovilístico chino Geely Holding."
+    },
+    "brandUrl": "https://www.geelyauto.es/",
+    "dataStatus": {
+      "status": "Ficha técnica preparada; fotografías y colores pendientes",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 52,
     "brand": "Citroën",
     "model": "ë-C3 Aircross",
