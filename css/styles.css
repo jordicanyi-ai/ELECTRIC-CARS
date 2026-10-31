@@ -999,3 +999,13 @@ body[data-catalogue-view="ranking"] .car-rank-label {
 body[data-catalogue-view="ranking"] .ranking-featured-value strong {
     font-size:clamp(20px,1.8vw,25px);
 }
+
+/* Ranking position: white badge with electric-blue number. */
+body[data-catalogue-view="ranking"] .car-position {
+    background:#fff;
+    color:#2456cd;
+    border:1px solid rgba(36,86,205,.12);
+    box-shadow:0 3px 12px rgba(0,0,0,.18);
+}
+body[data-catalogue-view="ranking"] .car-rank-number { color:#2456cd; }
+body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
