@@ -1,5 +1,250 @@
 const carsData = [
   {
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2022,
+    "frunkText": "No disponible",
+    "batteryType": "NMC (pendiente de confirmar por versión)",
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Volkswagen es un fabricante alemán de automóviles y una de las marcas principales del Grupo Volkswagen."
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifa de octubre de 2026 publicada sin IVA; precios calculados con IVA del 21 %, sin ayudas ni descuentos de financiación. Confirmar PVP vigente en configurador oficial."
+    },
+    "warranty": {
+      "vehicle": "Consultar condiciones vigentes de Volkswagen Vehículos Comerciales",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %"
+    },
+    "dataStatus": {
+      "status": "Tarifas orientativas octubre 2026; revisar configurador y equipamiento",
+      "checkedAt": "31/10/2026"
+    },
+    "id": 48,
+    "brand": "Volkswagen",
+    "model": "ID. Buzz",
+    "seats": "5–7",
+    "priceMin": 55719,
+    "priceMax": 81530,
+    "rangeText": "417–467 km",
+    "minRangeVal": 417,
+    "maxRangeVal": 467,
+    "batteryText": "79–86 kWh útiles",
+    "powerText": "286–340 CV",
+    "trunk": 1121,
+    "acceleration": "6,1–7,9 s",
+    "dimensions": "4,71–4,96 × 1,99 × 1,93 m",
+    "charging": "Carga rápida CC, hasta 200 kW según versión",
+    "description": "Monovolumen eléctrico Volkswagen disponible en batalla corta y larga, con configuraciones de 5 a 7 plazas y versiones Pro y GTX. La autonomía y el maletero dependen de la batalla y la distribución de asientos.",
+    "highlights": [
+      "Configuraciones de hasta 7 plazas",
+      "Amplio habitáculo y puertas laterales correderas",
+      "Versión GTX con tracción total y 340 CV"
+    ],
+    "considerations": [
+      "El volumen del maletero cambia según batalla y asientos en uso",
+      "La autonomía máxima corresponde a determinadas versiones",
+      "Los precios indicados son de tarifa, sin ayudas ni financiación"
+    ],
+    "idealFor": [
+      "Familias numerosas",
+      "Viajes y transporte de pasajeros"
+    ],
+    "trims": [
+      {
+        "name": "Origin · batalla corta · 5 plazas",
+        "price": "55.719 €",
+        "priceValue": 55719,
+        "battery": "79 kWh útiles",
+        "power": "286 CV",
+        "range": "454 km WLTP",
+        "rangeValue": 454,
+        "accel": "7,6 s",
+        "seats": 5
+      },
+      {
+        "name": "Pro · batalla corta · 5 plazas",
+        "price": "60.184 €",
+        "priceValue": 60184,
+        "battery": "79 kWh útiles",
+        "power": "286 CV",
+        "range": "454 km WLTP",
+        "rangeValue": 454,
+        "accel": "7,6 s",
+        "seats": 5
+      },
+      {
+        "name": "Pro · batalla larga · 7 plazas",
+        "price": "64.555 €",
+        "priceValue": 64555,
+        "battery": "86 kWh útiles",
+        "power": "286 CV",
+        "range": "467 km WLTP",
+        "rangeValue": 467,
+        "accel": "7,9 s",
+        "seats": 7
+      },
+      {
+        "name": "GTX · batalla corta · 5 plazas",
+        "price": "77.729 €",
+        "priceValue": 77729,
+        "battery": "79 kWh útiles",
+        "power": "340 CV",
+        "range": "417 km WLTP",
+        "rangeValue": 417,
+        "accel": "6,1 s",
+        "seats": 5
+      },
+      {
+        "name": "GTX · batalla larga · 7 plazas",
+        "price": "81.530 €",
+        "priceValue": 81530,
+        "battery": "86 kWh útiles",
+        "power": "340 CV",
+        "range": "456 km WLTP",
+        "rangeValue": 456,
+        "accel": "6,5 s",
+        "seats": 7
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-idbuzz/vw-idbuzz_01.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_02.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_03.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_04.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_05.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_06.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_07.webp",
+      "img/cars/vw-idbuzz/vw-idbuzz_08.webp"
+    ],
+    "brandUrl": "https://www.volkswagen-comerciales.es/es/modelos/id-buzz.html",
+    "sources": [
+      "https://www.volkswagen-comerciales.es/es/modelos/id-buzz.html",
+      "https://www.volkswagen-comerciales.es/idhub/content/dam/onehub_nfz/importers/es/modelos/catalogos/IDBUZZ_297x210.pdf",
+      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz"
+    ],
+    "priceText": "55.719–81.530 €"
+  },
+  {
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2022,
+    "frunkText": "No disponible",
+    "batteryType": "NMC (pendiente de confirmar por versión)",
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Volkswagen es un fabricante alemán de automóviles y una de las marcas principales del Grupo Volkswagen."
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifa de octubre de 2026 publicada sin IVA; precios calculados con IVA del 21 %, sin ayudas ni descuentos de financiación. Confirmar PVP vigente en configurador oficial."
+    },
+    "warranty": {
+      "vehicle": "Consultar condiciones vigentes de Volkswagen Vehículos Comerciales",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %"
+    },
+    "dataStatus": {
+      "status": "Tarifas orientativas octubre 2026; revisar configurador y equipamiento",
+      "checkedAt": "31/10/2026"
+    },
+    "id": 49,
+    "brand": "Volkswagen",
+    "model": "ID. Buzz Cargo",
+    "seats": 3,
+    "priceMin": 51979,
+    "priceMax": 62824,
+    "rangeText": "335–448 km",
+    "minRangeVal": 335,
+    "maxRangeVal": 448,
+    "batteryText": "59–79 kWh útiles",
+    "powerText": "170–340 CV",
+    "trunk": 3900,
+    "acceleration": "No anunciada",
+    "dimensions": "4,71 × 1,99 × 1,94 m",
+    "charging": "Carga rápida CC según batería y versión",
+    "description": "Furgoneta eléctrica de uso profesional con tres plazas delanteras y compartimento de carga separado. Ofrece 3,9 m³ de volumen útil, hasta aproximadamente 750 kg de carga útil según configuración y hasta 2.232 mm de longitud de carga con puertas batientes.",
+    "highlights": [
+      "Volumen de carga de 3,9 m³",
+      "Hasta aproximadamente 750 kg de carga útil según configuración",
+      "Tres plazas delanteras y versiones de tracción trasera o total"
+    ],
+    "considerations": [
+      "Los 3.900 litros corresponden a volumen comercial de carga, no a maletero de pasajeros",
+      "La carga útil depende de versión y equipamiento",
+      "Los precios comerciales suelen anunciarse sin IVA; aquí se incluye el 21 %"
+    ],
+    "idealFor": [
+      "Reparto urbano",
+      "Profesionales y flotas"
+    ],
+    "cargoVolumeM3": 3.9,
+    "payloadKgMax": 750,
+    "cargoLengthMm": 2232,
+    "trims": [
+      {
+        "name": "Cargo · 59 kWh · tracción trasera",
+        "price": "51.979 €",
+        "priceValue": 51979,
+        "battery": "59 kWh útiles",
+        "power": "170 CV",
+        "range": "335 km WLTP",
+        "rangeValue": 335,
+        "accel": "No confirmado",
+        "seats": 3
+      },
+      {
+        "name": "Cargo · 79 kWh · tracción trasera",
+        "price": "59.739 €",
+        "priceValue": 59739,
+        "battery": "79 kWh útiles",
+        "power": "286 CV",
+        "range": "448 km WLTP",
+        "rangeValue": 448,
+        "accel": "No confirmado",
+        "seats": 3
+      },
+      {
+        "name": "Cargo 4MOTION · 79 kWh",
+        "price": "62.824 €",
+        "priceValue": 62824,
+        "battery": "79 kWh útiles",
+        "power": "340 CV",
+        "range": "432 km WLTP",
+        "rangeValue": 432,
+        "accel": "No confirmado",
+        "seats": 3
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_01.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_02.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_03.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_04.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_05.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_06.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_07.webp",
+      "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_08.webp"
+    ],
+    "brandUrl": "https://www.volkswagen-comerciales.es/es/modelos/id-buzz-cargo.html",
+    "sources": [
+      "https://www.volkswagen-comerciales.es/es/modelos/id-buzz-cargo.html/__layer/layers/id_buzz_cargo_sb/technical-data/master.layer",
+      "https://www.volkswagen-comerciales.es/es/electricos-hibridos/autonomia.html",
+      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz"
+    ],
+    "priceText": "51.979–62.824 €"
+  },
+  {
     "id": 47,
     "brand": "Citroën",
     "model": "ë-Berlingo",
