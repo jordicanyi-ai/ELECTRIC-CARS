@@ -719,8 +719,18 @@ body[data-catalogue-view=ranking] .sort-control{
     display:none}
 .quick-filters{
     gap:6px;
-    margin-top:9px}
+    margin-top:9px;
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none}
+.quick-filters::-webkit-scrollbar{
+    display:none}
 .quick-filter{
+    flex:0 0 auto;
+    white-space:nowrap;
     font-size:11px;
     padding:8px 9px;
     gap:5px;
