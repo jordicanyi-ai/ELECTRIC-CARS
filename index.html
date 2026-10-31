@@ -65,7 +65,7 @@
             </div>
             <div id="ranking-panel" hidden>
                 <label for="ranking-metric">¿Qué es lo más importante para ti?</label>
-                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option><option value="powerDesc">Mayor potencia del motor</option></select>
+                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option><option value="powerDesc">Mayor potencia del motor</option><option value="accelerationAsc">Mejor aceleración (0–100 km/h)</option></select>
                 <p id="ranking-explanation">Orden por precio de acceso, sin ayudas. Compara versiones equivalentes antes de decidir.</p>
             </div>
         </section>
@@ -211,7 +211,7 @@
     <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261031-rank-badge"></script>
+    <script src="js/app.js?v=20261031-acceleration"></script>
 
     <script>
         window.addEventListener('load', function () {
