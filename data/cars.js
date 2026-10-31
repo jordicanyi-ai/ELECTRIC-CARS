@@ -4067,7 +4067,16 @@ const carsData = [
         "hex": "#191B1F"
       }
     ],
-    "images": [],
+    "images": [
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_01.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_02.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_03.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_04.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_05.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_06.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_07.webp",
+      "img/cars/kia-ev4-fastback/kia-ev4-fastback_08.webp"
+    ],
     "videos": [
       {
         "title": "Kia EV4 Fastback - vídeos y pruebas",
@@ -4082,7 +4091,7 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/modelos/ev4/descubrelo/",
     "dataStatus": {
-      "status": "Ficha técnica Kia España MY26; precios PVP de referencia. Galería fotográfica pendiente.",
+      "status": "Ficha técnica Kia España MY26; precios PVP de referencia. Galería fotográfica enlazada.",
       "checkedAt": "29/10/2026"
     }
   },
