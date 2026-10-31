@@ -5,9 +5,9 @@ const carsData = [
     "model": "ID.3 Neo",
     "type": "Compacto",
     "launchYear": 2026,
-    "priceMin": 35491,
-    "priceMax": 47671,
-    "priceText": "35.491–47.671 €",
+    "priceMin": 35800,
+    "priceMax": 47980,
+    "priceText": "35.800–47.980 €",
     "rangeText": "415–628 km",
     "minRangeVal": 415,
     "maxRangeVal": 628,
@@ -58,19 +58,19 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "Urban 52 kWh",
-        "price": "35.491 €",
-        "priceValue": 35491,
-        "battery": "52 kWh",
+        "name": "Life 50 kWh",
+        "price": "35.800 €",
+        "priceValue": 35800,
+        "battery": "50 kWh",
         "batteryType": "NMC",
         "power": "170 CV",
         "range": "415 km WLTP",
         "rangeValue": 415
       },
       {
-        "name": "Urban 58 kWh",
-        "price": "38.441 €",
-        "priceValue": 38441,
+        "name": "Life 58 kWh",
+        "price": "38.750 €",
+        "priceValue": 38750,
         "battery": "58 kWh",
         "batteryType": "NMC",
         "power": "190 CV",
@@ -78,9 +78,9 @@ const carsData = [
         "rangeValue": 492
       },
       {
-        "name": "Urban 79 kWh",
-        "price": "43.821 €",
-        "priceValue": 43821,
+        "name": "Life 79 kWh",
+        "price": "44.130 €",
+        "priceValue": 44130,
         "battery": "79 kWh",
         "batteryType": "NMC",
         "power": "231 CV",
@@ -89,8 +89,8 @@ const carsData = [
       },
       {
         "name": "Style 58 kWh",
-        "price": "42.291 €",
-        "priceValue": 42291,
+        "price": "42.600 €",
+        "priceValue": 42600,
         "battery": "58 kWh",
         "batteryType": "NMC",
         "power": "190 CV",
@@ -99,8 +99,8 @@ const carsData = [
       },
       {
         "name": "Style 79 kWh",
-        "price": "47.671 €",
-        "priceValue": 47671,
+        "price": "47.980 €",
+        "priceValue": 47980,
         "battery": "79 kWh",
         "batteryType": "NMC",
         "power": "231 CV",
@@ -108,7 +108,32 @@ const carsData = [
         "rangeValue": 628
       }
     ],
-    "colors": [],
+    "colors": [
+  {
+    "name": "Gris Cemento",
+    "hex": "#9B9D9B"
+  },
+  {
+    "name": "Azul Noruega",
+    "hex": "#547487"
+  },
+  {
+    "name": "Negro Granadilla",
+    "hex": "#1C1D20"
+  },
+  {
+    "name": "Blanco Glaciar",
+    "hex": "#ECECE8"
+  },
+  {
+    "name": "Plata Escama",
+    "hex": "#B7BFC2"
+  },
+  {
+    "name": "Verde Olivo Oscuro",
+    "hex": "#424F40"
+  }
+],
     "images": [
       "img/cars/id3-neo/id-3-neo_01.webp",
       "img/cars/id3-neo/id-3-neo_02.webp",
@@ -128,7 +153,7 @@ const carsData = [
     },
     "brandUrl": "https://www.volkswagen.es/es/modelos/id3-neo.html",
     "dataStatus": {
-      "status": "Precios y mecánicas documentados; ocho fotografías oficiales enlazadas; pendientes confirmar colores de configurador",
+      "status": "Precios y mecánicas documentados; ocho fotografías oficiales enlazadas; seis colores verificados con Volkswagen; galería de ocho fotos enlazada",
       "checkedAt": "01/11/2026"
     }
   },
