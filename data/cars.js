@@ -1,5 +1,163 @@
 const carsData = [
   {
+    "id": 52,
+    "brand": "Citroën",
+    "model": "ë-C3 Aircross",
+    "type": "SUV / Crossover",
+    "launchYear": 2024,
+    "warranty": {
+      "vehicle": "2 años; hasta 8 años / 160.000 km con Citroën We Care (condiciones del programa)",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %"
+    },
+    "priceMin": 28740,
+    "priceMax": 33140,
+    "priceText": "28.740–33.140 €",
+    "rangeText": "399–401 km",
+    "minRangeVal": 399,
+    "maxRangeVal": 401,
+    "batteryText": "54 kWh",
+    "batteryType": "LFP",
+    "powerText": "113 CV",
+    "trunk": 460,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "≈12,9 s",
+    "dimensions": "4,39 × 1,80 × 1,66 m",
+    "charging": "100 kW CC · 20–80 % en unos 33 min",
+    "description": "SUV eléctrico familiar de cinco plazas con batería de autonomía extendida de 54 kWh, motor de 113 CV y suspensión orientada al confort. La opción de siete plazas del C3 Aircross no corresponde a la versión eléctrica.",
+    "highlights": [
+      "Habitáculo espacioso y maletero de 460 litros",
+      "399–401 km WLTP según acabado",
+      "Confort de suspensión y asientos Citroën Advanced Comfort según acabado"
+    ],
+    "considerations": [
+      "La versión eléctrica se comercializa con cinco plazas, no siete",
+      "Las cifras WLTP cambian ligeramente según acabado y configuración",
+      "Los precios indicados son tarifa de referencia, sin ayudas ni descuentos"
+    ],
+    "idealFor": [
+      "Familias de cinco plazas",
+      "Uso diario y viajes",
+      "SUV eléctrico asequible"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVPR de referencia España, con IVA y sin ayudas, financiación ni descuentos. Referencia de tarifas publicadas en fichasyprecios.motor.elpais.com, consultadas el 31/10/2026."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "20–80 % en unos 33 min",
+      "connector": "CCS2",
+      "v2l": false
+    },
+    "trims": [
+      {
+        "name": "YOU",
+        "price": "28.740 €",
+        "priceValue": 28740,
+        "battery": "54 kWh",
+        "batteryType": "LFP",
+        "power": "113 CV",
+        "range": "399 km WLTP",
+        "rangeValue": 399,
+        "accel": "≈12,9 s"
+      },
+      {
+        "name": "PLUS",
+        "price": "30.940 €",
+        "priceValue": 30940,
+        "battery": "54 kWh",
+        "batteryType": "LFP",
+        "power": "113 CV",
+        "range": "399 km WLTP",
+        "rangeValue": 399,
+        "accel": "≈12,9 s"
+      },
+      {
+        "name": "BUSINESS",
+        "price": "31.540 €",
+        "priceValue": 31540,
+        "battery": "54 kWh",
+        "batteryType": "LFP",
+        "power": "113 CV",
+        "range": "399 km WLTP",
+        "rangeValue": 399,
+        "accel": "≈12,9 s"
+      },
+      {
+        "name": "COLLECTION",
+        "price": "31.840 €",
+        "priceValue": 31840,
+        "battery": "54 kWh",
+        "batteryType": "LFP",
+        "power": "113 CV",
+        "range": "399 km WLTP",
+        "rangeValue": 399,
+        "accel": "≈12,9 s"
+      },
+      {
+        "name": "MAX",
+        "price": "33.140 €",
+        "priceValue": 33140,
+        "battery": "54 kWh",
+        "batteryType": "LFP",
+        "power": "113 CV",
+        "range": "401 km WLTP",
+        "rangeValue": 401,
+        "accel": "≈12,9 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Blanco Polar",
+        "hex": "#F1F1ED",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Negro Perla Nera",
+        "hex": "#17191B"
+      },
+      {
+        "name": "Mercury Grey",
+        "hex": "#73797C"
+      },
+      {
+        "name": "Azul Brillante",
+        "hex": "#285A87"
+      },
+      {
+        "name": "Verde Montana",
+        "hex": "#526E59"
+      },
+      {
+        "name": "Rojo Elixir",
+        "hex": "#A33239"
+      }
+    ],
+    "colorAvailability": {
+      "note": "Los colores disponibles dependen del acabado y la configuración."
+    },
+    "images": [
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_01.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_02.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_03.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_04.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_05.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_06.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_07.webp",
+      "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_08.webp"
+    ],
+    "videos": [],
+    "brandUrl": "https://www.citroen.es/vehiculos-citroen/e-c3-aircross.html",
+    "dataStatus": {
+      "status": "Ficha preparada; galería pendiente de fotografías",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 50,
     "brand": "Kia",
     "model": "PV5 Passenger",
