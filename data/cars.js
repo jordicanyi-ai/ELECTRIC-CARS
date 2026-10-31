@@ -91,7 +91,36 @@ const carsData = [
         "accel": "3,8 s"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Dover White",
+        "hex": "#F1F1EC"
+      },
+      {
+        "name": "Camden Grey",
+        "hex": "#656A70"
+      },
+      {
+        "name": "Pebble Black",
+        "hex": "#1B1D21"
+      },
+      {
+        "name": "Piccadilly Blue",
+        "hex": "#2E607C"
+      },
+      {
+        "name": "Cosmic Silver",
+        "hex": "#B9BEC1"
+      },
+      {
+        "name": "Ealing Green",
+        "hex": "#5DADA5"
+      },
+      {
+        "name": "Diamond Red",
+        "hex": "#A51E32"
+      }
+    ],
     "images": [
       "img/cars/mg4-ev/mg4-ev_01.webp",
       "img/cars/mg4-ev/mg4-ev_02.webp",
@@ -111,7 +140,7 @@ const carsData = [
     },
     "brandUrl": "https://www.mgmotor.es/model/mg4",
     "dataStatus": {
-      "status": "8 fotografías verificadas; pendientes logotipo y colores oficiales de la gama 2026",
+      "status": "8 fotografías y 7 colores oficiales verificados; pendiente archivo del logotipo MG",
       "checkedAt": "31/10/2026"
     }
   },
