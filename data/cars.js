@@ -135,31 +135,45 @@ const carsData = [
       },
       {
         "name": "Blanco Candy / Amarillo Lima Metalizado",
-        "hex": "#C6CB4D"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#C6CB4D",
+        "border": "#CBD5E1"
       },
       {
         "name": "Blanco Candy / Bay Leaf Green Metalizado",
-        "hex": "#728776"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#728776",
+        "border": "#CBD5E1"
       },
       {
         "name": "Blanco Candy / Medium Blue",
-        "hex": "#4B809A"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#4B809A",
+        "border": "#CBD5E1"
       },
       {
         "name": "Blanco Candy / Monoplata Metalizado",
-        "hex": "#B8BDC1"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#B8BDC1",
+        "border": "#CBD5E1"
       },
       {
         "name": "Blanco Candy / Starlight Blue Metalizado",
-        "hex": "#2C536E"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#2C536E",
+        "border": "#CBD5E1"
       },
       {
         "name": "Monoplata / Rojo Cereza (GTX)",
-        "hex": "#A62E39"
+        "hex": "#B8BDC1",
+        "secondaryHex": "#A62E39",
+        "border": "#CBD5E1"
       },
       {
         "name": "Blanco Candy / Rojo Cereza (e-Motion)",
-        "hex": "#A62E39"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#A62E39",
+        "border": "#CBD5E1"
       }
     ],
     "images": [
@@ -307,7 +321,9 @@ const carsData = [
       },
       {
         "name": "Blanco Candy / Starlight Blue Metalizado",
-        "hex": "#2C536E"
+        "hex": "#F4F3ED",
+        "secondaryHex": "#2C536E",
+        "border": "#CBD5E1"
       }
     ],
     "images": [
