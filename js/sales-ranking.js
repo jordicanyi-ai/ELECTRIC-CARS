@@ -31,7 +31,7 @@
         const catalogCar = findCatalogCar(model);
         const image = car?.image || (catalogCar && Array.isArray(catalogCar.images) ? catalogCar.images[0] : null);
         if (!image) return '<div class="w-20 sm:w-28 h-14 shrink-0 rounded-xl bg-white flex items-center justify-center text-[9px] font-bold uppercase tracking-wide text-slate-300">Sin foto</div>';
-        return '<div class="w-20 sm:w-28 h-14 shrink-0 flex items-center justify-center overflow-hidden bg-white p-1"><img src="' + image + '" alt="' + escapeHtml(model) + '" loading="lazy" class="w-full h-full object-contain mix-blend-multiply" onerror="this.parentElement.innerHTML=\'<span class=&quot;text-[9px] font-bold uppercase tracking-wide text-slate-300&quot;>Sin foto</span>\'"></div>';
+        return '<div class="w-20 sm:w-28 h-14 shrink-0 flex items-center justify-center overflow-hidden bg-transparent p-1"><img src="' + image + '" alt="' + escapeHtml(model) + '" loading="lazy" class="w-full h-full object-contain mix-blend-multiply" onerror="this.parentElement.innerHTML=\'<span class=&quot;text-[9px] font-bold uppercase tracking-wide text-slate-300&quot;>Sin foto</span>\'"></div>';
     }
 
     window.showSalesRanking = function (type) {
