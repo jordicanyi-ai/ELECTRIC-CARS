@@ -29,7 +29,11 @@ let currentImageIndexes = {};
                 const active = key === 'all' ? count === 0 && !document.getElementById('hero-search').value.trim()
                     : key === '30000' ? values.price === 30000
                     : key === '500' ? values.range === 500
-                    : key === '7' && values.seats === '7';
+                    : key === '7' ? values.seats === '7'
+                    : key === 'suv' ? values.body === 'suv'
+                    : key === 'utilitario' ? values.body === 'utilitario'
+                    : key === 'trunk500' ? values.trunk === 500
+                    : key === '400' && values.range === 400;
                 button.setAttribute('aria-pressed', String(active));
             });
         }
@@ -38,7 +42,7 @@ let currentImageIndexes = {};
             const field = document.getElementById(`${type === 'body' ? 'body' : type}-filter`);
             if (!field) return;
             const same = button?.getAttribute('aria-pressed') === 'true';
-            field.value = same ? (type === 'price' ? 90000 : type === 'range' ? 0 : '') : String(value);
+            field.value = same ? (type === 'price' ? 90000 : type === 'range' || type === 'trunk' ? 0 : '') : String(value);
             filterCars();
         }
 
