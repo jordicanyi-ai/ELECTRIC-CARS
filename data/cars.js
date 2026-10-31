@@ -3,7 +3,7 @@ const carsData = [
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2022,
     "frunkText": "No disponible",
-    "batteryType": "NMC (pendiente de confirmar por versión)",
+    "batteryType": "NMC",
     "videos": [],
     "brandInfo": {
       "logo": "img/brands/volkswagen.svg",
@@ -185,7 +185,7 @@ const carsData = [
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2022,
     "frunkText": "No disponible",
-    "batteryType": "NMC (pendiente de confirmar por versión)",
+    "batteryType": "NMC",
     "videos": [],
     "brandInfo": {
       "logo": "img/brands/volkswagen.svg",
@@ -219,7 +219,7 @@ const carsData = [
     "batteryText": "59–79 kWh útiles",
     "powerText": "170–340 CV",
     "trunk": 3900,
-    "acceleration": "No anunciada",
+    "acceleration": "Pendiente de confirmar",
     "dimensions": "4,71 × 1,99 × 1,94 m",
     "charging": "Carga rápida CC según batería y versión",
     "description": "Furgoneta eléctrica de uso profesional con tres plazas delanteras y compartimento de carga separado. Ofrece 3,9 m³ de volumen útil, hasta aproximadamente 750 kg de carga útil según configuración y hasta 2.232 mm de longitud de carga con puertas batientes.",
@@ -231,7 +231,8 @@ const carsData = [
     "considerations": [
       "Los 3.900 litros corresponden a volumen comercial de carga, no a maletero de pasajeros",
       "La carga útil depende de versión y equipamiento",
-      "Los precios comerciales suelen anunciarse sin IVA; aquí se incluye el 21 %"
+      "Los precios comerciales suelen anunciarse sin IVA; aquí se incluye el 21 %",
+      "Aceleración 0–100 km/h pendiente de verificación con ficha técnica oficial por motorización"
     ],
     "idealFor": [
       "Reparto urbano",
@@ -249,7 +250,7 @@ const carsData = [
         "power": "170 CV",
         "range": "335 km WLTP",
         "rangeValue": 335,
-        "accel": "No confirmado",
+        "accel": "Pendiente de confirmar",
         "seats": 3
       },
       {
@@ -260,7 +261,7 @@ const carsData = [
         "power": "286 CV",
         "range": "448 km WLTP",
         "rangeValue": 448,
-        "accel": "No confirmado",
+        "accel": "Pendiente de confirmar",
         "seats": 3
       },
       {
@@ -271,7 +272,7 @@ const carsData = [
         "power": "340 CV",
         "range": "432 km WLTP",
         "rangeValue": 432,
-        "accel": "No confirmado",
+        "accel": "Pendiente de confirmar",
         "seats": 3
       }
     ],
