@@ -41,9 +41,9 @@ const carsData = [
       "Familias pequeñas"
     ],
     "warranty": {
-      "vehicle": "Consultar condiciones de garantía Volkswagen España",
+      "vehicle": "3 años de garantía de fábrica, sin límite de kilómetros",
       "battery": "8 años / 160.000 km",
-      "capacity": "Consultar condiciones oficiales"
+      "capacity": "Mínimo del 70% de capacidad durante 8 años / 160.000 km"
     },
     "priceInfo": {
       "includesVat": true,
