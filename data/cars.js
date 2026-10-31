@@ -104,7 +104,7 @@ const carsData = [
     },
     "brandUrl": "https://www.geelyauto.es/",
     "dataStatus": {
-      "status": "Ficha técnica preparada; fotografías y colores pendientes",
+      "status": "Ficha y galería fotográfica enlazadas; colores y logo pendientes",
       "checkedAt": "31/10/2026"
     }
   },
