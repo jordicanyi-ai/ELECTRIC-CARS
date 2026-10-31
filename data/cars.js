@@ -42,7 +42,7 @@ const carsData = [
     ],
     "warranty": {
       "vehicle": "7 años / 150.000 km",
-      "battery": "7 años / 150.000 km (consultar condiciones MG)",
+      "battery": "7 años / 150.000 km",
       "capacity": "Consultar porcentaje mínimo y condiciones de garantía de batería"
     },
     "priceInfo": {
@@ -111,7 +111,7 @@ const carsData = [
     },
     "brandUrl": "https://www.mgmotor.es/model/mg4",
     "dataStatus": {
-      "status": "Ficha técnica y precios verificados; pendientes fotografías, logotipo y colores oficiales de la gama 2026",
+      "status": "8 fotografías verificadas; pendientes logotipo y colores oficiales de la gama 2026",
       "checkedAt": "31/10/2026"
     }
   },
