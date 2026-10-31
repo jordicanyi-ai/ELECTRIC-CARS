@@ -1,5 +1,141 @@
 const carsData = [
   {
+    "id": 58,
+    "brand": "CUPRA",
+    "model": "Born",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "priceMin": 39500,
+    "priceMax": 50550,
+    "priceText": "39.500–50.550 €",
+    "rangeText": "484–631 km",
+    "minRangeVal": 484,
+    "maxRangeVal": 631,
+    "batteryText": "58–79 kWh",
+    "batteryType": "NMC (verificar por variante)",
+    "powerText": "190–326 CV",
+    "trunk": 385,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "5,6 s (VZ)",
+    "dimensions": "4,336 × 1,809 × 1,543 m",
+    "charging": "CC, potencia máxima 183 kW según versión",
+    "description": "El nuevo CUPRA Born 2026 (MY27) es un compacto eléctrico de cinco plazas con diseño actualizado, controles físicos en el volante, cuadro digital de 10,25 pulgadas y pantalla central de 12,9 pulgadas. La gama española comprende tres versiones con baterías de 58 o 79 kWh y propulsión trasera.",
+    "highlights": [
+      "Autonomía WLTP de 627 km en Endurance y 631 km en VZ",
+      "Versión VZ de 326 CV y aceleración 0–100 km/h en 5,6 s",
+      "Diseño e interior renovados en 2026",
+      "Pantalla de 12,9 pulgadas y cuadro digital de 10,25 pulgadas",
+      "Función V2L para alimentar dispositivos externos"
+    ],
+    "considerations": [
+      "Precio de tarifa desde 39.500 €, superior al de compactos eléctricos más económicos",
+      "Maletero de 385 litros",
+      "Bomba de calor opcional según configuración",
+      "Algunas funciones de asistencia y equipamiento requieren paquetes opcionales"
+    ],
+    "idealFor": [
+      "Compacto deportivo",
+      "Viajes",
+      "Uso diario",
+      "Familias pequeñas"
+    ],
+    "warranty": {
+      "vehicle": "Garantía de fábrica según condiciones CUPRA; consultar cobertura",
+      "battery": "8 años / 160.000 km (consultar condiciones)",
+      "capacity": "Consultar condiciones oficiales"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP recomendado oficial CUPRA España MY27, lista en vigor 07/04/2026, sin ayudas ni descuentos ni financiación. Opcionales no incluidos."
+    },
+    "chargingInfo": {
+      "dcMax": "183 kW según versión",
+      "acMax": "Consultar por versión",
+      "fastChargeText": "Desde 29 min según versión",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "Born+ 58 kWh",
+        "price": "39.500 €",
+        "priceValue": 39500,
+        "battery": "58 kWh",
+        "power": "190 CV",
+        "range": "484 km WLTP",
+        "rangeValue": 484
+      },
+      {
+        "name": "Born Endurance 79 kWh",
+        "price": "43.500 €",
+        "priceValue": 43500,
+        "battery": "79 kWh",
+        "power": "231 CV",
+        "range": "627 km WLTP",
+        "rangeValue": 627
+      },
+      {
+        "name": "Born VZ 79 kWh",
+        "price": "50.550 €",
+        "priceValue": 50550,
+        "battery": "79 kWh",
+        "power": "326 CV",
+        "range": "631 km WLTP",
+        "rangeValue": 631,
+        "accel": "5,6 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Blanco Glacial",
+        "hex": "#E8E9E8"
+      },
+      {
+        "name": "Negro Midnight",
+        "hex": "#19191C"
+      },
+      {
+        "name": "Gris Timanfaya",
+        "hex": "#77716D"
+      },
+      {
+        "name": "Azul Aurora",
+        "hex": "#2D536A"
+      },
+      {
+        "name": "Gris Vapor",
+        "hex": "#9B9D9D"
+      },
+      {
+        "name": "Dark Forest",
+        "hex": "#304B46"
+      }
+    ],
+    "images": [
+      "img/cars/cupra-born/cupra-born_01.webp",
+      "img/cars/cupra-born/cupra-born_02.webp",
+      "img/cars/cupra-born/cupra-born_03.webp",
+      "img/cars/cupra-born/cupra-born_04.webp",
+      "img/cars/cupra-born/cupra-born_05.webp",
+      "img/cars/cupra-born/cupra-born_06.webp",
+      "img/cars/cupra-born/cupra-born_07.webp",
+      "img/cars/cupra-born/cupra-born_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "",
+      "group": "Volkswagen Group",
+      "relation": "Marca de SEAT S.A.",
+      "note": "CUPRA pertenece a SEAT S.A., empresa del Grupo Volkswagen."
+    },
+    "brandUrl": "https://www.cupra.com/es-es/coches/born",
+    "dataStatus": {
+      "status": "Precios, autonomía y seis colores verificados en fuentes oficiales; pendientes ocho fotografías y archivo del logotipo",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 57,
     "brand": "MG",
     "model": "MG4 Urban",
