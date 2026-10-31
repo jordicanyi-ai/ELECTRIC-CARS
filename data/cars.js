@@ -87,14 +87,14 @@ const carsData = [
     ],
     "colors": [],
     "images": [
-      "img/cars/mg4-urban/mg4-urban_01.webp",
-      "img/cars/mg4-urban/mg4-urban_02.webp",
-      "img/cars/mg4-urban/mg4-urban_03.webp",
-      "img/cars/mg4-urban/mg4-urban_04.webp",
-      "img/cars/mg4-urban/mg4-urban_05.webp",
-      "img/cars/mg4-urban/mg4-urban_06.webp",
-      "img/cars/mg4-urban/mg4-urban_07.webp",
-      "img/cars/mg4-urban/mg4-urban_08.webp"
+      "img/cars/mg4-urban/MG4-EV-Urban-01.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-02.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-03.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-04.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-05.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-06.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-07.webp",
+      "img/cars/mg4-urban/MG4-EV-Urban-08.webp"
     ],
     "videos": [],
     "brandInfo": {
@@ -105,7 +105,7 @@ const carsData = [
     },
     "brandUrl": "https://www.mgmotor.es/",
     "dataStatus": {
-      "status": "Precios y datos principales verificados con MG España; pendientes fotos y colores de catálogo",
+      "status": "Precios y datos principales verificados con MG España; 8 fotos enlazadas y verificadas; pendientes colores de catálogo",
       "checkedAt": "31/10/2026"
     }
   },
