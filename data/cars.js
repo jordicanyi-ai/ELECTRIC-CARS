@@ -1,5 +1,230 @@
 const carsData = [
   {
+    "id": 55,
+    "brand": "Kia",
+    "model": "EV2",
+    "type": "SUV urbano",
+    "launchYear": 2026,
+    "priceMin": 29450,
+    "priceMax": 45175,
+    "priceText": "29.450–45.175 €",
+    "rangeText": "314–444 km",
+    "minRangeVal": 314,
+    "maxRangeVal": 444,
+    "batteryText": "42,2–61 kWh",
+    "batteryType": "LFP (42,2 kWh) / NMC (61 kWh)",
+    "powerText": "135–147 CV",
+    "trunk": 362,
+    "frunkText": "15 L",
+    "seats": "4–5",
+    "acceleration": "8,7–9,7 s",
+    "dimensions": "4,06 × 1,80 × 1,58 m",
+    "charging": "110–119 kW CC · 10–80 % en unos 29–30 min",
+    "description": "El Kia EV2 es un SUV eléctrico urbano de 4,06 metros, con tracción delantera, dos baterías y versiones de cuatro o cinco plazas. La batería estándar de 42,2 kWh utiliza química LFP y la de mayor autonomía de 61 kWh utiliza NMC. La gama española incluye acabados Air, Earth, GT-Line y Black Line.",
+    "highlights": [
+      "SUV urbano de 4,06 metros con buen aprovechamiento del espacio",
+      "Baterías de 42,2 y 61 kWh; autonomías WLTP combinadas según acabado",
+      "Maletero de 362 litros en cinco plazas, más frunk de 15 litros",
+      "Disponible con cuatro plazas y maletero de unos 403 litros",
+      "Garantía Kia de 7 años o 150.000 km"
+    ],
+    "considerations": [
+      "Las versiones de cuatro plazas no disponen de quinta plaza",
+      "La autonomía varía por acabado: GT-Line y Black Line Long Range homologan 415 km",
+      "El precio de tarifa es superior al precio publicitario con campañas y ayudas",
+      "Las prestaciones y equipamientos varían por versión; confirmar en el configurador oficial"
+    ],
+    "idealFor": [
+      "Ciudad",
+      "Familias pequeñas",
+      "SUV urbano",
+      "Uso diario"
+    ],
+    "warranty": {
+      "vehicle": "7 años / 150.000 km",
+      "battery": "7 años / 150.000 km (según condiciones de garantía Kia)",
+      "capacity": "Consultar cobertura de capacidad en la garantía oficial"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa españoles con IVA, sin ayudas, descuentos comerciales ni financiación. Referencia: tarifas de octubre de 2026 publicadas por Carwow y km77."
+    },
+    "chargingInfo": {
+      "dcMax": "119 kW (42,2 kWh) / 110 kW (61 kWh)",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en unos 29–30 minutos",
+      "connector": "CCS2",
+      "v2l": true
+    },
+    "trims": [
+      {
+        "name": "Air Standard Range",
+        "price": "29.450 €",
+        "priceValue": 29450,
+        "battery": "42,2 kWh",
+        "batteryType": "LFP",
+        "power": "147 CV",
+        "range": "315 km WLTP",
+        "rangeValue": 315,
+        "accel": "8,7 s",
+        "seats": 5
+      },
+      {
+        "name": "Earth Standard Range",
+        "price": "33.575 €",
+        "priceValue": 33575,
+        "battery": "42,2 kWh",
+        "batteryType": "LFP",
+        "power": "147 CV",
+        "range": "314 km WLTP",
+        "rangeValue": 314,
+        "accel": "8,7 s",
+        "seats": 5
+      },
+      {
+        "name": "Air Long Range",
+        "price": "33.450 €",
+        "priceValue": 33450,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "444 km WLTP",
+        "rangeValue": 444,
+        "accel": "9,5 s",
+        "seats": 5
+      },
+      {
+        "name": "Earth Long Range",
+        "price": "37.575 €",
+        "priceValue": 37575,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "438 km WLTP",
+        "rangeValue": 438,
+        "accel": "9,5 s",
+        "seats": 5
+      },
+      {
+        "name": "Earth Long Range 4 plazas",
+        "price": "37.875 €",
+        "priceValue": 37875,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "438 km WLTP",
+        "rangeValue": 438,
+        "accel": "9,5 s",
+        "seats": 4
+      },
+      {
+        "name": "GT-Line Long Range",
+        "price": "41.875 €",
+        "priceValue": 41875,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "415 km WLTP",
+        "rangeValue": 415,
+        "accel": "9,7 s",
+        "seats": 5
+      },
+      {
+        "name": "GT-Line Long Range 4 plazas",
+        "price": "42.175 €",
+        "priceValue": 42175,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "415 km WLTP",
+        "rangeValue": 415,
+        "accel": "9,7 s",
+        "seats": 4
+      },
+      {
+        "name": "Black Line Long Range",
+        "price": "44.875 €",
+        "priceValue": 44875,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "415 km WLTP",
+        "rangeValue": 415,
+        "accel": "9,7 s",
+        "seats": 5
+      },
+      {
+        "name": "Black Line Long Range 4 plazas",
+        "price": "45.175 €",
+        "priceValue": 45175,
+        "battery": "61 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "415 km WLTP",
+        "rangeValue": 415,
+        "accel": "9,7 s",
+        "seats": 4
+      }
+    ],
+    "colors": [
+      {
+        "name": "Cassa White",
+        "hex": "#EDECE6"
+      },
+      {
+        "name": "Deluxe White",
+        "hex": "#F5F4F0"
+      },
+      {
+        "name": "Frost Blue",
+        "hex": "#A8B9C7"
+      },
+      {
+        "name": "Morning Haze",
+        "hex": "#C7C6BA"
+      },
+      {
+        "name": "Wolf Gray",
+        "hex": "#73787A"
+      },
+      {
+        "name": "Penta Metal",
+        "hex": "#555D64"
+      },
+      {
+        "name": "Vanilla Blossom",
+        "hex": "#E7D7C6"
+      },
+      {
+        "name": "Magma Red",
+        "hex": "#A33C3B"
+      }
+    ],
+    "images": [
+      "img/cars/kia-ev2/kia-ev2_01.webp",
+      "img/cars/kia-ev2/kia-ev2_02.webp",
+      "img/cars/kia-ev2/kia-ev2_03.webp",
+      "img/cars/kia-ev2/kia-ev2_04.webp",
+      "img/cars/kia-ev2/kia-ev2_05.webp",
+      "img/cars/kia-ev2/kia-ev2_06.webp",
+      "img/cars/kia-ev2/kia-ev2_07.webp",
+      "img/cars/kia-ev2/kia-ev2_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/kia.png",
+      "group": "Hyundai Motor Group",
+      "relation": "Marca del grupo",
+      "note": "Kia es un fabricante surcoreano perteneciente a Hyundai Motor Group."
+    },
+    "brandUrl": "https://www.kia.com/es/modelos/ev2/",
+    "dataStatus": {
+      "status": "Ficha técnica y tarifas preparadas; pendientes las 8 fotografías oficiales y verificación final de colores por acabado",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 54,
     "brand": "Geely",
     "model": "E5",
