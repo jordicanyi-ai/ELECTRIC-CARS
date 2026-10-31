@@ -5,9 +5,9 @@ const carsData = [
     "model": "PV5 Passenger",
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2025,
-    "priceMin": 38690,
-    "priceMax": 38690,
-    "priceText": "Desde 38.690 € (PVP de lanzamiento)",
+    "priceMin": 37948,
+    "priceMax": 46448,
+    "priceText": "37.948–46.448 €",
     "rangeText": "295–412 km",
     "minRangeVal": 295,
     "maxRangeVal": 412,
@@ -37,33 +37,66 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "PVP al contado de lanzamiento en España (noviembre 2025), sin ayudas ni descuentos; tarifa actual por acabado pendiente de verificación."
+      "note": "Tarifa octubre 2026 publicada sin IVA (Fleetdata vía etiqueta0); importes calculados con IVA del 21 %, redondeados al euro, sin descuentos ni ayudas."
     },
     "trims": [
-      {
-        "name": "51,5 kWh",
-        "price": "Consultar PVP por acabado",
-        "priceValue": null,
-        "battery": "51,5 kWh",
-        "batteryType": "NMC",
-        "power": "122 CV",
-        "range": "295 km WLTP",
-        "rangeValue": 295,
-        "accel": "12,8 s"
-      },
-      {
-        "name": "71,2 kWh",
-        "price": "Consultar PVP por acabado",
-        "priceValue": null,
-        "battery": "71,2 kWh",
-        "batteryType": "NMC",
-        "power": "163 CV",
-        "range": "412 km WLTP",
-        "rangeValue": 412,
-        "accel": "10,7 s"
-      }
-    ],
-    "colors": [],
+  {
+    "name": "Essential 51,5 kWh",
+    "price": "37.948 €",
+    "priceValue": 37948,
+    "battery": "51,5 kWh",
+    "batteryType": "NMC",
+    "power": "122 CV",
+    "range": "295 km WLTP",
+    "rangeValue": 295,
+    "accel": "12,8 s"
+  },
+  {
+    "name": "Plus 51,5 kWh",
+    "price": "39.447 €",
+    "priceValue": 39447,
+    "battery": "51,5 kWh",
+    "batteryType": "NMC",
+    "power": "122 CV",
+    "range": "295 km WLTP",
+    "rangeValue": 295,
+    "accel": "12,8 s"
+  },
+  {
+    "name": "Essential 71,2 kWh",
+    "price": "41.948 €",
+    "priceValue": 41948,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "412 km WLTP",
+    "rangeValue": 412,
+    "accel": "10,7 s"
+  },
+  {
+    "name": "Plus 71,2 kWh",
+    "price": "44.348 €",
+    "priceValue": 44348,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "412 km WLTP",
+    "rangeValue": 412,
+    "accel": "10,7 s"
+  },
+  {
+    "name": "Elite 71,2 kWh",
+    "price": "46.448 €",
+    "priceValue": 46448,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "412 km WLTP",
+    "rangeValue": 412,
+    "accel": "10,7 s"
+  }
+],
+  "colors": [],
     "images": [
       "img/cars/kia-pv5/kia-pv5_01.webp",
       "img/cars/kia-pv5/kia-pv5_02.webp",
@@ -83,7 +116,7 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/pbv/vehiculos/pv5-passenger/descubrelo/",
     "dataStatus": {
-      "status": "Ficha técnica y galería revisadas; tarifa por acabado pendiente",
+      "status": "Ficha técnica y galería revisadas; precios de tarifa octubre 2026 con IVA sin ayudas",
       "checkedAt": "31/10/2026"
     }
   },
@@ -93,9 +126,9 @@ const carsData = [
     "model": "PV5 Cargo",
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2025,
-    "priceMin": 39190,
-    "priceMax": 39190,
-    "priceText": "Desde 39.190 € (PVP de lanzamiento)",
+    "priceMin": 38448,
+    "priceMax": 46852,
+    "priceText": "38.448–46.852 €",
     "rangeText": "297–416 km",
     "minRangeVal": 297,
     "maxRangeVal": 416,
@@ -125,33 +158,66 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "PVP al contado de lanzamiento en España (noviembre 2025), sin ayudas ni descuentos; tarifa actual por acabado pendiente de verificación."
+      "note": "Tarifa octubre 2026 publicada sin IVA (Fleetdata vía etiqueta0); importes calculados con IVA del 21 %, redondeados al euro, sin descuentos ni ayudas."
     },
     "trims": [
-      {
-        "name": "51,5 kWh",
-        "price": "Consultar PVP por acabado",
-        "priceValue": null,
-        "battery": "51,5 kWh",
-        "batteryType": "NMC",
-        "power": "122 CV",
-        "range": "297 km WLTP",
-        "rangeValue": 297,
-        "accel": "16,2 s"
-      },
-      {
-        "name": "71,2 kWh",
-        "price": "Consultar PVP por acabado",
-        "priceValue": null,
-        "battery": "71,2 kWh",
-        "batteryType": "NMC",
-        "power": "163 CV",
-        "range": "416 km WLTP",
-        "rangeValue": 416,
-        "accel": "12,4 s"
-      }
-    ],
-    "colors": [],
+  {
+    "name": "Essential 51,5 kWh",
+    "price": "38.448 €",
+    "priceValue": 38448,
+    "battery": "51,5 kWh",
+    "batteryType": "NMC",
+    "power": "122 CV",
+    "range": "297 km WLTP",
+    "rangeValue": 297,
+    "accel": "16,2 s"
+  },
+  {
+    "name": "Plus 51,5 kWh",
+    "price": "39.423 €",
+    "priceValue": 39423,
+    "battery": "51,5 kWh",
+    "batteryType": "NMC",
+    "power": "122 CV",
+    "range": "297 km WLTP",
+    "rangeValue": 297,
+    "accel": "16,2 s"
+  },
+  {
+    "name": "Essential 71,2 kWh",
+    "price": "42.448 €",
+    "priceValue": 42448,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "416 km WLTP",
+    "rangeValue": 416,
+    "accel": "12,4 s"
+  },
+  {
+    "name": "Plus 71,2 kWh",
+    "price": "44.322 €",
+    "priceValue": 44322,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "416 km WLTP",
+    "rangeValue": 416,
+    "accel": "12,4 s"
+  },
+  {
+    "name": "Elite 71,2 kWh",
+    "price": "46.852 €",
+    "priceValue": 46852,
+    "battery": "71,2 kWh",
+    "batteryType": "NMC",
+    "power": "163 CV",
+    "range": "416 km WLTP",
+    "rangeValue": 416,
+    "accel": "12,4 s"
+  }
+],
+  "colors": [],
     "images": [
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_01.webp",
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_02.webp",
@@ -171,7 +237,7 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/pbv/vehiculos/pv5-cargo/discover/",
     "dataStatus": {
-      "status": "Ficha técnica y galería revisadas; tarifa por acabado pendiente",
+      "status": "Ficha técnica y galería revisadas; precios de tarifa octubre 2026 con IVA sin ayudas",
       "checkedAt": "31/10/2026"
     }
   },
