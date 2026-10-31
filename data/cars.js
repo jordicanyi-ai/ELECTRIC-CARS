@@ -1,5 +1,181 @@
 const carsData = [
   {
+    "id": 50,
+    "brand": "Kia",
+    "model": "PV5 Passenger",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2025,
+    "priceMin": 38690,
+    "priceMax": 38690,
+    "priceText": "Desde 38.690 € (PVP de lanzamiento)",
+    "rangeText": "295–412 km",
+    "minRangeVal": 295,
+    "maxRangeVal": 412,
+    "batteryText": "51,5–71,2 kWh",
+    "batteryType": "NMC",
+    "powerText": "122–163 CV",
+    "trunk": 1320,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "10,7–12,8 s",
+    "dimensions": "4,70 × 1,90 × 1,92 m",
+    "charging": "CC 150 kW · 10–80 % en 30 min",
+    "description": "Monovolumen eléctrico de cinco plazas, con dos opciones de batería y puertas laterales correderas.",
+    "highlights": [
+      "Cinco plazas y puertas laterales correderas",
+      "Hasta 412 km WLTP",
+      "Baterías de 51,5 y 71,2 kWh"
+    ],
+    "considerations": [
+      "El precio indicado es el PVP de lanzamiento y debe contrastarse con la tarifa actual por acabado",
+      "Las autonomías dependen de batería y configuración"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes y transporte de pasajeros"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP al contado de lanzamiento en España (noviembre 2025), sin ayudas ni descuentos; tarifa actual por acabado pendiente de verificación."
+    },
+    "trims": [
+      {
+        "name": "51,5 kWh",
+        "price": "Consultar PVP por acabado",
+        "priceValue": null,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "295 km WLTP",
+        "rangeValue": 295,
+        "accel": "12,8 s"
+      },
+      {
+        "name": "71,2 kWh",
+        "price": "Consultar PVP por acabado",
+        "priceValue": null,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "412 km WLTP",
+        "rangeValue": 412,
+        "accel": "10,7 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/kia-pv5/kia-pv5_01.webp",
+      "img/cars/kia-pv5/kia-pv5_02.webp",
+      "img/cars/kia-pv5/kia-pv5_03.webp",
+      "img/cars/kia-pv5/kia-pv5_04.webp",
+      "img/cars/kia-pv5/kia-pv5_05.webp",
+      "img/cars/kia-pv5/kia-pv5_06.webp",
+      "img/cars/kia-pv5/kia-pv5_07.webp",
+      "img/cars/kia-pv5/kia-pv5_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/kia.png",
+      "group": "Hyundai Motor Group",
+      "relation": "Marca del grupo",
+      "note": "Kia forma parte de Hyundai Motor Group."
+    },
+    "brandUrl": "https://www.kia.com/es/pbv/vehiculos/pv5-passenger/descubrelo/",
+    "dataStatus": {
+      "status": "Ficha técnica y galería revisadas; tarifa por acabado pendiente",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
+    "id": 51,
+    "brand": "Kia",
+    "model": "PV5 Cargo",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2025,
+    "priceMin": 39190,
+    "priceMax": 39190,
+    "priceText": "Desde 39.190 € (PVP de lanzamiento)",
+    "rangeText": "297–416 km",
+    "minRangeVal": 297,
+    "maxRangeVal": 416,
+    "batteryText": "51,5–71,2 kWh",
+    "batteryType": "NMC",
+    "powerText": "122–163 CV",
+    "trunk": 4420,
+    "frunkText": "No disponible",
+    "seats": 2,
+    "acceleration": "12,4–16,2 s",
+    "dimensions": "4,70 × 1,90 × 1,92 m",
+    "charging": "CC 150 kW · 10–80 % en 30 min",
+    "description": "Furgoneta eléctrica profesional con volumen de carga de 4,42 m³ y dos capacidades de batería.",
+    "highlights": [
+      "4.420 litros de volumen de carga",
+      "Acceso trasero bajo de 419 mm",
+      "Baterías de 51,5 y 71,2 kWh"
+    ],
+    "considerations": [
+      "El precio indicado es el PVP de lanzamiento y debe contrastarse con la tarifa actual por acabado",
+      "Las autonomías dependen de batería y configuración"
+    ],
+    "idealFor": [
+      "Reparto y profesionales",
+      "Flotas"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP al contado de lanzamiento en España (noviembre 2025), sin ayudas ni descuentos; tarifa actual por acabado pendiente de verificación."
+    },
+    "trims": [
+      {
+        "name": "51,5 kWh",
+        "price": "Consultar PVP por acabado",
+        "priceValue": null,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "297 km WLTP",
+        "rangeValue": 297,
+        "accel": "16,2 s"
+      },
+      {
+        "name": "71,2 kWh",
+        "price": "Consultar PVP por acabado",
+        "priceValue": null,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "416 km WLTP",
+        "rangeValue": 416,
+        "accel": "12,4 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_01.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_02.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_03.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_04.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_05.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_06.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_07.webp",
+      "img/cars/kia-pv5-cargo/kia-pv5-cargo_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/kia.png",
+      "group": "Hyundai Motor Group",
+      "relation": "Marca del grupo",
+      "note": "Kia forma parte de Hyundai Motor Group."
+    },
+    "brandUrl": "https://www.kia.com/es/pbv/vehiculos/pv5-cargo/discover/",
+    "dataStatus": {
+      "status": "Ficha técnica y galería revisadas; tarifa por acabado pendiente",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2022,
     "frunkText": "No disponible",
