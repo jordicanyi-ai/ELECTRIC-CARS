@@ -42,8 +42,8 @@ const carsData = [
     ],
     "warranty": {
       "vehicle": "7 años / 150.000 km",
-      "battery": "7 años / 150.000 km (según condiciones de garantía Kia)",
-      "capacity": "Consultar cobertura de capacidad en la garantía oficial"
+      "battery": "8 años / 160.000 km (capacidad mínima del 70 %)",
+      "capacity": "80 % durante 5 años / 100.000 km; 70 % durante 8 años / 160.000 km"
     },
     "priceInfo": {
       "includesVat": true,
@@ -220,7 +220,7 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/modelos/ev2/",
     "dataStatus": {
-      "status": "Ficha técnica y tarifas preparadas; pendientes las 8 fotografías oficiales y verificación final de colores por acabado",
+      "status": "8 fotografías verificadas; pendiente de verificar los colores por acabado",
       "checkedAt": "31/10/2026"
     }
   },
