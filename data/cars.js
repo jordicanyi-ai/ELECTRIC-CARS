@@ -1,5 +1,121 @@
 const carsData = [
   {
+    "id": 56,
+    "brand": "MG",
+    "model": "MG4 EV",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "priceMin": 37548,
+    "priceMax": 42048,
+    "priceText": "37.548–42.048 €",
+    "rangeText": "405–545 km",
+    "minRangeVal": 405,
+    "maxRangeVal": 545,
+    "batteryText": "64–77 kWh",
+    "batteryType": "LFP / NMC según versión",
+    "powerText": "190–435 CV",
+    "trunk": 388,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "3,8–7,5 s",
+    "dimensions": "4,29 × 1,84 × 1,52 m",
+    "charging": "CC, hasta 154 kW (Premium 64); 10–80 % en unos 25 min",
+    "description": "El MG4 EV 2026 es un compacto eléctrico de cinco plazas con interior renovado, pantallas de 12,8 y 10,25 pulgadas y plataforma MSP. Ofrece versiones de propulsión trasera con 190 o 245 CV y una variante deportiva XPOWER de tracción total y 435 CV. No debe confundirse con el MG4 Urban.",
+    "highlights": [
+      "Autonomía combinada WLTP de 545 km en Premium 77",
+      "Versión XPOWER con 435 CV, tracción total y 0–100 km/h en 3,8 s",
+      "Interior actualizado con pantalla central de 12,8 pulgadas",
+      "Maletero de 388 litros y cinco plazas",
+      "Garantía del fabricante de 7 años / 150.000 km"
+    ],
+    "considerations": [
+      "Los precios de tarifa son superiores a los anuncios que incluyen descuentos, financiación y ayudas",
+      "La versión XPOWER homologa 405 km frente a los 545 km del Premium 77",
+      "No dispone de frunk",
+      "El MG4 Urban es otro modelo y requiere una ficha separada"
+    ],
+    "idealFor": [
+      "Compacto familiar",
+      "Viajes",
+      "Uso diario",
+      "Conducción deportiva (XPOWER)"
+    ],
+    "warranty": {
+      "vehicle": "7 años / 150.000 km",
+      "battery": "7 años / 150.000 km (consultar condiciones MG)",
+      "capacity": "Consultar porcentaje mínimo y condiciones de garantía de batería"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa en España publicados en marzo de 2026, con IVA y sin descuentos, promociones, financiación ni ayudas públicas. Fuente: motor.es. No usar precios publicitarios de MG con CAE o Plan Auto+."
+    },
+    "chargingInfo": {
+      "dcMax": "154 kW (Premium 64); consultar ficha por versión para Premium 77 y XPOWER",
+      "acMax": "Consultar según versión",
+      "fastChargeText": "10–80 % en unos 25 min (Premium 64)",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "Premium 64",
+        "price": "37.548 €",
+        "priceValue": 37548,
+        "battery": "64 kWh",
+        "batteryType": "LFP",
+        "power": "190 CV",
+        "range": "452 km WLTP",
+        "rangeValue": 452,
+        "accel": "7,5 s"
+      },
+      {
+        "name": "Premium 77",
+        "price": "41.048 €",
+        "priceValue": 41048,
+        "battery": "77 kWh",
+        "batteryType": "NMC",
+        "power": "245 CV",
+        "range": "545 km WLTP",
+        "rangeValue": 545,
+        "accel": "6,2 s"
+      },
+      {
+        "name": "XPOWER",
+        "price": "42.048 €",
+        "priceValue": 42048,
+        "battery": "64 kWh",
+        "batteryType": "NMC",
+        "power": "435 CV",
+        "range": "405 km WLTP",
+        "rangeValue": 405,
+        "accel": "3,8 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/mg4-ev/mg4-ev_01.webp",
+      "img/cars/mg4-ev/mg4-ev_02.webp",
+      "img/cars/mg4-ev/mg4-ev_03.webp",
+      "img/cars/mg4-ev/mg4-ev_04.webp",
+      "img/cars/mg4-ev/mg4-ev_05.webp",
+      "img/cars/mg4-ev/mg4-ev_06.webp",
+      "img/cars/mg4-ev/mg4-ev_07.webp",
+      "img/cars/mg4-ev/mg4-ev_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/mg.png",
+      "group": "SAIC Motor",
+      "relation": "Marca del grupo",
+      "note": "MG Motor es una marca de origen británico propiedad del grupo automovilístico chino SAIC Motor."
+    },
+    "brandUrl": "https://www.mgmotor.es/model/mg4",
+    "dataStatus": {
+      "status": "Ficha técnica y precios verificados; pendientes fotografías, logotipo y colores oficiales de la gama 2026",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 55,
     "brand": "Kia",
     "model": "EV2",
