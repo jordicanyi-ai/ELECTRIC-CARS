@@ -12,7 +12,7 @@ const carsData = [
     "minRangeVal": 484,
     "maxRangeVal": 631,
     "batteryText": "58–79 kWh",
-    "batteryType": "NMC (verificar por variante)",
+    "batteryType": "LFP (58 kWh) / NMC (79 kWh)",
     "powerText": "190–326 CV",
     "trunk": 385,
     "frunkText": "No disponible",
@@ -62,6 +62,7 @@ const carsData = [
         "price": "39.500 €",
         "priceValue": 39500,
         "battery": "58 kWh",
+        "batteryType": "LFP",
         "power": "190 CV",
         "range": "484 km WLTP",
         "rangeValue": 484
@@ -71,6 +72,7 @@ const carsData = [
         "price": "43.500 €",
         "priceValue": 43500,
         "battery": "79 kWh",
+        "batteryType": "NMC",
         "power": "231 CV",
         "range": "627 km WLTP",
         "rangeValue": 627
@@ -80,6 +82,7 @@ const carsData = [
         "price": "50.550 €",
         "priceValue": 50550,
         "battery": "79 kWh",
+        "batteryType": "NMC",
         "power": "326 CV",
         "range": "631 km WLTP",
         "rangeValue": 631,
