@@ -41,8 +41,8 @@ const carsData = [
       "Familias pequeñas"
     ],
     "warranty": {
-      "vehicle": "Garantía de fábrica según condiciones CUPRA; consultar cobertura",
-      "battery": "8 años / 160.000 km (consultar condiciones)",
+      "vehicle": "3 años de garantía de fábrica; ampliable a 5 años / 100.000 km",
+      "battery": "8 años / 160.000 km",
       "capacity": "Consultar condiciones oficiales"
     },
     "priceInfo": {
