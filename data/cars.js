@@ -1,5 +1,143 @@
 const carsData = [
   {
+    "id": 54,
+    "brand": "Geely",
+    "model": "E5",
+    "type": "SUV / Crossover",
+    "launchYear": 2026,
+    "warranty": {
+      "vehicle": "8 años / 200.000 km",
+      "battery": "8 años / 200.000 km",
+      "capacity": "Capacidad mínima garantizada: consultar condiciones oficiales"
+    },
+    "priceMin": 37490,
+    "priceMax": 41990,
+    "priceText": "37.490–41.990 €",
+    "rangeText": "430–475 km",
+    "minRangeVal": 430,
+    "maxRangeVal": 475,
+    "batteryText": "60,2–68,4 kWh",
+    "batteryType": "LFP",
+    "powerText": "218 CV",
+    "trunk": 461,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "≈7,4 s",
+    "dimensions": "4,62 × 1,90 × 1,67 m",
+    "charging": "120–135 kW CC · 30–80 % en unos 20 min",
+    "description": "El Geely E5 es un SUV eléctrico familiar de cinco plazas, 218 CV y tracción delantera. Ofrece baterías LFP Short Blade de 60,2 y 68,4 kWh, un habitáculo muy espacioso y hasta 475 km de autonomía WLTP combinada. Destaca por el equipamiento de confort y la garantía de ocho años.",
+    "highlights": [
+      "Amplio espacio para pasajeros y maletero de 461 litros",
+      "Baterías LFP y autonomía combinada WLTP de 430 a 475 km",
+      "218 CV y equipamiento de serie completo",
+      "Garantía de 8 años o 200.000 km para coche y batería",
+      "Bomba de calor, cámara 360° y función V2L"
+    ],
+    "considerations": [
+      "No tiene maletero delantero (frunk)",
+      "El MAX+ homologa 455 km, menos que los 475 km del PRO+",
+      "El maletero de 461 litros no es de los mayores entre los SUV de su tamaño",
+      "La red comercial y de posventa de Geely en España está en fase de expansión"
+    ],
+    "idealFor": [
+      "Familias",
+      "SUV de cinco plazas",
+      "Viajes",
+      "Uso diario"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa recomendados en España con IVA, sin Plan Auto+, descuentos comerciales ni condiciones de financiación. Tarifas anunciadas por Geely en 2026."
+    },
+    "chargingInfo": {
+      "dcMax": "120 kW (60,2 kWh) / 135 kW (68,4 kWh)",
+      "acMax": "11 kW",
+      "fastChargeText": "30–80 % en unos 20 min",
+      "connector": "CCS2",
+      "v2l": true
+    },
+    "trims": [
+      {
+        "name": "PRO",
+        "price": "37.490 €",
+        "priceValue": 37490,
+        "battery": "60,2 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "430 km WLTP",
+        "rangeValue": 430,
+        "accel": "≈7,4 s"
+      },
+      {
+        "name": "PRO+",
+        "price": "39.990 €",
+        "priceValue": 39990,
+        "battery": "68,4 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "475 km WLTP",
+        "rangeValue": 475,
+        "accel": "≈7,4 s"
+      },
+      {
+        "name": "MAX+",
+        "price": "41.990 €",
+        "priceValue": 41990,
+        "battery": "68,4 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "455 km WLTP",
+        "rangeValue": 455,
+        "accel": "≈7,4 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Blanco Nieve",
+        "hex": "#F0F0ED"
+      },
+      {
+        "name": "Gris Ártico",
+        "hex": "#858C91"
+      },
+      {
+        "name": "Negro Carbón",
+        "hex": "#202226"
+      },
+      {
+        "name": "Plata Moonlight",
+        "hex": "#BEC4C6"
+      },
+      {
+        "name": "Verde Aqua",
+        "hex": "#8DAEAA"
+      }
+    ],
+    "images": [
+      "img/cars/geely-e5/geely-e5_01.webp",
+      "img/cars/geely-e5/geely-e5_02.webp",
+      "img/cars/geely-e5/geely-e5_03.webp",
+      "img/cars/geely-e5/geely-e5_04.webp",
+      "img/cars/geely-e5/geely-e5_05.webp",
+      "img/cars/geely-e5/geely-e5_06.webp",
+      "img/cars/geely-e5/geely-e5_07.webp",
+      "img/cars/geely-e5/geely-e5_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/Geely.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Geely Auto es una marca del grupo chino Geely Holding."
+    },
+    "brandUrl": "https://www.geelyauto.es/models/geely-e5-electric-suv",
+    "dataStatus": {
+      "status": "Ficha completa; pendiente de subir y verificar las 8 fotografías",
+      "checkedAt": "31/10/2026"
+    }
+  },
+  {
     "id": 53,
     "brand": "Geely",
     "model": "E2",
