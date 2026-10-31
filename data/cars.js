@@ -13,14 +13,14 @@ const carsData = [
     "minRangeVal": 335,
     "maxRangeVal": 343,
     "batteryText": "54 kWh (50 kWh útiles aprox.)",
-    "batteryType": "NMC",
+    "batteryType": "LFP",
     "powerText": "136 CV",
     "trunk": 775,
     "frunkText": "No disponible",
     "acceleration": "11,2 s",
     "dimensions": "4,40 - 4,75 × 1,85 × 1,82 m",
     "charging": "100 kW CC; 0-80 % en unos 30 min",
-    "description": "El Citroën ë-Berlingo de pasajeros es un monovolumen eléctrico familiar disponible en carrocerías M y XL, con hasta siete plazas según configuración. Destaca por las puertas laterales correderas, el espacio interior y su modularidad. Monta un motor de 136 CV y batería de 54 kWh, con autonomías WLTP que varían según versión.",
+    "description": "El Citroën ë-Berlingo de pasajeros es un monovolumen eléctrico familiar disponible en carrocerías M y XL, con hasta siete plazas según configuración. Destaca por las puertas laterales correderas, el espacio interior y su modularidad. Monta un motor de 136 CV y batería LFP de 54 kWh, con autonomías WLTP que varían según versión.",
     "highlights": [
       "Carrocerías M y XL y posibilidad de siete plazas",
       "Puertas correderas y habitáculo versátil",
@@ -59,7 +59,8 @@ const carsData = [
         "power": "100 kW (136 CV)",
         "range": "343 km WLTP",
         "rangeValue": 343,
-        "accel": "11,2 s"
+        "accel": "11,2 s",
+        "batteryType": "LFP"
       },
       {
         "name": "PLUS XL",
@@ -69,7 +70,8 @@ const carsData = [
         "power": "100 kW (136 CV)",
         "range": "337 km WLTP",
         "rangeValue": 337,
-        "accel": "11,2 s"
+        "accel": "11,2 s",
+        "batteryType": "LFP"
       },
       {
         "name": "MAX M",
@@ -79,7 +81,8 @@ const carsData = [
         "power": "100 kW (136 CV)",
         "range": "339 km WLTP",
         "rangeValue": 339,
-        "accel": "11,2 s"
+        "accel": "11,2 s",
+        "batteryType": "LFP"
       },
       {
         "name": "MAX XL",
@@ -89,7 +92,8 @@ const carsData = [
         "power": "100 kW (136 CV)",
         "range": "335 km WLTP",
         "rangeValue": 335,
-        "accel": "11,2 s"
+        "accel": "11,2 s",
+        "batteryType": "LFP"
       }
     ],
     "colors": [],
@@ -112,7 +116,7 @@ const carsData = [
     },
     "brandUrl": "https://www.citroen.es",
     "dataStatus": {
-      "status": "Pendiente de verificar fotografías y tarifa",
+      "status": "Química LFP verificada; precios y fotografías pendientes de comprobación",
       "checkedAt": "31/10/2026"
     }
   },
