@@ -133,7 +133,7 @@ const carsData = [
     },
     "brandUrl": "https://www.geelyauto.es/models/geely-e5-electric-suv",
     "dataStatus": {
-      "status": "Ficha completa; pendiente de subir y verificar las 8 fotografías",
+      "status": "Ficha completa; galería de 8 fotografías verificada",
       "checkedAt": "31/10/2026"
     }
   },
