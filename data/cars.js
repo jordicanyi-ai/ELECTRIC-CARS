@@ -16,24 +16,26 @@ const carsData = [
     "powerText": "122–163 CV",
     "trunk": 1320,
     "frunkText": "No disponible",
-    "seats": 5,
+    "seats": "5–7",
     "acceleration": "10,7–12,8 s",
     "dimensions": "4,70 × 1,90 × 1,92 m",
     "charging": "CC 150 kW · 10–80 % en 30 min",
-    "description": "Monovolumen eléctrico de cinco plazas, con dos opciones de batería y puertas laterales correderas.",
+    "description": "Monovolumen eléctrico con versión de cinco plazas y configuración de siete plazas anunciada para el año modelo 2027. Dos opciones de batería y puertas laterales correderas.",
     "highlights": [
-      "Cinco plazas y puertas laterales correderas",
+      "Cinco plazas y opción de siete plazas (año modelo 2027)",
       "Hasta 412 km WLTP",
       "Baterías de 51,5 y 71,2 kWh"
     ],
     "considerations": [
-      "El precio indicado es el PVP de lanzamiento y debe contrastarse con la tarifa actual por acabado",
-      "Las autonomías dependen de batería y configuración"
+      "Precios de tarifa con IVA y sin ayudas; confirmar disponibilidad y equipamiento por acabado",
+      "Las autonomías dependen de batería y configuración",
+      "Versión de 7 plazas anunciada con 390 km WLTP; precio para España aún sin verificar. Los precios mostrados corresponden a versiones de 5 plazas."
     ],
     "idealFor": [
       "Familias",
       "Viajes y transporte de pasajeros"
     ],
+    "warranty": {"vehicle": "7 años / 150.000 km", "battery": "8 años / 160.000 km", "capacity": "70 % mínimo de capacidad original"},
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
@@ -148,13 +150,14 @@ const carsData = [
       "Baterías de 51,5 y 71,2 kWh"
     ],
     "considerations": [
-      "El precio indicado es el PVP de lanzamiento y debe contrastarse con la tarifa actual por acabado",
+      "Precios de tarifa con IVA y sin ayudas; confirmar disponibilidad y equipamiento por acabado",
       "Las autonomías dependen de batería y configuración"
     ],
     "idealFor": [
       "Reparto y profesionales",
       "Flotas"
     ],
+    "warranty": {"vehicle": "7 años / 150.000 km", "battery": "8 años / 160.000 km", "capacity": "70 % mínimo de capacidad original"},
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
