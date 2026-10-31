@@ -112,7 +112,56 @@ const carsData = [
         "seats": 7
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Candy",
+        "hex": "#F4F3ED"
+      },
+      {
+        "name": "Rojo Cereza (GTX)",
+        "hex": "#A62E39"
+      },
+      {
+        "name": "Starlight Blue Metalizado",
+        "hex": "#2C536E"
+      },
+      {
+        "name": "Monoplata Metalizado",
+        "hex": "#B8BDC1"
+      },
+      {
+        "name": "Deep Black Efecto Perla",
+        "hex": "#15171A"
+      },
+      {
+        "name": "Blanco Candy / Amarillo Lima Metalizado",
+        "hex": "#C6CB4D"
+      },
+      {
+        "name": "Blanco Candy / Bay Leaf Green Metalizado",
+        "hex": "#728776"
+      },
+      {
+        "name": "Blanco Candy / Medium Blue",
+        "hex": "#4B809A"
+      },
+      {
+        "name": "Blanco Candy / Monoplata Metalizado",
+        "hex": "#B8BDC1"
+      },
+      {
+        "name": "Blanco Candy / Starlight Blue Metalizado",
+        "hex": "#2C536E"
+      },
+      {
+        "name": "Monoplata / Rojo Cereza (GTX)",
+        "hex": "#A62E39"
+      },
+      {
+        "name": "Blanco Candy / Rojo Cereza (e-Motion)",
+        "hex": "#A62E39"
+      }
+    ],
     "images": [
       "img/cars/vw-idbuzz/vw-idbuzz_01.webp",
       "img/cars/vw-idbuzz/vw-idbuzz_02.webp",
@@ -127,7 +176,8 @@ const carsData = [
     "sources": [
       "https://www.volkswagen-comerciales.es/es/modelos/id-buzz.html",
       "https://www.volkswagen-comerciales.es/idhub/content/dam/onehub_nfz/importers/es/modelos/catalogos/IDBUZZ_297x210.pdf",
-      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz"
+      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz",
+      "https://www.volkswagen-comerciales.es/es/modelos/id-buzz.html/__layer/layers/ID-Buzz-SB/equipamiento_destaca/exterior/pinturas/master.layer"
     ],
     "priceText": "55.719–81.530 €"
   },
@@ -225,7 +275,40 @@ const carsData = [
         "seats": 3
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Deep Black Efecto Perla",
+        "hex": "#15171A"
+      },
+      {
+        "name": "Amarillo Lima Metalizado",
+        "hex": "#C6CB4D"
+      },
+      {
+        "name": "Bay Leaf Green Metalizado",
+        "hex": "#728776"
+      },
+      {
+        "name": "Energetic Orange Metalizado",
+        "hex": "#D96A29"
+      },
+      {
+        "name": "Monoplata Metalizado",
+        "hex": "#B8BDC1"
+      },
+      {
+        "name": "Starlight Blue Metalizado",
+        "hex": "#2C536E"
+      },
+      {
+        "name": "Blanco Candy",
+        "hex": "#F4F3ED"
+      },
+      {
+        "name": "Blanco Candy / Starlight Blue Metalizado",
+        "hex": "#2C536E"
+      }
+    ],
     "images": [
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_01.webp",
       "img/cars/vw-idbuzz-cargo/vw-idbuzz-cargo_02.webp",
@@ -240,7 +323,8 @@ const carsData = [
     "sources": [
       "https://www.volkswagen-comerciales.es/es/modelos/id-buzz-cargo.html/__layer/layers/id_buzz_cargo_sb/technical-data/master.layer",
       "https://www.volkswagen-comerciales.es/es/electricos-hibridos/autonomia.html",
-      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz"
+      "https://etiqueta0.com/furgonetas/volkswagen/id-buzz",
+      "https://www.volkswagen-comerciales.es/idhub/content/dam/onehub_nfz/importers/es/modelos/catalogos/IDBUZZ_CARGO_297x210.pdf"
     ],
     "priceText": "51.979–62.824 €"
   },
