@@ -151,9 +151,10 @@ const carsData = [
       "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_08.webp"
     ],
     "videos": [],
+    "brandInfo": {"logo": "img/brands/citroen.png", "group": "Stellantis", "relation": "Marca del grupo", "note": "Citroën forma parte del grupo Stellantis."},
     "brandUrl": "https://www.citroen.es/vehiculos-citroen/e-c3-aircross.html",
     "dataStatus": {
-      "status": "Ficha preparada; galería pendiente de fotografías",
+      "status": "Ficha y galería fotográfica enlazadas",
       "checkedAt": "31/10/2026"
     }
   },
