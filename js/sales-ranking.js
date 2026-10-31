@@ -11,6 +11,8 @@
         'BYD Dolphin Surf': { image: 'img/ranking/DOLPHINSURF.png' },
         'Kia EV3': { image: 'img/ranking/EV3.png' },
         'BYD Atto 3': { image: 'img/ranking/ATTO3.png' },
+        'BYD Atto 2': { image: 'img/ranking/byd-atto2.png' },
+        'Geely E2': { image: 'img/ranking/geelyE2.png' },
         'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' }
     };
 
