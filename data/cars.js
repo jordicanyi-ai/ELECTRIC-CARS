@@ -110,14 +110,14 @@ const carsData = [
     ],
     "colors": [],
     "images": [
-      "img/cars/vw-id3-neo/vw-id3-neo_01.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_02.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_03.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_04.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_05.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_06.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_07.webp",
-      "img/cars/vw-id3-neo/vw-id3-neo_08.webp"
+      "img/cars/id3-neo/id-3-neo_01.webp",
+      "img/cars/id3-neo/id-3-neo_02.webp",
+      "img/cars/id3-neo/id-3-neo_03.webp",
+      "img/cars/id3-neo/id-3-neo_04.webp",
+      "img/cars/id3-neo/id-3-neo_05.webp",
+      "img/cars/id3-neo/id-3-neo_06.webp",
+      "img/cars/id3-neo/id-3-neo_07.webp",
+      "img/cars/id3-neo/id-3-neo_08.webp"
     ],
     "videos": [],
     "brandInfo": {
@@ -128,7 +128,7 @@ const carsData = [
     },
     "brandUrl": "https://www.volkswagen.es/es/modelos/id3-neo.html",
     "dataStatus": {
-      "status": "Precios y mecánicas documentados; pendientes confirmación de colores de configurador y ocho fotos oficiales",
+      "status": "Precios y mecánicas documentados; ocho fotografías oficiales enlazadas; pendientes confirmar colores de configurador",
       "checkedAt": "01/11/2026"
     }
   },
