@@ -994,3 +994,8 @@ body[data-catalogue-view="ranking"] .car-rank-label {
     font-weight:750;
     line-height:1.2;
 }
+
+/* Balance ranking metric with the now-prominent position badge. */
+body[data-catalogue-view="ranking"] .ranking-featured-value strong {
+    font-size:clamp(20px,1.8vw,25px);
+}
