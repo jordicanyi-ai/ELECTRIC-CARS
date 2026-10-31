@@ -3809,8 +3809,8 @@ const carsData = [
       "capacity": "Consultar condiciones Kia"
     },
     "priceMin": 38715,
-    "priceMax": 38715,
-    "priceText": "38.715 €",
+    "priceMax": 51390,
+    "priceText": "38.715–51.390 €",
     "rangeText": "440–625 km WLTP",
     "minRangeVal": 440,
     "maxRangeVal": 625,
@@ -3839,7 +3839,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": ""
+      "note": "PVP de tarifa España septiembre 2026, IVA incluido, sin ayudas públicas ni descuentos comerciales o por financiación."
     },
     "chargingInfo": {
       "dcMax": "Consultar ficha por batería",
@@ -3861,9 +3861,31 @@ const carsData = [
         "accel": "7,4 s"
       },
       {
+        "name": "Earth Launch Edition 58,3 kWh",
+        "price": "41.165 €",
+        "priceValue": 41165,
+        "battery": "58,3 kWh",
+        "batteryType": "Iones de litio",
+        "power": "204 CV",
+        "range": "440 km WLTP",
+        "rangeValue": 440,
+        "accel": "7,5 s"
+      },
+      {
         "name": "Air 81,4 kWh",
-        "price": "Consultar PVP",
-        "priceValue": null,
+        "price": "43.990 €",
+        "priceValue": 43990,
+        "battery": "81,4 kWh",
+        "batteryType": "Iones de litio",
+        "power": "204 CV",
+        "range": "625 km WLTP",
+        "rangeValue": 625,
+        "accel": "7,7 s"
+      },
+      {
+        "name": "Earth Launch Edition 81,4 kWh",
+        "price": "46.440 €",
+        "priceValue": 46440,
         "battery": "81,4 kWh",
         "batteryType": "Iones de litio",
         "power": "204 CV",
@@ -3873,8 +3895,8 @@ const carsData = [
       },
       {
         "name": "GT-Line 81,4 kWh",
-        "price": "Consultar PVP",
-        "priceValue": null,
+        "price": "51.390 €",
+        "priceValue": 51390,
         "battery": "81,4 kWh",
         "batteryType": "Iones de litio",
         "power": "204 CV",
