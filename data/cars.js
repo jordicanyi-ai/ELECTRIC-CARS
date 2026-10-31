@@ -1,5 +1,138 @@
 const carsData = [
   {
+    "id": 59,
+    "brand": "Volkswagen",
+    "model": "ID.3 Neo",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "priceMin": 35491,
+    "priceMax": 47671,
+    "priceText": "35.491–47.671 €",
+    "rangeText": "415–628 km",
+    "minRangeVal": 415,
+    "maxRangeVal": 628,
+    "batteryText": "52–79 kWh útiles",
+    "batteryType": "NMC (todas las versiones)",
+    "powerText": "170–231 CV",
+    "trunk": 385,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "7,6 s (231 CV)",
+    "dimensions": "4,287 × 1,809 × 1,554 m",
+    "charging": "CC 105–183 kW según batería",
+    "description": "El Volkswagen ID.3 Neo es la renovación de 2026 del compacto eléctrico ID.3. Estrena diseño, interior y sistema de propulsión, con tres baterías NMC de 52, 58 y 79 kWh y versiones de 170, 190 y 231 CV. Tracción trasera.",
+    "highlights": [
+      "Autonomía WLTP de 415 a 628 km según versión",
+      "Interior renovado con pantalla central de 12,9 pulgadas y cuadro de 10,25 pulgadas",
+      "Hasta 183 kW de carga rápida con la batería de 79 kWh",
+      "Mandos más intuitivos y tecnologías de asistencia actualizadas",
+      "Tracción trasera y buen aprovechamiento del espacio"
+    ],
+    "considerations": [
+      "Precio de tarifa superior a algunos compactos eléctricos rivales",
+      "Maletero de 385 litros, sin maletero delantero",
+      "La carga rápida máxima varía mucho según batería",
+      "No confundir el nuevo ID.3 Neo con las versiones anteriores del ID.3"
+    ],
+    "idealFor": [
+      "Compacto",
+      "Viajes",
+      "Uso diario",
+      "Familias pequeñas"
+    ],
+    "warranty": {
+      "vehicle": "Consultar condiciones de garantía Volkswagen España",
+      "battery": "8 años / 160.000 km",
+      "capacity": "Consultar condiciones oficiales"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa publicados para España en abril de 2026, sin descuentos, promociones, financiación ni ayudas. Confirmar precio vigente al configurar."
+    },
+    "chargingInfo": {
+      "dcMax": "105–183 kW según versión",
+      "acMax": "Consultar por versión",
+      "fastChargeText": "Consultar tiempo por versión",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "Urban 52 kWh",
+        "price": "35.491 €",
+        "priceValue": 35491,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "170 CV",
+        "range": "415 km WLTP",
+        "rangeValue": 415
+      },
+      {
+        "name": "Urban 58 kWh",
+        "price": "38.441 €",
+        "priceValue": 38441,
+        "battery": "58 kWh",
+        "batteryType": "NMC",
+        "power": "190 CV",
+        "range": "492 km WLTP",
+        "rangeValue": 492
+      },
+      {
+        "name": "Urban 79 kWh",
+        "price": "43.821 €",
+        "priceValue": 43821,
+        "battery": "79 kWh",
+        "batteryType": "NMC",
+        "power": "231 CV",
+        "range": "628 km WLTP",
+        "rangeValue": 628
+      },
+      {
+        "name": "Style 58 kWh",
+        "price": "42.291 €",
+        "priceValue": 42291,
+        "battery": "58 kWh",
+        "batteryType": "NMC",
+        "power": "190 CV",
+        "range": "492 km WLTP",
+        "rangeValue": 492
+      },
+      {
+        "name": "Style 79 kWh",
+        "price": "47.671 €",
+        "priceValue": 47671,
+        "battery": "79 kWh",
+        "batteryType": "NMC",
+        "power": "231 CV",
+        "range": "628 km WLTP",
+        "rangeValue": 628
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-id3-neo/vw-id3-neo_01.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_02.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_03.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_04.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_05.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_06.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_07.webp",
+      "img/cars/vw-id3-neo/vw-id3-neo_08.webp"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Volkswagen Group",
+      "relation": "Marca Volkswagen",
+      "note": "Volkswagen forma parte del Grupo Volkswagen."
+    },
+    "brandUrl": "https://www.volkswagen.es/es/modelos/id3-neo.html",
+    "dataStatus": {
+      "status": "Precios y mecánicas documentados; pendientes confirmación de colores de configurador y ocho fotos oficiales",
+      "checkedAt": "01/11/2026"
+    }
+  },
+  {
     "id": 58,
     "brand": "CUPRA",
     "model": "Born",
