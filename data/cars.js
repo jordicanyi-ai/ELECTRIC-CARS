@@ -96,7 +96,29 @@ const carsData = [
         "batteryType": "LFP"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Kaolin",
+        "hex": "#F2F1EA",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Gris Artense",
+        "hex": "#8C9093"
+      },
+      {
+        "name": "Negro Perla Nera",
+        "hex": "#181A1D"
+      },
+      {
+        "name": "Azul Kiama",
+        "hex": "#346A89"
+      },
+      {
+        "name": "Verde Sirkka",
+        "hex": "#65766B"
+      }
+    ],
     "images": [
       "img/cars/citroen-eberlingo/citroen-eberlingo_01.webp",
       "img/cars/citroen-eberlingo/citroen-eberlingo_02.webp",
