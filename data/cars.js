@@ -99,13 +99,14 @@ const carsData = [
     ],
     "videos": [],
     "brandInfo": {
+      "logo": "img/brands/Geely.png",
       "group": "Geely Holding",
       "relation": "Marca del grupo",
       "note": "Geely Auto es una marca del grupo automovilístico chino Geely Holding."
     },
     "brandUrl": "https://www.geelyauto.es/",
     "dataStatus": {
-      "status": "Ficha y galería fotográfica enlazadas; logo pendiente",
+      "status": "Ficha y galería fotográfica enlazadas; logo enlazado",
       "checkedAt": "31/10/2026"
     }
   },
