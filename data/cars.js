@@ -133,14 +133,14 @@ const carsData = [
     ],
     "videos": [],
     "brandInfo": {
-      "logo": "img/brands/mg.png",
+      "logo": "img/brands/mg.svg",
       "group": "SAIC Motor",
       "relation": "Marca del grupo",
       "note": "MG Motor es una marca de origen británico propiedad del grupo automovilístico chino SAIC Motor."
     },
     "brandUrl": "https://www.mgmotor.es/model/mg4",
     "dataStatus": {
-      "status": "8 fotografías y 7 colores oficiales verificados; pendiente archivo del logotipo MG",
+      "status": "8 fotografías y 7 colores oficiales verificados; logotipo MG vectorial incorporado",
       "checkedAt": "31/10/2026"
     }
   },
