@@ -941,3 +941,31 @@ body[data-catalogue-view=ranking] .sort-control{
 .brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1.05}
 .brand-tagline{font-size:10px;font-weight:600;letter-spacing:.05px;line-height:1.3;margin-top:4px;color:var(--electric-muted,#526776)}
 @media(max-width:639px){.brand-tagline{font-size:9px;margin-top:3px}}
+
+/* Ranking: make the selected comparison metric immediately readable. */
+body[data-catalogue-view="ranking"] .ranking-featured-value {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin:0 0 15px;
+    padding:13px 15px;
+    border:1px solid #b8d0f6;
+    border-radius:10px;
+    background:#edf4ff;
+    color:#123b73;
+}
+body[data-catalogue-view="ranking"] .ranking-featured-value span {
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.7px;
+}
+body[data-catalogue-view="ranking"] .ranking-featured-value strong {
+    font-size:clamp(23px,2.2vw,30px);
+    font-weight:850;
+    line-height:1.15;
+    letter-spacing:-.6px;
+    overflow-wrap:anywhere;
+}
+body[data-catalogue-view="ranking"] .car-primary-specs strong { font-size:17px; }
+body[data-catalogue-view="ranking"] .car-secondary-specs strong { font-size:14px; }
+body[data-catalogue-view="ranking"] .car-position { font-size:12px; padding:8px 11px; }
