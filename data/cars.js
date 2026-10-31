@@ -5,6 +5,7 @@ const carsData = [
     "model": "E2",
     "type": "Utilitario / Compacto",
     "launchYear": 2026,
+    "warranty": {"vehicle": "8 años / 200.000 km", "battery": "8 años / 200.000 km", "capacity": "70 % mínimo"},
     "priceMin": 20990,
     "priceMax": 27490,
     "priceText": "20.990–27.490 €",
@@ -85,7 +86,7 @@ const carsData = [
         "accel": "11,5 s"
       }
     ],
-    "colors": [],
+    "colors": [{"name":"Blanco Nieve","hex":"#F2F2EE"},{"name":"Vanila","hex":"#E7DCC3"},{"name":"Verde Menta","hex":"#A7D1BC"},{"name":"Gris Grafito","hex":"#4B5158"},{"name":"Plata Stellar","hex":"#BFC5C9"},{"name":"Rosé","hex":"#D9A8AD"}],
     "images": [
       "img/cars/geely-e2/geely-e2_01.webp",
       "img/cars/geely-e2/geely-e2_02.webp",
@@ -104,7 +105,7 @@ const carsData = [
     },
     "brandUrl": "https://www.geelyauto.es/",
     "dataStatus": {
-      "status": "Ficha y galería fotográfica enlazadas; colores y logo pendientes",
+      "status": "Ficha y galería fotográfica enlazadas; logo pendiente",
       "checkedAt": "31/10/2026"
     }
   },
