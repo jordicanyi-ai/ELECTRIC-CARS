@@ -85,7 +85,7 @@ const carsData = [
         "rangeValue": 418
       }
     ],
-    "colors": [],
+    "colors": [{"name":"Dover White","hex":"#F3F1EB"},{"name":"Camden Grey","hex":"#73777C"},{"name":"Pebble Black","hex":"#1F2124"},{"name":"Holborn Blue","hex":"#49718D"},{"name":"Cosmic Silver","hex":"#B8BEC3"},{"name":"Stone Green","hex":"#A6B8A9"},{"name":"Diamond Red","hex":"#AA2637"}],
     "images": [
       "img/cars/mg4-urban/MG4-EV-Urban-01.webp",
       "img/cars/mg4-urban/MG4-EV-Urban-02.webp",
@@ -105,7 +105,7 @@ const carsData = [
     },
     "brandUrl": "https://www.mgmotor.es/",
     "dataStatus": {
-      "status": "Precios y datos principales verificados con MG España; 8 fotos enlazadas y verificadas; pendientes colores de catálogo",
+      "status": "Precios y datos principales verificados con MG España; 8 fotos enlazadas y verificadas; 7 colores del catálogo español incorporados",
       "checkedAt": "31/10/2026"
     }
   },
