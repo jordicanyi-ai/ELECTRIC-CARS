@@ -571,7 +571,7 @@ let currentImageIndexes = {};
 
                         <div class="relative aspect-video bg-slate-900 overflow-hidden">
 
-                            <img src="${video.thumb}"
+                            <img src="${video.thumb || (car.images && car.images[0]) || '' }"
                                 alt="${video.title}"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
 
