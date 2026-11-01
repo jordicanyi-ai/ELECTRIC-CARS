@@ -388,6 +388,16 @@ let currentImageIndexes = {};
         // Add the display unit's data-ad-slot value from AdSense to activate catalogue ads.
         const catalogueAdSlot = '';
 
+        function renderAdvertiseCard() {
+            return `<aside class="car-card" aria-label="Espacio publicitario" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 20px;gap:16px;background:#f2f6fc;border:1px dashed #9eb7d8;min-height:340px">
+                <span style="font-size:11px;letter-spacing:.12em;font-weight:800;color:#64748b;text-transform:uppercase">Espacio publicitario</span>
+                <i class="fa-solid fa-bullhorn" aria-hidden="true" style="font-size:35px;color:#2563eb"></i>
+                <strong style="font-size:27px;line-height:1.15;color:#20313e">ANÚNCIATE AQUÍ</strong>
+                <p style="font-size:14px;line-height:1.5;color:#64748b;max-width:250px">Tu marca puede estar presente en electricos.eu</p>
+                <a href="mailto:electricos.eu@gmail.com?subject=Publicidad%20en%20electricos.eu" style="background:#2563eb;color:white;padding:12px 20px;border-radius:9px;font-weight:750;text-decoration:none">Contactar</a>
+            </aside>`;
+        }
+
         function renderCatalogueAdSenseSlot(position) {
             const configured = /^\d+$/.test(catalogueAdSlot);
             return `<aside class="catalogue-inline-ad" aria-label="Publicidad">
@@ -458,6 +468,7 @@ let currentImageIndexes = {};
             grid.innerHTML = cardsHtml.reduce((html, card, index) => {
                 if (index % 9 === 0) html += '<div class="catalogue-batch">';
                 html += card;
+                if (index === 4 && !isRanking) html += renderAdvertiseCard();
                 const endOfBatch = (index + 1) % 9 === 0;
                 if (endOfBatch || index === cardsHtml.length - 1) html += '</div>';
                 if (endOfBatch) html += renderCatalogueAdSenseSlot(index + 1);
