@@ -6,8 +6,8 @@ const carsData = [
     "type": "SUV",
     "launchYear": 2023,
     "priceMin": 50300,
-    "priceMax": 0,
-    "priceText": "Desde 50.300 €",
+    "priceMax": 57300,
+    "priceText": "50.300–57.300 €",
     "rangeText": "Según versión y equipamiento",
     "minRangeVal": 0,
     "maxRangeVal": 516,
@@ -48,7 +48,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precio de tarifa de referencia en España para el iX1 eDrive20: 50.300 €, con IVA, sin descontar ayudas ni descuentos comerciales. Confirmar precio actualizado y tarifa de xDrive30 en configurador oficial."
+      "note": "PVP de referencia con IVA y sin ayudas ni descuentos: eDrive20 desde 50.300 €; xDrive30 57.300 € según tarifa de marzo de 2026 (km77). Confirmar configurador BMW España."
     },
     "chargingInfo": {
       "dcMax": "130 kW",
@@ -70,15 +70,77 @@ const carsData = [
       },
       {
         "name": "xDrive30",
-        "price": "Consultar tarifa actual",
+        "price": "57.300 €",
         "battery": "66,5 kWh brutos",
         "batteryType": "NMC",
         "power": "313 CV",
         "range": "Según configuración WLTP",
-        "accel": "5,6 s"
+        "accel": "5,6 s",
+        "priceValue": 57300
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Alpine White",
+        "hex": "#F5F5F2"
+      },
+      {
+        "name": "Black",
+        "hex": "#161719"
+      },
+      {
+        "name": "Mineral White",
+        "hex": "#E5E2D8"
+      },
+      {
+        "name": "Black Sapphire",
+        "hex": "#1B1D22"
+      },
+      {
+        "name": "Cape York Green",
+        "hex": "#638D82"
+      },
+      {
+        "name": "Phytonic Blue",
+        "hex": "#37568F"
+      },
+      {
+        "name": "Sanremo Green",
+        "hex": "#40603E"
+      },
+      {
+        "name": "Portimao Blue",
+        "hex": "#202E84"
+      },
+      {
+        "name": "Space Silver",
+        "hex": "#C6C9CC"
+      },
+      {
+        "name": "Storm Bay",
+        "hex": "#435053"
+      },
+      {
+        "name": "Blue Bay Lagoon",
+        "hex": "#358A8B"
+      },
+      {
+        "name": "Frozen Pure Grey",
+        "hex": "#C9CFCA"
+      },
+      {
+        "name": "Fire Red",
+        "hex": "#A52932"
+      },
+      {
+        "name": "Dune Grey",
+        "hex": "#8B8780"
+      },
+      {
+        "name": "Night Dusk Blue",
+        "hex": "#293C58"
+      }
+    ],
     "images": [
       "img/cars/bmw-ix1/bmw-ix1_01.webp",
       "img/cars/bmw-ix1/bmw-ix1_02.webp",
@@ -99,11 +161,12 @@ const carsData = [
     "brandInfo": {
       "group": "BMW Group",
       "relation": "Marca del grupo",
-      "note": "BMW es una marca alemana del BMW Group."
+      "note": "BMW es una marca alemana del BMW Group.",
+      "logo": "img/brands/bmw.svg"
     },
     "brandUrl": "https://www.bmw.es/es/coches-bmw/bmw-i/ix1/2022/bmw-ix1.html",
     "dataStatus": {
-      "status": "8 fotografías enlazadas; colores y logotipo pendientes",
+      "status": "8 fotografías enlazadas, logotipo BMW vectorial y colores incorporados",
       "checkedAt": "01/11/2026"
     }
   },
