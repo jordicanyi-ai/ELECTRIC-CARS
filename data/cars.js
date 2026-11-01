@@ -1923,7 +1923,13 @@ const carsData = [
     "launchYear": 2022,
     "frunkText": "No disponible",
     "batteryType": "NMC",
-    "videos": [],
+    "videos": [
+      {
+        "title": "Volkswagen ID. Buzz — vídeo oficial",
+        "url": "https://www.youtube.com/watch?v=2HRUv7veymc",
+        "thumb": "https://img.youtube.com/vi/2HRUv7veymc/hqdefault.jpg"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/volkswagen.svg",
       "group": "Grupo Volkswagen",
@@ -2119,7 +2125,13 @@ const carsData = [
     "launchYear": 2022,
     "frunkText": "No disponible",
     "batteryType": "NMC",
-    "videos": [],
+    "videos": [
+      {
+        "title": "Volkswagen ID. Buzz Cargo — prueba oficial",
+        "url": "https://www.youtube.com/watch?v=v_EegHmh4xA",
+        "thumb": "https://img.youtube.com/vi/v_EegHmh4xA/hqdefault.jpg"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/volkswagen.svg",
       "group": "Grupo Volkswagen",
