@@ -186,7 +186,7 @@ const carsData = [
     "batteryType": "LFP (52 y 61 kWh) / NMC (84 kWh)",
     "powerText": "170–326 CV",
     "trunk": 396,
-    "frunkText": "13 L en versiones con batería de 84 kWh; no disponible en las demás",
+    "frunkText": "13 L de frunk (solo batería de 84 kWh)",
     "seats": 5,
     "acceleration": "5,7–8,8 s (0–100 km/h)",
     "dimensions": "4,324 × 1,789 × 1,548 m",
