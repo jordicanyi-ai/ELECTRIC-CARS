@@ -1,5 +1,113 @@
 const carsData = [
   {
+    "id": 61,
+    "brand": "BMW",
+    "model": "iX1",
+    "type": "SUV",
+    "launchYear": 2023,
+    "priceMin": 50300,
+    "priceMax": 0,
+    "priceText": "Desde 50.300 €",
+    "rangeText": "Según versión y equipamiento",
+    "minRangeVal": 0,
+    "maxRangeVal": 516,
+    "batteryText": "66,5 kWh brutos (64,7 kWh útiles)",
+    "batteryType": "NMC (iones de litio)",
+    "powerText": "204–313 CV",
+    "trunk": 490,
+    "frunkText": "No disponible",
+    "seats": 5,
+    "acceleration": "5,6–8,6 s (0–100 km/h, según versión)",
+    "dimensions": "4,50 × 1,845 × 1,616 m",
+    "charging": "CC 130 kW; 10–80 % aprox. 29 min",
+    "description": "El BMW iX1 es un SUV eléctrico compacto de cinco plazas. La versión de acceso eDrive20 utiliza un motor de 204 CV y tracción delantera; el xDrive30 combina dos motores y tracción total, con 313 CV. Cuenta con un maletero de 490 litros y una batería de 66,5 kWh brutos.",
+    "highlights": [
+      "Versión eDrive20 de 204 CV con tracción delantera",
+      "Autonomía homologada WLTP de hasta 516 km, según versión y configuración",
+      "Maletero de 490 litros y cinco plazas",
+      "Carga rápida de hasta 130 kW en corriente continua",
+      "Versión xDrive30 de 313 CV con tracción total"
+    ],
+    "considerations": [
+      "El precio de acceso de 50.300 € es de tarifa y puede variar con el equipamiento",
+      "La autonomía homologada depende de llantas, acabado y versión",
+      "Sin maletero delantero",
+      "La carga rápida máxima es de 130 kW"
+    ],
+    "idealFor": [
+      "SUV compacto",
+      "Familias",
+      "Uso diario",
+      "Viajes"
+    ],
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje, según condiciones de BMW España",
+      "battery": "8 años o 160.000 km, según condiciones de BMW España",
+      "capacity": "Capacidad mínima del 70 % según condiciones de garantía de batería"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de tarifa de referencia en España para el iX1 eDrive20: 50.300 €, con IVA, sin descontar ayudas ni descuentos comerciales. Confirmar precio actualizado y tarifa de xDrive30 en configurador oficial."
+    },
+    "chargingInfo": {
+      "dcMax": "130 kW",
+      "acMax": "11 kW; 22 kW opcional según configuración",
+      "fastChargeText": "10–80 % aprox. 29 min",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "eDrive20",
+        "price": "Desde 50.300 €",
+        "priceValue": 50300,
+        "battery": "66,5 kWh brutos",
+        "batteryType": "NMC",
+        "power": "204 CV",
+        "range": "Hasta 516 km WLTP, según configuración",
+        "rangeValue": 516,
+        "accel": "8,6 s"
+      },
+      {
+        "name": "xDrive30",
+        "price": "Consultar tarifa actual",
+        "battery": "66,5 kWh brutos",
+        "batteryType": "NMC",
+        "power": "313 CV",
+        "range": "Según configuración WLTP",
+        "accel": "5,6 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/bmw-ix1/bmw-ix1_01.webp",
+      "img/cars/bmw-ix1/bmw-ix1_02.webp",
+      "img/cars/bmw-ix1/bmw-ix1_03.webp",
+      "img/cars/bmw-ix1/bmw-ix1_04.webp",
+      "img/cars/bmw-ix1/bmw-ix1_05.webp",
+      "img/cars/bmw-ix1/bmw-ix1_06.webp",
+      "img/cars/bmw-ix1/bmw-ix1_07.webp",
+      "img/cars/bmw-ix1/bmw-ix1_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "BMW iX1",
+        "url": "https://www.youtube.com/results?search_query=BMW+iX1+official",
+        "thumb": "img/cars/bmw-ix1/bmw-ix1_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "BMW Group",
+      "relation": "Marca del grupo",
+      "note": "BMW es una marca alemana del BMW Group."
+    },
+    "brandUrl": "https://www.bmw.es/es/coches-bmw/bmw-i/ix1/2022/bmw-ix1.html",
+    "dataStatus": {
+      "status": "8 fotografías enlazadas; colores y logotipo pendientes",
+      "checkedAt": "01/11/2026"
+    }
+  },
+  {
     "id": 60,
     "brand": "Audi",
     "model": "A2 E-TRON",
