@@ -490,7 +490,13 @@ const carsData = [
       "img/cars/id3-neo/id-3-neo_07.webp",
       "img/cars/id3-neo/id-3-neo_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Volkswagen ID.3 Neo — presentación oficial",
+        "url": "https://www.youtube.com/watch?v=go5kKTo023Y",
+        "thumb": "https://img.youtube.com/vi/go5kKTo023Y/hqdefault.jpg"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/volkswagen.svg",
       "group": "Volkswagen Group",
