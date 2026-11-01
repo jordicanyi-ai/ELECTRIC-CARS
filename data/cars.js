@@ -1,5 +1,148 @@
 const carsData = [
   {
+    "id": 60,
+    "brand": "Audi",
+    "model": "A2 E-TRON",
+    "type": "Compacto",
+    "launchYear": 2026,
+    "priceMin": 35760,
+    "priceMax": 56640,
+    "priceText": "35.760–56.640 €",
+    "rangeText": "423–646 km",
+    "minRangeVal": 423,
+    "maxRangeVal": 646,
+    "batteryText": "52–84 kWh",
+    "batteryType": "LFP (52 y 61 kWh) / NMC (84 kWh)",
+    "powerText": "170–326 CV",
+    "trunk": 396,
+    "frunkText": "13 L en versiones con batería de 84 kWh; no disponible en las demás",
+    "seats": 5,
+    "acceleration": "5,7–8,8 s (0–100 km/h)",
+    "dimensions": "4,324 × 1,789 × 1,548 m",
+    "charging": "CC 100–183 kW según batería; 10–80 % en 24–29 min",
+    "description": "El Audi A2 e-tron es un compacto eléctrico de cinco plazas fabricado en Ingolstadt (Alemania). Ofrece cuatro niveles de potencia, tres baterías y tracción trasera. Su consumo homologado más eficiente es de 12,8 kWh/100 km y las primeras entregas están previstas para diciembre de 2026.",
+    "highlights": [
+      "Autonomía WLTP de 423 a 646 km según versión",
+      "Consumo homologado desde 12,8 kWh/100 km",
+      "Carga rápida de hasta 183 kW en las versiones de 84 kWh",
+      "Interior digital con Audi virtual cockpit de 11,9 pulgadas y pantalla central de 12,8 pulgadas",
+      "Maletero trasero de 396 litros"
+    ],
+    "considerations": [
+      "Los 35.760 € corresponden a una edición de lanzamiento; la tarifa ordinaria de acceso es 37.760 €",
+      "El maletero delantero de 13 litros solo está disponible en versiones de 84 kWh",
+      "La carga rápida varía entre 100 y 183 kW según batería",
+      "Primeras entregas previstas para diciembre de 2026"
+    ],
+    "idealFor": [
+      "Uso diario",
+      "Compacto",
+      "Viajes",
+      "Familias pequeñas"
+    ],
+    "warranty": {
+      "vehicle": "Consultar garantía vigente de Audi España",
+      "battery": "Consultar garantía de batería de Audi España",
+      "capacity": "Consultar condiciones de capacidad mínima garantizada"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de entrada de 35.760 € anunciado para Attraction Launch Edition. Tarifa ordinaria: 37.760–56.640 €. IVA incluido, sin descontar ayudas públicas. La edición de lanzamiento puede estar sujeta a disponibilidad y condiciones comerciales."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW (52 kWh), 105 kW (61 kWh), 183 kW (84 kWh)",
+      "acMax": "Consultar según versión",
+      "fastChargeText": "10–80 % en 24–29 min según versión",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "Attraction Launch Edition 52 kWh",
+        "price": "35.760 €",
+        "priceValue": 35760,
+        "battery": "52 kWh",
+        "batteryType": "LFP",
+        "power": "170 CV",
+        "range": "423 km WLTP",
+        "rangeValue": 423,
+        "accel": "8,8 s"
+      },
+      {
+        "name": "125 kW 52 kWh (tarifa)",
+        "price": "37.760 €",
+        "priceValue": 37760,
+        "battery": "52 kWh",
+        "batteryType": "LFP",
+        "power": "170 CV",
+        "range": "423 km WLTP",
+        "rangeValue": 423,
+        "accel": "8,8 s"
+      },
+      {
+        "name": "140 kW 61 kWh",
+        "price": "41.460 €",
+        "priceValue": 41460,
+        "battery": "61 kWh",
+        "batteryType": "LFP",
+        "power": "190 CV",
+        "range": "515 km WLTP",
+        "rangeValue": 515,
+        "accel": "7,9 s"
+      },
+      {
+        "name": "170 kW 84 kWh",
+        "price": "47.360 €",
+        "priceValue": 47360,
+        "battery": "84 kWh",
+        "batteryType": "NMC",
+        "power": "231 CV",
+        "range": "646 km WLTP",
+        "rangeValue": 646,
+        "accel": "7,0 s"
+      },
+      {
+        "name": "240 kW 84 kWh Black Line",
+        "price": "56.640 €",
+        "priceValue": 56640,
+        "battery": "84 kWh",
+        "batteryType": "NMC",
+        "power": "326 CV",
+        "range": "630 km WLTP",
+        "rangeValue": 630,
+        "accel": "5,7 s"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/audi-a2-etron/audi-a2-etron_01.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_02.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_03.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_04.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_05.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_06.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_07.webp",
+      "img/cars/audi-a2-etron/audi-a2-etron_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Audi A2 e-tron",
+        "url": "https://www.youtube.com/results?search_query=Audi+A2+e-tron+official",
+        "thumb": "img/cars/audi-a2-etron/audi-a2-etron_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "Volkswagen Group",
+      "relation": "Marca del grupo",
+      "note": "Audi es un fabricante alemán del Grupo Volkswagen."
+    },
+    "brandUrl": "https://www.audi.es/es/",
+    "dataStatus": {
+      "status": "8 fotografías enlazadas; colores y garantía pendientes de verificación",
+      "checkedAt": "01/11/2026"
+    }
+  },
+  {
     "id": 59,
     "brand": "Volkswagen",
     "model": "ID.3 Neo",
