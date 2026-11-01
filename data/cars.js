@@ -635,7 +635,13 @@ const carsData = [
       "img/cars/cupra-born/cupra-born_07.webp",
       "img/cars/cupra-born/cupra-born_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de CUPRA Born en YouTube",
+        "url": "https://www.youtube.com/results?search_query=CUPRA%20Born%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/cupra-born/cupra-born_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/cupra.svg",
       "group": "Volkswagen Group",
@@ -774,7 +780,13 @@ const carsData = [
       "img/cars/mg4-urban/MG4-EV-Urban-07.webp",
       "img/cars/mg4-urban/MG4-EV-Urban-08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de MG MG4 Urban en YouTube",
+        "url": "https://www.youtube.com/results?search_query=MG%20MG4%20Urban%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/mg4-urban/MG4-EV-Urban-01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/mg.svg",
       "group": "SAIC Motor",
@@ -919,7 +931,13 @@ const carsData = [
       "img/cars/mg4-ev/mg4-ev_07.webp",
       "img/cars/mg4-ev/mg4-ev_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de MG MG4 EV en YouTube",
+        "url": "https://www.youtube.com/results?search_query=MG%20MG4%20EV%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/mg4-ev/mg4-ev_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/mg.svg",
       "group": "SAIC Motor",
@@ -1144,7 +1162,13 @@ const carsData = [
       "img/cars/kia-ev2/kia-ev2_07.webp",
       "img/cars/kia-ev2/kia-ev2_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Kia EV2 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Kia%20EV2%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/kia-ev2/kia-ev2_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
@@ -1282,7 +1306,13 @@ const carsData = [
       "img/cars/geely-e5/geely-e5_07.webp",
       "img/cars/geely-e5/geely-e5_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Geely E5 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Geely%20E5%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/geely-e5/geely-e5_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/Geely.png",
       "group": "Geely Holding",
@@ -1422,7 +1452,13 @@ const carsData = [
       "img/cars/geely-e2/geely-e2_07.webp",
       "img/cars/geely-e2/geely-e2_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Geely E2 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Geely%20E2%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/geely-e2/geely-e2_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/Geely.png",
       "group": "Geely Holding",
@@ -1586,7 +1622,13 @@ const carsData = [
       "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_07.webp",
       "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Citroën ë-C3 Aircross en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-C3%20Aircross%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/citroen.png",
       "group": "Stellantis",
@@ -1752,7 +1794,13 @@ const carsData = [
       "img/cars/kia-pv5/kia-pv5_07.webp",
       "img/cars/kia-pv5/kia-pv5_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Kia PV5 Passenger en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Kia%20PV5%20Passenger%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/kia-pv5/kia-pv5_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
@@ -1905,7 +1953,13 @@ const carsData = [
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_07.webp",
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Kia PV5 Cargo en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Kia%20PV5%20Cargo%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/kia-pv5-cargo/kia-pv5-cargo_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/kia.png",
       "group": "Hyundai Motor Group",
@@ -2406,7 +2460,13 @@ const carsData = [
       "img/cars/citroen-eberlingo/citroen-eberlingo_07.webp",
       "img/cars/citroen-eberlingo/citroen-eberlingo_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos de Citroën ë-Berlingo en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-Berlingo%20el%C3%A9ctrico%20presentaci%C3%B3n%20oficial",
+        "thumb": "img/cars/citroen-eberlingo/citroen-eberlingo_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/citroen.png",
       "group": "Stellantis",
