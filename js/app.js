@@ -468,7 +468,7 @@ let currentImageIndexes = {};
             grid.innerHTML = cardsHtml.reduce((html, card, index) => {
                 if (index % 9 === 0) html += '<div class="catalogue-batch">';
                 html += card;
-                if (index === 4 && !isRanking) html += renderAdvertiseCard();
+                if (!isRanking && [4, 24, 44].includes(index)) html += renderAdvertiseCard();
                 const endOfBatch = (index + 1) % 9 === 0;
                 if (endOfBatch || index === cardsHtml.length - 1) html += '</div>';
                 if (endOfBatch) html += renderCatalogueAdSenseSlot(index + 1);
