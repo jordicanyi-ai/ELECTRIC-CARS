@@ -41,9 +41,9 @@ const carsData = [
       "Familias pequeñas"
     ],
     "warranty": {
-      "vehicle": "Consultar garantía vigente de Audi España",
-      "battery": "Consultar garantía de batería de Audi España",
-      "capacity": "Consultar condiciones de capacidad mínima garantizada"
+      "vehicle": "3 años de garantía oficial Audi para vehículos nuevos",
+      "battery": "8 años o 160.000 km (lo que ocurra primero), según condiciones de Audi España",
+      "capacity": "Consultar cobertura de degradación y porcentaje mínimo garantizado en las condiciones específicas de Audi España"
     },
     "priceInfo": {
       "includesVat": true,
@@ -113,7 +113,32 @@ const carsData = [
         "accel": "5,7 s"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Azul Horizon",
+        "hex": "#5C8192"
+      },
+      {
+        "name": "Gris Arrow",
+        "hex": "#85898C"
+      },
+      {
+        "name": "Verde Pistacho",
+        "hex": "#A5B87C"
+      },
+      {
+        "name": "Azul Intenso",
+        "hex": "#173B7A"
+      },
+      {
+        "name": "Gris Daytona efecto perla",
+        "hex": "#62676E"
+      },
+      {
+        "name": "Negro Mythos",
+        "hex": "#141518"
+      }
+    ],
     "images": [
       "img/cars/audi-a2-etron/audi-a2-etron_01.webp",
       "img/cars/audi-a2-etron/audi-a2-etron_02.webp",
@@ -134,11 +159,12 @@ const carsData = [
     "brandInfo": {
       "group": "Volkswagen Group",
       "relation": "Marca del grupo",
-      "note": "Audi es un fabricante alemán del Grupo Volkswagen."
+      "note": "Audi es un fabricante alemán del Grupo Volkswagen.",
+      "logo": "img/brands/audi.svg"
     },
     "brandUrl": "https://www.audi.es/es/",
     "dataStatus": {
-      "status": "8 fotografías enlazadas; colores y garantía pendientes de verificación",
+      "status": "8 fotografías enlazadas; garantía oficial, colores y logotipo Audi incorporados",
       "checkedAt": "01/11/2026"
     }
   },
@@ -257,31 +283,31 @@ const carsData = [
       }
     ],
     "colors": [
-  {
-    "name": "Gris Cemento",
-    "hex": "#9B9D9B"
-  },
-  {
-    "name": "Azul Noruega",
-    "hex": "#547487"
-  },
-  {
-    "name": "Negro Granadilla",
-    "hex": "#1C1D20"
-  },
-  {
-    "name": "Blanco Glaciar",
-    "hex": "#ECECE8"
-  },
-  {
-    "name": "Plata Escama",
-    "hex": "#B7BFC2"
-  },
-  {
-    "name": "Verde Olivo Oscuro",
-    "hex": "#424F40"
-  }
-],
+      {
+        "name": "Gris Cemento",
+        "hex": "#9B9D9B"
+      },
+      {
+        "name": "Azul Noruega",
+        "hex": "#547487"
+      },
+      {
+        "name": "Negro Granadilla",
+        "hex": "#1C1D20"
+      },
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#ECECE8"
+      },
+      {
+        "name": "Plata Escama",
+        "hex": "#B7BFC2"
+      },
+      {
+        "name": "Verde Olivo Oscuro",
+        "hex": "#424F40"
+      }
+    ],
     "images": [
       "img/cars/id3-neo/id-3-neo_01.webp",
       "img/cars/id3-neo/id-3-neo_02.webp",
@@ -530,7 +556,36 @@ const carsData = [
         "rangeValue": 418
       }
     ],
-    "colors": [{"name":"Dover White","hex":"#F3F1EB"},{"name":"Camden Grey","hex":"#73777C"},{"name":"Pebble Black","hex":"#1F2124"},{"name":"Holborn Blue","hex":"#49718D"},{"name":"Cosmic Silver","hex":"#B8BEC3"},{"name":"Stone Green","hex":"#A6B8A9"},{"name":"Diamond Red","hex":"#AA2637"}],
+    "colors": [
+      {
+        "name": "Dover White",
+        "hex": "#F3F1EB"
+      },
+      {
+        "name": "Camden Grey",
+        "hex": "#73777C"
+      },
+      {
+        "name": "Pebble Black",
+        "hex": "#1F2124"
+      },
+      {
+        "name": "Holborn Blue",
+        "hex": "#49718D"
+      },
+      {
+        "name": "Cosmic Silver",
+        "hex": "#B8BEC3"
+      },
+      {
+        "name": "Stone Green",
+        "hex": "#A6B8A9"
+      },
+      {
+        "name": "Diamond Red",
+        "hex": "#AA2637"
+      }
+    ],
     "images": [
       "img/cars/mg4-urban/MG4-EV-Urban-01.webp",
       "img/cars/mg4-urban/MG4-EV-Urban-02.webp",
@@ -1068,7 +1123,11 @@ const carsData = [
     "model": "E2",
     "type": "Utilitario / Compacto",
     "launchYear": 2026,
-    "warranty": {"vehicle": "8 años / 200.000 km", "battery": "8 años / 200.000 km", "capacity": "70 % mínimo"},
+    "warranty": {
+      "vehicle": "8 años / 200.000 km",
+      "battery": "8 años / 200.000 km",
+      "capacity": "70 % mínimo"
+    },
     "priceMin": 20990,
     "priceMax": 27490,
     "priceText": "20.990–27.490 €",
@@ -1149,7 +1208,32 @@ const carsData = [
         "accel": "11,5 s"
       }
     ],
-    "colors": [{"name":"Blanco Nieve","hex":"#F2F2EE"},{"name":"Vanila","hex":"#E7DCC3"},{"name":"Verde Menta","hex":"#A7D1BC"},{"name":"Gris Grafito","hex":"#4B5158"},{"name":"Plata Stellar","hex":"#BFC5C9"},{"name":"Rosé","hex":"#D9A8AD"}],
+    "colors": [
+      {
+        "name": "Blanco Nieve",
+        "hex": "#F2F2EE"
+      },
+      {
+        "name": "Vanila",
+        "hex": "#E7DCC3"
+      },
+      {
+        "name": "Verde Menta",
+        "hex": "#A7D1BC"
+      },
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5158"
+      },
+      {
+        "name": "Plata Stellar",
+        "hex": "#BFC5C9"
+      },
+      {
+        "name": "Rosé",
+        "hex": "#D9A8AD"
+      }
+    ],
     "images": [
       "img/cars/geely-e2/geely-e2_01.webp",
       "img/cars/geely-e2/geely-e2_02.webp",
@@ -1325,7 +1409,12 @@ const carsData = [
       "img/cars/citroen-ec3-aircross/citroen-ec3-aircross_08.webp"
     ],
     "videos": [],
-    "brandInfo": {"logo": "img/brands/citroen.png", "group": "Stellantis", "relation": "Marca del grupo", "note": "Citroën forma parte del grupo Stellantis."},
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Citroën forma parte del grupo Stellantis."
+    },
     "brandUrl": "https://www.citroen.es/vehiculos-citroen/e-c3-aircross.html",
     "dataStatus": {
       "status": "Ficha y galería fotográfica enlazadas",
@@ -1368,109 +1457,113 @@ const carsData = [
       "Familias",
       "Viajes y transporte de pasajeros"
     ],
-    "warranty": {"vehicle": "7 años / 150.000 km", "battery": "8 años / 160.000 km", "capacity": "70 % mínimo de capacidad original"},
+    "warranty": {
+      "vehicle": "7 años / 150.000 km",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % mínimo de capacidad original"
+    },
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
       "note": "Tarifa octubre 2026 publicada sin IVA (Fleetdata vía etiqueta0); importes calculados con IVA del 21 %, redondeados al euro, sin descuentos ni ayudas."
     },
     "trims": [
-  {
-    "name": "Essential 51,5 kWh",
-    "price": "37.948 €",
-    "priceValue": 37948,
-    "battery": "51,5 kWh",
-    "batteryType": "NMC",
-    "power": "122 CV",
-    "range": "295 km WLTP",
-    "rangeValue": 295,
-    "accel": "12,8 s"
-  },
-  {
-    "name": "Plus 51,5 kWh",
-    "price": "39.447 €",
-    "priceValue": 39447,
-    "battery": "51,5 kWh",
-    "batteryType": "NMC",
-    "power": "122 CV",
-    "range": "295 km WLTP",
-    "rangeValue": 295,
-    "accel": "12,8 s"
-  },
-  {
-    "name": "Essential 71,2 kWh",
-    "price": "41.948 €",
-    "priceValue": 41948,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "412 km WLTP",
-    "rangeValue": 412,
-    "accel": "10,7 s"
-  },
-  {
-    "name": "Plus 71,2 kWh",
-    "price": "44.348 €",
-    "priceValue": 44348,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "412 km WLTP",
-    "rangeValue": 412,
-    "accel": "10,7 s"
-  },
-  {
-    "name": "Elite 71,2 kWh",
-    "price": "46.448 €",
-    "priceValue": 46448,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "412 km WLTP",
-    "rangeValue": 412,
-    "accel": "10,7 s"
-  }
-],
-  "colors": [
-  {
-    "name": "Clear White",
-    "hex": "#F3F2ED",
-    "border": "#CBD5E1"
-  },
-  {
-    "name": "Snow White Pearl",
-    "hex": "#E9E9E5",
-    "border": "#CBD5E1"
-  },
-  {
-    "name": "Steel Grey",
-    "hex": "#777E83"
-  },
-  {
-    "name": "Aurora Black Pearl",
-    "hex": "#181A1E"
-  },
-  {
-    "name": "Cityscape Green",
-    "hex": "#6C8179"
-  },
-  {
-    "name": "Runway Red",
-    "hex": "#A63C41"
-  },
-  {
-    "name": "Soft Mint",
-    "hex": "#A7C6C1"
-  },
-  {
-    "name": "Lakehouse Grey",
-    "hex": "#8A969C"
-  },
-  {
-    "name": "Frost Blue",
-    "hex": "#9DB9C9"
-  }
-],
+      {
+        "name": "Essential 51,5 kWh",
+        "price": "37.948 €",
+        "priceValue": 37948,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "295 km WLTP",
+        "rangeValue": 295,
+        "accel": "12,8 s"
+      },
+      {
+        "name": "Plus 51,5 kWh",
+        "price": "39.447 €",
+        "priceValue": 39447,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "295 km WLTP",
+        "rangeValue": 295,
+        "accel": "12,8 s"
+      },
+      {
+        "name": "Essential 71,2 kWh",
+        "price": "41.948 €",
+        "priceValue": 41948,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "412 km WLTP",
+        "rangeValue": 412,
+        "accel": "10,7 s"
+      },
+      {
+        "name": "Plus 71,2 kWh",
+        "price": "44.348 €",
+        "priceValue": 44348,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "412 km WLTP",
+        "rangeValue": 412,
+        "accel": "10,7 s"
+      },
+      {
+        "name": "Elite 71,2 kWh",
+        "price": "46.448 €",
+        "priceValue": 46448,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "412 km WLTP",
+        "rangeValue": 412,
+        "accel": "10,7 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Clear White",
+        "hex": "#F3F2ED",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Snow White Pearl",
+        "hex": "#E9E9E5",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Steel Grey",
+        "hex": "#777E83"
+      },
+      {
+        "name": "Aurora Black Pearl",
+        "hex": "#181A1E"
+      },
+      {
+        "name": "Cityscape Green",
+        "hex": "#6C8179"
+      },
+      {
+        "name": "Runway Red",
+        "hex": "#A63C41"
+      },
+      {
+        "name": "Soft Mint",
+        "hex": "#A7C6C1"
+      },
+      {
+        "name": "Lakehouse Grey",
+        "hex": "#8A969C"
+      },
+      {
+        "name": "Frost Blue",
+        "hex": "#9DB9C9"
+      }
+    ],
     "images": [
       "img/cars/kia-pv5/kia-pv5_01.webp",
       "img/cars/kia-pv5/kia-pv5_02.webp",
@@ -1529,97 +1622,101 @@ const carsData = [
       "Reparto y profesionales",
       "Flotas"
     ],
-    "warranty": {"vehicle": "7 años / 150.000 km", "battery": "8 años / 160.000 km", "capacity": "70 % mínimo de capacidad original"},
+    "warranty": {
+      "vehicle": "7 años / 150.000 km",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % mínimo de capacidad original"
+    },
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
       "note": "Tarifa octubre 2026 publicada sin IVA (Fleetdata vía etiqueta0); importes calculados con IVA del 21 %, redondeados al euro, sin descuentos ni ayudas."
     },
     "trims": [
-  {
-    "name": "Essential 51,5 kWh",
-    "price": "38.448 €",
-    "priceValue": 38448,
-    "battery": "51,5 kWh",
-    "batteryType": "NMC",
-    "power": "122 CV",
-    "range": "297 km WLTP",
-    "rangeValue": 297,
-    "accel": "16,2 s"
-  },
-  {
-    "name": "Plus 51,5 kWh",
-    "price": "39.423 €",
-    "priceValue": 39423,
-    "battery": "51,5 kWh",
-    "batteryType": "NMC",
-    "power": "122 CV",
-    "range": "297 km WLTP",
-    "rangeValue": 297,
-    "accel": "16,2 s"
-  },
-  {
-    "name": "Essential 71,2 kWh",
-    "price": "42.448 €",
-    "priceValue": 42448,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "416 km WLTP",
-    "rangeValue": 416,
-    "accel": "12,4 s"
-  },
-  {
-    "name": "Plus 71,2 kWh",
-    "price": "44.322 €",
-    "priceValue": 44322,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "416 km WLTP",
-    "rangeValue": 416,
-    "accel": "12,4 s"
-  },
-  {
-    "name": "Elite 71,2 kWh",
-    "price": "46.852 €",
-    "priceValue": 46852,
-    "battery": "71,2 kWh",
-    "batteryType": "NMC",
-    "power": "163 CV",
-    "range": "416 km WLTP",
-    "rangeValue": 416,
-    "accel": "12,4 s"
-  }
-],
-  "colors": [
-  {
-    "name": "Clear White",
-    "hex": "#F3F2ED",
-    "border": "#CBD5E1"
-  },
-  {
-    "name": "Snow White Pearl",
-    "hex": "#E9E9E5",
-    "border": "#CBD5E1"
-  },
-  {
-    "name": "Steel Grey",
-    "hex": "#777E83"
-  },
-  {
-    "name": "Aurora Black Pearl",
-    "hex": "#181A1E"
-  },
-  {
-    "name": "Cityscape Green",
-    "hex": "#6C8179"
-  },
-  {
-    "name": "Soft Mint",
-    "hex": "#A7C6C1"
-  }
-],
+      {
+        "name": "Essential 51,5 kWh",
+        "price": "38.448 €",
+        "priceValue": 38448,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "297 km WLTP",
+        "rangeValue": 297,
+        "accel": "16,2 s"
+      },
+      {
+        "name": "Plus 51,5 kWh",
+        "price": "39.423 €",
+        "priceValue": 39423,
+        "battery": "51,5 kWh",
+        "batteryType": "NMC",
+        "power": "122 CV",
+        "range": "297 km WLTP",
+        "rangeValue": 297,
+        "accel": "16,2 s"
+      },
+      {
+        "name": "Essential 71,2 kWh",
+        "price": "42.448 €",
+        "priceValue": 42448,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "416 km WLTP",
+        "rangeValue": 416,
+        "accel": "12,4 s"
+      },
+      {
+        "name": "Plus 71,2 kWh",
+        "price": "44.322 €",
+        "priceValue": 44322,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "416 km WLTP",
+        "rangeValue": 416,
+        "accel": "12,4 s"
+      },
+      {
+        "name": "Elite 71,2 kWh",
+        "price": "46.852 €",
+        "priceValue": 46852,
+        "battery": "71,2 kWh",
+        "batteryType": "NMC",
+        "power": "163 CV",
+        "range": "416 km WLTP",
+        "rangeValue": 416,
+        "accel": "12,4 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Clear White",
+        "hex": "#F3F2ED",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Snow White Pearl",
+        "hex": "#E9E9E5",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Steel Grey",
+        "hex": "#777E83"
+      },
+      {
+        "name": "Aurora Black Pearl",
+        "hex": "#181A1E"
+      },
+      {
+        "name": "Cityscape Green",
+        "hex": "#6C8179"
+      },
+      {
+        "name": "Soft Mint",
+        "hex": "#A7C6C1"
+      }
+    ],
     "images": [
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_01.webp",
       "img/cars/kia-pv5-cargo/kia-pv5-cargo_02.webp",
