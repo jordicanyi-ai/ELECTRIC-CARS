@@ -1,56 +1,57 @@
-// Ranking provisional octubre: microdatos DGT hasta 29/10/2026 (turismos BEV nuevos).
-// https://autonomiacocheselectricos.es/coches/mas-vendidos/2026/octubre/
-// Ranking anual: datos enero-septiembre 2026, pendientes de actualizar al cierre de octubre.
+// Octubre: cierre mensual publicado por Observatorio ElecTrips (DGT).
+// Acumulado anual: datos hasta 30/10/2026; pendiente de consolidación del cierre.
+// https://observatorio.electrips.es/matriculaciones-coches-electricos/octubre-2026
+// https://autonomiacocheselectricos.es/coches/mas-vendidos/2026/
 window.electricosSalesRanking = {
-  "source": "DGT (microdatos diarios, elaboración Autonomía Coches Eléctricos); acumulado anterior: motor.es",
-  "updatedAt": "2026-10-31",
+  "source": "DGT (microdatos); octubre: Observatorio ElecTrips, cierre mensual; acumulado: Autonomía Coches Eléctricos, datos hasta 30/10",
+  "updatedAt": "2026-11-01",
   "monthly": {
-    "label": "Octubre 2026 · Provisional hasta el 29/10 · Turismos 100 % eléctricos",
+    "label": "Octubre 2026 · Cierre mensual DGT · Turismos 100 % eléctricos",
     "models": [
       {
         "model": "Tesla Model 3",
-        "units": 1080
+        "units": 1150
       },
       {
         "model": "Kia EV3",
-        "units": 602
+        "units": 721
       },
       {
         "model": "Geely E2",
-        "units": 557
+        "units": 699
       },
       {
         "model": "BYD Atto 2",
-        "units": 524
+        "units": 602
       },
       {
         "model": "BYD Dolphin Surf",
-        "units": 402
+        "units": 483
       }
     ]
   },
   "yearly": {
-    "label": "Enero–septiembre 2026 · Turismos 100 % eléctricos",
+    "label": "Enero–octubre 2026 · Datos DGT hasta el 30/10 (pendiente consolidación)",
     "models": [
       {
         "model": "Tesla Model 3",
-        "units": 8468
+        "units": 9626
       },
       {
         "model": "Tesla Model Y",
-        "units": 4972
+        "units": 5289
       },
       {
         "model": "BYD Dolphin Surf",
-        "units": 4334
+        "units": 4806
       },
       {
         "model": "Kia EV3",
-        "units": 3828
+        "units": 4523
       },
       {
-        "model": "Toyota C-HR+",
-        "units": 3359
+        "model": "BYD Atto 2",
+        "units": 3758
       }
     ]
   }
