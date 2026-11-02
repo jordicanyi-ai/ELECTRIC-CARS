@@ -185,13 +185,13 @@ const carsData = [
     },
     "brandUrl": "https://auto.suzuki.es/modelos/electrico/evitara",
     "dataStatus": {
-      "status": "Galería y logotipo enlazados; garantía de batería y cobertura ampliada sujetas a condiciones oficiales",
+      "status": "Galería y logotipo enlazados; garantías revisadas, con condiciones y elegibilidad de ampliación sujetas a confirmación en Suzuki España",
       "checkedAt": "02/11/2026"
     },
     "warranty": {
-      "vehicle": "3 años o 100.000 km de garantía legal/comercial del vehículo; Suzuki España ofrece cobertura ampliada hasta 10 años o 200.000 km bajo condiciones del programa Suzuki Care / garantía activada por mantenimiento (confirmar elegibilidad del e VITARA)",
-      "battery": "8 años o 160.000 km para la batería de alta tensión, según condiciones de Suzuki",
-      "capacity": "Consultar umbral de capacidad garantizada en las condiciones oficiales de la batería"
+      "vehicle": "3 años o 100.000 km de garantía de fábrica (confirmar condiciones específicas en Suzuki España). Programa Tranquilidad Suzuki: cobertura ampliable hasta 10 años con mantenimiento en la red oficial y sujeto a elegibilidad y exclusiones.",
+      "battery": "8 años o 160.000 km para la batería de alta tensión.",
+      "capacity": "Umbral de capacidad del 70 % indicado por Suzuki en documentación de otros mercados; pendiente de confirmar las condiciones contractuales para España."
     }
   },
   {
