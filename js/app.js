@@ -88,6 +88,10 @@ let currentImageIndexes = {};
             }
             filterCars();
             renderCompareBar();
+            const linkedCarId = new URLSearchParams(window.location.search).get('car');
+            if (linkedCarId && /^\\d+$/.test(linkedCarId) && carsData.some(car => car.id === Number(linkedCarId))) {
+                openCarModal(Number(linkedCarId));
+            }
         }
 
         function toggleDetailCompare(carId, button, event) {
