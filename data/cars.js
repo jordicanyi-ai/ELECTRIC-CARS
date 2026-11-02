@@ -16,7 +16,7 @@ const carsData = [
     "powerText": "184–269 CV",
     "trunk": 15100,
     "seats": "2–7 según carrocería",
-    "acceleration": "No comunicado",
+    "acceleration": "7,2–11,8 s",
     "dimensions": "L2–L4, varias alturas; longitud útil de carga hasta 4.256 mm (L4)",
     "charging": "CC 115 kW (68 kWh) / 180 kW (89 kWh) · 10–80 % en 37 / 28 min",
     "description": "Ford E-Transit eléctrica disponible como furgón cerrado de diferentes longitudes y alturas, doble cabina para hasta siete ocupantes y chasis cabina para carrozados profesionales. La gama utiliza baterías de 68 y 89 kWh útiles, con autonomía WLTP máxima de 317 y 402 km según configuración. Los PVP publicados para España van de 73.550 a 89.650 € según versiones listadas.",
@@ -57,7 +57,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L4 Chasis cabina · 184 CV · 75 kWh",
@@ -67,7 +68,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L2 Furgón · 184 CV · 75 kWh",
@@ -77,7 +79,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L3 Furgón · 184 CV · 75 kWh",
@@ -87,7 +90,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L3 Chasis cabina · 269 CV · 75 kWh",
@@ -97,7 +101,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "390 L2 Furgón · 184 CV · 75 kWh",
@@ -107,7 +112,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "425 L3 Chasis cabina · 184 CV · 75 kWh",
@@ -117,7 +123,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L4 Furgón · 184 CV · 75 kWh",
@@ -127,7 +134,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L4 Chasis cabina · 269 CV · 75 kWh",
@@ -137,7 +145,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "350 L2 Furgón · 269 CV · 75 kWh",
@@ -147,7 +156,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L4 Chasis cabina · 184 CV · 75 kWh",
@@ -157,7 +167,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "425 L2 Furgón · 184 CV · 75 kWh",
@@ -167,7 +178,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "350 L3 Furgón · 269 CV · 75 kWh",
@@ -177,7 +189,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L3 Furgón · 184 CV · 75 kWh",
@@ -187,7 +200,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "390 L2 Furgón · 269 CV · 75 kWh",
@@ -197,7 +211,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L3 Chasis cabina · 269 CV · 75 kWh",
@@ -207,7 +222,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "350 L4 Furgón · 269 CV · 75 kWh",
@@ -217,7 +233,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L4 Furgón · 184 CV · 75 kWh",
@@ -227,7 +244,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "10,8 s"
       },
       {
         "name": "425 L4 Chasis cabina · 269 CV · 75 kWh",
@@ -237,7 +255,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L2 Furgón · 269 CV · 75 kWh",
@@ -247,7 +266,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L3 Doble cabina · 184 CV · 75 kWh",
@@ -257,7 +277,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 7
+        "seats": 7,
+        "accel": "10,8 s"
       },
       {
         "name": "425 L3 Furgón · 269 CV · 75 kWh",
@@ -267,7 +288,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L4 Furgón · 269 CV · 75 kWh",
@@ -277,7 +299,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "7,2 s"
       },
       {
         "name": "425 L3 Doble cabina · 269 CV · 75 kWh",
@@ -287,7 +310,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 7
+        "seats": 7,
+        "accel": "7,2 s"
       },
       {
         "name": "350 L3 Furgón · 184 CV · 116 kWh",
@@ -297,7 +321,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "11,8 s"
       },
       {
         "name": "350 L4 Furgón · 184 CV · 116 kWh",
@@ -307,7 +332,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "11,8 s"
       },
       {
         "name": "390 L3 Furgón · 184 CV · 116 kWh",
@@ -317,7 +343,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "11,8 s"
       },
       {
         "name": "350 L3 Furgón · 269 CV · 116 kWh",
@@ -327,7 +354,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "8,2 s"
       },
       {
         "name": "425 L3 Furgón · 184 CV · 116 kWh",
@@ -337,7 +365,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "11,8 s"
       },
       {
         "name": "350 L4 Furgón · 269 CV · 116 kWh",
@@ -347,7 +376,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "8,2 s"
       },
       {
         "name": "390 L3 Furgón · 269 CV · 116 kWh",
@@ -357,7 +387,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "8,2 s"
       },
       {
         "name": "425 L4 Furgón · 184 CV · 116 kWh",
@@ -367,7 +398,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "11,8 s"
       },
       {
         "name": "425 L3 Doble cabina · 184 CV · 116 kWh",
@@ -377,7 +409,8 @@ const carsData = [
         "power": "184 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 7
+        "seats": 7,
+        "accel": "11,8 s"
       },
       {
         "name": "425 L3 Furgón · 269 CV · 116 kWh",
@@ -387,7 +420,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 3
+        "seats": 3,
+        "accel": "8,2 s"
       },
       {
         "name": "425 L3 Doble cabina · 269 CV · 116 kWh",
@@ -397,7 +431,8 @@ const carsData = [
         "power": "269 CV",
         "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "seats": 7
+        "seats": 7,
+        "accel": "8,2 s"
       }
     ],
     "colors": [],
@@ -421,18 +456,20 @@ const carsData = [
     "brandInfo": {
       "group": "Ford Motor Company",
       "relation": "Fabricante estadounidense",
-      "note": "Ford fabrica vehículos comerciales y turismos."
+      "note": "Ford fabrica vehículos comerciales y turismos.",
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford%20Motor%20Company%20Logo.svg"
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/e-transit",
     "dataStatus": {
-      "status": "35 versiones con PVP de referencia de Carwow; especificaciones y garantías contrastadas con Ford. Confirmar impuestos y precio final por carrocería.",
+      "status": "Aceleración por versión añadida a partir de fichas Carwow/DriveK; logotipo Ford Oval enlazado desde Wikimedia Commons; precios de referencia a confirmar",
       "checkedAt": "02/11/2026"
     },
     "sources": [
       "https://www.carwow.es/ford/e-transit-furgon/ofertas",
       "https://www.ford.es/furgonetas-pick-up/e-transit",
       "https://www.ford.es/furgonetas-pick-up/e-transit-chassis-cab",
-      "https://www.ford.es/vehiculos-comerciales/service/garantias.html"
+      "https://www.ford.es/vehiculos-comerciales/service/garantias.html",
+      "https://www.carwow.es/ford/e-transit-furgon/caracteristicas-tecnicas"
     ],
     "warranty": {
       "vehicle": "3 años sin límite de kilómetros",
