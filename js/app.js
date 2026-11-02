@@ -465,13 +465,20 @@ let currentImageIndexes = {};
                     </div>
                 </article>`;
             });
-            grid.innerHTML = cardsHtml.reduce((html, card, index) => {
-                if (index % 9 === 0) html += '<div class="catalogue-batch">';
-                html += card;
-                if (!isRanking && [4, 24, 44].includes(index)) html += renderAdvertiseCard();
-                const endOfBatch = (index + 1) % 9 === 0;
-                if (endOfBatch || index === cardsHtml.length - 1) html += '</div>';
-                if (endOfBatch) html += renderCatalogueAdSenseSlot(index + 1);
+            // Keep full rows on desktop (3 columns) and tablet (2 columns).
+            // Advertising cards count as grid items, not only car cards.
+            const batchSize = 12;
+            const items = [];
+            cardsHtml.forEach((card, index) => {
+                items.push(card);
+                if (!isRanking && [4, 24, 44].includes(index)) items.push(renderAdvertiseCard());
+            });
+            grid.innerHTML = items.reduce((html, item, index) => {
+                if (index % batchSize === 0) html += '<div class="catalogue-batch">';
+                html += item;
+                const endOfBatch = (index + 1) % batchSize === 0;
+                if (endOfBatch || index === items.length - 1) html += '</div>';
+                if (endOfBatch && index < items.length - 1) html += renderCatalogueAdSenseSlot(index + 1);
                 return html;
             }, '');
             if (/^\d+$/.test(catalogueAdSlot)) {
