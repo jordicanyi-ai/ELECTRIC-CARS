@@ -6,8 +6,8 @@ const carsData = [
     "type": "SUV urbano",
     "launchYear": 2023,
     "priceMin": 38010,
-    "priceMax": 42510,
-    "priceText": "38.010–42.510 €",
+    "priceMax": 50300,
+    "priceText": "38.010–50.300 €",
     "rangeText": "380–510 km",
     "minRangeVal": 380,
     "maxRangeVal": 510,
@@ -40,14 +40,14 @@ const carsData = [
       "Viajes"
     ],
     "warranty": {
-      "vehicle": "5 años sin límite de kilometraje, según condiciones Hyundai España",
-      "battery": "8 años o 160.000 km, según condiciones Hyundai España",
-      "capacity": "Consultar condiciones de garantía de batería"
+      "vehicle": "5 años sin límite de kilometraje, según condiciones de Hyundai España",
+      "battery": "8 años o 160.000 km, según condiciones de Hyundai España",
+      "capacity": "Capacidad mínima del 70 % según condiciones de garantía de batería Hyundai"
     },
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precios de tarifa orientativos con IVA, sin ayudas públicas, financiación ni descuentos. Confirmar tarifa y acabado vigentes."
+      "note": "Precios de tarifa orientativos para la gama 2026 con IVA y sin ayudas públicas, financiación ni descuentos. Confirmar vigencia y disponibilidad por acabado."
     },
     "chargingInfo": {
       "dcMax": "74–101 kW",
@@ -58,9 +58,9 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "48 kWh Flexx",
-        "price": "38.010 €",
-        "priceValue": 38010,
+        "name": "BLACK LINE 48 kWh",
+        "price": "38.050 €",
+        "priceValue": 38050,
         "battery": "48,4 kWh",
         "batteryType": "NMC",
         "power": "135 CV",
@@ -70,9 +70,9 @@ const carsData = [
         "seats": 5
       },
       {
-        "name": "65 kWh Flexx",
-        "price": "42.410 €",
-        "priceValue": 42410,
+        "name": "BLACK LINE 65 kWh",
+        "price": "42.450 €",
+        "priceValue": 42450,
         "battery": "65,4 kWh",
         "batteryType": "NMC",
         "power": "204 CV",
@@ -80,9 +80,79 @@ const carsData = [
         "rangeValue": 510,
         "accel": "7,8 s",
         "seats": 5
+      },
+      {
+        "name": "N LINE 65 kWh",
+        "price": "43.450 €",
+        "priceValue": 43450,
+        "battery": "65,4 kWh",
+        "batteryType": "NMC",
+        "power": "204 CV",
+        "range": "Consultar según llantas",
+        "rangeValue": 480,
+        "accel": "7,8–8,1 s",
+        "seats": 5
+      },
+      {
+        "name": "BLACK LINE TECNO 65 kWh",
+        "price": "46.400 €",
+        "priceValue": 46400,
+        "battery": "65,4 kWh",
+        "batteryType": "NMC",
+        "power": "204 CV",
+        "range": "Consultar según llantas",
+        "rangeValue": 480,
+        "accel": "7,8–8,1 s",
+        "seats": 5
+      },
+      {
+        "name": "N LINE STYLE 65 kWh",
+        "price": "50.300 €",
+        "priceValue": 50300,
+        "battery": "65,4 kWh",
+        "batteryType": "NMC",
+        "power": "204 CV",
+        "range": "Consultar según llantas",
+        "rangeValue": 480,
+        "accel": "7,8–8,1 s",
+        "seats": 5
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Atlas White",
+        "hex": "#F1F1ED",
+        "border": "#D6DDE3"
+      },
+      {
+        "name": "Ecotronic Gray Pearl",
+        "hex": "#858A8A"
+      },
+      {
+        "name": "Cyber Gray Metallic",
+        "hex": "#A1A5A5"
+      },
+      {
+        "name": "Abyss Black Pearl",
+        "hex": "#171A20"
+      },
+      {
+        "name": "Ultimate Red Metallic",
+        "hex": "#A82F35"
+      },
+      {
+        "name": "Soultronic Orange Pearl",
+        "hex": "#B95A30"
+      },
+      {
+        "name": "Neoteric Yellow",
+        "hex": "#D9C93D"
+      },
+      {
+        "name": "Meta Blue Pearl",
+        "hex": "#344E65"
+      }
+    ],
     "images": [],
     "videos": [
       {
@@ -98,7 +168,7 @@ const carsData = [
     },
     "brandUrl": "https://www.hyundai.com/es/es/modelos/kona-electrico.html",
     "dataStatus": {
-      "status": "Pendiente de galería y revisión final de precios",
+      "status": "Pendiente de vincular fotografías subidas y verificar colores por acabado",
       "checkedAt": "02/11/2026"
     }
   },
