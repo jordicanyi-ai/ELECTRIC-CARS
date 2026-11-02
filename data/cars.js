@@ -160,23 +160,32 @@ const carsData = [
         "secondaryHex": "#17191C"
       }
     ],
-    "images": [],
+    "images": [
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_01.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_02.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_03.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_04.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_05.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_06.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_07.webp",
+      "img/cars/suzuki-e-vitara/suzuki-e-vitara_08.webp"
+    ],
     "videos": [
       {
         "title": "Suzuki e VITARA: vídeos oficiales y pruebas",
         "url": "https://www.youtube.com/results?search_query=Suzuki+e+Vitara+2026",
-        "thumb": ""
+        "thumb": "img/cars/suzuki-e-vitara/suzuki-e-vitara_01.webp"
       }
     ],
     "brandInfo": {
-      "logo": "img/brands/suzuki.png",
+      "logo": "",
       "group": "Suzuki Motor Corporation",
       "relation": "Fabricante japonés",
       "note": "Suzuki es un fabricante japonés de automóviles."
     },
     "brandUrl": "https://auto.suzuki.es/modelos/electrico/evitara",
     "dataStatus": {
-      "status": "Ficha técnica y precios de tarifa incorporados; pendientes galería oficial y verificación de garantía",
+      "status": "Galería de ocho fotografías enlazada; logotipo pendiente de incorporar al repositorio y garantía pendiente de verificar",
       "checkedAt": "02/11/2026"
     }
   },
