@@ -1,5 +1,186 @@
 const carsData = [
   {
+    "id": 63,
+    "brand": "Suzuki",
+    "model": "e VITARA",
+    "type": "SUV urbano",
+    "launchYear": 2026,
+    "priceMin": 35550,
+    "priceMax": 45850,
+    "priceText": "35.550–45.850 €",
+    "rangeText": "344–426 km",
+    "minRangeVal": 344,
+    "maxRangeVal": 426,
+    "batteryText": "49–61 kWh",
+    "batteryType": "LFP",
+    "powerText": "144–184 CV",
+    "trunk": 310,
+    "seats": 5,
+    "acceleration": "7,4–9,6 s",
+    "dimensions": "4,275 × 1,800 × 1,635 m",
+    "charging": "CC 10–80 % en unos 45 min · CA 11 kW",
+    "description": "El Suzuki e VITARA es el primer SUV totalmente eléctrico de Suzuki. Ofrece baterías LFP de 49 y 61 kWh, tracción delantera o total ALLGRIP-e y una autonomía WLTP combinada de 344 a 426 km. Tiene cinco plazas y una longitud de 4,275 metros.",
+    "highlights": [
+      "Baterías LFP de 49 y 61 kWh",
+      "Tracción total ALLGRIP-e disponible",
+      "344–426 km de autonomía WLTP combinada",
+      "Cinco versiones para el mercado español"
+    ],
+    "considerations": [
+      "Maletero de capacidad variable según la posición de los asientos traseros",
+      "La versión 4WD tiene menos autonomía que la 2WD de 61 kWh",
+      "Precios de tarifa sin promociones ni ayudas"
+    ],
+    "idealFor": [
+      "Ciudad",
+      "Uso diario",
+      "SUV",
+      "Tracción total"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa publicados para España, con IVA, sin ayudas públicas ni descuentos comerciales (marzo de 2026)."
+    },
+    "chargingInfo": {
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en aproximadamente 45 min",
+      "connector": "CCS2"
+    },
+    "trims": [
+      {
+        "name": "S2 49 kWh 2WD",
+        "price": "35.550 €",
+        "priceValue": 35550,
+        "battery": "49 kWh",
+        "batteryType": "LFP",
+        "power": "144 CV",
+        "range": "344 km WLTP",
+        "rangeValue": 344,
+        "accel": "9,6 s",
+        "seats": 5
+      },
+      {
+        "name": "S2 61 kWh 2WD",
+        "price": "40.050 €",
+        "priceValue": 40050,
+        "battery": "61 kWh",
+        "batteryType": "LFP",
+        "power": "174 CV",
+        "range": "426 km WLTP",
+        "rangeValue": 426,
+        "accel": "8,7 s",
+        "seats": 5
+      },
+      {
+        "name": "S2 61 kWh 4WD",
+        "price": "43.050 €",
+        "priceValue": 43050,
+        "battery": "61 kWh",
+        "batteryType": "LFP",
+        "power": "184 CV",
+        "range": "395 km WLTP",
+        "rangeValue": 395,
+        "accel": "7,4 s",
+        "seats": 5
+      },
+      {
+        "name": "S3 61 kWh 2WD",
+        "price": "42.850 €",
+        "priceValue": 42850,
+        "battery": "61 kWh",
+        "batteryType": "LFP",
+        "power": "174 CV",
+        "range": "426 km WLTP",
+        "rangeValue": 426,
+        "accel": "8,7 s",
+        "seats": 5
+      },
+      {
+        "name": "S3 61 kWh 4WD",
+        "price": "45.850 €",
+        "priceValue": 45850,
+        "battery": "61 kWh",
+        "batteryType": "LFP",
+        "power": "184 CV",
+        "range": "395 km WLTP",
+        "rangeValue": 395,
+        "accel": "7,4 s",
+        "seats": 5
+      }
+    ],
+    "colors": [
+      {
+        "name": "Arctic White Pearl",
+        "hex": "#EDEDE8"
+      },
+      {
+        "name": "Splendid Silver Pearl Metallic",
+        "hex": "#B5BABD"
+      },
+      {
+        "name": "Grandeur Grey Pearl Metallic",
+        "hex": "#686E73"
+      },
+      {
+        "name": "Celestial Blue Pearl Metallic",
+        "hex": "#41678A"
+      },
+      {
+        "name": "Land Breeze Green Pearl Metallic",
+        "hex": "#69756C"
+      },
+      {
+        "name": "Bluish Black Pearl",
+        "hex": "#151B22"
+      },
+      {
+        "name": "Opulent Red Pearl Metallic / techo negro (S3)",
+        "hex": "#A72D35",
+        "secondaryHex": "#17191C"
+      },
+      {
+        "name": "Arctic White Pearl / techo negro (S3)",
+        "hex": "#EDEDE8",
+        "secondaryHex": "#17191C"
+      },
+      {
+        "name": "Splendid Silver Pearl Metallic / techo negro (S3)",
+        "hex": "#B5BABD",
+        "secondaryHex": "#17191C"
+      },
+      {
+        "name": "Grandeur Grey Pearl Metallic / techo negro (S3)",
+        "hex": "#686E73",
+        "secondaryHex": "#17191C"
+      },
+      {
+        "name": "Land Breeze Green Pearl Metallic / techo negro (S3)",
+        "hex": "#69756C",
+        "secondaryHex": "#17191C"
+      }
+    ],
+    "images": [],
+    "videos": [
+      {
+        "title": "Suzuki e VITARA: vídeos oficiales y pruebas",
+        "url": "https://www.youtube.com/results?search_query=Suzuki+e+Vitara+2026",
+        "thumb": ""
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/suzuki.png",
+      "group": "Suzuki Motor Corporation",
+      "relation": "Fabricante japonés",
+      "note": "Suzuki es un fabricante japonés de automóviles."
+    },
+    "brandUrl": "https://auto.suzuki.es/modelos/electrico/evitara",
+    "dataStatus": {
+      "status": "Ficha técnica y precios de tarifa incorporados; pendientes galería oficial y verificación de garantía",
+      "checkedAt": "02/11/2026"
+    }
+  },
+  {
     "id": 62,
     "brand": "Hyundai",
     "model": "KONA ELÉCTRICO",
