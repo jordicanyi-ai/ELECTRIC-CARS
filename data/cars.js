@@ -88,8 +88,8 @@ const carsData = [
         "battery": "65,4 kWh",
         "batteryType": "NMC",
         "power": "204 CV",
-        "range": "Consultar según llantas",
-        "rangeValue": 480,
+        "range": "440 km WLTP",
+        "rangeValue": 440,
         "accel": "7,8–8,1 s",
         "seats": 5
       },
@@ -100,8 +100,8 @@ const carsData = [
         "battery": "65,4 kWh",
         "batteryType": "NMC",
         "power": "204 CV",
-        "range": "Consultar según llantas",
-        "rangeValue": 480,
+        "range": "510 km WLTP",
+        "rangeValue": 510,
         "accel": "7,8–8,1 s",
         "seats": 5
       },
@@ -112,8 +112,8 @@ const carsData = [
         "battery": "65,4 kWh",
         "batteryType": "NMC",
         "power": "204 CV",
-        "range": "Consultar según llantas",
-        "rangeValue": 480,
+        "range": "440 km WLTP",
+        "rangeValue": 440,
         "accel": "7,8–8,1 s",
         "seats": 5
       }
@@ -178,7 +178,7 @@ const carsData = [
     },
     "brandUrl": "https://www.hyundai.com/es/es/modelos/kona-electrico.html",
     "dataStatus": {
-      "status": "Ficha completa; galería enlazada. Precios y colores sujetos a confirmación por acabado",
+      "status": "Galería enlazada; autonomías WLTP por acabado verificadas. Precios y colores sujetos a confirmación",
       "checkedAt": "02/11/2026"
     }
   },
