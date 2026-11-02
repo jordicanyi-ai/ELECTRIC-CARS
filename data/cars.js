@@ -5,32 +5,32 @@ const carsData = [
     "model": "E-TRANSIT CUSTOM",
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2024,
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Tarifa sin descuentos pendiente",
-    "rangeText": "Consultar según versión",
-    "minRangeVal": null,
-    "maxRangeVal": null,
+    "priceMin": 54155,
+    "priceMax": 66355,
+    "priceText": "54.155–66.355 €",
+    "rangeText": "299–373 km",
+    "minRangeVal": 299,
+    "maxRangeVal": 373,
     "batteryText": "83 kWh brutos / 71 kWh útiles",
     "batteryType": "NMC",
-    "powerText": "218 CV (versión configurada)",
+    "powerText": "136–286 CV",
     "trunk": 6800,
     "seats": "3–8 según carrocería",
     "acceleration": "Pendiente de verificar",
     "dimensions": "Carrocerías Van, doble cabina, Multicab, Mixta y Kombi",
-    "charging": "Pendiente de verificar por versión",
-    "description": "Furgoneta eléctrica mediana Ford E-Transit Custom. Disponible en carrocerías Van, Van Doble Cabina, Multicab, Mixta y Kombi. En el configurador español se muestra una versión eléctrica de 83 kWh brutos (71 kWh útiles), 160 kW (218 CV) y tracción trasera.",
+    "charging": "CC 125 kW · 10–80 % en aprox. 29 min",
+    "description": "Ford E-Transit Custom eléctrica, disponible en Van, Van Doble Cabina, MultiCab, Mixta y Kombi. Batería de 83 kWh brutos y 71 kWh útiles según el configurador actual. Gama de 136 a 286 CV; precios de tarifa españoles con IVA calculado, sin descuentos ni ayudas. Volúmenes y plazas varían según carrocería.",
     "highlights": [
-      "Cinco tipos de carrocería en el configurador español",
-      "Van: 6,8 m³ de carga y 3 plazas",
-      "Doble cabina: 3,3 m³ y 5 plazas",
-      "Multicab: 4,7 m³ y 5 plazas",
-      "Kombi: 5,1 m³ y 8 plazas"
+      "Cinco carrocerías: Van, Van Doble Cabina, MultiCab, Mixta y Kombi",
+      "Batería de 83 kWh brutos / 71 kWh útiles (configurador actual)",
+      "Potencias de 136, 218 y 286 CV según versión",
+      "Carga rápida CC de 125 kW; 10–80 % en unos 29 min",
+      "Hasta 6,8 m³ de carga en Van según configuración"
     ],
     "considerations": [
-      "El precio de 37.600 € mostrado en el configurador excluye IVA e incluye descuentos promocionales y del concesionario; no es una tarifa sin descuentos",
-      "Los volúmenes indicados corresponden a configuraciones concretas de la captura de Ford",
-      "Autonomías, precios por acabado y garantías pendientes de verificación"
+      "Tarifas de octubre de 2026 publicadas por etiqueta0/Fleetdata, convertidas a IVA del 21 %; verificar precio final y condiciones con Ford",
+      "Los precios del configurador Ford pueden incluir descuentos promocionales y aportación del concesionario; no se han utilizado",
+      "La disponibilidad de colores y carrocerías puede variar por acabado y versión"
     ],
     "idealFor": [
       "Reparto y profesionales",
@@ -40,38 +40,302 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precio de tarifa con IVA sin ayudas ni descuentos pendiente de confirmar. Ford muestra 37.600 € sin impuestos con descuento promocional y aportación del concesionario (captura del configurador, noviembre 2026); no se utiliza como PVP."
+      "note": "Tarifa de octubre 2026 publicada por etiqueta0 (Fleetdata), de 44.756 a 54.839 € sin IVA. Importes calculados con IVA 21 %, redondeados al euro, sin ayudas ni descuentos. Confirmar PVP vigente con Ford."
     },
     "trims": [
       {
-        "name": "Van · 3 plazas",
-        "price": "Consultar tarifa",
-        "battery": "83 kWh brutos / 71 kWh útiles (configuración de referencia)",
-        "power": "218 CV (configuración de referencia)",
+        "name": "Van 320 L1 · 136 CV · Trend",
+        "price": "54.155 €",
+        "priceValue": 54155,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
         "seats": 3
       },
       {
-        "name": "Van Doble Cabina · 5 plazas",
-        "price": "Consultar tarifa",
+        "name": "Van 340 L2 · 136 CV · Trend",
+        "price": "54.656 €",
+        "priceValue": 54656,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Van D.Cabina 320 L1 · 136 CV · Trend",
+        "price": "55.355 €",
+        "priceValue": 55355,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
         "seats": 5
       },
       {
-        "name": "Multicab · 5 plazas",
-        "price": "Consultar tarifa",
+        "name": "Mixta 320 L1 · 136 CV · Trend",
+        "price": "55.456 €",
+        "priceValue": 55456,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
         "seats": 5
       },
       {
-        "name": "Mixta · 5 plazas",
-        "price": "Consultar tarifa",
+        "name": "Van D.Cabina 320 L2 · 136 CV · Trend",
+        "price": "55.855 €",
+        "priceValue": 55855,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
         "seats": 5
       },
       {
-        "name": "Kombi · 8 plazas",
-        "price": "Consultar tarifa",
+        "name": "Mixta 320 L2 · 136 CV · Trend",
+        "price": "55.955 €",
+        "priceValue": 55955,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 5
+      },
+      {
+        "name": "MultiCab 320 L1 · 136 CV · Trend",
+        "price": "55.955 €",
+        "priceValue": 55955,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 5
+      },
+      {
+        "name": "Van 320 L1 · 218 CV · Trend",
+        "price": "56.155 €",
+        "priceValue": 56155,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "MultiCab 320 L2 · 136 CV · Trend",
+        "price": "56.455 €",
+        "priceValue": 56455,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 5
+      },
+      {
+        "name": "Van 340 L2 · 218 CV · Trend",
+        "price": "56.656 €",
+        "priceValue": 56656,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Kombi 340 L1 · 136 CV · Trend",
+        "price": "56.855 €",
+        "priceValue": 56855,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Van 320 L1 · 136 CV · Trend AWD",
+        "price": "57.255 €",
+        "priceValue": 57255,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Kombi 340 L2 · 136 CV · Trend",
+        "price": "57.355 €",
+        "priceValue": 57355,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Van 340 L2 · 136 CV · Trend AWD",
+        "price": "57.756 €",
+        "priceValue": 57756,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Kombi 340 L1 · 136 CV · Limited",
+        "price": "58.455 €",
+        "priceValue": 58455,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L1 · 218 CV · Trend",
+        "price": "58.856 €",
+        "priceValue": 58856,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L2 · 136 CV · Limited",
+        "price": "58.955 €",
+        "priceValue": 58955,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L2 · 218 CV · Trend",
+        "price": "59.355 €",
+        "priceValue": 59355,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L1 · 136 CV · Trend AWD",
+        "price": "59.956 €",
+        "priceValue": 59956,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L2 · 136 CV · Trend AWD",
+        "price": "60.455 €",
+        "priceValue": 60455,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L1 · 218 CV · Limited",
+        "price": "60.455 €",
+        "priceValue": 60455,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L2 · 218 CV · Limited",
+        "price": "60.955 €",
+        "priceValue": 60955,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L1 · 136 CV · Limited AWD",
+        "price": "61.555 €",
+        "priceValue": 61555,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Van 320 L1 · 286 CV · Sport",
+        "price": "61.656 €",
+        "priceValue": 61656,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "286 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Kombi 340 L2 · 136 CV · Limited AWD",
+        "price": "62.055 €",
+        "priceValue": 62055,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "136 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Van 320 L1 · 218 CV · Trend AWD",
+        "price": "63.105 €",
+        "priceValue": 63105,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Van 340 L2 · 218 CV · Trend AWD",
+        "price": "63.605 €",
+        "priceValue": 63605,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Van 320 L1 · 286 CV · Sport AWD",
+        "price": "64.756 €",
+        "priceValue": 64756,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "286 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 3
+      },
+      {
+        "name": "Kombi 340 L1 · 218 CV · Trail AWD",
+        "price": "65.855 €",
+        "priceValue": 65855,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
+        "seats": 8
+      },
+      {
+        "name": "Kombi 340 L2 · 218 CV · Trail AWD",
+        "price": "66.355 €",
+        "priceValue": 66355,
+        "battery": "83 kWh brutos / 71 kWh útiles",
+        "power": "218 CV",
+        "range": "Según configuración; WLTP por versión pendiente de contrastar",
         "seats": 8
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#ECEDEE"
+      },
+      {
+        "name": "Plata Perla",
+        "hex": "#A9AFB0"
+      },
+      {
+        "name": "Negro Agate",
+        "hex": "#111216"
+      },
+      {
+        "name": "Gris Magnetic",
+        "hex": "#444B4B"
+      },
+      {
+        "name": "Gris Matter",
+        "hex": "#838688"
+      }
+    ],
     "images": [
       "img/cars/ford-e-transit-custom/ford-e-transit_01.webp",
       "img/cars/ford-e-transit-custom/ford-e-transit_02.webp",
@@ -97,9 +361,13 @@ const carsData = [
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom",
     "dataStatus": {
-      "status": "Galería de ocho fotos enlazada; configuraciones de carrocería y batería basadas en capturas de Ford; datos de versiones pendientes",
+      "status": "30 versiones con precios de tarifa octubre 2026 (etiqueta0/Fleetdata) e IVA 21 %, colores según configurador Ford; autonomías exactas por acabado pendientes",
       "checkedAt": "02/11/2026"
-    }
+    },
+    "sources": [
+      "https://etiqueta0.com/furgonetas/ford/e-transit-custom",
+      "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom"
+    ]
   },
   {
     "id": 64,
