@@ -1,4 +1,104 @@
 const carsData = [
+{
+  "id": 64,
+  "brand": "Ford",
+  "model": "E-TRANSIT",
+  "type": "Furgoneta / Monovolumen",
+  "launchYear": 2022,
+  "priceMin": 60839,
+  "priceMax": 60839,
+  "priceText": "60.839 € (referencia orientativa)",
+  "rangeText": "317–402 km",
+  "minRangeVal": 317,
+  "maxRangeVal": 402,
+  "batteryText": "68–89 kWh útiles",
+  "batteryType": "NMC",
+  "powerText": "184–269 CV",
+  "trunk": 9500,
+  "seats": 3,
+  "acceleration": "No comunicado",
+  "dimensions": "Varias longitudes y alturas (L2–L4, H2–H3)",
+  "charging": "CC 115–180 kW · 10–80 % en 28–37 min",
+  "description": "La Ford E-Transit es una furgoneta grande 100 % eléctrica para transporte profesional. Ofrece baterías de 68 y 89 kWh útiles, tracción trasera y distintas carrocerías con volúmenes de carga de 9,5 a 15,1 m³. La autonomía homologada depende de la batería y la configuración.",
+  "highlights": [
+    "68 o 89 kWh útiles de batería",
+    "317–402 km WLTP según versión",
+    "Volumen de carga de 9,5 a 15,1 m³",
+    "Carga rápida de 115 o 180 kW"
+  ],
+  "considerations": [
+    "El precio mostrado es una referencia externa no verificada como tarifa oficial Ford de noviembre de 2026",
+    "La autonomía varía con carrocería, carga y velocidad",
+    "La ficha agrupa configuraciones distintas; consultar dimensiones y carga útil de cada una"
+  ],
+  "idealFor": [
+    "Reparto y profesionales",
+    "Transporte de mercancías",
+    "Flotas"
+  ],
+  "priceInfo": {
+    "includesVat": true,
+    "includesAid": false,
+    "note": "Referencia orientativa de 60.839 € con IVA, sin ayudas, procedente de comparador externo; no se ha podido confirmar tarifa oficial Ford para noviembre de 2026. Precio sujeto a versión y configuración."
+  },
+  "chargingInfo": {
+    "acMax": "11–22 kW según versión",
+    "fastChargeText": "10–80 % en unos 37 min (68 kWh) o 28 min (89 kWh)",
+    "connector": "CCS2"
+  },
+  "trims": [
+    {
+      "name": "Autonomía estándar · 68 kWh",
+      "price": "Consultar tarifa",
+      "battery": "68 kWh útiles",
+      "batteryType": "NMC",
+      "power": "184 CV (según configuración)",
+      "range": "317 km WLTP (configuración de referencia)",
+      "rangeValue": 317,
+      "accel": "No comunicado",
+      "seats": 3
+    },
+    {
+      "name": "Autonomía ampliada · 89 kWh",
+      "price": "Consultar tarifa",
+      "battery": "89 kWh útiles",
+      "batteryType": "NMC",
+      "power": "184–269 CV según configuración",
+      "range": "402 km WLTP (configuración de referencia)",
+      "rangeValue": 402,
+      "accel": "No comunicado",
+      "seats": 3
+    }
+  ],
+  "colors": [],
+  "images": [
+    "img/cars/ford-e-transit/ford-e-transit_01.webp",
+    "img/cars/ford-e-transit/ford-e-transit_02.webp",
+    "img/cars/ford-e-transit/ford-e-transit_03.webp",
+    "img/cars/ford-e-transit/ford-e-transit_04.webp",
+    "img/cars/ford-e-transit/ford-e-transit_05.webp",
+    "img/cars/ford-e-transit/ford-e-transit_06.webp",
+    "img/cars/ford-e-transit/ford-e-transit_07.webp",
+    "img/cars/ford-e-transit/ford-e-transit_08.webp"
+  ],
+  "videos": [
+    {
+      "title": "Ford E-Transit: vídeos y pruebas",
+      "url": "https://www.youtube.com/results?search_query=Ford+E-Transit+electrica+2026",
+      "thumb": "img/cars/ford-e-transit/ford-e-transit_01.webp"
+    }
+  ],
+  "brandInfo": {
+    "group": "Ford Motor Company",
+    "relation": "Fabricante estadounidense",
+    "note": "Ford fabrica vehículos comerciales y turismos."
+  },
+  "brandUrl": "https://www.ford.es/furgonetas-pick-up/e-transit",
+  "dataStatus": {
+    "status": "Galería enlazada; autonomía y baterías contrastadas con Ford. Precio orientativo pendiente de confirmar.",
+    "checkedAt": "02/11/2026"
+  }
+},
   {
     "id": 63,
     "brand": "Suzuki",
