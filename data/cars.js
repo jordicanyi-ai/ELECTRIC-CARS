@@ -1,5 +1,107 @@
 const carsData = [
   {
+    "id": 65,
+    "brand": "Ford",
+    "model": "E-TRANSIT CUSTOM",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2024,
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Tarifa sin descuentos pendiente",
+    "rangeText": "Consultar según versión",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "83 kWh brutos / 71 kWh útiles",
+    "batteryType": "NMC",
+    "powerText": "218 CV (versión configurada)",
+    "trunk": 6800,
+    "seats": "3–8 según carrocería",
+    "acceleration": "Pendiente de verificar",
+    "dimensions": "Carrocerías Van, doble cabina, Multicab, Mixta y Kombi",
+    "charging": "Pendiente de verificar por versión",
+    "description": "Furgoneta eléctrica mediana Ford E-Transit Custom. Disponible en carrocerías Van, Van Doble Cabina, Multicab, Mixta y Kombi. En el configurador español se muestra una versión eléctrica de 83 kWh brutos (71 kWh útiles), 160 kW (218 CV) y tracción trasera.",
+    "highlights": [
+      "Cinco tipos de carrocería en el configurador español",
+      "Van: 6,8 m³ de carga y 3 plazas",
+      "Doble cabina: 3,3 m³ y 5 plazas",
+      "Multicab: 4,7 m³ y 5 plazas",
+      "Kombi: 5,1 m³ y 8 plazas"
+    ],
+    "considerations": [
+      "El precio de 37.600 € mostrado en el configurador excluye IVA e incluye descuentos promocionales y del concesionario; no es una tarifa sin descuentos",
+      "Los volúmenes indicados corresponden a configuraciones concretas de la captura de Ford",
+      "Autonomías, precios por acabado y garantías pendientes de verificación"
+    ],
+    "idealFor": [
+      "Reparto y profesionales",
+      "Transporte de pasajeros",
+      "Flotas"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de tarifa con IVA sin ayudas ni descuentos pendiente de confirmar. Ford muestra 37.600 € sin impuestos con descuento promocional y aportación del concesionario (captura del configurador, noviembre 2026); no se utiliza como PVP."
+    },
+    "trims": [
+      {
+        "name": "Van · 3 plazas",
+        "price": "Consultar tarifa",
+        "battery": "83 kWh brutos / 71 kWh útiles (configuración de referencia)",
+        "power": "218 CV (configuración de referencia)",
+        "seats": 3
+      },
+      {
+        "name": "Van Doble Cabina · 5 plazas",
+        "price": "Consultar tarifa",
+        "seats": 5
+      },
+      {
+        "name": "Multicab · 5 plazas",
+        "price": "Consultar tarifa",
+        "seats": 5
+      },
+      {
+        "name": "Mixta · 5 plazas",
+        "price": "Consultar tarifa",
+        "seats": 5
+      },
+      {
+        "name": "Kombi · 8 plazas",
+        "price": "Consultar tarifa",
+        "seats": 8
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/ford-e-transit-custom/ford-e-transit_01.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_02.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_03.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_04.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_05.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_06.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_07.webp",
+      "img/cars/ford-e-transit-custom/ford-e-transit_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Ford E-Transit Custom: vídeos",
+        "url": "https://www.youtube.com/results?search_query=Ford+E-Transit+Custom+electrica",
+        "thumb": "img/cars/ford-e-transit-custom/ford-e-transit_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford%20Motor%20Company%20Logo.svg",
+      "group": "Ford Motor Company",
+      "relation": "Fabricante estadounidense",
+      "note": "Ford fabrica vehículos comerciales y turismos."
+    },
+    "brandUrl": "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom",
+    "dataStatus": {
+      "status": "Galería de ocho fotos enlazada; configuraciones de carrocería y batería basadas en capturas de Ford; datos de versiones pendientes",
+      "checkedAt": "02/11/2026"
+    }
+  },
+  {
     "id": 64,
     "brand": "Ford",
     "model": "E-TRANSIT",
@@ -436,21 +538,11 @@ const carsData = [
       }
     ],
     "colors": [],
-    "images": [
-      "img/cars/ford-e-transit/ford-e-transit_01.webp",
-      "img/cars/ford-e-transit/ford-e-transit_02.webp",
-      "img/cars/ford-e-transit/ford-e-transit_03.webp",
-      "img/cars/ford-e-transit/ford-e-transit_04.webp",
-      "img/cars/ford-e-transit/ford-e-transit_05.webp",
-      "img/cars/ford-e-transit/ford-e-transit_06.webp",
-      "img/cars/ford-e-transit/ford-e-transit_07.webp",
-      "img/cars/ford-e-transit/ford-e-transit_08.webp"
-    ],
+    "images": [],
     "videos": [
       {
         "title": "Ford E-Transit: vídeos y pruebas",
-        "url": "https://www.youtube.com/results?search_query=Ford+E-Transit+electrica+2026",
-        "thumb": "img/cars/ford-e-transit/ford-e-transit_01.webp"
+        "url": "https://www.youtube.com/results?search_query=Ford+E-Transit+grande+electrica"
       }
     ],
     "brandInfo": {
@@ -461,7 +553,7 @@ const carsData = [
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/e-transit",
     "dataStatus": {
-      "status": "Aceleración por versión añadida a partir de fichas Carwow/DriveK; logotipo Ford Oval enlazado desde Wikimedia Commons; precios de referencia a confirmar",
+      "status": "Datos de E-Transit grande; galería pendiente. Las ocho fotos subidas pertenecen a E-Transit Custom.",
       "checkedAt": "02/11/2026"
     },
     "sources": [
