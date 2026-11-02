@@ -8,15 +8,15 @@ const carsData = [
     "priceMin": 54155,
     "priceMax": 66355,
     "priceText": "54.155–66.355 €",
-    "rangeText": "299–373 km",
-    "minRangeVal": 299,
+    "rangeText": "Hasta 373 km WLTP (RWD) / 348 km (AWD)",
+    "minRangeVal": null,
     "maxRangeVal": 373,
     "batteryText": "83 kWh brutos / 71 kWh útiles",
     "batteryType": "NMC",
     "powerText": "136–286 CV",
     "trunk": 6800,
     "seats": "3–8 según carrocería",
-    "acceleration": "Pendiente de verificar",
+    "acceleration": "7,4–12,8 s (referencias según versión)",
     "dimensions": "Carrocerías Van, doble cabina, Multicab, Mixta y Kombi",
     "charging": "CC 125 kW · 10–80 % en aprox. 29 min",
     "description": "Ford E-Transit Custom eléctrica, disponible en Van, Van Doble Cabina, MultiCab, Mixta y Kombi. Batería de 83 kWh brutos y 71 kWh útiles según el configurador actual. Gama de 136 a 286 CV; precios de tarifa españoles con IVA calculado, sin descuentos ni ayudas. Volúmenes y plazas varían según carrocería.",
@@ -25,12 +25,15 @@ const carsData = [
       "Batería de 83 kWh brutos / 71 kWh útiles (configurador actual)",
       "Potencias de 136, 218 y 286 CV según versión",
       "Carga rápida CC de 125 kW; 10–80 % en unos 29 min",
-      "Hasta 6,8 m³ de carga en Van según configuración"
+      "Hasta 6,8 m³ de carga en Van según configuración",
+      "Garantía Ford: 3 años sin límite de km; batería 8 años/160.000 km"
     ],
     "considerations": [
       "Tarifas de octubre de 2026 publicadas por etiqueta0/Fleetdata, convertidas a IVA del 21 %; verificar precio final y condiciones con Ford",
       "Los precios del configurador Ford pueden incluir descuentos promocionales y aportación del concesionario; no se han utilizado",
-      "La disponibilidad de colores y carrocerías puede variar por acabado y versión"
+      "La disponibilidad de colores y carrocerías puede variar por acabado y versión",
+      "La autonomía WLTP exacta de cada una de las 30 configuraciones está pendiente de contrastar; los valores mostrados por versión son máximos de referencia según tracción.",
+      "Las aceleraciones proceden de fichas y pruebas externas; pueden variar por peso y carrocería."
     ],
     "idealFor": [
       "Reparto y profesionales",
@@ -49,8 +52,11 @@ const carsData = [
         "priceValue": 54155,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 340 L2 · 136 CV · Trend",
@@ -58,8 +64,11 @@ const carsData = [
         "priceValue": 54656,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van D.Cabina 320 L1 · 136 CV · Trend",
@@ -67,8 +76,11 @@ const carsData = [
         "priceValue": 55355,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Mixta 320 L1 · 136 CV · Trend",
@@ -76,8 +88,11 @@ const carsData = [
         "priceValue": 55456,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van D.Cabina 320 L2 · 136 CV · Trend",
@@ -85,8 +100,11 @@ const carsData = [
         "priceValue": 55855,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Mixta 320 L2 · 136 CV · Trend",
@@ -94,8 +112,11 @@ const carsData = [
         "priceValue": 55955,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "MultiCab 320 L1 · 136 CV · Trend",
@@ -103,8 +124,11 @@ const carsData = [
         "priceValue": 55955,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 320 L1 · 218 CV · Trend",
@@ -112,8 +136,11 @@ const carsData = [
         "priceValue": 56155,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "MultiCab 320 L2 · 136 CV · Trend",
@@ -121,8 +148,11 @@ const carsData = [
         "priceValue": 56455,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 5
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 5,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 340 L2 · 218 CV · Trend",
@@ -130,8 +160,11 @@ const carsData = [
         "priceValue": 56656,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 136 CV · Trend",
@@ -139,8 +172,11 @@ const carsData = [
         "priceValue": 56855,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 320 L1 · 136 CV · Trend AWD",
@@ -148,8 +184,11 @@ const carsData = [
         "priceValue": 57255,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 136 CV · Trend",
@@ -157,8 +196,11 @@ const carsData = [
         "priceValue": 57355,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 340 L2 · 136 CV · Trend AWD",
@@ -166,8 +208,11 @@ const carsData = [
         "priceValue": 57756,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 136 CV · Limited",
@@ -175,8 +220,11 @@ const carsData = [
         "priceValue": 58455,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 218 CV · Trend",
@@ -184,8 +232,11 @@ const carsData = [
         "priceValue": 58856,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 136 CV · Limited",
@@ -193,8 +244,11 @@ const carsData = [
         "priceValue": 58955,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 218 CV · Trend",
@@ -202,8 +256,11 @@ const carsData = [
         "priceValue": 59355,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 136 CV · Trend AWD",
@@ -211,8 +268,11 @@ const carsData = [
         "priceValue": 59956,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 136 CV · Trend AWD",
@@ -220,8 +280,11 @@ const carsData = [
         "priceValue": 60455,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 218 CV · Limited",
@@ -229,8 +292,11 @@ const carsData = [
         "priceValue": 60455,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 218 CV · Limited",
@@ -238,8 +304,11 @@ const carsData = [
         "priceValue": 60955,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 136 CV · Limited AWD",
@@ -247,8 +316,11 @@ const carsData = [
         "priceValue": 61555,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 320 L1 · 286 CV · Sport",
@@ -256,8 +328,11 @@ const carsData = [
         "priceValue": 61656,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "286 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 373 km WLTP (RWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "7,4 s (referencia AWD)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 136 CV · Limited AWD",
@@ -265,8 +340,11 @@ const carsData = [
         "priceValue": 62055,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "136 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "12,8 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 320 L1 · 218 CV · Trend AWD",
@@ -274,8 +352,11 @@ const carsData = [
         "priceValue": 63105,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 340 L2 · 218 CV · Trend AWD",
@@ -283,8 +364,11 @@ const carsData = [
         "priceValue": 63605,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Van 320 L1 · 286 CV · Sport AWD",
@@ -292,8 +376,11 @@ const carsData = [
         "priceValue": 64756,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "286 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 3
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 3,
+        "rangeValue": null,
+        "accel": "7,4 s (referencia AWD)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L1 · 218 CV · Trail AWD",
@@ -301,8 +388,11 @@ const carsData = [
         "priceValue": 65855,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       },
       {
         "name": "Kombi 340 L2 · 218 CV · Trail AWD",
@@ -310,8 +400,11 @@ const carsData = [
         "priceValue": 66355,
         "battery": "83 kWh brutos / 71 kWh útiles",
         "power": "218 CV",
-        "range": "Según configuración; WLTP por versión pendiente de contrastar",
-        "seats": 8
+        "range": "Máximo de referencia 348 km WLTP (AWD); homologación exacta de esta versión pendiente",
+        "seats": 8,
+        "rangeValue": null,
+        "accel": "≈8,6 s (referencia)",
+        "batteryType": "NMC"
       }
     ],
     "colors": [
@@ -361,13 +454,22 @@ const carsData = [
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom",
     "dataStatus": {
-      "status": "30 versiones con precios de tarifa octubre 2026 (etiqueta0/Fleetdata) e IVA 21 %, colores según configurador Ford; autonomías exactas por acabado pendientes",
+      "status": "Autonomía máxima RWD/AWD y garantías contrastadas con Ford 2026; aceleraciones de fuentes técnicas externas; WLTP exacto por versión pendiente",
       "checkedAt": "02/11/2026"
     },
     "sources": [
       "https://etiqueta0.com/furgonetas/ford/e-transit-custom",
-      "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom"
-    ]
+      "https://www.ford.es/furgonetas-pick-up/nueva-e-transit-custom",
+      "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2026/tech-specs/E-Transit_Custom_AWD_2026_tech_spec_EU.pdf",
+      "https://www.ford.es/vehiculos-comerciales/service/garantias",
+      "https://www.automobile-propre.com/articles/essai-ford-e-transit-custom-awd-la-version-4x4-quil-manquait/"
+    ],
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje. Ampliable con Ford Protect.",
+      "battery": "8 años o 160.000 km.",
+      "capacity": "Cobertura de degradación de capacidad: consultar condiciones Ford España.",
+      "corrosion": "12 años contra perforación por corrosión, sin límite de kilometraje."
+    }
   },
   {
     "id": 64,
