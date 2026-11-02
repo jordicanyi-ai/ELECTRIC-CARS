@@ -5,9 +5,9 @@ const carsData = [
     "model": "E-TRANSIT",
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2022,
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Precio de tarifa pendiente de verificar",
+    "priceMin": 73550,
+    "priceMax": 89650,
+    "priceText": "73.550–89.650 €",
     "rangeText": "317–402 km",
     "minRangeVal": 317,
     "maxRangeVal": 402,
@@ -15,23 +15,23 @@ const carsData = [
     "batteryType": "NMC",
     "powerText": "184–269 CV",
     "trunk": 15100,
-    "seats": 3,
+    "seats": "2–7 según carrocería",
     "acceleration": "No comunicado",
     "dimensions": "L2–L4, varias alturas; longitud útil de carga hasta 4.256 mm (L4)",
     "charging": "CC 115 kW (68 kWh) / 180 kW (89 kWh) · 10–80 % en 37 / 28 min",
-    "description": "Furgoneta grande 100 % eléctrica destinada al transporte profesional. Ofrece dos baterías útiles, de 68 y 89 kWh, con autonomías WLTP máximas de 317 y 402 km respectivamente. Según la carrocería, el volumen de carga alcanza 15,1 m³ y la carga útil máxima homologada llega a 1.586 kg en la batería estándar o 1.362 kg en la de autonomía ampliada.",
+    "description": "Ford E-Transit eléctrica disponible como furgón cerrado de diferentes longitudes y alturas, doble cabina para hasta siete ocupantes y chasis cabina para carrozados profesionales. La gama utiliza baterías de 68 y 89 kWh útiles, con autonomía WLTP máxima de 317 y 402 km según configuración. Los PVP publicados para España van de 73.550 a 89.650 € según versiones listadas.",
     "highlights": [
-      "68 o 89 kWh de capacidad útil",
-      "317 o 402 km de autonomía máxima WLTP según batería y carrocería",
-      "Hasta 15,1 m³ de volumen de carga",
-      "Carga útil máxima de 1.586 kg (68 kWh) o 1.362 kg (89 kWh)",
-      "430 Nm de par y Pro Power Onboard de 2,3 kW según equipamiento",
-      "Pantalla SYNC 4 de 12 pulgadas y conectividad Ford Pro"
+      "Furgón L2, L3 y L4, distintas alturas; doble cabina y chasis cabina",
+      "35 configuraciones con PVP de referencia publicados en España",
+      "Baterías de 68 y 89 kWh útiles (75 y 116 kWh en denominaciones comerciales)",
+      "Volumen del furgón cerrado de 9,5 a 15,1 m³",
+      "Chasis cabina: hasta 300 km WLTP y 1.714 kg de carga útil según batería/configuración"
     ],
     "considerations": [
-      "El precio oficial de tarifa con IVA, sin ayudas ni descuentos, está pendiente de confirmar; no confundirlo con ofertas financiadas o vinculadas a CAE",
-      "Los 317 y 402 km son máximos homologados de configuraciones concretas, no valores de todas las carrocerías",
-      "El volumen y la carga útil cambian con longitud, altura, MMA y batería"
+      "PVP de referencia publicados por Carwow, no ofertas al contado ni financiadas; confirmar impuestos, transporte y configuración final en concesionario",
+      "La carrocería chasis cabina se entrega sin caja trasera: el coste del carrozado se añade aparte",
+      "La autonomía del chasis cabina es inferior a la del furgón cerrado: Ford anuncia máximos de 230 y 300 km según batería",
+      "La autonomía máxima no corresponde necesariamente a cada versión de la tabla"
     ],
     "idealFor": [
       "Reparto y profesionales",
@@ -41,7 +41,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precio de tarifa oficial con IVA, sin ayudas ni descuentos, pendiente de verificación. La oferta Ford de 43.250,67 € publicada hasta septiembre de 2026 incluía descuentos y condiciones CAE y no representa una tarifa sin promociones."
+      "note": "PVP de catálogo publicados para España por Carwow (consulta 02/11/2026), sin restar ofertas, ayudas ni descuentos. Confirmar con concesionario el IVA y demás impuestos aplicables, transporte y coste de carrozado. Chasis cabina sin caja montada."
     },
     "chargingInfo": {
       "acMax": "22 kW opcional (según configuración)",
@@ -50,26 +50,354 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "Autonomía estándar · 68 kWh",
-        "price": "Consultar tarifa oficial",
-        "battery": "68 kWh útiles",
+        "name": "350 L3 Chasis cabina · 184 CV · 75 kWh",
+        "price": "73.550 €",
+        "priceValue": 73550,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "power": "184 CV (según configuración)",
-        "range": "317 km WLTP (configuración de referencia)",
-        "rangeValue": 317,
-        "accel": "No comunicado",
         "seats": 3
       },
       {
-        "name": "Autonomía ampliada · 89 kWh",
-        "price": "Consultar tarifa oficial",
-        "battery": "89 kWh útiles",
+        "name": "350 L4 Chasis cabina · 184 CV · 75 kWh",
+        "price": "74.550 €",
+        "priceValue": 74550,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
         "batteryType": "NMC",
-        "power": "184–269 CV según configuración",
-        "range": "402 km WLTP (configuración de referencia)",
-        "rangeValue": 402,
-        "accel": "No comunicado",
         "seats": 3
+      },
+      {
+        "name": "350 L2 Furgón · 184 CV · 75 kWh",
+        "price": "74.650 €",
+        "priceValue": 74650,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L3 Furgón · 184 CV · 75 kWh",
+        "price": "75.150 €",
+        "priceValue": 75150,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L3 Chasis cabina · 269 CV · 75 kWh",
+        "price": "75.680 €",
+        "priceValue": 75680,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "390 L2 Furgón · 184 CV · 75 kWh",
+        "price": "75.901 €",
+        "priceValue": 75901,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Chasis cabina · 184 CV · 75 kWh",
+        "price": "75.971 €",
+        "priceValue": 75971,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L4 Furgón · 184 CV · 75 kWh",
+        "price": "76.151 €",
+        "priceValue": 76151,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L4 Chasis cabina · 269 CV · 75 kWh",
+        "price": "76.680 €",
+        "priceValue": 76680,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L2 Furgón · 269 CV · 75 kWh",
+        "price": "76.780 €",
+        "priceValue": 76780,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L4 Chasis cabina · 184 CV · 75 kWh",
+        "price": "76.970 €",
+        "priceValue": 76970,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L2 Furgón · 184 CV · 75 kWh",
+        "price": "77.071 €",
+        "priceValue": 77071,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L3 Furgón · 269 CV · 75 kWh",
+        "price": "77.280 €",
+        "priceValue": 77280,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Furgón · 184 CV · 75 kWh",
+        "price": "77.571 €",
+        "priceValue": 77571,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "390 L2 Furgón · 269 CV · 75 kWh",
+        "price": "78.031 €",
+        "priceValue": 78031,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Chasis cabina · 269 CV · 75 kWh",
+        "price": "78.101 €",
+        "priceValue": 78101,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L4 Furgón · 269 CV · 75 kWh",
+        "price": "78.281 €",
+        "priceValue": 78281,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L4 Furgón · 184 CV · 75 kWh",
+        "price": "78.570 €",
+        "priceValue": 78570,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L4 Chasis cabina · 269 CV · 75 kWh",
+        "price": "79.100 €",
+        "priceValue": 79100,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L2 Furgón · 269 CV · 75 kWh",
+        "price": "79.200 €",
+        "priceValue": 79200,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Doble cabina · 184 CV · 75 kWh",
+        "price": "79.221 €",
+        "priceValue": 79221,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 7
+      },
+      {
+        "name": "425 L3 Furgón · 269 CV · 75 kWh",
+        "price": "79.701 €",
+        "priceValue": 79701,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L4 Furgón · 269 CV · 75 kWh",
+        "price": "80.700 €",
+        "priceValue": 80700,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Doble cabina · 269 CV · 75 kWh",
+        "price": "81.351 €",
+        "priceValue": 81351,
+        "battery": "75 kWh (denominación comercial; 68 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 317 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 7
+      },
+      {
+        "name": "350 L3 Furgón · 184 CV · 116 kWh",
+        "price": "83.450 €",
+        "priceValue": 83450,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L4 Furgón · 184 CV · 116 kWh",
+        "price": "84.450 €",
+        "priceValue": 84450,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "390 L3 Furgón · 184 CV · 116 kWh",
+        "price": "84.700 €",
+        "priceValue": 84700,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L3 Furgón · 269 CV · 116 kWh",
+        "price": "85.580 €",
+        "priceValue": 85580,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Furgón · 184 CV · 116 kWh",
+        "price": "85.871 €",
+        "priceValue": 85871,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "350 L4 Furgón · 269 CV · 116 kWh",
+        "price": "86.580 €",
+        "priceValue": 86580,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "390 L3 Furgón · 269 CV · 116 kWh",
+        "price": "86.830 €",
+        "priceValue": 86830,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L4 Furgón · 184 CV · 116 kWh",
+        "price": "86.870 €",
+        "priceValue": 86870,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Doble cabina · 184 CV · 116 kWh",
+        "price": "87.520 €",
+        "priceValue": 87520,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "184 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 7
+      },
+      {
+        "name": "425 L3 Furgón · 269 CV · 116 kWh",
+        "price": "88.001 €",
+        "priceValue": 88001,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 3
+      },
+      {
+        "name": "425 L3 Doble cabina · 269 CV · 116 kWh",
+        "price": "89.650 €",
+        "priceValue": 89650,
+        "battery": "116 kWh (denominación comercial; 89 kWh útiles)",
+        "power": "269 CV",
+        "range": "Máximo de gama: 402 km WLTP; depende de carrocería",
+        "batteryType": "NMC",
+        "seats": 7
       }
     ],
     "colors": [],
@@ -97,13 +425,20 @@ const carsData = [
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/e-transit",
     "dataStatus": {
-      "status": "Especificaciones principales contrastadas con Ford España; precio de tarifa, colores, garantía y configuraciones exactas pendientes de verificar",
+      "status": "35 versiones con PVP de referencia de Carwow; especificaciones y garantías contrastadas con Ford. Confirmar impuestos y precio final por carrocería.",
       "checkedAt": "02/11/2026"
     },
     "sources": [
+      "https://www.carwow.es/ford/e-transit-furgon/ofertas",
       "https://www.ford.es/furgonetas-pick-up/e-transit",
-      "https://www.ford.es/furgonetas-pick-up/e-transit/van"
-    ]
+      "https://www.ford.es/furgonetas-pick-up/e-transit-chassis-cab",
+      "https://www.ford.es/vehiculos-comerciales/service/garantias.html"
+    ],
+    "warranty": {
+      "vehicle": "3 años sin límite de kilómetros",
+      "battery": "8 años o 160.000 km",
+      "capacity": "Consultar condiciones de capacidad mínima en garantía Ford"
+    }
   },
   {
     "id": 63,
