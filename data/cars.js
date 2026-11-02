@@ -153,11 +153,21 @@ const carsData = [
         "hex": "#344E65"
       }
     ],
-    "images": [],
+    "images": [
+      "img/cars/hyundai-kona-ev/hyundai-kona-01.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-02.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-03.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-04.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-05.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-06.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-07.webp",
+      "img/cars/hyundai-kona-ev/hyundai-kona-08.webp"
+    ],
     "videos": [
       {
         "title": "Hyundai KONA Eléctrico: pruebas y análisis",
-        "url": "https://www.youtube.com/results?search_query=Hyundai+KONA+Electric+prueba"
+        "url": "https://www.youtube.com/results?search_query=Hyundai+KONA+Electric+prueba",
+        "thumb": "img/cars/hyundai-kona-ev/hyundai-kona-01.webp"
       }
     ],
     "brandInfo": {
@@ -168,7 +178,7 @@ const carsData = [
     },
     "brandUrl": "https://www.hyundai.com/es/es/modelos/kona-electrico.html",
     "dataStatus": {
-      "status": "Pendiente de vincular fotografías subidas y verificar colores por acabado",
+      "status": "Ficha completa; galería enlazada. Precios y colores sujetos a confirmación por acabado",
       "checkedAt": "02/11/2026"
     }
   },
