@@ -189,9 +189,9 @@ const carsData = [
       "checkedAt": "02/11/2026"
     },
     "warranty": {
-      "vehicle": "3 años o 100.000 km de garantía de fábrica (confirmar condiciones específicas en Suzuki España). Programa Tranquilidad Suzuki: cobertura ampliable hasta 10 años con mantenimiento en la red oficial y sujeto a elegibilidad y exclusiones.",
-      "battery": "8 años o 160.000 km para la batería de alta tensión.",
-      "capacity": "Umbral de capacidad del 70 % indicado por Suzuki en documentación de otros mercados; pendiente de confirmar las condiciones contractuales para España."
+      "vehicle": "3 años o 100.000 km. Ampliable hasta 10 años.",
+      "battery": "8 años o 160.000 km.",
+      "capacity": "Capacidad mínima del 70 % (pendiente de confirmar condiciones en España)."
     }
   },
   {
