@@ -1,5 +1,108 @@
 const carsData = [
   {
+    "id": 62,
+    "brand": "Hyundai",
+    "model": "KONA ELÉCTRICO",
+    "type": "SUV urbano",
+    "launchYear": 2023,
+    "priceMin": 38010,
+    "priceMax": 42510,
+    "priceText": "38.010–42.510 €",
+    "rangeText": "380–510 km",
+    "minRangeVal": 380,
+    "maxRangeVal": 510,
+    "batteryText": "48,4–65,4 kWh",
+    "batteryType": "NMC",
+    "powerText": "135–204 CV",
+    "trunk": 466,
+    "frunkText": "27 L",
+    "seats": 5,
+    "acceleration": "7,8–9,9 s",
+    "dimensions": "4,355 × 1,825 × 1,580 m",
+    "charging": "CC 74–101 kW · 10–80 % en 41 min",
+    "description": "El Hyundai KONA Eléctrico es un SUV urbano de cinco plazas con dos opciones de batería, 48,4 y 65,4 kWh, y potencias de 135 y 204 CV. Ofrece entre 380 y 510 km de autonomía WLTP combinada, un maletero de 466 litros y un pequeño compartimento delantero de 27 litros.",
+    "highlights": [
+      "Hasta 510 km de autonomía WLTP combinada",
+      "Maletero de 466 litros y frunk de 27 litros",
+      "Dos baterías y potencias de 135 y 204 CV",
+      "Pantallas digitales de 12,3 pulgadas",
+      "Garantía de vehículo de 5 años sin límite de kilometraje"
+    ],
+    "considerations": [
+      "La carga rápida del 10 al 80 % requiere aproximadamente 41 minutos",
+      "El precio depende del acabado y de las promociones vigentes",
+      "La autonomía cambia con las llantas y el equipamiento"
+    ],
+    "idealFor": [
+      "Ciudad",
+      "Familias",
+      "Uso diario",
+      "Viajes"
+    ],
+    "warranty": {
+      "vehicle": "5 años sin límite de kilometraje, según condiciones Hyundai España",
+      "battery": "8 años o 160.000 km, según condiciones Hyundai España",
+      "capacity": "Consultar condiciones de garantía de batería"
+    },
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa orientativos con IVA, sin ayudas públicas, financiación ni descuentos. Confirmar tarifa y acabado vigentes."
+    },
+    "chargingInfo": {
+      "dcMax": "74–101 kW",
+      "acMax": "10,5 kW",
+      "fastChargeText": "10–80 % en unos 41 min",
+      "connector": "CCS2",
+      "v2l": true
+    },
+    "trims": [
+      {
+        "name": "48 kWh Flexx",
+        "price": "38.010 €",
+        "priceValue": 38010,
+        "battery": "48,4 kWh",
+        "batteryType": "NMC",
+        "power": "135 CV",
+        "range": "380 km WLTP",
+        "rangeValue": 380,
+        "accel": "9,9 s",
+        "seats": 5
+      },
+      {
+        "name": "65 kWh Flexx",
+        "price": "42.410 €",
+        "priceValue": 42410,
+        "battery": "65,4 kWh",
+        "batteryType": "NMC",
+        "power": "204 CV",
+        "range": "510 km WLTP",
+        "rangeValue": 510,
+        "accel": "7,8 s",
+        "seats": 5
+      }
+    ],
+    "colors": [],
+    "images": [],
+    "videos": [
+      {
+        "title": "Hyundai KONA Eléctrico: pruebas y análisis",
+        "url": "https://www.youtube.com/results?search_query=Hyundai+KONA+Electric+prueba"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/hyundai.png",
+      "group": "Hyundai Motor Group",
+      "relation": "Marca del grupo",
+      "note": "Hyundai es un fabricante surcoreano integrado en Hyundai Motor Group."
+    },
+    "brandUrl": "https://www.hyundai.com/es/es/modelos/kona-electrico.html",
+    "dataStatus": {
+      "status": "Pendiente de galería y revisión final de precios",
+      "checkedAt": "02/11/2026"
+    }
+  },
+  {
     "id": 61,
     "brand": "BMW",
     "model": "iX1",
