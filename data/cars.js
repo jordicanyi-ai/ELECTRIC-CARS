@@ -6,21 +6,21 @@ const carsData = [
     "type": "Furgoneta / Monovolumen",
     "launchYear": 2024,
     "seats": 7,
-    "priceMin": 38138,
-    "priceMax": 42138,
-    "priceText": "38.138 - 42.138 €",
-    "rangeText": "327 - 339 km",
-    "minRangeVal": 327,
-    "maxRangeVal": 339,
-    "batteryText": "54 kWh brutos (50 kWh útiles aprox.)",
-    "batteryType": "LFP",
+    "priceMin": 33230,
+    "priceMax": 33230,
+    "priceText": "Desde 33.230 € (configurador GT Standard)",
+    "rangeText": "Hasta 343 km WLTP según versión",
+    "minRangeVal": 331,
+    "maxRangeVal": 343,
+    "batteryText": "50 kWh",
+    "batteryType": "Química por confirmar",
     "powerText": "136 CV",
     "trunk": 775,
     "frunkText": "No disponible",
     "acceleration": "11,2 s",
     "dimensions": "4,405 - 4,755 × 1,848 × 1,818 - 1,837 m",
     "charging": "100 kW CC; 20-80 % en unos 25,5 min",
-    "description": "El Peugeot E-Rifter es un monovolumen eléctrico familiar con puertas correderas, carrocerías Standard y Long y configuraciones de cinco o siete plazas. Ofrece un motor de 136 CV, carga rápida de hasta 100 kW y una autonomía homologada que depende de la versión. Comparte plataforma y tecnología con Citroën ë-Berlingo, Opel Combo Electric, Fiat E-Doblò y Toyota Proace City Verso Electric.",
+    "description": "El Peugeot E-Rifter es un monovolumen eléctrico familiar con puertas correderas, carrocerías Standard y Long y cinco plazas o siete plazas en la carrocería Long. Ofrece un motor de 136 CV, carga rápida de hasta 100 kW y una autonomía homologada que depende de la versión. Comparte plataforma y tecnología con Citroën ë-Berlingo, Opel Combo Electric, Fiat E-Doblò y Toyota Proace City Verso Electric.",
     "highlights": [
       "Versiones de cinco o siete plazas según configuración",
       "Puertas laterales correderas y gran versatilidad",
@@ -28,10 +28,10 @@ const carsData = [
       "Carga rápida de hasta 100 kW"
     ],
     "considerations": [
-      "Siete plazas disponibles según carrocería y configuración; comprobar versión concreta",
-      "La autonomía homologada varía según acabado y longitud",
-      "La autonomía real en autopista puede ser inferior a la WLTP",
-      "Precios de referencia con IVA, sin ayudas ni descuentos condicionados"
+      "Cinco plazas o siete plazas en carrocería Long, según configuración",
+      "La química de la batería no está confirmada en la documentación consultada",
+      "La autonomía depende del acabado y la carrocería; comprobar homologación concreta",
+      "Precio de referencia del configurador para GT Standard; faltan tarifas completas por versión"
     ],
     "idealFor": [
       "Familias numerosas",
@@ -42,7 +42,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "PVP de referencia sin ayudas, con IVA, sin aplicar ofertas ni financiación. Tarifas orientativas de septiembre de 2026; confirmar vigencia."
+      "note": "Referencia del configurador oficial para GT Standard, IVA incluido, sin ayudas públicas. No extrapolar a otras versiones. Confirmar vigencia y condiciones comerciales."
     },
     "chargingInfo": {
       "dcMax": "100 kW",
@@ -51,56 +51,15 @@ const carsData = [
       "connector": "CCS2",
       "v2l": false
     },
-    "trims": [
-      {
-        "name": "ALLURE STANDARD",
-        "price": "38.138 €",
-        "priceValue": 38138,
-        "battery": "54 kWh brutos / 50 kWh útiles aprox.",
-        "power": "100 kW (136 CV)",
-        "range": "339 km WLTP",
-        "rangeValue": 339,
-        "accel": "11,2 s",
-        "batteryType": "LFP"
-      },
-      {
-        "name": "ALLURE LONG",
-        "price": "39.138 €",
-        "priceValue": 39138,
-        "battery": "54 kWh brutos / 50 kWh útiles aprox.",
-        "power": "100 kW (136 CV)",
-        "range": "333 km WLTP",
-        "rangeValue": 333,
-        "accel": "11,2 s",
-        "batteryType": "LFP"
-      },
-      {
-        "name": "GT STANDARD",
-        "price": "41.138 €",
-        "priceValue": 41138,
-        "battery": "54 kWh brutos / 50 kWh útiles aprox.",
-        "power": "100 kW (136 CV)",
-        "range": "331 km WLTP",
-        "rangeValue": 331,
-        "accel": "11,2 s",
-        "batteryType": "LFP"
-      },
-      {
-        "name": "GT LONG",
-        "price": "42.138 €",
-        "priceValue": 42138,
-        "battery": "54 kWh brutos / 50 kWh útiles aprox.",
-        "power": "100 kW (136 CV)",
-        "range": "327 km WLTP",
-        "rangeValue": 327,
-        "accel": "11,2 s",
-        "batteryType": "LFP"
-      }
-    ],
+    "trims": [],
     "colors": [
       {
         "name": "Blanco Kaolin",
         "hex": "#F2F1EA"
+      },
+      {
+        "name": "Verde Sirkka",
+        "hex": "#65766B"
       },
       {
         "name": "Negro Perla Nera",
@@ -111,8 +70,8 @@ const carsData = [
         "hex": "#8C9093"
       },
       {
-        "name": "Verde Sirkka",
-        "hex": "#65766B"
+        "name": "Azul Kiama",
+        "hex": "#346A89"
       }
     ],
     "images": [
@@ -140,7 +99,7 @@ const carsData = [
     },
     "brandUrl": "https://www.peugeot.es",
     "dataStatus": {
-      "status": "Ficha técnica y precios de referencia revisados; fotos pendientes de inspección visual",
+      "status": "Colores y equipamientos verificados en Peugeot; precios por versión, química y fotos pendientes",
       "checkedAt": "03/11/2026"
     },
     "warranty": {
