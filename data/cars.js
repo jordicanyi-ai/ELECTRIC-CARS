@@ -3677,6 +3677,7 @@ const carsData = [
       "Carga rápida CC de 100 kW"
     ],
     "considerations": [
+      "Batería NMC hasta 2024; LFP desde 2024",
       "Las siete plazas dependen de la configuración y longitud elegidas",
       "La autonomía en autopista puede ser notablemente inferior a la WLTP",
       "Precios de referencia sin ayudas ni financiación; confirmar tarifa y promociones vigentes"
