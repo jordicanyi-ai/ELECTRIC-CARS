@@ -12,13 +12,13 @@ const carsData = [
     "rangeText": "327 - 339 km",
     "minRangeVal": 327,
     "maxRangeVal": 339,
-    "batteryText": "50 kWh aprox.",
-    "batteryType": "Consultar según año y versión",
+    "batteryText": "50 kWh",
+    "batteryType": "LFP (verificar según versión)",
     "powerText": "136 CV",
     "trunk": 775,
     "frunkText": "No disponible",
-    "acceleration": "11,2 s",
-    "dimensions": "4,40 - 4,75 × 1,85 × 1,82 m",
+    "acceleration": "11,5 s (según versión)",
+    "dimensions": "4,40 - 4,75 × 1,85 m",
     "charging": "100 kW CC; 0-80 % en unos 30 min",
     "description": "El Peugeot E-Rifter es un monovolumen eléctrico familiar con puertas correderas, carrocerías Standard y Long y configuraciones de cinco o siete plazas. Ofrece un motor de 136 CV, carga rápida de hasta 100 kW y una autonomía homologada que depende de la versión. Comparte plataforma y tecnología con Citroën ë-Berlingo, Opel Combo Electric, Fiat E-Doblò y Toyota Proace City Verso Electric.",
     "highlights": [
@@ -52,7 +52,28 @@ const carsData = [
       "v2l": false
     },
     "trims": [],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#F2F1EA"
+      },
+      {
+        "name": "Negro",
+        "hex": "#1B1B1B"
+      },
+      {
+        "name": "Gris",
+        "hex": "#92959A"
+      },
+      {
+        "name": "Azul Kiama",
+        "hex": "#346A89"
+      },
+      {
+        "name": "Verde Sirkka",
+        "hex": "#65766B"
+      }
+    ],
     "images": [
       "img/cars/peugeot-e-rifter/peugeot-e-rifter_01.webp",
       "img/cars/peugeot-e-rifter/peugeot-e-rifter_02.webp",
@@ -78,7 +99,7 @@ const carsData = [
     },
     "brandUrl": "https://www.peugeot.es",
     "dataStatus": {
-      "status": "Ficha provisional; tarifas, versiones y química pendientes de verificación",
+      "status": "Provisional: precios, fotos y variantes pendientes de verificación",
       "checkedAt": "03/11/2026"
     },
     "warranty": {
