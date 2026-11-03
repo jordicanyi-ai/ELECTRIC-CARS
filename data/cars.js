@@ -92,7 +92,7 @@ const carsData = [
       }
     ],
     "brandInfo": {
-      "logo": "img/brands/peugeot.svg",
+      "logo": "img/brands/peugeot.png",
       "group": "Stellantis",
       "relation": "Marca del grupo",
       "note": "Peugeot forma parte del grupo Stellantis."
