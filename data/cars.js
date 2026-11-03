@@ -3669,7 +3669,7 @@ const carsData = [
     "acceleration": "11,2 s",
     "dimensions": "4,40 - 4,75 × 1,85 × 1,82 m",
     "charging": "100 kW CC; 0-80 % en unos 30 min",
-    "description": "El Citroën ë-Berlingo de pasajeros es un monovolumen eléctrico familiar disponible en carrocerías M y XL, con hasta siete plazas según configuración. Destaca por las puertas laterales correderas, el espacio interior y su modularidad. Monta un motor de 136 CV y batería LFP de 54 kWh, con autonomías WLTP que varían según versión. Comparte plataforma y tecnología con otros modelos similares de Stellantis, como el Peugeot E-Rifter, el Opel Combo Electric y el Fiat E-Doblò.",
+    "description": "El Citroën ë-Berlingo de pasajeros es un monovolumen eléctrico familiar disponible en carrocerías M y XL, con hasta siete plazas según configuración. Destaca por las puertas laterales correderas, el espacio interior y su modularidad. Monta un motor de 136 CV y batería LFP de 54 kWh, con autonomías WLTP que varían según versión. Comparte plataforma y tecnología con otros modelos similares de Stellantis, como el Peugeot E-Rifter, el Opel Combo Electric el Fiat E-Doblò y el Toyota Proace City Verso Electric.",
     "highlights": [
       "Carrocerías M y XL y posibilidad de siete plazas",
       "Puertas correderas y habitáculo versátil",
