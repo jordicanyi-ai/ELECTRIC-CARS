@@ -1,5 +1,93 @@
 const carsData = [
   {
+    "id": 66,
+    "brand": "Peugeot",
+    "model": "E-RIFTER",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2024,
+    "seats": 7,
+    "priceMin": 0,
+    "priceMax": 0,
+    "priceText": "Consultar tarifa oficial",
+    "rangeText": "327 - 339 km",
+    "minRangeVal": 327,
+    "maxRangeVal": 339,
+    "batteryText": "50 kWh aprox.",
+    "batteryType": "Consultar según año y versión",
+    "powerText": "136 CV",
+    "trunk": 775,
+    "frunkText": "No disponible",
+    "acceleration": "11,2 s",
+    "dimensions": "4,40 - 4,75 × 1,85 × 1,82 m",
+    "charging": "100 kW CC; 0-80 % en unos 30 min",
+    "description": "El Peugeot E-Rifter es un monovolumen eléctrico familiar con puertas correderas, carrocerías Standard y Long y configuraciones de cinco o siete plazas. Ofrece un motor de 136 CV, carga rápida de hasta 100 kW y una autonomía homologada que depende de la versión. Comparte plataforma y tecnología con Citroën ë-Berlingo, Opel Combo Electric, Fiat E-Doblò y Toyota Proace City Verso Electric.",
+    "highlights": [
+      "Versiones de cinco o siete plazas según configuración",
+      "Puertas laterales correderas y gran versatilidad",
+      "Motor eléctrico de 136 CV",
+      "Carga rápida de hasta 100 kW"
+    ],
+    "considerations": [
+      "Las siete plazas dependen de la carrocería y configuración",
+      "Confirmar química de batería según año y versión",
+      "Autonomía real inferior a la WLTP en autopista",
+      "Precio de tarifa sin ayudas ni financiación pendiente de verificación"
+    ],
+    "idealFor": [
+      "Familias numerosas",
+      "Transporte de pasajeros",
+      "Uso diario",
+      "Ocio y equipaje"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio oficial pendiente de comprobación; no se incluyen ayudas ni financiación."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "0-80 % en aproximadamente 30 min",
+      "connector": "CCS2",
+      "v2l": false
+    },
+    "trims": [],
+    "colors": [],
+    "images": [
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_01.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_02.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_03.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_04.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_05.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_06.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_07.webp",
+      "img/cars/peugeot-e-rifter/peugeot-e-rifter_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Peugeot E-Rifter en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot+E-Rifter+electric+official",
+        "thumb": "img/cars/peugeot-e-rifter/peugeot-e-rifter_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.svg",
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Peugeot forma parte del grupo Stellantis."
+    },
+    "brandUrl": "https://www.peugeot.es",
+    "dataStatus": {
+      "status": "Ficha provisional; tarifas, versiones y química pendientes de verificación",
+      "checkedAt": "03/11/2026"
+    },
+    "warranty": {
+      "vehicle": "Consultar condiciones oficiales Peugeot",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %"
+    }
+  },
+  {
     "id": 65,
     "brand": "Ford",
     "model": "E-TRANSIT CUSTOM",
