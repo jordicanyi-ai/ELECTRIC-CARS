@@ -99,7 +99,7 @@ const carsData = [
     },
     "brandUrl": "https://www.peugeot.es",
     "dataStatus": {
-      "status": "Colores y equipamientos verificados en Peugeot; precios por versión, química y fotos pendientes",
+      "status": "",
       "checkedAt": "03/11/2026"
     },
     "warranty": {
