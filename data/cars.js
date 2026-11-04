@@ -9,7 +9,7 @@ const carsData = [
     "priceMin": 33230,
     "priceMax": 33230,
     "priceText": "Desde 33.230 € (configurador GT Standard)",
-    "rangeText": "Hasta 343 km WLTP según versión",
+    "rangeText": "Hasta 343 km WLTP",
     "minRangeVal": 331,
     "maxRangeVal": 343,
     "batteryText": "50 kWh",
