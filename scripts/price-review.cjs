@@ -35,6 +35,7 @@ const results = proposals.map(p => {
   if (p.market !== 'ES' || p.currency !== 'EUR' || p.includesVat !== true || p.includesAid !== false || p.financingRequired !== false || p.conditionalDiscount !== false) { out.reason = 'Spanish unconditional VAT-inclusive price without aid not established'; return out; }
   if (!/^https:\/\//.test(p.sourceUrl || '') || !p.checkedAt || Number.isNaN(Date.parse(p.checkedAt)) || p.officialSource !== true) { out.reason = 'Official source URL or verification date missing'; return out; }
   if (!validPrice(p.newPrice)) { out.reason = 'New price missing or invalid'; return out; }
+  if (p.evidenceReviewed !== true || typeof p.evidenceQuote !== 'string' || p.evidenceQuote.trim().length < 15 || p.exactTrimMatched !== true || p.priceConditionsReviewed !== true) { out.reason = 'Documentary evidence, exact trim and conditions not independently reviewed; research only'; out.status = 'research_only'; return out; }
   let oldPrice;
   if (p.trimName) {
     const trim = (car.trims || []).find(t => t.name === p.trimName);
