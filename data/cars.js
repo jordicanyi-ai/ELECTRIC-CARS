@@ -11362,7 +11362,7 @@ const carsData = [
     "seats": 7,
     "priceMin": null,
     "priceMax": null,
-    "priceText": "Precio en España no confirmado",
+    "priceText": "No disponible en España",
     "rangeText": "480–520 km (ciclo de homologación por confirmar)",
     "minRangeVal": 480,
     "maxRangeVal": 520,
@@ -11472,7 +11472,7 @@ const carsData = [
     },
     "brandUrl": "https://www.denza.com/",
     "dataStatus": {
-      "status": "Datos internacionales; España pendiente",
+      "status": "No disponible en España",
       "checkedAt": "05/11/2026"
     },
     "warranty": {
