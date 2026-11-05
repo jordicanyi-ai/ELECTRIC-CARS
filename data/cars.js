@@ -11492,7 +11492,7 @@ const carsData = [
     "minRangeVal": null,
     "maxRangeVal": null,
     "batteryText": "71,5–96,2 kWh",
-    "batteryType": "Por confirmar",
+    "batteryType": "NMC",
     "powerText": "272 CV (200 kW)",
     "frunkText": "Por confirmar",
     "acceleration": "Por confirmar",
@@ -11510,7 +11510,20 @@ const carsData = [
       "connector": "Por confirmar",
       "v2l": true
     },
-    "colors": [],
+    "colors": [
+      {
+        "name": "Fjord Blue",
+        "hex": "#496D83"
+      },
+      {
+        "name": "Solid Moonrock Gray",
+        "hex": "#888C8A"
+      },
+      {
+        "name": "Lush Green",
+        "hex": "#667969"
+      }
+    ],
     "images": [
       "img/cars/kia-pv7-passenger/kia-pv7-passenger_01.webp",
       "img/cars/kia-pv7-passenger/kia-pv7-passenger_02.webp",
@@ -11572,7 +11585,7 @@ const carsData = [
         "power": "200 kW",
         "range": "Pendiente WLTP",
         "rangeValue": null,
-        "batteryType": "Por confirmar",
+        "batteryType": "NMC",
         "accel": "Por confirmar"
       },
       {
@@ -11583,7 +11596,7 @@ const carsData = [
         "power": "200 kW",
         "range": "Pendiente WLTP",
         "rangeValue": null,
-        "batteryType": "Por confirmar",
+        "batteryType": "NMC",
         "accel": "Por confirmar"
       }
     ],
@@ -11600,7 +11613,7 @@ const carsData = [
     "minRangeVal": null,
     "maxRangeVal": null,
     "batteryText": "71,5–96,2 kWh",
-    "batteryType": "Por confirmar",
+    "batteryType": "NMC",
     "powerText": "272 CV (200 kW)",
     "frunkText": "Por confirmar",
     "acceleration": "Por confirmar",
@@ -11618,7 +11631,20 @@ const carsData = [
       "connector": "Por confirmar",
       "v2l": true
     },
-    "colors": [],
+    "colors": [
+      {
+        "name": "Fjord Blue",
+        "hex": "#496D83"
+      },
+      {
+        "name": "Solid Moonrock Gray",
+        "hex": "#888C8A"
+      },
+      {
+        "name": "Lush Green",
+        "hex": "#667969"
+      }
+    ],
     "images": [
       "img/cars/kia-pv7-cargo/kia-PV7-Cargo_01.webp",
       "img/cars/kia-pv7-cargo/kia-PV7-Cargo_02.webp",
@@ -11680,7 +11706,7 @@ const carsData = [
         "power": "200 kW",
         "range": "Pendiente WLTP",
         "rangeValue": null,
-        "batteryType": "Por confirmar",
+        "batteryType": "NMC",
         "accel": "Por confirmar"
       },
       {
@@ -11691,7 +11717,7 @@ const carsData = [
         "power": "200 kW",
         "range": "Pendiente WLTP",
         "rangeValue": null,
-        "batteryType": "Por confirmar",
+        "batteryType": "NMC",
         "accel": "Por confirmar"
       }
     ],
