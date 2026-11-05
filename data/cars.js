@@ -11352,5 +11352,133 @@ const carsData = [
       "status": "Revisado",
       "checkedAt": "07/10/2026"
     }
+  },
+  {
+    "id": 67,
+    "brand": "Denza",
+    "model": "D9",
+    "type": "Furgoneta / Monovolumen",
+    "launchYear": 2024,
+    "seats": 7,
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Precio en España no confirmado",
+    "rangeText": "480–520 km (ciclo de homologación por confirmar)",
+    "minRangeVal": 480,
+    "maxRangeVal": 520,
+    "batteryText": "103,36 kWh",
+    "batteryType": "LFP (Blade Battery)",
+    "powerText": "313–374 CV (según mercado y versión)",
+    "trunk": 410,
+    "frunkText": "No confirmado",
+    "acceleration": "6,9–9,5 s",
+    "dimensions": "5,250 × 1,960 × 1,920 m",
+    "charging": "Carga rápida CC: hasta 166 kW (Elite, según mercado)",
+    "description": "El DENZA D9 100 % eléctrico es un monovolumen premium de siete plazas con puertas correderas eléctricas, segunda fila de asientos individuales y batería Blade LFP de 103,36 kWh. Se comercializa en mercados asiáticos con versiones de tracción delantera y total. La versión BEV no tiene precio de tarifa confirmado para España.",
+    "highlights": [
+      "Siete plazas en configuración 2+2+3",
+      "Batería Blade LFP de 103,36 kWh",
+      "Asientos individuales de confort en segunda fila",
+      "Puertas laterales correderas eléctricas"
+    ],
+    "considerations": [
+      "No hay precio de venta al público confirmado en España para la versión 100 % eléctrica",
+      "Autonomías y potencias procedentes de mercados exteriores; no presentarlas como homologación WLTP europea",
+      "Garantías de mercados asiáticos no equivalen a cobertura española",
+      "Gran longitud de 5,25 metros"
+    ],
+    "idealFor": [
+      "Familias numerosas",
+      "Transporte premium de pasajeros",
+      "Viajes de larga distancia"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Sin precio oficial confirmado para España. No se usan precios del D9 DM-i ni conversiones de otros mercados."
+    },
+    "chargingInfo": {
+      "dcMax": "166 kW (Elite, según mercado)",
+      "acMax": "Por confirmar para España",
+      "fastChargeText": "Por confirmar",
+      "connector": "Por confirmar para España",
+      "v2l": null
+    },
+    "trims": [
+      {
+        "name": "ELITE FWD (mercados asiáticos)",
+        "price": "Sin precio en España",
+        "priceValue": null,
+        "battery": "103,36 kWh",
+        "batteryType": "LFP",
+        "power": "313 CV (referencia internacional)",
+        "range": "520 km (ciclo por confirmar)",
+        "rangeValue": 520,
+        "accel": "9,5 s"
+      },
+      {
+        "name": "GRANDEUR AWD (mercados asiáticos)",
+        "price": "Sin precio en España",
+        "priceValue": null,
+        "battery": "103,36 kWh",
+        "batteryType": "LFP",
+        "power": "374 CV (referencia internacional)",
+        "range": "480 km (ciclo por confirmar)",
+        "rangeValue": 480,
+        "accel": "6,9 s"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Arctic White",
+        "hex": "#F1F0EC",
+        "border": "#cbd5e1"
+      },
+      {
+        "name": "Cosmos Black",
+        "hex": "#202126"
+      },
+      {
+        "name": "Whale Sea Blue",
+        "hex": "#344C60"
+      },
+      {
+        "name": "Starry Night Grey",
+        "hex": "#777A80"
+      }
+    ],
+    "images": [
+      "img/cars/denza-d9/denza-d9_01.webp",
+      "img/cars/denza-d9/denza-d9_02.webp",
+      "img/cars/denza-d9/denza-d9_03.webp",
+      "img/cars/denza-d9/denza-d9_04.webp",
+      "img/cars/denza-d9/denza-d9_05.webp",
+      "img/cars/denza-d9/denza-d9_06.webp",
+      "img/cars/denza-d9/denza-d9_07.webp",
+      "img/cars/denza-d9/denza-d9_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "DENZA D9 EV",
+        "url": "https://www.youtube.com/results?search_query=Denza+D9+EV+electric",
+        "thumb": "img/cars/denza-d9/denza-d9_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/denza.svg",
+      "group": "BYD",
+      "relation": "Marca del grupo",
+      "note": "DENZA es una marca premium del grupo BYD. Logo tipográfico provisional a sustituir por el archivo oficial."
+    },
+    "brandUrl": "https://www.denza.com/",
+    "dataStatus": {
+      "status": "Datos internacionales; España pendiente",
+      "checkedAt": "05/11/2026"
+    },
+    "warranty": {
+      "vehicle": "6 años / 150.000 km (referencia Singapur; no aplicable a España)",
+      "battery": "10 años / 200.000 km (referencia Singapur; no aplicable a España)",
+      "capacity": "Cobertura de capacidad para España no confirmada"
+    }
   }
 ];
