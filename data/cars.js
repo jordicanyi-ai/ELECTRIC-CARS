@@ -11465,10 +11465,10 @@ const carsData = [
       }
     ],
     "brandInfo": {
-      "logo": "img/brands/denza.svg",
+      "logo": "img/brands/denza-logo-png.png",
       "group": "BYD",
       "relation": "Marca del grupo",
-      "note": "DENZA es una marca premium del grupo BYD. Logo tipográfico provisional a sustituir por el archivo oficial."
+      "note": "DENZA es una marca premium del grupo BYD. "
     },
     "brandUrl": "https://www.denza.com/",
     "dataStatus": {
