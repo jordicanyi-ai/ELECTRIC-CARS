@@ -1,0 +1,16 @@
+[
+  {
+    "id": 66,
+    "trimName": "ALLURE STANDARD",
+    "newPrice": 38138,
+    "market": "ES",
+    "currency": "EUR",
+    "includesVat": true,
+    "includesAid": false,
+    "financingRequired": false,
+    "conditionalDiscount": false,
+    "officialSource": true,
+    "sourceUrl": "https://www.peugeot.es/",
+    "checkedAt": "2026-11-05"
+  }
+]
