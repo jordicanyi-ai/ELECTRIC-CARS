@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "brand": "Peugeot",
+      "model": "E-RIFTER",
+      "url": "https://www.peugeot.es/gama/peugeot-e-rifter.html"
+    },
+    {
+      "brand": "Kia",
+      "model": "EV2",
+      "url": "https://www.kia.com/es/modelos/modelos-kia/gama-electrico-ev/"
+    }
+  ]
+}
