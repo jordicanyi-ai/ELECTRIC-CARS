@@ -18,7 +18,7 @@ function run(proposals) {
     return JSON.parse(result.stdout).proposals[0];
   } finally { fs.rmSync(dir,{recursive:true,force:true}); }
 }
-const valid = {id:1,trimName:'BASE',newPrice:19000,market:'ES',currency:'EUR',includesVat:true,includesAid:false,financingRequired:false,conditionalDiscount:false,officialSource:true,sourceUrl:'https://example.com/',checkedAt:'2026-11-05'};
+const valid = {id:1,trimName:'BASE',newPrice:19000,market:'ES',currency:'EUR',includesVat:true,includesAid:false,financingRequired:false,conditionalDiscount:false,officialSource:true,evidenceReviewed:true,evidenceQuote:'PVP al contado con IVA y sin ayudas públicas',exactTrimMatched:true,priceConditionsReviewed:true,sourceUrl:'https://example.com/',checkedAt:'2026-11-05'};
 test('verified-looking proposal requires manual approval',()=>{const x=run([valid]);assert.equal(x.status,'needs_manual_approval');assert.equal(x.delta,-1000);});
 test('no price rejects',()=>assert.equal(run([{...valid,newPrice:null}]).status,'rejected'));
 test('aid rejects',()=>assert.equal(run([{...valid,includesAid:true}]).status,'rejected'));
