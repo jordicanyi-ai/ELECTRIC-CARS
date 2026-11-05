@@ -11,7 +11,7 @@ test('end-to-end review preserves source and reports candidates', () => {
   const source=path.join(dir,'cars.js'), proposals=path.join(dir,'proposals.json');
   const original='const carsData = '+JSON.stringify([{id:1,brand:'Demo',model:'EV',priceMin:20000,priceMax:30000,trims:[{name:'BASE',priceValue:20000}]}])+';';
   fs.writeFileSync(source,original);
-  fs.writeFileSync(proposals,JSON.stringify([{id:1,trimName:'BASE',newPrice:21000,market:'ES',currency:'EUR',includesVat:true,includesAid:false,financingRequired:false,conditionalDiscount:false,officialSource:true,sourceUrl:'https://www.example.es',checkedAt:'2026-11-05'}]));
+  fs.writeFileSync(proposals,JSON.stringify([{id:1,trimName:'BASE',newPrice:21000,market:'ES',currency:'EUR',includesVat:true,includesAid:false,financingRequired:false,conditionalDiscount:false,officialSource:true,evidenceReviewed:true,evidenceQuote:'PVP al contado con IVA y sin ayudas públicas',exactTrimMatched:true,priceConditionsReviewed:true,sourceUrl:'https://www.example.es',checkedAt:'2026-11-05'}]));
   const r=spawnSync(process.execPath,[path.join(root,'scripts/price-review-run.cjs'),source,proposals],{encoding:'utf8'});
   assert.equal(r.status,0,r.stderr);
   const result=JSON.parse(r.stdout);
