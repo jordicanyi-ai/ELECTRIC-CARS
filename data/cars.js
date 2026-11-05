@@ -11363,7 +11363,7 @@ const carsData = [
     "priceMin": null,
     "priceMax": null,
     "priceText": "No disponible en España",
-    "rangeText": "480–520 km (ciclo de homologación por confirmar)",
+    "rangeText": "480–520 km",
     "minRangeVal": 480,
     "maxRangeVal": 520,
     "batteryText": "103,36 kWh",
