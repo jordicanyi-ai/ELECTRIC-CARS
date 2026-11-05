@@ -11493,21 +11493,21 @@ const carsData = [
     "maxRangeVal": null,
     "batteryText": "71,5–96,2 kWh",
     "batteryType": "NMC",
-    "powerText": "272 CV (200 kW)",
-    "frunkText": "Por confirmar",
-    "acceleration": "Por confirmar",
-    "dimensions": "5,350 × 1,995 × 1,990 m (Long)",
-    "charging": "800 V; 10–80 % en aproximadamente 20–25 min (objetivo)",
+    "powerText": "272 CV (200 kW); 420 Nm; tracción delantera",
+    "frunkText": "No confirmado",
+    "acceleration": "No anunciada",
+    "dimensions": "5.350 × 1.995 × 1.990 mm; batalla 3.500 mm",
+    "charging": "800 V; 10–80 % en unos 20–25 min (dato preliminar, cargador DC de 350 kW)",
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
       "note": "Modelo todavía no disponible para compra en España. Precio oficial con impuestos y sin ayudas pendiente."
     },
     "chargingInfo": {
-      "dcMax": "Por confirmar",
+      "dcMax": "Potencia máxima admitida no confirmada",
       "acMax": "Por confirmar",
-      "fastChargeText": "10–80 % en 20–25 min (objetivo del fabricante)",
-      "connector": "Por confirmar",
+      "fastChargeText": "10–80 % en unos 20–25 min (cargador de 350 kW; dato preliminar)",
+      "connector": "Puerto delantero AC/DC y segundo puerto AC lateral opcional",
       "v2l": true
     },
     "colors": [
@@ -11548,27 +11548,29 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/pbv/vehiculos/kia-pv7/",
     "dataStatus": {
-      "status": "Presentado; lanzamiento europeo previsto para 2027",
+      "status": "Presentado; datos preliminares de Kia, lanzamiento europeo previsto para segundo semestre de 2027",
       "checkedAt": "05/11/2026"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmación específica para PV7 en España",
-      "battery": "Pendiente de confirmación específica para PV7 en España",
+      "vehicle": "Pendiente de confirmación para PV7 en España",
+      "battery": "Pendiente de confirmación para PV7 en España",
       "capacity": "Por confirmar"
     },
     "model": "PV7 Passenger",
     "seats": 9,
     "trunk": null,
-    "description": "El KIA PV7 Passenger es un monovolumen eléctrico de gran formato concebido para transporte de pasajeros. Su configuración Long anunciada ofrece nueve plazas, piso plano y arquitectura eléctrica de 800 V. Kia prevé su lanzamiento europeo durante la segunda mitad de 2027.",
+    "description": "El KIA PV7 Passenger es un monovolumen eléctrico de gran formato con configuraciones de 7, 8 o 9 plazas previstas en Europa, suelo plano y asientos modulares. Ofrece dos baterías de 71,5 y 96,2 kWh y arquitectura eléctrica de 800 V. Su llegada europea está prevista para la segunda mitad de 2027.",
     "highlights": [
-      "Nueve plazas en la configuración Long anunciada",
+      "Configuraciones europeas previstas de 7, 8 y 9 plazas",
       "Baterías de 71,5 y 96,2 kWh",
-      "Arquitectura de 800 V",
-      "Puertas y habitáculo diseñados para movilidad de pasajeros"
+      "Tracción delantera y hasta 200 kW y 420 Nm",
+      "Arquitectura de 800 V y carga rápida preliminar de 20–25 min",
+      "Asientos desmontables y deslizantes en configuración de 7 plazas"
     ],
     "considerations": [
-      "Precio y homologación WLTP definitivos pendientes",
-      "La configuración española de plazas y equipamientos puede variar",
+      "Precio y autonomía WLTP definitivos pendientes",
+      "Las configuraciones y equipamientos pueden variar en España",
+      "Maletero no comunicado oficialmente",
       "No disponible actualmente en España"
     ],
     "idealFor": [
@@ -11582,22 +11584,22 @@ const carsData = [
         "price": "No disponible",
         "priceValue": null,
         "battery": "71,5 kWh",
-        "power": "200 kW",
+        "power": "200 kW (máximo anunciado)",
         "range": "Pendiente WLTP",
         "rangeValue": null,
         "batteryType": "NMC",
-        "accel": "Por confirmar"
+        "accel": "No anunciada"
       },
       {
         "name": "PASSENGER LONG 96,2 kWh",
         "price": "No disponible",
         "priceValue": null,
         "battery": "96,2 kWh",
-        "power": "200 kW",
+        "power": "200 kW (máximo anunciado)",
         "range": "Pendiente WLTP",
         "rangeValue": null,
         "batteryType": "NMC",
-        "accel": "Por confirmar"
+        "accel": "No anunciada"
       }
     ],
     "id": 68
@@ -11609,26 +11611,26 @@ const carsData = [
     "priceMin": null,
     "priceMax": null,
     "priceText": "No disponible en España",
-    "rangeText": "Autonomía WLTP pendiente de homologación",
+    "rangeText": "Más de 460 km WLTP (objetivo provisional, Cargo Long Range)",
     "minRangeVal": null,
     "maxRangeVal": null,
     "batteryText": "71,5–96,2 kWh",
     "batteryType": "NMC",
-    "powerText": "272 CV (200 kW)",
-    "frunkText": "Por confirmar",
-    "acceleration": "Por confirmar",
-    "dimensions": "5,350 × 1,995 × 1,990 m (Long)",
-    "charging": "800 V; 10–80 % en aproximadamente 20–25 min (objetivo)",
+    "powerText": "272 CV (200 kW); 420 Nm; tracción delantera",
+    "frunkText": "No confirmado",
+    "acceleration": "No anunciada",
+    "dimensions": "5.350 × 1.995 × 1.990 mm; batalla 3.500 mm",
+    "charging": "800 V; 10–80 % en unos 20–25 min (dato preliminar, cargador DC de 350 kW)",
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
       "note": "Modelo todavía no disponible para compra en España. Precio oficial con impuestos y sin ayudas pendiente."
     },
     "chargingInfo": {
-      "dcMax": "Por confirmar",
+      "dcMax": "Potencia máxima admitida no confirmada",
       "acMax": "Por confirmar",
-      "fastChargeText": "10–80 % en 20–25 min (objetivo del fabricante)",
-      "connector": "Por confirmar",
+      "fastChargeText": "10–80 % en unos 20–25 min (cargador de 350 kW; dato preliminar)",
+      "connector": "Puerto delantero AC/DC y segundo puerto AC lateral opcional",
       "v2l": true
     },
     "colors": [
@@ -11669,27 +11671,29 @@ const carsData = [
     },
     "brandUrl": "https://www.kia.com/es/pbv/vehiculos/kia-pv7/",
     "dataStatus": {
-      "status": "Presentado; lanzamiento europeo previsto para 2027",
+      "status": "Presentado; datos preliminares de Kia, lanzamiento europeo previsto para segundo semestre de 2027",
       "checkedAt": "05/11/2026"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmación específica para PV7 en España",
-      "battery": "Pendiente de confirmación específica para PV7 en España",
+      "vehicle": "Pendiente de confirmación para PV7 en España",
+      "battery": "Pendiente de confirmación para PV7 en España",
       "capacity": "Por confirmar"
     },
     "model": "PV7 Cargo",
     "seats": 3,
-    "trunk": 8000,
-    "description": "El KIA PV7 Cargo es una furgoneta 100 % eléctrica destinada al transporte profesional, con arquitectura de 800 V, hasta 8 m³ de capacidad de carga anunciada y versiones de distintas longitudes y alturas. El lanzamiento europeo está previsto para la segunda mitad de 2027.",
+    "trunk": 6100,
+    "description": "El KIA PV7 Cargo es una furgoneta eléctrica profesional con baterías de 71,5 y 96,2 kWh, arquitectura de 800 V y tracción delantera. La carrocería Long anuncia 6,1 m³ de carga, mientras que la High Roof llega a 8,0 m³. El Cargo Long Range tiene un objetivo de autonomía superior a 460 km WLTP, aún pendiente de homologación. Lanzamiento europeo previsto para la segunda mitad de 2027.",
     "highlights": [
-      "Hasta 8 m³ de volumen de carga anunciado",
-      "Hasta tres europalés según configuración",
-      "Baterías de 71,5 y 96,2 kWh",
-      "Arquitectura de 800 V"
+      "6.100 litros de carga en Cargo Long; 8.000 litros en High Roof",
+      "Hasta 1.165 kg de carga útil en Long; 1.200 kg en Compact",
+      "Altura de carga de 550 mm en Long",
+      "Capacidad para tres europalés en Long",
+      "Hasta 200 kW y 420 Nm; arquitectura de 800 V"
     ],
     "considerations": [
-      "Volumen máximo de carga según carrocería; no representa todas las versiones",
-      "Precio español y autonomía WLTP definitiva pendientes",
+      "8.000 litros corresponde a High Roof, no a Long",
+      "Más de 460 km WLTP es un objetivo provisional del Cargo Long Range",
+      "Precio y homologación definitivos pendientes",
       "No disponible actualmente en España"
     ],
     "idealFor": [
@@ -11703,22 +11707,22 @@ const carsData = [
         "price": "No disponible",
         "priceValue": null,
         "battery": "71,5 kWh",
-        "power": "200 kW",
+        "power": "200 kW (máximo anunciado)",
         "range": "Pendiente WLTP",
         "rangeValue": null,
         "batteryType": "NMC",
-        "accel": "Por confirmar"
+        "accel": "No anunciada"
       },
       {
         "name": "CARGO LONG 96,2 kWh",
         "price": "No disponible",
         "priceValue": null,
         "battery": "96,2 kWh",
-        "power": "200 kW",
+        "power": "200 kW (máximo anunciado)",
         "range": "Pendiente WLTP",
         "rangeValue": null,
         "batteryType": "NMC",
-        "accel": "Por confirmar"
+        "accel": "No anunciada"
       }
     ],
     "id": 69
