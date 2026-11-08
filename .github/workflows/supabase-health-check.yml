@@ -31,7 +31,7 @@ jobs:
             --data-urlencode 'select=id' \
             --data-urlencode 'limit=1' \
             --header "apikey: $SUPABASE_ANON_KEY" \
-            --header "Authorization: Bearer $SUPABASE_ANON_KEY")
+            )
           if [[ "$code" != "200" && "$code" != "206" ]]; then
             echo "::error::Read-only request returned HTTP $code. Check RLS, key, and table access."
             exit 1
