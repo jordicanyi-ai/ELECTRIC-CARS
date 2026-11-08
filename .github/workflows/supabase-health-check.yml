@@ -1,0 +1,39 @@
+name: Supabase read-only health check (manual test)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify configured endpoint responds
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$SUPABASE_URL" || -z "$SUPABASE_ANON_KEY" ]]; then
+            echo "::error::Configure SUPABASE_URL and SUPABASE_ANON_KEY repository secrets."
+            exit 1
+          fi
+          case "$SUPABASE_URL" in
+            https://*.supabase.co) ;;
+            *) echo "::error::Unexpected Supabase URL"; exit 1 ;;
+          esac
+          code=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
+            --max-time 20 --retry 2 --retry-delay 3 \
+            --get "$SUPABASE_URL/rest/v1/vehicle_listings" \
+            --data-urlencode 'select=id' \
+            --data-urlencode 'limit=1' \
+            --header "apikey: $SUPABASE_ANON_KEY" \
+            --header "Authorization: Bearer $SUPABASE_ANON_KEY")
+          if [[ "$code" != "200" && "$code" != "206" ]]; then
+            echo "::error::Read-only request returned HTTP $code. Check RLS, key, and table access."
+            exit 1
+          fi
+          echo "Supabase read-only query succeeded (HTTP $code)."
