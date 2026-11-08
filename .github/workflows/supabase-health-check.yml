@@ -1,7 +1,9 @@
-name: Supabase read-only health check (manual test)
+name: Supabase read-only health check
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
 
 permissions:
   contents: read
