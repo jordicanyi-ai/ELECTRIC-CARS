@@ -86,6 +86,8 @@ main{max-width:1480px}
 
 .tech-market-ring-label{position:absolute;z-index:2;transform:translate(-50%,-50%);color:#fff;font-size:12px;font-weight:900;line-height:1;text-shadow:0 1px 3px #0009;pointer-events:none;white-space:nowrap}.tech-market-ring-label.dark{color:#17283f;text-shadow:0 1px 2px #fff9}@media(max-width:650px){.tech-market-ring-label{font-size:11px}}
 .controls-secondary{margin:18px 0 12px;justify-content:center}.controls-secondary label{min-width:210px}.controls-secondary select{width:100%}
+
+.bev-trend-panel{margin-top:18px}.bev-trend-legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0 2px}.bev-trend-legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700}.bev-trend-legend i{width:21px;height:4px;border-radius:3px;display:inline-block}.bev-trend-scroll{width:100%;overflow-x:auto}.bev-trend-scroll svg{display:block;width:100%;min-width:580px;height:auto}.bev-trend-panel .secondary{font-size:12px}@media(max-width:650px){.bev-trend-legend{gap:10px}.bev-trend-legend span{font-size:11px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -106,7 +108,8 @@ main{max-width:1480px}
 <div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label id="territory-wrap" hidden>Comunidad autónoma<select id="territory"><option value="es">Toda España</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
-<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label><label id="territory-wrap-bottom" hidden>Comunidad autónoma<select id="territory-bottom"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-bottom"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
+<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><section class="panel bev-trend-panel"><span class="chip">EVOLUCIÓN · DGT</span><h2>Cuota de turismos 100 % eléctricos, mes a mes</h2><p class="secondary">Porcentaje de turismos BEV sobre el total de turismos nuevos matriculados. Comparativa anual.</p><div class="bev-trend-legend" id="bev-trend-legend"></div><div class="bev-trend-scroll"><svg id="bev-trend-svg" viewBox="0 0 1000 410" role="img" aria-label="Evolución mensual de la cuota de mercado BEV por año"></svg></div><p class="secondary" id="bev-trend-note"></p></section>
+<div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label><label id="territory-wrap-bottom" hidden>Comunidad autónoma<select id="territory-bottom"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-bottom"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
 <section class="panel tech-market" id="tech-market" hidden><span class="chip">MERCADO · DGT</span><h2>Cuota de matriculaciones por tecnología</h2><p class="secondary">Turismos nuevos matriculados · España · Fuente DGT</p><div class="tech-market-layout"><div id="tech-market-ring" class="tech-market-ring" role="img" aria-label="Distribución de matriculaciones por tecnología"></div><table class="tech-market-table"><thead><tr><th>Tecnología</th><th>Unidades</th><th>Cuota</th></tr></thead><tbody id="tech-market-body"></tbody></table></div><p class="secondary" id="tech-market-note"></p></section>
 <div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-final"><option>Carregant mesos…</option></select></label><label id="territory-wrap-final" hidden>Comunidad autónoma<select id="territory-final"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-final"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
@@ -206,6 +209,37 @@ period.addEventListener('change',render);render();
     if(regionNames.length){territoryWrap.hidden=false;regionNames.forEach(name=>{const option=document.createElement('option');option.value=name;option.textContent=name;territory.append(option)});}
     const scoped=d=>territory.value==='es'?d:(d?.regions?.[territory.value]||{total:0,all_new_turismos:0,models:[],brands:[]});
     const territoryLabel=()=>territory.value==='es'?'España':territory.value;
+    const trendSVG=document.getElementById('bev-trend-svg'),trendLegend=document.getElementById('bev-trend-legend'),trendNote=document.getElementById('bev-trend-note');
+    const trendNS='http://www.w3.org/2000/svg';
+    const trendEl=(tag,attrs={},label)=>{const el=document.createElementNS(trendNS,tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,String(v)));if(label!==undefined)el.textContent=label;return el};
+    const trendColors=['#f59e0b','#e65a66','#4cae78','#4c8bd8','#9b71c9','#16a6a1'];
+    const trendMonths=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    function updateBevTrend(){
+      const years=[...new Set(months.map(([p])=>p.slice(0,4)))].sort();
+      const selectedYear=monthSelect.value.slice(0,4);
+      const selectedMonth=Number(monthSelect.value.slice(5));
+      const plotted=years.filter(y=>Number(y)<=Number(selectedYear)).slice(-4);
+      const pointsByYear=plotted.map((year,i)=>({year,color:trendColors[(Number(year)-2024+trendColors.length*10)%trendColors.length],points:months.filter(([p])=>p.startsWith(year+'-')&&(year!==selectedYear||Number(p.slice(5))<=selectedMonth)).map(([p,d])=>{
+        const scopedMonth=territory.value==='es'?d:d.regions?.[territory.value];
+        if(!scopedMonth||!Number(scopedMonth.all_new_turismos))return null;
+        return {month:Number(p.slice(5)),share:100*Number(scopedMonth.total||0)/Number(scopedMonth.all_new_turismos)};
+      }).filter(Boolean)})).filter(y=>y.points.length);
+      trendSVG.replaceChildren();trendLegend.replaceChildren();
+      if(!pointsByYear.length){trendNote.textContent='No hay datos regionales verificados para representar esta evolución.';return}
+      const x=m=>65+(m-1)*82,y=v=>355-v/Math.max(25,Math.ceil(Math.max(...pointsByYear.flatMap(z=>z.points.map(p=>p.share)))/5)*5)*310;
+      const maxY=Math.max(25,Math.ceil(Math.max(...pointsByYear.flatMap(z=>z.points.map(p=>p.share)))/5)*5);
+      for(let tick=0;tick<=maxY;tick+=5){const yy=y(tick);trendSVG.append(trendEl('line',{x1:65,y1:yy,x2:967,y2:yy,stroke:'#e4eaf1','stroke-width':1}));trendSVG.append(trendEl('text',{x:54,y:yy+4,'text-anchor':'end',fill:'#6c7b8d','font-size':13},tick+' %'))}
+      trendMonths.forEach((label,i)=>trendSVG.append(trendEl('text',{x:x(i+1),y:384,'text-anchor':'middle',fill:'#657589','font-size':13},label)));
+      pointsByYear.forEach(({year,color,points})=>{
+        const leg=document.createElement('span');const line=document.createElement('i');line.style.background=color;leg.append(line,document.createTextNode(year));trendLegend.append(leg);
+        const runs=[];let run=[];points.forEach((p,i)=>{if(i&&p.month!==points[i-1].month+1){if(run.length)runs.push(run);run=[]}run.push(p)});if(run.length)runs.push(run);
+        runs.forEach(group=>{if(group.length>1)trendSVG.append(trendEl('polyline',{points:group.map(p=>x(p.month)+','+y(p.share)).join(' '),fill:'none',stroke:color,'stroke-width':3,'stroke-linecap':'round','stroke-linejoin':'round'}))});
+        points.forEach(p=>{trendSVG.append(trendEl('circle',{cx:x(p.month),cy:y(p.share),r:5,fill:color,stroke:'white','stroke-width':1.5}));if(year===selectedYear){trendSVG.append(trendEl('text',{x:x(p.month),y:y(p.share)-13,'text-anchor':'middle',fill:'#243447','font-size':12,'font-weight':700},p.share.toLocaleString('es-ES',{maximumFractionDigits:1})+' %'))}});
+      });
+      trendNote.textContent='Fuente: DGT · '+territoryLabel()+' · Cuota mensual BEV sobre turismos nuevos. '+(territory.value==='es'?'':'Solo se muestran meses con datos autonómicos disponibles. ')+'El año seleccionado se muestra hasta el mes elegido.';
+    }
+    monthSelect.addEventListener('change',updateBevTrend);territory.addEventListener('change',updateBevTrend);updateBevTrend();
+
     const combined=entries=>{const models=new Map();entries.forEach(([,d])=>(scoped(d).models||[]).forEach(r=>{const name=(r.model.startsWith(r.brand+" ")?r.model:r.brand+" "+r.model).trim();models.set(name,(models.get(name)||0)+r.count)}));return [...models].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([model,units])=>({model,units}))};
     const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · "+territoryLabel()+" · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
     monthSelect.addEventListener("change",refresh);monthSelect.addEventListener("change",showProvisional);showProvisional();
