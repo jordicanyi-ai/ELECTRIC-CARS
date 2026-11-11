@@ -37,7 +37,7 @@ def build():
         for item in periods[p]["model_counts"]:
             yearly[(item["brand"],item["model"])]+=item["count"]
     def top(counter,n=20):
-        return [{"model":(brand+" "+model).strip(),"units":count} for (brand,model),count in counter.most_common(n)]
+        return [{"model":(model if model.startswith(brand+" ") else brand+" "+model).strip(),"units":count} for (brand,model),count in counter.most_common(n)]
     last=periods[latest]
     monthly=Counter({(x["brand"],x["model"]):x["count"] for x in last["model_counts"]})
     series={"source":"DGT · Microdatos de matriculaciones mensuales","source_url":index["source_url"],
