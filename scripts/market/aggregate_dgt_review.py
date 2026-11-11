@@ -94,8 +94,9 @@ def aggregate(url):
                 if not community:
                     unknown_provinces[row['province']]+=1
                 else:
-                    region=regions.setdefault(community, {'total':0,'all_new_turismos':0,'brands':Counter(),'models':Counter()})
+                    region=regions.setdefault(community, {'total':0,'all_new_turismos':0,'brands':Counter(),'models':Counter(),'technologies':Counter()})
                     region['all_new_turismos']+=1
+                    region['technologies'][technology(row)]+=1
                 all_new_cars+=1
                 technology_counts[technology(row)]+=1
                 category_pairs[(row['propulsion'],row['electric_category'])]+=1
@@ -109,7 +110,7 @@ def aggregate(url):
                 brands[row["brand"]]+=1
                 models[(row["brand"],row["model"])]+=1
     return {"source":url,"records_scanned":scanned,"bev_turismos":total,"all_new_turismos":all_new_cars,
-            "regions":{name:{"total":d["total"],"all_new_turismos":d["all_new_turismos"],"brand_counts":[{"brand":b,"count":n} for b,n in d["brands"].most_common()],"model_counts":[{"brand":b,"model":m,"count":n} for (b,m),n in d["models"].most_common()]} for name,d in sorted(regions.items())},
+            "regions":{name:{"total":d["total"],"all_new_turismos":d["all_new_turismos"],"brand_counts":[{"brand":b,"count":n} for b,n in d["brands"].most_common()],"model_counts":[{"brand":b,"model":m,"count":n} for (b,m),n in d["models"].most_common()],"technologies":dict(d["technologies"])} for name,d in sorted(regions.items())},
             "unknown_provinces":dict(unknown_provinces),
             "technologies":dict(technology_counts),
             "technology_source_pairs":[{"propulsion":p,"electric_category":e,"count":n} for (p,e),n in category_pairs.most_common()],
