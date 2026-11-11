@@ -13,7 +13,7 @@ window.electricosSalesRanking = {
         "units": 1205
       },
       {
-        "model": "BYD BYD DOLPHIN SURF",
+        "model": "BYD DOLPHIN SURF",
         "units": 625
       },
       {
@@ -29,23 +29,23 @@ window.electricosSalesRanking = {
         "units": 486
       },
       {
-        "model": "BYD BYD ATTO 2",
+        "model": "BYD ATTO 2",
         "units": 474
       },
       {
-        "model": "TOYOTA TOYOTA C-HR",
+        "model": "TOYOTA C-HR",
         "units": 436
       },
       {
-        "model": "GEELY GEELY E5",
+        "model": "GEELY E5",
         "units": 383
       },
       {
-        "model": "GEELY GEELY E2",
+        "model": "GEELY E2",
         "units": 371
       },
       {
-        "model": "DEEPAL DEEPAL S05",
+        "model": "DEEPAL S05",
         "units": 348
       },
       {
@@ -73,11 +73,11 @@ window.electricosSalesRanking = {
         "units": 279
       },
       {
-        "model": "RENAULT RENAULT 5 E-TECH ELECT",
+        "model": "RENAULT 5 E-TECH ELECT",
         "units": 276
       },
       {
-        "model": "BYD BYD SEAL",
+        "model": "BYD SEAL",
         "units": 268
       },
       {
@@ -98,7 +98,7 @@ window.electricosSalesRanking = {
         "units": 4970
       },
       {
-        "model": "BYD BYD DOLPHIN SURF",
+        "model": "BYD DOLPHIN SURF",
         "units": 4295
       },
       {
@@ -106,19 +106,19 @@ window.electricosSalesRanking = {
         "units": 3826
       },
       {
-        "model": "TOYOTA TOYOTA C-HR",
+        "model": "TOYOTA C-HR",
         "units": 3356
       },
       {
-        "model": "BYD BYD ATTO 2",
+        "model": "BYD ATTO 2",
         "units": 3129
       },
       {
-        "model": "RENAULT RENAULT 5 E-TECH ELECT",
+        "model": "RENAULT 5 E-TECH ELECT",
         "units": 2566
       },
       {
-        "model": "DEEPAL DEEPAL S05",
+        "model": "DEEPAL S05",
         "units": 2510
       },
       {
@@ -130,7 +130,7 @@ window.electricosSalesRanking = {
         "units": 1905
       },
       {
-        "model": "BYD BYD SEAL",
+        "model": "BYD SEAL",
         "units": 1776
       },
       {
