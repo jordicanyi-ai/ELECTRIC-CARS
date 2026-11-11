@@ -85,7 +85,7 @@ main{max-width:1480px}
 <div class="market-topline"><a href="/" class="market-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Comparador</a><span class="market-country"><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Datos de España · DGT</span></div>
 <div class="hero"><div class="hero-copy"><span class="eyebrow">OBSERVATORIO · ELECTRICOS.EU</span><h1>MERCADO ELÉCTRICO</h1><p>Matriculaciones y evolución del coche eléctrico en España.</p></div></div>
 
-<div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
+<div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label id="territory-wrap" hidden>Comunidad autónoma<select id="territory"><option value="es">Toda España</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
 <section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="placeholder-grid"><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Evolución mensual</h2><div class="placeholder-chart" aria-hidden="true"><span style="height:30%"></span><span style="height:50%"></span><span style="height:42%"></span><span style="height:68%"></span><span style="height:58%"></span><span style="height:82%"></span><span style="height:74%"></span><span style="height:100%"></span></div><p class="secondary">Gráfico decorativo, sin valores. Pendiente de serie histórica DGT verificada.</p></section><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Cuota por tecnología</h2><p>100 % eléctricos · Híbridos enchufables · Híbridos · Gasolina · Diésel</p><div class="notice">Mostraremos la distribución real cuando se hayan validado las categorías y los totales oficiales.</div></section></div>
@@ -141,8 +141,14 @@ period.addEventListener('change',render);render();
     const savedPeriod=sessionStorage.getItem('marketPeriod');
     if(savedPeriod==='monthly'||savedPeriod==='yearly')periodSelect.value=savedPeriod;
     sessionStorage.removeItem('marketMonth');sessionStorage.removeItem('marketPeriod');
-    const combined=entries=>{const models=new Map();entries.forEach(([,d])=>(d.models||[]).forEach(r=>{const name=(r.model.startsWith(r.brand+" ")?r.model:r.brand+" "+r.model).trim();models.set(name,(models.get(name)||0)+r.count)}));return [...models].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([model,units])=>({model,units}))};
-    const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
+    const territory=document.getElementById('territory');
+    const territoryWrap=document.getElementById('territory-wrap');
+    const regionNames=[...new Set(months.flatMap(([,d])=>Object.keys(d.regions||{})))].sort((a,b)=>a.localeCompare(b,'es'));
+    if(regionNames.length){territoryWrap.hidden=false;regionNames.forEach(name=>{const option=document.createElement('option');option.value=name;option.textContent=name;territory.append(option)});}
+    const scoped=d=>territory.value==='es'?d:(d?.regions?.[territory.value]||{total:0,all_new_turismos:0,models:[],brands:[]});
+    const territoryLabel=()=>territory.value==='es'?'España':territory.value;
+    const combined=entries=>{const models=new Map();entries.forEach(([,d])=>(scoped(d).models||[]).forEach(r=>{const name=(r.model.startsWith(r.brand+" ")?r.model:r.brand+" "+r.model).trim();models.set(name,(models.get(name)||0)+r.count)}));return [...models].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([model,units])=>({model,units}))};
+    const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · "+territoryLabel()+" · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
     monthSelect.addEventListener("change",refresh);
 
     
@@ -154,12 +160,12 @@ period.addEventListener('change',render);render();
       const small=cards[0].querySelector('small');
       if(small)small.textContent='Turismos eléctricos BEV matriculados';
       const foot=cards[0].querySelectorAll('small')[1];
-      if(foot)foot.textContent='Total nacional · DGT';
-      const count=()=>{const period=periodSelect.value;if(period==='monthly')return data.months[monthSelect.value]?.total||0;return months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).reduce((n,[,d])=>n+d.total,0)};
+      if(foot)foot.textContent='Fuente: DGT · Provincia de domicilio';
+      const count=()=>{const period=periodSelect.value;if(period==='monthly')return scoped(data.months[monthSelect.value])?.total||0;return months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).reduce((n,[,d])=>n+Number(scoped(d).total||0),0)};
       const update=()=>{const b=cards[0].querySelector('b');if(b)b.textContent=new Intl.NumberFormat('es-ES').format(count())};
       periodSelect.addEventListener('change',update);monthSelect.addEventListener('change',update);update();
     }
-    const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(d?.all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(d?.total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
+    const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(scoped(d).all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(scoped(d).total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
     periodSelect.addEventListener('change',updateShare);monthSelect.addEventListener('change',updateShare);updateShare();
     const placeholder=document.querySelector('.placeholder-grid .panel');
     if(placeholder){
@@ -202,7 +208,7 @@ period.addEventListener('change',render);render();
       function updateBrands(){
         const current=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,v])=>v);
         const totals=new Map();
-        current.forEach(m=>(m?.brands||[]).forEach(b=>totals.set(b.brand,(totals.get(b.brand)||0)+b.count)));
+        current.forEach(m=>(scoped(m).brands||[]).forEach(b=>totals.set(b.brand,(totals.get(b.brand)||0)+b.count)));
         brandRows.replaceChildren();
         const ranked=[...totals].sort((a,b)=>b[1]-a[1]).slice(0,20);
         const maxCount=ranked[0]?.[1]||1;
@@ -219,8 +225,9 @@ period.addEventListener('change',render);render();
           line.append(name,logo,track,value);brandRows.append(line);
         });
       }
-      periodSelect.addEventListener('change',updateBrands);monthSelect.addEventListener('change',updateBrands);updateBrands();
+      periodSelect.addEventListener('change',updateBrands);monthSelect.addEventListener('change',updateBrands);territory.addEventListener('change',updateBrands);updateBrands();
     }
+    territory.addEventListener('change',()=>{refresh();const b=cards[0]?.querySelector('b');if(b)b.textContent=nf.format(periodSelect.value==='monthly'?Number(scoped(data.months[monthSelect.value]).total||0):months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).reduce((sum,[,d])=>sum+Number(scoped(d).total||0),0));updateShare();});
     refresh();
     
     const footer=[...document.querySelectorAll('main > p.secondary')].find(p=>p.textContent.includes('provisional'));if(footer)footer.textContent='Fuente: Dirección General de Tráfico (DGT). Matriculaciones de turismos nuevos; no equivalen necesariamente a ventas a particulares.';
