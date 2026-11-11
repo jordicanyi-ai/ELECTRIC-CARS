@@ -54,7 +54,7 @@ main{padding:8px 12px 45px}
 .dashboard h2{font-size:17px}
 .market-bar-row{height:24px}
 }
-</style></head><body><header class="site-header">
+.market-bar-row{grid-template-columns:minmax(145px,205px) 54px minmax(0,1fr) 57px;gap:9px;height:34px}.market-bar-photo{width:54px;height:30px;display:flex;align-items:center;justify-content:center;overflow:hidden}.market-bar-photo img{width:100%;height:100%;object-fit:contain}.market-bar-photo.no-photo{visibility:hidden}.market-bar-track{height:12px}@media(max-width:900px){.market-bar-row{grid-template-columns:minmax(120px,175px) 48px minmax(0,1fr) 48px;gap:6px;height:32px}.market-bar-photo{width:48px;height:28px}}@media(max-width:550px){.market-bar-row{grid-template-columns:minmax(91px,115px) 39px minmax(0,1fr) 40px;gap:4px;height:30px}.market-bar-photo{width:39px;height:25px}.market-bar-name{font-size:9px}}</style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
                 <span class="brand-icon" aria-hidden="true"></span>
@@ -85,7 +85,14 @@ function render(){const item=data[period.value],rows=item&&Array.isArray(item.mo
 const root=document.getElementById('chart');root.replaceChildren();
 const key=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const thumbnails={'teslamodel3':'/img/ranking/MODEL3.png','teslamodely':'/img/ranking/MODELY.png','byddolphinsurf':'/img/ranking/DOLPHINSURF.png','kiaev3':'/img/ranking/EV3.png','bydatto2':'/img/ranking/byd-atto2.png','geelye2':'/img/ranking/geelyE2.png'};
-rows.forEach((r,i)=>{const line=document.createElement('div');line.className='market-bar-row';const name=document.createElement('span');name.className='market-bar-name';name.textContent=r.model.replace(/^BYD BYD /i,'BYD ').toUpperCase();const track=document.createElement('div');track.className='market-bar-track';const bar=document.createElement('div');bar.className='market-bar-fill';bar.style.width=(Number(r.units)/max*100)+'%';track.append(bar);const value=document.createElement('strong');value.className='market-bar-value';value.textContent=fmt.format(r.units);line.append(name,track,value);root.append(line)});
+rows.forEach((r,i)=>{const line=document.createElement('div');line.className='market-bar-row';const name=document.createElement('span');name.className='market-bar-name';name.textContent=r.model.replace(/^BYD BYD /i,'BYD ').toUpperCase();const photo=document.createElement('span');photo.className='market-bar-photo';
+const catalog=typeof carsData!=='undefined'&&Array.isArray(carsData)?carsData:[];
+const norm=x=>String(x||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const match=catalog.find(c=>norm(c.brand+' '+c.model)===norm(r.model));
+const known={'teslamodel3':'/img/ranking/MODEL3.png','teslamodely':'/img/ranking/MODELY.png','byddolphinsurf':'/img/ranking/DOLPHINSURF.png','kiaev3':'/img/ranking/EV3.png','bydatto2':'/img/ranking/byd-atto2.png','geelye2':'/img/ranking/geelyE2.png'};
+const src=known[norm(r.model)]||(match&&Array.isArray(match.images)?match.images[0]:null);
+if(src){const img=document.createElement('img');img.src=src;img.alt='';img.loading='lazy';img.onerror=()=>photo.classList.add('no-photo');photo.append(img)}else photo.classList.add('no-photo');
+const track=document.createElement('div');track.className='market-bar-track';const bar=document.createElement('div');bar.className='market-bar-fill';bar.style.width=(Number(r.units)/max*100)+'%';track.append(bar);const value=document.createElement('strong');value.className='market-bar-value';value.textContent=fmt.format(r.units);line.append(name,photo,track,value);root.append(line)});
 const total=rows.reduce((s,r)=>s+Number(r.units||0),0),colors=['#2456cd','#8b49e8','#0eaf8b','#f08a27','#df4b84'];let cursor=0;const topFive=rows.slice(0,5),fiveTotal=topFive.reduce((sum,r)=>sum+Number(r.units||0),0);const segments=topFive.map((r,i)=>{const from=cursor;cursor+=fiveTotal?Number(r.units||0)/fiveTotal*100:0;return colors[i]+' '+from+'% '+cursor+'%'});const donut=document.getElementById('donut');donut.style.background=segments.length?'conic-gradient('+segments.join(',')+')':'#e9effb';const legend=document.getElementById('legend');legend.replaceChildren();topFive.forEach((r,i)=>{const el=document.createElement('div');el.className='legend-line';const name=document.createElement('span');const dot=document.createElement('i');dot.className='dot';dot.style.background=colors[i];name.append(dot,document.createTextNode(r.model));const share=document.createElement('b');share.textContent=fiveTotal?(Number(r.units)/fiveTotal*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %':'—';el.append(name,share);legend.append(el)})}
 period.addEventListener('change',render);render();
 })();
