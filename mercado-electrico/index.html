@@ -89,6 +89,9 @@ main{max-width:1480px}
 
 .bev-trend-panel{margin-top:18px}.bev-trend-legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0 2px}.bev-trend-legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700}.bev-trend-legend i{width:21px;height:4px;border-radius:3px;display:inline-block}.bev-trend-scroll{width:100%;overflow-x:auto}.bev-trend-scroll svg{display:block;width:100%;min-width:580px;height:auto}.bev-trend-panel .secondary{font-size:12px}@media(max-width:650px){.bev-trend-legend{gap:10px}.bev-trend-legend span{font-size:11px}}
 .bev-volume-panel{margin-top:18px}.bev-volume-panel .secondary{font-size:12px}
+
+/* Mobile: always show the autonomous-community selector when regional data exists. */
+@media(max-width:650px){.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.controls label:nth-child(2):not([hidden]){display:grid!important;grid-column:1/-1}.controls label[hidden]{display:none!important}.controls label{min-width:0!important;width:100%;flex-basis:auto!important}.controls select{min-width:0;width:100%;font-size:12px;padding:9px 25px 9px 8px}.controls-secondary{margin:16px 0 12px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
