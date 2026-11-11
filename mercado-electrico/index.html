@@ -106,7 +106,7 @@ main{max-width:1480px}
 <div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label id="territory-wrap" hidden>Comunidad autónoma<select id="territory"><option value="es">Toda España</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
-<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label></div>
+<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label><label id="territory-wrap-bottom" hidden>Comunidad autónoma<select id="territory-bottom"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-bottom"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
 <section class="panel tech-market" id="tech-market" hidden><span class="chip">MERCADO · DGT</span><h2>Cuota de matriculaciones por tecnología</h2><p class="secondary">Turismos nuevos matriculados · España · Fuente DGT</p><div class="tech-market-layout"><div id="tech-market-ring" class="tech-market-ring" role="img" aria-label="Distribución de matriculaciones por tecnología"></div><table class="tech-market-table"><thead><tr><th>Tecnología</th><th>Unidades</th><th>Cuota</th></tr></thead><tbody id="tech-market-body"></tbody></table></div><p class="secondary" id="tech-market-note"></p></section>
 <section class="panel"><h2>Compara estos coches</h2><p>Consulta sus características, precios y autonomía en nuestro comparador interactivo. Las fichas siguen abriéndose en ventanas emergentes.</p><a class="cta" href="/">Abrir comparador de coches eléctricos</a></section>
@@ -165,6 +165,21 @@ period.addEventListener('change',render);render();
     bottomMonthSelect.value=monthSelect.value;
     bottomMonthSelect.addEventListener('change',()=>{monthSelect.value=bottomMonthSelect.value;monthSelect.dispatchEvent(new Event('change',{bubbles:true}))});
     monthSelect.addEventListener('change',()=>{bottomMonthSelect.value=monthSelect.value});
+    const bottomTerritorySelect=document.getElementById('territory-bottom');
+    const topTerritorySelect=document.getElementById('territory');
+    const bottomTerritoryWrap=document.getElementById('territory-wrap-bottom');
+    const topTerritoryWrap=document.getElementById('territory-wrap');
+    const bottomPeriodSelect=document.getElementById('period-bottom');
+    const topPeriodSelect=document.getElementById('period');
+    const syncSelect=(from,to)=>{to.replaceChildren(...Array.from(from.options,option=>new Option(option.textContent,option.value)));to.value=from.value};
+    const syncBottomControls=()=>{syncSelect(topTerritorySelect,bottomTerritorySelect);bottomTerritoryWrap.hidden=topTerritoryWrap.hidden;syncSelect(topPeriodSelect,bottomPeriodSelect)};
+    bottomTerritorySelect.addEventListener('change',()=>{topTerritorySelect.value=bottomTerritorySelect.value;topTerritorySelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    bottomPeriodSelect.addEventListener('change',()=>{topPeriodSelect.value=bottomPeriodSelect.value;topPeriodSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    topTerritorySelect.addEventListener('change',syncBottomControls);
+    topPeriodSelect.addEventListener('change',syncBottomControls);
+    new MutationObserver(syncBottomControls).observe(topTerritoryWrap,{attributes:true,attributeFilter:['hidden']});
+    syncBottomControls();
+
 
     const periodSelect=document.getElementById('period');
     const savedPeriod=sessionStorage.getItem('marketPeriod');
