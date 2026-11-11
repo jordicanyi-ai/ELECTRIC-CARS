@@ -17,6 +17,30 @@ from pathlib import Path
 
 from inspect_dgt_zip import DGT_URL
 
+# DGT COD_PROVINCIA_VEH: provincia de domicilio, no oficina de matriculación.
+COMMUNITY_PROVINCES = {
+    "Andalucía": "AL CA CO GR H J MA SE",
+    "Aragón": "HU TE Z",
+    "Asturias": "O",
+    "Illes Balears": "IB PM",
+    "Canarias": "GC TF",
+    "Cantabria": "S",
+    "Castilla-La Mancha": "AB CR CU GU TO",
+    "Castilla y León": "AV BU LE P SA SG SO VA ZA",
+    "Cataluña": "B GI L T",
+    "Comunitat Valenciana": "A CS V",
+    "Extremadura": "BA CC",
+    "Galicia": "C LU OU PO",
+    "Madrid": "M",
+    "Murcia": "MU",
+    "Navarra": "NA",
+    "País Vasco": "BI SS VI",
+    "La Rioja": "LO",
+    "Ceuta": "CE",
+    "Melilla": "ML",
+}
+PROVINCE_COMMUNITY = {province: name for name, codes in COMMUNITY_PROVINCES.items() for province in codes.split()}
+
 def parse_record(line):
     if len(line) != 714:
         raise ValueError("Unexpected DGT record width")
@@ -28,6 +52,7 @@ def parse_record(line):
         "propulsion":line[93:94].decode("latin-1").strip(),
         "electric_category":line[453:457].decode("latin-1").strip(),
         "new_used":line[178:179].decode("latin-1").strip(),
+        "province":line[152:154].decode("latin-1").strip().upper(),
     }
 
 def aggregate(url):
@@ -38,6 +63,7 @@ def aggregate(url):
     if len(data)>250_000_000:
         raise ValueError("Archive too large")
     brands=Counter(); models=Counter(); total=0; scanned=0; all_new_cars=0
+    regions={}; unknown_provinces=Counter()
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         names=[n for n in z.namelist() if n.lower().endswith(".txt")]
         if len(names)!=1: raise ValueError("Expected one TXT")
@@ -52,13 +78,25 @@ def aggregate(url):
                 scanned+=1
                 row=parse_record(raw.rstrip(b"\r\n"))
                 if row["plate_class"]!="0" or row["vehicle_type"]!="40" or row["new_used"]!="N":continue
+                community=PROVINCE_COMMUNITY.get(row['province'])
+                if not community:
+                    unknown_provinces[row['province']]+=1
+                else:
+                    region=regions.setdefault(community, {'total':0,'all_new_turismos':0,'brands':Counter(),'models':Counter()})
+                    region['all_new_turismos']+=1
                 all_new_cars+=1
                 if row["propulsion"]!="2" or row["electric_category"]!="BEV":continue
                 if not row["brand"] or not row["model"]:continue
                 total+=1
+                if community:
+                    region['total']+=1
+                    region['brands'][row['brand']]+=1
+                    region['models'][(row['brand'],row['model'])]+=1
                 brands[row["brand"]]+=1
                 models[(row["brand"],row["model"])]+=1
     return {"source":url,"records_scanned":scanned,"bev_turismos":total,"all_new_turismos":all_new_cars,
+            "regions":{name:{"total":d["total"],"all_new_turismos":d["all_new_turismos"],"brand_counts":[{"brand":b,"count":n} for b,n in d["brands"].most_common()],"model_counts":[{"brand":b,"model":m,"count":n} for (b,m),n in d["models"].most_common()]} for name,d in sorted(regions.items())},
+            "unknown_provinces":dict(unknown_provinces),
             "brand_counts":[{"brand":k,"count":v} for k,v in brands.most_common()],
             "model_counts":[{"brand":b,"model":m,"count":v} for (b,m),v in models.most_common()],
             "status":"review-only","bev_category_validated":True,
