@@ -137,6 +137,7 @@ period.addEventListener('change',render);render();
     months.slice().reverse().forEach(([p])=>{const opt=document.createElement("option");opt.value=p;opt.textContent=monthLabel(p);monthSelect.append(opt)});
     const savedMonth=sessionStorage.getItem('marketMonth');
     monthSelect.value=savedMonth&&data.months[savedMonth]?savedMonth:latest;
+    const periodSelect=document.getElementById('period');
     const savedPeriod=sessionStorage.getItem('marketPeriod');
     if(savedPeriod==='monthly'||savedPeriod==='yearly')periodSelect.value=savedPeriod;
     sessionStorage.removeItem('marketMonth');sessionStorage.removeItem('marketPeriod');
@@ -144,7 +145,7 @@ period.addEventListener('change',render);render();
     const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
     monthSelect.addEventListener("change",refresh);
 
-    const periodSelect=document.getElementById('period');
+    
     const first=periodSelect.options[0],second=periodSelect.options[1];
     if(first)first.textContent='Mes seleccionado';
     if(second)second.textContent='Acumulado del año';
