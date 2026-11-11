@@ -83,6 +83,8 @@ main{max-width:1480px}
 @media(max-width:650px){.brand-ranking .brand-rank-logo img{width:43px;height:24px}.brand-ranking .brand-rank-logo[data-brand="TESLA"] img,.brand-ranking .brand-rank-logo[data-brand="VOLKSWAGEN"] img,.brand-ranking .brand-rank-logo[data-brand="BMW"] img,.brand-ranking .brand-rank-logo[data-brand="CUPRA"] img,.brand-ranking .brand-rank-logo[data-brand="MG"] img,.brand-ranking .brand-rank-logo[data-brand="TOYOTA"] img{width:26px;height:26px}.brand-ranking .brand-rank-logo[data-brand="KIA"] img,.brand-ranking .brand-rank-logo[data-brand="BYD"] img,.brand-ranking .brand-rank-logo[data-brand="VOLVO"] img,.brand-ranking .brand-rank-logo[data-brand="HYUNDAI"] img,.brand-ranking .brand-rank-logo[data-brand="RENAULT"] img,.brand-ranking .brand-rank-logo[data-brand="LEAPMOTOR"] img{width:43px;height:24px}.brand-ranking .brand-rank-logo.brand-wordmark{font-size:8px}}
 
 .tech-market{margin-top:18px}.tech-market-layout{display:grid;grid-template-columns:minmax(220px,1fr) minmax(300px,1.4fr);gap:28px;align-items:center}.tech-market-ring{width:min(100%,300px);aspect-ratio:1;border-radius:50%;margin:auto;position:relative}.tech-market-ring:after{content:"";position:absolute;inset:26%;background:white;border-radius:50%}.tech-market-table{width:100%;border-collapse:collapse}.tech-market-table td,.tech-market-table th{padding:11px 8px;border-bottom:1px solid #e5eaf2;text-align:right}.tech-market-table td:first-child,.tech-market-table th:first-child{text-align:left}.tech-market-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px}@media(max-width:750px){.tech-market-layout{grid-template-columns:1fr}}
+
+.tech-market-ring-label{position:absolute;z-index:2;transform:translate(-50%,-50%);color:#fff;font-size:12px;font-weight:900;line-height:1;text-shadow:0 1px 3px #0009;pointer-events:none;white-space:nowrap}.tech-market-ring-label.dark{color:#17283f;text-shadow:0 1px 2px #fff9}@media(max-width:650px){.tech-market-ring-label{font-size:11px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -200,7 +202,15 @@ period.addEventListener('change',render);render();
         const end=cursor+count/total*100;segments.push(techColors[key]+' '+cursor+'% '+end+'%');cursor=end;
         const tr=document.createElement('tr');const name=document.createElement('td');const dot=document.createElement('span');dot.className='tech-market-dot';dot.style.background=techColors[key];name.append(dot,document.createTextNode(techLabels[key]));const value=document.createElement('td');value.textContent=nf.format(count);const share=document.createElement('td');share.textContent=(count/total*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';tr.append(name,value,share);body.append(tr)
       });
-      document.getElementById('tech-market-ring').style.background='conic-gradient('+segments.join(',')+')';
+      const ring=document.getElementById('tech-market-ring');ring.style.background='conic-gradient('+segments.join(',')+')';
+      ring.replaceChildren();let angle=0;
+      Object.entries(counts).forEach(([key,count])=>{
+        const portion=count/total;if(portion<0.035){angle+=portion*Math.PI*2;return;}
+        const midpoint=angle+portion*Math.PI;const label=document.createElement('span');label.className='tech-market-ring-label'+(['PHEV','DIESEL','GAS','OTROS'].includes(key)?' dark':'');
+        const radius=38;label.style.left=(50+radius*Math.sin(midpoint))+'%';label.style.top=(50-radius*Math.cos(midpoint))+'%';
+        label.textContent=(portion*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';ring.append(label);
+        angle+=portion*Math.PI*2;
+      });
       document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías, España';
     }
     periodSelect.addEventListener('change',updateTechnologies);monthSelect.addEventListener('change',updateTechnologies);updateTechnologies();
