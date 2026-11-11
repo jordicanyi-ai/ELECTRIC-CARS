@@ -43,7 +43,11 @@ def aggregate(url):
         if len(names)!=1: raise ValueError("Expected one TXT")
         with z.open(names[0]) as stream:
             first=stream.readline().rstrip(b"\r\n")
-            if len(first)!=79: raise ValueError("Unexpected header")
+            if len(first)==714:
+                # Some official monthly archives have no explanatory header.
+                stream.seek(0)
+            elif not (len(first)==79 and first.startswith(b"Veh")):
+                raise ValueError("Unexpected header or record layout")
             for raw in stream:
                 scanned+=1
                 row=parse_record(raw.rstrip(b"\r\n"))
