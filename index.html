@@ -41,6 +41,7 @@
             <div class="catalogue-tabs" role="group" aria-label="Explorar coches">
                 <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="setCatalogueView('catalogue')">Catálogo</button>
                 <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="setCatalogueView('ranking')"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
+                <a href="/mercado-electrico/" style="display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border-radius:12px;font-weight:800;color:#2456cd;background:#eaf0ff;text-decoration:none"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Mercado eléctrico</a>
                 <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
         </section>
@@ -213,8 +214,8 @@
 
     <!-- DATABASE -->
     <script src="data/cars.js?v=20261105-kia-pv7"></script>
-    <script src="data/sales-ranking.js?v=20261015-1"></script>
-    <script src="js/sales-ranking.js?v=20261030-uppercase"></script>
+    <script src="/data/sales-ranking.js?v=20261111"></script>
+    <script src="/js/sales-ranking.js?v=20261111"></script>
 
     <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
     <script src="data/vehicle-sales.js?v=20261030-uppercase"></script>
