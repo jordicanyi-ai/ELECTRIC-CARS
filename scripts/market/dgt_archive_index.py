@@ -36,6 +36,30 @@ def main():
         year, month, code = match.groups()
         if f"{year}{int(month):02d}" != code: continue
         records[code] = {"period":f"{year}-{int(month):02d}", "url":url}
+    # Fill only the latest missing closed month from official daily archives.
+    daily_url = "https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/matriculaciones-automoviles-diario.html"
+    daily_pattern = re.compile(r"https://www\\.dgt\\.es/microdatos/salida/(20\\d{2})/(\\d{1,2})/vehiculos/matriculaciones/export_mat_(20\\d{6})\\.zip")
+    with urllib.request.urlopen(urllib.request.Request(daily_url, headers={"User-Agent":"electricos.eu public data archive indexer"}), timeout=45) as response:
+        daily_page=response.read().decode("utf-8","replace")
+    daily_parser=Links();daily_parser.feed(daily_page)
+    daily_by_month={}
+    for raw in daily_parser.urls:
+        url=urljoin(daily_url,raw)
+        match=daily_pattern.fullmatch(url)
+        if not match:continue
+        year,month,stamp=match.groups()
+        if stamp[:6]!=f"{year}{int(month):02d}":continue
+        daily_by_month.setdefault(f"{year}{int(month):02d}",{})[stamp]=url
+    today=dt.date.today()
+    for code,files in daily_by_month.items():
+        if code in records or int(code[:4])<args.since_year:continue
+        year=int(code[:4]);month=int(code[4:])
+        if (year,month)>=(today.year,today.month):continue
+        # Require end-of-month coverage and a useful number of published daily files.
+        import calendar
+        last=calendar.monthrange(year,month)[1]
+        if len(files)<15 or max(int(day[-2:]) for day in files)<last-2:continue
+        records[code]={"period":f"{year}-{month:02d}","daily_urls":[files[k] for k in sorted(files)],"provisional":True}
     if not records:
         raise RuntimeError("No valid official DGT monthly ZIP links found; preserving previous index")
     selected = [records[key] for key in sorted(records) if int(key[:4]) >= args.since_year]
