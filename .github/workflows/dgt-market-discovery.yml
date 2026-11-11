@@ -6,6 +6,7 @@ on:
       - '.github/workflows/dgt-market-discovery.yml'
       - 'scripts/market/inspect_dgt_zip.py'
       - 'scripts/market/validate_dgt_records.py'
+      - 'scripts/market/aggregate_dgt_review.py'
   schedule:
     - cron: '23 7 1-5 * *'
 permissions:
@@ -28,6 +29,8 @@ jobs:
         run: python -c 'import json; d=json.load(open("data/market/dgt-format-report.json")); print(json.dumps(d, indent=2))'
       - name: Validate full DGT monthly record widths
         run: python scripts/market/validate_dgt_records.py --url https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip
+      - name: Aggregate candidate electric passenger cars for manual validation
+        run: python scripts/market/aggregate_dgt_review.py --url https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip
       - name: Preserve result as reviewable artifact
         uses: actions/upload-artifact@v4
         with:
@@ -36,4 +39,5 @@ jobs:
             data/market/dgt-archive-index.json
             data/market/dgt-format-report.json
             data/market/dgt-layout-validation.json
+            data/market/dgt-electric-review.json
           retention-days: 30
