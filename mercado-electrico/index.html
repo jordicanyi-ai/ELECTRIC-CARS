@@ -66,6 +66,7 @@ main{max-width:1480px}
 @media(max-width:550px){main{padding-left:8px;padding-right:8px}.dashboard>.panel{padding:10px 8px}.market-bar-row{grid-template-columns:minmax(90px,108px) 43px minmax(0,1fr) 42px;gap:5px}.market-bar-photo{width:43px}}
 .market-car-link{cursor:pointer}.market-car-link:hover{background:#edf5ff;border-radius:7px}.market-car-link:focus-visible{outline:2px solid #2379b5;border-radius:7px}
 .history-plot{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;margin-top:12px}.history-axis{height:182px;display:flex;flex-direction:column;justify-content:space-between;text-align:right;color:#64748b;font-size:10px;font-variant-numeric:tabular-nums}.history-scroll{min-width:0;overflow-x:auto}.history-chart{height:208px;min-width:620px;display:flex;gap:4px;position:relative;padding:0 4px}.history-grid{position:absolute;inset:0 4px 26px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}.history-grid span{border-top:1px dashed #dce5f1;width:100%}.history-month{position:relative;z-index:1;flex:1;min-width:12px;height:100%;display:flex;align-items:center;flex-direction:column;justify-content:flex-end;cursor:help}.history-bar{width:100%;max-width:23px;background:#2456cd;border-radius:3px 3px 0 0;min-height:2px;margin-top:auto}.history-month-label{height:26px;line-height:26px;font-size:9px;color:#64748b}.history-month:hover .history-bar,.history-month:focus-visible .history-bar{background:#0d9488}.history-month:focus-visible{outline:2px solid #2456cd}@media(max-width:650px){.history-plot{grid-template-columns:44px minmax(0,1fr);gap:5px}.history-chart{min-width:570px}.history-axis{font-size:9px}}
+.brand-ranking{display:flex;flex-direction:column;gap:4px;margin-top:13px}.brand-rank-row{display:grid;grid-template-columns:minmax(80px,108px) 33px minmax(0,1fr) 46px;align-items:center;gap:6px;min-height:24px}.brand-rank-name{font-size:10px;font-weight:700;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.brand-rank-logo{width:33px;height:23px;display:flex;align-items:center;justify-content:center}.brand-rank-logo img{width:100%;height:100%;object-fit:contain}.brand-rank-logo.brand-logo-missing{visibility:hidden}.brand-rank-track{height:11px;background:#edf2fb;border-radius:3px;overflow:hidden}.brand-rank-fill{display:block;height:100%;background:#2379b5;border-radius:2px}.brand-rank-value{font-size:11px;font-variant-numeric:tabular-nums;text-align:right}@media(max-width:550px){.brand-rank-row{grid-template-columns:minmax(64px,85px) 27px minmax(0,1fr) 40px;gap:4px}.brand-rank-logo{width:27px;height:21px}.brand-rank-name{font-size:9px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -194,18 +195,26 @@ period.addEventListener('change',render);render();
       brandsPanel.querySelector('h2').textContent='Marcas con más matriculaciones BEV';
       const oldText=brandsPanel.querySelector('p');if(oldText)oldText.remove();
       const notice=brandsPanel.querySelector('.notice');if(notice)notice.remove();
-      const brandRows=document.createElement('div');brandRows.className='legend';
+      const brandRows=document.createElement('div');brandRows.className='brand-ranking';
       brandsPanel.append(brandRows);
       function updateBrands(){
         const current=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,v])=>v);
         const totals=new Map();
         current.forEach(m=>(m?.brands||[]).forEach(b=>totals.set(b.brand,(totals.get(b.brand)||0)+b.count)));
         brandRows.replaceChildren();
-        [...totals].sort((a,b)=>b[1]-a[1]).slice(0,20).forEach(([brand,count],i)=>{
-          const line=document.createElement('div');line.className='legend-line';
-          const name=document.createElement('span');name.textContent=(i+1)+'. '+brand;
-          const value=document.createElement('b');value.textContent=new Intl.NumberFormat('es-ES').format(count);
-          line.append(name,value);brandRows.append(line);
+        const ranked=[...totals].sort((a,b)=>b[1]-a[1]).slice(0,20);
+        const maxCount=ranked[0]?.[1]||1;
+        const brandLogos={'BYD':'byd.png','TESLA':null,'KIA':'kia.png','LEAPMOTOR':'leapmotor.png','CUPRA':'cupra.svg','GEELY':'Geely.png','SKODA':'skoda.svg','ŠKODA':'skoda.svg','VOLKSWAGEN':'volkswagen.svg','MERCEDES':null,'MERCEDES-BENZ':null,'RENAULT':'renault.png','BMW':'bmw.svg','TOYOTA':'toyota.svg','MINI':'mini.svg','CITROEN':'citroen.png','CITROËN':'citroen.png','FORD':null,'VOLVO':'volvo.png','XPENG':'XPeng.png','HYUNDAI':'hyundai.png','NISSAN':'nissan.svg','OPEL':'opel.svg','MG':'mg.svg','PEUGEOT':'peugeot.png','AUDI':'audi.svg','FIAT':'fiat.svg','SMART':'smart.svg','DENZA':'denza.svg'};
+        ranked.forEach(([brand,count],i)=>{
+          const line=document.createElement('div');line.className='brand-rank-row';
+          const name=document.createElement('span');name.className='brand-rank-name';name.textContent=brand;
+          const logoFile=brandLogos[brand.toUpperCase()];
+          const logo=document.createElement('span');logo.className='brand-rank-logo';
+          if(logoFile){const img=document.createElement('img');img.src='/img/brands/'+logoFile;img.alt='';img.loading='lazy';img.onerror=()=>logo.classList.add('brand-logo-missing');logo.append(img)}else logo.classList.add('brand-logo-missing');
+          const track=document.createElement('span');track.className='brand-rank-track';
+          const fill=document.createElement('span');fill.className='brand-rank-fill';fill.style.width=(count/maxCount*100)+'%';track.append(fill);
+          const value=document.createElement('strong');value.className='brand-rank-value';value.textContent=new Intl.NumberFormat('es-ES').format(count);
+          line.append(name,logo,track,value);brandRows.append(line);
         });
       }
       periodSelect.addEventListener('change',updateBrands);monthSelect.addEventListener('change',updateBrands);updateBrands();
