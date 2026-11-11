@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Build public monthly DGT BEV passenger-car series from official microdata.
+
+Only ordinary registrations of new passenger cars with DGT category BEV.
+No personal records leave memory; output is aggregated counts only.
+"""
+import json
+import sys
+from collections import Counter,defaultdict
+from datetime import date
+from pathlib import Path
+
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from aggregate_dgt_review import aggregate
+
+ROOT=Path(__file__).resolve().parents[2]
+INDEX=ROOT/"data/market/dgt-archive-index.json"
+OUT=ROOT/"data/market/dgt-bev-series.json"
+JS=ROOT/"data/sales-ranking.js"
+
+def build():
+    index=json.loads(INDEX.read_text())
+    periods={}
+    for item in index["archives"]:
+        period=item["period"]
+        print("Processing",period,flush=True)
+        data=aggregate(item["url"])
+        if data["records_scanned"]<1000 or data["bev_turismos"]<50:
+            raise RuntimeError("Unexpectedly small month "+period)
+        periods[period]=data
+    if len(periods)<24: raise RuntimeError("Historical coverage too short")
+    latest=max(periods)
+    year=latest[:4]
+    months=[p for p in sorted(periods) if p.startswith(year)]
+    yearly=Counter()
+    for p in months:
+        for item in periods[p]["model_counts"]:
+            yearly[(item["brand"],item["model"])]+=item["count"]
+    def top(counter,n=20):
+        return [{"model":(brand+" "+model).strip(),"units":count} for (brand,model),count in counter.most_common(n)]
+    last=periods[latest]
+    monthly=Counter({(x["brand"],x["model"]):x["count"] for x in last["model_counts"]})
+    series={"source":"DGT · Microdatos de matriculaciones mensuales","source_url":index["source_url"],
+      "method":"COD_CLASE_MAT=0; COD_TIPO=40; COD_PROPULSION_ITV=2; CATEGORIA_VEHICULO_ELECTRICO=BEV; IND_NUEVO_USADO=N",
+      "latest_period":latest,"months":{p:{"total":d["bev_turismos"],"brands":d["brand_counts"],"models":d["model_counts"]} for p,d in sorted(periods.items())}}
+    # Guard against regressions: only replace after all downloads and validation succeed.
+    text=json.dumps(series,ensure_ascii=False,separators=(",",":"))+"\n"
+    ranking={"source":"DGT · Microdatos de matriculaciones mensuales","updatedAt":date.today().isoformat(),
+      "monthly":{"label":latest+" · DGT · Turismos BEV nuevos","models":top(monthly,20)},
+      "yearly":{"label":year+" · Enero–"+latest[5:]+" · DGT · Turismos BEV nuevos","models":top(yearly,20)}}
+    OUT.parent.mkdir(parents=True,exist_ok=True)
+    OUT.write_text(text,encoding="utf-8")
+    JS.write_text("window.electricosSalesRanking = "+json.dumps(ranking,ensure_ascii=False,indent=2)+";\n",encoding="utf-8")
+    print("SUCCESS",len(periods),"months",latest,last["bev_turismos"],"BEV",flush=True)
+
+if __name__=="__main__":build()
