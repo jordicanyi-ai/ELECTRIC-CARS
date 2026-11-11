@@ -74,6 +74,13 @@ main{max-width:1480px}
 .brand-ranking .brand-rank-logo,.brand-ranking .brand-rank-logo.brand-wordmark{width:76px;min-width:0;height:38px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .brand-ranking .brand-rank-logo img{max-width:100%;max-height:100%;object-fit:contain}
 @media(max-width:650px){.brand-ranking .brand-rank-row,.brand-ranking .brand-rank-row:has(.brand-wordmark){grid-template-columns:minmax(0,96px) 48px minmax(0,1fr) 48px;gap:6px}.brand-ranking .brand-rank-logo,.brand-ranking .brand-rank-logo.brand-wordmark{width:48px;height:28px}}
+
+/* Optical logo normalization: consistent visual weight despite different source aspect ratios. */
+.brand-ranking .brand-rank-logo img{width:62px;height:30px;max-width:100%;max-height:100%;object-fit:contain;object-position:center;flex:none}
+.brand-ranking .brand-rank-logo[data-brand="TESLA"] img,.brand-ranking .brand-rank-logo[data-brand="VOLKSWAGEN"] img,.brand-ranking .brand-rank-logo[data-brand="BMW"] img,.brand-ranking .brand-rank-logo[data-brand="CUPRA"] img,.brand-ranking .brand-rank-logo[data-brand="MG"] img,.brand-ranking .brand-rank-logo[data-brand="TOYOTA"] img{width:34px;height:34px}
+.brand-ranking .brand-rank-logo[data-brand="KIA"] img,.brand-ranking .brand-rank-logo[data-brand="BYD"] img,.brand-ranking .brand-rank-logo[data-brand="VOLVO"] img,.brand-ranking .brand-rank-logo[data-brand="HYUNDAI"] img,.brand-ranking .brand-rank-logo[data-brand="RENAULT"] img,.brand-ranking .brand-rank-logo[data-brand="LEAPMOTOR"] img{width:56px;height:28px}
+.brand-ranking .brand-rank-logo.brand-wordmark{font-size:10px;letter-spacing:0;line-height:1.1;overflow-wrap:normal;word-break:normal}
+@media(max-width:650px){.brand-ranking .brand-rank-logo img{width:43px;height:24px}.brand-ranking .brand-rank-logo[data-brand="TESLA"] img,.brand-ranking .brand-rank-logo[data-brand="VOLKSWAGEN"] img,.brand-ranking .brand-rank-logo[data-brand="BMW"] img,.brand-ranking .brand-rank-logo[data-brand="CUPRA"] img,.brand-ranking .brand-rank-logo[data-brand="MG"] img,.brand-ranking .brand-rank-logo[data-brand="TOYOTA"] img{width:26px;height:26px}.brand-ranking .brand-rank-logo[data-brand="KIA"] img,.brand-ranking .brand-rank-logo[data-brand="BYD"] img,.brand-ranking .brand-rank-logo[data-brand="VOLVO"] img,.brand-ranking .brand-rank-logo[data-brand="HYUNDAI"] img,.brand-ranking .brand-rank-logo[data-brand="RENAULT"] img,.brand-ranking .brand-rank-logo[data-brand="LEAPMOTOR"] img{width:43px;height:24px}.brand-ranking .brand-rank-logo.brand-wordmark{font-size:8px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -195,7 +202,7 @@ period.addEventListener('change',render);render();
           const line=document.createElement('div');line.className='brand-rank-row';
           const name=document.createElement('span');name.className='brand-rank-name';name.textContent=brand;
           const logoFile=brandLogos[brand.toUpperCase()];
-          const logo=document.createElement('span');logo.className='brand-rank-logo';
+          const logo=document.createElement('span');logo.className='brand-rank-logo';logo.dataset.brand=brand.toUpperCase();
           if(logoFile){const img=document.createElement('img');img.src=logoFile.startsWith('https://')?logoFile:'/img/brands/'+logoFile;img.alt=brand+' logo';img.loading='lazy';img.onerror=()=>{img.remove();logo.classList.add('brand-wordmark');logo.textContent=brand};logo.append(img)}else{logo.classList.add('brand-wordmark');logo.textContent=brand}
           const track=document.createElement('span');track.className='brand-rank-track';
           const fill=document.createElement('span');fill.className='brand-rank-fill';fill.style.width=(count/maxCount*100)+'%';track.append(fill);
