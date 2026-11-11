@@ -8,7 +8,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-DGT_URL = re.compile(r"^https://www\\.dgt\\.es/microdatos/salida/20\\d{2}/(?:[1-9]|1[0-2])/vehiculos/matriculaciones/export_mensual_mat_20\\d{4}\\.zip$")
+DGT_URL = re.compile(r"^https://www\.dgt\.es/microdatos/salida/20\d{2}/(?:[1-9]|1[0-2])/vehiculos/matriculaciones/export_mensual_mat_20\d{4}\.zip$")
 
 def inspect(url):
     if not DGT_URL.fullmatch(url):
@@ -30,7 +30,7 @@ def inspect(url):
             result["files"].append({
                 "name":Path(entry.filename).name,
                 "bytes":entry.file_size,
-                "first_record_bytes":len(sample.rstrip(b"\\r\\n")),
+                "first_record_bytes":len(sample.rstrip(b"\r\n")),
                 "first_record_encoding_latin1":True,
                 "first_record_content_excluded":True
             })
@@ -46,7 +46,7 @@ def main():
     result=inspect(args.url)
     target=Path(args.output)
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\\n",encoding="utf-8")
+    target.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print("Archive structure inspected; no personal records stored or market totals published.")
 
 if __name__=="__main__":main()
