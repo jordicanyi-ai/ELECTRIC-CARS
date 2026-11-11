@@ -109,7 +109,9 @@ main{max-width:1480px}
 <div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label id="territory-wrap" hidden>Comunidad autónoma<select id="territory"><option value="es">Toda España</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
-<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><section class="panel bev-volume-panel"><span class="chip">MATRICULACIONES · DGT</span><h2>Turismos 100 % eléctricos matriculados cada mes</h2><p class="secondary">Comparativa del número de matriculaciones BEV por año y mes.</p><div class="bev-trend-legend" id="bev-volume-legend"></div><div class="bev-trend-scroll"><svg id="bev-volume-svg" viewBox="0 0 1000 410" role="img" aria-label="Matriculaciones mensuales BEV comparadas por año"></svg></div><p class="secondary" id="bev-volume-note"></p></section>
+<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-volume"><option>Cargando…</option></select></label><label id="territory-wrap-volume" hidden>Comunidad autónoma<select id="territory-volume"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-volume"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
+<section class="panel bev-volume-panel"><span class="chip">MATRICULACIONES · DGT</span><h2>Turismos 100 % eléctricos matriculados cada mes</h2><p class="secondary">Comparativa del número de matriculaciones BEV por año y mes.</p><div class="bev-trend-legend" id="bev-volume-legend"></div><div class="bev-trend-scroll"><svg id="bev-volume-svg" viewBox="0 0 1000 410" role="img" aria-label="Matriculaciones mensuales BEV comparadas por año"></svg></div><p class="secondary" id="bev-volume-note"></p></section>
+<div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-trend"><option>Cargando…</option></select></label><label id="territory-wrap-trend" hidden>Comunidad autónoma<select id="territory-trend"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-trend"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <section class="panel bev-trend-panel"><span class="chip">EVOLUCIÓN · DGT</span><h2>Cuota de turismos 100 % eléctricos, mes a mes</h2><p class="secondary">Porcentaje de turismos BEV sobre el total de turismos nuevos matriculados. Comparativa anual.</p><div class="bev-trend-legend" id="bev-trend-legend"></div><div class="bev-trend-scroll"><svg id="bev-trend-svg" viewBox="0 0 1000 410" role="img" aria-label="Evolución mensual de la cuota de mercado BEV por año"></svg></div><p class="secondary" id="bev-trend-note"></p></section>
 <div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label><label id="territory-wrap-bottom" hidden>Comunidad autónoma<select id="territory-bottom"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-bottom"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
@@ -185,6 +187,29 @@ period.addEventListener('change',render);render();
     topPeriodSelect.addEventListener('change',syncBottomControls);
     new MutationObserver(syncBottomControls).observe(topTerritoryWrap,{attributes:true,attributeFilter:['hidden']});
     syncBottomControls();
+
+    // Keep chart-local filter triplets in lockstep with the primary controls.
+    for(const suffix of ['volume','trend']){
+      const localMonth=document.getElementById('dgt-month-'+suffix);
+      const localTerritory=document.getElementById('territory-'+suffix);
+      const localTerritoryWrap=document.getElementById('territory-wrap-'+suffix);
+      const localPeriod=document.getElementById('period-'+suffix);
+      const syncLocal=()=>{
+        syncSelect(monthSelect,localMonth);
+        syncSelect(topTerritorySelect,localTerritory);
+        syncSelect(topPeriodSelect,localPeriod);
+        localTerritoryWrap.hidden=topTerritoryWrap.hidden;
+      };
+      localMonth.addEventListener('change',()=>{monthSelect.value=localMonth.value;monthSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+      localTerritory.addEventListener('change',()=>{topTerritorySelect.value=localTerritory.value;topTerritorySelect.dispatchEvent(new Event('change',{bubbles:true}))});
+      localPeriod.addEventListener('change',()=>{topPeriodSelect.value=localPeriod.value;topPeriodSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+      monthSelect.addEventListener('change',syncLocal);
+      topTerritorySelect.addEventListener('change',syncLocal);
+      topPeriodSelect.addEventListener('change',syncLocal);
+      new MutationObserver(syncLocal).observe(topTerritoryWrap,{attributes:true,attributeFilter:['hidden']});
+      syncLocal();
+    }
+
     const finalMonthSelect=document.getElementById('dgt-month-final');
     const finalTerritorySelect=document.getElementById('territory-final');
     const finalTerritoryWrap=document.getElementById('territory-wrap-final');
