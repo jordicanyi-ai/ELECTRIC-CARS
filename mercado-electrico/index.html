@@ -133,6 +133,18 @@ main{max-width:1480px}
 
 /* Mobile leader KPI: prioritize the full model name, without car photo. */
 @media(max-width:650px){main .stat-leader .leader-photo{display:none!important}main .stat-leader .leader-copy{width:100%;flex:1 1 100%;min-width:0}main .stat-leader #leader{font-size:clamp(18px,5.2vw,25px);letter-spacing:-.35px;line-height:1.3;white-space:normal;overflow-wrap:normal;word-break:normal;overflow:visible}}
+
+/* Desktop: compact supporting charts; preserve full-width model and brand rankings. */
+@media(min-width:751px){
+  main .bev-volume-panel,main .bev-trend-panel,main .tech-market{max-width:1080px;margin-left:auto;margin-right:auto;padding:22px 28px}
+  main .bev-volume-panel .bev-trend-scroll,main .bev-trend-panel .bev-trend-scroll{max-width:900px;margin:8px auto 0}
+  main .bev-volume-panel .bev-trend-scroll svg,main .bev-trend-panel .bev-trend-scroll svg{width:100%;max-width:900px;height:auto}
+  main .bev-volume-panel h2,main .bev-trend-panel h2,main .tech-market h2{font-size:20px;margin:9px 0}
+  main .bev-volume-panel .bev-trend-legend,main .bev-trend-panel .bev-trend-legend{margin:8px 0 0}
+  main .tech-market-layout{grid-template-columns:minmax(200px,0.85fr) minmax(340px,1.55fr);gap:24px;max-width:850px;margin:12px auto 0}
+  main .tech-market-ring{width:min(100%,230px)}
+  main .tech-market-table td,main .tech-market-table th{padding:8px 9px;font-size:13px}
+}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
