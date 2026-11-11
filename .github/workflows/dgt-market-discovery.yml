@@ -1,3 +1,4 @@
+# Rebuild DGT technology-share series after validation changes
 # Rebuild request: 2026-11-11 — verify October daily fallback and regional aggregates
 name: DGT monthly market data archive discovery
 on:
