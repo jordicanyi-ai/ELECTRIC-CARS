@@ -92,6 +92,9 @@ main{max-width:1480px}
 
 /* Mobile: always show the autonomous-community selector when regional data exists. */
 @media(max-width:650px){.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.controls label:nth-child(2):not([hidden]){display:grid!important;grid-column:1/-1}.controls label[hidden]{display:none!important}.controls label{min-width:0!important;width:100%;flex-basis:auto!important}.controls select{min-width:0;width:100%;font-size:12px;padding:9px 25px 9px 8px}.controls-secondary{margin:16px 0 12px}}
+
+/* Mobile overflow guard: selectors and chart cards stay within the viewport. */
+@media(max-width:650px){html,body{max-width:100%;overflow-x:clip}main,.panel,.controls,.controls-secondary{min-width:0;max-width:100%;box-sizing:border-box}.controls,.controls-secondary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px;padding:0;margin-left:0;margin-right:0}.controls>label,.controls-secondary>label{box-sizing:border-box;min-width:0!important;width:100%;max-width:100%;margin:0}.controls>label:nth-child(2):not([hidden]),.controls-secondary>label:nth-child(2):not([hidden]){grid-column:1/-1;display:grid!important}.controls>label[hidden],.controls-secondary>label[hidden]{display:none!important}.controls select,.controls-secondary select{box-sizing:border-box;display:block;width:100%;min-width:0;max-width:100%;font-size:12px;padding:9px 25px 9px 8px;overflow:hidden;text-overflow:ellipsis}.bev-trend-panel,.bev-volume-panel,.tech-market{min-width:0;overflow:hidden}.bev-trend-scroll{max-width:100%;overflow-x:auto}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
