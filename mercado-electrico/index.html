@@ -81,6 +81,8 @@ main{max-width:1480px}
 .brand-ranking .brand-rank-logo[data-brand="KIA"] img,.brand-ranking .brand-rank-logo[data-brand="BYD"] img,.brand-ranking .brand-rank-logo[data-brand="VOLVO"] img,.brand-ranking .brand-rank-logo[data-brand="HYUNDAI"] img,.brand-ranking .brand-rank-logo[data-brand="RENAULT"] img,.brand-ranking .brand-rank-logo[data-brand="LEAPMOTOR"] img{width:56px;height:28px}
 .brand-ranking .brand-rank-logo.brand-wordmark{font-size:10px;letter-spacing:0;line-height:1.1;overflow-wrap:normal;word-break:normal}
 @media(max-width:650px){.brand-ranking .brand-rank-logo img{width:43px;height:24px}.brand-ranking .brand-rank-logo[data-brand="TESLA"] img,.brand-ranking .brand-rank-logo[data-brand="VOLKSWAGEN"] img,.brand-ranking .brand-rank-logo[data-brand="BMW"] img,.brand-ranking .brand-rank-logo[data-brand="CUPRA"] img,.brand-ranking .brand-rank-logo[data-brand="MG"] img,.brand-ranking .brand-rank-logo[data-brand="TOYOTA"] img{width:26px;height:26px}.brand-ranking .brand-rank-logo[data-brand="KIA"] img,.brand-ranking .brand-rank-logo[data-brand="BYD"] img,.brand-ranking .brand-rank-logo[data-brand="VOLVO"] img,.brand-ranking .brand-rank-logo[data-brand="HYUNDAI"] img,.brand-ranking .brand-rank-logo[data-brand="RENAULT"] img,.brand-ranking .brand-rank-logo[data-brand="LEAPMOTOR"] img{width:43px;height:24px}.brand-ranking .brand-rank-logo.brand-wordmark{font-size:8px}}
+
+.tech-market{margin-top:18px}.tech-market-layout{display:grid;grid-template-columns:minmax(220px,1fr) minmax(300px,1.4fr);gap:28px;align-items:center}.tech-market-ring{width:min(100%,300px);aspect-ratio:1;border-radius:50%;margin:auto;position:relative}.tech-market-ring:after{content:"";position:absolute;inset:26%;background:white;border-radius:50%}.tech-market-table{width:100%;border-collapse:collapse}.tech-market-table td,.tech-market-table th{padding:11px 8px;border-bottom:1px solid #e5eaf2;text-align:right}.tech-market-table td:first-child,.tech-market-table th:first-child{text-align:left}.tech-market-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px}@media(max-width:750px){.tech-market-layout{grid-template-columns:1fr}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -102,6 +104,7 @@ main{max-width:1480px}
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
 <section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
+<section class="panel tech-market" id="tech-market" hidden><span class="chip">MERCADO · DGT</span><h2>Cuota de matriculaciones por tecnología</h2><p class="secondary">Turismos nuevos matriculados · España · Fuente DGT</p><div class="tech-market-layout"><div id="tech-market-ring" class="tech-market-ring" role="img" aria-label="Distribución de matriculaciones por tecnología"></div><table class="tech-market-table"><thead><tr><th>Tecnología</th><th>Unidades</th><th>Cuota</th></tr></thead><tbody id="tech-market-body"></tbody></table></div><p class="secondary" id="tech-market-note"></p></section>
 <section class="panel"><h2>Compara estos coches</h2><p>Consulta sus características, precios y autonomía en nuestro comparador interactivo. Las fichas siguen abriéndose en ventanas emergentes.</p><a class="cta" href="/">Abrir comparador de coches eléctricos</a></section>
 <p class="secondary">Las matriculaciones no equivalen necesariamente a ventas a particulares. Fuente: DGT · Microdatos mensuales.</p>
 </main>
@@ -182,6 +185,25 @@ period.addEventListener('change',render);render();
     }
     const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(scoped(d).all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(scoped(d).total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
     periodSelect.addEventListener('change',updateShare);monthSelect.addEventListener('change',updateShare);updateShare();
+    const techPanel=document.getElementById('tech-market');
+    const techColors={BEV:'#79b244',PHEV:'#b5f5a6',HEV:'#59a8cc',GASOLINA:'#df3939',DIESEL:'#f6b919',GAS:'#aeb4bd',OTROS:'#e0e4e9'};
+    const techLabels={BEV:'Eléctrico',PHEV:'Híbrido enchufable',HEV:'Híbrido',GASOLINA:'Gasolina',DIESEL:'Diésel',GAS:'Gas',OTROS:'Otros'};
+    function updateTechnologies(){
+      const included=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,d])=>d);
+      if(!included.length||included.some(d=>!d?.technologies)){techPanel.hidden=true;return}
+      const counts=Object.fromEntries(Object.keys(techLabels).map(k=>[k,included.reduce((sum,d)=>sum+Number(d.technologies[k]||0),0)]));
+      const total=Object.values(counts).reduce((a,b)=>a+b,0);
+      if(!total){techPanel.hidden=true;return}
+      techPanel.hidden=false;
+      let cursor=0;const segments=[];const body=document.getElementById('tech-market-body');body.replaceChildren();
+      Object.entries(counts).forEach(([key,count])=>{
+        const end=cursor+count/total*100;segments.push(techColors[key]+' '+cursor+'% '+end+'%');cursor=end;
+        const tr=document.createElement('tr');const name=document.createElement('td');const dot=document.createElement('span');dot.className='tech-market-dot';dot.style.background=techColors[key];name.append(dot,document.createTextNode(techLabels[key]));const value=document.createElement('td');value.textContent=nf.format(count);const share=document.createElement('td');share.textContent=(count/total*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';tr.append(name,value,share);body.append(tr)
+      });
+      document.getElementById('tech-market-ring').style.background='conic-gradient('+segments.join(',')+')';
+      document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías, España';
+    }
+    periodSelect.addEventListener('change',updateTechnologies);monthSelect.addEventListener('change',updateTechnologies);updateTechnologies();
     const brandsPanel=document.querySelector('.placeholder-grid .panel');
     if(brandsPanel){
       brandsPanel.querySelector('.chip').textContent='MARCAS · DGT';
