@@ -27,6 +27,7 @@ def parse_record(line):
         "vehicle_type":line[91:93].decode("latin-1").strip(),
         "propulsion":line[93:94].decode("latin-1").strip(),
         "electric_category":line[453:457].decode("latin-1").strip(),
+        "new_used":line[178:179].decode("latin-1").strip(),
     }
 
 def aggregate(url):
@@ -46,7 +47,7 @@ def aggregate(url):
             for raw in stream:
                 scanned+=1
                 row=parse_record(raw.rstrip(b"\r\n"))
-                if row["plate_class"]!="0" or row["vehicle_type"]!="40" or row["propulsion"]!="2" or row["electric_category"]!="BEV":continue
+                if row["plate_class"]!="0" or row["vehicle_type"]!="40" or row["propulsion"]!="2" or row["electric_category"]!="BEV" or row["new_used"]!="N":continue
                 if not row["brand"] or not row["model"]:continue
                 total+=1
                 brands[row["brand"]]+=1
