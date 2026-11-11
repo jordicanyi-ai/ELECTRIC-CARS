@@ -7,10 +7,11 @@ on:
       - 'scripts/market/inspect_dgt_zip.py'
       - 'scripts/market/validate_dgt_records.py'
       - 'scripts/market/aggregate_dgt_review.py'
+      - 'scripts/market/build_dgt_market.py'
   schedule:
     - cron: '23 7 1-5 * *'
 permissions:
-  contents: read
+  contents: write
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -40,6 +41,18 @@ jobs:
           print("Top brands:",d["brand_counts"][:12])
           print("Top models:",d["model_counts"][:20])
           PY
+      - name: Build full historical DGT BEV series and public rankings
+        run: python scripts/market/build_dgt_market.py
+      - name: Commit verified aggregates to site
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "electricos-dgt-bot"
+          git config user.email "electricos-dgt-bot@users.noreply.github.com"
+          git add data/market/dgt-bev-series.json data/sales-ranking.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Update DGT-verified BEV registration data"
+            git push
+          fi
       - name: Preserve result as reviewable artifact
         uses: actions/upload-artifact@v4
         with:
