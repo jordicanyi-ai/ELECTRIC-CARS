@@ -231,8 +231,10 @@ period.addEventListener('change',render);render();
     const techLabels={BEV:'Eléctrico',PHEV:'Híbrido enchufable',HEV:'Híbrido',GASOLINA:'Gasolina',DIESEL:'Diésel',GAS:'Gas',OTROS:'Otros'};
     function updateTechnologies(){
       const included=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,d])=>d);
-      if(!included.length||included.some(d=>!d?.technologies)){techPanel.hidden=true;return}
-      const counts=Object.fromEntries(Object.keys(techLabels).map(k=>[k,included.reduce((sum,d)=>sum+Number(d.technologies[k]||0),0)]));
+      const selectedTerritory=territory.value;
+      const selectedData=included.map(d=>selectedTerritory==='es'?d:d?.regions?.[selectedTerritory]);
+      if(!selectedData.length||selectedData.some(d=>!d?.technologies)){techPanel.hidden=true;return}
+      const counts=Object.fromEntries(Object.keys(techLabels).map(k=>[k,selectedData.reduce((sum,d)=>sum+Number(d.technologies[k]||0),0)]));
       const total=Object.values(counts).reduce((a,b)=>a+b,0);
       if(!total){techPanel.hidden=true;return}
       techPanel.hidden=false;
@@ -250,9 +252,9 @@ period.addEventListener('change',render);render();
         label.textContent=(portion*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';ring.append(label);
         angle+=portion*Math.PI*2;
       });
-      document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías, España';
+      document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías · '+(selectedTerritory==='es'?'España':selectedTerritory);
     }
-    periodSelect.addEventListener('change',updateTechnologies);monthSelect.addEventListener('change',updateTechnologies);updateTechnologies();
+    periodSelect.addEventListener('change',updateTechnologies);monthSelect.addEventListener('change',updateTechnologies);territory.addEventListener('change',updateTechnologies);updateTechnologies();
     const brandsPanel=document.querySelector('.placeholder-grid .panel');
     if(brandsPanel){
       brandsPanel.querySelector('.chip').textContent='MARCAS · DGT';
