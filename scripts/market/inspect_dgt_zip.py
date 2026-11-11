@@ -3,6 +3,7 @@
 import argparse
 import io
 import json
+from collections import Counter
 import re
 import urllib.request
 import zipfile
@@ -27,12 +28,20 @@ def inspect(url):
                 raise ValueError("Uncompressed file exceeds safety limit")
             with archive.open(entry) as handle:
                 sample = handle.readline(10000)
+                lengths = Counter([len(sample.rstrip(b'\r\n'))])
+                for _ in range(199):
+                    row = handle.readline(10000)
+                    if not row: break
+                    lengths[len(row.rstrip(b'\r\n'))] += 1
             result["files"].append({
                 "name":Path(entry.filename).name,
                 "bytes":entry.file_size,
                 "first_record_bytes":len(sample.rstrip(b"\r\n")),
                 "first_record_encoding_latin1":True,
-                "first_record_content_excluded":True
+                "first_record_content_excluded":True,
+                "sampled_record_lengths":dict(sorted(lengths.items())),
+                "first_record_delimiter_counts":{d:sample.count(d.encode()) for d in (";", "|", ",")},
+                "first_record_hex_prefix":sample[:16].hex()
             })
     if not result["files"]:
         raise ValueError("No files in archive")
