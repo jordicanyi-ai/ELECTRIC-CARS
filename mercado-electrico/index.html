@@ -36,4 +36,44 @@ const data=window.electricosSalesRanking||{},period=document.getElementById('per
 function render(){const item=data[period.value],rows=item&&Array.isArray(item.models)?item.models:[];document.getElementById('period-label').textContent=item?.label||'Sin datos';document.getElementById('total').textContent=rows.length?fmt.format(rows.reduce((sum,r)=>sum+Number(r.units||0),0)):'—';document.getElementById('leader').textContent=rows[0]?.model||'—';document.getElementById('leader-units').textContent=rows[0]?fmt.format(rows[0].units)+' matriculaciones':'—';document.getElementById('source').textContent='Fuente: '+(data.source||'Pendiente')+' · Actualizado: '+(data.updatedAt||'—');document.getElementById('top-note').textContent=rows.length>=20?'Top 20 de modelos':'Mostrando '+rows.length+' modelos con datos disponibles. Pendiente de incorporar el Top 20 verificado.';const max=Math.max(1,...rows.map(r=>Number(r.units)||0));const root=document.getElementById('chart');root.replaceChildren();rows.forEach((r,i)=>{const line=document.createElement('div');line.className='row';const name=document.createElement('div');name.className='car-info';const pos=document.createElement('span');pos.className='rank-no';pos.textContent=i+1;name.append(pos);const thumbs={'Tesla Model 3':'/img/ranking/MODEL3.png','Tesla Model Y':'/img/ranking/MODELY.png','BYD Dolphin Surf':'/img/ranking/DOLPHINSURF.png','Kia EV3':'/img/ranking/EV3.png','BYD Atto 2':'/img/ranking/byd-atto2.png','Geely E2':'/img/ranking/geelyE2.png'};const key=x=>String(x||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');const catalog=typeof carsData!=='undefined'&&Array.isArray(carsData)?carsData.find(c=>key(c.brand+' '+c.model)===key(r.model)):null;const src=thumbs[r.model]||(catalog&&Array.isArray(catalog.images)?catalog.images[0]:null);const pic=src?document.createElement('img'):document.createElement('span');if(src){pic.className='car-photo';pic.src=src;pic.alt=r.model;pic.loading='lazy';pic.onerror=()=>{const missing=document.createElement('span');missing.className='missing-photo';missing.textContent='Sin foto';pic.replaceWith(missing)}}else{pic.className='missing-photo';pic.textContent='Sin foto'}name.append(pic);const label=document.createElement(catalog?'a':'span');label.className='name car-link';label.textContent=r.model.toUpperCase();if(catalog)label.href='/?car='+encodeURIComponent(catalog.id);name.append(label);const track=document.createElement('div');track.className='track';const fill=document.createElement('div');fill.className='fill';fill.style.width=(Number(r.units)/max*100)+'%';track.append(fill);const value=document.createElement('span');value.className='value';value.textContent=fmt.format(r.units);line.append(name,track,value);root.append(line)});const total=rows.reduce((s,r)=>s+Number(r.units||0),0),colors=['#2456cd','#8b49e8','#0eaf8b','#f08a27','#df4b84'];let cursor=0;const segments=rows.map((r,i)=>{const from=cursor;cursor+=total?Number(r.units||0)/total*100:0;return colors[i]+' '+from+'% '+cursor+'%'});const donut=document.getElementById('donut');donut.style.background=segments.length?'conic-gradient('+segments.join(',')+')':'#e9effb';const legend=document.getElementById('legend');legend.replaceChildren();rows.forEach((r,i)=>{const el=document.createElement('div');el.className='legend-line';const name=document.createElement('span');const dot=document.createElement('i');dot.className='dot';dot.style.background=colors[i];name.append(dot,document.createTextNode(r.model));const share=document.createElement('b');share.textContent=total?(Number(r.units)/total*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %':'—';el.append(name,share);legend.append(el)})}}
 period.addEventListener('change',render);render();
 })();
-</script></body></html>
+</script><script>
+(async function(){
+  try {
+    const response=await fetch('/data/market/dgt-bev-series.json',{cache:'no-store'});
+    if(!response.ok) return;
+    const data=await response.json();
+    const months=Object.entries(data.months||{}).sort(([a],[b])=>a.localeCompare(b));
+    if(!months.length)return;
+    const latest=data.latest_period;
+    const periodSelect=document.getElementById('period');
+    const first=periodSelect.options[0],second=periodSelect.options[1];
+    if(first)first.textContent=latest+' · Mensual';
+    if(second)second.textContent=latest.slice(0,4)+' · Acumulado';
+    const cards=document.querySelectorAll('.stat');
+    if(cards[0]){
+      const small=cards[0].querySelector('small');
+      if(small)small.textContent='Turismos eléctricos BEV matriculados';
+      const foot=cards[0].querySelectorAll('small')[1];
+      if(foot)foot.textContent='Total nacional · DGT';
+      const count=()=>{const period=periodSelect.value;if(period==='monthly')return data.months[latest]?.total||0;return months.filter(([p])=>p.startsWith(latest.slice(0,4))).reduce((n,[,d])=>n+d.total,0)};
+      const update=()=>{const b=cards[0].querySelector('b');if(b)b.textContent=new Intl.NumberFormat('es-ES').format(count())};
+      periodSelect.addEventListener('change',update);update();
+    }
+    const placeholder=document.querySelector('.placeholder-grid .panel');
+    if(placeholder){
+      placeholder.querySelector('.chip').textContent='HISTÓRICO DGT';
+      placeholder.querySelector('h2').textContent='Evolución mensual de matriculaciones BEV';
+      const old=placeholder.querySelector('.placeholder-chart');if(old)old.remove();
+      const note=placeholder.querySelector('.secondary');if(note)note.remove();
+      const chart=document.createElement('div');chart.className='history-chart';
+      chart.style.cssText='display:flex;align-items:flex-end;gap:3px;overflow-x:auto;height:185px;padding:18px 0 0';
+      const max=Math.max(...months.map(([,d])=>d.total),1);
+      months.forEach(([p,d])=>{const bar=document.createElement('div');bar.title=p+': '+new Intl.NumberFormat('es-ES').format(d.total)+' BEV';bar.style.cssText='min-width:13px;flex:1;height:'+Math.max(2,d.total/max*100)+'%;background:#2456cd;border-radius:4px 4px 0 0';chart.append(bar)});
+      placeholder.append(chart);
+      const caption=document.createElement('p');caption.className='secondary';caption.textContent=months[0][0]+' — '+latest+' · '+months.length+' meses · Fuente: DGT';placeholder.append(caption);
+    }
+    const intro=document.querySelector('.intro');if(intro)intro.textContent='Matriculaciones de turismos eléctricos de batería (BEV), calculadas directamente a partir de los microdatos mensuales de la DGT.';
+  }catch(e){console.warn('DGT historical data unavailable',e)}
+})();
+</script>
+</body></html>
