@@ -23,6 +23,8 @@ jobs:
         run: python scripts/market/dgt_archive_index.py
       - name: Inspect official DGT September 2026 archive format
         run: python scripts/market/inspect_dgt_zip.py --url https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip
+      - name: Print non-personal DGT record layout summary
+        run: python -c 'import json; d=json.load(open("data/market/dgt-format-report.json")); print(json.dumps(d, indent=2))'
       - name: Preserve result as reviewable artifact
         uses: actions/upload-artifact@v4
         with:
