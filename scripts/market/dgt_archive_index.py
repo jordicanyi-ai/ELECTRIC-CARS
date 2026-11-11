@@ -38,7 +38,7 @@ def main():
         records[code] = {"period":f"{year}-{int(month):02d}", "url":url}
     # Fill only the latest missing closed month from official daily archives.
     daily_url = "https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/matriculaciones-automoviles-diario.html"
-    daily_pattern = re.compile(r"https://www\\.dgt\\.es/microdatos/salida/(20\\d{2})/(\\d{1,2})/vehiculos/matriculaciones/export_mat_(20\\d{6})\\.zip")
+    daily_pattern = re.compile(r"https://www\.dgt\.es/microdatos/salida/(20\d{2})/(\d{1,2})/vehiculos/matriculaciones/export_mat_(20\d{6})\.zip")
     with urllib.request.urlopen(urllib.request.Request(daily_url, headers={"User-Agent":"electricos.eu public data archive indexer"}), timeout=45) as response:
         daily_page=response.read().decode("utf-8","replace")
     daily_parser=Links();daily_parser.feed(daily_page)
