@@ -21,7 +21,7 @@ class Links(HTMLParser):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--output", default="data/market/dgt-archive-index.json")
-    p.add_argument("--max-months", type=int, default=36)
+    p.add_argument("--since-year", type=int, default=2024, help="Retain all monthly archives from this year onward")
     args = p.parse_args()
     req = urllib.request.Request(LIST_URL, headers={"User-Agent":"electricos.eu public data archive indexer (+https://electricos.eu/)"})
     with urllib.request.urlopen(req, timeout=45) as response:
@@ -38,12 +38,12 @@ def main():
         records[code] = {"period":f"{year}-{int(month):02d}", "url":url}
     if not records:
         raise RuntimeError("No valid official DGT monthly ZIP links found; preserving previous index")
-    selected = [records[key] for key in sorted(records, reverse=True)[:args.max_months]]
-    output = {"source":"DGT — microdatos de matriculaciones mensuales","source_url":LIST_URL,"status":"archive-discovery-only","note":"Archive discovery is NOT validated sales data. No figures should be derived from this index without record-layout validation.","archives":selected}
+    selected = [records[key] for key in sorted(records) if int(key[:4]) >= args.since_year]
+    output = {"source":"DGT — microdatos de matriculaciones mensuales","source_url":LIST_URL,"status":"archive-discovery-only","since_year":args.since_year,"note":"Archive discovery is NOT validated sales data. No figures should be derived from this index without record-layout validation.","archives":selected}
     target = Path(args.output)
     target.parent.mkdir(parents=True,exist_ok=True)
     new = json.dumps(output,ensure_ascii=False,indent=2)+"\n"
     if not target.exists() or target.read_text(encoding="utf-8") != new:
         target.write_text(new,encoding="utf-8")
-    print(f"Found {len(records)} official monthly archives; indexed {len(selected)}. No published statistics changed.")
+    print(f"Found {len(records)} official monthly archives; indexed {len(selected)} since {args.since_year}. No published statistics changed.")
 if __name__=="__main__": main()
