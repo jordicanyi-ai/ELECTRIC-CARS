@@ -22,7 +22,7 @@
     </header><main>
 <a href="/">← Volver al comparador</a>
 <div class="hero"><span class="eyebrow">OBSERVATORIO · ELECTRICOS.EU</span><h1>MERCADO ELÉCTRICO</h1><p>Matriculaciones, tendencias y evolución del coche eléctrico en España.</p></div>
-<p class="intro muted">Descubre los turismos 100 % eléctricos más matriculados, con datos de referencia de la DGT. Consulta los resultados mensuales y el acumulado anual.</p>
+
 <div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label>Territorio<select id="territory"><option value="es">Toda España</option><option value="community" disabled>Comunidades autónomas (pendiente de datos)</option><option value="province" disabled>Provincias (pendiente de datos)</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Vehículos del top 5</small><b id="total">—</b><small>Solo los cinco modelos mostrados</small></div><div class="stat"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout"><div id="chart"></div><div id="ranking-podium" class="ranking-podium" aria-label="Tres modelos líderes"></div></div><p class="secondary" id="source"></p></section>
@@ -116,7 +116,7 @@ period.addEventListener('change',render);render();
       periodSelect.addEventListener('change',updateBrands);monthSelect.addEventListener('change',updateBrands);updateBrands();
     }
     refresh();
-    const intro=document.querySelector('.intro');if(intro)intro.textContent='Matriculaciones de turismos eléctricos de batería (BEV), calculadas directamente a partir de los microdatos mensuales de la DGT.';
+    
     const footer=[...document.querySelectorAll('main > p.secondary')].find(p=>p.textContent.includes('provisional'));if(footer)footer.textContent='Fuente: Dirección General de Tráfico (DGT). Matriculaciones de turismos nuevos; no equivalen necesariamente a ventas a particulares.';
 
   }catch(e){console.warn('DGT historical data unavailable',e)}
