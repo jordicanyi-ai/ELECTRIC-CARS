@@ -85,6 +85,7 @@ main{max-width:1480px}
 .tech-market{margin-top:18px}.tech-market-layout{display:grid;grid-template-columns:minmax(220px,1fr) minmax(300px,1.4fr);gap:28px;align-items:center}.tech-market-ring{width:min(100%,300px);aspect-ratio:1;border-radius:50%;margin:auto;position:relative}.tech-market-ring:after{content:"";position:absolute;inset:26%;background:white;border-radius:50%}.tech-market-table{width:100%;border-collapse:collapse}.tech-market-table td,.tech-market-table th{padding:11px 8px;border-bottom:1px solid #e5eaf2;text-align:right}.tech-market-table td:first-child,.tech-market-table th:first-child{text-align:left}.tech-market-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px}@media(max-width:750px){.tech-market-layout{grid-template-columns:1fr}}
 
 .tech-market-ring-label{position:absolute;z-index:2;transform:translate(-50%,-50%);color:#fff;font-size:12px;font-weight:900;line-height:1;text-shadow:0 1px 3px #0009;pointer-events:none;white-space:nowrap}.tech-market-ring-label.dark{color:#17283f;text-shadow:0 1px 2px #fff9}@media(max-width:650px){.tech-market-ring-label{font-size:11px}}
+.controls-secondary{margin:18px 0 12px;justify-content:center}.controls-secondary label{min-width:210px}.controls-secondary select{width:100%}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -105,7 +106,8 @@ main{max-width:1480px}
 <div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label id="territory-wrap" hidden>Comunidad autónoma<select id="territory"><option value="es">Toda España</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
 <div class="grid"><div class="stat"><small>Turismos eléctricos BEV matriculados</small><b id="total">—</b><small>Total nacional · DGT</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div><div class="stat stat-leader"><div class="leader-copy"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><img id="leader-photo" class="leader-photo" alt="" loading="lazy" hidden></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout" id="ranking-top20"><div id="chart"></div></div><p class="secondary" id="source"></p></section>
-<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
+<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label></div>
+<div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
 <section class="panel tech-market" id="tech-market" hidden><span class="chip">MERCADO · DGT</span><h2>Cuota de matriculaciones por tecnología</h2><p class="secondary">Turismos nuevos matriculados · España · Fuente DGT</p><div class="tech-market-layout"><div id="tech-market-ring" class="tech-market-ring" role="img" aria-label="Distribución de matriculaciones por tecnología"></div><table class="tech-market-table"><thead><tr><th>Tecnología</th><th>Unidades</th><th>Cuota</th></tr></thead><tbody id="tech-market-body"></tbody></table></div><p class="secondary" id="tech-market-note"></p></section>
 <section class="panel"><h2>Compara estos coches</h2><p>Consulta sus características, precios y autonomía en nuestro comparador interactivo. Las fichas siguen abriéndose en ventanas emergentes.</p><a class="cta" href="/">Abrir comparador de coches eléctricos</a></section>
 <p class="secondary">Las matriculaciones no equivalen necesariamente a ventas a particulares. Fuente: DGT · Microdatos mensuales.</p>
@@ -157,6 +159,13 @@ period.addEventListener('change',render);render();
     months.slice().reverse().forEach(([p])=>{const opt=document.createElement("option");opt.value=p;opt.textContent=monthLabel(p);monthSelect.append(opt)});
     const savedMonth=sessionStorage.getItem('marketMonth');
     monthSelect.value=savedMonth&&data.months[savedMonth]?savedMonth:latest;
+    const bottomMonthSelect=document.getElementById('dgt-month-bottom');
+    bottomMonthSelect.replaceChildren();
+    for(const option of monthSelect.options)bottomMonthSelect.add(new Option(option.textContent,option.value));
+    bottomMonthSelect.value=monthSelect.value;
+    bottomMonthSelect.addEventListener('change',()=>{monthSelect.value=bottomMonthSelect.value;monthSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    monthSelect.addEventListener('change',()=>{bottomMonthSelect.value=monthSelect.value});
+
     const periodSelect=document.getElementById('period');
     const savedPeriod=sessionStorage.getItem('marketPeriod');
     if(savedPeriod==='monthly'||savedPeriod==='yearly')periodSelect.value=savedPeriod;
