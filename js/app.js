@@ -1253,6 +1253,8 @@ let currentImageIndexes = {};
             document.getElementById('car-modal').classList.add('hidden');
 
             document.body.style.overflow = '';
+            const returnTo = new URLSearchParams(window.location.search).get('returnTo');
+            if (returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//')) window.location.assign(returnTo);
         }
 
         // Galería a pantalla completa; conserva el scroll de la ficha abierta.
