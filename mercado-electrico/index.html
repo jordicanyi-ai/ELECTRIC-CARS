@@ -78,6 +78,8 @@ period.addEventListener('change',render);render();
       const update=()=>{const b=cards[0].querySelector('b');if(b)b.textContent=new Intl.NumberFormat('es-ES').format(count())};
       periodSelect.addEventListener('change',update);monthSelect.addEventListener('change',update);update();
     }
+    const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(d?.all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(d?.total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
+    periodSelect.addEventListener('change',updateShare);monthSelect.addEventListener('change',updateShare);updateShare();
     const placeholder=document.querySelector('.placeholder-grid .panel');
     if(placeholder){
       placeholder.querySelector('.chip').textContent='HISTÓRICO DGT';
