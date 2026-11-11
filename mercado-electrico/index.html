@@ -232,8 +232,17 @@ period.addEventListener('change',render);render();
     function updateTechnologies(){
       const included=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,d])=>d);
       const selectedTerritory=territory.value;
-      const selectedData=included.map(d=>selectedTerritory==='es'?d:d?.regions?.[selectedTerritory]);
-      if(!selectedData.length||selectedData.some(d=>!d?.technologies)){techPanel.hidden=true;return}
+      const regionalData=included.map(d=>d?.regions?.[selectedTerritory]);
+      const regionalReady=selectedTerritory!=='es'&&regionalData.length>0&&regionalData.every(d=>d?.technologies);
+      const selectedData=regionalReady?regionalData:included;
+      if(!selectedData.length||selectedData.some(d=>!d?.technologies)){
+        techPanel.hidden=false;
+        document.getElementById('tech-market-ring').style.background='conic-gradient(#e5eaf2 0% 100%)';
+        document.getElementById('tech-market-ring').replaceChildren();
+        document.getElementById('tech-market-body').replaceChildren();
+        document.getElementById('tech-market-note').textContent='Desglose por tecnología pendiente de validación con los microdatos de la DGT.';
+        return;
+      }
       const counts=Object.fromEntries(Object.keys(techLabels).map(k=>[k,selectedData.reduce((sum,d)=>sum+Number(d.technologies[k]||0),0)]));
       const total=Object.values(counts).reduce((a,b)=>a+b,0);
       if(!total){techPanel.hidden=true;return}
@@ -252,7 +261,7 @@ period.addEventListener('change',render);render();
         label.textContent=(portion*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';ring.append(label);
         angle+=portion*Math.PI*2;
       });
-      document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías · '+(selectedTerritory==='es'?'España':selectedTerritory);
+      document.getElementById('tech-market-note').textContent='Total: '+nf.format(total)+' turismos · '+(included.some(d=>d.provisional)?'Datos provisionales DGT':'Datos DGT')+' · Todas las tecnologías · '+(regionalReady?selectedTerritory:'España')+(selectedTerritory!=='es'&&!regionalReady?' · Desglose autonómico pendiente; se muestran datos de España.':'');
     }
     periodSelect.addEventListener('change',updateTechnologies);monthSelect.addEventListener('change',updateTechnologies);territory.addEventListener('change',updateTechnologies);updateTechnologies();
     const brandsPanel=document.querySelector('.placeholder-grid .panel');
