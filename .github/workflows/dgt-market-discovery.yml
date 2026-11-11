@@ -31,6 +31,15 @@ jobs:
         run: python scripts/market/validate_dgt_records.py --url https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip
       - name: Aggregate candidate electric passenger cars for manual validation
         run: python scripts/market/aggregate_dgt_review.py --url https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip
+      - name: Print aggregate review totals without personal records
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/market/dgt-electric-review.json"))
+          print("Scanned:",d["records_scanned"],"BEV candidates:",d.get("bev_turismos"))
+          print("Top brands:",d["brand_counts"][:12])
+          print("Top models:",d["model_counts"][:20])
+          PY
       - name: Preserve result as reviewable artifact
         uses: actions/upload-artifact@v4
         with:
