@@ -27,7 +27,7 @@ COMMUNITY_PROVINCES = {
     "Cantabria": "S",
     "Castilla-La Mancha": "AB CR CU GU TO",
     "Castilla y León": "AV BU LE P SA SG SO VA ZA",
-    "Cataluña": "B GI L T",
+    "Catalunya": "B GI L T",
     "Comunitat Valenciana": "A CS V",
     "Extremadura": "BA CC",
     "Galicia": "C LU OU PO",
