@@ -109,6 +109,7 @@ main{max-width:1480px}
 <section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-bottom"><option>Carregant mesos…</option></select></label><label id="territory-wrap-bottom" hidden>Comunidad autónoma<select id="territory-bottom"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-bottom"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <div class="placeholder-grid"><section class="panel"><span class="chip">MARCAS · DGT</span><h2>Marcas con más matriculaciones BEV</h2></section></div>
 <section class="panel tech-market" id="tech-market" hidden><span class="chip">MERCADO · DGT</span><h2>Cuota de matriculaciones por tecnología</h2><p class="secondary">Turismos nuevos matriculados · España · Fuente DGT</p><div class="tech-market-layout"><div id="tech-market-ring" class="tech-market-ring" role="img" aria-label="Distribución de matriculaciones por tecnología"></div><table class="tech-market-table"><thead><tr><th>Tecnología</th><th>Unidades</th><th>Cuota</th></tr></thead><tbody id="tech-market-body"></tbody></table></div><p class="secondary" id="tech-market-note"></p></section>
+<div class="controls controls-secondary"><label>Mes DGT<select id="dgt-month-final"><option>Carregant mesos…</option></select></label><label id="territory-wrap-final" hidden>Comunidad autónoma<select id="territory-final"><option value="es">Toda España</option></select></label><label>Periodo<select id="period-final"><option value="monthly">Mensual</option><option value="yearly">Acumulado anual</option></select></label></div>
 <section class="panel"><h2>Compara estos coches</h2><p>Consulta sus características, precios y autonomía en nuestro comparador interactivo. Las fichas siguen abriéndose en ventanas emergentes.</p><a class="cta" href="/">Abrir comparador de coches eléctricos</a></section>
 <p class="secondary">Las matriculaciones no equivalen necesariamente a ventas a particulares. Fuente: DGT · Microdatos mensuales.</p>
 </main>
@@ -179,6 +180,20 @@ period.addEventListener('change',render);render();
     topPeriodSelect.addEventListener('change',syncBottomControls);
     new MutationObserver(syncBottomControls).observe(topTerritoryWrap,{attributes:true,attributeFilter:['hidden']});
     syncBottomControls();
+    const finalMonthSelect=document.getElementById('dgt-month-final');
+    const finalTerritorySelect=document.getElementById('territory-final');
+    const finalTerritoryWrap=document.getElementById('territory-wrap-final');
+    const finalPeriodSelect=document.getElementById('period-final');
+    syncSelect(monthSelect,finalMonthSelect);
+    const syncFinalControls=()=>{syncSelect(topTerritorySelect,finalTerritorySelect);finalTerritoryWrap.hidden=topTerritoryWrap.hidden;syncSelect(topPeriodSelect,finalPeriodSelect)};
+    finalMonthSelect.addEventListener('change',()=>{monthSelect.value=finalMonthSelect.value;monthSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    monthSelect.addEventListener('change',()=>{finalMonthSelect.value=monthSelect.value});
+    finalTerritorySelect.addEventListener('change',()=>{topTerritorySelect.value=finalTerritorySelect.value;topTerritorySelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    finalPeriodSelect.addEventListener('change',()=>{topPeriodSelect.value=finalPeriodSelect.value;topPeriodSelect.dispatchEvent(new Event('change',{bubbles:true}))});
+    topTerritorySelect.addEventListener('change',syncFinalControls);
+    topPeriodSelect.addEventListener('change',syncFinalControls);
+    new MutationObserver(syncFinalControls).observe(topTerritoryWrap,{attributes:true,attributeFilter:['hidden']});
+    syncFinalControls();
 
 
     const periodSelect=document.getElementById('period');
