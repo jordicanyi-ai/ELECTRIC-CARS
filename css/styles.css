@@ -1028,3 +1028,6 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 .catalogue-tabs button,.catalogue-tabs .market-tab-link{font-family:inherit;font-size:14px;font-weight:500;line-height:1.25;min-height:44px;padding:10px 0;letter-spacing:0}
 .catalogue-tabs button[aria-pressed=true]{font-weight:500}
 .catalogue-tabs button i,.catalogue-tabs .market-tab-link i{font-size:1em;margin-right:5px}
+
+/* Consistent hover feedback for all catalogue navigation tabs. */
+.catalogue-tabs button:hover,.catalogue-tabs button:focus-visible,.catalogue-tabs .market-tab-link:hover,.catalogue-tabs .market-tab-link:focus-visible{color:var(--electric-blue);cursor:pointer}
