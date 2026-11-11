@@ -29,6 +29,7 @@ def build():
             raise RuntimeError("Unexpectedly small month "+period)
         periods[period]=data
     if len(periods)<24: raise RuntimeError("Historical coverage too short")
+    if any("regions" not in d for d in periods.values()): raise RuntimeError("Regional breakdown missing")
     latest=max(periods)
     year=latest[:4]
     months=[p for p in sorted(periods) if p.startswith(year)]
@@ -42,7 +43,7 @@ def build():
     monthly=Counter({(x["brand"],x["model"]):x["count"] for x in last["model_counts"]})
     series={"source":"DGT · Microdatos de matriculaciones mensuales","source_url":index["source_url"],
       "method":"COD_CLASE_MAT=0; COD_TIPO=40; COD_PROPULSION_ITV=2; CATEGORIA_VEHICULO_ELECTRICO=BEV; IND_NUEVO_USADO=N",
-      "latest_period":latest,"months":{p:{"total":d["bev_turismos"],"all_new_turismos":d["all_new_turismos"],"bev_share_pct":round(100*d["bev_turismos"]/d["all_new_turismos"],2) if d["all_new_turismos"] else None,"brands":d["brand_counts"],"models":d["model_counts"]} for p,d in sorted(periods.items())}}
+      "latest_period":latest,"region_method":"COD_PROVINCIA_VEH (domicilio del vehículo) agrupado por comunidad autónoma","months":{p:{"total":d["bev_turismos"],"all_new_turismos":d["all_new_turismos"],"bev_share_pct":round(100*d["bev_turismos"]/d["all_new_turismos"],2) if d["all_new_turismos"] else None,"brands":d["brand_counts"],"models":d["model_counts"],"regions":{name:{"total":region["total"],"all_new_turismos":region["all_new_turismos"],"brands":region["brand_counts"],"models":region["model_counts"]} for name,region in d["regions"].items()}} for p,d in sorted(periods.items())}}
     # Guard against regressions: only replace after all downloads and validation succeed.
     text=json.dumps(series,ensure_ascii=False,separators=(",",":"))+"\n"
     ranking={"source":"DGT · Microdatos de matriculaciones mensuales","updatedAt":date.today().isoformat(),
