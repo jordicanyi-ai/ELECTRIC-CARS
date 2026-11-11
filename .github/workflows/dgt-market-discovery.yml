@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/dgt-market-discovery.yml'
+      - 'scripts/market/inspect_dgt_zip.py'
   schedule:
     - cron: '23 7 1-5 * *'
 permissions:
