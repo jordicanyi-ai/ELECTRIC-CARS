@@ -65,6 +65,7 @@ main{max-width:1480px}
 @media(max-width:900px){.market-bar-row{grid-template-columns:minmax(120px,175px) 50px minmax(0,1fr) 50px;gap:7px}.market-bar-photo{width:50px}}
 @media(max-width:550px){main{padding-left:8px;padding-right:8px}.dashboard>.panel{padding:10px 8px}.market-bar-row{grid-template-columns:minmax(90px,108px) 43px minmax(0,1fr) 42px;gap:5px}.market-bar-photo{width:43px}}
 .market-car-link{cursor:pointer}.market-car-link:hover{background:#edf5ff;border-radius:7px}.market-car-link:focus-visible{outline:2px solid #2379b5;border-radius:7px}
+.history-plot{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;margin-top:12px}.history-axis{height:182px;display:flex;flex-direction:column;justify-content:space-between;text-align:right;color:#64748b;font-size:10px;font-variant-numeric:tabular-nums}.history-scroll{min-width:0;overflow-x:auto}.history-chart{height:208px;min-width:620px;display:flex;gap:4px;position:relative;padding:0 4px}.history-grid{position:absolute;inset:0 4px 26px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}.history-grid span{border-top:1px dashed #dce5f1;width:100%}.history-month{position:relative;z-index:1;flex:1;min-width:12px;height:100%;display:flex;align-items:center;flex-direction:column;justify-content:flex-end;cursor:help}.history-bar{width:100%;max-width:23px;background:#2456cd;border-radius:3px 3px 0 0;min-height:2px;margin-top:auto}.history-month-label{height:26px;line-height:26px;font-size:9px;color:#64748b}.history-month:hover .history-bar,.history-month:focus-visible .history-bar{background:#0d9488}.history-month:focus-visible{outline:2px solid #2456cd}@media(max-width:650px){.history-plot{grid-template-columns:44px minmax(0,1fr);gap:5px}.history-chart{min-width:570px}.history-axis{font-size:9px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -159,12 +160,29 @@ period.addEventListener('change',render);render();
       placeholder.querySelector('h2').textContent='Evolución mensual de matriculaciones BEV';
       const old=placeholder.querySelector('.placeholder-chart');if(old)old.remove();
       const note=placeholder.querySelector('.secondary');if(note)note.remove();
+      const fmt=new Intl.NumberFormat('es-ES');
+      const max=Math.max(...months.map(([,d])=>Number(d.total)||0),1);
+      const ceiling=Math.ceil(max/4000)*4000;
+      const plot=document.createElement('div');plot.className='history-plot';
+      const axis=document.createElement('div');axis.className='history-axis';
+      for(let i=4;i>=0;i--){const label=document.createElement('span');label.textContent=fmt.format(ceiling*i/4);axis.append(label)}
+      const scroll=document.createElement('div');scroll.className='history-scroll';
       const chart=document.createElement('div');chart.className='history-chart';
-      chart.style.cssText='display:flex;align-items:flex-end;gap:3px;overflow-x:auto;height:185px;padding:18px 0 0';
-      const max=Math.max(...months.map(([,d])=>d.total),1);
-      months.forEach(([p,d])=>{const bar=document.createElement('div');bar.title=p+': '+new Intl.NumberFormat('es-ES').format(d.total)+' BEV';bar.style.cssText='min-width:13px;flex:1;height:'+Math.max(2,d.total/max*100)+'%;background:#2456cd;border-radius:4px 4px 0 0';chart.append(bar)});
-      placeholder.append(chart);
-      const caption=document.createElement('p');caption.className='secondary';caption.textContent=months[0][0]+' — '+latest+' · '+months.length+' meses · Fuente: DGT';placeholder.append(caption);
+      const grid=document.createElement('div');grid.className='history-grid';
+      for(let i=0;i<5;i++)grid.append(document.createElement('span'));
+      chart.append(grid);
+      months.forEach(([p,d])=>{
+        const item=document.createElement('div');item.className='history-month';
+        const bar=document.createElement('div');bar.className='history-bar';bar.style.height=((Number(d.total)||0)/ceiling*100)+'%';
+        const label=new Date(p+'-01T12:00:00').toLocaleDateString('es-ES',{month:'long',year:'numeric'});
+        item.title=label+': '+fmt.format(d.total)+' matriculaciones BEV';item.setAttribute('aria-label',item.title);item.tabIndex=0;
+        item.append(bar);
+        const tick=document.createElement('span');tick.className='history-month-label';
+        tick.textContent=p.slice(5)==='01'?p.slice(0,4):['','ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'][Number(p.slice(5))];
+        item.append(tick);chart.append(item);
+      });
+      scroll.append(chart);plot.append(axis,scroll);placeholder.append(plot);
+      const caption=document.createElement('p');caption.className='secondary';caption.textContent=months[0][0]+' — '+latest+' · '+months.length+' meses · Fuente: DGT · Eje vertical: turismos BEV matriculados';placeholder.append(caption);
     }
     const brandsPanel=document.querySelectorAll('.placeholder-grid .panel')[1];
     if(brandsPanel){
