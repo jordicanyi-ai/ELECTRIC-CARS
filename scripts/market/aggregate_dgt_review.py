@@ -37,7 +37,7 @@ def aggregate(url):
         data=response.read(250_000_001)
     if len(data)>250_000_000:
         raise ValueError("Archive too large")
-    brands=Counter(); models=Counter(); total=0; scanned=0
+    brands=Counter(); models=Counter(); total=0; scanned=0; all_new_cars=0
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         names=[n for n in z.namelist() if n.lower().endswith(".txt")]
         if len(names)!=1: raise ValueError("Expected one TXT")
@@ -51,12 +51,14 @@ def aggregate(url):
             for raw in stream:
                 scanned+=1
                 row=parse_record(raw.rstrip(b"\r\n"))
-                if row["plate_class"]!="0" or row["vehicle_type"]!="40" or row["propulsion"]!="2" or row["electric_category"]!="BEV" or row["new_used"]!="N":continue
+                if row["plate_class"]!="0" or row["vehicle_type"]!="40" or row["new_used"]!="N":continue
+                all_new_cars+=1
+                if row["propulsion"]!="2" or row["electric_category"]!="BEV":continue
                 if not row["brand"] or not row["model"]:continue
                 total+=1
                 brands[row["brand"]]+=1
                 models[(row["brand"],row["model"])]+=1
-    return {"source":url,"records_scanned":scanned,"bev_turismos":total,
+    return {"source":url,"records_scanned":scanned,"bev_turismos":total,"all_new_turismos":all_new_cars,
             "brand_counts":[{"brand":k,"count":v} for k,v in brands.most_common()],
             "model_counts":[{"brand":b,"model":m,"count":v} for (b,m),v in models.most_common()],
             "status":"review-only","bev_category_validated":True,
