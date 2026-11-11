@@ -130,6 +130,9 @@ main{max-width:1480px}
 
 /* Keep the leading model name on one readable line on mobile. */
 @media(max-width:650px){main .stat-leader{gap:8px}main .stat-leader .leader-copy{min-width:0;flex:1 1 auto}main .stat-leader #leader{display:block;white-space:nowrap;font-size:clamp(13px,4.2vw,19px);line-height:1.35;letter-spacing:-.45px;overflow:visible}main .stat-leader .leader-photo{width:26%;max-width:100px;max-height:75px;flex:0 1 26%}}
+
+/* Mobile leader KPI: prioritize the full model name, without car photo. */
+@media(max-width:650px){main .stat-leader .leader-photo{display:none!important}main .stat-leader .leader-copy{width:100%;flex:1 1 100%;min-width:0}main .stat-leader #leader{font-size:clamp(18px,5.2vw,25px);letter-spacing:-.35px;line-height:1.3;white-space:normal;overflow-wrap:normal;word-break:normal;overflow:visible}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
