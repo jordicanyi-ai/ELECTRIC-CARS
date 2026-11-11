@@ -57,6 +57,13 @@ main{padding:8px 12px 45px}
 .market-bar-row{grid-template-columns:minmax(145px,205px) 54px minmax(0,1fr) 57px;gap:9px;height:34px}.market-bar-photo{width:54px;height:30px;display:flex;align-items:center;justify-content:center;overflow:hidden}.market-bar-photo img{width:100%;height:100%;object-fit:contain}.market-bar-photo.no-photo{visibility:hidden}.market-bar-track{height:12px}@media(max-width:900px){.market-bar-row{grid-template-columns:minmax(120px,175px) 48px minmax(0,1fr) 48px;gap:6px;height:32px}.market-bar-photo{width:48px;height:28px}}@media(max-width:550px){.market-bar-row{grid-template-columns:minmax(91px,115px) 39px minmax(0,1fr) 40px;gap:4px;height:30px}.market-bar-photo{width:39px;height:25px}.market-bar-name{font-size:9px}}
 /* Leader KPI: existing transparent ranking cutout */
 .stat-leader{display:flex;align-items:center;justify-content:space-between;gap:12px;overflow:hidden}.stat-leader .leader-copy{min-width:0;flex:1}.stat-leader .leader-photo{display:block;width:38%;max-width:175px;max-height:95px;object-fit:contain;object-position:center right;flex-shrink:0}.stat-leader .leader-photo[hidden]{display:none}@media(max-width:750px){.stat-leader{gap:6px}.stat-leader .leader-photo{width:37%;max-width:130px;max-height:82px}.stat-leader b{font-size:clamp(15px,4vw,20px)}}
+
+/* Give the Top 20 ranking more horizontal room on desktop and mobile */
+main{max-width:1480px}
+.market-bar-row{grid-template-columns:minmax(165px,225px) 62px minmax(0,1fr) 62px;gap:11px}
+.market-bar-photo{width:62px}
+@media(max-width:900px){.market-bar-row{grid-template-columns:minmax(120px,175px) 50px minmax(0,1fr) 50px;gap:7px}.market-bar-photo{width:50px}}
+@media(max-width:550px){main{padding-left:8px;padding-right:8px}.dashboard>.panel{padding:10px 8px}.market-bar-row{grid-template-columns:minmax(90px,108px) 43px minmax(0,1fr) 42px;gap:5px}.market-bar-photo{width:43px}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
