@@ -73,6 +73,8 @@ period.addEventListener('change',render);render();
       const caption=document.createElement('p');caption.className='secondary';caption.textContent=months[0][0]+' — '+latest+' · '+months.length+' meses · Fuente: DGT';placeholder.append(caption);
     }
     const intro=document.querySelector('.intro');if(intro)intro.textContent='Matriculaciones de turismos eléctricos de batería (BEV), calculadas directamente a partir de los microdatos mensuales de la DGT.';
+    const footer=[...document.querySelectorAll('main > p.secondary')].find(p=>p.textContent.includes('provisional'));if(footer)footer.textContent='Fuente: Dirección General de Tráfico (DGT). Matriculaciones de turismos nuevos; no equivalen necesariamente a ventas a particulares.';
+
   }catch(e){console.warn('DGT historical data unavailable',e)}
 })();
 </script>
