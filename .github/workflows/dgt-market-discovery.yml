@@ -2,7 +2,7 @@ name: DGT monthly market data archive discovery
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 7 1 * *'
+    - cron: '23 7 1-5 * *'
 permissions:
   contents: read
 jobs:
