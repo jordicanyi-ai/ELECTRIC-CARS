@@ -23,10 +23,10 @@
 <a href="/">← Volver al comparador</a>
 <div class="hero"><span class="eyebrow">OBSERVATORIO · ELECTRICOS.EU</span><h1>MERCADO ELÉCTRICO</h1><p>Matriculaciones, tendencias y evolución del coche eléctrico en España.</p></div>
 <p class="intro muted">Descubre los turismos 100 % eléctricos más matriculados, con datos de referencia de la DGT. Consulta los resultados mensuales y el acumulado anual.</p>
-<div class="controls"><label>Territorio<select id="territory"><option value="es">Toda España</option><option value="community" disabled>Comunidades autónomas (pendiente de datos)</option><option value="province" disabled>Provincias (pendiente de datos)</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
+<div class="controls"><label>Mes DGT<select id="dgt-month"><option>Carregant mesos…</option></select></label><label>Territorio<select id="territory"><option value="es">Toda España</option><option value="community" disabled>Comunidades autónomas (pendiente de datos)</option><option value="province" disabled>Provincias (pendiente de datos)</option></select></label><label>Periodo<select id="period"><option value="monthly">Septiembre de 2026</option><option value="yearly">Acumulado 2026</option></select></label></div>
+<div class="grid"><div class="stat"><small>Vehículos del top 5</small><b id="total">—</b><small>Solo los cinco modelos mostrados</small></div><div class="stat"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><div class="stat"><small>Cuota de mercado BEV</small><b id="bev-share">—</b><small id="bev-share-note">Pendiente de total nacional de turismos (DGT)</small></div></div>
 <div class="dashboard"><section class="panel"><span class="pill">100 % ELÉCTRICOS</span><h2>Seguimiento de matriculaciones de vehículos eléctricos en España</h2><p class="secondary" id="top-note">Mostrando únicamente los modelos disponibles en los datos verificados. El Top 20 completo está pendiente de integración.</p><p class="muted" id="period-label"></p><div class="market-chart-layout"><div id="chart"></div><div id="ranking-podium" class="ranking-podium" aria-label="Tres modelos líderes"></div></div><p class="secondary" id="source"></p></section>
-<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="grid"><div class="stat"><small>Vehículos del top 5</small><b id="total">—</b><small>Solo los cinco modelos mostrados</small></div><div class="stat"><small>Modelo líder</small><b id="leader">—</b><small id="leader-units">—</small></div><div class="stat"><small>Cuota de mercado BEV</small><b>—</b><small>Pendiente de serie total verificada</small></div></div>
-<div class="placeholder-grid"><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Evolución mensual</h2><div class="placeholder-chart" aria-hidden="true"><span style="height:30%"></span><span style="height:50%"></span><span style="height:42%"></span><span style="height:68%"></span><span style="height:58%"></span><span style="height:82%"></span><span style="height:74%"></span><span style="height:100%"></span></div><p class="secondary">Gráfico decorativo, sin valores. Pendiente de serie histórica DGT verificada.</p></section><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Cuota por tecnología</h2><p>100 % eléctricos · Híbridos enchufables · Híbridos · Gasolina · Diésel</p><div class="notice">Mostraremos la distribución real cuando se hayan validado las categorías y los totales oficiales.</div></section></div>
+<section class="panel"><span class="chip">DISTRIBUCIÓN DEL TOP 5</span><h2>Cuota entre los cinco líderes</h2><p class="muted">Proporción de matriculaciones entre los cinco modelos mostrados. No es cuota del mercado nacional.</p><div id="donut" class="donut"></div><div id="legend" class="legend"></div></section></div><div class="placeholder-grid"><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Evolución mensual</h2><div class="placeholder-chart" aria-hidden="true"><span style="height:30%"></span><span style="height:50%"></span><span style="height:42%"></span><span style="height:68%"></span><span style="height:58%"></span><span style="height:82%"></span><span style="height:74%"></span><span style="height:100%"></span></div><p class="secondary">Gráfico decorativo, sin valores. Pendiente de serie histórica DGT verificada.</p></section><section class="panel"><span class="chip">PRÓXIMAMENTE</span><h2>Cuota por tecnología</h2><p>100 % eléctricos · Híbridos enchufables · Híbridos · Gasolina · Diésel</p><div class="notice">Mostraremos la distribución real cuando se hayan validado las categorías y los totales oficiales.</div></section></div>
 <section class="panel"><h2>Compara estos coches</h2><p>Consulta sus características, precios y autonomía en nuestro comparador interactivo. Las fichas siguen abriéndose en ventanas emergentes.</p><a class="cta" href="/">Abrir comparador de coches eléctricos</a></section>
 <p class="secondary">Las matriculaciones no equivalen necesariamente a ventas a particulares. Fuente: DGT · Microdatos mensuales.</p>
 </main>
@@ -52,19 +52,31 @@ period.addEventListener('change',render);render();
     const months=Object.entries(data.months||{}).sort(([a],[b])=>a.localeCompare(b));
     if(!months.length)return;
     const latest=data.latest_period;
+    const monthSelect=document.getElementById("dgt-month");
+    const sales=window.electricosSalesRanking;
+    const nf=new Intl.NumberFormat("es-ES");
+    const monthNames=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    const monthLabel=p=>monthNames[Number(p.slice(5))-1]+" de "+p.slice(0,4);
+    monthSelect.replaceChildren();
+    months.slice().reverse().forEach(([p])=>{const opt=document.createElement("option");opt.value=p;opt.textContent=monthLabel(p);monthSelect.append(opt)});
+    monthSelect.value=latest;
+    const combined=entries=>{const models=new Map();entries.forEach(([,d])=>(d.models||[]).forEach(r=>{const name=(r.model.startsWith(r.brand+" ")?r.model:r.brand+" "+r.model).trim();models.set(name,(models.get(name)||0)+r.count)}));return [...models].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([model,units])=>({model,units}))};
+    const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
+    monthSelect.addEventListener("change",refresh);
+
     const periodSelect=document.getElementById('period');
     const first=periodSelect.options[0],second=periodSelect.options[1];
-    if(first)first.textContent=latest+' · Mensual';
-    if(second)second.textContent=latest.slice(0,4)+' · Acumulado';
+    if(first)first.textContent='Mes seleccionado';
+    if(second)second.textContent='Acumulado del año';
     const cards=document.querySelectorAll('.stat');
     if(cards[0]){
       const small=cards[0].querySelector('small');
       if(small)small.textContent='Turismos eléctricos BEV matriculados';
       const foot=cards[0].querySelectorAll('small')[1];
       if(foot)foot.textContent='Total nacional · DGT';
-      const count=()=>{const period=periodSelect.value;if(period==='monthly')return data.months[latest]?.total||0;return months.filter(([p])=>p.startsWith(latest.slice(0,4))).reduce((n,[,d])=>n+d.total,0)};
+      const count=()=>{const period=periodSelect.value;if(period==='monthly')return data.months[monthSelect.value]?.total||0;return months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).reduce((n,[,d])=>n+d.total,0)};
       const update=()=>{const b=cards[0].querySelector('b');if(b)b.textContent=new Intl.NumberFormat('es-ES').format(count())};
-      periodSelect.addEventListener('change',update);update();
+      periodSelect.addEventListener('change',update);monthSelect.addEventListener('change',update);update();
     }
     const placeholder=document.querySelector('.placeholder-grid .panel');
     if(placeholder){
@@ -88,7 +100,7 @@ period.addEventListener('change',render);render();
       const brandRows=document.createElement('div');brandRows.className='legend';
       brandsPanel.append(brandRows);
       function updateBrands(){
-        const current=periodSelect.value==='monthly'?[data.months[latest]]:months.filter(([p])=>p.startsWith(latest.slice(0,4))).map(([,v])=>v);
+        const current=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,v])=>v);
         const totals=new Map();
         current.forEach(m=>(m?.brands||[]).forEach(b=>totals.set(b.brand,(totals.get(b.brand)||0)+b.count)));
         brandRows.replaceChildren();
@@ -99,8 +111,9 @@ period.addEventListener('change',render);render();
           line.append(name,value);brandRows.append(line);
         });
       }
-      periodSelect.addEventListener('change',updateBrands);updateBrands();
+      periodSelect.addEventListener('change',updateBrands);monthSelect.addEventListener('change',updateBrands);updateBrands();
     }
+    refresh();
     const intro=document.querySelector('.intro');if(intro)intro.textContent='Matriculaciones de turismos eléctricos de batería (BEV), calculadas directamente a partir de los microdatos mensuales de la DGT.';
     const footer=[...document.querySelectorAll('main > p.secondary')].find(p=>p.textContent.includes('provisional'));if(footer)footer.textContent='Fuente: Dirección General de Tráfico (DGT). Matriculaciones de turismos nuevos; no equivalen necesariamente a ventas a particulares.';
 
