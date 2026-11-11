@@ -148,6 +148,31 @@ main{max-width:1480px}
 
 /* Match desktop model and brand rankings to the supporting chart width. */
 @media(min-width:751px){main .dashboard,main .placeholder-grid{max-width:1080px;margin-left:auto;margin-right:auto}main .dashboard>.panel,main .placeholder-grid>.panel{min-width:0}main .dashboard #chart .market-bar-row{grid-template-columns:minmax(165px,225px) 55px minmax(0,1fr) 62px;gap:9px}}
+
+/* Editorial refinement: unified dashboard rhythm and quieter secondary controls. */
+@media(min-width:751px){
+ main .hero{margin-bottom:18px}
+ main .grid{gap:12px}
+ main .stat{padding:19px 21px;min-height:120px}
+ main .dashboard,main .placeholder-grid{gap:14px}
+ main .panel{box-shadow:0 3px 14px rgba(30,71,131,.045);border-color:#e2e9f2}
+ main .bev-volume-panel,main .bev-trend-panel,main .tech-market{margin-top:14px;margin-bottom:14px}
+ main .controls-secondary{max-width:1080px;margin:12px auto 9px;gap:10px;justify-content:flex-start;align-items:end}
+ main .controls-secondary label{min-width:0;flex:0 1 205px;font-size:11px;font-weight:650;color:#63738a}
+ main .controls-secondary select{padding:8px 28px 8px 10px;border-color:#e1e7f0;background:#fbfcff;font-size:12px}
+ main .bev-volume-panel h2,main .bev-trend-panel h2,main .tech-market h2{font-weight:750;letter-spacing:-.3px}
+ main .bev-volume-panel .secondary,main .bev-trend-panel .secondary,main .tech-market>.secondary{color:#758297;line-height:1.45}
+ main .bev-volume-panel .bev-trend-scroll,main .bev-trend-panel .bev-trend-scroll{max-width:850px}
+ main .bev-volume-panel .bev-trend-scroll svg,main .bev-trend-panel .bev-trend-scroll svg{max-width:850px}
+ main .tech-market-layout{max-width:820px;gap:20px}
+ main .tech-market-ring{width:min(100%,215px)}
+ main .brand-ranking{gap:3px}
+}
+@media(max-width:750px){
+ main .panel{box-shadow:0 3px 12px rgba(30,71,131,.045)}
+ main .controls-secondary{margin-top:14px;margin-bottom:10px}
+ main .controls-secondary label{font-weight:650}
+}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
