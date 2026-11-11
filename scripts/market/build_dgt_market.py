@@ -42,7 +42,7 @@ def build():
     monthly=Counter({(x["brand"],x["model"]):x["count"] for x in last["model_counts"]})
     series={"source":"DGT · Microdatos de matriculaciones mensuales","source_url":index["source_url"],
       "method":"COD_CLASE_MAT=0; COD_TIPO=40; COD_PROPULSION_ITV=2; CATEGORIA_VEHICULO_ELECTRICO=BEV; IND_NUEVO_USADO=N",
-      "latest_period":latest,"months":{p:{"total":d["bev_turismos"],"brands":d["brand_counts"],"models":d["model_counts"]} for p,d in sorted(periods.items())}}
+      "latest_period":latest,"months":{p:{"total":d["bev_turismos"],"all_new_turismos":d["all_new_turismos"],"bev_share_pct":round(100*d["bev_turismos"]/d["all_new_turismos"],2) if d["all_new_turismos"] else None,"brands":d["brand_counts"],"models":d["model_counts"]} for p,d in sorted(periods.items())}}
     # Guard against regressions: only replace after all downloads and validation succeed.
     text=json.dumps(series,ensure_ascii=False,separators=(",",":"))+"\n"
     ranking={"source":"DGT · Microdatos de matriculaciones mensuales","updatedAt":date.today().isoformat(),
