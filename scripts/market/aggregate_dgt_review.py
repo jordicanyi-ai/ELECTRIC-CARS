@@ -56,8 +56,8 @@ def parse_record(line):
     }
 
 def aggregate(url):
-    if not DGT_URL.fullmatch(url):
-        raise ValueError("Not a DGT official monthly ZIP")
+    if not (DGT_URL.fullmatch(url) or re.fullmatch(r"https://www\\.dgt\\.es/microdatos/salida/20\\d{2}/(?:[1-9]|1[0-2])/vehiculos/matriculaciones/export_mat_20\\d{6}\\.zip",url)):
+        raise ValueError("Not an official DGT matriculation ZIP")
     with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"electricos.eu public data validator"}),timeout=120) as response:
         data=response.read(250_000_001)
     if len(data)>250_000_000:
