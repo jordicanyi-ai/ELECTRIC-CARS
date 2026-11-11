@@ -128,6 +128,8 @@ period.addEventListener('change',render);render();
     const months=Object.entries(data.months||{}).sort(([a],[b])=>a.localeCompare(b));
     if(!months.length)return;
     const latest=data.latest_period;
+    const provisionalNotice=document.createElement('p');provisionalNotice.className='secondary';provisionalNotice.id='dgt-provisional-note';document.querySelector('.controls')?.after(provisionalNotice);
+    const showProvisional=()=>{const d=data.months[monthSelect.value];provisionalNotice.textContent=d?.provisional?'Datos provisionales DGT · Agregación de archivos diarios; pendientes de consolidación mensual.':'';provisionalNotice.hidden=!d?.provisional;};
     const monthSelect=document.getElementById("dgt-month");
     const sales=window.electricosSalesRanking;
     const nf=new Intl.NumberFormat("es-ES");
@@ -149,7 +151,7 @@ period.addEventListener('change',render);render();
     const territoryLabel=()=>territory.value==='es'?'España':territory.value;
     const combined=entries=>{const models=new Map();entries.forEach(([,d])=>(scoped(d).models||[]).forEach(r=>{const name=(r.model.startsWith(r.brand+" ")?r.model:r.brand+" "+r.model).trim();models.set(name,(models.get(name)||0)+r.count)}));return [...models].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([model,units])=>({model,units}))};
     const refresh=()=>{const selected=monthSelect.value;const yr=selected.slice(0,4);const matching=months.filter(([p])=>p>=yr+"-01"&&p<=selected);sales.monthly.models=combined(months.filter(([p])=>p===selected));sales.monthly.label=monthLabel(selected)+" · "+territoryLabel()+" · DGT · Turismos BEV nuevos";sales.yearly.models=combined(matching);sales.yearly.label="Enero–"+monthLabel(selected)+" · España · DGT · Turismos BEV nuevos";periodSelect.dispatchEvent(new Event("change"));};
-    monthSelect.addEventListener("change",refresh);
+    monthSelect.addEventListener("change",refresh);monthSelect.addEventListener("change",showProvisional);showProvisional();
 
     
     const first=periodSelect.options[0],second=periodSelect.options[1];
