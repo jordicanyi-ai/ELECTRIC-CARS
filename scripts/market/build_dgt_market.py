@@ -24,7 +24,24 @@ def build():
     for item in index["archives"]:
         period=item["period"]
         print("Processing",period,flush=True)
-        data=aggregate(item["url"])
+        if item.get("daily_urls"):
+            parts=[aggregate(url) for url in item["daily_urls"]]
+            data={"records_scanned":sum(d["records_scanned"] for d in parts),"bev_turismos":sum(d["bev_turismos"] for d in parts),"all_new_turismos":sum(d["all_new_turismos"] for d in parts)}
+            def merge_counts(rows,keys):
+                counts=Counter()
+                for d in rows:
+                    for x in d:counts[tuple(x[k] for k in keys)]+=x["count"]
+                return [dict(zip(keys,key),count=count) for key,count in counts.most_common()]
+            data["brand_counts"]=merge_counts([d["brand_counts"] for d in parts],["brand"])
+            data["model_counts"]=merge_counts([d["model_counts"] for d in parts],["brand","model"])
+            regions={}
+            for part in parts:
+                for name,region in part["regions"].items():
+                    group=regions.setdefault(name,[]);group.append(region)
+            data["regions"]={name:{"total":sum(d["total"] for d in group),"all_new_turismos":sum(d["all_new_turismos"] for d in group),"brand_counts":merge_counts([d["brand_counts"] for d in group],["brand"]),"model_counts":merge_counts([d["model_counts"] for d in group],["brand","model"])} for name,group in regions.items()}
+            data["provisional"]=True
+        else:
+            data=aggregate(item["url"])
         if data["records_scanned"]<1000 or data["bev_turismos"]<50:
             raise RuntimeError("Unexpectedly small month "+period)
         periods[period]=data
@@ -43,7 +60,7 @@ def build():
     monthly=Counter({(x["brand"],x["model"]):x["count"] for x in last["model_counts"]})
     series={"source":"DGT · Microdatos de matriculaciones mensuales","source_url":index["source_url"],
       "method":"COD_CLASE_MAT=0; COD_TIPO=40; COD_PROPULSION_ITV=2; CATEGORIA_VEHICULO_ELECTRICO=BEV; IND_NUEVO_USADO=N",
-      "latest_period":latest,"region_method":"COD_PROVINCIA_VEH (domicilio del vehículo) agrupado por comunidad autónoma","months":{p:{"total":d["bev_turismos"],"all_new_turismos":d["all_new_turismos"],"bev_share_pct":round(100*d["bev_turismos"]/d["all_new_turismos"],2) if d["all_new_turismos"] else None,"brands":d["brand_counts"],"models":d["model_counts"],"regions":{name:{"total":region["total"],"all_new_turismos":region["all_new_turismos"],"brands":region["brand_counts"],"models":region["model_counts"]} for name,region in d["regions"].items()}} for p,d in sorted(periods.items())}}
+      "latest_period":latest,"region_method":"COD_PROVINCIA_VEH (domicilio del vehículo) agrupado por comunidad autónoma","months":{p:{"total":d["bev_turismos"],"all_new_turismos":d["all_new_turismos"],"bev_share_pct":round(100*d["bev_turismos"]/d["all_new_turismos"],2) if d["all_new_turismos"] else None,"brands":d["brand_counts"],"models":d["model_counts"],"provisional":d.get("provisional",False),"regions":{name:{"total":region["total"],"all_new_turismos":region["all_new_turismos"],"brands":region["brand_counts"],"models":region["model_counts"]} for name,region in d["regions"].items()}} for p,d in sorted(periods.items())}}
     # Guard against regressions: only replace after all downloads and validation succeed.
     text=json.dumps(series,ensure_ascii=False,separators=(",",":"))+"\n"
     ranking={"source":"DGT · Microdatos de matriculaciones mensuales","updatedAt":date.today().isoformat(),
