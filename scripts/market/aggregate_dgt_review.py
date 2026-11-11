@@ -55,6 +55,18 @@ def parse_record(line):
         "province":line[152:154].decode("latin-1").strip().upper(),
     }
 
+# Official DGT electric category and propulsion dictionaries.
+TECHNOLOGIES = ("BEV","PHEV","HEV","GASOLINA","DIESEL","GAS","OTROS")
+def technology(row):
+    electric=row["electric_category"]
+    propulsion=row["propulsion"]
+    if electric in ("BEV","PHEV","HEV"):
+        return electric
+    if propulsion=="0":return "GASOLINA"
+    if propulsion=="1":return "DIESEL"
+    if propulsion in ("4","6","7","8"):return "GAS"
+    return "OTROS"
+
 def aggregate(url):
     if not (DGT_URL.fullmatch(url) or re.fullmatch(r"https://www\.dgt\.es/microdatos/salida/20\d{2}/(?:[1-9]|1[0-2])/vehiculos/matriculaciones/export_mat_20\d{6}\.zip",url)):
         raise ValueError("Not an official DGT matriculation ZIP")
@@ -63,7 +75,7 @@ def aggregate(url):
     if len(data)>250_000_000:
         raise ValueError("Archive too large")
     brands=Counter(); models=Counter(); total=0; scanned=0; all_new_cars=0
-    regions={}; unknown_provinces=Counter()
+    regions={}; unknown_provinces=Counter(); technology_counts=Counter(); category_pairs=Counter()
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         names=[n for n in z.namelist() if n.lower().endswith(".txt")]
         if len(names)!=1: raise ValueError("Expected one TXT")
@@ -85,6 +97,8 @@ def aggregate(url):
                     region=regions.setdefault(community, {'total':0,'all_new_turismos':0,'brands':Counter(),'models':Counter()})
                     region['all_new_turismos']+=1
                 all_new_cars+=1
+                technology_counts[technology(row)]+=1
+                category_pairs[(row['propulsion'],row['electric_category'])]+=1
                 if row["propulsion"]!="2" or row["electric_category"]!="BEV":continue
                 if not row["brand"] or not row["model"]:continue
                 total+=1
@@ -97,6 +111,8 @@ def aggregate(url):
     return {"source":url,"records_scanned":scanned,"bev_turismos":total,"all_new_turismos":all_new_cars,
             "regions":{name:{"total":d["total"],"all_new_turismos":d["all_new_turismos"],"brand_counts":[{"brand":b,"count":n} for b,n in d["brands"].most_common()],"model_counts":[{"brand":b,"model":m,"count":n} for (b,m),n in d["models"].most_common()]} for name,d in sorted(regions.items())},
             "unknown_provinces":dict(unknown_provinces),
+            "technologies":dict(technology_counts),
+            "technology_source_pairs":[{"propulsion":p,"electric_category":e,"count":n} for (p,e),n in category_pairs.most_common()],
             "brand_counts":[{"brand":k,"count":v} for k,v in brands.most_common()],
             "model_counts":[{"brand":b,"model":m,"count":v} for (b,m),v in models.most_common()],
             "status":"review-only","bev_category_validated":True,
