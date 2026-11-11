@@ -1254,7 +1254,9 @@ let currentImageIndexes = {};
 
             document.body.style.overflow = '';
             const returnTo = new URLSearchParams(window.location.search).get('returnTo');
-            if (returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//')) window.location.assign(returnTo);
+            const savedReturn = sessionStorage.getItem('marketReturn');
+            const destination = (returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//')) ? returnTo : savedReturn;
+            if (destination && destination.startsWith('/mercado-electrico/') && !destination.startsWith('//')) { window.location.replace(destination); return; }
         }
 
         // Galería a pantalla completa; conserva el scroll de la ficha abierta.
