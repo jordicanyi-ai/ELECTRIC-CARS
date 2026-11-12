@@ -6,6 +6,18 @@
     const fmt = new Intl.NumberFormat('es-ES');
 
     const localCars = {
+        'MG MG4 EV Urban': { image: 'img/ranking/mg4_urban_miniatura.webp' },
+        'MG4 EV Urban': { image: 'img/ranking/mg4_urban_miniatura.webp' },
+        'Skoda Elroq 60': { image: 'img/ranking/skoda-elroq-miniatura.webp' },
+        'Škoda Elroq 60': { image: 'img/ranking/skoda-elroq-miniatura.webp' },
+        'Leapmotor T03': { image: 'img/ranking/leapmotor_t03_miniatura-1.webp' },
+        'Renault Twingo': { image: 'img/ranking/renault-twingo-miniatura.webp' },
+        'Renault 5 E-Tech Electric': { image: 'img/ranking/renault-5-miniatura.webp' },
+        'BYD Seal': { image: 'img/ranking/byd-seal-miniatura.webp' },
+        'XPENG G6': { image: 'img/ranking/xpeng-g6-miniatura.webp' },
+        'Volvo EX30': { image: 'img/ranking/volvo-ex30-miniatura.webp' },
+        'Skoda Enyaq': { image: 'img/ranking/skoda-enyaq-miniatura.webp' },
+        'BMW iX3': { image: 'img/ranking/bmw-ix3-miniatura.webp' },
         'Tesla Model 3': { image: 'img/ranking/MODEL3.png' },
         'Tesla Model Y': { image: 'img/ranking/MODELY.png' },
         'BYD Dolphin Surf': { image: 'img/ranking/DOLPHINSURF.png' },
