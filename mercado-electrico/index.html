@@ -497,7 +497,7 @@ period.addEventListener('change',render);render();
 <script src="/data/cars.js?v=20261112-europe-thumbs"></script>
 <script>
 (function(){
- const fixed={'TESLA MODEL Y':'/img/ranking/MODELY.png','TESLA MODEL 3':'/img/ranking/MODEL3.png','ŠKODA ELROQ':'/img/ranking/skoda-elroq-miniatura.webp','RENAULT 5':'/img/ranking/renault-5-miniatura.webp','ŠKODA ENYAQ':'/img/ranking/skoda-enyaq-miniatura.webp','RENAULT TWINGO':'/img/ranking/renault-twingo-miniatura.webp','VOLKSWAGEN ID.4':'/img/ranking/volkswagen-id4-miniatura.webp'};
+ const fixed={'TESLA MODEL Y':'/img/ranking/MODELY.png','TESLA MODEL 3':'/img/ranking/MODEL3.png','ŠKODA ELROQ':'/img/ranking/skoda-elroq-miniatura.webp','RENAULT 5':'/img/ranking/renault-5-miniatura.webp','ŠKODA ENYAQ':'/img/ranking/skoda-enyaq-miniatura.webp','RENAULT TWINGO':'/img/ranking/renault-twingo-miniatura.webp','VOLVO EX30':'/img/ranking/volvo-ex30-miniatura.webp','VOLKSWAGEN ID.4':'/img/ranking/volkswagen-id4-miniatura.webp'};
  const aliases={'ŠKODA ELROQ':['skoda','elroq'],'RENAULT 5':['renault','5'],'ŠKODA ENYAQ':['skoda','enyaq'],'RENAULT TWINGO':['renault','twingo'],'VOLKSWAGEN ID.4':['volkswagen','id4'],'VOLVO EX30':['volvo','ex30'],'BMW iX3':['bmw','ix3'],'MERCEDES-BENZ CLA':['mercedes','cla']};
  const norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
  document.querySelectorAll('#eu-bev-ranking .eu-bev-thumb').forEach(box=>{
