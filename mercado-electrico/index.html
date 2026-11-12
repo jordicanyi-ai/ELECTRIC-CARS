@@ -506,8 +506,9 @@ period.addEventListener('change',render);render();
       let cursor=0;const segments=[];const body=document.getElementById('tech-market-body');body.replaceChildren();
       Object.entries(counts).forEach(([key,count])=>{
         const end=cursor+count/total*100;segments.push(techColors[key]+' '+cursor+'% '+end+'%');cursor=end;
-        const tr=document.createElement('tr');const name=document.createElement('td');const dot=document.createElement('span');dot.className='tech-market-dot';dot.style.background=techColors[key];name.append(dot,document.createTextNode(techLabels[key]));const value=document.createElement('td');value.textContent=nf.format(count);const share=document.createElement('td');share.textContent=(count/total*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';tr.append(name,value,share);body.append(tr)
+        
       });
+      Object.entries(counts).sort((a,b)=>b[1]-a[1]).forEach(([key,count])=>{const tr=document.createElement('tr');const name=document.createElement('td');const dot=document.createElement('span');dot.className='tech-market-dot';dot.style.background=techColors[key];name.append(dot,document.createTextNode(techLabels[key]));const value=document.createElement('td');value.textContent=nf.format(count);const share=document.createElement('td');share.textContent=(count/total*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';tr.append(name,value,share);body.append(tr)});
       const ring=document.getElementById('tech-market-ring');ring.style.background='conic-gradient('+segments.join(',')+')';
       ring.replaceChildren();let angle=0;
       Object.entries(counts).forEach(([key,count])=>{
