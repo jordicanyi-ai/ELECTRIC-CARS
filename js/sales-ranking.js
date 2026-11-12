@@ -13,7 +13,9 @@
         'BYD Atto 3': { image: 'img/ranking/ATTO3.png' },
         'BYD Atto 2': { image: 'img/ranking/byd-atto2.png' },
         'Geely E2': { image: 'img/ranking/geelyE2.png' },
-        'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' }
+        'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' },
+        'Skoda Elroq': { image: 'img/ranking/skoda-elroq-miniatura.webp' },
+        'Škoda Elroq': { image: 'img/ranking/skoda-elroq-miniatura.webp' }
     };
 
     const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
