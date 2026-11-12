@@ -223,7 +223,7 @@ const thumbnails={'teslamodel3':'/img/ranking/MODEL3.png','teslamodely':'/img/ra
 rows.forEach((r,i)=>{const line=document.createElement('div');line.className='market-bar-row';const name=document.createElement('span');name.className='market-bar-name';name.textContent=r.model.replace(/^BYD BYD /i,'BYD ').replace(/^TOYOTA C-HR$/i,'TOYOTA C-HR+').toUpperCase();const photo=document.createElement('span');photo.className='market-bar-photo';
 const normalize=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const cutouts={
-'teslamodel3':'MODEL3.png','teslamodely':'MODELY.png',
+'skodaelroq':'skoda-elroq-miniatura.webp','teslamodel3':'MODEL3.png','teslamodely':'MODELY.png',
 'byddolphinsurf':'DOLPHINSURF.png','kiaev3':'EV3.png',
 'bydatto3evo':'ATTO3.png','bydatto2':'byd-atto2.png',
 'toyotachr':'CHR+.png','toyotachrplus':'CHR+.png',
