@@ -483,7 +483,7 @@ period.addEventListener('change',render);render();
     const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(scoped(d).all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(scoped(d).total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
     periodSelect.addEventListener('change',updateShare);monthSelect.addEventListener('change',updateShare);updateShare();
     const techPanel=document.getElementById('tech-market');
-    const techColors={BEV:'#087CFF',PHEV:'#00A6A6',HEV:'#63A92D',GASOLINA:'#E84C3D',DIESEL:'#4B5563',GAS:'#E9A23B',OTROS:'#CBD5E1'};
+    const techColors={BEV:'#087CFF',PHEV:'#00A6A6',HEV:'#8BC34A',GASOLINA:'#E84C3D',DIESEL:'#4B5563',GAS:'#E9A23B',OTROS:'#CBD5E1'};
     const techLabels={BEV:'Eléctrico',PHEV:'Híbrido enchufable',HEV:'Híbrido',GASOLINA:'Gasolina',DIESEL:'Diésel',GAS:'Gas',OTROS:'Otros'};
     function updateTechnologies(){
       const included=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,d])=>d);
