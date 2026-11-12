@@ -354,7 +354,7 @@ period.addEventListener('change',render);render();
     const trendSVG=document.getElementById('bev-trend-svg'),trendLegend=document.getElementById('bev-trend-legend'),trendNote=document.getElementById('bev-trend-note');
     const trendNS='http://www.w3.org/2000/svg';
     const trendEl=(tag,attrs={},label)=>{const el=document.createElementNS(trendNS,tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,String(v)));if(label!==undefined)el.textContent=label;return el};
-    const trendColors=['#f59e0b','#e65a66','#4cae78','#4c8bd8','#9b71c9','#16a6a1'];
+    const trendColors=['#8B70CF','#C77BB8','#58B7DC','#4C8BD8','#174EA6','#3989D5'];
     const trendMonths=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
     function updateBevTrend(){
       const years=[...new Set(months.map(([p])=>p.slice(0,4)))].sort();
