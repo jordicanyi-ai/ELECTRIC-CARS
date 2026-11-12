@@ -16,7 +16,9 @@
         'Toyota C-HR+': { image: 'img/ranking/CHR%2B.png' },
         'Skoda Elroq': { image: 'img/ranking/skoda-elroq-miniatura.webp' },
         'Škoda Elroq': { image: 'img/ranking/skoda-elroq-miniatura.webp' },
-        'Leapmotor B10': { image: 'img/ranking/leapmotor-b10-miniatura.webp' }
+        'Leapmotor B10': { image: 'img/ranking/leapmotor-b10-miniatura.webp' },
+        'Volkswagen ID.4': { image: 'img/ranking/volkswagen-id4-miniatura.webp' },
+        'VW ID.4': { image: 'img/ranking/volkswagen-id4-miniatura.webp' }
     };
 
     const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
