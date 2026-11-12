@@ -1,5 +1,136 @@
 const carsData = [
   {
+    "id": 70,
+    "brand": "Leapmotor",
+    "model": "B10",
+    "type": "SUV",
+    "launchYear": 2025,
+    "seats": 5,
+    "priceMin": 29900,
+    "priceMax": 33400,
+    "priceText": "29.900–33.400 €",
+    "rangeText": "361–434 km",
+    "minRangeVal": 361,
+    "maxRangeVal": 434,
+    "batteryText": "56,2–67,1 kWh",
+    "batteryType": "LFP",
+    "powerText": "218 CV",
+    "trunk": 430,
+    "frunkText": "25 L",
+    "acceleration": "8,0 s",
+    "dimensions": "4,515 × 1,885 × 1,655 m",
+    "charging": "140–168 kW CC · 30–80 % en 19 min",
+    "description": "SUV compacto 100 % eléctrico de cinco plazas y propulsión trasera. El Leapmotor B10 combina 218 CV con dos baterías LFP de 56,2 y 67,1 kWh, autonomías homologadas de 361 a 434 km WLTP y un maletero de 430 litros ampliable a 1.700 litros. Incluye pantalla central de 14,6 pulgadas, techo panorámico y ayudas a la conducción. No se incluye la versión híbrida de autonomía extendida.",
+    "highlights": [
+      "361–434 km de autonomía WLTP",
+      "218 CV y propulsión trasera",
+      "Carga rápida de 140–168 kW CC",
+      "430 L de maletero y 25 L de maletero delantero"
+    ],
+    "considerations": [
+      "La autonomía de 434 km corresponde a la batería de 67,1 kWh",
+      "La versión Design añade asientos calefactados y ventilados y portón eléctrico",
+      "Precios de tarifa orientativos; las promociones con financiación y ayudas no se incluyen"
+    ],
+    "idealFor": [
+      "Familias de cinco plazas",
+      "Uso mixto urbano y carretera",
+      "Quien busca un SUV eléctrico equipado"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa de referencia en España, IVA incluido, sin ayudas públicas ni financiación. Versiones y tarifas a confirmar en configurador oficial; las ofertas de Leapmotor pueden incluir ayudas y descuentos."
+    },
+    "chargingInfo": {
+      "dcMax": "140 / 168 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "30–80 % en 19 min",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "4 años / 100.000 km (ver condiciones)",
+      "battery": "8 años / 160.000 km (ver condiciones)",
+      "capacity": "Consultar condiciones oficiales"
+    },
+    "trims": [
+      {
+        "name": "Life Pro",
+        "price": "29.900 €",
+        "priceValue": 29900,
+        "battery": "56,2 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "361 km WLTP",
+        "rangeValue": 361,
+        "accel": "8,0 s",
+        "charging": "140 kW CC · 30–80 % en 19 min"
+      },
+      {
+        "name": "Life ProMax",
+        "price": "31.900 €",
+        "priceValue": 31900,
+        "battery": "67,1 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "434 km WLTP",
+        "rangeValue": 434,
+        "accel": "8,0 s",
+        "charging": "168 kW CC · 30–80 % en 19 min"
+      },
+      {
+        "name": "Design ProMax",
+        "price": "33.400 €",
+        "priceValue": 33400,
+        "battery": "67,1 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV",
+        "range": "434 km WLTP",
+        "rangeValue": 434,
+        "accel": "8,0 s",
+        "charging": "168 kW CC · 30–80 % en 19 min"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Azul Noche Estrellada",
+        "hex": "#283C61"
+      },
+      {
+        "name": "Púrpura Medianoche",
+        "hex": "#61556B"
+      },
+      {
+        "name": "Gris Tundra",
+        "hex": "#888D91"
+      },
+      {
+        "name": "Negro Metálico",
+        "hex": "#191B20"
+      }
+    ],
+    "images": [
+      "img/cars/leapmotor-b10/pendiente.svg"
+    ],
+    "videos": [],
+    "brandInfo": {
+      "logo": "img/brands/leapmotor.png",
+      "group": "Leapmotor International / Stellantis",
+      "relation": "Distribución europea con Stellantis",
+      "note": "Fabricante chino con distribución internacional mediante Leapmotor International y Stellantis."
+    },
+    "brandUrl": "https://www.leapmotor.net/es-es/modelos/b10",
+    "sources": [
+      "https://www.leapmotor.net/es-es/modelos/b10",
+      "https://www.ahorrove.es/modelos/leapmotor-b10/"
+    ],
+    "dataStatus": {
+      "status": "Datos técnicos revisados; fotos pendientes",
+      "checkedAt": "12/11/2026"
+    }
+  },
+  {
     "id": 66,
     "brand": "Peugeot",
     "model": "E-RIFTER",
