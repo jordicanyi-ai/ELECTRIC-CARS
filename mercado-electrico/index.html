@@ -200,6 +200,32 @@ main .dashboard>.panel:first-child{width:100%;min-width:0;padding:clamp(16px,3vw
  .market-bar-track{grid-column:3;min-width:0;width:100%}
  .market-bar-value{grid-column:4;width:auto;text-align:right;font-size:11px}
 }
+
+/* Spanish Top 15: match the European ranking's visual hierarchy. */
+main .dashboard #chart{display:grid;gap:11px}
+main .dashboard #chart .market-bar-row{
+ display:grid;grid-template-columns:26px clamp(62px,11vw,110px) minmax(0,1fr) 76px;
+ align-items:center;gap:10px;height:auto;min-height:68px;padding:4px 0;
+ background:transparent;border-radius:0;
+}
+main .dashboard #chart .spain-rank{color:#2456cd;font-size:15px;text-align:center;font-weight:800}
+main .dashboard #chart .market-bar-row:nth-child(n+4) .spain-rank{color:#64748b}
+main .dashboard #chart .market-bar-photo{width:100%;height:56px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+main .dashboard #chart .market-bar-photo img{width:100%;height:100%;object-fit:contain}
+main .dashboard #chart .spain-rank-info{min-width:0;display:grid;gap:7px}
+main .dashboard #chart .market-bar-name{display:block;text-align:left;font-size:clamp(11px,1.5vw,13px);font-weight:750;line-height:1.25;white-space:normal;overflow:visible}
+main .dashboard #chart .market-bar-track{width:100%;height:9px;background:#eef2f7;border-radius:99px;overflow:hidden}
+main .dashboard #chart .market-bar-fill{background:#93b3f1;border-radius:99px}
+main .dashboard #chart .market-bar-row:nth-child(1) .market-bar-fill{background:#2456cd}
+main .dashboard #chart .market-bar-row:nth-child(2) .market-bar-fill{background:#5081e4}
+main .dashboard #chart .market-bar-value{font-size:13px;text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+@media(max-width:550px){
+ main .dashboard #chart .market-bar-row{grid-template-columns:19px 52px minmax(0,1fr) 43px;gap:5px;min-height:57px}
+ main .dashboard #chart .market-bar-photo{height:43px}
+ main .dashboard #chart .spain-rank{font-size:12px}
+ main .dashboard #chart .market-bar-name{font-size:10px}
+ main .dashboard #chart .market-bar-value{font-size:11px}
+}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
@@ -264,7 +290,7 @@ const exactTarget=({'toyotachr':'toyotachr','byddolphinsurf':'byddolphinsurf','b
 /* Ranking uses only curated transparent side-profile cutouts, never gallery photos. */
 if(src){const img=document.createElement('img');img.src=src;img.alt='';img.loading='lazy';img.decoding='async';img.onerror=()=>{img.remove();photo.classList.add('no-photo')};photo.append(img)}else photo.classList.add('no-photo');
 if(car){line.classList.add('market-car-link');line.tabIndex=0;line.setAttribute('role','link');line.title='Ver ficha de '+r.model;const open=()=>{const back=new URL(location.href);back.hash='ranking-top20';sessionStorage.setItem('marketReturn',back.pathname+back.search+back.hash);sessionStorage.setItem('marketMonth',document.getElementById('dgt-month')?.value||'');sessionStorage.setItem('marketPeriod',document.getElementById('period')?.value||'');const dest=new URL('/',location.origin);dest.searchParams.set('car',String(car.id));dest.searchParams.set('returnTo',back.pathname+back.search+back.hash);location.href=dest.href};line.addEventListener('click',open);line.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})}
-line.append(name,photo,track,value);root.append(line)});
+const rank=document.createElement('strong');rank.className='spain-rank';rank.textContent=String(i+1);const info=document.createElement('div');info.className='spain-rank-info';info.append(name,track);line.append(rank,photo,info,value);root.append(line)});
 const total=rows.reduce((s,r)=>s+Number(r.units||0),0),colors=['#2456cd','#8b49e8','#0eaf8b','#f08a27','#df4b84'];let cursor=0;const topFive=rows.slice(0,5),fiveTotal=topFive.reduce((sum,r)=>sum+Number(r.units||0),0);const segments=topFive.map((r,i)=>{const from=cursor;cursor+=fiveTotal?Number(r.units||0)/fiveTotal*100:0;return colors[i]+' '+from+'% '+cursor+'%'});const donut=document.getElementById('donut');donut.style.background=segments.length?'conic-gradient('+segments.join(',')+')':'#e9effb';const legend=document.getElementById('legend');legend.replaceChildren();topFive.forEach((r,i)=>{const el=document.createElement('div');el.className='legend-line';const name=document.createElement('span');const dot=document.createElement('i');dot.className='dot';dot.style.background=colors[i];name.append(dot,document.createTextNode(r.model));const share=document.createElement('b');share.textContent=fiveTotal?(Number(r.units)/fiveTotal*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %':'—';el.append(name,share);legend.append(el)})}
 period.addEventListener('change',render);render();
 })();
