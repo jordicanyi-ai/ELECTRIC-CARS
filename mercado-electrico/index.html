@@ -497,14 +497,14 @@ period.addEventListener('change',render);render();
 <script src="/data/cars.js?v=20261112-europe-thumbs"></script>
 <script>
 (function(){
- const fixed={'TESLA MODEL Y':'/img/ranking/MODELY.png','TESLA MODEL 3':'/img/ranking/MODEL3.png'};
+ const fixed={'TESLA MODEL Y':'/img/ranking/MODELY.png','TESLA MODEL 3':'/img/ranking/MODEL3.png','ŠKODA ELROQ':'/img/ranking/skoda-elroq-miniatura.webp','VOLKSWAGEN ID.4':'/img/ranking/volkswagen-id4-miniatura.webp'};
  const aliases={'ŠKODA ELROQ':['skoda','elroq'],'RENAULT 5':['renault','5'],'ŠKODA ENYAQ':['skoda','enyaq'],'RENAULT TWINGO':['renault','twingo'],'VOLKSWAGEN ID.4':['volkswagen','id4'],'VOLVO EX30':['volvo','ex30'],'BMW iX3':['bmw','ix3'],'MERCEDES-BENZ CLA':['mercedes','cla']};
  const norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
  document.querySelectorAll('#eu-bev-ranking .eu-bev-thumb').forEach(box=>{
   const model=box.dataset.euModel;const words=aliases[model];
   const car=typeof carsData!=='undefined'&&words?carsData.find(c=>norm(c.brand).includes(norm(words[0]))&&norm(c.model).includes(norm(words[1]))):null;
   const src=fixed[model]||(car&&car.images&&car.images[0]);if(!src)return;
-  const img=document.createElement('img');img.src=src;img.alt='Miniatura '+model;img.loading='lazy';img.style.cssText='width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply';img.onerror=()=>{img.remove();};box.replaceChildren(img);
+  const img=document.createElement('img');img.src=src;img.alt='Miniatura '+model;img.loading='lazy';img.style.cssText='width:100%;height:100%;object-fit:contain';img.onerror=()=>{img.remove();};box.replaceChildren(img);
  });
 })();
 </script>
