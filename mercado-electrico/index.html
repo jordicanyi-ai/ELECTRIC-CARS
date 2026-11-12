@@ -483,7 +483,7 @@ period.addEventListener('change',render);render();
     const updateShare=()=>{const selected=monthSelect.value;const included=periodSelect.value==='monthly'?[data.months[selected]]:months.filter(([p])=>p.startsWith(selected.slice(0,4))&&p<=selected).map(([,d])=>d);const all=included.reduce((sum,d)=>sum+Number(scoped(d).all_new_turismos||0),0);const bev=included.reduce((sum,d)=>sum+Number(scoped(d).total||0),0);const share=document.getElementById('bev-share'),note=document.getElementById('bev-share-note');if(share)share.textContent=all?(100*bev/all).toLocaleString('es-ES',{maximumFractionDigits:2})+' %':'—';if(note)note.textContent=all?'Sobre '+new Intl.NumberFormat('es-ES').format(all)+' turismos nuevos · DGT':'Pendiente de actualización del total DGT';};
     periodSelect.addEventListener('change',updateShare);monthSelect.addEventListener('change',updateShare);updateShare();
     const techPanel=document.getElementById('tech-market');
-    const techColors={BEV:'#79b244',PHEV:'#b5f5a6',HEV:'#59a8cc',GASOLINA:'#df3939',DIESEL:'#f6b919',GAS:'#aeb4bd',OTROS:'#e0e4e9'};
+    const techColors={BEV:'#00A8E8',PHEV:'#10B981',HEV:'#84CC16',GASOLINA:'#F97316',DIESEL:'#475569',GAS:'#8B5CF6',OTROS:'#CBD5E1'};
     const techLabels={BEV:'Eléctrico',PHEV:'Híbrido enchufable',HEV:'Híbrido',GASOLINA:'Gasolina',DIESEL:'Diésel',GAS:'Gas',OTROS:'Otros'};
     function updateTechnologies(){
       const included=periodSelect.value==='monthly'?[data.months[monthSelect.value]]:months.filter(([p])=>p.startsWith(monthSelect.value.slice(0,4))&&p<=monthSelect.value).map(([,d])=>d);
@@ -512,7 +512,7 @@ period.addEventListener('change',render);render();
       ring.replaceChildren();let angle=0;
       Object.entries(counts).forEach(([key,count])=>{
         const portion=count/total;if(portion<0.035){angle+=portion*Math.PI*2;return;}
-        const midpoint=angle+portion*Math.PI;const label=document.createElement('span');label.className='tech-market-ring-label'+(['PHEV','DIESEL','GAS','OTROS'].includes(key)?' dark':'');
+        const midpoint=angle+portion*Math.PI;const label=document.createElement('span');label.className='tech-market-ring-label'+(['HEV','GASOLINA','OTROS'].includes(key)?' dark':'');
         const radius=38;label.style.left=(50+radius*Math.sin(midpoint))+'%';label.style.top=(50-radius*Math.cos(midpoint))+'%';
         label.textContent=(portion*100).toLocaleString('es-ES',{maximumFractionDigits:1})+' %';ring.append(label);
         angle+=portion*Math.PI*2;
