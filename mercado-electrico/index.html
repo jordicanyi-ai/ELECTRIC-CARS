@@ -146,6 +146,11 @@ main{max-width:1480px}
   main .tech-market-table td,main .tech-market-table th{padding:8px 9px;font-size:13px}
 }
 
+/* Spain ranking: same outer dimensions and spacing as the European ranking. */
+main .dashboard{width:100%;max-width:1080px;margin:14px auto}
+main .dashboard>.panel:first-child{width:100%;min-width:0;padding:clamp(16px,3vw,26px);border-radius:22px;border:1px solid #e2e8f0;box-shadow:0 5px 22px #162b4810}
+@media(max-width:750px){main .dashboard{max-width:100%}}
+
 /* Match desktop model and brand rankings to the supporting chart width. */
 @media(min-width:751px){main .dashboard,main .placeholder-grid{max-width:1080px;margin-left:auto;margin-right:auto}main .dashboard>.panel,main .placeholder-grid>.panel{min-width:0}main .dashboard #chart .market-bar-row{grid-template-columns:minmax(165px,225px) 55px minmax(0,1fr) 62px;gap:9px}}
 
