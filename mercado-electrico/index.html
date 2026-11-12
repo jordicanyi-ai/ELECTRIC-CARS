@@ -231,6 +231,10 @@ main .dashboard #chart .market-bar-value{font-size:13px;text-align:right;font-we
 main .brand-ranking .brand-rank-logo img{width:auto!important;height:auto!important;max-width:52px!important;max-height:25px!important;object-fit:contain}
 main .brand-ranking .brand-rank-logo:is([data-brand="TESLA"],[data-brand="VOLKSWAGEN"],[data-brand="BMW"],[data-brand="CUPRA"],[data-brand="MG"],[data-brand="TOYOTA"],[data-brand="SKODA"],[data-brand="ŠKODA"]) img{max-width:27px!important;max-height:27px!important}
 @media(max-width:650px){main .brand-ranking .brand-rank-logo img{max-width:38px!important;max-height:21px!important}main .brand-ranking .brand-rank-logo:is([data-brand="TESLA"],[data-brand="VOLKSWAGEN"],[data-brand="BMW"],[data-brand="CUPRA"],[data-brand="MG"],[data-brand="TOYOTA"],[data-brand="SKODA"],[data-brand="ŠKODA"]) img{max-width:22px!important;max-height:22px!important}}
+
+/* Increase the visually undersized brand logos while preserving aspect ratios. */
+main .brand-ranking .brand-rank-logo:is([data-brand="TOYOTA"],[data-brand="VOLVO"],[data-brand="SKODA"],[data-brand="ŠKODA"],[data-brand="BYD"]) img{max-width:64px!important;max-height:33px!important}
+@media(max-width:650px){main .brand-ranking .brand-rank-logo:is([data-brand="TOYOTA"],[data-brand="VOLVO"],[data-brand="SKODA"],[data-brand="ŠKODA"],[data-brand="BYD"]) img{max-width:42px!important;max-height:27px!important}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
