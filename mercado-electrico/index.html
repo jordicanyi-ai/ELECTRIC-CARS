@@ -186,6 +186,15 @@ main{max-width:1480px}
  .market-bar-photo{min-width:0;max-width:55px}
  .market-bar-value{font-size:11px}
 }
+
+/* Four elements per row: model, thumbnail, bar and sales figure. */
+@media(max-width:650px){
+ .market-bar-row{display:grid;grid-template-columns:minmax(0,1.7fr) 48px minmax(42px,1fr) 42px;column-gap:5px;align-items:center;min-height:38px;height:auto;width:100%}
+ .market-bar-name{grid-column:1;white-space:normal;overflow-wrap:normal;word-break:normal;font-size:10px;line-height:1.18;text-align:left}
+ .market-bar-photo{grid-column:2;width:48px;max-width:48px;height:30px;padding:2px}
+ .market-bar-track{grid-column:3;min-width:0;width:100%}
+ .market-bar-value{grid-column:4;width:auto;text-align:right;font-size:11px}
+}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
