@@ -235,6 +235,10 @@ main .brand-ranking .brand-rank-logo:is([data-brand="TESLA"],[data-brand="VOLKSW
 /* Increase the visually undersized brand logos while preserving aspect ratios. */
 main .brand-ranking .brand-rank-logo:is([data-brand="TOYOTA"],[data-brand="VOLVO"],[data-brand="SKODA"],[data-brand="ŠKODA"],[data-brand="BYD"]) img{max-width:64px!important;max-height:33px!important}
 @media(max-width:650px){main .brand-ranking .brand-rank-logo:is([data-brand="TOYOTA"],[data-brand="VOLVO"],[data-brand="SKODA"],[data-brand="ŠKODA"],[data-brand="BYD"]) img{max-width:42px!important;max-height:27px!important}}
+
+/* Fine-tune Skoda logo only: smaller than the other recently enlarged marks. */
+main .brand-ranking .brand-rank-logo:is([data-brand="SKODA"],[data-brand="ŠKODA"]) img{max-width:35px!important;max-height:28px!important}
+@media(max-width:650px){main .brand-ranking .brand-rank-logo:is([data-brand="SKODA"],[data-brand="ŠKODA"]) img{max-width:27px!important;max-height:23px!important}}
 </style></head><body><header class="site-header">
         <div class="site-width header-inner">
             <a href="/" class="site-brand" aria-label="electricos.eu, inicio">
