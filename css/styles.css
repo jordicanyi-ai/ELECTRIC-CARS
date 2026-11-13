@@ -1047,3 +1047,42 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 .moto-promo:hover{border-color:#2456cd;box-shadow:0 5px 18px #1847a41a}
 @media(max-width:800px){.vehicle-switch{margin-left:8px;margin-right:0}.vehicle-switch a{font-size:12px;padding:7px 9px}.header-links{gap:8px}.moto-promo{padding:13px;gap:11px}.moto-promo-icon{width:43px;height:43px;font-size:20px}.moto-promo-cta{padding:9px;font-size:12px}}
 @media(max-width:560px){.header-inner{flex-wrap:wrap}.vehicle-switch{order:3;width:100%;margin:7px 0 0}.vehicle-switch a{flex:1}.moto-promo{align-items:flex-start}.moto-promo-cta{align-self:center;font-size:0}.moto-promo-cta i{font-size:16px}.moto-promo-copy>span:last-child{font-size:11px}}
+
+/* Homepage visual landing - existing catalogue and all controls remain intact */
+.desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
+.desktop-primary-nav a{font-size:13px;font-weight:750;color:#152d47;text-decoration:none;white-space:nowrap}
+.desktop-primary-nav a:hover{color:#2456cd}
+.homepage-hero{background:linear-gradient(112deg,#10243b 0%,#1b416c 47%,#5c7894 100%);color:white;overflow:hidden}
+.homepage-hero-inner{width:min(1500px,100%);margin:auto;min-height:440px;display:grid;grid-template-columns:1.1fr .72fr;align-items:center;position:relative;padding:42px clamp(22px,4vw,65px);gap:28px}
+.homepage-hero-copy{position:relative;z-index:2;max-width:720px}
+.hero-eyebrow{font-size:11px;font-weight:850;letter-spacing:1.6px;color:#d7e9ff}
+.homepage-hero-copy h2{font-size:clamp(32px,3.6vw,60px);font-weight:850;line-height:1.06;letter-spacing:-1.7px;margin:17px 0 18px;text-shadow:0 2px 8px #0004}
+.homepage-hero-copy p{font-size:clamp(18px,2vw,26px);margin:0 0 30px}
+.homepage-hero-button{display:inline-flex;align-items:center;gap:24px;background:#095ad8;border:1px solid #5c9cf7;color:white;border-radius:18px;padding:16px 25px;font-size:19px;font-weight:800;text-decoration:none;box-shadow:0 9px 22px #0003}
+.homepage-hero-button:hover{background:#0049bd}
+.homepage-hero-car{position:absolute;left:29%;right:17%;bottom:0;top:18%;background:url('/img/cars/tesla-model-y/modelY_01.webp') center / contain no-repeat;opacity:.95;filter:drop-shadow(0 12px 22px #0006);pointer-events:none}
+.homepage-moto-card{z-index:3;position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:350px;padding:25px 24px;border-radius:25px;border:3px solid white;box-shadow:0 9px 35px #0005;background:linear-gradient(145deg,#325a85,#8cb1cf);color:white;text-decoration:none;overflow:hidden}
+.homepage-moto-card:before{content:'';position:absolute;inset:0 auto 0 0;width:5px;background:#dcfa00}
+.homepage-new{align-self:flex-start;background:#dafa00;color:#102743;font-size:11px;font-weight:900;padding:7px 11px;border-radius:9px}
+.homepage-moto-card strong{position:relative;z-index:2;font-size:clamp(19px,2vw,29px);line-height:1.13;font-weight:850}
+.homepage-moto-symbol{position:absolute;right:10%;top:38%;font-size:clamp(90px,12vw,180px);color:#e6f5ff;text-shadow:0 8px 18px #071a3a80}
+.homepage-moto-button{z-index:2;align-self:stretch;text-align:center;background:#122d4d;padding:13px 10px;border-radius:14px;font-weight:800;font-size:15px}
+.homepage-moto-button i{margin-left:12px}
+.homepage-highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding-top:24px;padding-bottom:24px;border-bottom:1px solid #e1e8f1}
+.homepage-highlights>div{display:flex;align-items:center;gap:14px;padding:5px 18px;border-right:1px solid #dce4ee}
+.homepage-highlights>div:last-child{border:0}
+.homepage-highlights i{font-size:30px;color:#1356b7}
+.homepage-highlights span{display:flex;flex-direction:column;gap:3px}
+.homepage-highlights strong{font-size:15px;line-height:1.2}
+.homepage-highlights small{font-size:12px;color:#536879}
+.homepage-explore{padding-top:27px;padding-bottom:34px}
+.homepage-explore h2{font-size:clamp(23px,2.5vw,34px);font-weight:850;letter-spacing:-.7px;margin:0 0 18px}
+.homepage-explore-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.homepage-explore-grid a{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:12px;min-height:156px;padding:21px;border:1px solid #dce4ee;border-radius:20px;background:linear-gradient(150deg,#fff,#eaf1fc);color:#142d4b;text-decoration:none;box-shadow:0 3px 10px #152b4310}
+.homepage-explore-grid a:hover{border-color:#2456cd;transform:translateY(-2px)}
+.homepage-explore-grid i{font-size:30px;color:#1256c1}
+.homepage-explore-grid strong{font-size:18px;line-height:1.2}
+.homepage-explore-grid small{font-size:11px;color:#476485}
+.homepage-explore-grid .homepage-explore-moto{border:2px solid #bfdc00}
+@media(max-width:1050px){.desktop-primary-nav{display:none}.homepage-hero-inner{min-height:400px}.homepage-highlights strong{font-size:13px}.homepage-explore-grid a{padding:15px;min-height:130px}.homepage-explore-grid strong{font-size:15px}}
+@media(max-width:700px){.homepage-hero-inner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:29px 17px;gap:24px}.homepage-hero-copy h2{font-size:clamp(29px,7vw,42px)}.homepage-hero-copy p{margin-bottom:22px}.homepage-hero-button{font-size:16px;padding:13px 18px}.homepage-hero-car{left:35%;right:-10%;top:12%;bottom:47%;opacity:.32}.homepage-moto-card{min-height:210px;padding:18px;gap:16px}.homepage-moto-symbol{top:23%;right:9%;font-size:105px;opacity:.75}.homepage-moto-card strong{font-size:23px}.homepage-moto-button{align-self:flex-start;padding:10px 17px}.homepage-highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 0}.homepage-highlights>div:nth-child(2){border-right:0}.homepage-highlights i{font-size:23px}.homepage-explore-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.homepage-explore-grid a{min-width:155px;scroll-snap-align:start}.homepage-explore{padding-top:22px;padding-bottom:12px}}
