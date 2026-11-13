@@ -313,6 +313,13 @@
  z-index:1;pointer-events:none;
 }
 .homepage-explore-grid a:nth-child(6) .explore-heading{position:relative;z-index:2}
+
+/* Restore soft blue tile backgrounds behind transparent artwork */
+.homepage-explore-grid a:nth-child(4),
+.homepage-explore-grid a:nth-child(5),
+.homepage-explore-grid a:nth-child(6){
+ background-image:linear-gradient(155deg,#fff 28%,#e6f0ff 100%)!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
