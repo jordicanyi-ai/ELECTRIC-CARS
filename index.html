@@ -320,6 +320,27 @@
 .homepage-explore-grid a:nth-child(6){
  background-image:linear-gradient(155deg,#fff 28%,#e6f0ff 100%)!important;
 }
+
+/* Compensate for excessively low alpha in exported market, podium and compare WebPs.
+   Layering the same image increases opacity without affecting transparent pixels. */
+.homepage-explore-grid a:nth-child(4)::after{
+ background-image:url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
+.homepage-explore-grid a:nth-child(5)::after{
+ background-image:url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ background-image:url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
