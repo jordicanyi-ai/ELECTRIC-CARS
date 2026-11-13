@@ -1,4 +1,4 @@
-name: European BEV source check (no publication)
+name: European BEV data staging (no publication)
 on:
   workflow_dispatch:
   schedule:
@@ -6,20 +6,24 @@ on:
 permissions:
   contents: read
 jobs:
-  check-source:
+  stage-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check Ember source freshness
-        run: python3 scripts/europe-market/check_source.py
+      - name: Download official Ember CSV
+        run: python3 scripts/europe-market/download.py
+      - name: Validate monthly BEV country registrations
+        run: python3 scripts/europe-market/validate.py reports/ember-monthly-ev-sales.csv
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: europe-market-source-check
-          path: reports/europe-market-source-check.json
+          name: europe-bev-staging
+          path: |
+            reports/europe-market-preview.json
+            reports/ember-monthly-ev-sales.csv
           if-no-files-found: warn
-          retention-days: 90
+          retention-days: 30
