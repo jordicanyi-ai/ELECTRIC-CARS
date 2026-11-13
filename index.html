@@ -347,6 +347,13 @@
 
 /* Raise the bicycle slightly without changing its size */
 .homepage-explore-grid a:nth-child(3) .explore-bike-image{bottom:18px!important}
+
+/* Remove washed-out white appearance on the three right-hand illustrations */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after,
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:contrast(2.2) saturate(1.7) brightness(.9)!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
