@@ -224,6 +224,10 @@
 .homepage-explore-grid a:nth-child(1) .explore-car-image{content:url('/img/tesla-ombra-portada.webp');mix-blend-mode:multiply;filter:none!important}
 .homepage-explore-grid a:nth-child(2){background-image:none!important}
 .homepage-explore-grid a:nth-child(2)::after{content:""!important;position:absolute;inset:35% 0 0;display:block!important;background:url('/img/silence-ombra-portada.webp') center bottom/contain no-repeat;mix-blend-mode:multiply;pointer-events:none;z-index:0}
+
+/* Final transparent approved artwork: no multiply blending */
+.homepage-explore-grid a:nth-child(1) .explore-car-image{content:url('/img/tesla-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important;filter:none!important}
+.homepage-explore-grid a:nth-child(2)::after{background-image:url('/img/silence-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
