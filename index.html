@@ -293,6 +293,16 @@
  pointer-events:none;z-index:1;
 }
 .homepage-explore-grid a:nth-child(4) .explore-heading{position:relative;z-index:2}
+
+/* Approved transparent podium artwork for ranking tile */
+.homepage-explore-grid a:nth-child(5){background-image:none!important}
+.homepage-explore-grid a:nth-child(5)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:8%;right:8%;bottom:10px;height:58%;width:auto;
+ background:url('/img/podi-ranking-transparent.webp') center bottom/contain no-repeat!important;
+ pointer-events:none;z-index:1;
+}
+.homepage-explore-grid a:nth-child(5) .explore-heading{position:relative;z-index:2}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
