@@ -303,6 +303,16 @@
  pointer-events:none;z-index:1;
 }
 .homepage-explore-grid a:nth-child(5) .explore-heading{position:relative;z-index:2}
+
+/* Final approved three-car artwork for comparison tile */
+.homepage-explore-grid a:nth-child(6){background-image:none!important}
+.homepage-explore-grid a:nth-child(6)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:2%;right:2%;bottom:9px;height:55%;width:auto;
+ background:url('/img/comparar-tres-cotxes-transparent.webp') center bottom/contain no-repeat!important;
+ z-index:1;pointer-events:none;
+}
+.homepage-explore-grid a:nth-child(6) .explore-heading{position:relative;z-index:2}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
