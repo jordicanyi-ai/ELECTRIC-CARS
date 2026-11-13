@@ -1257,7 +1257,18 @@ let currentImageIndexes = {};
             // Only navigate back to Mercado when this particular ficha was opened from Mercado.
             // A saved session value can be stale and must never hijack comparator fichas.
             const destination = returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//') ? returnTo : null;
-            if (destination) { sessionStorage.removeItem('marketReturn'); window.location.replace(destination); return; }
+            if (destination && new URLSearchParams(window.location.search).has('car')) {
+                sessionStorage.removeItem('marketReturn');
+                window.location.replace(destination);
+                return;
+            }
+            // Remove stale deep-link parameters after closing a local comparator ficha.
+            if (window.location.search && (new URLSearchParams(window.location.search).has('car') || new URLSearchParams(window.location.search).has('returnTo'))) {
+                const clean = new URL(window.location.href);
+                clean.searchParams.delete('car');
+                clean.searchParams.delete('returnTo');
+                window.history.replaceState(null, '', clean.pathname + clean.search + clean.hash);
+            }
         }
 
         // Galería a pantalla completa; conserva el scroll de la ficha abierta.
