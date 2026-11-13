@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261113-explore-buttons">
+    <link rel="stylesheet" href="css/styles.css?v=20261113-explore-images">
 <style id="homepage-critical-styles">
 /* Homepage visual landing - existing catalogue and all controls remain intact */
 .desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
@@ -128,6 +128,18 @@
 .homepage-explore-grid a:nth-child(5){background:linear-gradient(155deg,#fff,#e9f0ff)}
 .homepage-explore-grid a:nth-child(6){background:linear-gradient(155deg,#fff,#eaf1ff)}
 @media(max-width:700px){.homepage-explore-grid{display:flex;overflow-x:auto;gap:12px;padding-bottom:14px}.homepage-explore-grid a{flex:0 0 160px;min-height:160px;padding:15px}.homepage-explore-grid a>strong{font-size:16px}}
+
+/* Visual images inside Explore tiles, as in approved mockup */
+.homepage-explore-grid a{background-repeat:no-repeat!important;background-position:right bottom!important;background-size:auto 61%!important}
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/cars/tesla-model-y/modelY_01.webp')!important}
+.homepage-explore-grid a:nth-child(2){background-image:url('/img/home-moto.svg')!important;background-size:auto 69%!important}
+.homepage-explore-grid a:nth-child(3){background-image:url('/img/home-bike.svg')!important;background-size:auto 69%!important}
+.homepage-explore-grid a:nth-child(4){background-image:url('/img/home-market.svg')!important;background-size:auto 67%!important}
+.homepage-explore-grid a:nth-child(5){background-image:url('/img/home-ranking.svg')!important;background-size:auto 66%!important}
+.homepage-explore-grid a:nth-child(6){background-image:url('/img/home-compare.svg')!important;background-size:auto 65%!important}
+.homepage-explore-grid a>strong,.homepage-explore-grid a>i,.homepage-explore-grid a>small{position:relative;z-index:1;text-shadow:0 1px 1px #fff9}
+.homepage-explore-grid a>small{margin-top:0}
+@media(max-width:700px){.homepage-explore-grid a{background-size:auto 57%!important}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
