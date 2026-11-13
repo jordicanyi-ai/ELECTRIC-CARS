@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261111-market-tab-4">
+    <link rel="stylesheet" href="css/styles.css?v=20261113-motos-access">
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
@@ -27,6 +27,7 @@
                 <span class="brand-icon" aria-hidden="true"></span>
                 <span class="brand-wordmark"><span>electricos<span class="brand-suffix">.eu</span></span><span class="brand-tagline">Comparador independiente</span></span>
             </a>
+            <nav class="vehicle-switch" aria-label="Tipo de vehículo"><a href="/" class="is-active" aria-current="page"><i class="fa-solid fa-car-side"></i> Coches</a><a href="/motos/"><i class="fa-solid fa-motorcycle"></i> Motos</a></nav>
             <nav class="header-links" aria-label="Redes y contacto">
                 <a href="mailto:electricos.eu@gmail.com" aria-label="Correo electrónico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
                 <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
@@ -45,6 +46,7 @@
                 <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
         </section>
+        <a class="moto-promo" href="/motos/" aria-label="Descubre el próximo comparador de motos eléctricas"><div class="moto-promo-icon"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i></div><div class="moto-promo-copy"><span class="moto-promo-kicker">NUEVO · PRÓXIMAMENTE</span><strong>COMPARADOR DE MOTOS ELÉCTRICAS</strong><span>Una nueva forma de comparar scooters y motos eléctricas, con precios reales y datos técnicos.</span></div><span class="moto-promo-cta">Descubrir <i class="fa-solid fa-arrow-right"></i></span></a>
         <section class="catalogue-controls" aria-label="Buscar y filtrar coches">
             <div class="search-row">
                 <label class="catalogue-search" for="hero-search">
