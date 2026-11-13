@@ -228,6 +228,14 @@
 /* Final transparent approved artwork: no multiply blending */
 .homepage-explore-grid a:nth-child(1) .explore-car-image{content:url('/img/tesla-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important;filter:none!important}
 .homepage-explore-grid a:nth-child(2)::after{background-image:url('/img/silence-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important}
+
+/* Silence: smaller and lower so the heading remains fully readable */
+.homepage-explore-grid a:nth-child(2)::after{
+ inset:auto 9% 2px 9%!important;
+ height:58%!important;
+ background-size:contain!important;
+ background-position:center bottom!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
