@@ -9,11 +9,12 @@ def main():
     p.add_argument("--output",type=pathlib.Path,default=pathlib.Path("reports/europe-market-preview.json"))
     args=p.parse_args()
     rows=list(csv.DictReader(args.csv_file.open(encoding="utf-8-sig",newline="")))
-    required={"Area","Date","Drivetrain","Registrations"}
+    required={"Area","Date","Drivetrain","Registrations","Area type"}
     if not rows or not required.issubset(rows[0]): raise SystemExit("Missing required Ember CSV columns")
     out=defaultdict(dict)
     for r in rows:
         if r["Drivetrain"].strip().lower() not in ("battery electric","bev"): continue
+        if r["Area type"].strip().lower() not in ("country or economy", "region"): continue
         try:
             date=datetime.date.fromisoformat(r["Date"][:10])
             count=int(float(r["Registrations"].replace(",","")))
