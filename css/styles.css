@@ -1031,3 +1031,19 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 
 /* Consistent hover feedback for all catalogue navigation tabs. */
 .catalogue-tabs button:hover,.catalogue-tabs button:focus-visible,.catalogue-tabs .market-tab-link:hover,.catalogue-tabs .market-tab-link:focus-visible{color:var(--electric-blue);cursor:pointer}
+
+/* Motorcycle entry: separate product area, without changing car catalogue controls */
+.vehicle-switch{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid #cfdaec;border-radius:13px;background:#f6f9fe;margin-left:auto;margin-right:18px}
+.vehicle-switch a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:7px 15px;border-radius:10px;color:#16304c;text-decoration:none;font-size:14px;font-weight:750;white-space:nowrap}
+.vehicle-switch a.is-active{background:#2156d2;color:#fff;box-shadow:0 2px 7px #1e50c12b}
+.vehicle-switch a:hover:not(.is-active){background:#e6efff}
+.moto-promo{display:flex;align-items:center;gap:19px;margin:14px 0 20px;padding:18px 22px;background:linear-gradient(112deg,#f2f7ff,#e6f0ff);border:1px solid #cbdcf8;border-left:5px solid #2456cd;border-radius:16px;text-decoration:none;color:#152b47}
+.moto-promo-icon{display:grid;place-items:center;flex:none;width:58px;height:58px;border-radius:15px;background:#fff;color:#2058d6;font-size:27px}
+.moto-promo-copy{display:flex;flex:1;flex-direction:column;gap:4px;min-width:0}
+.moto-promo-kicker{font-size:10px;letter-spacing:1px;font-weight:850;color:#2456cd}
+.moto-promo-copy strong{font-size:clamp(16px,1.7vw,21px);font-weight:850;line-height:1.15}
+.moto-promo-copy>span:last-child{font-size:12px;color:#53687d}
+.moto-promo-cta{flex:none;display:flex;align-items:center;gap:10px;padding:11px 15px;background:#2056d2;color:#fff;border-radius:10px;font-size:13px;font-weight:750}
+.moto-promo:hover{border-color:#2456cd;box-shadow:0 5px 18px #1847a41a}
+@media(max-width:800px){.vehicle-switch{margin-left:8px;margin-right:0}.vehicle-switch a{font-size:12px;padding:7px 9px}.header-links{gap:8px}.moto-promo{padding:13px;gap:11px}.moto-promo-icon{width:43px;height:43px;font-size:20px}.moto-promo-cta{padding:9px;font-size:12px}}
+@media(max-width:560px){.header-inner{flex-wrap:wrap}.vehicle-switch{order:3;width:100%;margin:7px 0 0}.vehicle-switch a{flex:1}.moto-promo{align-items:flex-start}.moto-promo-cta{align-self:center;font-size:0}.moto-promo-cta i{font-size:16px}.moto-promo-copy>span:last-child{font-size:11px}}
