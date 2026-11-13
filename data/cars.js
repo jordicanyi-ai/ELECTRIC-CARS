@@ -1227,7 +1227,44 @@ const carsData = [
         "accel": "8,2 s"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Frozen",
+        "hex": "#F1F1EC"
+      },
+      {
+        "name": "Rojo Race",
+        "hex": "#B61F2C"
+      },
+      {
+        "name": "Azul Báltico",
+        "hex": "#173D69"
+      },
+      {
+        "name": "Azul Metallic",
+        "hex": "#355878"
+      },
+      {
+        "name": "Azul Chrome",
+        "hex": "#244D70"
+      },
+      {
+        "name": "Gris Magnetic",
+        "hex": "#4D5255"
+      },
+      {
+        "name": "Gris Matter",
+        "hex": "#898B8A"
+      },
+      {
+        "name": "Negro Agate",
+        "hex": "#17191D"
+      },
+      {
+        "name": "Plata Perla",
+        "hex": "#B7BAB9"
+      }
+    ],
     "images": [
       "img/cars/ford-etransit/ford-etransit_01.webp",
       "img/cars/ford-etransit/ford-etransit_02.webp",
