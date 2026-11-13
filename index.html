@@ -283,6 +283,16 @@
  left:15%!important;width:70%!important;height:47%!important;
  bottom:10px!important;
 }
+
+/* Approved seven-bar market chart asset */
+.homepage-explore-grid a:nth-child(4){background-image:none!important}
+.homepage-explore-grid a:nth-child(4)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:8%;right:8%;bottom:9px;height:59%;width:auto;
+ background:url('/img/mercado-electrico-grafico.webp') center bottom/contain no-repeat!important;
+ pointer-events:none;z-index:1;
+}
+.homepage-explore-grid a:nth-child(4) .explore-heading{position:relative;z-index:2}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
