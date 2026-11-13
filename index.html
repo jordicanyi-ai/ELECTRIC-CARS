@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261113-home-v3">
+    <link rel="stylesheet" href="css/styles.css?v=20261113-hero-integrated">
 <style id="homepage-critical-styles">
 /* Homepage visual landing - existing catalogue and all controls remain intact */
 .desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
@@ -99,6 +99,13 @@
 .catalogue-main{padding-top:22px}
 @media(max-width:1100px){.homepage-hero-inner{min-height:400px;grid-template-columns:minmax(0,1fr) minmax(260px,340px)}.homepage-moto-card{min-height:330px}.homepage-hero-car{opacity:.65}}
 @media(max-width:700px){.homepage-hero-inner{display:flex;min-height:0;padding:30px 18px;gap:22px}.homepage-hero-copy h2{font-size:clamp(30px,7vw,42px)}.homepage-hero-car{left:36%;right:-8%;top:10%;bottom:45%;opacity:.25}.homepage-moto-card{transform:none;min-height:220px;border-radius:22px}.homepage-moto-card>*{transform:none}.homepage-moto-symbol{font-size:100px;top:35%;right:8%}.homepage-highlights{padding-top:18px;padding-bottom:18px}.homepage-explore-grid a{min-height:155px}}
+
+/* Single integrated automotive hero image */
+.homepage-hero{background:linear-gradient(90deg,rgba(4,17,33,.74) 0%,rgba(4,17,33,.38) 31%,rgba(4,17,33,.05) 67%,rgba(4,17,33,.05) 100%),url('/img/hero-electricos-nuevo.webp') center center/cover no-repeat,#193650}
+.homepage-hero-car{display:none!important}
+.homepage-hero-copy{max-width:660px}
+.homepage-hero-copy h2{text-shadow:0 3px 12px #0008}
+@media(max-width:700px){.homepage-hero{background-position:58% center}.homepage-hero-copy{position:relative;z-index:2}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
