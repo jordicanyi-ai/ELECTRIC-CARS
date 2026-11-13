@@ -1254,9 +1254,10 @@ let currentImageIndexes = {};
 
             document.body.style.overflow = '';
             const returnTo = new URLSearchParams(window.location.search).get('returnTo');
-            const savedReturn = sessionStorage.getItem('marketReturn');
-            const destination = (returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//')) ? returnTo : savedReturn;
-            if (destination && destination.startsWith('/mercado-electrico/') && !destination.startsWith('//')) { window.location.replace(destination); return; }
+            // Only navigate back to Mercado when this particular ficha was opened from Mercado.
+            // A saved session value can be stale and must never hijack comparator fichas.
+            const destination = returnTo && returnTo.startsWith('/mercado-electrico/') && !returnTo.startsWith('//') ? returnTo : null;
+            if (destination) { sessionStorage.removeItem('marketReturn'); window.location.replace(destination); return; }
         }
 
         // Galería a pantalla completa; conserva el scroll de la ficha abierta.
