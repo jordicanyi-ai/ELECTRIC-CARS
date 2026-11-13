@@ -140,6 +140,11 @@
 .homepage-explore-grid a>strong,.homepage-explore-grid a>i,.homepage-explore-grid a>small{position:relative;z-index:1;text-shadow:0 1px 1px #fff9}
 .homepage-explore-grid a>small{margin-top:0}
 @media(max-width:700px){.homepage-explore-grid a{background-size:auto 57%!important}}
+
+/* Reuse actual ranking cutouts in homepage buttons; never gallery photos or AI */
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/ranking/skoda-elroq-miniatura.webp')!important;background-size:96% auto!important;background-position:center bottom!important}
+.homepage-explore-grid a:nth-child(6){background-image:url('/img/ranking/byd-seal-miniatura.webp')!important;background-size:92% auto!important;background-position:center bottom!important}
+@media(max-width:700px){.homepage-explore-grid a:nth-child(1),.homepage-explore-grid a:nth-child(6){background-size:100% auto!important}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
