@@ -1086,3 +1086,9 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 .homepage-explore-grid .homepage-explore-moto{border:2px solid #bfdc00}
 @media(max-width:1050px){.desktop-primary-nav{display:none}.homepage-hero-inner{min-height:400px}.homepage-highlights strong{font-size:13px}.homepage-explore-grid a{padding:15px;min-height:130px}.homepage-explore-grid strong{font-size:15px}}
 @media(max-width:700px){.homepage-hero-inner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:29px 17px;gap:24px}.homepage-hero-copy h2{font-size:clamp(29px,7vw,42px)}.homepage-hero-copy p{margin-bottom:22px}.homepage-hero-button{font-size:16px;padding:13px 18px}.homepage-hero-car{left:35%;right:-10%;top:12%;bottom:47%;opacity:.32}.homepage-moto-card{min-height:210px;padding:18px;gap:16px}.homepage-moto-symbol{top:23%;right:9%;font-size:105px;opacity:.75}.homepage-moto-card strong{font-size:23px}.homepage-moto-button{align-self:flex-start;padding:10px 17px}.homepage-highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 0}.homepage-highlights>div:nth-child(2){border-right:0}.homepage-highlights i{font-size:23px}.homepage-explore-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.homepage-explore-grid a{min-width:155px;scroll-snap-align:start}.homepage-explore{padding-top:22px;padding-bottom:12px}}
+
+/* Reserve electric bicycles navigation and explore card */
+.homepage-explore-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.homepage-explore-grid .homepage-explore-bike{border:2px solid #8ccde8}
+@media(max-width:700px){.homepage-explore-grid{display:flex}.vehicle-switch a{padding:7px 5px;font-size:11px;gap:5px}}
+@media(min-width:701px) and (max-width:1100px){.homepage-explore-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
