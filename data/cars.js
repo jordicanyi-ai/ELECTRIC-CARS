@@ -120,7 +120,13 @@ const carsData = [
       "img/cars/leapmotor-b10/leapmotor-b10_07.webp",
       "img/cars/leapmotor-b10/leapmotor-b10_08.webp"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "title": "Leapmotor B10 — vídeos y pruebas",
+        "url": "https://www.youtube.com/results?search_query=Leapmotor+B10+prueba+espa%C3%B1ol",
+        "thumb": "img/cars/leapmotor-b10/leapmotor-b10_01.webp"
+      }
+    ],
     "brandInfo": {
       "logo": "img/brands/leapmotor.png",
       "group": "Leapmotor International / Stellantis",
