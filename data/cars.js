@@ -111,7 +111,14 @@ const carsData = [
       }
     ],
     "images": [
-      "img/cars/leapmotor-b10/pendiente.svg"
+      "img/cars/leapmotor-b10/leapmotor-b10_01.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_02.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_03.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_04.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_05.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_06.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_07.webp",
+      "img/cars/leapmotor-b10/leapmotor-b10_08.webp"
     ],
     "videos": [],
     "brandInfo": {
@@ -126,7 +133,7 @@ const carsData = [
       "https://www.ahorrove.es/modelos/leapmotor-b10/"
     ],
     "dataStatus": {
-      "status": "Datos técnicos revisados; fotos pendientes",
+      "status": "Datos técnicos revisados; galería de 8 fotos enlazada",
       "checkedAt": "12/11/2026"
     }
   },
