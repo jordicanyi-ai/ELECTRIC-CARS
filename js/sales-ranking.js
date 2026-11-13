@@ -44,11 +44,23 @@
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 
     function carThumb(model) {
-        const car = localCars[model];
+        // DGT names are uppercase and may include version suffixes; resolve against
+        // the same curated ranking image filenames instead of falling back to gallery photos.
+        const key = normalize(model);
+        const aliases = {
+            'bydatto3evo': 'BYD Atto 3',
+            'toyotachr': 'Toyota C-HR+',
+            'renault5etechelect': 'Renault 5 E-Tech Electric',
+            'volkswagenid4pro210kw': 'Volkswagen ID.4',
+            'mercedesbenzcla250': 'Mercedes-Benz CLA 250+',
+            'mercedesbenzglc4004maticwitheq': 'Mercedes-Benz GLC 400 EQ'
+        };
+        const resolved = aliases[key] || Object.keys(localCars).find(name => normalize(name) === key);
+        const car = resolved ? localCars[resolved] : null;
         const catalogCar = findCatalogCar(model);
-        const image = car?.image || (catalogCar && Array.isArray(catalogCar.images) ? catalogCar.images[0] : null);
+        const image = car?.image || null; // Never substitute rectangular catalogue photography for ranking cutouts.
         if (!image) return '<div class="w-20 sm:w-28 h-14 shrink-0 rounded-xl bg-white flex items-center justify-center text-[9px] font-bold uppercase tracking-wide text-slate-300">Sin foto</div>';
-        return '<div class="w-20 sm:w-28 h-14 shrink-0 flex items-center justify-center overflow-hidden bg-transparent p-1"><img src="' + image + '" alt="' + escapeHtml(model) + '" loading="lazy" class="w-full h-full object-contain mix-blend-multiply" onerror="this.parentElement.innerHTML=\'<span class=&quot;text-[9px] font-bold uppercase tracking-wide text-slate-300&quot;>Sin foto</span>\'"></div>';
+        return '<div class="w-20 sm:w-28 h-14 shrink-0 flex items-center justify-center overflow-hidden bg-transparent p-1"><img src="' + image + '" alt="' + escapeHtml(model) + '" loading="lazy" class="w-full h-full object-contain" onerror="this.parentElement.innerHTML=\'<span class=&quot;text-[9px] font-bold uppercase tracking-wide text-slate-300&quot;>Sin foto</span>\'"></div>';
     }
 
     window.showSalesRanking = function (type) {
