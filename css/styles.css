@@ -1092,3 +1092,23 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 .homepage-explore-grid .homepage-explore-bike{border:2px solid #8ccde8}
 @media(max-width:700px){.homepage-explore-grid{display:flex}.vehicle-switch a{padding:7px 5px;font-size:11px;gap:5px}}
 @media(min-width:701px) and (max-width:1100px){.homepage-explore-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Homepage refinement */
+.site-header .header-inner{width:min(1540px,100%);padding-inline:clamp(18px,2.5vw,42px)}
+.desktop-primary-nav{gap:clamp(14px,1.9vw,34px);margin-left:auto}
+.desktop-primary-nav a{font-weight:800;font-size:14px}
+.header-inner .vehicle-switch{margin-left:0;margin-right:0}
+@media(min-width:1180px){.header-inner .header-links{display:none}}
+.homepage-hero{background:linear-gradient(90deg,rgba(5,18,33,.65),rgba(5,18,33,.12) 60%,rgba(6,23,44,.10)),url('/img/hero-electricos.jpg') center/cover no-repeat,#183451}
+.homepage-hero-inner{width:min(1550px,100%);min-height:475px;grid-template-columns:minmax(0,1fr) minmax(320px,410px);gap:30px;padding:30px clamp(30px,3vw,48px)}
+.homepage-hero-copy h2{font-size:clamp(34px,3.55vw,58px);line-height:1.08;margin:0 0 20px}
+.homepage-hero-copy p{font-size:clamp(18px,1.9vw,28px);margin-bottom:32px}
+.homepage-hero-car{left:31%;right:24%;top:24%;bottom:-2%;filter:drop-shadow(0 16px 14px #0008)}
+.homepage-moto-card{min-height:415px;border-radius:30px;transform:skewX(-7deg);background:linear-gradient(160deg,rgba(20,55,98,.94),rgba(69,123,170,.85)),url('/img/hero-electricos.jpg') center/cover}
+.homepage-moto-card>*{transform:skewX(7deg)}
+.homepage-moto-symbol{top:38%;right:17%;font-size:140px;opacity:.85}
+.homepage-highlights,.homepage-explore{width:min(1540px,100%)}
+.homepage-explore-grid a{position:relative;overflow:hidden;min-height:190px;border-radius:21px;box-shadow:0 5px 12px #12243b12}
+.catalogue-main{padding-top:22px}
+@media(max-width:1100px){.homepage-hero-inner{min-height:400px;grid-template-columns:minmax(0,1fr) minmax(260px,340px)}.homepage-moto-card{min-height:330px}}
+@media(max-width:700px){.homepage-hero-inner{display:flex;min-height:0;padding:30px 18px;gap:22px}.homepage-moto-card{transform:none;min-height:220px;border-radius:22px}.homepage-moto-card>*{transform:none}.homepage-hero-car{left:36%;right:-8%;top:10%;bottom:45%;opacity:.25}.homepage-explore-grid a{min-height:155px}}
