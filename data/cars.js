@@ -1228,7 +1228,16 @@ const carsData = [
       }
     ],
     "colors": [],
-    "images": [],
+    "images": [
+      "img/cars/ford-etransit/ford-etransit_01.webp",
+      "img/cars/ford-etransit/ford-etransit_02.webp",
+      "img/cars/ford-etransit/ford-etransit_03.webp",
+      "img/cars/ford-etransit/ford-etransit_04.webp",
+      "img/cars/ford-etransit/ford-etransit_05.webp",
+      "img/cars/ford-etransit/ford-etransit_06.webp",
+      "img/cars/ford-etransit/ford-etransit_07.webp",
+      "img/cars/ford-etransit/ford-etransit_08.webp"
+    ],
     "videos": [
       {
         "title": "Ford E-Transit: vídeos y pruebas",
@@ -1243,7 +1252,7 @@ const carsData = [
     },
     "brandUrl": "https://www.ford.es/furgonetas-pick-up/e-transit",
     "dataStatus": {
-      "status": "Datos de E-Transit grande; galería pendiente. Las ocho fotos subidas pertenecen a E-Transit Custom.",
+      "status": "Datos de E-Transit grande; galería de 8 fotografías enlazada.",
       "checkedAt": "02/11/2026"
     },
     "sources": [
