@@ -354,6 +354,9 @@
 .homepage-explore-grid a:nth-child(6)::after{
  filter:contrast(2.2) saturate(1.7) brightness(.9)!important;
 }
+
+/* Hide quick-action filter buttons only in Rankings, not Mercado or Catálogo */
+body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
