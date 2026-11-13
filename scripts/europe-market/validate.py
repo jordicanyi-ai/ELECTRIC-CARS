@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Validate and stage monthly European BEV registration data without publishing."""
-import argparse, csv, json, pathlib, datetime
+"""Stage Ember monthly BEV registrations by country. Does not publish to website."""
+import argparse, csv, datetime, json, pathlib
 from collections import defaultdict
 
 def main():
@@ -8,25 +8,27 @@ def main():
     p.add_argument("csv_file",type=pathlib.Path)
     p.add_argument("--output",type=pathlib.Path,default=pathlib.Path("reports/europe-market-preview.json"))
     args=p.parse_args()
-    rows=list(csv.DictReader(args.csv_file.open(encoding="utf-8-sig",newline="")))
-    required={"Area","Date","Drivetrain","Registrations","Area type"}
-    if not rows or not required.issubset(rows[0]): raise SystemExit("Missing required Ember CSV columns")
-    out=defaultdict(dict)
-    for r in rows:
-        if r["Drivetrain"].strip().lower() not in ("battery electric","bev"): continue
-        if r["Area type"].strip().lower() not in ("country or economy", "region"): continue
-        try:
-            date=datetime.date.fromisoformat(r["Date"][:10])
-            count=int(float(r["Registrations"].replace(",","")))
-        except (ValueError,KeyError): continue
-        if count<0: raise SystemExit("Negative registrations")
-        key=date.strftime("%Y-%m")
-        country=r["Area"].strip()
-        if country in out[key]: raise SystemExit(f"Duplicate {country} {key}")
-        out[key][country]=count
-    if not out: raise SystemExit("No BEV records found; check schema")
-    payload={"source":"Ember Monthly EV Sales Data","source_url":"https://ember-energy.org/data/monthly-ev-sales-data/","status":"preview_only","scope":"country BEV totals; not model rankings","months":dict(sorted(out.items()))}
+    with args.csv_file.open(encoding="utf-8-sig",newline="") as f:
+        reader=csv.DictReader(f)
+        required={"Area","Date","Drivetrain","Registrations","Area type"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise SystemExit("Ember CSV schema changed: "+str(reader.fieldnames))
+        data=defaultdict(dict)
+        for row in reader:
+            if row["Area type"].strip()!="Country or economy": continue
+            if row["Drivetrain"].strip()!="Battery electric": continue
+            try:
+                month=datetime.date.fromisoformat(row["Date"][:10]).strftime("%Y-%m")
+                value=int(float(row["Registrations"].replace(",","")))
+            except (ValueError,KeyError) as exc:
+                raise SystemExit("Invalid monthly registration: "+str(row)) from exc
+            if value<0: raise SystemExit("Negative registrations")
+            area=row["Area"].strip()
+            if area in data[month]: raise SystemExit("Duplicate area/month: "+area+" "+month)
+            data[month][area]=value
+    if not data: raise SystemExit("No country BEV records; check CSV format")
+    output={"source":"Ember Monthly EV Sales Data","source_url":"https://ember-energy.org/data/monthly-ev-sales-data/","license":"CC BY 4.0","publication":"disabled","scope":"country-level BEV registrations, NOT model rankings","monthly":dict(sorted(data.items()))}
     args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"Validated {len(out)} months; wrote preview to {args.output}. No website data changed.")
+    args.output.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print("Validated",len(data),"months and",sum(map(len,data.values())),"records. Website unchanged.")
 if __name__=="__main__":main()
