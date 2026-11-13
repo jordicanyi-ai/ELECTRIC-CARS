@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261113-bicicletas">
+    <link rel="stylesheet" href="css/styles.css?v=20261113-home-v3">
 <style id="homepage-critical-styles">
 /* Homepage visual landing - existing catalogue and all controls remain intact */
 .desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
@@ -64,6 +64,41 @@
 .homepage-explore-grid .homepage-explore-bike{border:2px solid #8ccde8}
 @media(max-width:700px){.homepage-explore-grid{display:flex}.vehicle-switch a{padding:7px 5px;font-size:11px;gap:5px}}
 @media(min-width:701px) and (max-width:1100px){.homepage-explore-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Refined reference-like homepage, keep all catalogue JavaScript untouched */
+.site-header .header-inner{width:min(1540px,100%);padding-inline:clamp(18px,2.5vw,42px)}
+.desktop-primary-nav{gap:clamp(14px,1.9vw,34px);margin-left:auto}
+.desktop-primary-nav a{font-weight:800;font-size:14px}
+.header-inner .vehicle-switch{margin-left:0;margin-right:0}
+@media(min-width:1180px){.header-inner .header-links{display:none}}
+.homepage-hero{background:linear-gradient(90deg,rgba(5,18,33,.65) 0%,rgba(5,18,33,.12) 60%,rgba(6,23,44,.10) 100%),url('/img/hero-electricos.jpg') center center/cover no-repeat,#183451}
+.homepage-hero-inner{width:min(1550px,100%);min-height:475px;grid-template-columns:minmax(0,1fr) minmax(320px,410px);gap:30px;padding:30px clamp(30px,3vw,48px)}
+.homepage-hero-copy{align-self:center}
+.homepage-hero-copy h2{font-size:clamp(34px,3.55vw,58px);line-height:1.08;letter-spacing:-1.6px;max-width:720px;margin:0 0 20px}
+.homepage-hero-copy p{font-size:clamp(18px,1.9vw,28px);margin-bottom:32px}
+.homepage-hero-button{background:#0759df;border-radius:20px;padding:17px 28px}
+.homepage-hero-car{left:31%;right:24%;top:24%;bottom:-2%;background-size:contain;filter:drop-shadow(0 16px 14px #0008)}
+.homepage-moto-card{min-height:415px;border-radius:30px;transform:skewX(-7deg);background:linear-gradient(160deg,rgba(20,55,98,.94),rgba(69,123,170,.85)),url('/img/hero-electricos.jpg') center/cover no-repeat}
+.homepage-moto-card>*{transform:skewX(7deg)}
+.homepage-moto-card strong{font-size:clamp(22px,2vw,30px);text-shadow:0 2px 5px #0004}
+.homepage-moto-symbol{top:38%;right:17%;font-size:140px;opacity:.85}
+.homepage-moto-button{background:#102b49;border-radius:15px;font-size:17px}
+.homepage-highlights{width:min(1540px,100%);padding-top:27px;padding-bottom:27px}
+.homepage-highlights>div{padding-inline:clamp(12px,2vw,28px)}
+.homepage-explore{width:min(1540px,100%);padding-top:30px;padding-bottom:20px}
+.homepage-explore-grid a{position:relative;overflow:hidden;min-height:190px;border-radius:21px;padding:18px;box-shadow:0 5px 12px #12243b12}
+.homepage-explore-grid a i{font-size:33px}
+.homepage-explore-grid a strong{font-size:17px;z-index:1}
+.homepage-explore-grid a:after{position:absolute;right:-4px;bottom:-11px;font-family:"Font Awesome 6 Free";font-weight:900;font-size:92px;line-height:1;color:#2257b8;opacity:.18}
+.homepage-explore-grid a:nth-child(1):after{content:"\\f1b9"}
+.homepage-explore-grid a:nth-child(2):after{content:"\\f21c"}
+.homepage-explore-grid a:nth-child(3):after{content:"\\f206"}
+.homepage-explore-grid a:nth-child(4):after{content:"\\e0e3"}
+.homepage-explore-grid a:nth-child(5):after{content:"\\f091"}
+.homepage-explore-grid a:nth-child(6):after{content:"\\f074"}
+.catalogue-main{padding-top:22px}
+@media(max-width:1100px){.homepage-hero-inner{min-height:400px;grid-template-columns:minmax(0,1fr) minmax(260px,340px)}.homepage-moto-card{min-height:330px}.homepage-hero-car{opacity:.65}}
+@media(max-width:700px){.homepage-hero-inner{display:flex;min-height:0;padding:30px 18px;gap:22px}.homepage-hero-copy h2{font-size:clamp(30px,7vw,42px)}.homepage-hero-car{left:36%;right:-8%;top:10%;bottom:45%;opacity:.25}.homepage-moto-card{transform:none;min-height:220px;border-radius:22px}.homepage-moto-card>*{transform:none}.homepage-moto-symbol{font-size:100px;top:35%;right:8%}.homepage-highlights{padding-top:18px;padding-bottom:18px}.homepage-explore-grid a{min-height:155px}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
@@ -84,7 +119,7 @@
             </nav>
         </div>
     </header>
-    <section class="homepage-hero" aria-label="Comparadores de vehículos eléctricos"><div class="homepage-hero-inner"><div class="homepage-hero-copy"><span class="hero-eyebrow">COMPARADOR INDEPENDIENTE</span><h2>COMPARADOR DE<br>COCHES ELÉCTRICOS</h2><p>Sin opiniones. Solo datos.</p><a href="#catalogue-controls-anchor" class="homepage-hero-button">Comparar coches <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div><div class="homepage-hero-car" role="img" aria-label="Tesla Model Y eléctrico"></div><a class="homepage-moto-card" href="/motos/"><span class="homepage-new">NUEVO · PRÓXIMAMENTE</span><strong>COMPARADOR DE<br>MOTOS ELÉCTRICAS</strong><span class="homepage-moto-symbol"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i></span><span class="homepage-moto-button">Descubrir motos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a></div></section>
+    <section class="homepage-hero" aria-label="Comparadores de vehículos eléctricos"><div class="homepage-hero-inner"><div class="homepage-hero-copy"><h2>COMPARADOR DE<br>COCHES ELÉCTRICOS</h2><p>Sin opiniones. Solo datos.</p><a href="#catalogue-controls-anchor" class="homepage-hero-button">Comparar coches <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div><div class="homepage-hero-car" role="img" aria-label="Tesla Model Y eléctrico"></div><a class="homepage-moto-card" href="/motos/"><span class="homepage-new">NUEVO</span><strong>COMPARADOR DE<br>MOTOS ELÉCTRICAS</strong><span class="homepage-moto-symbol"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i></span><span class="homepage-moto-button">Ver motos eléctricas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a></div></section>
 <section class="homepage-highlights site-width" aria-label="Qué encontrarás"><div><i class="fa-solid fa-car-side"></i><span><strong>Comparador de coches</strong><small>Modelos y versiones</small></span></div><div><i class="fa-solid fa-motorcycle"></i><span><strong>Motos y bicicletas</strong><small>Próximamente</small></span></div><div><i class="fa-solid fa-tag"></i><span><strong>Precios reales</strong><small>Con IVA, sin ayudas</small></span></div><div><i class="fa-solid fa-battery-full"></i><span><strong>Datos técnicos</strong><small>Autonomía, batería, potencia</small></span></div></section>
 <section class="homepage-explore site-width" aria-label="Explora electricos.eu"><h2>Explora electricos.eu</h2><div class="homepage-explore-grid"><a href="#catalogue-controls-anchor"><i class="fa-solid fa-car-side"></i><strong>Coches<br>eléctricos</strong></a><a href="/motos/" class="homepage-explore-moto"><i class="fa-solid fa-motorcycle"></i><strong>Motos<br>eléctricas</strong><small>Próximamente</small></a><a href="/bicicletas/" class="homepage-explore-bike"><i class="fa-solid fa-bicycle"></i><strong>Bicicletas<br>eléctricas</strong><small>Próximamente</small></a><a href="/mercado-electrico/"><i class="fa-solid fa-chart-column"></i><strong>Mercado<br>eléctrico</strong></a><a href="#ranking-view-btn" onclick="event.preventDefault();setCatalogueView('ranking');document.getElementById('ranking-view-btn').scrollIntoView({behavior:'smooth',block:'center'})"><i class="fa-solid fa-trophy"></i><strong>Ranking<br>de coches</strong></a><a href="#catalogue-controls-anchor"><i class="fa-solid fa-code-compare"></i><strong>Comparar<br>hasta 4 coches</strong></a></div></section>
 <main class="site-width catalogue-main">
@@ -97,7 +132,6 @@
                 <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
         </section>
-        <a class="moto-promo" href="/motos/" aria-label="Descubre el próximo comparador de motos eléctricas"><div class="moto-promo-icon"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i></div><div class="moto-promo-copy"><span class="moto-promo-kicker">NUEVO · PRÓXIMAMENTE</span><strong>COMPARADOR DE MOTOS ELÉCTRICAS</strong><span>Una nueva forma de comparar scooters y motos eléctricas, con precios reales y datos técnicos.</span></div><span class="moto-promo-cta">Descubrir <i class="fa-solid fa-arrow-right"></i></span></a>
         <section id="catalogue-controls-anchor" class="catalogue-controls" aria-label="Buscar y filtrar coches">
             <div class="search-row">
                 <label class="catalogue-search" for="hero-search">
