@@ -442,6 +442,44 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
  .homepage-hero-inner{min-height:455px!important}
  .homepage-hero{background-position:center center,center center!important}
 }
+
+/* Highlight the ranking priority selector while preserving native select behavior */
+#ranking-panel:not([hidden]){
+ display:grid!important;
+ grid-template-columns:max-content minmax(0,1fr);
+ align-items:center;gap:12px 22px;
+ padding:20px 24px!important;
+ border:2px solid #2474ff!important;border-radius:16px!important;
+ background:linear-gradient(120deg,#e4efff 0%,#f0f5ff 56%,#dceaff 100%)!important;
+ box-shadow:0 8px 20px rgba(28,91,190,.14)!important;
+}
+#ranking-panel label[for="ranking-metric"]{
+ display:flex;align-items:center;gap:12px;
+ font-size:clamp(16px,1.2vw,21px)!important;
+ font-weight:800!important;color:#102a57!important;
+}
+#ranking-panel label[for="ranking-metric"]::before{
+ content:"";width:30px;height:30px;flex:none;
+ background:#1266e8;
+ clip-path:polygon(0 40%,40% 0,100% 0,100% 60%,60% 100%);
+ border-radius:6px;
+}
+#ranking-panel #ranking-metric{
+ width:100%!important;min-width:0;min-height:52px!important;
+ border:1.5px solid #9ab9ef!important;border-radius:11px!important;
+ background-color:#fff!important;color:#162a42!important;
+ font-size:clamp(16px,1.12vw,20px)!important;
+ padding:10px 16px!important;
+ box-shadow:0 2px 5px rgba(30,72,150,.04)!important;
+}
+#ranking-panel #ranking-explanation{
+ grid-column:1/-1;margin:0!important;
+ color:#3e587a!important;font-size:clamp(13px,1vw,17px)!important;
+}
+@media(max-width:750px){
+ #ranking-panel:not([hidden]){grid-template-columns:1fr;padding:15px!important;gap:10px}
+ #ranking-panel #ranking-explanation{grid-column:1}
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
