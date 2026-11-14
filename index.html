@@ -408,6 +408,17 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 @media(min-width:1101px){
  .homepage-hero-inner{min-height:455px!important}
 }
+
+/* Direct, browser-compatible recovery of pale artwork: avoid unsupported SVG filters */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after{
+ filter:brightness(.38) contrast(2.1) saturate(3)!important;
+ opacity:1!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:brightness(.43) contrast(2.3) saturate(1.3)!important;
+ opacity:1!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
