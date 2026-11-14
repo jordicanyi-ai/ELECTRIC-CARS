@@ -381,9 +381,26 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
  .homepage-hero-inner{min-height:385px!important}
  .homepage-explore-grid a{height:187px!important}
 }
+
+/* Fix actual low-opacity exports by amplifying alpha, not darkening pale pixels */
+.homepage-explore-grid a:nth-child(4)::after{
+ background-image:url('/img/mercado-electrico-grafico.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
+.homepage-explore-grid a:nth-child(5)::after{
+ background-image:url('/img/podi-ranking-transparent.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ background-image:url('/img/comparar-tres-cotxes-transparent.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
 </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
+<body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
         <div class="site-width header-inner">
