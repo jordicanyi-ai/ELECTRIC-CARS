@@ -398,9 +398,19 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
  background-size:contain!important;background-position:center bottom!important;
  background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
 }
+
+/* Restore visible color and opacity in the three excessively pale WebP assets */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after,
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:url(#tile-color-recover)!important;
+}
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:455px!important}
+}
 </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter></svg>
+<body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
         <div class="site-width header-inner">
