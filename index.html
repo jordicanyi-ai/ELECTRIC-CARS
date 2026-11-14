@@ -357,6 +357,24 @@
 
 /* Hide quick-action filter buttons only in Rankings, not Mercado or Catálogo */
 body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
+
+/* Desktop homepage: show the complete six-card row without scrolling */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:350px!important;padding-top:20px!important;padding-bottom:20px!important}
+ .homepage-explore{padding-top:12px!important;padding-bottom:14px!important}
+ .homepage-explore-grid a{height:176px!important}
+ .homepage-explore-grid a:nth-child(1) .explore-car-image{height:55%!important}
+ .homepage-explore-grid a:nth-child(2) .explore-moto-image{height:58%!important}
+ .homepage-explore-grid a:nth-child(3) .explore-bike-image{height:47%!important}
+}
+/* Stronger artwork: avoid the washed-out appearance of the transparent exports */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after{
+ filter:brightness(.58) contrast(1.55) saturate(2.6)!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:brightness(.72) contrast(2.2) saturate(1.5) drop-shadow(0 3px 2px #253c5966)!important;
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
