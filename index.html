@@ -375,6 +375,12 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 .homepage-explore-grid a:nth-child(6)::after{
  filter:brightness(.72) contrast(2.2) saturate(1.5) drop-shadow(0 3px 2px #253c5966)!important;
 }
+
+/* Give hero and tiles a little more breathing room; keep next section below fold */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:385px!important}
+ .homepage-explore-grid a{height:187px!important}
+}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue">
