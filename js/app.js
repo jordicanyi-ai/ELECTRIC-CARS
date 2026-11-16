@@ -4,6 +4,7 @@ let currentImageIndexes = {};
         let catalogueSort = 'random';
 
         function syncHeroSearch() {
+            delete document.body.dataset.selectedBrand;
             filterCars();
         }
 
