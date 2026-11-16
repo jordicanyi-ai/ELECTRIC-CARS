@@ -443,6 +443,19 @@ let currentImageIndexes = {};
                 const trunk = car.trunk != null && Number.isFinite(Number(car.trunk)) && car.frunkText && /\d/.test(car.frunkText) && !/^(no|sin|pendiente)/i.test(car.frunkText.trim())
                     ? `${car.trunk} + ${car.frunkText.match(/\d+(?:\s*-\s*\d+)?/)?.[0] || ''} L`
                     : (car.trunk == null || !Number.isFinite(Number(car.trunk)) ? 'Pendiente de confirmar' : `${car.trunk} L`);
+                if (isRanking) {
+                    const label = metric === 'priceAsc' ? 'PRECIO DESDE' : metric === 'rangeDesc' ? 'AUTONOMÍA' : metric === 'trunkDesc' ? 'MALETERO' : metric === 'powerDesc' ? 'POTENCIA' : '0–100 KM/H';
+                    const value = metric === 'priceAsc' ? (car.priceMin == null ? 'Sin datos' : car.priceMin.toLocaleString('es-ES') + ' €') : metric === 'rangeDesc' ? car.maxRangeVal + ' km' : metric === 'trunkDesc' ? (car.trunk == null ? 'Sin datos' : car.trunk + ' L') : metric === 'powerDesc' ? (maxPowerCv(car) == null ? 'Sin datos' : maxPowerCv(car) + ' CV') : (bestAcceleration(car) == null ? 'Sin datos' : bestAcceleration(car).toLocaleString('es-ES') + ' s');
+                    return `<article class="ranking-compact-card">
+                        <button type="button" class="ranking-compact-open" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}">
+                            <span class="ranking-compact-position">#${position}</span>
+                            <img src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">
+                            <span class="ranking-compact-name">${name}</span>
+                            <span class="ranking-compact-label">${label}</span>
+                            <strong class="ranking-compact-value">${value}</strong>
+                        </button>
+                    </article>`;
+                }
                 return `<article class="car-card${car.discontinued ? ' is-discontinued' : ''}">
                     <div class="car-photo">
                         <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
