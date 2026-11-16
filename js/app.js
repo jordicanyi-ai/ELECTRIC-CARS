@@ -1343,6 +1343,7 @@ let currentImageIndexes = {};
         function resetFilters(runFilter = true) {
 
             document.getElementById('hero-search').value = '';
+            delete document.body.dataset.selectedBrand;
 
             document.getElementById('body-filter').value = '';
 
@@ -1429,8 +1430,9 @@ let currentImageIndexes = {};
                 if (!Array.isArray(car.images) || !car.images.length) return false;
                 if (document.body.dataset.catalogueView === 'ranking' && car.upcoming) return false;
 
-                const searchMatch =
-                    carMatchesSearch(car, search);
+                const selectedBrand = document.body.dataset.selectedBrand;
+                const brandMatch = !selectedBrand || normalizeCarSearch(car.brand) === selectedBrand;
+                const searchMatch = brandMatch && carMatchesSearch(car, search);
 
                 const bodyMatch =
                     !body || carBodyCategories(car.type).includes(body);
@@ -1498,9 +1500,15 @@ let currentImageIndexes = {};
         document.addEventListener('DOMContentLoaded', () => {
 
             const brandParam = new URLSearchParams(window.location.search).get('marca');
-            if (brandParam && carsData.some(car => car.brand.toLocaleLowerCase('es') === brandParam.toLocaleLowerCase('es'))) {
-                document.getElementById('hero-search').value = brandParam;
-                if (document.body.dataset.catalogueView === 'ranking') setCatalogueView('catalogue');
+            const searchInput = document.getElementById('hero-search');
+            if (brandParam && searchInput) {
+                const requested = normalizeCarSearch(brandParam);
+                const matchingBrand = carsData.find(car => normalizeCarSearch(car.brand) === requested);
+                if (matchingBrand) {
+                    searchInput.value = matchingBrand.brand;
+                    document.body.dataset.selectedBrand = requested;
+                    if (document.body.dataset.catalogueView === 'ranking') setCatalogueView('catalogue');
+                }
             }
             if (document.body.dataset.initialView === 'ranking') {
                 setCatalogueView('ranking');
