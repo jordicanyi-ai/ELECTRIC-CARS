@@ -487,18 +487,18 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-modal,body.home-only #photo-lightbox,body.home-only #compare-modal{display:none!important}
 body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
 </style>
-<style id="ranking-compact-cards">
-body[data-catalogue-view="ranking"] #cars-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;align-items:stretch}
-.ranking-compact-card{position:relative;min-width:0;border:1px solid #dce6f1;background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 5px 15px #1d35531a}
-.ranking-compact-open{width:100%;height:100%;border:0;background:transparent;cursor:pointer;padding:12px 11px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#1e3449;gap:6px}
-.ranking-compact-open:hover{background:#f7faff}
-.ranking-compact-position{align-self:flex-start;background:#f0f5ff;color:#2456cd;border-radius:9px;padding:4px 10px;font-weight:900;font-size:19px}
-.ranking-compact-open img{display:block;width:100%;height:105px;object-fit:contain;margin:2px 0 4px}
-.ranking-compact-name{font-size:13px;font-weight:850;line-height:1.25;min-height:33px}
-.ranking-compact-label{font-size:10px;font-weight:800;color:#708399;letter-spacing:.5px}
-.ranking-compact-value{font-size:23px;font-weight:900;color:#2456cd;line-height:1.15}
-@media(max-width:1100px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
-@media(max-width:760px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.ranking-compact-open img{height:85px}.ranking-compact-value{font-size:20px}}
+<style id="ranking-original-card-simplified">
+/* Keep the original full-size photo cards; show only the selected ranking value. */
+body[data-catalogue-view="ranking"] #cars-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+body[data-catalogue-view="ranking"] #cars-grid .car-card{display:flex;flex-direction:column;min-width:0}
+body[data-catalogue-view="ranking"] #cars-grid .car-content{display:flex;flex-direction:column;flex:1}
+body[data-catalogue-view="ranking"] #cars-grid .car-primary-specs,
+body[data-catalogue-view="ranking"] #cars-grid .car-secondary-specs,
+body[data-catalogue-view="ranking"] #cars-grid .car-actions{display:none!important}
+body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value{display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:5px;margin-top:12px;padding:14px;border-radius:12px;background:#eef4ff}
+body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value strong{font-size:clamp(23px,2vw,32px);font-weight:900;color:#2456cd}
+@media(max-width:900px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}body[data-catalogue-view="ranking"] #cars-grid .car-content{padding:10px!important}body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value{padding:9px 5px!important}body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value strong{font-size:20px!important}}
 </style><style id="ranking-filter-emphasis">
 #ranking-panel:not([hidden]){grid-template-columns:1fr minmax(300px,1.4fr)!important;background:#eaf2ff!important;border:2px solid #1769ee!important;box-shadow:0 8px 25px #2456cd24!important}
 #ranking-panel label[for="ranking-metric"]{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:5px!important;font-size:clamp(18px,1.5vw,25px)!important;line-height:1.2!important}
@@ -717,7 +717,7 @@ body[data-catalogue-view="ranking"] #cars-grid{display:grid!important;grid-templ
     <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261116-compact-ranking"></script>
+    <script src="js/app.js?v=20261116-original-cards-single-metric"></script>
 
     <script>
         window.addEventListener('load', function () {
