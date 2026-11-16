@@ -487,7 +487,19 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-modal,body.home-only #photo-lightbox,body.home-only #compare-modal{display:none!important}
 body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
 </style>
-</head>
+<style id="ranking-compact-cards">
+body[data-catalogue-view="ranking"] #cars-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;align-items:stretch}
+.ranking-compact-card{position:relative;min-width:0;border:1px solid #dce6f1;background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 5px 15px #1d35531a}
+.ranking-compact-open{width:100%;height:100%;border:0;background:transparent;cursor:pointer;padding:12px 11px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#1e3449;gap:6px}
+.ranking-compact-open:hover{background:#f7faff}
+.ranking-compact-position{align-self:flex-start;background:#f0f5ff;color:#2456cd;border-radius:9px;padding:4px 10px;font-weight:900;font-size:19px}
+.ranking-compact-open img{display:block;width:100%;height:105px;object-fit:contain;margin:2px 0 4px}
+.ranking-compact-name{font-size:13px;font-weight:850;line-height:1.25;min-height:33px}
+.ranking-compact-label{font-size:10px;font-weight:800;color:#708399;letter-spacing:.5px}
+.ranking-compact-value{font-size:23px;font-weight:900;color:#2456cd;line-height:1.15}
+@media(max-width:1100px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:760px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.ranking-compact-open img{height:85px}.ranking-compact-value{font-size:20px}}
+</style></head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-initial-view="ranking" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
@@ -696,7 +708,7 @@ body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display
     <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261116-rollback-ranking"></script>
+    <script src="js/app.js?v=20261116-compact-ranking"></script>
 
     <script>
         window.addEventListener('load', function () {
