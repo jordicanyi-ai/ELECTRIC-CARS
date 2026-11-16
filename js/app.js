@@ -1502,6 +1502,9 @@ let currentImageIndexes = {};
                 document.getElementById('hero-search').value = brandParam;
                 if (document.body.dataset.catalogueView === 'ranking') setCatalogueView('catalogue');
             }
+            if (document.body.dataset.initialView === 'ranking') {
+                setCatalogueView('ranking');
+            }
             filterCars();
             renderCompareBar();
             const linkedCarId = new URLSearchParams(window.location.search).get('car');
