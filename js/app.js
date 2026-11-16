@@ -1496,6 +1496,11 @@ let currentImageIndexes = {};
 
         document.addEventListener('DOMContentLoaded', () => {
 
+            const brandParam = new URLSearchParams(window.location.search).get('marca');
+            if (brandParam && carsData.some(car => car.brand.toLocaleLowerCase('es') === brandParam.toLocaleLowerCase('es'))) {
+                document.getElementById('hero-search').value = brandParam;
+                if (document.body.dataset.catalogueView === 'ranking') setCatalogueView('catalogue');
+            }
             filterCars();
             renderCompareBar();
             const linkedCarId = new URLSearchParams(window.location.search).get('car');
