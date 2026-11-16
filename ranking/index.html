@@ -495,10 +495,14 @@ body[data-catalogue-view="ranking"] #cars-grid .car-content{display:flex;flex-di
 body[data-catalogue-view="ranking"] #cars-grid .car-primary-specs,
 body[data-catalogue-view="ranking"] #cars-grid .car-secondary-specs,
 body[data-catalogue-view="ranking"] #cars-grid .car-actions{display:none!important}
-body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value{display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:5px;margin-top:12px;padding:14px;border-radius:12px;background:#eef4ff}
-body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value strong{font-size:clamp(23px,2vw,32px);font-weight:900;color:#2456cd}
+body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value{display:flex!important;flex-direction:column;align-items:flex-start;text-align:left;gap:4px;margin-top:12px;padding:14px 16px;border:1px solid #b6d0ff;border-radius:12px;background:#eaf2ff}
+body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value strong{font-size:clamp(27px,2.7vw,40px);font-weight:900;color:#143d7d;line-height:1.1}
 @media(max-width:900px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:560px){body[data-catalogue-view="ranking"] #cars-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}body[data-catalogue-view="ranking"] #cars-grid .car-content{padding:10px!important}body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value{padding:9px 5px!important}body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value strong{font-size:20px!important}}
+
+body[data-catalogue-view="ranking"] #cars-grid .ranking-featured-value span{font-size:12px;font-weight:900;letter-spacing:.5px;color:#173c78}
+body[data-catalogue-view="ranking"] #cars-grid .car-brand{color:#2456cd!important;font-weight:850}
+body[data-catalogue-view="ranking"] #cars-grid .car-position{background:white!important;border:1px solid #d1ddf5!important;box-shadow:0 3px 10px #1c3b6b20!important}
 </style><style id="ranking-filter-emphasis">
 #ranking-panel:not([hidden]){grid-template-columns:1fr minmax(300px,1.4fr)!important;background:#eaf2ff!important;border:2px solid #1769ee!important;box-shadow:0 8px 25px #2456cd24!important}
 #ranking-panel label[for="ranking-metric"]{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:5px!important;font-size:clamp(18px,1.5vw,25px)!important;line-height:1.2!important}
