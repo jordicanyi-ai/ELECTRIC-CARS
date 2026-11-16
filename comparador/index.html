@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20261113-explore-images">
+    <link rel="stylesheet" href="/css/styles.css?v=20261113-explore-images">
 <style id="homepage-critical-styles">
 /* Homepage visual landing - existing catalogue and all controls remain intact */
 .desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
@@ -488,9 +488,17 @@ body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-m
 body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
 </style>
 <style id="brand-embed-styles">
-body.brand-embed .site-header,body.brand-embed .homepage-hero,body.brand-embed .homepage-explore,body.brand-embed #page-title,body.brand-embed .catalogue-tabs,body.brand-embed .catalogue-controls,body.brand-embed #catalogue-controls-anchor,body.brand-embed footer,body.brand-embed .site-footer{display:none!important}
-body.brand-embed .catalogue-main{padding-top:0!important;margin-top:0!important}
-body.brand-embed{background:#fff!important}
+html.brand-embed-root .site-header,html.brand-embed-root header.site-header,
+html.brand-embed-root .homepage-hero,html.brand-embed-root .homepage-explore,
+html.brand-embed-root #page-title,html.brand-embed-root .catalogue-tabs,
+html.brand-embed-root footer,html.brand-embed-root .site-footer,
+body.brand-embed .site-header,body.brand-embed header.site-header,
+body.brand-embed .homepage-hero,body.brand-embed .homepage-explore,
+body.brand-embed #page-title,body.brand-embed .catalogue-tabs,
+body.brand-embed footer,body.brand-embed .site-footer{display:none!important}
+html.brand-embed-root body{background:#fff!important}
+html.brand-embed-root .catalogue-main{padding-top:0!important;margin-top:0!important}
+html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-count,html.brand-embed-root #cars-grid{scroll-margin-top:0}
 </style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script></head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
@@ -691,16 +699,16 @@ body.brand-embed{background:#fff!important}
     </footer>
 
     <!-- DATABASE -->
-    <script src="data/cars.js?v=20261113-ford-etransit-gallery"></script>
+    <script src="/data/cars.js?v=20261113-ford-etransit-gallery"></script>
     <script src="/data/sales-ranking.js?v=20261111"></script>
     <script src="/js/sales-ranking.js?v=20261113-cutouts-restored"></script>
 
     <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
-    <script src="data/vehicle-sales.js?v=20261030-uppercase"></script>
-    <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
+    <script src="/data/vehicle-sales.js?v=20261030-uppercase"></script>
+    <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261116-brand-filter-fix"></script>
+    <script src="/js/app.js?v=20261116-brand-filter-fix"></script>
 
     <script>
         window.addEventListener('load', function () {
