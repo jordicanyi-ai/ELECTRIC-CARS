@@ -487,7 +487,7 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-modal,body.home-only #photo-lightbox,body.home-only #compare-modal{display:none!important}
 body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
 </style>
-<style id="ranking-market-cutouts">body[data-catalogue-view="ranking"] .ranking-model-cutout{display:block;width:78%;max-width:235px;height:76px;object-fit:contain;object-position:center;margin:8px auto 10px;background:transparent;filter:drop-shadow(0 3px 3px rgba(0,0,0,.10))}@media(max-width:600px){body[data-catalogue-view="ranking"] .ranking-model-cutout{height:60px;max-width:180px}}</style></head>
+</head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-initial-view="ranking" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
@@ -696,7 +696,7 @@ body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display
     <script src="js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="js/app.js?v=20261116-ranking-cutouts"></script>
+    <script src="js/app.js?v=20261116-rollback-ranking"></script>
 
     <script>
         window.addEventListener('load', function () {
