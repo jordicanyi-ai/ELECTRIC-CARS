@@ -54,6 +54,7 @@ let currentImageIndexes = {};
             const previous = document.body.dataset.catalogueView;
             if (view === 'ranking' && previous !== 'ranking') catalogueSort = document.getElementById('sort-filter').value;
             document.body.dataset.catalogueView = view;
+            document.getElementById('page-title').textContent = view === 'ranking' ? 'RANKING DE COCHES ELÉCTRICOS' : 'EXPLORA LOS COCHES ELÉCTRICOS';
             document.getElementById('catalogue-view-btn').setAttribute('aria-pressed', String(view === 'catalogue'));
             document.getElementById('ranking-view-btn').setAttribute('aria-pressed', String(view === 'ranking'));
             document.getElementById('ranking-panel').hidden = view !== 'ranking';
