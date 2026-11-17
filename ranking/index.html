@@ -481,18 +481,19 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
  #ranking-panel #ranking-explanation{grid-column:1}
 }
 
-/* Compact ranking selector: clear hierarchy and visible action */
-#ranking-panel:not([hidden]){display:grid!important;grid-template-columns:minmax(250px,1.35fr) minmax(220px,1fr) auto!important;align-items:center!important;gap:16px!important;padding:12px 16px!important;border:1px solid #d6e3f5!important;border-radius:22px!important;background:#fff!important;box-shadow:0 8px 25px rgba(26,68,130,.1)!important}
-#ranking-panel .ranking-intro{display:flex;align-items:center;gap:14px;min-width:0}
-#ranking-panel .ranking-tag-icon{display:grid;place-items:center;flex:none;width:58px;height:58px;background:linear-gradient(135deg,#1888f5,#0951da);color:white;border-radius:16px;font-size:25px}
-#ranking-panel .ranking-intro label{display:block!important;font-weight:850!important;font-size:clamp(16px,1.25vw,21px)!important;color:#142d50!important;line-height:1.2}
+/* Reference design: blue tag wedge, white pill, strong selector and button */
+#ranking-panel:not([hidden]){display:grid!important;grid-template-columns:minmax(370px,1.45fr) minmax(280px,1fr) auto!important;align-items:center!important;gap:20px!important;padding:12px 14px 12px 0!important;border:2px solid #dbe8fa!important;border-radius:30px!important;background:#fff!important;box-shadow:0 12px 25px #1c62b51b!important;overflow:visible!important}
+#ranking-panel .ranking-intro{display:flex;align-items:center;gap:22px;min-width:0}
+#ranking-panel .ranking-tag-icon{position:relative;display:grid;place-items:center;flex:none;width:106px;height:100px;background:linear-gradient(135deg,#079bff,#0757e8);color:#fff;border-radius:27px 0 0 27px;font-size:35px;clip-path:polygon(0 0,100% 0,72% 100%,0 100%);box-shadow:none}
+#ranking-panel .ranking-intro>div{padding-left:16px;border-left:2px solid #d5e2f2}
+#ranking-panel .ranking-intro label{display:block!important;font-size:clamp(17px,1.45vw,25px)!important;font-weight:850!important;line-height:1.2;color:#0b2052!important;letter-spacing:-.035em}
 #ranking-panel .ranking-intro label::before{display:none!important}
-#ranking-panel .ranking-intro small{display:block;font-size:13px;color:#61758e;margin-top:5px}
-#ranking-panel #ranking-metric{height:56px!important;min-height:56px!important;border:2px solid #7bb5fc!important;border-radius:13px!important;font-size:16px!important;font-weight:700!important}
-#ranking-panel .ranking-show-results{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 23px;background:#0959dc;color:white;border:0;border-radius:14px;font-weight:800;white-space:nowrap;cursor:pointer}
-#ranking-panel .ranking-show-results:hover{background:#0347b6}
+#ranking-panel .ranking-intro small{display:block;margin-top:7px;color:#506987;font-size:clamp(12px,1vw,16px)}
+#ranking-panel #ranking-metric{height:64px!important;min-height:64px!important;width:100%!important;border:2px solid #0068ff!important;border-radius:17px!important;background:#fff!important;color:#0b2052!important;font-size:clamp(15px,1.15vw,19px)!important;font-weight:800!important;padding:10px 17px!important;box-shadow:0 3px 9px #0b5dd01a!important}
+#ranking-panel .ranking-show-results{display:flex;align-items:center;justify-content:center;gap:14px;min-height:64px;padding:0 25px;background:linear-gradient(115deg,#087dff,#004de7);color:white;border:0;border-radius:18px;font-weight:800;font-size:clamp(15px,1.12vw,19px);white-space:nowrap;cursor:pointer;box-shadow:0 6px 14px #0959d72b}
+#ranking-panel .ranking-show-results:hover{background:linear-gradient(115deg,#006ce8,#003ec0)}
 #ranking-panel #ranking-explanation{display:none!important}
-@media(max-width:900px){#ranking-panel:not([hidden]){grid-template-columns:1fr!important}#ranking-panel .ranking-show-results{width:100%}}
+@media(max-width:1100px){#ranking-panel:not([hidden]){grid-template-columns:1fr!important;padding:12px!important;gap:12px!important}#ranking-panel .ranking-tag-icon{height:74px;width:80px;border-radius:18px 0 0 18px}#ranking-panel .ranking-show-results{width:100%}}
 </style>
 <style id="homepage-cards-unified">
 .homepage-explore-grid>a{border:1px solid #d4e1f4!important;box-shadow:0 5px 18px rgba(24,58,106,.07);transition:border-color .2s,box-shadow .2s,transform .2s}
