@@ -1,74 +1,741 @@
-<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Motos eléctricas: comparador, mercado y rankings | electricos.eu</title>
-<meta name="description" content="Compara motos eléctricas en España por precio, autonomía, batería, potencia y carga. Mercado, rankings y marcas con datos contrastados.">
-<link rel="canonical" href="https://electricos.eu/motos/comparador/"><meta name="robots" content="index,follow">
-<link rel="stylesheet" href="/css/styles.css"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7faff;color:#172c43;font-family:"Plus Jakarta Sans",sans-serif}.site-brand,.site-brand *{text-decoration:none!important}
-.moto-nav{display:flex;align-items:center;gap:clamp(9px,1.5vw,24px);margin-left:auto;flex-wrap:wrap}.moto-nav a{text-decoration:none;font-weight:800;color:#1d344e;font-size:13px}.moto-nav a:hover{color:#155de0}
-.moto-shell{width:min(1480px,calc(100% - 36px));margin:auto}.moto-hero{position:relative;min-height:340px;padding:50px clamp(24px,5vw,70px);background:linear-gradient(95deg,#0b203c 0%,#123d79 60%,#1970d5 100%);border-radius:0 0 26px 26px;overflow:hidden;color:#fff;display:flex;align-items:center}.moto-hero:after{content:"";position:absolute;right:5%;bottom:-32%;width:42%;aspect-ratio:1;background:url('/img/silence-ombra-portada-TRANSPARENT.webp') center/contain no-repeat;filter:drop-shadow(0 10px 10px #06172b66)}.moto-hero h1{font-size:clamp(30px,4.5vw,60px);line-height:1.05;letter-spacing:-.045em;margin:12px 0}.moto-hero p{font-size:clamp(15px,1.5vw,20px);max-width:550px}.moto-hero>div{position:relative;z-index:1}.moto-kicker{font-weight:800;letter-spacing:.12em;color:#cce4ff;font-size:12px}.moto-hero a{display:inline-flex;margin-top:16px;padding:12px 20px;border-radius:12px;background:#1262e7;color:#fff;font-weight:800;text-decoration:none}
-.moto-quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 32px}.moto-quick a{background:white;border:1px solid #dce6f5;border-radius:18px;padding:20px;display:flex;align-items:center;gap:12px;text-decoration:none;color:#17304d;font-weight:800;box-shadow:0 4px 16px #163d7110}.moto-quick i{color:#165dd6;font-size:24px}
-.moto-section{margin:30px 0 44px;scroll-margin-top:90px}.moto-section h2{font-size:clamp(25px,2.8vw,36px);margin:0 0 8px}.moto-section .sub{color:#62768d;margin:0 0 22px;line-height:1.55}.moto-panel{background:#fff;border:1px solid #dce6f4;border-radius:20px;padding:22px;box-shadow:0 5px 22px #183e6910}.moto-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.moto-filters label{display:block;font-size:12px;font-weight:800;color:#4a617d;margin-bottom:7px}.moto-filters input,.moto-filters select,.moto-sort select{width:100%;height:46px;border:1px solid #cbdaf0;border-radius:10px;padding:0 12px;font:inherit;background:#fff;color:#163352}.moto-filter-toggle{height:46px;border:1px solid #cbdaf0;border-radius:10px;background:#fff;color:#17304d;font:inherit;font-weight:800;padding:0 18px;cursor:pointer;white-space:nowrap}.moto-searchbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:end}.moto-filter-panel[hidden]{display:none!important}.moto-filter-panel{margin-top:14px}.moto-filter-toggle[aria-expanded="true"]{border-color:#2463db;color:#1556ce}.moto-toolbar{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:20px 0}.moto-toolbar strong{font-size:15px}.moto-sort{display:flex;gap:10px;align-items:center}.moto-sort label{font-size:13px;font-weight:700}.moto-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.moto-card{border:1px solid #dce6f4;border-radius:18px;background:white;padding:18px;box-shadow:0 4px 15px #1b44700e}.moto-card h3{margin:4px 0 8px}.moto-card small{color:#63778c}.moto-card dl{display:grid;grid-template-columns:1fr 1fr;gap:10px}.moto-card dt{font-size:11px;color:#6b7c91}.moto-card dd{margin:0;font-weight:800}.moto-card button{width:100%;border:1px solid #1b64dc;color:#1553b5;background:#eff6ff;border-radius:10px;padding:12px;font-weight:800;cursor:pointer}.moto-empty{padding:36px 22px;text-align:center;color:#566c85;border:1px dashed #b8cce7;border-radius:18px;background:#f8fbff;grid-column:1/-1}.moto-empty i{font-size:32px;color:#2872db;margin-bottom:8px}.moto-empty strong{display:block;color:#1d395a;margin-bottom:8px}.moto-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.moto-metric{background:linear-gradient(145deg,#f3f8ff,#fff);border:1px solid #dce6f4;border-radius:16px;padding:24px}.moto-metric i{font-size:24px;color:#1262e7}.moto-metric h3{margin:12px 0 6px}.moto-metric p{font-size:13px;color:#62758c;line-height:1.6}.moto-note{border-left:4px solid #1968e8;background:#eef5ff;border-radius:8px;padding:15px 18px;font-size:13px;color:#355477;line-height:1.55}.moto-ranking{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.moto-ranking select{height:48px;border:2px solid #1972ec;border-radius:12px;padding:0 14px;font:inherit;font-weight:700;flex:1;min-width:200px}.moto-ranking button{height:48px;border:0;border-radius:12px;background:#075de6;color:#fff;font-weight:800;padding:0 22px;cursor:pointer}.moto-brands{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.moto-brand{padding:20px;text-align:center;border:1px solid #dbe7f6;border-radius:14px;background:white;font-weight:800}.moto-brand small{display:block;color:#65798e;font-weight:500;margin-top:7px}.moto-footer{text-align:center;padding:36px;color:#64758b;font-size:13px}
-@media(max-width:1050px){.moto-filters{grid-template-columns:1fr 1fr}.moto-quick{grid-template-columns:repeat(2,1fr)}.moto-grid{grid-template-columns:repeat(2,1fr)}.moto-nav{margin-left:0}}
-@media(max-width:650px){.moto-searchbar{grid-template-columns:minmax(0,1fr) auto;gap:7px}.moto-filter-toggle{padding:0 10px;font-size:12px}.moto-filter-toggle .fa-chevron-down{display:none}.moto-shell{width:min(100% - 22px,1480px)}.moto-hero{min-height:350px;padding:25px 20px;align-items:flex-start}.moto-hero:after{width:75%;right:-8%;bottom:-20%;opacity:.65}.moto-hero p{max-width:270px}.moto-quick{gap:8px}.moto-quick a{padding:12px;font-size:12px;gap:8px}.moto-quick i{font-size:19px}.moto-filters,.moto-grid,.moto-metrics,.moto-brands{grid-template-columns:1fr}.moto-toolbar{align-items:stretch;flex-direction:column}.moto-nav{gap:10px;justify-content:center}.moto-nav a{font-size:12px}}
- .moto-page-title{font-size:clamp(32px,4.2vw,66px);font-weight:850;letter-spacing:-.055em;line-height:1.1;margin:30px 0 28px;color:#20313d}.moto-tabs{display:flex;gap:30px;border-bottom:1px solid #dce6f4;align-items:center;overflow-x:auto;white-space:nowrap}.moto-tabs a{display:inline-flex;align-items:center;gap:9px;padding:14px 0 16px;text-decoration:none;color:#465e74;font-size:16px;font-weight:650;border-bottom:4px solid transparent}.moto-tabs a.is-active{color:#235bd5;border-color:#235bd5}.moto-section#comparador{margin-top:22px}.moto-section#comparador>.moto-panel{border:0;box-shadow:none;background:transparent;padding:0}.moto-searchbar input{height:62px;font-size:17px}.moto-searchbar .moto-filter-toggle{height:62px;padding:0 22px}.moto-grid{gap:24px}.moto-card{overflow:hidden;border-radius:16px}@media(max-width:650px){.moto-page-title{font-size:32px;margin:24px 0 18px}.moto-tabs{gap:20px}.moto-tabs a{font-size:13px}.moto-searchbar input,.moto-searchbar .moto-filter-toggle{height:52px}.moto-searchbar .moto-filter-toggle{padding:0 12px}} .moto-grid .car-card{display:flex;flex-direction:column;min-width:0}.moto-grid .car-photo{height:280px;position:relative;overflow:hidden;background:#eaf0f8}.moto-grid .car-photo-link{display:block;width:100%;height:100%;border:0;padding:0;cursor:pointer}.moto-grid .car-photo img{width:100%;height:100%;object-fit:cover}.moto-grid .car-photo .no-photo{height:100%;display:flex;align-items:center;justify-content:center;color:#64748b}.moto-grid .car-content{flex:1;display:flex;flex-direction:column}.moto-grid .car-actions{margin-top:auto}.moto-grid .car-primary-specs strong{font-size:clamp(15px,1.25vw,20px)}.moto-grid .car-secondary-specs strong{font-size:15px}.moto-detail-dialog{border:0;border-radius:20px;padding:0;width:min(840px,95vw);max-height:90vh;box-shadow:0 20px 90px #10243b66}.moto-detail-dialog::backdrop{background:#09182ba8}.moto-detail-inner{padding:25px}.moto-detail-close{float:right;border:0;background:#eaf0f8;padding:10px 14px;border-radius:10px;cursor:pointer}.moto-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.moto-detail-grid>div{padding:12px;border:1px solid #dce6f4;border-radius:10px}.moto-detail-grid small{display:block;color:#64748b}@media(max-width:650px){.moto-grid .car-photo{height:220px}.moto-detail-grid{grid-template-columns:1fr}} .moto-detail-dialog{width:min(1050px,100vw);max-width:1050px;max-height:96vh;border-radius:26px}.moto-detail-inner{padding:0;color:#20313d}.moto-detail-close{position:absolute;right:20px;top:20px;z-index:2;background:white;border-radius:50%;width:48px;height:48px;box-shadow:0 3px 18px #14253b33}.moto-modal-hero{height:340px;background:#eaf0f8;overflow:hidden}.moto-modal-hero img{height:100%;width:100%;object-fit:cover}.moto-modal-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:30px;border-bottom:1px solid #dbe5f1}.moto-modal-header h2{font-size:40px;line-height:1.05;margin:5px 0}.moto-modal-price{text-align:right}.moto-modal-price strong{font-size:34px;display:block}.moto-modal-content{padding:30px}.moto-five{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.moto-five>div{background:#f3f5f9;padding:18px;border-radius:16px;min-height:125px}.moto-five i,.moto-tech i{display:block;color:#245bd7;font-size:22px;margin-bottom:15px}.moto-five strong{display:block;font-size:20px}.moto-five small,.moto-tech small{color:#64748b}.moto-modal-section{margin-top:54px}.moto-modal-section h3{font-size:29px;margin:6px 0 18px}.moto-kicker{font-size:13px;font-weight:850;color:#245bd7;letter-spacing:.04em}.moto-summary{font-size:18px;line-height:1.7;color:#465970}.moto-trims,.moto-tech,.moto-warranty,.moto-conclusion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.moto-tech{grid-template-columns:repeat(3,minmax(0,1fr))}.moto-trims>div,.moto-tech>div,.moto-warranty>div,.moto-conclusion>div{border:1px solid #dbe5f1;border-radius:18px;padding:22px}.moto-tech strong,.moto-warranty strong{display:block;font-size:20px;margin-top:8px}.moto-ad{background:#f3f5f9;border:1px solid #dbe5f1;border-radius:16px;padding:28px;text-align:center;color:#71839a}.moto-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.moto-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:15px}.moto-compare-full{width:100%;border:0;border-radius:12px;background:#245bd7;color:white;padding:18px;font-weight:800;cursor:pointer}.moto-muted{color:#64748b}.moto-colors{display:flex;gap:16px;flex-wrap:wrap}.moto-modal-footer{border-top:1px solid #dbe5f1;margin-top:50px;padding-top:25px;display:flex;justify-content:space-between;gap:15px}@media(max-width:650px){.moto-detail-dialog{max-height:100vh;width:100vw;border-radius:0}.moto-modal-hero{height:230px}.moto-modal-header{padding:20px;align-items:flex-start}.moto-modal-header h2{font-size:30px}.moto-modal-price strong{font-size:22px}.moto-modal-content{padding:18px}.moto-five{grid-template-columns:repeat(2,minmax(0,1fr))}.moto-trims,.moto-tech,.moto-warranty,.moto-conclusion{grid-template-columns:1fr}.moto-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-/* Shared catalogue proportions: match the cars comparator */
-body{background:#fff;color:#20313d}.moto-shell{width:min(1280px,100%);padding-inline:24px;margin-inline:auto}.moto-page-title{font-size:clamp(30px,3.6vw,48px)!important;line-height:1.08!important;letter-spacing:-1.7px!important;font-weight:800!important;margin:0!important}.moto-tabs{margin-top:20px!important;gap:24px!important}.moto-tabs a{font-size:13px!important;font-weight:700!important;padding:12px 0!important}.moto-section{margin:20px 0 44px}.moto-panel{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}.moto-searchbar{display:flex;align-items:stretch;gap:10px}.moto-searchbar>div{flex:1;min-width:0}.moto-searchbar label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.moto-searchbar input{width:100%;height:48px;border:1px solid #b7cbe2;border-radius:10px;padding:0 18px;font:inherit;font-size:16px;background:#fff;color:#20313d}.moto-filter-toggle{height:48px;padding:0 18px}.moto-toolbar{margin:20px 0 14px}.moto-toolbar strong{font-weight:400;color:#536879}.moto-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.moto-grid .car-card{min-width:0}.moto-grid .car-photo{height:auto;aspect-ratio:1.85/1;overflow:hidden}.moto-grid .car-photo img{width:100%;height:100%;object-fit:cover}.moto-grid .car-content{padding:18px}.moto-grid .car-title{font-size:22px}.moto-quick-filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.moto-quick-filters button{border:1px solid #d6e0e8;border-radius:9px;background:white;color:#40566a;padding:11px 14px;font:inherit;font-size:13px;cursor:pointer}.moto-quick-filters button:hover,.moto-quick-filters button[aria-pressed=true]{border-color:#2456cd;color:#2456cd;background:#f2f6ff}@media(max-width:760px){.moto-shell{padding-inline:16px}.moto-page-title{font-size:clamp(28px,7vw,40px)!important}.moto-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.moto-grid{grid-template-columns:1fr}.moto-tabs{gap:15px!important;overflow-x:auto}.moto-searchbar input{min-width:0}}
-</style></head>
-<body>
-<header class="site-header"><div class="site-width header-inner"><a class="site-brand" href="/" aria-label="electricos.eu, inicio"><span class="brand-icon" aria-hidden="true"></span><span class="brand-wordmark"><span>electricos<span class="brand-suffix">.eu</span></span><span class="brand-tagline">Comparador independiente</span></span></a><nav class="moto-nav" aria-label="Apartados de motos"><a href="#comparador">Comparador</a><a href="#mercado">Mercado</a><a href="#ranking">Ranking</a><a href="#marcas">Marcas</a></nav><nav class="vehicle-switch" aria-label="Tipo de vehículo"><a href="/"><i class="fa-solid fa-car-side"></i> Coches</a><a href="/motos/" class="is-active" aria-current="page"><i class="fa-solid fa-motorcycle"></i> Motos</a><a href="/bicicletas/"><i class="fa-solid fa-bicycle"></i> Bicicletas</a></nav></div></header>
-<main>
-<div class="moto-shell">
-<h1 class="moto-page-title">CATÁLOGO DE MOTOS ELÉCTRICAS</h1><nav class="moto-tabs" aria-label="Apartados de motos"><a href="/motos/comparador/" class="is-active" aria-current="page">Catálogo</a><a href="/motos/ranking/">Rankings</a><a href="/motos/mercado/">Mercado eléctrico</a><a href="/motos/marcas/">Marcas</a></nav>
-<section class="moto-section" id="comparador"><div class="moto-panel"><div class="moto-searchbar"><div><label for="moto-search">Buscar moto</label><input id="moto-search" type="search" placeholder="Marca, modelo o tipo de moto"></div><button type="button" class="moto-filter-toggle" id="moto-filter-toggle" aria-expanded="false" aria-controls="moto-filter-panel"><i class="fa-solid fa-filter"></i> Filtros <i class="fa-solid fa-chevron-down"></i></button></div><div id="moto-filter-panel" class="moto-filter-panel" hidden><div class="moto-filters"><div><label for="moto-type">Categoría</label><select id="moto-type"><option value="">Todas</option><option>Ciclomotor (L1e)</option><option>Escúter</option><option>Moto</option></select></div><div><label for="moto-license">Carnet</label><select id="moto-license"><option value="">Todos</option><option>AM</option><option>A1</option><option>A2</option><option>A</option><option>B</option></select></div><div><label for="moto-brand">Marca</label><select id="moto-brand"><option value="">Todas las marcas</option></select></div><div><label for="moto-range">Autonomía mínima</label><select id="moto-range"><option value="0">Sin mínimo</option><option value="50">50 km</option><option value="100">100 km</option><option value="150">150 km</option><option value="200">200 km</option></select></div><div><label for="moto-price">Precio máximo</label><select id="moto-price"><option value="0">Sin límite</option><option value="3000">3.000 €</option><option value="5000">5.000 €</option><option value="10000">10.000 €</option><option value="20000">20.000 €</option></select></div><div><label for="moto-power">Potencia mínima</label><select id="moto-power"><option value="0">Todas</option><option value="4">4 kW</option><option value="11">11 kW</option><option value="35">35 kW</option></select></div><div><label for="moto-accel">0–100 km/h máximo</label><select id="moto-accel"><option value="0">Todos</option><option value="4">4 s</option><option value="6">6 s</option><option value="10">10 s</option></select></div><div><label for="moto-speed">Velocidad mínima</label><select id="moto-speed"><option value="0">Todas</option><option value="45">45 km/h</option><option value="90">90 km/h</option><option value="120">120 km/h</option></select></div><div><label for="moto-charge">Carga rápida</label><select id="moto-charge"><option value="">Todas</option><option value="yes">Con carga rápida verificada</option></select></div></div></div><div class="moto-quick-filters" aria-label="Filtros rápidos"><button type="button" data-moto-quick="all" aria-pressed="true">Todas</button><button type="button" data-moto-quick="AM">Carnet AM</button><button type="button" data-moto-quick="A1">Carnet A1</button><button type="button" data-moto-quick="A2">Carnet A2</button><button type="button" data-moto-quick="A">Carnet A</button><button type="button" data-moto-quick="B">Carnet B</button><button type="button" data-moto-quick="range">100+ km</button></div><div class="moto-toolbar"><strong id="moto-count" aria-live="polite">0 motos verificadas</strong><div class="moto-sort"><label for="moto-sort">Ordenar</label><select id="moto-sort"><option value="price">Precio: menor primero</option><option value="range">Autonomía: mayor primero</option><option value="power">Potencia: mayor primero</option><option value="charge">Carga: mayor potencia</option><option value="accel">Aceleración: menor tiempo</option><option value="speed">Velocidad máxima</option></select></div></div><div id="moto-results" class="moto-grid"></div></div></section>
-<section class="moto-section" id="mercado" hidden><h2>Mercado de motos eléctricas</h2><p class="sub">Matriculaciones, evolución y modelos más vendidos en España.</p><div class="moto-metrics"><article class="moto-metric"><i class="fa-solid fa-motorcycle"></i><h3>Matriculaciones</h3><p>Datos mensuales y acumulados por categoría, pendientes de incorporar desde una fuente oficial verificable.</p></article><article class="moto-metric"><i class="fa-solid fa-chart-pie"></i><h3>Cuota eléctrica</h3><p>Porcentaje de motos y ciclomotores eléctricos sobre el total, sin mezclar categorías.</p></article><article class="moto-metric"><i class="fa-solid fa-ranking-star"></i><h3>Modelos más vendidos</h3><p>Ranking de matriculaciones cuando dispongamos de cifras contrastadas.</p></article></div></section>
-<section class="moto-section" id="ranking" hidden><h2>Ranking de motos eléctricas</h2><p class="sub">Ordena las fichas según la característica que más te interese.</p><div class="moto-panel"><div class="moto-ranking"><i class="fa-solid fa-tag" style="font-size:30px;color:#1466eb"></i><strong>¿Qué es lo más importante para ti?</strong><select id="moto-rank-metric"><option value="price">Precio de acceso más bajo</option><option value="range">Autonomía (km)</option><option value="power">Potencia (kW)</option><option value="charge">Carga rápida (kW)</option><option value="speed">Velocidad máxima (km/h)</option><option value="accel">Aceleración 0–100 (s)</option></select><button type="button" id="moto-rank-btn">Ver ranking <i class="fa-solid fa-arrow-right"></i></button></div><div id="moto-rank-results" class="moto-grid" style="margin-top:20px"></div></div></section>
-<section class="moto-section" id="marcas" hidden><h2>Marcas de motos eléctricas</h2><p class="sub">Fabricantes y modelos con fichas técnicas verificadas.</p><div id="moto-brands" class="moto-brands"></div></section>
-<div class="moto-note"><strong>Estado de los datos:</strong> la estructura del comparador ya está preparada. Los modelos, precios, imágenes y estadísticas se publicarán únicamente después de verificar su disponibilidad y características en España. No se muestran cifras estimadas como si fueran oficiales.</div>
-</div></main><dialog id="moto-detail-dialog" class="moto-detail-dialog"><div id="moto-detail-content" class="moto-detail-inner"></div></dialog><footer class="moto-footer">electricos.eu · Comparador independiente · <a href="/">Volver a coches</a></footer>
-<script>
-/* Dataset independiente: incorporar exclusivamente fichas de motos verificadas. */
-const motorcycles = [
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>Comparador de motos eléctricas | electricos.eu</title>
+    <meta name="description" content="Compara coches eléctricos por precio, autonomía, batería, espacio y prestaciones. Comparador independiente con datos de España.">
+    <meta name="keywords" content="encuentra tu coche eléctrico ideal, el eléctrico para ti, encuentra tu eléctrico ideal, comparador coches eléctricos, coches eléctricos España">
+    <meta property="og:title" content="Encuentra tu coche eléctrico ideal | electricos.eu">
+    <meta property="og:description" content="Comparador independiente de vehículos eléctricos. Sin opiniones. Solo datos. Compara precios, autonomía, batería y espacio en electricos.eu.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://electricos.eu/comparador/">
+    <link rel="canonical" href="https://electricos.eu/motos/comparador/">
+    <meta name="robots" content="index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6691239546545651" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css?v=20261113-explore-images">
+<style id="homepage-critical-styles">
+/* Homepage visual landing - existing catalogue and all controls remain intact */
+.desktop-primary-nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);margin-left:auto}
+.desktop-primary-nav a{font-size:13px;font-weight:750;color:#152d47;text-decoration:none;white-space:nowrap}
+.desktop-primary-nav a:hover{color:#2456cd}
+.homepage-hero{background:linear-gradient(112deg,#10243b 0%,#1b416c 47%,#5c7894 100%);color:white;overflow:hidden}
+.homepage-hero-inner{width:min(1500px,100%);margin:auto;min-height:440px;display:grid;grid-template-columns:1.1fr .72fr;align-items:center;position:relative;padding:42px clamp(22px,4vw,65px);gap:28px}
+.homepage-hero-copy{position:relative;z-index:2;max-width:720px}
+.hero-eyebrow{font-size:11px;font-weight:850;letter-spacing:1.6px;color:#d7e9ff}
+.homepage-hero-copy h2{font-size:clamp(32px,3.6vw,60px);font-weight:850;line-height:1.06;letter-spacing:-1.7px;margin:17px 0 18px;text-shadow:0 2px 8px #0004}
+.homepage-hero-copy p{font-size:clamp(18px,2vw,26px);margin:0 0 30px}
+.homepage-hero-button{display:inline-flex;align-items:center;gap:24px;background:#095ad8;border:1px solid #5c9cf7;color:white;border-radius:18px;padding:16px 25px;font-size:19px;font-weight:800;text-decoration:none;box-shadow:0 9px 22px #0003}
+.homepage-hero-button:hover{background:#0049bd}
+.homepage-hero-car{position:absolute;left:29%;right:17%;bottom:0;top:18%;background:url('/img/cars/tesla-model-y/modelY_01.webp') center / contain no-repeat;opacity:.95;filter:drop-shadow(0 12px 22px #0006);pointer-events:none}
+.homepage-moto-card{z-index:3;position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:350px;padding:25px 24px;border-radius:25px;border:3px solid white;box-shadow:0 9px 35px #0005;background:linear-gradient(145deg,#325a85,#8cb1cf);color:white;text-decoration:none;overflow:hidden}
+.homepage-moto-card:before{content:'';position:absolute;inset:0 auto 0 0;width:5px;background:#dcfa00}
+.homepage-new{align-self:flex-start;background:#dafa00;color:#102743;font-size:11px;font-weight:900;padding:7px 11px;border-radius:9px}
+.homepage-moto-card strong{position:relative;z-index:2;font-size:clamp(19px,2vw,29px);line-height:1.13;font-weight:850}
+.homepage-moto-symbol{position:absolute;right:10%;top:38%;font-size:clamp(90px,12vw,180px);color:#e6f5ff;text-shadow:0 8px 18px #071a3a80}
+.homepage-moto-button{z-index:2;align-self:stretch;text-align:center;background:#122d4d;padding:13px 10px;border-radius:14px;font-weight:800;font-size:15px}
+.homepage-moto-button i{margin-left:12px}
+.homepage-highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding-top:24px;padding-bottom:24px;border-bottom:1px solid #e1e8f1}
+.homepage-highlights>div{display:flex;align-items:center;gap:14px;padding:5px 18px;border-right:1px solid #dce4ee}
+.homepage-highlights>div:last-child{border:0}
+.homepage-highlights i{font-size:30px;color:#1356b7}
+.homepage-highlights span{display:flex;flex-direction:column;gap:3px}
+.homepage-highlights strong{font-size:15px;line-height:1.2}
+.homepage-highlights small{font-size:12px;color:#536879}
+.homepage-explore{padding-top:27px;padding-bottom:34px}
+.homepage-explore h2{font-size:clamp(23px,2.5vw,34px);font-weight:850;letter-spacing:-.7px;margin:0 0 18px}
+.homepage-explore-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.homepage-explore-grid a{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:12px;min-height:156px;padding:21px;border:1px solid #dce4ee;border-radius:20px;background:linear-gradient(150deg,#fff,#eaf1fc);color:#142d4b;text-decoration:none;box-shadow:0 3px 10px #152b4310}
+.homepage-explore-grid a:hover{border-color:#2456cd;transform:translateY(-2px)}
+.homepage-explore-grid i{font-size:30px;color:#1256c1}
+.homepage-explore-grid strong{font-size:18px;line-height:1.2}
+.homepage-explore-grid small{font-size:11px;color:#476485}
+.homepage-explore-grid .homepage-explore-moto{border:2px solid #bfdc00}
+@media(max-width:1050px){.desktop-primary-nav{display:none}.homepage-hero-inner{min-height:400px}.homepage-highlights strong{font-size:13px}.homepage-explore-grid a{padding:15px;min-height:130px}.homepage-explore-grid strong{font-size:15px}}
+@media(max-width:700px){.homepage-hero-inner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:29px 17px;gap:24px}.homepage-hero-copy h2{font-size:clamp(29px,7vw,42px)}.homepage-hero-copy p{margin-bottom:22px}.homepage-hero-button{font-size:16px;padding:13px 18px}.homepage-hero-car{left:35%;right:-10%;top:12%;bottom:47%;opacity:.32}.homepage-moto-card{min-height:210px;padding:18px;gap:16px}.homepage-moto-symbol{top:23%;right:9%;font-size:105px;opacity:.75}.homepage-moto-card strong{font-size:23px}.homepage-moto-button{align-self:flex-start;padding:10px 17px}.homepage-highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 0}.homepage-highlights>div:nth-child(2){border-right:0}.homepage-highlights i{font-size:23px}.homepage-explore-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.homepage-explore-grid a{min-width:155px;scroll-snap-align:start}.homepage-explore{padding-top:22px;padding-bottom:12px}}
+
+
+/* Electric bicycle section, reserved for future catalogue */
+.homepage-explore-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.homepage-explore-grid .homepage-explore-bike{border:2px solid #8ccde8}
+@media(max-width:700px){.homepage-explore-grid{display:flex}.vehicle-switch a{padding:7px 5px;font-size:11px;gap:5px}}
+@media(min-width:701px) and (max-width:1100px){.homepage-explore-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Refined reference-like homepage, keep all catalogue JavaScript untouched */
+.site-header .header-inner{width:min(1540px,100%);padding-inline:clamp(18px,2.5vw,42px)}
+.desktop-primary-nav{gap:clamp(14px,1.9vw,34px);margin-left:auto}
+.desktop-primary-nav a{font-weight:800;font-size:14px}
+.header-inner .vehicle-switch{margin-left:0;margin-right:0}
+@media(min-width:1180px){.header-inner .header-links{display:none}}
+.homepage-hero{background:linear-gradient(90deg,rgba(5,18,33,.65) 0%,rgba(5,18,33,.12) 60%,rgba(6,23,44,.10) 100%),url('/img/hero-electricos.jpg') center center/cover no-repeat,#183451}
+.homepage-hero-inner{width:min(1550px,100%);min-height:475px;grid-template-columns:minmax(0,1fr) minmax(320px,410px);gap:30px;padding:30px clamp(30px,3vw,48px)}
+.homepage-hero-copy{align-self:center}
+.homepage-hero-copy h2{font-size:clamp(34px,3.55vw,58px);line-height:1.08;letter-spacing:-1.6px;max-width:720px;margin:0 0 20px}
+.homepage-hero-copy p{font-size:clamp(18px,1.9vw,28px);margin-bottom:32px}
+.homepage-hero-button{background:#0759df;border-radius:20px;padding:17px 28px}
+.homepage-hero-car{left:31%;right:24%;top:24%;bottom:-2%;background-size:contain;filter:drop-shadow(0 16px 14px #0008)}
+.homepage-moto-card{min-height:415px;border-radius:30px;transform:skewX(-7deg);background:linear-gradient(160deg,rgba(20,55,98,.94),rgba(69,123,170,.85)),url('/img/hero-electricos.jpg') center/cover no-repeat}
+.homepage-moto-card>*{transform:skewX(7deg)}
+.homepage-moto-card strong{font-size:clamp(22px,2vw,30px);text-shadow:0 2px 5px #0004}
+.homepage-moto-symbol{top:38%;right:17%;font-size:140px;opacity:.85}
+.homepage-moto-button{background:#102b49;border-radius:15px;font-size:17px}
+.homepage-highlights{width:min(1540px,100%);padding-top:27px;padding-bottom:27px}
+.homepage-highlights>div{padding-inline:clamp(12px,2vw,28px)}
+.homepage-explore{width:min(1540px,100%);padding-top:30px;padding-bottom:20px}
+.homepage-explore-grid a{position:relative;overflow:hidden;min-height:190px;border-radius:21px;padding:18px;box-shadow:0 5px 12px #12243b12}
+.homepage-explore-grid a i{font-size:33px}
+.homepage-explore-grid a strong{font-size:17px;z-index:1}
+.homepage-explore-grid a:after{position:absolute;right:-4px;bottom:-11px;font-family:"Font Awesome 6 Free";font-weight:900;font-size:92px;line-height:1;color:#2257b8;opacity:.18}
+.homepage-explore-grid a:nth-child(1):after{content:"\\f1b9"}
+.homepage-explore-grid a:nth-child(2):after{content:"\\f21c"}
+.homepage-explore-grid a:nth-child(3):after{content:"\\f206"}
+.homepage-explore-grid a:nth-child(4):after{content:"\\e0e3"}
+.homepage-explore-grid a:nth-child(5):after{content:"\\f091"}
+.homepage-explore-grid a:nth-child(6):after{content:"\\f074"}
+.catalogue-main{padding-top:22px}
+@media(max-width:1100px){.homepage-hero-inner{min-height:400px;grid-template-columns:minmax(0,1fr) minmax(260px,340px)}.homepage-moto-card{min-height:330px}.homepage-hero-car{opacity:.65}}
+@media(max-width:700px){.homepage-hero-inner{display:flex;min-height:0;padding:30px 18px;gap:22px}.homepage-hero-copy h2{font-size:clamp(30px,7vw,42px)}.homepage-hero-car{left:36%;right:-8%;top:10%;bottom:45%;opacity:.25}.homepage-moto-card{transform:none;min-height:220px;border-radius:22px}.homepage-moto-card>*{transform:none}.homepage-moto-symbol{font-size:100px;top:35%;right:8%}.homepage-highlights{padding-top:18px;padding-bottom:18px}.homepage-explore-grid a{min-height:155px}}
+
+/* Single integrated automotive hero image */
+.homepage-hero{background:linear-gradient(90deg,rgba(4,17,33,.74) 0%,rgba(4,17,33,.38) 31%,rgba(4,17,33,.05) 67%,rgba(4,17,33,.05) 100%),url('/img/hero-electricos-nuevo.webp') center center/cover no-repeat,#193650}
+.homepage-hero-car{display:none!important}
+.homepage-hero-copy{max-width:660px}
+.homepage-hero-copy h2{text-shadow:0 3px 12px #0008}
+@media(max-width:700px){.homepage-hero{background-position:58% center}.homepage-hero-copy{position:relative;z-index:2}}
+
+/* Temporary removal of motorcycle hero window; keep motorcycle access elsewhere */
+.homepage-hero-inner{grid-template-columns:minmax(0,1fr)}
+.homepage-hero-copy{max-width:680px}
+
+/* Final explore buttons: suppress broken glyph codes and use intentional card graphics */
+.homepage-explore-grid a::after{content:none!important;display:none!important}
+.homepage-explore-grid{gap:15px}
+.homepage-explore-grid a{min-height:185px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:9px;padding:20px 18px 18px;background:linear-gradient(155deg,#ffffff 0%,#f4f8ff 62%,#e4edfb 100%);border:1px solid #d8e3f2;border-radius:21px;box-shadow:0 4px 12px #152b4314;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.homepage-explore-grid a:hover,.homepage-explore-grid a:focus-visible{transform:translateY(-4px);box-shadow:0 10px 22px #152b4324;border-color:#2456cd}
+.homepage-explore-grid a>i{font-size:31px;color:#1559c9;margin-bottom:5px}
+.homepage-explore-grid a>strong{font-size:18px;line-height:1.2;letter-spacing:-.3px}
+.homepage-explore-grid a>small{font-size:12px;color:#526b88;margin-top:auto}
+.homepage-explore-grid .homepage-explore-moto{border:2px solid #2759e4}
+.homepage-explore-grid .homepage-explore-bike{border:2px solid #84cce9}
+.homepage-explore-grid a:nth-child(1){background:linear-gradient(155deg,#fff,#eaf1ff)}
+.homepage-explore-grid a:nth-child(2){background:linear-gradient(155deg,#fff,#e8f1ff)}
+.homepage-explore-grid a:nth-child(3){background:linear-gradient(155deg,#fff,#e7f8ff)}
+.homepage-explore-grid a:nth-child(4){background:linear-gradient(155deg,#fff,#eaf1ff)}
+.homepage-explore-grid a:nth-child(5){background:linear-gradient(155deg,#fff,#e9f0ff)}
+.homepage-explore-grid a:nth-child(6){background:linear-gradient(155deg,#fff,#eaf1ff)}
+@media(max-width:700px){.homepage-explore-grid{display:flex;overflow-x:auto;gap:12px;padding-bottom:14px}.homepage-explore-grid a{flex:0 0 160px;min-height:160px;padding:15px}.homepage-explore-grid a>strong{font-size:16px}}
+
+/* Visual images inside Explore tiles, as in approved mockup */
+.homepage-explore-grid a{background-repeat:no-repeat!important;background-position:right bottom!important;background-size:auto 61%!important}
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/cars/tesla-model-y/modelY_01.webp')!important}
+.homepage-explore-grid a:nth-child(2){background-image:url('/img/home-moto.svg')!important;background-size:auto 69%!important}
+.homepage-explore-grid a:nth-child(3){background-image:url('/img/home-bike.svg')!important;background-size:auto 69%!important}
+.homepage-explore-grid a:nth-child(4){background-image:url('/img/home-market.svg')!important;background-size:auto 67%!important}
+.homepage-explore-grid a:nth-child(5){background-image:url('/img/home-ranking.svg')!important;background-size:auto 66%!important}
+.homepage-explore-grid a:nth-child(6){background-image:url('/img/home-compare.svg')!important;background-size:auto 65%!important}
+.homepage-explore-grid a>strong,.homepage-explore-grid a>i,.homepage-explore-grid a>small{position:relative;z-index:1;text-shadow:0 1px 1px #fff9}
+.homepage-explore-grid a>small{margin-top:0}
+@media(max-width:700px){.homepage-explore-grid a{background-size:auto 57%!important}}
+
+/* Reuse actual ranking cutouts in homepage buttons; never gallery photos or AI */
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/ranking/skoda-elroq-miniatura.webp')!important;background-size:96% auto!important;background-position:center bottom!important}
+.homepage-explore-grid a:nth-child(6){background-image:url('/img/ranking/byd-seal-miniatura.webp')!important;background-size:92% auto!important;background-position:center bottom!important}
+@media(max-width:700px){.homepage-explore-grid a:nth-child(1),.homepage-explore-grid a:nth-child(6){background-size:100% auto!important}}
+
+/* Explore cards v4: titles and artwork occupy separate, non-overlapping zones */
+.homepage-explore-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.homepage-explore-grid a{
+ position:relative;isolation:isolate;overflow:hidden;
+ min-width:0;min-height:214px;padding:17px 16px;
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+ gap:6px;background-color:#f6f9ff!important;
+ background-position:center bottom 7px!important;
+ background-size:90% auto!important;
+ border-radius:20px;
+}
+.homepage-explore-grid a>i{font-size:26px;line-height:1.1;margin:0 0 3px}
+.homepage-explore-grid a>strong{font-size:clamp(14px,1.05vw,18px);line-height:1.18;letter-spacing:-.25px;max-width:100%;position:relative;z-index:2}
+.homepage-explore-grid a>small{font-size:11px;line-height:1.1;margin:0;position:relative;z-index:2}
+.homepage-explore-grid a::before{content:"";position:absolute;inset:0 0 auto;height:115px;background:linear-gradient(to bottom,#fff 0%,#fff 75%,#ffffff00 100%);z-index:1;pointer-events:none}
+.homepage-explore-grid a:nth-child(1),.homepage-explore-grid a:nth-child(6){background-size:94% auto!important}
+.homepage-explore-grid a:nth-child(2),.homepage-explore-grid a:nth-child(3){background-size:92% auto!important}
+.homepage-explore-grid a:nth-child(4),.homepage-explore-grid a:nth-child(5){background-size:85% auto!important}
+@media(max-width:1100px) and (min-width:701px){.homepage-explore-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.homepage-explore-grid a{min-height:225px}.homepage-explore-grid a>strong{font-size:18px}.homepage-explore-grid a:nth-child(n){background-size:auto 49%!important}}
+@media(max-width:700px){.homepage-explore-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;padding-bottom:15px}.homepage-explore-grid a{flex:0 0 180px;min-height:205px;scroll-snap-align:start}.homepage-explore-grid a>strong{font-size:16px}.homepage-explore-grid a:nth-child(n){background-size:92% auto!important}}
+
+/* Compact visual cards: exact hierarchy from approved screenshot */
+.homepage-explore-grid{gap:13px}
+.homepage-explore-grid a{min-height:0;height:204px;padding:16px 13px;background-position:center bottom 4px!important;background-size:92% auto!important;border-radius:19px}
+.homepage-explore-grid a::before{height:96px;background:linear-gradient(#fff 0%,#fff 75%,#ffffff00 100%)}
+.homepage-explore-grid .explore-heading{position:relative;z-index:2;display:flex;align-items:flex-start;gap:11px;width:100%}
+.homepage-explore-grid .explore-heading>i{font-size:27px;line-height:1.15;color:#1256c1;flex:0 0 29px}
+.homepage-explore-grid .explore-heading-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.homepage-explore-grid .explore-heading-copy strong{font-size:clamp(13px,1.05vw,17px);line-height:1.18;letter-spacing:-.25px;color:#10243e}
+.homepage-explore-grid .explore-heading-copy small{font-size:11px;color:#627893;line-height:1.15}
+.homepage-explore-grid a:nth-child(1),.homepage-explore-grid a:nth-child(6){background-size:98% auto!important}
+.homepage-explore-grid a:nth-child(2),.homepage-explore-grid a:nth-child(3){background-size:87% auto!important}
+.homepage-explore-grid a:nth-child(4),.homepage-explore-grid a:nth-child(5){background-size:78% auto!important}
+@media(min-width:1300px){.homepage-explore-grid a{height:200px}.homepage-explore-grid .explore-heading-copy strong{font-size:17px}}
+@media(min-width:701px) and (max-width:1100px){.homepage-explore-grid a{height:210px}.homepage-explore-grid .explore-heading-copy strong{font-size:17px}}
+@media(max-width:700px){.homepage-explore-grid a{height:190px;flex-basis:175px;padding:14px 11px}.homepage-explore-grid .explore-heading{gap:8px}.homepage-explore-grid .explore-heading>i{font-size:23px;flex-basis:25px}.homepage-explore-grid .explore-heading-copy strong{font-size:14px}.homepage-explore-grid a:nth-child(n){background-size:95% auto!important}}
+
+/* Actual cutout car imagery and three-car comparison, as in the reference */
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/ranking/byd-seal-miniatura.webp')!important;background-position:center bottom 2px!important;background-size:94% auto!important}
+.homepage-explore-grid a:nth-child(6){background-image:none!important}
+.homepage-explore-grid a:nth-child(6)::after{content:""!important;display:block!important;position:absolute;left:3%;right:3%;bottom:3px;height:45%;background:url('/img/ranking/byd-seal-miniatura.webp') left bottom/63% auto no-repeat,url('/img/ranking/skoda-elroq-miniatura.webp') center bottom/63% auto no-repeat,url('/img/ranking/byd-seal-miniatura.webp') right bottom/63% auto no-repeat;z-index:0;pointer-events:none}
+.homepage-explore-grid a:nth-child(4){background-image:url('/img/home-market.svg')!important}
+@media(max-width:700px){.homepage-explore-grid a:nth-child(1){background-size:95% auto!important}.homepage-explore-grid a:nth-child(6)::after{height:43%}}
+
+/* Approved white Model Y artwork for Coches eléctricos tile */
+.homepage-explore-grid a:nth-child(1){background-image:url('/img/tesla-model-y-portada.webp')!important;background-position:center bottom 2px!important;background-size:96% auto!important}
+@media(max-width:700px){.homepage-explore-grid a:nth-child(1){background-size:96% auto!important}}
+
+/* Soft ground shadow beneath the white car, not around the card */
+.homepage-explore-grid a:nth-child(1){background-image:none!important}
+.homepage-explore-grid a:nth-child(1)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:9%;right:9%;bottom:6px;height:17px;
+ border-radius:50%;background:rgba(20,38,60,.24);
+ filter:blur(9px);z-index:0;pointer-events:none;
+}
+.homepage-explore-grid a:nth-child(1) .explore-car-image{
+ position:absolute;bottom:10px;left:2%;width:96%;height:58%;
+ object-fit:contain;object-position:center bottom;z-index:1;
+ filter:drop-shadow(0 5px 3px rgba(22,38,58,.16));
+ pointer-events:none;
+}
+@media(max-width:700px){.homepage-explore-grid a:nth-child(1) .explore-car-image{height:55%}}
+
+/* Match the approved cutout thumbnail: shadow follows the car silhouette */
+.homepage-explore-grid a:nth-child(1)::after{display:none!important;content:none!important}
+.homepage-explore-grid a:nth-child(1) .explore-car-image{
+ filter:drop-shadow(0 8px 4px rgba(21,32,46,.26)) drop-shadow(0 3px 2px rgba(21,32,46,.12))!important;
+}
+
+/* Approved Silence scooter image for homepage motorcycles tile */
+.homepage-explore-grid a:nth-child(2){background-image:url('/img/silence-portada-transparent.webp')!important;background-position:center bottom!important;background-size:100% auto!important}
+
+/* Approved ground-shadow versions; multiply hides the near-white baked checker background */
+.homepage-explore-grid a:nth-child(1){background-image:none!important}
+.homepage-explore-grid a:nth-child(1) .explore-car-image{content:url('/img/tesla-ombra-portada.webp');mix-blend-mode:multiply;filter:none!important}
+.homepage-explore-grid a:nth-child(2){background-image:none!important}
+.homepage-explore-grid a:nth-child(2)::after{content:""!important;position:absolute;inset:35% 0 0;display:block!important;background:url('/img/silence-ombra-portada.webp') center bottom/contain no-repeat;mix-blend-mode:multiply;pointer-events:none;z-index:0}
+
+/* Final transparent approved artwork: no multiply blending */
+.homepage-explore-grid a:nth-child(1) .explore-car-image{content:url('/img/tesla-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important;filter:none!important}
+.homepage-explore-grid a:nth-child(2)::after{background-image:url('/img/silence-ombra-portada-TRANSPARENT.webp')!important;mix-blend-mode:normal!important}
+
+/* Silence: smaller and lower so the heading remains fully readable */
+.homepage-explore-grid a:nth-child(2)::after{
+ inset:auto 9% 2px 9%!important;
+ height:58%!important;
+ background-size:contain!important;
+ background-position:center bottom!important;
+}
+
+/* Motorcycle uses the same positioning model as the car, with native alpha */
+.homepage-explore-grid a:nth-child(2){background-image:none!important}
+.homepage-explore-grid a:nth-child(2)::after{content:none!important;display:none!important}
+.homepage-explore-grid a:nth-child(2) .explore-moto-image{
+ position:absolute;bottom:10px;left:6%;width:88%;height:58%;
+ object-fit:contain;object-position:center bottom;z-index:1;
+ mix-blend-mode:normal!important;filter:none!important;pointer-events:none;
+}
+.homepage-explore-grid a:nth-child(2) .explore-heading{position:relative;z-index:2}
+
+/* Car slightly smaller and offset to the right for balanced composition */
+.homepage-explore-grid a:nth-child(1) .explore-car-image{
+ left:10%!important;width:84%!important;height:54%!important;
+ bottom:10px!important;object-position:center bottom!important;
+}
+
+/* Silence: a touch higher and shifted right, preserving transparent WebP */
+.homepage-explore-grid a:nth-child(2) .explore-moto-image{
+ left:12%!important;
+ bottom:17px!important;
+}
+
+/* Approved S-Works electric MTB cutout, aligned with car and scooter */
+.homepage-explore-grid a:nth-child(3){background-image:none!important}
+.homepage-explore-grid a:nth-child(3) .explore-bike-image{
+ position:absolute;left:5%;bottom:10px;width:90%;height:58%;
+ object-fit:contain;object-position:center bottom;z-index:1;
+ mix-blend-mode:normal;pointer-events:none;
+}
+.homepage-explore-grid a:nth-child(3) .explore-heading{position:relative;z-index:2}
+
+/* Compact homepage: six exploration cards immediately below hero */
+.homepage-explore{padding-top:16px!important;padding-bottom:28px!important}
+@media(max-width:700px){.homepage-explore{padding-top:12px!important}}
+
+/* Smaller S-Works image with darker ground shadow */
+.homepage-explore-grid a:nth-child(3) .explore-bike-image{
+ left:10%!important;width:80%!important;height:53%!important;
+ bottom:10px!important;
+}
+
+/* Reduce bicycle another step, keeping it centered and grounded */
+.homepage-explore-grid a:nth-child(3) .explore-bike-image{
+ left:15%!important;width:70%!important;height:47%!important;
+ bottom:10px!important;
+}
+
+/* Approved seven-bar market chart asset */
+.homepage-explore-grid a:nth-child(4){background-image:none!important}
+.homepage-explore-grid a:nth-child(4)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:8%;right:8%;bottom:9px;height:59%;width:auto;
+ background:url('/img/mercado-electrico-grafico.webp') center bottom/contain no-repeat!important;
+ pointer-events:none;z-index:1;
+}
+.homepage-explore-grid a:nth-child(4) .explore-heading{position:relative;z-index:2}
+
+/* Approved transparent podium artwork for ranking tile */
+.homepage-explore-grid a:nth-child(5){background-image:none!important}
+.homepage-explore-grid a:nth-child(5)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:8%;right:8%;bottom:10px;height:58%;width:auto;
+ background:url('/img/podi-ranking-transparent.webp') center bottom/contain no-repeat!important;
+ pointer-events:none;z-index:1;
+}
+.homepage-explore-grid a:nth-child(5) .explore-heading{position:relative;z-index:2}
+
+/* Final approved three-car artwork for comparison tile */
+.homepage-explore-grid a:nth-child(6){background-image:none!important}
+.homepage-explore-grid a:nth-child(6)::after{
+ content:""!important;display:block!important;position:absolute;
+ left:2%;right:2%;bottom:9px;height:55%;width:auto;
+ background:url('/img/comparar-tres-cotxes-transparent.webp') center bottom/contain no-repeat!important;
+ z-index:1;pointer-events:none;
+}
+.homepage-explore-grid a:nth-child(6) .explore-heading{position:relative;z-index:2}
+
+/* Restore soft blue tile backgrounds behind transparent artwork */
+.homepage-explore-grid a:nth-child(4),
+.homepage-explore-grid a:nth-child(5),
+.homepage-explore-grid a:nth-child(6){
+ background-image:linear-gradient(155deg,#fff 28%,#e6f0ff 100%)!important;
+}
+
+/* Compensate for excessively low alpha in exported market, podium and compare WebPs.
+   Layering the same image increases opacity without affecting transparent pixels. */
+.homepage-explore-grid a:nth-child(4)::after{
+ background-image:url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp'),url('/img/mercado-electrico-grafico.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
+.homepage-explore-grid a:nth-child(5)::after{
+ background-image:url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp'),url('/img/podi-ranking-transparent.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ background-image:url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp'),url('/img/comparar-tres-cotxes-transparent.webp')!important;
+ background-position:center bottom,center bottom,center bottom,center bottom,center bottom,center bottom!important;
+ background-size:contain,contain,contain,contain,contain,contain!important;
+ background-repeat:no-repeat!important;
+}
+
+/* Slightly smaller bicycle, retaining bottom alignment */
+.homepage-explore-grid a:nth-child(3) .explore-bike-image{left:18%!important;width:64%!important;height:43%!important;bottom:10px!important}
+
+/* Raise the bicycle slightly without changing its size */
+.homepage-explore-grid a:nth-child(3) .explore-bike-image{bottom:18px!important}
+
+/* Remove washed-out white appearance on the three right-hand illustrations */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after,
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:contrast(2.2) saturate(1.7) brightness(.9)!important;
+}
+
+/* Hide quick-action filter buttons only in Rankings, not Mercado or Catálogo */
+body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
+
+/* Desktop homepage: show the complete six-card row without scrolling */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:350px!important;padding-top:20px!important;padding-bottom:20px!important}
+ .homepage-explore{padding-top:12px!important;padding-bottom:14px!important}
+ .homepage-explore-grid a{height:176px!important}
+ .homepage-explore-grid a:nth-child(1) .explore-car-image{height:55%!important}
+ .homepage-explore-grid a:nth-child(2) .explore-moto-image{height:58%!important}
+ .homepage-explore-grid a:nth-child(3) .explore-bike-image{height:47%!important}
+}
+/* Stronger artwork: avoid the washed-out appearance of the transparent exports */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after{
+ filter:brightness(.58) contrast(1.55) saturate(2.6)!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:brightness(.72) contrast(2.2) saturate(1.5) drop-shadow(0 3px 2px #253c5966)!important;
+}
+
+/* Give hero and tiles a little more breathing room; keep next section below fold */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:385px!important}
+ .homepage-explore-grid a{height:187px!important}
+}
+
+/* Fix actual low-opacity exports by amplifying alpha, not darkening pale pixels */
+.homepage-explore-grid a:nth-child(4)::after{
+ background-image:url('/img/mercado-electrico-grafico.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
+.homepage-explore-grid a:nth-child(5)::after{
+ background-image:url('/img/podi-ranking-transparent.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ background-image:url('/img/comparar-tres-cotxes-transparent.webp')!important;
+ background-size:contain!important;background-position:center bottom!important;
+ background-repeat:no-repeat!important;filter:url(#tile-alpha-boost)!important;
+}
+
+/* Restore visible color and opacity in the three excessively pale WebP assets */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after,
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:url(#tile-color-recover)!important;
+}
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:455px!important}
+}
+
+/* Direct, browser-compatible recovery of pale artwork: avoid unsupported SVG filters */
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after{
+ filter:brightness(.38) contrast(2.1) saturate(3)!important;
+ opacity:1!important;
+}
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:brightness(.43) contrast(2.3) saturate(1.3)!important;
+ opacity:1!important;
+}
+
+/* Homepage hero: taller image and framing that keeps the car roof in view */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:490px!important}
+ .homepage-hero{background-position:center center,center 30%!important}
+}
+
+/* Final desktop hero framing and original, unfiltered tile artwork */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:465px!important}
+ .homepage-hero{background-position:center center,center 30%!important}
+}
+.homepage-explore-grid a:nth-child(4)::after,
+.homepage-explore-grid a:nth-child(5)::after,
+.homepage-explore-grid a:nth-child(6)::after{
+ filter:none!important;opacity:1!important;
+}
+
+/* Hero 10px shorter and background centered vertically */
+@media(min-width:1101px){
+ .homepage-hero-inner{min-height:455px!important}
+ .homepage-hero{background-position:center center,center center!important}
+}
+
+/* Highlight the ranking priority selector while preserving native select behavior */
+#ranking-panel:not([hidden]){
+ display:grid!important;
+ grid-template-columns:max-content minmax(0,1fr);
+ align-items:center;gap:12px 22px;
+ padding:20px 24px!important;
+ border:2px solid #2474ff!important;border-radius:16px!important;
+ background:linear-gradient(120deg,#e4efff 0%,#f0f5ff 56%,#dceaff 100%)!important;
+ box-shadow:0 8px 20px rgba(28,91,190,.14)!important;
+}
+#ranking-panel label[for="ranking-metric"]{
+ display:flex;align-items:center;gap:12px;
+ font-size:clamp(16px,1.2vw,21px)!important;
+ font-weight:800!important;color:#102a57!important;
+}
+#ranking-panel label[for="ranking-metric"]::before{
+ content:"";width:30px;height:30px;flex:none;
+ background:#1266e8;
+ clip-path:polygon(0 40%,40% 0,100% 0,100% 60%,60% 100%);
+ border-radius:6px;
+}
+#ranking-panel #ranking-metric{
+ width:100%!important;min-width:0;min-height:52px!important;
+ border:1.5px solid #9ab9ef!important;border-radius:11px!important;
+ background-color:#fff!important;color:#162a42!important;
+ font-size:clamp(16px,1.12vw,20px)!important;
+ padding:10px 16px!important;
+ box-shadow:0 2px 5px rgba(30,72,150,.04)!important;
+}
+#ranking-panel #ranking-explanation{
+ grid-column:1/-1;margin:0!important;
+ color:#3e587a!important;font-size:clamp(13px,1vw,17px)!important;
+}
+@media(max-width:750px){
+ #ranking-panel:not([hidden]){grid-template-columns:1fr;padding:15px!important;gap:10px}
+ #ranking-panel #ranking-explanation{grid-column:1}
+}
+/* Reference design: blue tag wedge, white pill, strong selector and button */
+#ranking-panel:not([hidden]){display:grid!important;grid-template-columns:minmax(370px,1.45fr) minmax(280px,1fr) auto!important;align-items:center!important;gap:20px!important;padding:12px 14px 12px 0!important;border:2px solid #dbe8fa!important;border-radius:30px!important;background:#fff!important;box-shadow:0 12px 25px #1c62b51b!important;overflow:visible!important}
+#ranking-panel .ranking-intro{display:flex;align-items:center;gap:22px;min-width:0}
+#ranking-panel .ranking-tag-icon{position:relative;display:grid;place-items:center;flex:none;width:106px;height:100px;background:linear-gradient(135deg,#079bff,#0757e8);color:#fff;border-radius:27px 0 0 27px;font-size:35px;clip-path:polygon(0 0,100% 0,72% 100%,0 100%);box-shadow:none}
+#ranking-panel .ranking-intro>div{padding-left:16px;border-left:2px solid #d5e2f2}
+#ranking-panel .ranking-intro label{display:block!important;font-size:clamp(17px,1.45vw,25px)!important;font-weight:850!important;line-height:1.2;color:#0b2052!important;letter-spacing:-.035em}
+#ranking-panel .ranking-intro label::before{display:none!important}
+#ranking-panel .ranking-intro small{display:block;margin-top:7px;color:#506987;font-size:clamp(12px,1vw,16px)}
+#ranking-panel #ranking-metric{height:64px!important;min-height:64px!important;width:100%!important;border:2px solid #0068ff!important;border-radius:17px!important;background:#fff!important;color:#0b2052!important;font-size:clamp(15px,1.15vw,19px)!important;font-weight:800!important;padding:10px 17px!important;box-shadow:0 3px 9px #0b5dd01a!important}
+#ranking-panel .ranking-show-results{display:flex;align-items:center;justify-content:center;gap:14px;min-height:64px;padding:0 25px;background:linear-gradient(115deg,#087dff,#004de7);color:white;border:0;border-radius:18px;font-weight:800;font-size:clamp(15px,1.12vw,19px);white-space:nowrap;cursor:pointer;box-shadow:0 6px 14px #0959d72b}
+#ranking-panel .ranking-show-results:hover{background:linear-gradient(115deg,#006ce8,#003ec0)}
+#ranking-panel #ranking-explanation{display:none!important}
+@media(max-width:1100px){#ranking-panel:not([hidden]){grid-template-columns:1fr!important;padding:12px!important;gap:12px!important}#ranking-panel .ranking-tag-icon{height:74px;width:80px;border-radius:18px 0 0 18px}#ranking-panel .ranking-show-results{width:100%}}
+</style>
+<style id="homepage-cards-unified">
+.homepage-explore-grid>a{border:1px solid #d4e1f4!important;box-shadow:0 5px 18px rgba(24,58,106,.07);transition:border-color .2s,box-shadow .2s,transform .2s}
+.homepage-explore-grid>a:hover,.homepage-explore-grid>a:focus-visible{border:2px solid #285cf2!important;box-shadow:0 8px 24px rgba(35,83,205,.15);transform:translateY(-2px)}
+body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-modal,body.home-only #photo-lightbox,body.home-only #compare-modal{display:none!important}
+body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
+</style>
+<style id="brand-embed-styles">
+html.brand-embed-root .site-header,html.brand-embed-root header.site-header,
+html.brand-embed-root .homepage-hero,html.brand-embed-root .homepage-explore,
+html.brand-embed-root #page-title,html.brand-embed-root .catalogue-tabs,
+html.brand-embed-root footer,html.brand-embed-root .site-footer,
+body.brand-embed .site-header,body.brand-embed header.site-header,
+body.brand-embed .homepage-hero,body.brand-embed .homepage-explore,
+body.brand-embed #page-title,body.brand-embed .catalogue-tabs,
+body.brand-embed footer,body.brand-embed .site-footer{display:none!important}
+html.brand-embed-root body{background:#fff!important}
+html.brand-embed-root .catalogue-main{padding-top:0!important;margin-top:0!important}
+html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-count,html.brand-embed-root #cars-grid{scroll-margin-top:0}
+</style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script></head>
+<body class="catalogue-only antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
+    <a href="#hero-search" class="skip-link">Ir al buscador</a>
+    <header class="site-header">
+        <div class="site-width header-inner">
+            <a href="./" class="site-brand" aria-label="electricos.eu, inicio">
+                <span class="brand-icon" aria-hidden="true"></span>
+                <span class="brand-wordmark"><span>electricos<span class="brand-suffix">.eu</span></span><span class="brand-tagline">Comparador independiente</span></span>
+            </a>
+            <nav class="desktop-primary-nav" aria-label="Navegación principal"><a href="/comparador/">Comparador</a><a href="/mercado-electrico/">Mercado</a><a href="/ranking/">Ranking</a><a href="/marcas/">Marcas</a></nav>
+            <nav class="vehicle-switch" aria-label="Tipo de vehículo"><a href="/" class="is-active" aria-current="page"><i class="fa-solid fa-car-side"></i> Coches</a><a href="/motos/"><i class="fa-solid fa-motorcycle"></i> Motos</a><a href="/bicicletas/"><i class="fa-solid fa-bicycle"></i> Bicicletas</a></nav>
+            <nav class="header-links" aria-label="Redes y contacto">
+                <a href="mailto:electricos.eu@gmail.com" aria-label="Correo electrónico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/electricos.eu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            </nav>
+        </div>
+    </header>
+    <section class="homepage-hero" aria-label="Comparadores de vehículos eléctricos"><div class="homepage-hero-inner"><div class="homepage-hero-copy"><h2>COMPARADOR DE<br>COCHES ELÉCTRICOS</h2><p>Sin opiniones. Solo datos.</p><a href="/comparador/" class="homepage-hero-button">Comparar coches <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div><div class="homepage-hero-car" role="img" aria-label="Tesla Model Y eléctrico"></div></div></section>
+<section class="homepage-explore site-width" aria-label="Explora electricos.eu"><div class="homepage-explore-grid"><a href="/comparador/"><span class="explore-heading"><i class="fa-solid fa-car-side" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Coches<br>eléctricos</strong></span></span><img class="explore-car-image" src="/img/tesla-model-y-portada.webp" alt="" loading="lazy" decoding="async"></a><a href="/motos/" class="homepage-explore-moto"><span class="explore-heading"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Motos<br>eléctricas</strong><small>Próximamente</small></span></span><img class="explore-moto-image" src="/img/silence-ombra-portada-TRANSPARENT.webp" alt="" loading="lazy" decoding="async"></a><a href="/bicicletas/" class="homepage-explore-bike"><span class="explore-heading"><i class="fa-solid fa-bicycle" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Bicicletas<br>eléctricas</strong><small>Próximamente</small></span></span><img class="explore-bike-image" src="/img/bicicleta-sworks-ombra-fosca-transparent.webp" alt="" loading="lazy" decoding="async"></a><a href="/mercado-electrico/"><span class="explore-heading"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Mercado<br>eléctrico</strong></span></span></a><a href="/ranking/"><span class="explore-heading"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Ranking<br>de coches</strong></span></span></a><a href="/comparador/"><span class="explore-heading"><i class="fa-solid fa-code-compare" aria-hidden="true"></i><span class="explore-heading-copy"><strong>Comparar<br>hasta 4 coches</strong></span></span></a></div></section>
+<main class="site-width catalogue-main">
+        <section class="catalogue-intro" aria-labelledby="page-title">
+            <h1 id="page-title">EXPLORA LAS MOTOS ELÉCTRICAS</h1>
+            <div class="catalogue-tabs" role="group" aria-label="Explorar coches">
+                <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="window.location.href='/comparador/'">Catálogo</button>
+                <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="window.location.href='/ranking/'"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
+                <a href="/mercado-electrico/" class="market-tab-link"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Mercado eléctrico</a>
+                <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
+            </div>
+        </section>
+        <section id="catalogue-controls-anchor" class="catalogue-controls" aria-label="Buscar y filtrar coches">
+            <div class="search-row">
+                <label class="catalogue-search" for="hero-search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span class="sr-only">Buscar marca, modelo o tipo de coche</span>
+                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca, modelo o tipo de coche" autocomplete="off" aria-controls="cars-grid">
+                </label>
+                <button type="button" id="filters-toggle" class="filter-toggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="filters-panel"><i class="fa-solid fa-filter" aria-hidden="true"></i> Filtros <span id="active-filter-count" hidden></span><i id="filter-toggle-icon" class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+            </div>
+            <div id="quick-mobile" class="quick-filters" role="group" aria-label="Filtros rápidos">
+                <button type="button" data-quick="all" onclick="resetFilters()" class="quick-filter" aria-pressed="true"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Todos</button>
+                <button type="button" data-quick="30000" onclick="applyQuickFilter('price',30000,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> ≤30k €</button>
+                <button type="button" data-quick="500" onclick="applyQuickFilter('range',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 500+ km</button>
+                <button type="button" data-quick="7" onclick="applyQuickFilter('seats',7,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 7 plazas</button>
+                <button type="button" data-quick="suv" onclick="applyQuickFilter('body','suv',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car-side" aria-hidden="true"></i> SUV</button>
+                <button type="button" data-quick="utilitario" onclick="applyQuickFilter('body','utilitario',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car" aria-hidden="true"></i> Urbanos</button>
+                <button type="button" data-quick="trunk500" onclick="applyQuickFilter('trunk',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-suitcase" aria-hidden="true"></i> Maletero 500+</button>
+                <button type="button" data-quick="400" onclick="applyQuickFilter('range',400,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 400+ km</button>
+            </div>
+            <div id="filters-panel" hidden>
+                <div class="filter-fields">
+                    <div class="filter-field"><label for="body-filter">Tipo de coche</label><select id="body-filter" onchange="filterCars()"><option value="">Todos</option><option value="utilitario">Utilitario / Urbano</option><option value="compacto">Compacto</option><option value="suv">SUV / Crossover</option><option value="berlina">Sedán / Berlina</option><option value="furgoneta">Furgoneta / Monovolumen</option></select></div>
+                    <div class="filter-field"><label for="seats-filter">Plazas mínimas</label><select id="seats-filter" onchange="filterCars()"><option value="">Cualquiera</option><option value="5">5 plazas</option><option value="6">6 plazas</option><option value="7">7 plazas</option></select></div>
+                    <div class="filter-field"><label for="trunk-filter">Maletero mínimo</label><select id="trunk-filter" onchange="filterCars()"><option value="0">Cualquiera</option><option value="300">300 L</option><option value="400">400 L</option><option value="500">500 L</option><option value="600">600 L</option></select></div>
+                    <div class="filter-field"><label for="range-filter">Autonomía mínima <output id="range-val" for="range-filter">0 km</output></label><input type="range" id="range-filter" min="0" max="700" step="50" value="0" oninput="filterCars()"></div>
+                    <div class="filter-field"><label for="price-filter">Precio máximo <output id="price-val" for="price-filter">Sin límite</output></label><input type="range" id="price-filter" min="15000" max="90000" step="5000" value="90000" oninput="filterCars()"></div>
+                    <div class="filter-reset"><button type="button" onclick="resetFilters()"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Limpiar filtros</button><small>Precios sin ayudas públicas</small></div>
+                </div>
+            </div>
+            <div id="ranking-panel" hidden>
+                <div class="ranking-intro"><span class="ranking-tag-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></span><div><label for="ranking-metric">¿Qué es lo más importante para ti?</label><small>Elige tu prioridad y encuentra tu eléctrico ideal</small></div></div>
+                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option><option value="powerDesc">Mayor potencia del motor</option><option value="accelerationAsc">Mejor aceleración (0–100 km/h)</option><option value="chargingDesc">Carga rápida (kW)</option></select>
+                <button type="button" class="ranking-show-results" onclick="document.getElementById('catalogue-results').scrollIntoView({behavior:'smooth',block:'start'})"><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Ver ranking <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <p id="ranking-explanation" class="sr-only">Orden por precio de acceso, sin ayudas.</p>
+            </div>
+        </section>
+        <section id="catalogue-results" aria-label="Resultados del catálogo">
+            <div class="results-toolbar">
+                <p id="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+                <label class="sort-control" for="sort-filter"><span>Ordenar</span><select id="sort-filter" onchange="filterCars()"><option value="random">Aleatorio</option><option value="priceAsc">Precio: menor primero</option><option value="rangeDesc">Autonomía: mayor primero</option><option value="trunkDesc">Maletero: mayor primero</option><option value="brandAsc">Marca: A–Z</option></select></label>
+            </div>
+            <div id="cars-grid" class="cars-grid"></div>
+
+        </section>
+
+        <section id="vehicle-sales" hidden aria-labelledby="vehicle-sales-title">
+            <div class="sales-heading"><h2 id="vehicle-sales-title">Coches en venta</h2><p>Unidades de concesionarios. Contacta directamente con el profesional.</p></div>
+            <div class="sales-filters">
+                <div><label for="sales-search">Modelo o ubicación</label><input id="sales-search" type="search" placeholder="Marca, modelo o localidad" oninput="filterVehicleSales()"></div>
+                <div><label for="sales-condition">Estado</label><select id="sales-condition" onchange="filterVehicleSales()"><option value="">Todos</option><option value="new">Nuevo</option><option value="demo">Demostración</option><option value="used">Ocasión</option></select></div>
+                <div><label for="sales-price">Precio máximo</label><select id="sales-price" onchange="filterVehicleSales()"><option value="">Sin límite</option><option value="20000">20.000 €</option><option value="30000">30.000 €</option><option value="40000">40.000 €</option><option value="50000">50.000 €</option></select></div>
+            </div>
+            <div id="sales-model-note" hidden><button type="button" onclick="clearSalesModel()">Ver unidades de todos los modelos</button></div>
+            <p id="sales-results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div id="sales-grid" class="sales-grid"></div>
+        </section>
+
+        <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+                <div>
+                    <span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Matriculaciones · España</span>
+                    <h2 class="text-2xl sm:text-3xl font-black mt-2">Los eléctricos más vendidos</h2>
+                    <p id="ventas-periodo" class="text-sm text-slate-500 mt-2">Datos pendientes de publicación</p>
+                </div>
+                <div class="flex gap-2" role="group" aria-label="Periodo del ranking">
+                    <button id="ventas-mes-btn" type="button" aria-pressed="true" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white" onclick="showSalesRanking('month')">Último mes</button>
+                    <button id="ventas-ano-btn" type="button" aria-pressed="false" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700" onclick="showSalesRanking('year')">Acumulado anual</button>
+                </div>
+            </div>
+            <div id="ventas-ranking" aria-live="polite" class="space-y-2">
+                <p class="rounded-xl bg-slate-50 p-5 text-slate-600 text-sm">Preparando el ranking con datos oficiales de matriculaciones.</p>
+            </div>
+            <div class="mt-6 flex justify-center sm:justify-end"><a href="/mercado-electrico/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white no-underline shadow-sm transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Ver más datos del mercado <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+            <p class="text-xs text-slate-400 mt-5">Fuente oficial de referencia: <a href="https://www.dgt.es/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/dgt-en-cifras-detalle/Microdatos-de-Matriculaciones-de-Vehiculos-mensual/" target="_blank" rel="noopener noreferrer" class="underline">DGT · Microdatos de matriculaciones</a>. Cifras calculadas directamente a partir de los microdatos mensuales oficiales. Solo matriculaciones ordinarias de turismos nuevos 100 % eléctricos (BEV).</p>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div id="car-modal" role="dialog" aria-modal="true" aria-label="Ficha del coche"
+        class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden overflow-y-auto"
+        onclick="closeCarModal()">
+
+        <div class="min-h-full flex justify-center sm:items-start p-0 sm:p-5">
+
+            <div
+                class="bg-white sm:rounded-[2rem] max-w-5xl w-full sm:my-5 overflow-hidden shadow-2xl"
+                onclick="event.stopPropagation()">
+
+                <div id="modal-content" class="vehicle-detail"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- GALERÍA AMPLIADA: CAPA INDEPENDIENTE SOBRE LA FICHA -->
+    <div id="photo-lightbox" class="fixed inset-0 z-[100] hidden bg-black/95 text-white" role="dialog" aria-modal="true" aria-label="Galería de fotografías">
+        <div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-4">
+            <span id="lightbox-title" class="text-xs sm:text-sm font-bold text-white/80 truncate pr-4"></span>
+            <button onclick="closeLightbox()" class="w-11 h-11 shrink-0 rounded-full bg-white/15 hover:bg-white/25" aria-label="Cerrar galería"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="lightbox-stage" class="absolute inset-0 flex items-center justify-center overflow-hidden touch-pan-y" onclick="toggleLightboxZoom(event)">
+            <img id="lightbox-image" src="" alt="" draggable="false" class="max-w-full max-h-full object-contain select-none" style="max-height:calc(100dvh - 120px); transition:transform .2s ease; transform-origin:center center">
+        </div>
+        <button onclick="moveLightbox(-1)" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/55 hover:bg-white/20" aria-label="Fotografía anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="moveLightbox(1)" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/55 hover:bg-white/20" aria-label="Fotografía siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="absolute bottom-4 left-0 right-0 z-20 flex items-center justify-center gap-4 text-xs font-semibold text-white/80">
+            <span id="lightbox-count"></span>
+            <button onclick="toggleLightboxZoom(event)" id="lightbox-zoom" class="rounded-full bg-white/15 px-3 py-2" aria-label="Ampliar o reducir fotografía"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom</button>
+        </div>
+    </div>
+
+    <!-- COMPARE BAR -->
+    <div id="compare-bar" class="fixed bottom-0 left-0 right-0 z-40 hidden bg-slate-950/95 backdrop-blur border-t border-slate-800 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+                <div class="hidden sm:flex w-10 h-10 rounded-xl bg-blue-600 text-white items-center justify-center shrink-0"><i class="fa-solid fa-code-compare"></i></div>
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center justify-between gap-3">
+                        <div><div class="text-white text-xs font-extrabold uppercase tracking-wider">Comparador</div><div id="compare-count" class="text-[10px] text-slate-400 mt-0.5">0 de 4 vehículos</div></div>
+                        <button onclick="clearCompare()" class="sm:hidden text-[10px] font-bold text-slate-400">Limpiar</button>
+                    </div>
+                    <div id="compare-chips" class="flex gap-2 mt-2 overflow-x-auto hide-scrollbar"></div>
+                </div>
+            </div>
+            <div class="flex gap-2 shrink-0">
+                <button onclick="clearCompare()" class="hidden sm:block px-4 py-3 rounded-xl text-xs font-bold text-slate-300 hover:text-white">Limpiar</button>
+                <button id="compare-open-button" onclick="openCompareModal()" disabled class="flex-1 sm:flex-none bg-blue-600 disabled:bg-slate-700 disabled:text-slate-400 text-white px-5 py-3 rounded-xl text-xs font-extrabold transition">Comparar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPARE MODAL -->
+    <div id="compare-modal" role="dialog" aria-modal="true" aria-label="Comparar vehículos" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-[60] hidden overflow-y-auto" onclick="closeCompareModal()">
+        <div class="min-h-full flex justify-center sm:items-start p-0 sm:p-5">
+            <div class="bg-white sm:rounded-[2rem] max-w-6xl w-full sm:my-5 min-h-screen sm:min-h-0 overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+                <div id="compare-modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-white border-t border-slate-200 mt-16">
+
+        <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+
+            <p class="font-black">
+                electricos<span class="text-blue-600">.eu</span>
+            </p>
+
+            <p class="text-xs text-slate-400 mt-2">
+                Comparador independiente de vehículos eléctricos.
+            </p>
+            <nav class="header-links justify-center mt-3" aria-label="Redes sociales">
+                <a href="https://www.youtube.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/electricos.eu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@electricoseu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            </nav>
+
+            <p class="text-[11px] text-slate-400 mt-4">
+                © 2026 electricos.eu · Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- DATABASE -->
+    <script>const motorcycles = [
  {brand:'Silence',model:'S01',category:'Escúter',licenses:['A1','A','B'],priceEur:4190,rangeKm:133,powerKw:7,peakPowerKw:9,batteryKwh:5.6,topSpeedKmh:110,accel0050Sec:3.6,accel0100Sec:null,dcChargeKw:null,chargeText:'7–9 h en enchufe; intercambio de batería disponible',image:'/img/silence-ombra-portada-TRANSPARENT.webp',source:'https://www.silence.eco/es/productos/s02',note:'Precio con batería en propiedad; comprobar condiciones y versión'},
  {brand:'BMW',model:'CE 04',category:'Escúter',licenses:['A2','A'],priceEur:12260,rangeKm:130,powerKw:15,peakPowerKw:31,batteryKwh:8.9,topSpeedKmh:120,accel0050Sec:2.6,accel0100Sec:null,dcChargeKw:null,acChargeKw:6.9,chargeText:'AC 2,3 kW; 6,9 kW opcional (0–80 % en 65 min)',source:'https://www.bmw-motorrad.es/es/models/urban_mobility/ce04/technicaldata.html',note:'Versión nominal 15 kW; la versión de 11 kW tiene otros datos'},
  {brand:'Zero',model:'SR/F',category:'Moto',licenses:['A'],priceEur:null,rangeKm:283,powerKw:35,peakPowerKw:83,batteryKwh:17.3,topSpeedKmh:200,accel0100Sec:null,dcChargeKw:null,chargeText:'Consultar carga según versión',source:'https://zeromotorcycles.com/es-es/model/zero-srf?color=Limited+Edition',note:'Autonomía urbana; precio español pendiente de verificación'}
 ];
-const $ = id => document.getElementById(id);
-const fmt = n => n == null ? 'Pendiente' : Number(n).toLocaleString('es-ES');
-const empty = (title,description) => '<div class="moto-empty"><i class="fa-solid fa-motorcycle"></i><strong>'+title+'</strong><span>'+description+'</span></div>';
-function motorcycleList(sort,filters=true){
- let items=motorcycles.filter(m=>!filters||(m.brand+' '+m.model).toLowerCase().includes($('moto-search').value.trim().toLowerCase()));
- if(filters){const type=$('moto-type').value,brand=$('moto-brand').value,range=Number($('moto-range').value),license=$('moto-license').value,price=Number($('moto-price').value),power=Number($('moto-power').value),accel=Number($('moto-accel').value),speed=Number($('moto-speed').value),charge=$('moto-charge').value;items=items.filter(m=>(!type||m.category===type)&&(!brand||m.brand===brand)&&(!range||(m.rangeKm!=null&&m.rangeKm>=range))&&(!license||(Array.isArray(m.licenses)&&m.licenses.includes(license)))&&(!price||(m.priceEur!=null&&m.priceEur<=price))&&(!power||(m.powerKw!=null&&m.powerKw>=power))&&(!accel||(m.accel0100Sec!=null&&m.accel0100Sec<=accel))&&(!speed||(m.topSpeedKmh!=null&&m.topSpeedKmh>=speed))&&(!charge||m.dcChargeKw>0));}
- items.sort((a,b)=>sort==='range'?(b.rangeKm??-1)-(a.rangeKm??-1):sort==='power'?(b.powerKw??-1)-(a.powerKw??-1):sort==='charge'?(b.dcChargeKw??-1)-(a.dcChargeKw??-1):sort==='speed'?(b.topSpeedKmh??-1)-(a.topSpeedKmh??-1):sort==='accel'?(a.accel0100Sec??Infinity)-(b.accel0100Sec??Infinity):(a.priceEur??Infinity)-(b.priceEur??Infinity));
- return items;
-}
-const selectedMotorcycles=new Set();
-function motorcyclePhoto(m){return m.image?'<img src="'+m.image+'" alt="'+m.brand+' '+m.model+'" loading="lazy">':'<div class="no-photo"><i class="fa-solid fa-motorcycle" style="font-size:60px"></i></div>'}
-function card(m,i,rank=false){const id=m.brand+'-'+m.model,idx=motorcycles.indexOf(m),chosen=selectedMotorcycles.has(idx);return '<article class="car-card"><div class="car-photo"><button type="button" class="car-photo-link" onclick="openMoto('+idx+')" aria-label="Ver ficha">'+motorcyclePhoto(m)+'</button><span class="car-type">'+(rank?'#'+(i+1)+' · ':'')+m.category+'</span></div><div class="car-content"><div class="car-brand">'+m.brand.toUpperCase()+'</div><h2 class="car-title"><button type="button" onclick="openMoto('+idx+')">'+m.model.toUpperCase()+'</button></h2><div class="car-primary-specs"><div><i class="fa-solid fa-tag"></i><strong>'+(m.priceEur==null?'Por verificar':fmt(m.priceEur)+' €')+'</strong><small>Precio sin ayudas</small></div><div><i class="fa-solid fa-road"></i><strong>'+fmt(m.rangeKm)+' km</strong><small>Autonomía</small></div></div><div class="car-secondary-specs"><div><i class="fa-solid fa-bolt"></i><strong>'+fmt(m.peakPowerKw)+' kW</strong><small>Potencia máxima</small></div><div><i class="fa-solid fa-battery-full"></i><strong>'+fmt(m.batteryKwh)+' kWh</strong><small>Batería</small></div><div><i class="fa-solid fa-id-card"></i><strong>'+(m.licenses||[]).join(' / ')+'</strong><small>Carnet</small></div></div><div class="car-actions"><button type="button" class="car-open" onclick="openMoto('+idx+')">Ver ficha <i class="fa-solid fa-arrow-right"></i></button><button type="button" class="car-compare'+(chosen?' compare-selected':'')+'" onclick="toggleMotoCompare('+idx+')"><i class="fa-solid fa-code-compare"></i> '+(chosen?'Seleccionada':'Comparar')+'</button></div></div></article>'}
-function openMoto(i){
-const m=motorcycles[i],price=m.priceEur==null?'Por verificar':fmt(m.priceEur)+' €',value=(v,u='')=>v==null?'No disponible':fmt(v)+u;
-const fields=[['fa-users','Plazas homologadas',m.seats==null?'Por verificar':String(m.seats)],['fa-ruler-combined','Dimensiones',m.dimensions||'No disponible'],['fa-gauge-high','Velocidad máxima',value(m.topSpeedKmh,' km/h')],['fa-stopwatch','0–50 km/h',value(m.accel0050Sec,' s')],['fa-stopwatch','0–100 km/h',value(m.accel0100Sec,' s')],['fa-plug','Carga',m.chargeText||'No disponible'],['fa-bolt','Potencia nominal',value(m.powerKw,' kW')]];
-const section=(label,title,content)=>'<section class="moto-modal-section"><div class="moto-kicker">'+label+'</div><h3>'+title+'</h3>'+content+'</section>';
-const card=(icon,val,label)=>'<div><i class="fa-solid '+icon+'"></i><strong>'+val+'</strong><small>'+label+'</small></div>';
-const summary=m.summary||('La '+m.brand+' '+m.model+' es una '+m.category.toLowerCase()+' eléctrica. Su ficha recoge las características disponibles para comparar autonomía, batería, prestaciones y requisitos de carnet. Los datos pendientes se indican expresamente.');
-const trims=(m.trims&&m.trims.length?m.trims:[{name:m.model,price:price,battery:value(m.batteryKwh,' kWh'),range:value(m.rangeKm,' km'),power:value(m.peakPowerKw,' kW'),accel:value(m.accel0100Sec,' s')}]);
-const trimHtml='<div class="moto-trims">'+trims.map(t=>'<div><div class="moto-kicker">'+t.name.toUpperCase()+'</div><h3 style="margin:8px 0">'+t.price+'</h3><small class="moto-muted">IVA incluido · Sin ayudas</small><div class="moto-detail-grid" style="margin-top:20px"><div><small>Batería</small><strong>'+t.battery+'</strong></div><div><small>Autonomía</small><strong>'+t.range+'</strong></div><div><small>Potencia</small><strong>'+t.power+'</strong></div><div><small>0–100 km/h</small><strong>'+t.accel+'</strong></div></div></div>').join('')+'</div>';
-const colors=m.colors&&m.colors.length?'<div class="moto-colors">'+m.colors.map(c=>'<span>'+c+'</span>').join('')+'</div>':'<p class="moto-muted">Colores pendientes de verificar.</p>';
-const images=m.images&&m.images.length?m.images:(m.image?[m.image]:[]);
-const gallery=images.length?'<div class="moto-gallery">'+images.map(src=>'<a href="'+src+'" target="_blank" rel="noopener"><img src="'+src+'" loading="lazy" alt="'+m.brand+' '+m.model+'"></a>').join('')+'</div>':'<p class="moto-muted">Galería oficial pendiente de incorporar.</p>';
-const videos=m.videos&&m.videos.length?m.videos.map(v=>'<a href="'+v.url+'" target="_blank" rel="noopener">'+v.title+'</a>').join(' · '):'<p class="moto-muted">Vídeos pendientes de incorporar.</p>';
-const pros=m.pros&&m.pros.length?m.pros:['Información de autonomía y batería disponible','Ficha de prestaciones para comparar'];
-const cons=m.cons&&m.cons.length?m.cons:['Confirmar precio y condiciones de la versión elegida','Verificar los datos no publicados por el fabricante'];
-const conclusion='<div class="moto-conclusion"><div><h3>＋ Lo mejor</h3>'+pros.map(x=>'<p>＋ '+x+'</p>').join('')+'</div><div><h3>− A tener en cuenta</h3>'+cons.map(x=>'<p>− '+x+'</p>').join('')+'</div></div>';
-$('moto-detail-content').innerHTML='<button class="moto-detail-close" onclick="document.getElementById(\'moto-detail-dialog\').close()" aria-label="Cerrar">✕</button><div class="moto-modal-hero">'+motorcyclePhoto(m)+'</div><div class="moto-modal-header"><div><span class="moto-kicker">'+m.category+'</span><div class="moto-muted">'+m.brand.toUpperCase()+'</div><h2>'+m.model.toUpperCase()+'</h2><small class="moto-muted">Lanzamiento: '+(m.launchYear||'Por verificar')+'</small></div><div class="moto-modal-price"><small class="moto-muted">Precio gama</small><strong>'+price+'</strong><small class="moto-muted">IVA incluido · Sin ayudas públicas</small></div></div><div class="moto-modal-content"><div class="moto-five">'+card('fa-road',value(m.rangeKm,' km'),'Autonomía · ciclo indicado')+card('fa-battery-full',value(m.batteryKwh,' kWh'),'Batería')+card('fa-bolt',value(m.peakPowerKw,' kW'),'Potencia máxima')+card('fa-id-card',(m.licenses||[]).join(' / '),'Carnet')+card('fa-users',m.seats==null?'Por verificar':String(m.seats),'Plazas')+'</div>'+section('RESUMEN','El '+m.model+' en 30 segundos','<p class="moto-summary">'+summary+'</p>')+section('GAMA','Versiones disponibles',trimHtml)+section('PUBLICIDAD','', '<div class="moto-ad">ESPACIO PUBLICITARIO</div>')+section('FICHA TÉCNICA','Datos principales','<div class="moto-tech">'+fields.map(f=>card(f[0],f[2],f[1])).join('')+'</div>')+section('COBERTURA DEL FABRICANTE','Garantía','<div class="moto-warranty"><div><i class="fa-solid fa-shield-halved"></i><small>Vehículo</small><strong>'+(m.warrantyVehicle||'Por verificar')+'</strong></div><div><i class="fa-solid fa-battery-full"></i><small>Batería</small><strong>'+(m.warrantyBattery||'Por verificar')+'</strong></div></div>')+section('PERSONALIZACIÓN','Colores disponibles',colors)+section('IMÁGENES','Galería',gallery)+section('VÍDEOS','Vídeos del '+m.model,videos)+section('CONCLUSIÓN ELECTRICOS.EU','Nuestra conclusión',conclusion)+section('LA MARCA',m.brand.toUpperCase(),'<p class="moto-summary">'+(m.brandDescription||'Información del fabricante pendiente de completar.')+'</p>')+'<div class="moto-modal-section"><button class="moto-compare-full" onclick="toggleMotoCompare('+i+');document.getElementById(\'moto-detail-dialog\').close()">Añadir al comparador</button></div><div class="moto-modal-footer"><div><strong>Estado de los datos</strong><p class="moto-muted">Ficha en revisión · Datos incompletos señalados</p></div><a href="'+m.source+'" target="_blank" rel="noopener noreferrer">Web oficial ↗</a></div></div>';
-$('moto-detail-dialog').showModal();
-}
-function toggleMotoCompare(i){if(selectedMotorcycles.has(i))selectedMotorcycles.delete(i);else if(selectedMotorcycles.size<4)selectedMotorcycles.add(i);else {alert('Máximo 4 motos');return}render()}
-function render(){const items=motorcycleList($('moto-sort').value);$('moto-count').textContent=items.length+' motos verificadas';$('moto-results').innerHTML=items.length?items.map((m,i)=>card(m,i)).join(''):empty('Catálogo en preparación','Todavía no hay fichas de motos con todos los datos contrastados.');const ranks=motorcycleList($('moto-rank-metric').value,false);$('moto-rank-results').innerHTML=ranks.length?ranks.map((m,i)=>card(m,i,true)).join(''):empty('Ranking pendiente','Se activará cuando incorporemos modelos con datos verificados.');const brands=[...new Set(motorcycles.map(m=>m.brand))].sort();$('moto-brands').innerHTML=brands.length?brands.map(b=>'<div class="moto-brand">'+b+'<small>'+motorcycles.filter(m=>m.brand===b).length+' modelos</small></div>').join(''):empty('Marcas en preparación','Se mostrarán las marcas al publicar las primeras fichas.');}
-$('moto-filter-toggle').addEventListener('click',()=>{const panel=$('moto-filter-panel'),open=panel.hidden;panel.hidden=!open;$('moto-filter-toggle').setAttribute('aria-expanded',String(open));});
-['moto-search','moto-type','moto-license','moto-brand','moto-range','moto-price','moto-power','moto-accel','moto-speed','moto-charge','moto-sort','moto-rank-metric'].forEach(id=>$(id).addEventListener(id==='moto-search'?'input':'change',render));
-$('moto-rank-btn').addEventListener('click',()=>{$('moto-rank-results').scrollIntoView({behavior:'smooth',block:'start'})});
-[...new Set(motorcycles.map(m=>m.brand))].sort().forEach(b=>{$('moto-brand').add(new Option(b,b))});render();
-document.querySelectorAll('[data-moto-quick]').forEach(btn=>btn.addEventListener('click',()=>{const k=btn.dataset.motoQuick;$('moto-license').value=['AM','A1','A2','A','B'].includes(k)?k:'';$('moto-range').value=k==='range'?'100':'0';document.querySelectorAll('[data-moto-quick]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));render()}));
-</script></body></html>
+const carsData=motorcycles.map((m,i)=>({id:900000+i,brand:m.brand,model:m.model,type:m.category==='Escúter'?'urbano':'moto',images:m.image?[m.image]:['/img/silence-ombra-portada-TRANSPARENT.webp'],priceMin:m.priceEur,priceText:m.priceEur==null?'Por verificar':m.priceEur.toLocaleString('es-ES')+' €',rangeText:m.rangeKm==null?'Pendiente':m.rangeKm+' km',maxRangeVal:m.rangeKm||0,batteryText:m.batteryKwh==null?'Pendiente':m.batteryKwh+' kWh',batteryType:'Por verificar',powerText:m.peakPowerKw==null?'Pendiente':Math.round(m.peakPowerKw*1.35962)+' CV',acceleration:m.accel0100Sec==null?'No disponible':m.accel0100Sec+' s',trunk:null,frunkText:'Sin datos',seats:m.seats??null,chargingInfo:m.chargeText||'Pendiente',charging:m.chargeText||'Pendiente',dimensions:m.dimensions||'Pendiente',warranty:m.warrantyVehicle||'Por verificar',trims:[],colors:m.colors||[],videos:[],highlights:m.pros||[],considerations:m.cons||[],idealFor:'Movilidad eléctrica',brandInfo:m.brandDescription||'',launchYear:m.launchYear||'',description:m.summary||m.note||'',brandUrl:m.source,discontinued:false,upcoming:false,licenses:m.licenses||[]}));</script>
+    <script src="/data/sales-ranking.js?v=20261111"></script>
+    <script src="/js/sales-ranking.js?v=20261113-cutouts-restored"></script>
+
+    <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
+    <script src="/data/vehicle-sales.js?v=20261030-uppercase"></script>
+    <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
+
+    <!-- APP -->
+    <script src="/js/motos-app.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])').forEach(function () {
+                try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+            });
+        });
+    </script>
+</body>
+
+</html>
