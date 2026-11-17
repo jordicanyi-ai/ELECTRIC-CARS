@@ -70,7 +70,8 @@ let currentImageIndexes = {};
                 rangeDesc: 'Orden por autonomía máxima WLTP de cada modelo. No equivale a autonomía real en autopista y puede corresponder a la versión más cara.',
                 trunkDesc: 'Orden por capacidad del maletero trasero. No suma el frunk; comprueba el espacio con todas las plazas en uso.',
                 powerDesc: 'Orden por la potencia máxima anunciada en CV de cada modelo. Puede corresponder a una versión superior.',
-                accelerationAsc: 'Orden por el menor tiempo anunciado de 0 a 100 km/h. Puede corresponder a la versión más potente; los modelos sin dato aparecen al final.'
+                accelerationAsc: 'Orden por el menor tiempo anunciado de 0 a 100 km/h. Puede corresponder a la versión más potente; los modelos sin dato aparecen al final.',
+                chargingDesc: 'Orden por potencia máxima de carga rápida en corriente continua (kW). Los modelos sin dato aparecen al final.'
             };
             document.getElementById('ranking-explanation').textContent = explanations[metric] + ' Se muestran los modelos con fotos que cumplen tus filtros; los descatalogados están identificados.';
             filterCars();
@@ -416,6 +417,18 @@ let currentImageIndexes = {};
             return kw.length ? Math.round(Math.max(...kw) * 1.35962) : null;
         }
 
+        function maxDcChargingKw(car) {
+            const raw = String(car.chargingInfo?.dcMax || car.charging || '');
+            // Use the explicitly labelled DC figure, never AC or battery capacity.
+            const dc = car.chargingInfo?.dcMax ? raw : (raw.match(/(?:\d+(?:[.,]\d+)?\s*(?:[-–/]\s*)?)*\d+(?:[.,]\d+)?\s*kW\s*(?:CC|DC)/i)?.[0] || '');
+            const numbers = [...dc.matchAll(/(\d+(?:[.,]\d+)?)\s*(?=(?:kW|[-–/]\s*\d|$))/gi)].map(m => Number(m[1].replace(',', '.')));
+            if (!numbers.length) {
+                const kw = dc.match(/\d+(?:[.,]\d+)?/g);
+                return kw?.length ? Math.max(...kw.map(x => Number(x.replace(',', '.')))) : null;
+            }
+            return Math.max(...numbers);
+        }
+
         function bestAcceleration(car) {
             const values = String(car.acceleration || '').match(/\d+(?:[.,]\d+)?/g);
             if (!values) return null;
@@ -426,7 +439,7 @@ let currentImageIndexes = {};
             const grid = document.getElementById('cars-grid');
             const isRanking = document.body.dataset.catalogueView === 'ranking';
             const metric = document.getElementById('ranking-metric').value;
-            const rankMetric = car => metric === 'rangeDesc' ? car.maxRangeVal : metric === 'trunkDesc' ? car.trunk : metric === 'powerDesc' ? maxPowerCv(car) : metric === 'accelerationAsc' ? bestAcceleration(car) : car.priceMin;
+            const rankMetric = car => metric === 'rangeDesc' ? car.maxRangeVal : metric === 'trunkDesc' ? car.trunk : metric === 'powerDesc' ? maxPowerCv(car) : metric === 'accelerationAsc' ? bestAcceleration(car) : metric === 'chargingDesc' ? maxDcChargingKw(car) : car.priceMin;
             document.getElementById('results-count').textContent = `${cars.length} ${cars.length === 1 ? 'coche' : 'coches'}${isRanking ? ' en este ranking' : ''}`;
             if (!cars.length) {
                 grid.innerHTML = `<div class="empty-results"><i class="fa-solid fa-car-side" aria-hidden="true"></i><p>No encontramos coches con estos filtros</p><button type="button" onclick="resetFilters()">Limpiar búsqueda y filtros</button></div>`;
@@ -446,7 +459,7 @@ let currentImageIndexes = {};
                 return `<article class="car-card${car.discontinued ? ' is-discontinued' : ''}">
                     <div class="car-photo">
                         <button type="button" class="car-photo-link" onclick="openCarModal(${car.id})" aria-label="Ver ficha de ${name}"><img id="car-img-${car.id}" src="${car.images[currentImageIndexes[car.id]]}" alt="${name}" ${index < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></button>
-                        ${isRanking ? `<span class="car-position"><strong class="car-rank-number">#${position}</strong><span class="car-rank-label">${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : metric === 'powerDesc' ? 'Potencia' : metric === 'accelerationAsc' ? '0–100 km/h' : 'Maletero'}</span></span>` : `<span class="car-type">${car.type}</span>`}
+                        ${isRanking ? `<span class="car-position"><strong class="car-rank-number">#${position}</strong><span class="car-rank-label">${metric === 'priceAsc' ? 'Precio de acceso' : metric === 'rangeDesc' ? 'Autonomía WLTP' : metric === 'powerDesc' ? 'Potencia' : metric === 'accelerationAsc' ? '0–100 km/h' : metric === 'chargingDesc' ? 'Carga rápida (kW)' : 'Maletero'}</span></span>` : `<span class="car-type">${car.type}</span>`}
                         ${car.discontinued ? '<span class="car-discontinued">Descatalogado</span>' : car.upcoming ? '<span class="car-discontinued" style="background:#2456cd">Próximamente · 2027</span>' : ''}
                         ${car.images.length > 1 ? `<button type="button" class="car-arrow car-arrow-prev" onclick="changeSlide(${car.id},-1,event)" aria-label="Foto anterior de ${name}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeSlide(${car.id},1,event)" aria-label="Foto siguiente de ${name}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button><div id="dots-${car.id}" class="car-dots" aria-hidden="true">${car.images.map((_,i) => `<span class="${i === currentImageIndexes[car.id] ? 'current' : ''}"></span>`).join('')}</div>` : ''}
                     </div>
@@ -1472,6 +1485,9 @@ let currentImageIndexes = {};
 
                 if (sort === 'accelerationAsc')
                     return (bestAcceleration(a) ?? Infinity) - (bestAcceleration(b) ?? Infinity);
+
+                if (sort === 'chargingDesc')
+                    return (maxDcChargingKw(b) ?? -1) - (maxDcChargingKw(a) ?? -1);
 
                 if (sort === 'brandAsc')
                     return `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, 'es');
