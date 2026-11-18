@@ -512,7 +512,14 @@ body.brand-embed footer,body.brand-embed .site-footer{display:none!important}
 html.brand-embed-root body{background:#fff!important}
 html.brand-embed-root .catalogue-main{padding-top:0!important;margin-top:0!important}
 html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-count,html.brand-embed-root #cars-grid{scroll-margin-top:0}
-</style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script></head>
+</style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script><style id="moto-ranking-emphasis">
+.car-card .car-photo{position:relative}
+.moto-rank-number{position:absolute;top:12px;left:12px;z-index:5;display:grid;place-items:center;width:58px;height:58px;border-radius:16px;background:#fff;color:#1767df;font-size:32px;font-weight:950;box-shadow:0 4px 16px #0002}
+.moto-rank-highlight{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#eaf2ff;border:2px solid #2675f5;border-radius:14px;padding:12px 15px;margin-bottom:14px}
+.moto-rank-highlight span{font-size:11px;font-weight:850;letter-spacing:.04em;color:#345c9e}
+.moto-rank-highlight strong{font-size:clamp(20px,3vw,29px);font-weight:950;color:#1160d6;white-space:nowrap}
+@media(max-width:500px){.moto-rank-number{width:48px;height:48px;font-size:27px}.moto-rank-highlight{padding:10px}}
+</style></head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
@@ -721,7 +728,7 @@ document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
     <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="/js/motos-filtros.js?v=20261118-ranking-motos-v2"></script>
+    <script src="/js/motos-filtros.js?v=20261118-rank-numbers"></script>
 
     <script>
         window.addEventListener('load', function () {
