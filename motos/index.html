@@ -600,12 +600,13 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
                 </div>
             </div>
             <div id="motos-ventas-lista" aria-live="polite"></div>
-            <p class="text-xs text-slate-400 mt-5">Fuente prevista: DGT · Microdatos de matriculaciones. No se muestran datos de turismos ni estimaciones.</p>
+            <p class="text-xs text-slate-400 mt-5">Fuente: DGT · Microdatos mensuales de matriculaciones, enero–octubre 2026 · Motocicletas eléctricas (tipo 50, BEV). Modelos según denominación DGT.</p>
         </section>
 
     </main>
 
 <script>
+window.electricosMotoSalesRanking={"monthly":{"label":"DGT · Octubre 2026 · 778 motocicletas eléctricas nuevas","models":[{"model":"SILENCE S01","units":151},{"model":"SILENCE S02","units":68},{"model":"STARK VARG","units":66},{"model":"VMOTO CITI","units":66},{"model":"SILENCE S01+","units":42},{"model":"TALARIA KOMODO","units":36},{"model":"NIU NQIX 500","units":28},{"model":"VELCA EON","units":26},{"model":"SUPER SOCO CPX","units":25},{"model":"EFUN PUSA90","units":21}]},"yearly":{"label":"DGT · Enero–octubre 2026 · 6.094 motocicletas eléctricas nuevas","models":[{"model":"SILENCE S01","units":1222},{"model":"SILENCE S02","units":573},{"model":"STARK VARG","units":395},{"model":"SILENCE S01+","units":254},{"model":"EFUN LION","units":247},{"model":"VMOTO CITI","units":238},{"model":"VELCA EON","units":219},{"model":"EFUN PUSA90","units":143},{"model":"TALARIA KOMODO","units":140},{"model":"SILENCE SEAT MÓ ESCOOTER 125","units":127}]}};
 function showMotoSales(which){
  const data=window.electricosMotoSalesRanking?.[which];
  const box=document.getElementById('motos-ventas-lista');
