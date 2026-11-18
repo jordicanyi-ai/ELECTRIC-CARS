@@ -8,12 +8,12 @@ function filterCars(){
  const q=v('hero-search').trim().toLocaleLowerCase('es');
  const type=v('moto-type'),license=v('moto-license'),removable=v('moto-removable'),power=Number(v('moto-power')),speed=Number(v('moto-speed')),charge=v('moto-charge'),seats=v('moto-seats'),range=Number(v('range-filter')),price=Number(v('price-filter'));
  const filtered=motorcycles.filter(m=>(!q||(m.brand+' '+m.model+' '+m.category).toLocaleLowerCase('es').includes(q))&&(!type||m.category===type)&&(!license||(Array.isArray(m.licenses)&&m.licenses.includes(license)))&&(!removable||(m.removableBattery!=null&&(removable==='yes')===m.removableBattery))&&(!power||(m.powerKw!=null&&m.powerKw>=power))&&(!speed||(m.topSpeedKmh!=null&&m.topSpeedKmh>=speed))&&(!charge||(m.fastCharge!=null&&(charge==='yes')===m.fastCharge))&&(!seats||(m.seats!=null&&String(m.seats)===seats))&&(!range||(m.rangeKm!=null&&m.rangeKm>=range))&&(price===30000||(m.priceEur!=null&&m.priceEur<=price)));
- window.motoVisibleList=filtered;window.motoImageIndexes={};const sort=v('sort-filter');if(sort==='priceAsc')filtered.sort((a,b)=>(a.priceEur??Infinity)-(b.priceEur??Infinity));else if(sort==='rangeDesc')filtered.sort((a,b)=>(b.rangeKm??-1)-(a.rangeKm??-1));else if(sort==='brandAsc')filtered.sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model));
+ window.motoVisibleList=filtered;window.motoImageIndexes={};const sort=window.motoRankingActive?(v('ranking-metric')||'priceAsc'):v('sort-filter');if(sort==='priceAsc')filtered.sort((a,b)=>(a.priceEur??Infinity)-(b.priceEur??Infinity));else if(sort==='rangeDesc')filtered.sort((a,b)=>(b.rangeKm??-1)-(a.rangeKm??-1));else if(sort==='powerDesc')filtered.sort((a,b)=>(b.peakPowerKw??-1)-(a.peakPowerKw??-1));else if(sort==='speedDesc')filtered.sort((a,b)=>(b.topSpeedKmh??-1)-(a.topSpeedKmh??-1));else if(sort==='batteryDesc')filtered.sort((a,b)=>(b.batteryKwh??-1)-(a.batteryKwh??-1));else if(sort==='accelerationAsc')filtered.sort((a,b)=>(a.accel0050Sec??Infinity)-(b.accel0050Sec??Infinity));else if(sort==='brandAsc')filtered.sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model));
  motoEl('range-val').textContent=range+' km';motoEl('price-val').textContent=price===30000?'Sin límite':price.toLocaleString('es-ES')+' €';
  const active=Number(Boolean(type))+Number(Boolean(license))+Number(Boolean(removable))+Number(Boolean(power))+Number(Boolean(speed))+Number(Boolean(charge))+Number(Boolean(seats))+Number(Boolean(range))+Number(price<30000);
  const badge=motoEl('active-filter-count');badge.hidden=!active;badge.textContent=active;
  document.querySelectorAll('[data-moto-quick]').forEach(b=>{const k=b.dataset.motoQuick;const on=k==='all'?!active&&!q:k==='price'?price===5000:k==='range'?range===100:k==='scooter'?type==='Scooter':k==='removable'?removable==='yes':license===k;b.setAttribute('aria-pressed',String(on))});
- motoEl('results-count').textContent=filtered.length+' '+(filtered.length===1?'moto':'motos')+' de muestra';
+ motoEl('results-count').textContent=(window.motoRankingActive?'Ranking · ':'')+filtered.length+' '+(filtered.length===1?'moto':'motos');
  motoEl('cars-grid').innerHTML=filtered.length?'<div class="catalogue-batch">'+filtered.map((m,i)=>{
  const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');
  const priceText=m.priceEur==null?'Por verificar':m.priceEur.toLocaleString('es-ES')+' €';
@@ -402,3 +402,21 @@ function openCompareModal(){
  document.getElementById('compare-modal')?.classList.remove('hidden');document.body.style.overflow='hidden';
 }
 function closeCompareModal(){document.getElementById('compare-modal')?.classList.add('hidden');document.body.style.overflow='';}
+
+function showMotoRanking(active){
+ window.motoRankingActive=active;
+ const panel=motoEl('ranking-panel'),filters=motoEl('filters-panel');
+ if(panel)panel.hidden=!active;
+ if(filters)filters.hidden=active;
+ const rankBtn=motoEl('ranking-view-btn');
+ if(rankBtn)rankBtn.setAttribute('aria-pressed',String(active));
+ const sort=motoEl('sort-filter');
+ if(sort)sort.closest('label')?.classList.toggle('hidden',active);
+ updateRankingMetric();
+}
+function updateRankingMetric(){
+ const select=motoEl('ranking-metric'),desc=motoEl('ranking-explanation');
+ const descriptions={priceAsc:'Precio más bajo',rangeDesc:'Mayor autonomía',powerDesc:'Mayor potencia máxima',speedDesc:'Mayor velocidad máxima',batteryDesc:'Mayor capacidad de batería',accelerationAsc:'Mejor aceleración de 0 a 50 km/h'};
+ if(desc)desc.textContent=descriptions[select?.value]||'Ranking de motos';
+ filterCars();
+}
