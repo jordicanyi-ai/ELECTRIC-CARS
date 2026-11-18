@@ -512,22 +512,7 @@ body.brand-embed footer,body.brand-embed .site-footer{display:none!important}
 html.brand-embed-root body{background:#fff!important}
 html.brand-embed-root .catalogue-main{padding-top:0!important;margin-top:0!important}
 html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-count,html.brand-embed-root #cars-grid{scroll-margin-top:0}
-</style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script><style id="moto-ranking-emphasis">
-.car-card .car-photo{position:relative}
-.moto-rank-number{position:absolute;top:12px;left:12px;z-index:5;display:grid;place-items:center;width:58px;height:58px;border-radius:16px;background:#fff;color:#1767df;font-size:32px;font-weight:950;box-shadow:0 4px 16px #0002}
-.moto-rank-highlight{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#eaf2ff;border:2px solid #2675f5;border-radius:14px;padding:12px 15px;margin-bottom:14px}
-.moto-rank-highlight span{font-size:11px;font-weight:850;letter-spacing:.04em;color:#345c9e}
-.moto-rank-highlight strong{font-size:clamp(20px,3vw,29px);font-weight:950;color:#1160d6;white-space:nowrap}
-@media(max-width:500px){.moto-rank-number{width:48px;height:48px;font-size:27px}.moto-rank-highlight{padding:10px}}
-</style><style id="moto-ranking-match-cars">
-.moto-rank-number{width:auto!important;height:auto!important;min-height:60px!important;display:flex!important;gap:9px!important;align-items:center!important;top:16px!important;left:16px!important;padding:7px 14px!important;border-radius:12px!important;background:white!important;color:#2556c7!important;box-shadow:0 3px 14px #0002!important}
-.moto-rank-number strong{font-size:36px!important;line-height:1!important;font-weight:950!important}
-.moto-rank-number small{font-size:13px!important;line-height:1.1!important;font-weight:800!important;max-width:125px!important}
-.moto-rank-highlight{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:4px!important;margin:15px 0!important;padding:15px 18px!important;background:#edf3ff!important;border:1px solid #b4ceff!important;border-radius:13px!important}
-.moto-rank-highlight span{font-size:12px!important;color:#183c78!important;font-weight:900!important}
-.moto-rank-highlight strong{font-size:30px!important;color:#183c78!important;font-weight:950!important}
-@media(max-width:520px){.moto-rank-number strong{font-size:29px!important}.moto-rank-number small{font-size:11px!important}.moto-rank-highlight strong{font-size:26px!important}}
-</style></head>
+</style><script>if(new URLSearchParams(location.search).has('brandEmbed'))document.documentElement.classList.add('brand-embed-root');</script></head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
@@ -736,7 +721,7 @@ document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
     <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="/js/motos-filtros.js?v=20261118-ranking-reference"></script>
+    <script src="/js/motos-filtros.js?v=20261118-exact-car-badge"></script>
 
     <script>
         window.addEventListener('load', function () {
