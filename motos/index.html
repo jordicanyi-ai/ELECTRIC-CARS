@@ -537,8 +537,8 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
         <section class="catalogue-intro" aria-labelledby="page-title">
             <h1 id="page-title">EXPLORA LAS MOTOS ELÉCTRICAS</h1>
             <div class="catalogue-tabs" role="group" aria-label="Explorar coches">
-                <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="window.location.href='/comparador/'">Catálogo</button>
-                <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="window.location.href='/ranking/'"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
+                <button type="button" id="catalogue-view-btn" aria-pressed="true" onclick="showMotoRanking(false)">Catálogo</button>
+                <button type="button" id="ranking-view-btn" aria-pressed="false" onclick="showMotoRanking(true)"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Rankings</button>
                 <a href="/mercado-electrico/" class="market-tab-link"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Mercado eléctrico</a>
                 <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
@@ -565,7 +565,7 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
 <div class="filter-field"><label for="price-filter">Precio máximo <output id="price-val">Sin límite</output></label><input type="range" id="price-filter" min="2000" max="30000" step="1000" value="30000"></div>
 <div class="filter-reset"><button type="button" id="moto-reset"><i class="fa-solid fa-rotate-left"></i> Limpiar filtros</button><small>Los datos sin verificar no se presuponen</small></div></div></div><div id="ranking-panel" hidden>
                 <div class="ranking-intro"><span class="ranking-tag-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></span><div><label for="ranking-metric">¿Qué es lo más importante para ti?</label><small>Elige tu prioridad y encuentra tu eléctrico ideal</small></div></div>
-                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option><option value="powerDesc">Mayor potencia del motor</option><option value="accelerationAsc">Mejor aceleración (0–100 km/h)</option><option value="chargingDesc">Carga rápida (kW)</option></select>
+                <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía</option><option value="powerDesc">Mayor potencia máxima</option><option value="speedDesc">Mayor velocidad máxima</option><option value="batteryDesc">Mayor batería (kWh)</option><option value="accelerationAsc">Mejor aceleración (0–50 km/h)</option></select>
                 <button type="button" class="ranking-show-results" onclick="document.getElementById('catalogue-results').scrollIntoView({behavior:'smooth',block:'start'})"><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Ver ranking <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                 <p id="ranking-explanation" class="sr-only">Orden por precio de acceso, sin ayudas.</p>
             </div>
@@ -721,7 +721,7 @@ document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
     <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="/js/motos-filtros.js?v=20261118-zero-warranty"></script>
+    <script src="/js/motos-filtros.js?v=20261118-moto-ranking"></script>
 
     <script>
         window.addEventListener('load', function () {
