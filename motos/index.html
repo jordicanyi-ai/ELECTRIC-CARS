@@ -593,25 +593,26 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
 
         <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
             <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
-                <div>
-                    <span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Matriculaciones · España</span>
-                    <h2 class="text-2xl sm:text-3xl font-black mt-2">Los eléctricos más vendidos</h2>
-                    <p id="ventas-periodo" class="text-sm text-slate-500 mt-2">Datos pendientes de publicación</p>
-                </div>
-                <div class="flex gap-2" role="group" aria-label="Periodo del ranking">
-                    <button id="ventas-mes-btn" type="button" aria-pressed="true" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white" onclick="showSalesRanking('month')">Último mes</button>
-                    <button id="ventas-ano-btn" type="button" aria-pressed="false" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700" onclick="showSalesRanking('year')">Acumulado anual</button>
-                </div>
+                <div><span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Comparativa de motos eléctricas</span><h2 class="text-2xl sm:text-3xl font-black mt-2">Ranking de motos eléctricas</h2><p class="text-sm text-slate-500 mt-2">Clasificación por características técnicas, no por matriculaciones.</p></div>
+                <label class="text-sm font-semibold text-slate-700">Ordenar por <select id="moto-bottom-ranking-sort" class="block mt-2 rounded-xl border border-slate-300 bg-white p-3" onchange="renderMotoBottomRanking()"><option value="range">Mayor autonomía</option><option value="price">Menor precio</option><option value="power">Mayor potencia</option></select></label>
             </div>
-            <div id="ventas-ranking" aria-live="polite" class="space-y-2">
-                <p class="rounded-xl bg-slate-50 p-5 text-slate-600 text-sm">Preparando el ranking con datos oficiales de matriculaciones.</p>
-            </div>
-            <div class="mt-6 flex justify-center sm:justify-end"><a href="/mercado-electrico/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white no-underline shadow-sm transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Ver más datos del mercado <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
-            <p class="text-xs text-slate-400 mt-5">Fuente oficial de referencia: <a href="https://www.dgt.es/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/dgt-en-cifras-detalle/Microdatos-de-Matriculaciones-de-Vehiculos-mensual/" target="_blank" rel="noopener noreferrer" class="underline">DGT · Microdatos de matriculaciones</a>. Cifras calculadas directamente a partir de los microdatos mensuales oficiales. Solo matriculaciones ordinarias de turismos nuevos 100 % eléctricos (BEV).</p>
+            <div id="moto-bottom-ranking" aria-live="polite" class="space-y-3"></div>
+            <p class="text-xs text-slate-400 mt-5">Datos de las motos incluidas en el comparador. Los modelos sin dato disponible se excluyen del criterio seleccionado.</p>
         </section>
 
     </main>
 
+<script>
+function renderMotoBottomRanking(){
+ const target=document.getElementById('moto-bottom-ranking');if(!target)return;
+ const metric=document.getElementById('moto-bottom-ranking-sort')?.value||'range';
+ const field=metric==='price'?'priceEur':metric==='power'?'powerKw':'rangeKm';
+ const motos=(typeof motorcycles!=='undefined'?motorcycles:[]).filter(m=>Number.isFinite(m[field])&&m[field]>0).sort((a,b)=>metric==='price'?a[field]-b[field]:b[field]-a[field]);
+ const unit=metric==='price'?' €':metric==='power'?' kW':' km';
+ target.innerHTML=motos.length?motos.map((m,i)=>'<div class="flex items-center gap-4 rounded-xl border border-slate-200 p-4"><span class="text-xl font-black text-blue-600 w-8">#'+(i+1)+'</span><div class="min-w-0 flex-1"><div class="font-bold">'+m.brand+' '+m.model+'</div><div class="text-xs text-slate-500">'+m.category+'</div></div><strong class="text-lg text-blue-700 whitespace-nowrap">'+Number(m[field]).toLocaleString('es-ES')+unit+'</strong></div>').join(''):'<p class="text-slate-500">No hay datos disponibles.</p>';
+}
+document.addEventListener('DOMContentLoaded',renderMotoBottomRanking);
+</script>
     <!-- MODAL -->
     <div id="car-modal" role="dialog" aria-modal="true" aria-label="Ficha de la moto"
         class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden overflow-y-auto"
@@ -705,8 +706,7 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
 
     <!-- DATABASE -->
     <script src="/data/motos.js?v=20261118-s01-complete"></script>
-    <script src="/data/sales-ranking.js?v=20261111"></script>
-    <script src="/js/sales-ranking.js?v=20261113-cutouts-restored"></script>
+
 
     <!-- Managed vehicle stock; stays hidden until approved listings exist. -->
     <script src="/data/vehicle-sales.js?v=20261030-uppercase"></script>
