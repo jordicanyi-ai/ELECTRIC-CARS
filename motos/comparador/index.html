@@ -543,36 +543,27 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
                 <button type="button" id="sales-view-btn" hidden aria-pressed="false" onclick="openVehicleSales()"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Coches en venta</button>
             </div>
         </section>
-        <section id="catalogue-controls-anchor" class="catalogue-controls" aria-label="Buscar y filtrar coches">
+        <section id="catalogue-controls-anchor" class="catalogue-controls" aria-label="Buscar y filtrar motos">
             <div class="search-row">
                 <label class="catalogue-search" for="hero-search">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     <span class="sr-only">Buscar marca, modelo o tipo de coche</span>
-                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca, modelo o tipo de coche" autocomplete="off" aria-controls="cars-grid">
+                    <input id="hero-search" oninput="syncHeroSearch()" type="search" placeholder="Marca, modelo o tipo de moto" autocomplete="off" aria-controls="cars-grid">
                 </label>
                 <button type="button" id="filters-toggle" class="filter-toggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="filters-panel"><i class="fa-solid fa-filter" aria-hidden="true"></i> Filtros <span id="active-filter-count" hidden></span><i id="filter-toggle-icon" class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
             </div>
-            <div id="quick-mobile" class="quick-filters" role="group" aria-label="Filtros rápidos">
-                <button type="button" data-quick="all" onclick="resetFilters()" class="quick-filter" aria-pressed="true"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Todos</button>
-                <button type="button" data-quick="30000" onclick="applyQuickFilter('price',30000,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> ≤30k €</button>
-                <button type="button" data-quick="500" onclick="applyQuickFilter('range',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 500+ km</button>
-                <button type="button" data-quick="7" onclick="applyQuickFilter('seats',7,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 7 plazas</button>
-                <button type="button" data-quick="suv" onclick="applyQuickFilter('body','suv',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car-side" aria-hidden="true"></i> SUV</button>
-                <button type="button" data-quick="utilitario" onclick="applyQuickFilter('body','utilitario',this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-car" aria-hidden="true"></i> Urbanos</button>
-                <button type="button" data-quick="trunk500" onclick="applyQuickFilter('trunk',500,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-suitcase" aria-hidden="true"></i> Maletero 500+</button>
-                <button type="button" data-quick="400" onclick="applyQuickFilter('range',400,this)" class="quick-filter" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 400+ km</button>
-            </div>
-            <div id="filters-panel" hidden>
-                <div class="filter-fields">
-                    <div class="filter-field"><label for="body-filter">Tipo de coche</label><select id="body-filter" onchange="filterCars()"><option value="">Todos</option><option value="utilitario">Utilitario / Urbano</option><option value="compacto">Compacto</option><option value="suv">SUV / Crossover</option><option value="berlina">Sedán / Berlina</option><option value="furgoneta">Furgoneta / Monovolumen</option></select></div>
-                    <div class="filter-field"><label for="seats-filter">Plazas mínimas</label><select id="seats-filter" onchange="filterCars()"><option value="">Cualquiera</option><option value="5">5 plazas</option><option value="6">6 plazas</option><option value="7">7 plazas</option></select></div>
-                    <div class="filter-field"><label for="trunk-filter">Maletero mínimo</label><select id="trunk-filter" onchange="filterCars()"><option value="0">Cualquiera</option><option value="300">300 L</option><option value="400">400 L</option><option value="500">500 L</option><option value="600">600 L</option></select></div>
-                    <div class="filter-field"><label for="range-filter">Autonomía mínima <output id="range-val" for="range-filter">0 km</output></label><input type="range" id="range-filter" min="0" max="700" step="50" value="0" oninput="filterCars()"></div>
-                    <div class="filter-field"><label for="price-filter">Precio máximo <output id="price-val" for="price-filter">Sin límite</output></label><input type="range" id="price-filter" min="15000" max="90000" step="5000" value="90000" oninput="filterCars()"></div>
-                    <div class="filter-reset"><button type="button" onclick="resetFilters()"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Limpiar filtros</button><small>Precios sin ayudas públicas</small></div>
-                </div>
-            </div>
-            <div id="ranking-panel" hidden>
+            <div id="quick-mobile" class="quick-filters" role="group" aria-label="Filtros rápidos de motos"><button type="button" class="quick-filter" data-moto-quick="all" aria-pressed="true"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Todas</button><button type="button" class="quick-filter" data-moto-quick="price" aria-pressed="false"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> ≤5k €</button><button type="button" class="quick-filter" data-moto-quick="range" aria-pressed="false"><i class="fa-solid fa-road" aria-hidden="true"></i> 100+ km</button><button type="button" class="quick-filter" data-moto-quick="B" aria-pressed="false"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Carnet B</button><button type="button" class="quick-filter" data-moto-quick="A1" aria-pressed="false"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Carnet A1</button><button type="button" class="quick-filter" data-moto-quick="A2" aria-pressed="false"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Carnet A2</button><button type="button" class="quick-filter" data-moto-quick="scooter" aria-pressed="false"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Scooter</button><button type="button" class="quick-filter" data-moto-quick="removable" aria-pressed="false"><i class="fa-solid fa-battery-full" aria-hidden="true"></i> Batería extraíble</button></div>
+<div id="filters-panel" hidden><div class="filter-fields">
+<div class="filter-field"><label for="moto-type">Tipo de moto</label><select id="moto-type"><option value="">Todas</option><option>Scooter</option><option>Naked</option><option>Deportiva</option><option>Trail / Adventure</option><option>Enduro</option><option>Trial</option><option>Motocross</option><option>Supermotard</option><option>Custom / Cruiser</option><option>Touring / Gran turismo</option><option>Clásica / Retro</option></select></div>
+<div class="filter-field"><label for="moto-license">Carnet de conducir</label><select id="moto-license"><option value="">Todos</option><option>AM</option><option>A1</option><option>A2</option><option>A</option><option>B</option></select></div>
+<div class="filter-field"><label for="moto-removable">Batería extraíble</label><select id="moto-removable"><option value="">Todas</option><option value="yes">Sí</option><option value="no">No</option></select></div>
+<div class="filter-field"><label for="moto-power">Potencia mínima</label><select id="moto-power"><option value="0">Cualquiera</option><option value="5">5 kW</option><option value="11">11 kW</option><option value="20">20 kW</option><option value="35">35 kW</option><option value="50">50 kW</option></select></div>
+<div class="filter-field"><label for="moto-speed">Velocidad mínima</label><select id="moto-speed"><option value="0">Cualquiera</option><option value="45">45 km/h</option><option value="90">90 km/h</option><option value="120">120 km/h</option><option value="150">150 km/h</option></select></div>
+<div class="filter-field"><label for="moto-charge">Carga rápida</label><select id="moto-charge"><option value="">Todas</option><option value="yes">Sí</option><option value="no">No</option></select></div>
+<div class="filter-field"><label for="moto-seats">Plazas</label><select id="moto-seats"><option value="">Todas</option><option value="1">1 plaza</option><option value="2">2 plazas</option></select></div>
+<div class="filter-field"><label for="range-filter">Autonomía mínima <output id="range-val">0 km</output></label><input type="range" id="range-filter" min="0" max="300" step="25" value="0"></div>
+<div class="filter-field"><label for="price-filter">Precio máximo <output id="price-val">Sin límite</output></label><input type="range" id="price-filter" min="2000" max="30000" step="1000" value="30000"></div>
+<div class="filter-reset"><button type="button" id="moto-reset"><i class="fa-solid fa-rotate-left"></i> Limpiar filtros</button><small>Los datos sin verificar no se presuponen</small></div></div></div><div id="ranking-panel" hidden>
                 <div class="ranking-intro"><span class="ranking-tag-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></span><div><label for="ranking-metric">¿Qué es lo más importante para ti?</label><small>Elige tu prioridad y encuentra tu eléctrico ideal</small></div></div>
                 <select id="ranking-metric" onchange="updateRankingMetric()"><option value="priceAsc">Precio de acceso más bajo</option><option value="rangeDesc">Mayor autonomía WLTP</option><option value="trunkDesc">Más maletero</option><option value="powerDesc">Mayor potencia del motor</option><option value="accelerationAsc">Mejor aceleración (0–100 km/h)</option><option value="chargingDesc">Carga rápida (kW)</option></select>
                 <button type="button" class="ranking-show-results" onclick="document.getElementById('catalogue-results').scrollIntoView({behavior:'smooth',block:'start'})"><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Ver ranking <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
@@ -713,7 +704,7 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
     </footer>
 
     <!-- DATABASE -->
-    <script src="/data/cars.js?v=20261113-ford-etransit-gallery"></script>
+    <script src="/data/motos.js?v=20261118"></script>
     <script src="/data/sales-ranking.js?v=20261111"></script>
     <script src="/js/sales-ranking.js?v=20261113-cutouts-restored"></script>
 
@@ -722,7 +713,7 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
     <script src="/js/vehicle-sales.js?v=20261030-uppercase"></script>
 
     <!-- APP -->
-    <script src="/js/app.js?v=20261117-fast-charge-ranking"></script>
+    <script src="/js/motos-filtros.js?v=20261118"></script>
 
     <script>
         window.addEventListener('load', function () {
