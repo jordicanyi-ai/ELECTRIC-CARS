@@ -593,25 +593,33 @@ html.brand-embed-root #catalogue-controls-anchor,html.brand-embed-root #results-
 
         <section id="ventas-electricos" class="lg:col-span-4 mt-8 rounded-[1.7rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
             <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
-                <div><span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Comparativa de motos eléctricas</span><h2 class="text-2xl sm:text-3xl font-black mt-2">Ranking de motos eléctricas</h2><p class="text-sm text-slate-500 mt-2">Clasificación por características técnicas, no por matriculaciones.</p></div>
-                <label class="text-sm font-semibold text-slate-700">Ordenar por <select id="moto-bottom-ranking-sort" class="block mt-2 rounded-xl border border-slate-300 bg-white p-3" onchange="renderMotoBottomRanking()"><option value="range">Mayor autonomía</option><option value="price">Menor precio</option><option value="power">Mayor potencia</option></select></label>
+                <div><span class="text-blue-600 text-xs font-extrabold uppercase tracking-widest">Matriculaciones · España</span><h2 class="text-2xl sm:text-3xl font-black mt-2">Las motos eléctricas más vendidas</h2><p id="motos-ventas-periodo" class="text-sm text-slate-500 mt-2">DGT · Motocicletas eléctricas nuevas</p></div>
+                <div class="flex gap-2" role="group" aria-label="Periodo de matriculaciones de motos">
+                    <button type="button" id="motos-ventas-mes" aria-pressed="true" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white" onclick="showMotoSales('monthly')">Último mes</button>
+                    <button type="button" id="motos-ventas-ano" aria-pressed="false" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700" onclick="showMotoSales('yearly')">Acumulado anual</button>
+                </div>
             </div>
-            <div id="moto-bottom-ranking" aria-live="polite" class="space-y-3"></div>
-            <p class="text-xs text-slate-400 mt-5">Datos de las motos incluidas en el comparador. Los modelos sin dato disponible se excluyen del criterio seleccionado.</p>
+            <div id="motos-ventas-lista" aria-live="polite"></div>
+            <p class="text-xs text-slate-400 mt-5">Fuente prevista: DGT · Microdatos de matriculaciones. No se muestran datos de turismos ni estimaciones.</p>
         </section>
 
     </main>
 
 <script>
-function renderMotoBottomRanking(){
- const target=document.getElementById('moto-bottom-ranking');if(!target)return;
- const metric=document.getElementById('moto-bottom-ranking-sort')?.value||'range';
- const field=metric==='price'?'priceEur':metric==='power'?'powerKw':'rangeKm';
- const motos=(typeof motorcycles!=='undefined'?motorcycles:[]).filter(m=>Number.isFinite(m[field])&&m[field]>0).sort((a,b)=>metric==='price'?a[field]-b[field]:b[field]-a[field]);
- const unit=metric==='price'?' €':metric==='power'?' kW':' km';
- target.innerHTML=motos.length?motos.map((m,i)=>'<div class="flex items-center gap-4 rounded-xl border border-slate-200 p-4"><span class="text-xl font-black text-blue-600 w-8">#'+(i+1)+'</span><div class="min-w-0 flex-1"><div class="font-bold">'+m.brand+' '+m.model+'</div><div class="text-xs text-slate-500">'+m.category+'</div></div><strong class="text-lg text-blue-700 whitespace-nowrap">'+Number(m[field]).toLocaleString('es-ES')+unit+'</strong></div>').join(''):'<p class="text-slate-500">No hay datos disponibles.</p>';
+function showMotoSales(which){
+ const data=window.electricosMotoSalesRanking?.[which];
+ const box=document.getElementById('motos-ventas-lista');
+ const period=document.getElementById('motos-ventas-periodo');
+ if(!box)return;
+ for(const [id,active] of [['motos-ventas-mes',which==='monthly'],['motos-ventas-ano',which==='yearly']]){
+  const btn=document.getElementById(id);if(!btn)continue;btn.setAttribute('aria-pressed',String(active));btn.className='px-4 py-2.5 rounded-xl text-sm font-bold '+(active?'bg-blue-600 text-white':'bg-slate-100 text-slate-700');
+ }
+ period.textContent=data?.label||'DGT · Motocicletas eléctricas nuevas · Datos pendientes de verificar';
+ const models=data?.models;
+ if(!Array.isArray(models)||!models.length){box.innerHTML='<p class="rounded-xl bg-slate-50 p-5 text-slate-600 text-sm">Datos oficiales de matriculaciones de motos eléctricas pendientes de incorporar. No se muestran cifras sin verificar.</p>';return;}
+ box.innerHTML=models.map((m,i)=>'<div class="flex items-center gap-4 rounded-xl border border-slate-200 p-4 mb-2"><strong class="text-xl text-blue-600 w-8">'+(i+1)+'</strong><span class="font-bold flex-1">'+String(m.model).replace(/[&<>"]/g,'')+'</span><strong>'+Number(m.units).toLocaleString('es-ES')+' uds.</strong></div>').join('');
 }
-document.addEventListener('DOMContentLoaded',renderMotoBottomRanking);
+document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
 </script>
     <!-- MODAL -->
     <div id="car-modal" role="dialog" aria-modal="true" aria-label="Ficha de la moto"
