@@ -1,0 +1,6 @@
+/* Muestras provisionales; valores por verificar antes de publicar fichas definitivas. */
+const motorcycles = [
+ {brand:'Silence',model:'S01',category:'Escúter',licenses:['A1','A','B'],priceEur:4190,rangeKm:133,powerKw:7,peakPowerKw:9,batteryKwh:5.6,topSpeedKmh:110,accel0050Sec:3.6,accel0100Sec:null,dcChargeKw:null,chargeText:'7–9 h en enchufe; intercambio de batería disponible',image:'/img/silence-ombra-portada-TRANSPARENT.webp',source:'https://www.silence.eco/es/productos/s02',note:'Precio con batería en propiedad; comprobar condiciones y versión'},
+ {brand:'BMW',model:'CE 04',category:'Escúter',licenses:['A2','A'],priceEur:12260,rangeKm:130,powerKw:15,peakPowerKw:31,batteryKwh:8.9,topSpeedKmh:120,accel0050Sec:2.6,accel0100Sec:null,dcChargeKw:null,acChargeKw:6.9,chargeText:'AC 2,3 kW; 6,9 kW opcional (0–80 % en 65 min)',source:'https://www.bmw-motorrad.es/es/models/urban_mobility/ce04/technicaldata.html',note:'Versión nominal 15 kW; la versión de 11 kW tiene otros datos'},
+ {brand:'Zero',model:'SR/F',category:'Moto',licenses:['A'],priceEur:null,rangeKm:283,powerKw:35,peakPowerKw:83,batteryKwh:17.3,topSpeedKmh:200,accel0100Sec:null,dcChargeKw:null,chargeText:'Consultar carga según versión',source:'https://zeromotorcycles.com/es-es/model/zero-srf?color=Limited+Edition',note:'Autonomía urbana; precio español pendiente de verificación'}
+];
