@@ -15,7 +15,7 @@ function filterCars(){
  document.querySelectorAll('[data-moto-quick]').forEach(b=>{const k=b.dataset.motoQuick;const on=k==='all'?!active&&!q:k==='price'?price===5000:k==='range'?range===100:k==='scooter'?type==='Scooter':k==='removable'?removable==='yes':license===k;b.setAttribute('aria-pressed',String(on))});
  motoEl('results-count').textContent=(window.motoRankingActive?'Ranking · ':'')+filtered.length+' '+(filtered.length===1?'moto':'motos');
  motoEl('cars-grid').innerHTML=filtered.length?'<div class="catalogue-batch">'+filtered.map((m,i)=>{
- const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');
+ const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');const rankingValue=sort==='priceAsc'?m.priceEur?.toLocaleString('es-ES')+' €':sort==='rangeDesc'?m.rangeKm+' km':sort==='powerDesc'?m.peakPowerKw+' kW':sort==='speedDesc'?m.topSpeedKmh+' km/h':sort==='batteryDesc'?m.batteryKwh+' kWh':sort==='accelerationAsc'?(m.accel0050Sec==null?'—':m.accel0050Sec+' s'):'';
  const priceText=m.priceEur==null?'Por verificar':m.priceEur.toLocaleString('es-ES')+' €';
  const rangeText=m.rangeKm==null?'Por verificar':m.rangeKm+' km';
  const powerText=m.powerKw==null?'Por verificar':m.powerKw+' kW';
@@ -408,7 +408,7 @@ function showMotoRanking(active){
  const panel=motoEl('ranking-panel'),filters=motoEl('filters-panel');
  if(panel)panel.hidden=!active;
  if(filters)filters.hidden=active;
- const rankBtn=motoEl('ranking-view-btn');
+ const title=motoEl('page-title');if(title)title.textContent=active?'RANKING DE MOTOS ELÉCTRICAS':'EXPLORA LAS MOTOS ELÉCTRICAS';const catalogBtn=motoEl('catalogue-view-btn');if(catalogBtn)catalogBtn.setAttribute('aria-pressed',String(!active));const rankBtn=motoEl('ranking-view-btn');
  if(rankBtn)rankBtn.setAttribute('aria-pressed',String(active));
  const sort=motoEl('sort-filter');
  if(sort)sort.closest('label')?.classList.toggle('hidden',active);
