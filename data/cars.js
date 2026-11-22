@@ -11916,5 +11916,162 @@ const carsData = [
       }
     ],
     "id": 69
+  },
+  {
+    "id": 71,
+    "brand": "Mazda",
+    "model": "6e",
+    "type": "Berlina",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 44725,
+    "priceMax": 46375,
+    "priceText": "44.725–46.375 €",
+    "rangeText": "560 km",
+    "minRangeVal": 560,
+    "maxRangeVal": 560,
+    "batteryText": "78 kWh",
+    "batteryType": "LFP",
+    "powerText": "258 CV (190 kW)",
+    "trunk": 466,
+    "frunkText": "72 L",
+    "acceleration": "7,3 s",
+    "dimensions": "4,921 × 1,890 × 1,485 m",
+    "charging": "200 kW CC · 10–80 % en 24 min",
+    "description": "El Mazda6e 2027 es una berlina eléctrica de cinco puertas y propulsión trasera. Incorpora una batería LFP de 78 kWh, 258 CV, 560 km WLTP y carga rápida de 200 kW. La gama española incluye los acabados Takumi, Takumi Plus y Homura Plus. Cuenta con 466 litros de maletero trasero y 72 litros de compartimento delantero, así como un interior tecnológico con pantalla central y sistemas de asistencia revisados.",
+    "highlights": [
+      "560 km de autonomía combinada WLTP",
+      "Batería LFP de 78 kWh y carga rápida de 200 kW",
+      "466 L de maletero y 72 L de frunk",
+      "Propulsión trasera y 258 CV"
+    ],
+    "considerations": [
+      "Berlina de 4,92 m de longitud y 2.090 kg de peso mínimo",
+      "Muchas funciones se controlan desde la pantalla central",
+      "Los precios de tarifa no incluyen ayudas ni promociones condicionadas"
+    ],
+    "idealFor": [
+      "Viajes largos por carretera",
+      "Familias que prefieren una berlina espaciosa",
+      "Conductores que valoran autonomía y recarga rápida"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa en España al contado, IVA incluido y sin ayudas públicas, financiación ni descuentos condicionados. Los colores opcionales pueden incrementar el precio."
+    },
+    "chargingInfo": {
+      "dcMax": "200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 24 min",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "6 años / 150.000 km (según condiciones Mazda España)",
+      "battery": "Consultar garantía específica de batería en Mazda España",
+      "capacity": "Consultar condiciones oficiales"
+    },
+    "trims": [
+      {
+        "name": "Takumi",
+        "price": "44.725 €",
+        "priceValue": 44725,
+        "battery": "78 kWh",
+        "batteryType": "LFP",
+        "power": "258 CV",
+        "range": "560 km WLTP",
+        "rangeValue": 560,
+        "accel": "7,3 s",
+        "charging": "200 kW CC · 10–80 % en 24 min"
+      },
+      {
+        "name": "Takumi Plus",
+        "price": "46.375 €",
+        "priceValue": 46375,
+        "battery": "78 kWh",
+        "batteryType": "LFP",
+        "power": "258 CV",
+        "range": "560 km WLTP",
+        "rangeValue": 560,
+        "accel": "7,3 s",
+        "charging": "200 kW CC · 10–80 % en 24 min"
+      },
+      {
+        "name": "Homura Plus",
+        "price": "46.375 €",
+        "priceValue": 46375,
+        "battery": "78 kWh",
+        "batteryType": "LFP",
+        "power": "258 CV",
+        "range": "560 km WLTP",
+        "rangeValue": 560,
+        "accel": "7,3 s",
+        "charging": "200 kW CC · 10–80 % en 24 min"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Crystal White Pearl",
+        "hex": "#F3F1EC",
+        "border": "#CBD5E1"
+      },
+      {
+        "name": "Soul Red Crystal",
+        "hex": "#981B2C"
+      },
+      {
+        "name": "Machine Grey",
+        "hex": "#5F6267"
+      },
+      {
+        "name": "Melting Copper",
+        "hex": "#A8775D"
+      },
+      {
+        "name": "Aero Grey",
+        "hex": "#B5B7B6"
+      },
+      {
+        "name": "Polymetal Grey",
+        "hex": "#677781"
+      },
+      {
+        "name": "Deep Crystal Blue",
+        "hex": "#1F3049"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#17191D"
+      }
+    ],
+    "images": [
+      "img/cars/mazda-6e/mazda-6e_01.webp",
+      "img/cars/mazda-6e/mazda-6e_02.webp",
+      "img/cars/mazda-6e/mazda-6e_03.webp",
+      "img/cars/mazda-6e/mazda-6e_04.webp",
+      "img/cars/mazda-6e/mazda-6e_05.webp",
+      "img/cars/mazda-6e/mazda-6e_06.webp",
+      "img/cars/mazda-6e/mazda-6e_07.webp",
+      "img/cars/mazda-6e/mazda-6e_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Mazda6e 2027 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Mazda+6e+2027+review",
+        "thumb": "img/cars/mazda-6e/mazda-6e_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mazda_logo.svg",
+      "group": "Mazda Motor Corporation",
+      "relation": "Fabricante independiente",
+      "note": "Mazda es un fabricante japonés de automóviles."
+    },
+    "brandUrl": "https://www.mazda.es/gama/mazda-6e/",
+    "dataStatus": {
+      "status": "Ficha técnica 2027 verificada; colores basados en catálogo oficial Mazda6e, confirmar disponibilidad por acabado",
+      "checkedAt": "22/11/2026"
+    }
   }
 ];
