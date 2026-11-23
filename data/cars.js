@@ -12721,7 +12721,7 @@ const carsData = [
     "id": 76,
     "brand": "Abarth",
     "model": "600e",
-    "type": "SUV compacto deportivo",
+    "type": "Crossover",
     "launchYear": 2024,
     "seats": 5,
     "priceMin": 45600,
@@ -12737,7 +12737,7 @@ const carsData = [
     "acceleration": "5,85 s",
     "dimensions": "4,187 × 1,808 × 1,502 m",
     "charging": "100 kW CC · 11 kW CA",
-    "description": "El Abarth 600e es un SUV compacto eléctrico deportivo de tracción delantera, con batería de 54 kWh brutos, hasta 280 CV y diferencial autoblocante mecánico. El configurador español anuncia un precio recomendado desde 45.600 € para la gama actual. Turismo y Scorpionissima son versiones de lanzamiento anteriores.",
+    "description": "El Abarth 600e es un crossover eléctrico deportivo de tracción delantera, con batería de 54 kWh brutos, hasta 280 CV y diferencial autoblocante mecánico. El configurador español anuncia un precio recomendado desde 45.600 € para la gama actual. Turismo y Scorpionissima son versiones de lanzamiento anteriores.",
     "highlights": [
       "240–280 CV según versión",
       "Diferencial autoblocante y puesta a punto deportiva",
