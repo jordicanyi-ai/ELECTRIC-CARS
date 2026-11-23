@@ -12446,7 +12446,62 @@ const carsData = [
         "charging": "150 kW CC · 22 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Negro Graphite",
+        "hex": "#1B1C20"
+      },
+      {
+        "name": "Iridio Sonic",
+        "hex": "#B9BCC1"
+      },
+      {
+        "name": "Gris Berlín",
+        "hex": "#74787B"
+      },
+      {
+        "name": "Copper Petra",
+        "hex": "#B87559"
+      },
+      {
+        "name": "Azul Boreal",
+        "hex": "#4C667B"
+      },
+      {
+        "name": "Blanco Perla",
+        "hex": "#F0EFE9",
+        "border": "#C9CDD3"
+      },
+      {
+        "name": "Gris Magnetic (F SPORT)",
+        "hex": "#666B71"
+      },
+      {
+        "name": "Copper Petra Bitono",
+        "hex": "#B87559",
+        "secondaryHex": "#17191B"
+      },
+      {
+        "name": "Azul Boreal Bitono",
+        "hex": "#4C667B",
+        "secondaryHex": "#17191B"
+      },
+      {
+        "name": "Gris Berlín Bitono",
+        "hex": "#74787B",
+        "secondaryHex": "#17191B"
+      },
+      {
+        "name": "Iridio Sonic Bitono",
+        "hex": "#B9BCC1",
+        "secondaryHex": "#17191B"
+      },
+      {
+        "name": "Gris Magnetic Bitono (F SPORT)",
+        "hex": "#666B71",
+        "secondaryHex": "#17191B"
+      }
+    ],
     "images": [
       "img/cars/lexus-rz/lexus-rz_01.webp",
       "img/cars/lexus-rz/lexus-rz_02.webp",
@@ -12472,7 +12527,7 @@ const carsData = [
     },
     "brandUrl": "https://www.lexusauto.es/",
     "dataStatus": {
-      "status": "Química NMC y refrigeración líquida actualizadas; colores y garantías pendientes de verificar",
+      "status": "Colores contrastados con configurador oficial Lexus España; disponibilidad según acabado. Garantías actualizadas.",
       "checkedAt": "23/11/2026"
     }
   }
