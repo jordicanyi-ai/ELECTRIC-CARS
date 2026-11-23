@@ -12731,7 +12731,7 @@ const carsData = [
     "minRangeVal": 319,
     "maxRangeVal": 319,
     "batteryText": "54 kWh brutos / 51 kWh útiles",
-    "batteryType": "Iones de litio NMC811 (níquel, manganeso y cobalto) · arquitectura de 400 V",
+    "batteryType": "NMC811",
     "powerText": "280 CV",
     "trunk": 360,
     "acceleration": "5,85 s",
