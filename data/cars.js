@@ -12530,5 +12530,191 @@ const carsData = [
       "status": "Colores contrastados con configurador oficial Lexus España; disponibilidad según acabado. Garantías actualizadas.",
       "checkedAt": "23/11/2026"
     }
+  },
+  {
+    "id": 75,
+    "brand": "Alpine",
+    "model": "A290",
+    "type": "Compacto deportivo",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 38100,
+    "priceMax": 44100,
+    "priceText": "38.100–44.100 €",
+    "rangeText": "364–380 km",
+    "minRangeVal": 364,
+    "maxRangeVal": 380,
+    "batteryText": "52 kWh",
+    "batteryType": "NMC",
+    "powerText": "180–220 CV",
+    "trunk": 326,
+    "frunkText": "Sin maletero delantero confirmado",
+    "acceleration": "6,4–7,4 s",
+    "dimensions": "3,997 × 1,823 × 1,512 m",
+    "charging": "100 kW CC · 11 kW CA",
+    "description": "El Alpine A290 es un compacto deportivo eléctrico de cinco puertas y cinco plazas, desarrollado sobre la plataforma del Renault 5. Monta una batería de 52 kWh, motores de 180 o 220 CV y tracción delantera. Ofrece hasta 380 km de autonomía WLTP y carga rápida de 100 kW.",
+    "highlights": [
+      "Chasis deportivo Alpine y frenos Brembo",
+      "Potencias de 180 y 220 CV",
+      "Batería de 52 kWh y carga rápida de 100 kW",
+      "Cinco puertas y cinco plazas"
+    ],
+    "considerations": [
+      "Autonomía de 364–380 km WLTP",
+      "Llantas de 19 pulgadas y orientación deportiva",
+      "El precio varía con pintura y opciones"
+    ],
+    "idealFor": [
+      "Conducción deportiva diaria",
+      "Ciudad y trayectos interurbanos",
+      "Quien busca un eléctrico compacto de altas prestaciones"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de partida publicados por Alpine España con IVA, sin descontar ayudas ni financiación; las opciones incrementan el PVP."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "15–80 % en unos 30 min (según condiciones)",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "Consultar condiciones de garantía Alpine España",
+      "battery": "Consultar garantía de batería Alpine España",
+      "capacity": "Por confirmar"
+    },
+    "trims": [
+      {
+        "name": "GT",
+        "price": "38.100 €",
+        "priceValue": 38100,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "180 CV",
+        "range": "380 km WLTP",
+        "rangeValue": 380,
+        "accel": "7,4 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GT Collection",
+        "price": "39.800 €",
+        "priceValue": 39800,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "180 CV",
+        "range": "380 km WLTP",
+        "rangeValue": 380,
+        "accel": "7,4 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GT Performance",
+        "price": "41.300 €",
+        "priceValue": 41300,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "220 CV",
+        "range": "364 km WLTP",
+        "rangeValue": 364,
+        "accel": "6,4 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GT Performance Collection",
+        "price": "43.000 €",
+        "priceValue": 43000,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "220 CV",
+        "range": "364 km WLTP",
+        "rangeValue": 364,
+        "accel": "6,4 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GTS",
+        "price": "44.100 €",
+        "priceValue": 44100,
+        "battery": "52 kWh",
+        "batteryType": "NMC",
+        "power": "220 CV",
+        "range": "364 km WLTP",
+        "rangeValue": 364,
+        "accel": "6,4 s",
+        "charging": "100 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Blanc Nival nacré",
+        "hex": "#F1F1EC",
+        "border": "#C8CDD3"
+      },
+      {
+        "name": "Blanc Nival nacré / Pavillon Noir Profond",
+        "hex": "#F1F1EC",
+        "secondaryHex": "#16191D",
+        "border": "#C8CDD3"
+      },
+      {
+        "name": "Bleu Alpine Vision métallisé",
+        "hex": "#1759AC"
+      },
+      {
+        "name": "Gris Tornade Mat",
+        "hex": "#73777A"
+      },
+      {
+        "name": "Noir Profond métallisé",
+        "hex": "#17191D"
+      },
+      {
+        "name": "Bleu Alpine Vision / Pavillon Noir",
+        "hex": "#1759AC",
+        "secondaryHex": "#17191D"
+      },
+      {
+        "name": "Gris Tornade Mat / Pavillon Noir Profond",
+        "hex": "#73777A",
+        "secondaryHex": "#17191D"
+      },
+      {
+        "name": "Bleu Orage Mat / Pavillon Noir Étoilé (Collection)",
+        "hex": "#485A78",
+        "secondaryHex": "#17191D"
+      }
+    ],
+    "images": [
+      "img/cars/Alpine-A290/Alpine-A290_01.webp",
+      "img/cars/Alpine-A290/Alpine-A290_02.webp",
+      "img/cars/Alpine-A290/Alpine-A290_03.webp",
+      "img/cars/Alpine-A290/Alpine-A290_04.webp",
+      "img/cars/Alpine-A290/Alpine-A290_05.webp",
+      "img/cars/Alpine-A290/Alpine-A290_06.webp",
+      "img/cars/Alpine-A290/Alpine-A290_07.webp",
+      "img/cars/Alpine-A290/Alpine-A290_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Alpine A290 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Alpine+A290+review+2026",
+        "thumb": "img/cars/Alpine-A290/Alpine-A290_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Alpine_logo.svg",
+      "group": "Renault Group",
+      "relation": "Marca deportiva del grupo Renault",
+      "note": "Alpine es una marca francesa de deportivos perteneciente al grupo Renault."
+    },
+    "brandUrl": "https://www.alpinecars.es/modelos-electricos/a290.html",
+    "dataStatus": {
+      "status": "Precios, acabados y colores según Alpine España; garantías por verificar",
+      "checkedAt": "23/11/2026"
+    }
   }
 ];
