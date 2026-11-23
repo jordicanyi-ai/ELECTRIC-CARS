@@ -12206,5 +12206,112 @@ const carsData = [
       "status": "Dimensiones y maletero delantero contrastados con ficha técnica oficial de Mazda España",
       "checkedAt": "23/11/2026"
     }
+  },
+  {
+    "id": 73,
+    "brand": "Subaru",
+    "model": "Solterra",
+    "type": "SUV",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 41000,
+    "priceMax": 41000,
+    "priceText": "Desde 41.000 € (PVP de gama por confirmar)",
+    "rangeText": "509–550 km",
+    "minRangeVal": 509,
+    "maxRangeVal": 550,
+    "batteryText": "73 kWh",
+    "batteryType": "Iones de litio (química por confirmar)",
+    "powerText": "227–343 CV",
+    "trunk": 452,
+    "frunkText": "No confirmado",
+    "acceleration": "5,1–7,4 s",
+    "dimensions": "4,690 × 1,860 × 1,650 m",
+    "charging": "150 kW CC · 10–80 % en 28 min",
+    "description": "El Subaru Solterra 2026 es un SUV eléctrico de cinco plazas con opciones de tracción delantera y total AWD, batería de 73 kWh y potencias de 227 a 343 CV. Su autonomía homologada WLTP es de 509 a 550 km según versión. Las especificaciones y precios definitivos por acabado en España están pendientes de contrastar.",
+    "highlights": [
+      "Autonomía WLTP de 509 a 550 km según versión",
+      "Versiones con tracción total AWD",
+      "Batería de 73 kWh",
+      "Carga rápida CC de 150 kW"
+    ],
+    "considerations": [
+      "Los precios de tarifa de cada acabado aún deben verificarse",
+      "Autonomía y potencia varían según versión",
+      "Confirmar química de batería y garantías de mercado español"
+    ],
+    "idealFor": [
+      "Familias que necesitan un SUV",
+      "Usuarios que valoran la tracción total",
+      "Trayectos mixtos y viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de acceso anunciado en España, pendiente de comprobar como PVP al contado sin descuentos ni ayudas. No se atribuye precio individual a los acabados."
+    },
+    "chargingInfo": {
+      "dcMax": "150 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 28 min",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "Consultar garantía oficial Subaru España",
+      "battery": "Consultar garantía oficial de batería",
+      "capacity": "Por confirmar"
+    },
+    "trims": [
+      {
+        "name": "Tracción delantera",
+        "price": "Por confirmar",
+        "battery": "73 kWh",
+        "power": "227 CV",
+        "range": "Hasta 550 km WLTP",
+        "rangeValue": 550,
+        "accel": "7,4 s",
+        "charging": "150 kW CC"
+      },
+      {
+        "name": "AWD",
+        "price": "Por confirmar",
+        "battery": "73 kWh",
+        "power": "343 CV",
+        "range": "Desde 509 km WLTP según acabado",
+        "rangeValue": 509,
+        "accel": "5,1 s",
+        "charging": "150 kW CC"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/Subaru-Solterra/Subaru-Solterra_01.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_02.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_03.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_04.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_05.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_06.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_07.webp",
+      "img/cars/Subaru-Solterra/Subaru-Solterra_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Subaru Solterra 2026 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Subaru+Solterra+2026+review",
+        "thumb": "img/cars/Subaru-Solterra/Subaru-Solterra_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Subaru_logo.svg",
+      "group": "Subaru Corporation",
+      "relation": "Fabricante japonés; alianza industrial con Toyota",
+      "note": "Subaru es una marca japonesa conocida por sus vehículos de tracción total."
+    },
+    "brandUrl": "https://www.subaru.es/",
+    "dataStatus": {
+      "status": "Ficha provisional: precios por acabado, colores, química y garantía pendientes de confirmar",
+      "checkedAt": "23/11/2026"
+    }
   }
 ];
