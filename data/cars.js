@@ -12091,9 +12091,9 @@ const carsData = [
     "batteryType": "LFP",
     "powerText": "258 CV (190 kW)",
     "trunk": 468,
-    "frunkText": "Consultar dato oficial",
+    "frunkText": "80 L",
     "acceleration": "7,9 s",
-    "dimensions": "Consultar ficha técnica oficial española",
+    "dimensions": "4,850 × 1,935 × 1,620 m",
     "charging": "195–200 kW CC · 10–80 % en 24 min",
     "description": "El Mazda CX-6e es un SUV eléctrico de cinco plazas con propulsión trasera, batería LFP de 78 kWh y 258 CV. Ofrece 468–484 km WLTP según acabado, carga rápida de hasta 200 kW y una pantalla panorámica de 26,45 pulgadas. Los acabados Takumi y Takumi Plus se comercializan en España.",
     "highlights": [
@@ -12203,7 +12203,7 @@ const carsData = [
     },
     "brandUrl": "https://www.mazda.es/",
     "dataStatus": {
-      "status": "Datos de gama España; lista de colores y dimensiones pendientes de completar con catálogo oficial",
+      "status": "Dimensiones y maletero delantero contrastados con ficha técnica oficial de Mazda España",
       "checkedAt": "23/11/2026"
     }
   }
