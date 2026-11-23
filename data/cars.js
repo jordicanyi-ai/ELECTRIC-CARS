@@ -12312,5 +12312,169 @@ const carsData = [
       "status": "Química NMC, celdas prismáticas y gestión térmica líquida actualizadas; precios, colores y garantías pendientes de verificar",
       "checkedAt": "23/11/2026"
     }
+  },
+  {
+    "id": 74,
+    "brand": "Lexus",
+    "model": "RZ",
+    "type": "SUV",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 52000,
+    "priceMax": 70900,
+    "priceText": "52.000–70.900 €",
+    "rangeText": "460–559 km",
+    "minRangeVal": 460,
+    "maxRangeVal": 559,
+    "batteryText": "77 kWh (72 kWh útiles)",
+    "batteryType": "Iones de litio (química por confirmar)",
+    "powerText": "224–408 CV",
+    "trunk": 522,
+    "frunkText": "No confirmado",
+    "acceleration": "Según versión (por confirmar)",
+    "dimensions": "4,805 × 1,895 × 1,635 m",
+    "charging": "150 kW CC · 22 kW CA",
+    "description": "El Lexus RZ 2026 es un SUV eléctrico de cinco plazas con una batería de 77 kWh brutos (72 kWh útiles), versiones de tracción delantera y total y potencias de 224 a 408 CV. La gama española incluye los RZ 350e, 500e AWD y 550e F SPORT AWD.",
+    "highlights": [
+      "Hasta 559 km WLTP según versión",
+      "Gama de 224 a 408 CV",
+      "522 litros de maletero",
+      "Tecnología de dirección Steer by Wire en versión específica"
+    ],
+    "considerations": [
+      "Autonomía variable según acabado y llantas",
+      "Confirmar autonomía exacta por configuración",
+      "La química de las celdas no está confirmada"
+    ],
+    "idealFor": [
+      "Familias que buscan un SUV premium",
+      "Conducción mixta y viajes",
+      "Usuarios que valoran confort y tecnología"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de tarifa en España con IVA, sin ayudas ni promociones condicionadas. Confirmar en configurador Lexus."
+    },
+    "chargingInfo": {
+      "dcMax": "150 kW",
+      "acMax": "22 kW",
+      "fastChargeText": "Consultar tiempo 10–80 % según versión",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "Consultar condiciones de Lexus España",
+      "battery": "Consultar garantía de batería en Lexus España",
+      "capacity": "Por confirmar"
+    },
+    "trims": [
+      {
+        "name": "350e Premium Efficiency",
+        "price": "52.000 €",
+        "priceValue": 52000,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "224 CV",
+        "range": "559 km WLTP (orientativo según configuración)",
+        "rangeValue": 559,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "350e Premium",
+        "price": "52.900 €",
+        "priceValue": 52900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "224 CV",
+        "range": "559 km WLTP (orientativo según configuración)",
+        "rangeValue": 559,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "350e Executive",
+        "price": "55.900 €",
+        "priceValue": 55900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "224 CV",
+        "range": "559 km WLTP (orientativo según configuración)",
+        "rangeValue": 559,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "500e Executive AWD",
+        "price": "61.900 €",
+        "priceValue": 61900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "381 CV",
+        "range": "500 km WLTP (orientativo según configuración)",
+        "rangeValue": 500,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "500e Luxury AWD",
+        "price": "70.900 €",
+        "priceValue": 70900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "381 CV",
+        "range": "500 km WLTP (orientativo según configuración)",
+        "rangeValue": 500,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "500e Luxury Steer by Wire",
+        "price": "70.900 €",
+        "priceValue": 70900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "381 CV",
+        "range": "500 km WLTP (orientativo según configuración)",
+        "rangeValue": 500,
+        "charging": "150 kW CC · 22 kW CA"
+      },
+      {
+        "name": "550e F SPORT AWD",
+        "price": "70.900 €",
+        "priceValue": 70900,
+        "battery": "77 kWh (72 kWh útiles)",
+        "batteryType": "Iones de litio",
+        "power": "408 CV",
+        "range": "460 km WLTP (orientativo según configuración)",
+        "rangeValue": 460,
+        "charging": "150 kW CC · 22 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/lexus-rz/lexus-rz_01.webp",
+      "img/cars/lexus-rz/lexus-rz_02.webp",
+      "img/cars/lexus-rz/lexus-rz_03.webp",
+      "img/cars/lexus-rz/lexus-rz_04.webp",
+      "img/cars/lexus-rz/lexus-rz_05.webp",
+      "img/cars/lexus-rz/lexus-rz_06.webp",
+      "img/cars/lexus-rz/lexus-rz_07.webp",
+      "img/cars/lexus-rz/lexus-rz_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Lexus RZ 2026 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Lexus+RZ+2026+review",
+        "thumb": "img/cars/lexus-rz/lexus-rz_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lexus_logo.svg",
+      "group": "Toyota Motor Corporation",
+      "relation": "Marca premium de Toyota",
+      "note": "Lexus es la división de vehículos premium del grupo Toyota, originaria de Japón."
+    },
+    "brandUrl": "https://www.lexusauto.es/",
+    "dataStatus": {
+      "status": "Ficha de gama 2026; autonomías por acabado orientativas, colores y garantías por verificar",
+      "checkedAt": "23/11/2026"
+    }
   }
 ];
