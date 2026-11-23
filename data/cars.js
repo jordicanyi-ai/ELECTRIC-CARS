@@ -12582,9 +12582,9 @@ const carsData = [
       "v2l": null
     },
     "warranty": {
-      "vehicle": "Consultar condiciones de garantía Alpine España",
-      "battery": "Consultar garantía de batería Alpine España",
-      "capacity": "Por confirmar"
+      "vehicle": "3 años (36 meses), sin límite de kilometraje",
+      "battery": "8 años (96 meses) / 160.000 km",
+      "capacity": "Mínimo del 70 % de capacidad (SoH) durante la garantía de batería"
     },
     "trims": [
       {
@@ -12713,7 +12713,7 @@ const carsData = [
     },
     "brandUrl": "https://www.alpinecars.es/modelos-electricos/a290.html",
     "dataStatus": {
-      "status": "Precios, acabados y colores según Alpine España; garantías por verificar",
+      "status": "Garantía de vehículo y batería incorporada; resto de datos según ficha de gama",
       "checkedAt": "23/11/2026"
     }
   }
