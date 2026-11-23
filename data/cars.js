@@ -12221,14 +12221,14 @@ const carsData = [
     "minRangeVal": 509,
     "maxRangeVal": 550,
     "batteryText": "73 kWh",
-    "batteryType": "Iones de litio (química por confirmar)",
+    "batteryType": "NMC",
     "powerText": "227–343 CV",
     "trunk": 452,
     "frunkText": "No confirmado",
     "acceleration": "5,1–7,4 s",
     "dimensions": "4,690 × 1,860 × 1,650 m",
     "charging": "150 kW CC · 10–80 % en 28 min",
-    "description": "El Subaru Solterra 2026 es un SUV eléctrico de cinco plazas con opciones de tracción delantera y total AWD, batería de 73 kWh y potencias de 227 a 343 CV. Su autonomía homologada WLTP es de 509 a 550 km según versión. Las especificaciones y precios definitivos por acabado en España están pendientes de contrastar.",
+    "description": "El Subaru Solterra 2026 es un SUV eléctrico de cinco plazas con opciones de tracción delantera y total AWD, batería de iones de litio NMC de 73 kWh con celdas prismáticas y refrigeración y calefacción líquidas y potencias de 227 a 343 CV. Su autonomía homologada WLTP es de 509 a 550 km según versión. Las especificaciones y precios definitivos por acabado en España están pendientes de contrastar.",
     "highlights": [
       "Autonomía WLTP de 509 a 550 km según versión",
       "Versiones con tracción total AWD",
@@ -12237,8 +12237,7 @@ const carsData = [
     ],
     "considerations": [
       "Los precios de tarifa de cada acabado aún deben verificarse",
-      "Autonomía y potencia varían según versión",
-      "Confirmar química de batería y garantías de mercado español"
+      "Autonomía y potencia varían según versión"
     ],
     "idealFor": [
       "Familias que necesitan un SUV",
@@ -12310,7 +12309,7 @@ const carsData = [
     },
     "brandUrl": "https://www.subaru.es/",
     "dataStatus": {
-      "status": "Ficha provisional: precios por acabado, colores, química y garantía pendientes de confirmar",
+      "status": "Química NMC, celdas prismáticas y gestión térmica líquida actualizadas; precios, colores y garantías pendientes de verificar",
       "checkedAt": "23/11/2026"
     }
   }
