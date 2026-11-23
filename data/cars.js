@@ -12734,7 +12734,6 @@ const carsData = [
     "batteryType": "Iones de litio (química por confirmar)",
     "powerText": "240–280 CV",
     "trunk": 360,
-    "frunkText": "0 L",
     "acceleration": "5,85–6,24 s",
     "dimensions": "4,187 × 1,808 × 1,502 m",
     "charging": "100 kW CC · 11 kW CA",
