@@ -12768,8 +12768,8 @@ const carsData = [
     },
     "warranty": {
       "vehicle": "3 años (confirmar condiciones Abarth España)",
-      "battery": "Consultar garantía oficial de batería",
-      "capacity": "Por confirmar"
+      "battery": "8 años o 160.000 km (lo que ocurra primero)",
+      "capacity": "Umbral mínimo de capacidad no confirmado en las fuentes facilitadas"
     },
     "trims": [
       {
