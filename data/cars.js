@@ -12327,14 +12327,14 @@ const carsData = [
     "minRangeVal": 460,
     "maxRangeVal": 559,
     "batteryText": "77 kWh (72 kWh útiles)",
-    "batteryType": "Iones de litio (química por confirmar)",
+    "batteryType": "NMC",
     "powerText": "224–408 CV",
     "trunk": 522,
     "frunkText": "No confirmado",
     "acceleration": "Según versión (por confirmar)",
     "dimensions": "4,805 × 1,895 × 1,635 m",
     "charging": "150 kW CC · 22 kW CA",
-    "description": "El Lexus RZ 2026 es un SUV eléctrico de cinco plazas con una batería de 77 kWh brutos (72 kWh útiles), versiones de tracción delantera y total y potencias de 224 a 408 CV. La gama española incluye los RZ 350e, 500e AWD y 550e F SPORT AWD.",
+    "description": "El Lexus RZ 2026 es un SUV eléctrico de cinco plazas con una batería de iones de litio NMC con refrigeración líquida de 77 kWh brutos (72 kWh útiles), versiones de tracción delantera y total y potencias de 224 a 408 CV. La gama española incluye los RZ 350e, 500e AWD y 550e F SPORT AWD.",
     "highlights": [
       "Hasta 559 km WLTP según versión",
       "Gama de 224 a 408 CV",
@@ -12343,8 +12343,7 @@ const carsData = [
     ],
     "considerations": [
       "Autonomía variable según acabado y llantas",
-      "Confirmar autonomía exacta por configuración",
-      "La química de las celdas no está confirmada"
+      "Confirmar autonomía exacta por configuración"
     ],
     "idealFor": [
       "Familias que buscan un SUV premium",
@@ -12374,7 +12373,7 @@ const carsData = [
         "price": "52.000 €",
         "priceValue": 52000,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "224 CV",
         "range": "559 km WLTP (orientativo según configuración)",
         "rangeValue": 559,
@@ -12385,7 +12384,7 @@ const carsData = [
         "price": "52.900 €",
         "priceValue": 52900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "224 CV",
         "range": "559 km WLTP (orientativo según configuración)",
         "rangeValue": 559,
@@ -12396,7 +12395,7 @@ const carsData = [
         "price": "55.900 €",
         "priceValue": 55900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "224 CV",
         "range": "559 km WLTP (orientativo según configuración)",
         "rangeValue": 559,
@@ -12407,7 +12406,7 @@ const carsData = [
         "price": "61.900 €",
         "priceValue": 61900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "381 CV",
         "range": "500 km WLTP (orientativo según configuración)",
         "rangeValue": 500,
@@ -12418,7 +12417,7 @@ const carsData = [
         "price": "70.900 €",
         "priceValue": 70900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "381 CV",
         "range": "500 km WLTP (orientativo según configuración)",
         "rangeValue": 500,
@@ -12429,7 +12428,7 @@ const carsData = [
         "price": "70.900 €",
         "priceValue": 70900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "381 CV",
         "range": "500 km WLTP (orientativo según configuración)",
         "rangeValue": 500,
@@ -12440,7 +12439,7 @@ const carsData = [
         "price": "70.900 €",
         "priceValue": 70900,
         "battery": "77 kWh (72 kWh útiles)",
-        "batteryType": "Iones de litio",
+        "batteryType": "NMC",
         "power": "408 CV",
         "range": "460 km WLTP (orientativo según configuración)",
         "rangeValue": 460,
@@ -12473,7 +12472,7 @@ const carsData = [
     },
     "brandUrl": "https://www.lexusauto.es/",
     "dataStatus": {
-      "status": "Ficha de gama 2026; autonomías por acabado orientativas, colores y garantías por verificar",
+      "status": "Química NMC y refrigeración líquida actualizadas; colores y garantías pendientes de verificar",
       "checkedAt": "23/11/2026"
     }
   }
