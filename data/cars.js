@@ -12716,5 +12716,136 @@ const carsData = [
       "status": "Garantía de vehículo y batería incorporada; resto de datos según ficha de gama",
       "checkedAt": "23/11/2026"
     }
+  },
+  {
+    "id": 76,
+    "brand": "Abarth",
+    "model": "600e",
+    "type": "SUV compacto deportivo",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 45000,
+    "priceMax": 49000,
+    "priceText": "45.000–49.000 € (tarifa de lanzamiento; revisar gama actual)",
+    "rangeText": "321–334 km",
+    "minRangeVal": 321,
+    "maxRangeVal": 334,
+    "batteryText": "54 kWh brutos / 51 kWh útiles",
+    "batteryType": "Iones de litio (química por confirmar)",
+    "powerText": "240–280 CV",
+    "trunk": 360,
+    "frunkText": "0 L",
+    "acceleration": "5,85–6,24 s",
+    "dimensions": "4,187 × 1,808 × 1,502 m",
+    "charging": "100 kW CC · 11 kW CA",
+    "description": "El Abarth 600e es un SUV compacto eléctrico deportivo de tracción delantera con diferencial autoblocante mecánico, batería de 54 kWh y hasta 280 CV. Las versiones de lanzamiento Turismo y Scorpionissima ofrecían 240 y 280 CV respectivamente. La oferta comercial actual puede variar.",
+    "highlights": [
+      "240–280 CV según versión",
+      "Diferencial autoblocante y puesta a punto deportiva",
+      "Carga rápida de 100 kW",
+      "Maletero de 360 litros"
+    ],
+    "considerations": [
+      "Autonomía de unos 321–334 km WLTP según homologación y neumáticos",
+      "Los precios indicados corresponden a las versiones de lanzamiento; confirmar gama 2026",
+      "Química de batería y garantía de capacidad pendientes de contrastar"
+    ],
+    "idealFor": [
+      "Conductores que buscan un SUV eléctrico deportivo",
+      "Uso urbano e interurbano",
+      "Quien valora aceleración y dinamismo"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios españoles de referencia de lanzamiento con IVA, sin ayudas ni financiación; Abarth muestra actualmente un 600e desde 45.600 € en su configurador y puede haber otros acabados."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "0–80 % en 27 min (ficha oficial)",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "3 años (confirmar condiciones Abarth España)",
+      "battery": "Consultar garantía oficial de batería",
+      "capacity": "Por confirmar"
+    },
+    "trims": [
+      {
+        "name": "Turismo (lanzamiento)",
+        "price": "45.000 €",
+        "priceValue": 45000,
+        "battery": "54 kWh",
+        "power": "240 CV",
+        "range": "Hasta 334 km WLTP con neumáticos Eco",
+        "rangeValue": 334,
+        "accel": "6,24 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Scorpionissima (lanzamiento)",
+        "price": "49.000 €",
+        "priceValue": 49000,
+        "battery": "54 kWh",
+        "power": "280 CV",
+        "range": "Hasta 334 km WLTP con neumáticos Eco",
+        "rangeValue": 334,
+        "accel": "5,85 s",
+        "charging": "100 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Verde Ácido",
+        "hex": "#C6DB28"
+      },
+      {
+        "name": "Blanco Antídoto",
+        "hex": "#F0EFEB",
+        "border": "#CDD1D6"
+      },
+      {
+        "name": "Naranja",
+        "hex": "#EA6B22"
+      },
+      {
+        "name": "Negro Venom",
+        "hex": "#19191D"
+      },
+      {
+        "name": "Púrpura Hipnótico (Scorpionissima)",
+        "hex": "#68528E"
+      }
+    ],
+    "images": [
+      "img/cars/abarth-600e/abarth-600e-01.webp",
+      "img/cars/abarth-600e/abarth-600e-02.webp",
+      "img/cars/abarth-600e/abarth-600e-03.webp",
+      "img/cars/abarth-600e/abarth-600e-04.webp",
+      "img/cars/abarth-600e/abarth-600e-05.webp",
+      "img/cars/abarth-600e/abarth-600e-06.webp",
+      "img/cars/abarth-600e/abarth-600e-07.webp",
+      "img/cars/abarth-600e/abarth-600e-08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Abarth 600e en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Abarth+600e+Turismo+Scorpionissima+review",
+        "thumb": "img/cars/abarth-600e/abarth-600e-01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abarth_logo.svg",
+      "group": "Stellantis",
+      "relation": "Marca italiana de deportivos del grupo Stellantis",
+      "note": "Abarth es una marca italiana de automóviles deportivos."
+    },
+    "brandUrl": "https://www.abarth.es/",
+    "dataStatus": {
+      "status": "Ficha de versiones de lanzamiento; gama y PVP vigentes en noviembre 2026 pendientes de actualización",
+      "checkedAt": "23/11/2026"
+    }
   }
 ];
