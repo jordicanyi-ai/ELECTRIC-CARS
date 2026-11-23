@@ -12073,5 +12073,138 @@ const carsData = [
       "status": "Ficha técnica 2027 verificada; colores basados en catálogo oficial Mazda6e, confirmar disponibilidad por acabado",
       "checkedAt": "22/11/2026"
     }
+  },
+  {
+    "id": 72,
+    "brand": "Mazda",
+    "model": "CX-6e",
+    "type": "SUV",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 46200,
+    "priceMax": 49200,
+    "priceText": "46.200–49.200 €",
+    "rangeText": "468–484 km",
+    "minRangeVal": 468,
+    "maxRangeVal": 484,
+    "batteryText": "78 kWh",
+    "batteryType": "LFP",
+    "powerText": "258 CV (190 kW)",
+    "trunk": 468,
+    "frunkText": "Consultar dato oficial",
+    "acceleration": "7,9 s",
+    "dimensions": "Consultar ficha técnica oficial española",
+    "charging": "195–200 kW CC · 10–80 % en 24 min",
+    "description": "El Mazda CX-6e es un SUV eléctrico de cinco plazas con propulsión trasera, batería LFP de 78 kWh y 258 CV. Ofrece 468–484 km WLTP según acabado, carga rápida de hasta 200 kW y una pantalla panorámica de 26,45 pulgadas. Los acabados Takumi y Takumi Plus se comercializan en España.",
+    "highlights": [
+      "468–484 km de autonomía WLTP",
+      "Batería LFP de 78 kWh",
+      "Carga rápida CC de hasta 200 kW",
+      "Pantalla panorámica de 26,45 pulgadas"
+    ],
+    "considerations": [
+      "La autonomía depende del acabado y equipamiento",
+      "La carrocería SUV tiene mayor altura que la berlina Mazda6e",
+      "Precios de tarifa sin ayudas ni descuentos de financiación"
+    ],
+    "idealFor": [
+      "Familias que buscan un SUV eléctrico",
+      "Viajes y uso mixto",
+      "Quien prioriza tecnología y equipamiento"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de tarifa españoles con IVA, sin ayudas públicas ni descuentos condicionados. Verificar equipamiento y opciones en configurador."
+    },
+    "chargingInfo": {
+      "dcMax": "195–200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 24 min",
+      "connector": "CCS2",
+      "v2l": null
+    },
+    "warranty": {
+      "vehicle": "6 años / 150.000 km (consultar condiciones de Mazda España)",
+      "battery": "Consultar condiciones específicas de batería",
+      "capacity": "Por confirmar"
+    },
+    "trims": [
+      {
+        "name": "Takumi",
+        "price": "46.200 €",
+        "priceValue": 46200,
+        "battery": "78 kWh",
+        "batteryType": "LFP",
+        "power": "258 CV",
+        "range": "484 km WLTP",
+        "rangeValue": 484,
+        "accel": "7,9 s",
+        "charging": "Hasta 200 kW CC"
+      },
+      {
+        "name": "Takumi Plus",
+        "price": "49.200 €",
+        "priceValue": 49200,
+        "battery": "78 kWh",
+        "batteryType": "LFP",
+        "power": "258 CV",
+        "range": "468 km WLTP",
+        "rangeValue": 468,
+        "accel": "7,9 s",
+        "charging": "Hasta 200 kW CC"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Nightfall Violet",
+        "hex": "#51425D"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#17191D"
+      },
+      {
+        "name": "Soul Red Crystal",
+        "hex": "#981B2C"
+      },
+      {
+        "name": "Machine Grey",
+        "hex": "#676A6D"
+      },
+      {
+        "name": "Crystal White Pearl",
+        "hex": "#F1F0EC",
+        "border": "#CBD5E1"
+      }
+    ],
+    "images": [
+      "img/cars/mazda-cx-6e/mazda-cx-6e_01.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_02.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_03.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_04.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_05.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_06.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_07.webp",
+      "img/cars/mazda-cx-6e/mazda-cx-6e_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Mazda CX-6e en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Mazda+CX-6e+2026+review",
+        "thumb": "img/cars/mazda-cx-6e/mazda-cx-6e_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mazda_logo.svg",
+      "group": "Mazda Motor Corporation",
+      "relation": "Fabricante independiente",
+      "note": "Mazda es un fabricante japonés de automóviles."
+    },
+    "brandUrl": "https://www.mazda.es/",
+    "dataStatus": {
+      "status": "Datos de gama España; lista de colores y dimensiones pendientes de completar con catálogo oficial",
+      "checkedAt": "23/11/2026"
+    }
   }
 ];
