@@ -12363,9 +12363,9 @@ const carsData = [
       "v2l": null
     },
     "warranty": {
-      "vehicle": "Consultar condiciones de Lexus España",
-      "battery": "Consultar garantía de batería en Lexus España",
-      "capacity": "Por confirmar"
+      "vehicle": "3 años / 100.000 km de fábrica; hasta 15 años / 250.000 km con Lexus Relax, sujeto a revisiones oficiales",
+      "battery": "8 años / 160.000 km de fábrica; hasta 10 años / 1.000.000 km con programa de mantenimiento oficial, sujeto a condiciones",
+      "capacity": "Capacidad mínima garantizada del 70 % durante la garantía de batería, según condiciones Lexus"
     },
     "trims": [
       {
