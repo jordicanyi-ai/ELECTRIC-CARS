@@ -12724,20 +12724,20 @@ const carsData = [
     "type": "SUV compacto deportivo",
     "launchYear": 2024,
     "seats": 5,
-    "priceMin": 45000,
-    "priceMax": 49000,
-    "priceText": "45.000–49.000 € (tarifa de lanzamiento; revisar gama actual)",
-    "rangeText": "321–334 km",
-    "minRangeVal": 321,
-    "maxRangeVal": 334,
+    "priceMin": 45600,
+    "priceMax": 45600,
+    "priceText": "45.600 €",
+    "rangeText": "319 km",
+    "minRangeVal": 319,
+    "maxRangeVal": 319,
     "batteryText": "54 kWh brutos / 51 kWh útiles",
     "batteryType": "Iones de litio (química por confirmar)",
-    "powerText": "240–280 CV",
+    "powerText": "280 CV",
     "trunk": 360,
-    "acceleration": "5,85–6,24 s",
+    "acceleration": "5,85 s",
     "dimensions": "4,187 × 1,808 × 1,502 m",
     "charging": "100 kW CC · 11 kW CA",
-    "description": "El Abarth 600e es un SUV compacto eléctrico deportivo de tracción delantera con diferencial autoblocante mecánico, batería de 54 kWh y hasta 280 CV. Las versiones de lanzamiento Turismo y Scorpionissima ofrecían 240 y 280 CV respectivamente. La oferta comercial actual puede variar.",
+    "description": "El Abarth 600e es un SUV compacto eléctrico deportivo de tracción delantera, con batería de 54 kWh brutos, hasta 280 CV y diferencial autoblocante mecánico. El configurador español anuncia un precio recomendado desde 45.600 € para la gama actual. Turismo y Scorpionissima son versiones de lanzamiento anteriores.",
     "highlights": [
       "240–280 CV según versión",
       "Diferencial autoblocante y puesta a punto deportiva",
@@ -12745,9 +12745,9 @@ const carsData = [
       "Maletero de 360 litros"
     ],
     "considerations": [
-      "Autonomía de unos 321–334 km WLTP según homologación y neumáticos",
-      "Los precios indicados corresponden a las versiones de lanzamiento; confirmar gama 2026",
-      "Química de batería y garantía de capacidad pendientes de contrastar"
+      "Autonomía de 319 km WLTP en el acabado actual de referencia",
+      "El precio oficial anunciado puede estar sujeto a condiciones comerciales; confirmar PVP sin promociones",
+      "Turismo y Scorpionissima corresponden a versiones de lanzamiento anteriores"
     ],
     "idealFor": [
       "Conductores que buscan un SUV eléctrico deportivo",
@@ -12757,7 +12757,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precios españoles de referencia de lanzamiento con IVA, sin ayudas ni financiación; Abarth muestra actualmente un 600e desde 45.600 € en su configurador y puede haber otros acabados."
+      "note": "Precio recomendado anunciado en el configurador oficial Abarth España, IVA incluido. La web indica una oferta válida hasta fin de mes; comprobar si se aplican condiciones o descuentos antes de considerarlo PVP incondicional. No se restan ayudas públicas."
     },
     "chargingInfo": {
       "dcMax": "100 kW",
@@ -12773,24 +12773,13 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "Turismo (lanzamiento)",
-        "price": "45.000 €",
-        "priceValue": 45000,
-        "battery": "54 kWh",
-        "power": "240 CV",
-        "range": "Hasta 334 km WLTP con neumáticos Eco",
-        "rangeValue": 334,
-        "accel": "6,24 s",
-        "charging": "100 kW CC · 11 kW CA"
-      },
-      {
-        "name": "Scorpionissima (lanzamiento)",
-        "price": "49.000 €",
-        "priceValue": 49000,
-        "battery": "54 kWh",
+        "name": "Competizione",
+        "price": "45.600 €",
+        "priceValue": 45600,
+        "battery": "54 kWh brutos / 51 kWh útiles",
         "power": "280 CV",
-        "range": "Hasta 334 km WLTP con neumáticos Eco",
-        "rangeValue": 334,
+        "range": "319 km WLTP",
+        "rangeValue": 319,
         "accel": "5,85 s",
         "charging": "100 kW CC · 11 kW CA"
       }
@@ -12843,7 +12832,7 @@ const carsData = [
     },
     "brandUrl": "https://www.abarth.es/",
     "dataStatus": {
-      "status": "Ficha de versiones de lanzamiento; gama y PVP vigentes en noviembre 2026 pendientes de actualización",
+      "status": "Configurador Abarth España: precio recomendado desde 45.600 €, un acabado actual. Precio sujeto a condiciones de oferta mensual; verificar PVP incondicional.",
       "checkedAt": "23/11/2026"
     }
   }
