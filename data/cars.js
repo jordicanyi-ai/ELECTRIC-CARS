@@ -13373,7 +13373,8 @@ const carsData = [
     "chargingInfo": {
       "dcMax": "200 kW",
       "acMax": "11 kW (22 kW opcional)",
-      "connector": "CCS2"
+      "connector": "CCS2",
+      "fastChargeText": "10–80 % en 30 min"
     },
     "warranty": {
       "vehicle": "3 años",
@@ -13406,32 +13407,7 @@ const carsData = [
         "charging": "200 kW CC · 11 kW CA"
       }
     ],
-    "colors": [
-      {
-        "name": "Magnesium",
-        "hex": "#C3C6C7"
-      },
-      {
-        "name": "Snow",
-        "hex": "#F4F4F1"
-      },
-      {
-        "name": "Space",
-        "hex": "#242528"
-      },
-      {
-        "name": "Storm",
-        "hex": "#777B80"
-      },
-      {
-        "name": "Electron",
-        "hex": "#85909D"
-      },
-      {
-        "name": "Gold",
-        "hex": "#BAA57B"
-      }
-    ],
+    "colors": [],
     "images": [
       "img/cars/polestar-4-coupe/polestar-4-coupe_01.webp",
       "img/cars/polestar-4-coupe/polestar-4-coupe_02.webp",
@@ -13452,13 +13428,14 @@ const carsData = [
     "brandInfo": {
       "group": "Geely",
       "relation": "Marca sueca vinculada al grupo Geely",
-      "note": "Colaboración con Volvo Cars."
+      "note": "Colaboración con Volvo Cars.",
+      "logo": "img/brands/polestar.svg"
     },
     "brandUrl": "https://www.polestar.com/es/",
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-coupe/specifications/",
-      "status": "Datos oficiales; colores específicos y química pendientes de confirmar."
+      "status": "Precios base, potencia, autonomía, carga y garantía confirmados en especificaciones oficiales. Paleta completa, química exacta y dimensiones pendientes de verificación adicional. Logo vectorial provisional."
     }
   },
   {
@@ -13485,7 +13462,8 @@ const carsData = [
     "description": "SUV eléctrico con luneta trasera convencional.",
     "highlights": [
       "Batería de 100 kWh",
-      "Tracción trasera o total"
+      "Tracción trasera o total",
+      "V2L de 3,3 kW con adaptador opcional"
     ],
     "considerations": [
       "Anchura de casi dos metros"
@@ -13503,7 +13481,8 @@ const carsData = [
     "chargingInfo": {
       "dcMax": "200 kW",
       "acMax": "11 kW (22 kW opcional)",
-      "connector": "CCS2"
+      "connector": "CCS2",
+      "fastChargeText": "10–80 % en 30 min"
     },
     "warranty": {
       "vehicle": "3 años",
@@ -13538,28 +13517,8 @@ const carsData = [
     ],
     "colors": [
       {
-        "name": "Magnesium",
-        "hex": "#C3C6C7"
-      },
-      {
-        "name": "Snow",
-        "hex": "#F4F4F1"
-      },
-      {
-        "name": "Space",
-        "hex": "#242528"
-      },
-      {
-        "name": "Storm",
-        "hex": "#777B80"
-      },
-      {
-        "name": "Electron",
-        "hex": "#85909D"
-      },
-      {
-        "name": "Gold",
-        "hex": "#BAA57B"
+        "name": "Stratus",
+        "hex": "#91999E"
       }
     ],
     "images": [
@@ -13582,13 +13541,14 @@ const carsData = [
     "brandInfo": {
       "group": "Geely",
       "relation": "Marca sueca vinculada al grupo Geely",
-      "note": "Colaboración con Volvo Cars."
+      "note": "Colaboración con Volvo Cars.",
+      "logo": "img/brands/polestar.svg"
     },
     "brandUrl": "https://www.polestar.com/es/",
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-suv/specifications/",
-      "status": "Datos oficiales; colores específicos y química pendientes de confirmar."
+      "status": "Precios base, potencia, autonomía, carga y garantía confirmados en especificaciones oficiales. Paleta completa, química exacta y dimensiones pendientes de verificación adicional. Logo vectorial provisional."
     }
   }
 ];
