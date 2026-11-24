@@ -12991,10 +12991,10 @@ const carsData = [
     "type": "SUV coupé",
     "launchYear": 2025,
     "seats": 5,
-    "priceMin": 57000,
-    "priceText": "Desde 57.000 €",
-    "rangeText": "550–750 km",
-    "minRangeVal": 550,
+    "priceMin": 56860,
+    "priceText": "56.860–74.710 €",
+    "rangeText": "527–750 km",
+    "minRangeVal": 527,
     "maxRangeVal": 750,
     "batteryText": "74–97,2 kWh",
     "batteryType": "NMC",
@@ -13016,7 +13016,8 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Precio de lanzamiento en España de 57.000 €. Tarifa actual sin descuentos pendiente de confirmar."
+      "note": "PVP de referencia sin descuentos, financiación ni ayudas (septiembre de 2026). Confirmar tarifa vigente con el fabricante.",
+      "source": "https://www.motor.es/ds/n8/"
     },
     "chargingInfo": {
       "dcMax": "160 kW",
@@ -13030,25 +13031,64 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "FWD",
+        "name": "Pallas FWD",
+        "price": "56.860 €",
+        "priceValue": 56860,
         "battery": "74 kWh",
+        "batteryType": "NMC",
         "power": "230 CV",
         "range": "550 km WLTP",
-        "rangeValue": 550
+        "rangeValue": 550,
+        "accel": "7,7 s",
+        "charging": "160 kW CC · 11 kW CA"
       },
       {
-        "name": "FWD Long Range",
+        "name": "Pallas FWD Long Range",
+        "price": "63.010 €",
+        "priceValue": 63010,
         "battery": "97,2 kWh",
+        "batteryType": "NMC",
         "power": "245 CV",
         "range": "750 km WLTP",
-        "rangeValue": 750
+        "rangeValue": 750,
+        "accel": "7,8 s",
+        "charging": "160 kW CC · 11 kW CA"
       },
       {
-        "name": "AWD Long Range",
+        "name": "Étoile FWD",
+        "price": "63.360 €",
+        "priceValue": 63360,
+        "battery": "74 kWh",
+        "batteryType": "NMC",
+        "power": "230 CV",
+        "range": "527 km WLTP",
+        "rangeValue": 527,
+        "accel": "7,7 s",
+        "charging": "160 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Étoile FWD Long Range",
+        "price": "70.210 €",
+        "priceValue": 70210,
         "battery": "97,2 kWh",
+        "batteryType": "NMC",
+        "power": "245 CV",
+        "range": "715 km WLTP",
+        "rangeValue": 715,
+        "accel": "7,8 s",
+        "charging": "160 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Étoile AWD Long Range",
+        "price": "74.710 €",
+        "priceValue": 74710,
+        "battery": "97,2 kWh",
+        "batteryType": "NMC",
         "power": "350 CV",
-        "range": "688 km WLTP",
-        "rangeValue": 688
+        "range": "664 km WLTP",
+        "rangeValue": 664,
+        "accel": "5,4 s",
+        "charging": "160 kW CC · 11 kW CA"
       }
     ],
     "colors": [
@@ -13099,12 +13139,13 @@ const carsData = [
     },
     "brandUrl": "https://www.dsautomobiles.es/",
     "dataStatus": {
-      "status": "Cinco colores de carrocería (disponibilidad de combinaciones bitono según acabado), logo local y garantías contrastadas. PVP actual y condiciones completas de garantía de batería pendientes.",
+      "status": "Cinco versiones con PVP de referencia de septiembre de 2026; tarifa vigente del fabricante y condiciones completas de garantía de batería pendientes de confirmar.",
       "checkedAt": "24/11/2026"
     },
     "idealFor": [
       "Viajes de larga distancia",
       "Conductores que buscan confort y autonomía"
-    ]
+    ],
+    "priceMax": 74710
   }
 ];
