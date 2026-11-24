@@ -13479,7 +13479,7 @@ const carsData = [
     "minRangeVal": 600,
     "maxRangeVal": 630,
     "batteryText": "100 kWh",
-    "batteryType": "NMC (por confirmar)",
+    "batteryType": "NMC",
     "powerText": "272–544 CV",
     "trunk": 530,
     "frunkText": "15 L",
@@ -13522,7 +13522,7 @@ const carsData = [
         "price": "55.600 €",
         "priceValue": 55600,
         "battery": "100 kWh",
-        "batteryType": "NMC (por confirmar)",
+        "batteryType": "NMC",
         "power": "272 CV",
         "range": "630 km WLTP",
         "rangeValue": 630,
@@ -13534,7 +13534,7 @@ const carsData = [
         "price": "58.600 €",
         "priceValue": 58600,
         "battery": "100 kWh",
-        "batteryType": "NMC (por confirmar)",
+        "batteryType": "NMC",
         "power": "544 CV",
         "range": "600 km WLTP",
         "rangeValue": 600,
@@ -13599,7 +13599,7 @@ const carsData = [
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-suv/specifications/",
-      "status": "Colores según catálogo internacional y JATO; muestras orientativas. Química NMC inferida por batería compartida, pendiente de confirmación específica del SUV. Logo provisional.",
+      "status": "Química NMC confirmada por el usuario. Colores según catálogo internacional; disponibilidad española por confirmar. Logo provisional.",
       "colorSource": "https://www.coches.net/fichas_tecnicas/polestar/4_suv/4x4/5-puertas/dual_motor_544cv_electrico/118156/853050920260710/",
       "batterySource": "https://www.polestar.com/dato-assets/11286/1772704325-polestar-4_carbon-footprint_summary_260304.pdf"
     }
