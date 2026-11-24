@@ -13866,7 +13866,22 @@ const carsData = [
     "dataStatus": {
       "status": "Precio, disponibilidad comercial y autonomía por acabado pendientes de verificación actual.",
       "source": "https://www.abarth.es/"
-    }
+    },
+    "trims": [
+      {
+        "name": "Gama de referencia",
+        "price": "39.350 €",
+        "priceValue": 39350,
+        "battery": "42 kWh",
+        "batteryType": "NMC",
+        "power": "154 CV",
+        "range": "253–264 km WLTP",
+        "rangeValue": 264,
+        "accel": "7 s",
+        "charging": "85 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": []
   },
   {
     "id": 84,
@@ -13946,6 +13961,21 @@ const carsData = [
     "dataStatus": {
       "status": "Precio, disponibilidad comercial y autonomía por acabado pendientes de verificación actual.",
       "source": "https://www.abarth.es/"
-    }
+    },
+    "trims": [
+      {
+        "name": "Gama de referencia",
+        "price": "42.350 €",
+        "priceValue": 42350,
+        "battery": "42 kWh",
+        "batteryType": "NMC",
+        "power": "154 CV",
+        "range": "242–254 km WLTP",
+        "rangeValue": 254,
+        "accel": "7 s",
+        "charging": "85 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": []
   }
 ];
