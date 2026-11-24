@@ -12915,7 +12915,45 @@ const carsData = [
         "charging": "120 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Grand White",
+        "hex": "#F4F3EF",
+        "border": "#CDD1D6"
+      },
+      {
+        "name": "Dandy Blue",
+        "hex": "#355B80"
+      },
+      {
+        "name": "Space Black",
+        "hex": "#1B1C20"
+      },
+      {
+        "name": "Iron Metal",
+        "hex": "#64686D"
+      },
+      {
+        "name": "Forest Green",
+        "hex": "#58644C"
+      },
+      {
+        "name": "Grand White (bitono)",
+        "hex": "#F4F3EF",
+        "secondaryHex": "#1B1C20",
+        "border": "#CDD1D6"
+      },
+      {
+        "name": "Iron Metal (bitono)",
+        "hex": "#64686D",
+        "secondaryHex": "#1B1C20"
+      },
+      {
+        "name": "Forest Green (bitono)",
+        "hex": "#58644C",
+        "secondaryHex": "#1B1C20"
+      }
+    ],
     "images": [
       "img/cars/kgm-torres-evx/kgm-torres-evx_01.webp",
       "img/cars/kgm-torres-evx/kgm-torres-evx_02.webp",
@@ -12940,7 +12978,7 @@ const carsData = [
     },
     "brandUrl": "https://kgm.com.es/",
     "dataStatus": {
-      "status": "Ficha técnica oficial 3/2026; precios sin descuentos de referencia noviembre 2025; colores, logo y capacidad mínima de garantía pendientes de confirmar.",
+      "status": "Colores según ficha oficial; PVP vigente sin promociones, logo y capacidad mínima de garantía pendientes de confirmar.",
       "checkedAt": "24/11/2026",
       "source": "https://kgm.com.es/uploads/documentacion/fichas_tecnicas/ficha-tecnica-torres-evx.pdf"
     }
