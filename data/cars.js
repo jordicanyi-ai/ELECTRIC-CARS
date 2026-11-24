@@ -13787,5 +13787,165 @@ const carsData = [
       "status": "PVP de referencia; verificar tarifa oficial sin descuentos, química, garantía específica de batería y autonomía DS Performance Line. Colores con valores ilustrativos.",
       "source": "https://www.dsautomobiles.es/modelos/ds3/electrico.html"
     }
+  },
+  {
+    "id": 83,
+    "brand": "Abarth",
+    "model": "500e",
+    "type": "Urbano",
+    "launchYear": 2023,
+    "seats": 4,
+    "priceMin": 39350,
+    "priceMax": 39350,
+    "priceText": "39.350 €",
+    "rangeText": "253–264 km",
+    "minRangeVal": 253,
+    "maxRangeVal": 264,
+    "batteryText": "42 kWh",
+    "batteryType": "NMC",
+    "powerText": "154 CV",
+    "trunk": 185,
+    "acceleration": "7 s",
+    "dimensions": "3,673 × 1,682 × 1,518 m",
+    "charging": "85 kW CC · 11 kW CA",
+    "description": "El Abarth 500e es un eléctrico deportivo compacto de tracción delantera, con 154 CV y batería de 42 kWh.",
+    "highlights": [
+      "Motor de 154 CV",
+      "Aceleración de 0 a 100 km/h en 7 s",
+      "Tamaño compacto"
+    ],
+    "considerations": [
+      "Autonomía limitada para viajes largos",
+      "Cuatro plazas",
+      "Precio y disponibilidad actuales pendientes de confirmación"
+    ],
+    "idealFor": [
+      "Uso urbano e interurbano",
+      "Conducción deportiva"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de referencia orientativo; tarifa vigente sin descuentos pendiente de confirmar.",
+      "source": "https://www.abarth.es/"
+    },
+    "chargingInfo": {
+      "dcMax": "85 kW",
+      "acMax": "11 kW",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "8 años o 160.000 km",
+      "capacity": "Pendiente de confirmar"
+    },
+    "images": [
+      "img/cars/abarth-500e/abarth-500e_01.webp",
+      "img/cars/abarth-500e/abarth-500e_02.webp",
+      "img/cars/abarth-500e/abarth-500e_03.webp",
+      "img/cars/abarth-500e/abarth-500e_04.webp",
+      "img/cars/abarth-500e/abarth-500e_05.webp",
+      "img/cars/abarth-500e/abarth-500e_06.webp",
+      "img/cars/abarth-500e/abarth-500e_07.webp",
+      "img/cars/abarth-500e/abarth-500e_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Abarth 500e en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Abarth%20500e",
+        "thumb": "img/cars/abarth-500e/abarth-500e_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/abarth.svg",
+      "group": "Stellantis",
+      "relation": "Marca italiana de deportivos del grupo Stellantis",
+      "note": "Abarth es una marca italiana de automóviles deportivos."
+    },
+    "brandUrl": "https://www.abarth.es/",
+    "dataStatus": {
+      "status": "Precio, disponibilidad comercial y autonomía por acabado pendientes de verificación actual.",
+      "source": "https://www.abarth.es/"
+    }
+  },
+  {
+    "id": 84,
+    "brand": "Abarth",
+    "model": "500e Cabrio",
+    "type": "Cabrio",
+    "launchYear": 2023,
+    "seats": 4,
+    "priceMin": 42350,
+    "priceMax": 42350,
+    "priceText": "42.350 €",
+    "rangeText": "242–254 km",
+    "minRangeVal": 242,
+    "maxRangeVal": 254,
+    "batteryText": "42 kWh",
+    "batteryType": "NMC",
+    "powerText": "154 CV",
+    "trunk": 185,
+    "acceleration": "7 s",
+    "dimensions": "3,673 × 1,682 × 1,518 m",
+    "charging": "85 kW CC · 11 kW CA",
+    "description": "El Abarth 500e Cabrio es un eléctrico deportivo compacto de tracción delantera, con 154 CV y batería de 42 kWh. Cuenta con techo de lona practicable.",
+    "highlights": [
+      "Motor de 154 CV",
+      "Aceleración de 0 a 100 km/h en 7 s",
+      "Tamaño compacto"
+    ],
+    "considerations": [
+      "Autonomía limitada para viajes largos",
+      "Cuatro plazas",
+      "Precio y disponibilidad actuales pendientes de confirmación"
+    ],
+    "idealFor": [
+      "Uso urbano e interurbano",
+      "Conducción deportiva"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de referencia orientativo; tarifa vigente sin descuentos pendiente de confirmar.",
+      "source": "https://www.abarth.es/"
+    },
+    "chargingInfo": {
+      "dcMax": "85 kW",
+      "acMax": "11 kW",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "8 años o 160.000 km",
+      "capacity": "Pendiente de confirmar"
+    },
+    "images": [
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_01.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_02.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_03.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_04.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_05.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_06.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_07.webp",
+      "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Abarth 500e Cabrio en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Abarth%20500e%20Cabrio",
+        "thumb": "img/cars/abarth-500e-cabrio/abarth-500e-cabrio_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/abarth.svg",
+      "group": "Stellantis",
+      "relation": "Marca italiana de deportivos del grupo Stellantis",
+      "note": "Abarth es una marca italiana de automóviles deportivos."
+    },
+    "brandUrl": "https://www.abarth.es/",
+    "dataStatus": {
+      "status": "Precio, disponibilidad comercial y autonomía por acabado pendientes de verificación actual.",
+      "source": "https://www.abarth.es/"
+    }
   }
 ];
