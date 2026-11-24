@@ -12974,11 +12974,12 @@ const carsData = [
     "brandInfo": {
       "group": "KG Group",
       "relation": "Marca surcoreana anteriormente denominada SsangYong",
-      "note": "KGM pertenece al grupo surcoreano KG Group."
+      "note": "KGM pertenece al grupo surcoreano KG Group.",
+      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/KG_Mobility_brand_logo.svg"
     },
     "brandUrl": "https://kgm.com.es/",
     "dataStatus": {
-      "status": "Colores según ficha oficial; PVP vigente sin promociones, logo y capacidad mínima de garantía pendientes de confirmar.",
+      "status": "Colores según ficha oficial; PVP vigente sin promociones y capacidad mínima de garantía pendientes de confirmar.",
       "checkedAt": "24/11/2026",
       "source": "https://kgm.com.es/uploads/documentacion/fichas_tecnicas/ficha-tecnica-torres-evx.pdf"
     }
