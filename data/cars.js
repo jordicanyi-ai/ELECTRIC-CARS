@@ -13101,6 +13101,10 @@ const carsData = [
     "dataStatus": {
       "status": "Cinco colores de carrocería (disponibilidad de combinaciones bitono según acabado), logo local y garantías contrastadas. PVP actual y condiciones completas de garantía de batería pendientes.",
       "checkedAt": "24/11/2026"
-    }
+    },
+    "idealFor": [
+      "Viajes de larga distancia",
+      "Conductores que buscan confort y autonomía"
+    ]
   }
 ];
