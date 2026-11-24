@@ -13612,5 +13612,180 @@ const carsData = [
       "colorSource": "https://www.coches.net/fichas_tecnicas/polestar/4_suv/4x4/5-puertas/dual_motor_544cv_electrico/118156/853050920260710/",
       "batterySource": "https://www.polestar.com/dato-assets/11286/1772704325-polestar-4_carbon-footprint_summary_260304.pdf"
     }
+  },
+  {
+    "id": 82,
+    "brand": "DS",
+    "model": "3 E-TENSE",
+    "type": "SUV pequeño",
+    "launchYear": 2023,
+    "seats": 5,
+    "priceMin": 42241,
+    "priceMax": 45291,
+    "priceText": "42.241–45.291 €",
+    "rangeText": "394–404 km",
+    "minRangeVal": 394,
+    "maxRangeVal": 404,
+    "batteryText": "54 kWh",
+    "batteryType": "NMC",
+    "powerText": "156 CV",
+    "trunk": 350,
+    "acceleration": "9,0 s",
+    "dimensions": "4,12 × 1,79 × 1,53 m",
+    "charging": "100 kW CC · 7,4–11 kW CA",
+    "description": "SUV urbano eléctrico de tracción delantera, con cuatro acabados y motor de 156 CV.",
+    "highlights": [
+      "Dimensiones compactas",
+      "Autonomía WLTP de 404 km en la configuración más eficiente",
+      "Confort y acabados premium"
+    ],
+    "considerations": [
+      "Carga rápida limitada a 100 kW",
+      "Autonomía según llantas y equipamiento"
+    ],
+    "idealFor": [
+      "Uso urbano y desplazamientos diarios",
+      "Conductores que buscan un SUV compacto premium"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de referencia sin descuentos de Motor.es; Maison Sarah Lavoine según comunicado oficial de abril de 2026. Tarifa vigente sin promociones pendiente de confirmación.",
+      "source": "https://www.motor.es/ds/ds-3/"
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "7,4–11 kW",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años de garantía legal. DS Serenity hasta 8 años o 160.000 km sujeto a condiciones del programa.",
+      "battery": "8 años o 160.000 km (pendiente de confirmar condiciones específicas)",
+      "capacity": "70% (pendiente de confirmación documental)"
+    },
+    "trims": [
+      {
+        "name": "Pallas",
+        "price": "42.241 €",
+        "priceValue": 42241,
+        "battery": "54 kWh",
+        "batteryType": "NMC",
+        "power": "156 CV",
+        "range": "404 km WLTP",
+        "rangeValue": 404,
+        "accel": "9,0 s",
+        "charging": "100 kW CC · 7,4 kW CA"
+      },
+      {
+        "name": "DS Performance Line",
+        "price": "43.441 €",
+        "priceValue": 43441,
+        "battery": "54 kWh",
+        "batteryType": "NMC",
+        "power": "156 CV",
+        "range": "Pendiente de confirmar",
+        "accel": "9,0 s",
+        "charging": "100 kW CC · 7,4 kW CA"
+      },
+      {
+        "name": "Maison Sarah Lavoine",
+        "price": "44.600 €",
+        "priceValue": 44600,
+        "battery": "54 kWh",
+        "batteryType": "NMC",
+        "power": "156 CV",
+        "range": "396 km WLTP",
+        "rangeValue": 396,
+        "accel": "9,0 s",
+        "charging": "100 kW CC"
+      },
+      {
+        "name": "Étoile",
+        "price": "45.291 €",
+        "priceValue": 45291,
+        "battery": "54 kWh",
+        "batteryType": "NMC",
+        "power": "156 CV",
+        "range": "394 km WLTP",
+        "rangeValue": 394,
+        "accel": "9,0 s",
+        "charging": "100 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Negro Perla",
+        "hex": "#19191B"
+      },
+      {
+        "name": "Night Flight",
+        "hex": "#35383D"
+      },
+      {
+        "name": "Blanco Banquise",
+        "hex": "#F4F3EF"
+      },
+      {
+        "name": "Azul Lazurite",
+        "hex": "#284B78"
+      },
+      {
+        "name": "Crystal Pearl",
+        "hex": "#BDBAB2"
+      },
+      {
+        "name": "Cashmere",
+        "hex": "#A69C8C"
+      },
+      {
+        "name": "Verde Esmeralda / Parthenon Cream",
+        "hex": "#245D4D",
+        "secondaryHex": "#E4D7BD"
+      },
+      {
+        "name": "Negro Perla / Parthenon Cream",
+        "hex": "#19191B",
+        "secondaryHex": "#E4D7BD"
+      },
+      {
+        "name": "Azul Lazurite / Parthenon Cream",
+        "hex": "#284B78",
+        "secondaryHex": "#E4D7BD"
+      },
+      {
+        "name": "Crystal Pearl / Negro Perla",
+        "hex": "#BDBAB2",
+        "secondaryHex": "#19191B"
+      }
+    ],
+    "images": [
+      "img/cars/ds-3-etense/ds-3-etense_01.webp",
+      "img/cars/ds-3-etense/ds-3-etense_02.webp",
+      "img/cars/ds-3-etense/ds-3-etense_03.webp",
+      "img/cars/ds-3-etense/ds-3-etense_04.webp",
+      "img/cars/ds-3-etense/ds-3-etense_05.webp",
+      "img/cars/ds-3-etense/ds-3-etense_06.webp",
+      "img/cars/ds-3-etense/ds-3-etense_07.webp",
+      "img/cars/ds-3-etense/ds-3-etense_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del DS 3 E-TENSE",
+        "url": "https://www.youtube.com/results?search_query=DS+3+E-TENSE+156",
+        "thumb": "img/cars/ds-3-etense/ds-3-etense_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/ds.svg",
+      "group": "Stellantis",
+      "relation": "Marca premium francesa del grupo Stellantis",
+      "note": "DS Automobiles es una marca francesa de automóviles premium."
+    },
+    "brandUrl": "https://www.dsautomobiles.es/",
+    "dataStatus": {
+      "checkedAt": "24/11/2026",
+      "status": "PVP de referencia; verificar tarifa oficial sin descuentos, química, garantía específica de batería y autonomía DS Performance Line. Colores con valores ilustrativos.",
+      "source": "https://www.dsautomobiles.es/modelos/ds3/electrico.html"
+    }
   }
 ];
