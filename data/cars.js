@@ -13407,7 +13407,32 @@ const carsData = [
         "charging": "200 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Snow",
+        "hex": "#F4F4F1"
+      },
+      {
+        "name": "Magnesium",
+        "hex": "#C3C6C7"
+      },
+      {
+        "name": "Electron",
+        "hex": "#85909D"
+      },
+      {
+        "name": "Storm",
+        "hex": "#777B80"
+      },
+      {
+        "name": "Space",
+        "hex": "#242528"
+      },
+      {
+        "name": "Gold",
+        "hex": "#BAA57B"
+      }
+    ],
     "images": [
       "img/cars/polestar-4-coupe/polestar-4-coupe_01.webp",
       "img/cars/polestar-4-coupe/polestar-4-coupe_02.webp",
@@ -13435,7 +13460,9 @@ const carsData = [
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-coupe/specifications/",
-      "status": "Precios base, potencia, autonomía, carga y garantía confirmados en especificaciones oficiales. Paleta completa, química exacta y dimensiones pendientes de verificación adicional. Logo vectorial provisional."
+      "status": "Química NMC confirmada por informe de huella de carbono de Polestar; colores según catálogo, disponibilidad española por confirmar. Logo provisional.",
+      "colorSource": "https://i.i-sgcm.com/new_cars/cars/21830/brochures/brochure_20260128113306.pdf",
+      "batterySource": "https://www.polestar.com/dato-assets/11286/1772704325-polestar-4_carbon-footprint_summary_260304.pdf"
     }
   },
   {
@@ -13452,7 +13479,7 @@ const carsData = [
     "minRangeVal": 600,
     "maxRangeVal": 630,
     "batteryText": "100 kWh",
-    "batteryType": "NMC",
+    "batteryType": "NMC (por confirmar)",
     "powerText": "272–544 CV",
     "trunk": 530,
     "frunkText": "15 L",
@@ -13495,7 +13522,7 @@ const carsData = [
         "price": "55.600 €",
         "priceValue": 55600,
         "battery": "100 kWh",
-        "batteryType": "NMC",
+        "batteryType": "NMC (por confirmar)",
         "power": "272 CV",
         "range": "630 km WLTP",
         "rangeValue": 630,
@@ -13507,7 +13534,7 @@ const carsData = [
         "price": "58.600 €",
         "priceValue": 58600,
         "battery": "100 kWh",
-        "batteryType": "NMC",
+        "batteryType": "NMC (por confirmar)",
         "power": "544 CV",
         "range": "600 km WLTP",
         "rangeValue": 600,
@@ -13517,7 +13544,31 @@ const carsData = [
     ],
     "colors": [
       {
+        "name": "Lightning",
+        "hex": "#BEC3C6"
+      },
+      {
+        "name": "Snow",
+        "hex": "#F4F4F1"
+      },
+      {
+        "name": "Space",
+        "hex": "#202124"
+      },
+      {
         "name": "Stratus",
+        "hex": "#91999E"
+      },
+      {
+        "name": "Aurora",
+        "hex": "#667D76"
+      },
+      {
+        "name": "Ozone",
+        "hex": "#778FA5"
+      },
+      {
+        "name": "Stratus matte",
         "hex": "#91999E"
       }
     ],
@@ -13548,7 +13599,9 @@ const carsData = [
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-suv/specifications/",
-      "status": "Precios base, potencia, autonomía, carga y garantía confirmados en especificaciones oficiales. Paleta completa, química exacta y dimensiones pendientes de verificación adicional. Logo vectorial provisional."
+      "status": "Colores según catálogo internacional y JATO; muestras orientativas. Química NMC inferida por batería compartida, pendiente de confirmación específica del SUV. Logo provisional.",
+      "colorSource": "https://www.coches.net/fichas_tecnicas/polestar/4_suv/4x4/5-puertas/dual_motor_544cv_electrico/118156/853050920260710/",
+      "batterySource": "https://www.polestar.com/dato-assets/11286/1772704325-polestar-4_carbon-footprint_summary_260304.pdf"
     }
   }
 ];
