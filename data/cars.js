@@ -4582,9 +4582,9 @@ const carsData = [
     "model": "#2",
     "type": "Urbano",
     "launchYear": 2026,
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Precio no anunciado",
+    "priceMin": 19990,
+    "priceMax": 24490,
+    "priceText": "19.990–24.490 €",
     "rangeText": "290 km WLTP (provisional)",
     "minRangeVal": 290,
     "maxRangeVal": 290,
@@ -4617,7 +4617,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "smart todavía no ha publicado un PVP español verificable."
+      "note": "Precios anunciados para España, sin ayudas, transporte ni matriculación. Couture Edition (25.690 €) agotada; excluida del rango de precios disponible. Entregas previstas para el primer semestre de 2027."
     },
     "trims": [
       {
@@ -4626,7 +4626,9 @@ const carsData = [
         "batteryType": "LFP",
         "power": "82 CV",
         "range": "290 km WLTP (provisional)",
-        "rangeValue": 290
+        "rangeValue": 290,
+        "priceValue": 19990,
+        "price": "19.990 €"
       },
       {
         "name": "Pure+",
@@ -4634,7 +4636,9 @@ const carsData = [
         "batteryType": "LFP",
         "power": "82 CV",
         "range": "290 km WLTP (provisional)",
-        "rangeValue": 290
+        "rangeValue": 290,
+        "priceValue": 20990,
+        "price": "20.990 €"
       },
       {
         "name": "Premium",
@@ -4642,7 +4646,9 @@ const carsData = [
         "batteryType": "LFP",
         "power": "82 CV",
         "range": "290 km WLTP (provisional)",
-        "rangeValue": 290
+        "rangeValue": 290,
+        "priceValue": 24490,
+        "price": "24.490 €"
       },
       {
         "name": "Couture Edition",
@@ -4650,7 +4656,9 @@ const carsData = [
         "batteryType": "LFP",
         "power": "82 CV",
         "range": "290 km WLTP (provisional)",
-        "rangeValue": 290
+        "rangeValue": 290,
+        "priceValue": 25690,
+        "price": "25.690 € (agotada)"
       }
     ],
     "colors": [
@@ -4697,8 +4705,8 @@ const carsData = [
     "brandUrl": "https://es.smart.com/es/models/",
     "upcoming": true,
     "dataStatus": {
-      "status": "Colores de presentación; disponibilidad comercial pendiente de confirmación",
-      "checkedAt": "30/10/2026"
+      "status": "Pedidos abiertos; precios anunciados. Autonomía de 290 km pendiente de homologación definitiva.",
+      "checkedAt": "24/11/2026"
     },
     "sources": [
       "https://media.smart.com/en-GB/273046-world-premiere-of-the-smart-2-as-reinvention-of-the-urban-two-seater/",
@@ -4945,7 +4953,7 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "PVP sin oferta con IVA, sin ayudas ni financiación. Fuentes: Carwow España y tienda smart. Los acabados sin PVP comprobado se muestran sin precio."
+      "note": "Pro: último PVP de referencia de 48.850 €, pendiente de confirmar vigencia. El rango principal incluye únicamente versiones con precio vigente registrado."
     },
     "chargingInfo": {
       "dcMax": "400 kW",
@@ -4961,7 +4969,8 @@ const carsData = [
         "power": "340 CV",
         "range": "465 km WLTP",
         "rangeValue": 465,
-        "accel": "6,9 s"
+        "accel": "6,9 s",
+        "price": "48.850 € (referencia anterior)"
       },
       {
         "name": "Pro+",
@@ -5092,8 +5101,8 @@ const carsData = [
     },
     "brandUrl": "https://es.smart.com/es/models/hashtag-five/",
     "dataStatus": {
-      "status": "Colores y techos actualizados a partir de referencias; disponibilidad según versión y mercado",
-      "checkedAt": "30/10/2026"
+      "status": "Precio Pro de referencia anterior, pendiente de confirmar vigencia; restantes precios conservados.",
+      "checkedAt": "24/11/2026"
     },
     "sources": [
       "https://es.smart.com/es/models/hashtag-five/specifications/",
