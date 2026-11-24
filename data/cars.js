@@ -13330,5 +13330,265 @@ const carsData = [
         "https://www.jeep.es/nuevo-jeep-compass/full-electric"
       ]
     }
+  },
+  {
+    "id": 80,
+    "brand": "Polestar",
+    "model": "4 Coupé",
+    "type": "SUV coupé",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 65900,
+    "priceMax": 72900,
+    "priceText": "65.900–72.900 €",
+    "rangeText": "590–620 km",
+    "minRangeVal": 590,
+    "maxRangeVal": 620,
+    "batteryText": "100 kWh",
+    "batteryType": "NMC",
+    "powerText": "272–544 CV",
+    "trunk": 526,
+    "frunkText": "15 L",
+    "acceleration": "3,8–7,1 s",
+    "dimensions": "4,840 × 1,994 × 1,534 m",
+    "charging": "200 kW CC · 11 kW CA",
+    "description": "SUV coupé eléctrico con retrovisor digital y sin luneta trasera.",
+    "highlights": [
+      "Batería de 100 kWh",
+      "Tracción trasera o total"
+    ],
+    "considerations": [
+      "Anchura de casi dos metros"
+    ],
+    "idealFor": [
+      "Viajes largos",
+      "Familias"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifa de catálogo sin descuentos ni ayudas.",
+      "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-coupe/specifications/"
+    },
+    "chargingInfo": {
+      "dcMax": "200 kW",
+      "acMax": "11 kW (22 kW opcional)",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años",
+      "battery": "8 años o 160.000 km",
+      "capacity": "70 %"
+    },
+    "trims": [
+      {
+        "name": "Rear motor",
+        "price": "65.900 €",
+        "priceValue": 65900,
+        "battery": "100 kWh",
+        "batteryType": "NMC",
+        "power": "272 CV",
+        "range": "620 km WLTP",
+        "rangeValue": 620,
+        "accel": "7,1 s",
+        "charging": "200 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Dual motor",
+        "price": "72.900 €",
+        "priceValue": 72900,
+        "battery": "100 kWh",
+        "batteryType": "NMC",
+        "power": "544 CV",
+        "range": "590 km WLTP",
+        "rangeValue": 590,
+        "accel": "3,8 s",
+        "charging": "200 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Magnesium",
+        "hex": "#C3C6C7"
+      },
+      {
+        "name": "Snow",
+        "hex": "#F4F4F1"
+      },
+      {
+        "name": "Space",
+        "hex": "#242528"
+      },
+      {
+        "name": "Storm",
+        "hex": "#777B80"
+      },
+      {
+        "name": "Electron",
+        "hex": "#85909D"
+      },
+      {
+        "name": "Gold",
+        "hex": "#BAA57B"
+      }
+    ],
+    "images": [
+      "img/cars/polestar-4-coupe/polestar-4-coupe_01.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_02.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_03.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_04.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_05.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_06.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_07.webp",
+      "img/cars/polestar-4-coupe/polestar-4-coupe_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=polestar-4-coupe",
+        "thumb": "img/cars/polestar-4-coupe/polestar-4-coupe_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "Geely",
+      "relation": "Marca sueca vinculada al grupo Geely",
+      "note": "Colaboración con Volvo Cars."
+    },
+    "brandUrl": "https://www.polestar.com/es/",
+    "dataStatus": {
+      "checkedAt": "24/11/2026",
+      "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-coupe/specifications/",
+      "status": "Datos oficiales; colores específicos y química pendientes de confirmar."
+    }
+  },
+  {
+    "id": 81,
+    "brand": "Polestar",
+    "model": "4 SUV",
+    "type": "SUV grande",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 55600,
+    "priceMax": 58600,
+    "priceText": "55.600–58.600 €",
+    "rangeText": "600–630 km",
+    "minRangeVal": 600,
+    "maxRangeVal": 630,
+    "batteryText": "100 kWh",
+    "batteryType": "NMC",
+    "powerText": "272–544 CV",
+    "trunk": 530,
+    "frunkText": "15 L",
+    "acceleration": "3,9–7,3 s",
+    "dimensions": "4,840 × 1,994 × 1,556 m",
+    "charging": "200 kW CC · 11 kW CA",
+    "description": "SUV eléctrico con luneta trasera convencional.",
+    "highlights": [
+      "Batería de 100 kWh",
+      "Tracción trasera o total"
+    ],
+    "considerations": [
+      "Anchura de casi dos metros"
+    ],
+    "idealFor": [
+      "Viajes largos",
+      "Familias"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifa de catálogo sin descuentos ni ayudas.",
+      "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-suv/specifications/"
+    },
+    "chargingInfo": {
+      "dcMax": "200 kW",
+      "acMax": "11 kW (22 kW opcional)",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años",
+      "battery": "8 años o 160.000 km",
+      "capacity": "70 %"
+    },
+    "trims": [
+      {
+        "name": "Rear motor",
+        "price": "55.600 €",
+        "priceValue": 55600,
+        "battery": "100 kWh",
+        "batteryType": "NMC",
+        "power": "272 CV",
+        "range": "630 km WLTP",
+        "rangeValue": 630,
+        "accel": "7,3 s",
+        "charging": "200 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Dual motor",
+        "price": "58.600 €",
+        "priceValue": 58600,
+        "battery": "100 kWh",
+        "batteryType": "NMC",
+        "power": "544 CV",
+        "range": "600 km WLTP",
+        "rangeValue": 600,
+        "accel": "3,9 s",
+        "charging": "200 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Magnesium",
+        "hex": "#C3C6C7"
+      },
+      {
+        "name": "Snow",
+        "hex": "#F4F4F1"
+      },
+      {
+        "name": "Space",
+        "hex": "#242528"
+      },
+      {
+        "name": "Storm",
+        "hex": "#777B80"
+      },
+      {
+        "name": "Electron",
+        "hex": "#85909D"
+      },
+      {
+        "name": "Gold",
+        "hex": "#BAA57B"
+      }
+    ],
+    "images": [
+      "img/cars/polestar-4-suv/polestar-4-suv_01.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_02.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_03.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_04.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_05.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_06.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_07.webp",
+      "img/cars/polestar-4-suv/polestar-4-suv_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=polestar-4-suv",
+        "thumb": "img/cars/polestar-4-suv/polestar-4-suv_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "Geely",
+      "relation": "Marca sueca vinculada al grupo Geely",
+      "note": "Colaboración con Volvo Cars."
+    },
+    "brandUrl": "https://www.polestar.com/es/",
+    "dataStatus": {
+      "checkedAt": "24/11/2026",
+      "source": "https://www.polestar.com/es/polestar-4-models/polestar-4-suv/specifications/",
+      "status": "Datos oficiales; colores específicos y química pendientes de confirmar."
+    }
   }
 ];
