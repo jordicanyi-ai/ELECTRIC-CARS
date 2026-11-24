@@ -526,7 +526,20 @@ body[data-catalogue-view="ranking"] #cars-grid .car-position{background:white!im
 #ranking-panel #ranking-metric:focus-visible{outline:4px solid #92baff!important;outline-offset:2px}
 #ranking-panel #ranking-explanation{font-size:13px!important;color:#526b8d!important}
 @media(max-width:750px){#ranking-panel:not([hidden]){grid-template-columns:1fr!important}#ranking-panel #ranking-metric{min-height:60px!important}}
-</style></head>
+</style><style id="ranking-layout-repair">
+body[data-catalogue-view="ranking"] #cars-grid{display:flex!important;flex-direction:column!important;gap:22px!important}
+body[data-catalogue-view="ranking"] #cars-grid .catalogue-batch{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;width:100%;min-width:0}
+body[data-catalogue-view="ranking"] #cars-grid .catalogue-ad{width:100%;min-width:0;box-sizing:border-box}
+body[data-catalogue-view="ranking"] #cars-grid .car-position{max-width:calc(100% - 24px);box-sizing:border-box}
+#ranking-panel:not([hidden]){grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) auto!important;gap:16px!important;padding:12px 14px!important}
+#ranking-panel .ranking-tag-icon{width:80px;height:80px}
+#ranking-panel .ranking-intro{gap:12px}
+#ranking-panel .ranking-show-results{width:auto!important}
+@media(max-width:1100px){#ranking-panel:not([hidden]){grid-template-columns:1fr!important}#ranking-panel .ranking-show-results{width:100%!important}}
+@media(max-width:900px){body[data-catalogue-view="ranking"] #cars-grid .catalogue-batch{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){body[data-catalogue-view="ranking"] #cars-grid .catalogue-batch{gap:10px!important}body[data-catalogue-view="ranking"] #cars-grid .car-rank-label{display:none!important}}
+</style>
+</head>
 <body class="catalogue-only antialiased min-h-screen flex flex-col" data-initial-view="ranking" data-catalogue-view="catalogue"><svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><filter id="tile-alpha-boost" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="linear" slope="9" intercept="0"/></feComponentTransfer></filter><filter id="tile-color-recover" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="5" intercept="-4"/><feFuncG type="linear" slope="5" intercept="-4"/><feFuncB type="linear" slope="5" intercept="-4"/><feFuncA type="linear" slope="12" intercept="0"/></feComponentTransfer></filter></svg>
     <a href="#hero-search" class="skip-link">Ir al buscador</a>
     <header class="site-header">
