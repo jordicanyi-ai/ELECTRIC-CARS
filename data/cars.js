@@ -13000,7 +13000,7 @@ const carsData = [
     "batteryType": "NMC",
     "powerText": "230–350 CV",
     "trunk": 620,
-    "acceleration": "5,4–7,7 s",
+    "acceleration": "5,4–7,8 s",
     "dimensions": "4,82 × 1,90 × 1,58 m",
     "charging": "160 kW CC · 11 kW CA",
     "description": "El DS N°8 es un SUV coupé eléctrico de gran autonomía, disponible con tracción delantera y total, sobre la plataforma STLA Medium.",
@@ -13024,8 +13024,9 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmar",
-      "battery": "Pendiente de confirmar"
+      "vehicle": "3 años de garantía contractual. DS Serenity: hasta 8 años o 160.000 km para componentes cubiertos, realizando las revisiones prescritas en la red oficial.",
+      "battery": "8 años",
+      "capacity": "Kilometraje y umbral de capacidad pendientes de confirmación documental"
     },
     "trims": [
       {
@@ -13046,11 +13047,33 @@ const carsData = [
         "name": "AWD Long Range",
         "battery": "97,2 kWh",
         "power": "350 CV",
-        "range": "686 km WLTP",
-        "rangeValue": 686
+        "range": "688 km WLTP",
+        "rangeValue": 688
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Perla Cristal",
+        "hex": "#B8B9B5"
+      },
+      {
+        "name": "Perla Nera",
+        "hex": "#18191B"
+      },
+      {
+        "name": "Azul Topaze",
+        "hex": "#34566A"
+      },
+      {
+        "name": "Gris Palladio",
+        "hex": "#777B80"
+      },
+      {
+        "name": "Blanco Albatra",
+        "hex": "#F2F0E8",
+        "border": "#CDD1D6"
+      }
+    ],
     "images": [
       "img/cars/ds-8/ds-8_01.webp",
       "img/cars/ds-8/ds-8_02.webp",
@@ -13076,7 +13099,7 @@ const carsData = [
     },
     "brandUrl": "https://www.dsautomobiles.es/",
     "dataStatus": {
-      "status": "Datos de lanzamiento; precios actuales, colores y garantías pendientes de confirmar.",
+      "status": "Cinco colores de carrocería (disponibilidad de combinaciones bitono según acabado), logo local y garantías contrastadas. PVP actual y condiciones completas de garantía de batería pendientes.",
       "checkedAt": "24/11/2026"
     }
   }
