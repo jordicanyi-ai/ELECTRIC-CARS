@@ -13194,7 +13194,7 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "3 años",
+      "vehicle": "3 años sin límite de kilometraje",
       "battery": "8 años o 160.000 km",
       "capacity": "70 %"
     },
@@ -13322,7 +13322,13 @@ const carsData = [
     "dataStatus": {
       "checkedAt": "24/11/2026",
       "status": "Gama FWD oficial. PVP Long Range, química y aceleración pendientes de verificación específica; 4xe eléctrico no incluido.",
-      "source": "https://www.jeep.es/nuevo-jeep-compass/full-electric"
+      "source": "https://www.jeep.es/nuevo-jeep-compass/full-electric",
+      "colorSource": "https://www.jeep.es/content/dam/jeep/es/models/pdf/Compass-MY26.pdf",
+      "warrantySources": [
+        "https://www.jeep.es/mopar/faq-y-glosario-jeep",
+        "https://www.jeep.es/nuevo-jeep-compass/electrico/ventajas-electrico",
+        "https://www.jeep.es/nuevo-jeep-compass/full-electric"
+      ]
     }
   }
 ];
