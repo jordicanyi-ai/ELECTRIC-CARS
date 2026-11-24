@@ -12835,5 +12835,114 @@ const carsData = [
       "status": "Configurador Abarth España: precio recomendado desde 45.600 €, un acabado actual. Precio sujeto a condiciones de oferta mensual; verificar PVP incondicional.",
       "checkedAt": "23/11/2026"
     }
+  },
+  {
+    "id": 77,
+    "brand": "KGM",
+    "model": "Torres EVX",
+    "type": "SUV mediano",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 36919,
+    "priceMax": 39919,
+    "priceText": "36.919–39.919 €",
+    "rangeText": "503 km",
+    "minRangeVal": 503,
+    "maxRangeVal": 503,
+    "batteryText": "80,6 kWh",
+    "batteryType": "LFP",
+    "powerText": "207 CV",
+    "trunk": 839,
+    "acceleration": "8,2 s",
+    "dimensions": "4,715 × 1,890 × 1,725 m",
+    "charging": "120 kW CC · 11 kW CA",
+    "description": "SUV eléctrico familiar de tracción delantera con batería LFP de 80,6 kWh y 503 km de autonomía WLTP. Ficha correspondiente a la generación actualizada de 2026.",
+    "highlights": [
+      "Maletero de 839 litros",
+      "Batería LFP de 80,6 kWh",
+      "Garantía de batería de 10 años o 1.000.000 km",
+      "Capacidad de remolque con freno de 1.500 kg"
+    ],
+    "considerations": [
+      "Carga rápida de 120 kW",
+      "Consumo combinado homologado de 19,3 kWh/100 km",
+      "Tracción delantera"
+    ],
+    "idealFor": [
+      "Familias que necesitan espacio",
+      "Viajes de media y larga distancia"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifa de referencia publicada en noviembre de 2025 sin descuentos: Trend 36.919 € y Life 39.919 €. PVP vigente sin promociones pendiente de confirmar; KGM anuncia actualmente precios promocionales condicionados.",
+      "source": "https://www.motor.es/noticias/kgm-torres-evx-mejora-autonomia-2025111036.html"
+    },
+    "chargingInfo": {
+      "dcMax": "120 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 36 min según ficha oficial",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "7 años o 150.000 km",
+      "battery": "10 años o 1.000.000 km",
+      "capacity": "No confirmado"
+    },
+    "trims": [
+      {
+        "name": "Trend",
+        "price": "36.919 €",
+        "priceValue": 36919,
+        "battery": "80,6 kWh",
+        "batteryType": "LFP",
+        "power": "207 CV",
+        "range": "503 km WLTP",
+        "rangeValue": 503,
+        "accel": "8,2 s",
+        "charging": "120 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Life",
+        "price": "39.919 €",
+        "priceValue": 39919,
+        "battery": "80,6 kWh",
+        "batteryType": "LFP",
+        "power": "207 CV",
+        "range": "503 km WLTP",
+        "rangeValue": 503,
+        "accel": "8,2 s",
+        "charging": "120 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/kgm-torres-evx/kgm-torres-evx_01.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_02.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_03.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_04.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_05.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_06.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_07.webp",
+      "img/cars/kgm-torres-evx/kgm-torres-evx_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del KGM Torres EVX en YouTube",
+        "url": "https://www.youtube.com/results?search_query=KGM+Torres+EVX+80.6+2026",
+        "thumb": "img/cars/kgm-torres-evx/kgm-torres-evx_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "group": "KG Group",
+      "relation": "Marca surcoreana anteriormente denominada SsangYong",
+      "note": "KGM pertenece al grupo surcoreano KG Group."
+    },
+    "brandUrl": "https://kgm.com.es/",
+    "dataStatus": {
+      "status": "Ficha técnica oficial 3/2026; precios sin descuentos de referencia noviembre 2025; colores, logo y capacidad mínima de garantía pendientes de confirmar.",
+      "checkedAt": "24/11/2026",
+      "source": "https://kgm.com.es/uploads/documentacion/fichas_tecnicas/ficha-tecnica-torres-evx.pdf"
+    }
   }
 ];
