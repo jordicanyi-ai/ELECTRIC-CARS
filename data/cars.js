@@ -13147,5 +13147,182 @@ const carsData = [
       "Conductores que buscan confort y autonomía"
     ],
     "priceMax": 74710
+  },
+  {
+    "id": 79,
+    "brand": "Jeep",
+    "model": "Compass Electric",
+    "type": "SUV compacto",
+    "launchYear": 2025,
+    "seats": 5,
+    "priceMin": 50600,
+    "priceText": "Desde 50.600 €",
+    "rangeText": "458–674 km",
+    "minRangeVal": 458,
+    "maxRangeVal": 674,
+    "batteryText": "74–96 kWh",
+    "batteryType": "NMC",
+    "powerText": "213–231 CV",
+    "trunk": 550,
+    "acceleration": "Por confirmar",
+    "dimensions": "4,55 × 1,90 × 1,70 m",
+    "charging": "160 kW CC · 11 kW CA",
+    "description": "SUV compacto eléctrico de nueva generación sobre la plataforma STLA Medium, fabricado en Europa.",
+    "highlights": [
+      "Maletero de 550 litros",
+      "Versión Long Range con 674 km WLTP",
+      "Altura libre al suelo de 200 mm"
+    ],
+    "considerations": [
+      "Tracción delantera en las versiones FWD",
+      "Precios de catálogo superiores a las ofertas comerciales"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes de larga distancia"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de catálogo oficial desde 50.600 € para Altitude y 57.400 € para Summit; precios específicos Long Range pendientes.",
+      "source": "https://www.jeep.es/nuevo-jeep-compass/full-electric"
+    },
+    "chargingInfo": {
+      "dcMax": "160 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "20–80 % en menos de 32–35 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años",
+      "battery": "8 años o 160.000 km",
+      "capacity": "70 %"
+    },
+    "trims": [
+      {
+        "name": "Altitude Standard Range",
+        "price": "50.600 €",
+        "priceValue": 50600,
+        "battery": "74 kWh",
+        "batteryType": "NMC",
+        "power": "213 CV",
+        "range": "500 km WLTP",
+        "rangeValue": 500,
+        "accel": "—",
+        "charging": "160 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Summit Standard Range",
+        "price": "57.400 €",
+        "priceValue": 57400,
+        "battery": "74 kWh",
+        "batteryType": "NMC",
+        "power": "213 CV",
+        "range": "458–500 km WLTP",
+        "rangeValue": 458,
+        "accel": "—",
+        "charging": "160 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Altitude Long Range",
+        "battery": "96 kWh",
+        "batteryType": "NMC",
+        "power": "231 CV",
+        "range": "674 km WLTP",
+        "rangeValue": 674,
+        "accel": "—",
+        "charging": "160 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Summit Long Range",
+        "battery": "96 kWh",
+        "batteryType": "NMC",
+        "power": "231 CV",
+        "range": "674 km (máximo de gama)",
+        "rangeValue": 674,
+        "accel": "—",
+        "charging": "160 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Hawaii",
+        "hex": "#B5C936"
+      },
+      {
+        "name": "Pacific",
+        "hex": "#233D59"
+      },
+      {
+        "name": "Yosemite",
+        "hex": "#A8B0B5"
+      },
+      {
+        "name": "Vulcano",
+        "hex": "#202124"
+      },
+      {
+        "name": "Antarctica",
+        "hex": "#F4F4F1"
+      },
+      {
+        "name": "Amazonia",
+        "hex": "#626E61"
+      },
+      {
+        "name": "Hawaii (bitono)",
+        "hex": "#B5C936",
+        "secondaryHex": "#202124"
+      },
+      {
+        "name": "Pacific (bitono)",
+        "hex": "#233D59",
+        "secondaryHex": "#202124"
+      },
+      {
+        "name": "Yosemite (bitono)",
+        "hex": "#A8B0B5",
+        "secondaryHex": "#202124"
+      },
+      {
+        "name": "Antarctica (bitono)",
+        "hex": "#F4F4F1",
+        "secondaryHex": "#202124"
+      },
+      {
+        "name": "Amazonia (bitono)",
+        "hex": "#626E61",
+        "secondaryHex": "#202124"
+      }
+    ],
+    "images": [
+      "img/cars/jeep-compass/jeep-compass_01.webp",
+      "img/cars/jeep-compass/jeep-compass_02.webp",
+      "img/cars/jeep-compass/jeep-compass_03.webp",
+      "img/cars/jeep-compass/jeep-compass_04.webp",
+      "img/cars/jeep-compass/jeep-compass_05.webp",
+      "img/cars/jeep-compass/jeep-compass_06.webp",
+      "img/cars/jeep-compass/jeep-compass_07.webp",
+      "img/cars/jeep-compass/jeep-compass_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del Jeep Compass Electric",
+        "url": "https://www.youtube.com/results?search_query=Jeep+Compass+Electric+2026",
+        "thumb": "img/cars/jeep-compass/jeep-compass_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/jeep.svg",
+      "group": "Stellantis",
+      "relation": "Marca estadounidense de Stellantis",
+      "note": "Jeep es una marca estadounidense integrada en Stellantis."
+    },
+    "brandUrl": "https://www.jeep.es/",
+    "dataStatus": {
+      "checkedAt": "24/11/2026",
+      "status": "Gama FWD oficial. PVP Long Range, química y aceleración pendientes de verificación específica; 4xe eléctrico no incluido.",
+      "source": "https://www.jeep.es/nuevo-jeep-compass/full-electric"
+    }
   }
 ];
