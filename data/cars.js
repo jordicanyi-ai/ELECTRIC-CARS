@@ -12983,5 +12983,101 @@ const carsData = [
       "checkedAt": "24/11/2026",
       "source": "https://kgm.com.es/uploads/documentacion/fichas_tecnicas/ficha-tecnica-torres-evx.pdf"
     }
+  },
+  {
+    "id": 78,
+    "brand": "DS",
+    "model": "N°8",
+    "type": "SUV coupé",
+    "launchYear": 2025,
+    "seats": 5,
+    "priceMin": 57000,
+    "priceText": "Desde 57.000 €",
+    "rangeText": "550–750 km",
+    "minRangeVal": 550,
+    "maxRangeVal": 750,
+    "batteryText": "74–97,2 kWh",
+    "batteryType": "NMC",
+    "powerText": "230–350 CV",
+    "trunk": 620,
+    "acceleration": "5,4–7,7 s",
+    "dimensions": "4,82 × 1,90 × 1,58 m",
+    "charging": "160 kW CC · 11 kW CA",
+    "description": "El DS N°8 es un SUV coupé eléctrico de gran autonomía, disponible con tracción delantera y total, sobre la plataforma STLA Medium.",
+    "highlights": [
+      "Autonomía de hasta 750 km WLTP",
+      "Dos capacidades de batería",
+      "Habitáculo de orientación premium"
+    ],
+    "considerations": [
+      "Dimensiones exteriores de 4,82 m",
+      "Potencia de carga rápida de 160 kW"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precio de lanzamiento en España de 57.000 €. Tarifa actual sin descuentos pendiente de confirmar."
+    },
+    "chargingInfo": {
+      "dcMax": "160 kW",
+      "acMax": "11 kW",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "Pendiente de confirmar"
+    },
+    "trims": [
+      {
+        "name": "FWD",
+        "battery": "74 kWh",
+        "power": "230 CV",
+        "range": "550 km WLTP",
+        "rangeValue": 550
+      },
+      {
+        "name": "FWD Long Range",
+        "battery": "97,2 kWh",
+        "power": "245 CV",
+        "range": "750 km WLTP",
+        "rangeValue": 750
+      },
+      {
+        "name": "AWD Long Range",
+        "battery": "97,2 kWh",
+        "power": "350 CV",
+        "range": "686 km WLTP",
+        "rangeValue": 686
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/ds-8/ds-8_01.webp",
+      "img/cars/ds-8/ds-8_02.webp",
+      "img/cars/ds-8/ds-8_03.webp",
+      "img/cars/ds-8/ds-8_04.webp",
+      "img/cars/ds-8/ds-8_05.webp",
+      "img/cars/ds-8/ds-8_06.webp",
+      "img/cars/ds-8/ds-8_07.webp",
+      "img/cars/ds-8/ds-8_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del DS N°8 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=DS+N8+electric+review",
+        "thumb": "img/cars/ds-8/ds-8_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/ds.svg",
+      "group": "Stellantis",
+      "relation": "Marca premium francesa del grupo Stellantis",
+      "note": "DS Automobiles es una marca francesa de automóviles premium."
+    },
+    "brandUrl": "https://www.dsautomobiles.es/",
+    "dataStatus": {
+      "status": "Datos de lanzamiento; precios actuales, colores y garantías pendientes de confirmar.",
+      "checkedAt": "24/11/2026"
+    }
   }
 ];
