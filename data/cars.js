@@ -12825,7 +12825,7 @@ const carsData = [
       }
     ],
     "brandInfo": {
-      "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abarth%20Logo.png",
+      "logo": "img/brands/abarth.svg",
       "group": "Stellantis",
       "relation": "Marca italiana de deportivos del grupo Stellantis",
       "note": "Abarth es una marca italiana de automóviles deportivos."
