@@ -56,7 +56,8 @@ const motoBrands = {
     },
     Yamaha: {
         origin: 'Japón', founded: '1955', group: 'Yamaha Motor Co.',
-        about: 'Yamaha Motor fabrica motos y scooters. La familia NEO’S es su propuesta de ciclomotor eléctrico urbano con batería extraíble.',
+        about: 'Yamaha Motor fabrica motos y scooters.',
+        profileDetail: 'La familia NEO’S es su propuesta de ciclomotor eléctrico urbano con batería extraíble.',
         source: 'https://global.yamaha-motor.com/about/overview/'
     },
     Zero: {

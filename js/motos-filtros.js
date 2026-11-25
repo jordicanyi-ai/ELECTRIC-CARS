@@ -27,7 +27,7 @@ function renderMotoBrandProfile() {
         </div>
         <dl class="moto-brand-facts">${motoBrandFacts(brand).map(([label, value]) =>
             `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>
-        ${brand.about ? `<h2>Sobre la marca</h2><p>${brand.about}</p>
+        ${brand.about ? `<h2>Sobre la marca</h2><p>${[brand.about, brand.profileDetail].filter(Boolean).join(' ')}</p>
             <a class="moto-brand-link" href="${brand.source}" target="_blank" rel="noopener noreferrer">Fuente de la marca ↗</a>` : ''}
         <h2 id="moto-brand-models">Modelos eléctricos</h2>`;
     intro.querySelector('h1').textContent = selectedMotoBrand.toLocaleUpperCase('es');
