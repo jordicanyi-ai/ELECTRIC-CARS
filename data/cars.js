@@ -14304,11 +14304,17 @@ const carsData = [
     "charging": "180–205 kW CC · 11 kW CA",
     "description": "SUV eléctrico compacto de cinco plazas.",
     "highlights": [
-      "Maletero delantero de 31 litros",
-      "Versiones de tracción trasera e integral"
+      "Diseño escandinavo elegante y carrocería SUV de líneas equilibradas",
+      "Autonomía WLTP de hasta 575 km en la versión Extended Range",
+      "Hasta 408 CV y opción de tracción integral",
+      "Carga rápida del 10 al 80 % en 26–28 minutos",
+      "Garantía de batería de 8 años o 160.000 km",
+      "Maletero delantero adicional de 31 litros"
     ],
     "considerations": [
-      "Autonomía y equipamiento varían según versión y año modelo"
+      "Precio de acceso elevado frente a alternativas generalistas",
+      "La versión Twin Motor prioriza prestaciones frente a autonomía",
+      "La potencia máxima de carga depende de la temperatura de la batería y del cargador"
     ],
     "idealFor": [
       "Uso familiar",
@@ -14457,11 +14463,18 @@ const carsData = [
     "charging": "180–205 kW CC · 11 kW CA",
     "description": "SUV coupé eléctrico de cinco plazas.",
     "highlights": [
-      "Maletero delantero de 31 litros",
-      "Versiones de tracción trasera e integral"
+      "Diseño escandinavo elegante con silueta coupé deportiva",
+      "Autonomía WLTP de hasta 585 km en la versión Extended Range",
+      "Hasta 408 CV y opción de tracción integral",
+      "Carga rápida del 10 al 80 % en 26–28 minutos",
+      "Garantía de batería de 8 años o 160.000 km",
+      "Maletero delantero adicional de 31 litros"
     ],
     "considerations": [
-      "Autonomía y equipamiento varían según versión y año modelo"
+      "La caída del techo limita la altura disponible detrás y la capacidad de carga respecto al EX40",
+      "La versión Twin Motor prioriza prestaciones frente a autonomía",
+      "La potencia máxima de carga depende de la temperatura de la batería y del cargador",
+      "Precio de acceso superior al EX40"
     ],
     "idealFor": [
       "Uso familiar",
