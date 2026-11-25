@@ -14954,5 +14954,166 @@ const carsData = [
       "status": "MY2027; colores y garantía verificados en Volvo España (muestras cromáticas aproximadas). Precio máximo pendiente.",
       "source": "https://www.volvocars.com/es/cars/ex90-electric/specifications/"
     }
+  },
+  {
+    "id": 91,
+    "brand": "Volvo",
+    "model": "ES90",
+    "type": "Berlina",
+    "launchYear": 2025,
+    "seats": 5,
+    "priceMin": 71250,
+    "priceMax": 87585,
+    "priceText": "71.250–87.585 €",
+    "rangeText": "664–702 km",
+    "minRangeVal": 664,
+    "maxRangeVal": 702,
+    "batteryText": "92–106 kWh",
+    "batteryType": "NMC (pendiente de confirmar)",
+    "powerText": "333–680 CV",
+    "trunk": 442,
+    "frunk": 27,
+    "acceleration": "4,0–6,6 s",
+    "dimensions": "5.000 × 1.942 × 1.549 mm",
+    "charging": "22 min (10–80 %) · 11 kW CA",
+    "description": "El Volvo ES90 reinterpreta la gran berlina de lujo con la elegancia de las líneas escandinavas y una silueta aerodinámica de inspiración coupé. Sus cinco metros de longitud y más de tres metros de batalla permiten disfrutar de un habitáculo amplio y refinado. Con arquitectura de 800 voltios, baterías de 92 a 106 kWh y potencias de 333 a 680 CV, ofrece una autonomía anunciada de 702 kilómetros. El portón trasero facilita el acceso al maletero de 442 litros y la recarga rápida permite recuperar energía durante los viajes. Disponible desde 71.250 euros.",
+    "highlights": [
+      "Diseño escandinavo de silueta aerodinámica",
+      "Autonomía estimada de 702 km",
+      "Arquitectura de 800 V",
+      "Recarga del 10 al 80 % en 22 minutos según Volvo",
+      "Hasta 680 CV y tracción integral disponible",
+      "Batalla de 3,1 metros y habitáculo amplio",
+      "Portón trasero y maletero delantero de 27 litros"
+    ],
+    "considerations": [
+      "Precio de acceso elevado",
+      "Peso de 2.410 a 2.610 kg",
+      "Cinco metros de longitud complican el aparcamiento",
+      "Autonomías preliminares sujetas a homologación"
+    ],
+    "idealFor": [
+      "Uso familiar",
+      "Viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de partida por motor; 87.585 € no es el máximo con equipamiento. Sin oferta promocional.",
+      "source": "https://www.volvocars.com/es/cars/es90-electric/specifications/"
+    },
+    "chargingInfo": {
+      "dcMax": "Pendiente de confirmar (prueba en estación de 350 kW)",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 22 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje (pendiente de verificar para ES90)",
+      "battery": "8 años / 160.000 km (pendiente de verificar para ES90)",
+      "capacity": "70 %",
+      "source": "https://www.volvocars.com/es/cars/electrification/battery/"
+    },
+    "trims": [
+      {
+        "name": "Single Motor Extended Range",
+        "priceValue": 71250,
+        "price": "71.250 €",
+        "battery": "92 kWh",
+        "batteryType": "NMC (pendiente de confirmar)",
+        "power": "333 CV",
+        "range": "664 km WLTP estimados",
+        "rangeValue": 664,
+        "accel": "6,6 s",
+        "charging": "11 kW CA · 10–80 % en 22 min"
+      },
+      {
+        "name": "Twin Motor",
+        "priceValue": 82019,
+        "price": "82.019 €",
+        "battery": "106 kWh",
+        "batteryType": "NMC (pendiente de confirmar)",
+        "power": "456 CV",
+        "range": "702 km WLTP estimados",
+        "rangeValue": 702,
+        "accel": "5,4 s",
+        "charging": "11 kW CA · 10–80 % en 22 min"
+      },
+      {
+        "name": "Twin Motor Performance",
+        "priceValue": 87585,
+        "price": "87.585 €",
+        "battery": "106 kWh",
+        "batteryType": "NMC (pendiente de confirmar)",
+        "power": "680 CV",
+        "range": "702 km WLTP estimados",
+        "rangeValue": 702,
+        "accel": "4,0 s",
+        "charging": "11 kW CA · 10–80 % en 22 min"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Vapour Grey",
+        "hex": "#777B7C"
+      },
+      {
+        "name": "Crystal White",
+        "hex": "#E9E8E2"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Denim Blue",
+        "hex": "#43566B"
+      },
+      {
+        "name": "Mulberry Red",
+        "hex": "#703D43"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#C5B8A0"
+      },
+      {
+        "name": "Aurora Silver",
+        "hex": "#B9B8B5"
+      },
+      {
+        "name": "Forest Lake",
+        "hex": "#58665C"
+      }
+    ],
+    "images": [
+      "img/cars/volvo-es90/volvo-es90_01.webp",
+      "img/cars/volvo-es90/volvo-es90_02.webp",
+      "img/cars/volvo-es90/volvo-es90_03.webp",
+      "img/cars/volvo-es90/volvo-es90_04.webp",
+      "img/cars/volvo-es90/volvo-es90_05.webp",
+      "img/cars/volvo-es90/volvo-es90_06.webp",
+      "img/cars/volvo-es90/volvo-es90_07.webp",
+      "img/cars/volvo-es90/volvo-es90_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volvo+ES90",
+        "thumb": "img/cars/volvo-es90/volvo-es90_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volvo.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
+    },
+    "brandUrl": "https://www.volvocars.com/es/cars/es90-electric/",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "MY2027 según Volvo España. Autonomías preliminares. Garantía, química y potencia máxima CC pendientes de comprobación. Colores oficiales con muestras aproximadas.",
+      "source": "https://www.volvocars.com/es/cars/es90-electric/specifications/"
+    }
   }
 ];
