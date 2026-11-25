@@ -1119,3 +1119,6 @@ body[data-catalogue-view="ranking"] .car-rank-label { color:#2456cd; }
 .homepage-hero-copy{max-width:660px}
 .homepage-hero-copy h2{text-shadow:0 3px 12px #0008}
 @media(max-width:700px){.homepage-hero{background-position:58% center}}
+
+/* Keep the linked site logo free of underlines in every state. */
+a.site-brand, a.site-brand:hover, a.site-brand:visited, a.site-brand:focus, a.site-brand:active, a.site-brand * { text-decoration: none !important; }
