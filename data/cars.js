@@ -15479,9 +15479,9 @@ const carsData = [
     "type": "Berlina",
     "launchYear": 2023,
     "seats": 5,
-    "priceMin": 61190,
-    "priceMax": 70660,
-    "priceText": "61.190–70.660 €",
+    "priceMin": 51471,
+    "priceMax": 61142,
+    "priceText": "51.471–61.142 €",
     "rangeText": "595–707 km",
     "minRangeVal": 595,
     "maxRangeVal": 707,
@@ -15493,7 +15493,7 @@ const carsData = [
     "acceleration": "5,4–6,6 s",
     "dimensions": "4.961 × 1.862 × 1.536 mm",
     "charging": "175–200 kW CC · 11 kW CA",
-    "description": "El Volkswagen ID.7 es una berlina eléctrica de cinco puertas con una silueta estilizada y un habitáculo orientado al confort en viajes largos. Su carrocería aerodinámica favorece la eficiencia, mientras que el maletero de 532 litros aporta practicidad para el día a día. Las versiones Pro y Pro S cuentan con 286 CV y tracción trasera; el GTX eleva la potencia a 340 CV con tracción integral. Con baterías de 77 y 86 kWh útiles, la autonomía alcanza 707 kilómetros WLTP. Las variantes de batería grande admiten carga rápida de hasta 200 kW.",
+    "description": "El Volkswagen ID.7 es una berlina eléctrica de cinco puertas con una silueta estilizada y un habitáculo orientado al confort en viajes largos. Su carrocería aerodinámica favorece la eficiencia, mientras que el maletero de 532 litros aporta practicidad para el día a día. Las versiones Business y Style cuentan con 286 CV y tracción trasera; el GTX eleva la potencia a 340 CV con tracción integral. Con baterías de 77 y 86 kWh útiles, la autonomía alcanza 707 kilómetros WLTP. Las variantes de batería grande admiten carga rápida de hasta 200 kW.",
     "highlights": [
       "Carrocería aerodinámica de cinco puertas",
       "Autonomía de hasta 707 km WLTP",
@@ -15504,9 +15504,9 @@ const carsData = [
     ],
     "considerations": [
       "Longitud cercana a cinco metros",
-      "Tarifas históricas de referencia; confirmar oferta al contado actual",
+      "Precios de oferta comercial; condiciones y PVP al contado pendientes de confirmar",
       "Sin maletero delantero",
-      "El GTX sacrifica autonomía frente al Pro S"
+      "El GTX sacrifica autonomía frente al Style de 86 kWh"
     ],
     "idealFor": [
       "Familias",
@@ -15514,9 +15514,10 @@ const carsData = [
       "Uso diario"
     ],
     "priceInfo": {
-      "includesVat": true,
-      "includesAid": false,
-      "note": "Tarifas de septiembre de 2025 recogidas por km77 y citadas por UsuarioGeek en noviembre de 2026. No equivalen a una oferta vigente. Se excluyen promociones condicionadas."
+      "includesVat": null,
+      "includesAid": null,
+      "note": "Ofertas comerciales de referencia de Unoauto, noviembre de 2026. No son PVP oficiales al contado verificados; condiciones de financiación, impuestos y ayudas pendientes de confirmar.",
+      "source": "https://www.unoauto.com/"
     },
     "chargingInfo": {
       "dcMax": "175–200 kW",
@@ -15533,9 +15534,9 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "Pro",
-        "priceValue": 61190,
-        "price": "61.190 €",
+        "name": "Business",
+        "priceValue": 52652,
+        "price": "52.652 €",
         "rangeValue": 615,
         "range": "615 km WLTP",
         "battery": "77 kWh útiles",
@@ -15545,9 +15546,21 @@ const carsData = [
         "charging": "175 kW CC · 11 kW CA"
       },
       {
-        "name": "Pro S",
-        "priceValue": 66200,
-        "price": "66.200 €",
+        "name": "Style 77 kWh",
+        "priceValue": 56122,
+        "price": "56.122 €",
+        "rangeValue": 615,
+        "range": "615 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,5 s",
+        "charging": "175 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Style 86 kWh",
+        "priceValue": 61142,
+        "price": "61.142 €",
         "rangeValue": 707,
         "range": "707 km WLTP",
         "battery": "86 kWh útiles",
@@ -15558,8 +15571,8 @@ const carsData = [
       },
       {
         "name": "GTX",
-        "priceValue": 70660,
-        "price": "70.660 €",
+        "priceValue": 51471,
+        "price": "51.471 €",
         "rangeValue": 595,
         "range": "595 km WLTP",
         "battery": "86 kWh útiles",
@@ -15628,11 +15641,12 @@ const carsData = [
       "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
       "https://www.volkswagen.es/es/modelos/id7.html",
       "https://www.volkswagen-newsroom.com/en/the-new-id7-pro-s-and-id7-tourer-pro-s-international-media-drive-18617/exterior-18624",
-      "https://www.carwow.es/volkswagen/id-7/colores"
+      "https://www.carwow.es/volkswagen/id-7/colores",
+      "https://www.unoauto.com/"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Colores según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifas históricas de referencia; precios actuales al contado y correspondencia con acabados Business/Style pendientes. Garantía general de marca pendiente de confirmar por unidad."
+      "status": "Ofertas comerciales de referencia aportadas en la revisión de noviembre de 2026; condiciones no verificadas. Autonomía y prestaciones heredadas de las motorizaciones equivalentes, pendientes de confirmar por acabado. Garantía específica pendiente."
     }
   },
   {
@@ -15642,9 +15656,9 @@ const carsData = [
     "type": "Familiar",
     "launchYear": 2024,
     "seats": 5,
-    "priceMin": 61885,
-    "priceMax": 71470,
-    "priceText": "61.885–71.470 €",
+    "priceMin": 52124,
+    "priceMax": 61852,
+    "priceText": "52.124–61.852 €",
     "rangeText": "577–689 km",
     "minRangeVal": 577,
     "maxRangeVal": 689,
@@ -15656,7 +15670,7 @@ const carsData = [
     "acceleration": "5,5–6,7 s",
     "dimensions": "4.961 × 1.862 × 1.536–1.551 mm",
     "charging": "175–200 kW CC · 11 kW CA",
-    "description": "El Volkswagen ID.7 Tourer traslada las cualidades de la berlina eléctrica a una carrocería familiar de líneas elegantes. Su amplio portón facilita el acceso a un maletero de 605 litros según Volkswagen, ampliable a 1.714 litros. Las versiones de referencia Pro y Pro S ofrecen 286 CV y tracción trasera, mientras que el GTX incorpora tracción integral y 340 CV. Con baterías de 77 y 86 kWh útiles, combina espacio, confort y una autonomía de hasta 689 kilómetros WLTP. La carga rápida alcanza 200 kW en las variantes de mayor batería.",
+    "description": "El Volkswagen ID.7 Tourer traslada las cualidades de la berlina eléctrica a una carrocería familiar de líneas elegantes. Su amplio portón facilita el acceso a un maletero de 605 litros según Volkswagen, ampliable a 1.714 litros. Las versiones de referencia Business y Style ofrecen 286 CV y tracción trasera, mientras que el GTX incorpora tracción integral y 340 CV. Con baterías de 77 y 86 kWh útiles, combina espacio, confort y una autonomía de hasta 689 kilómetros WLTP. La carga rápida alcanza 200 kW en las variantes de mayor batería.",
     "highlights": [
       "Maletero familiar de 605 litros según Volkswagen",
       "Autonomía de hasta 689 km WLTP",
@@ -15667,9 +15681,9 @@ const carsData = [
     ],
     "considerations": [
       "Longitud cercana a cinco metros",
-      "Tarifas históricas de referencia; confirmar oferta al contado actual",
+      "Precios de oferta comercial; condiciones y PVP al contado pendientes de confirmar",
       "Sin maletero delantero",
-      "El GTX sacrifica autonomía frente al Pro S"
+      "El GTX sacrifica autonomía frente al Style de 86 kWh"
     ],
     "idealFor": [
       "Familias",
@@ -15677,9 +15691,10 @@ const carsData = [
       "Uso diario"
     ],
     "priceInfo": {
-      "includesVat": true,
-      "includesAid": false,
-      "note": "Tarifas de septiembre de 2025 recogidas por km77 y citadas por UsuarioGeek en noviembre de 2026. No equivalen a una oferta vigente. Se excluyen promociones condicionadas."
+      "includesVat": null,
+      "includesAid": null,
+      "note": "Ofertas comerciales de referencia de Unoauto, noviembre de 2026. No son PVP oficiales al contado verificados; condiciones de financiación, impuestos y ayudas pendientes de confirmar.",
+      "source": "https://www.unoauto.com/"
     },
     "chargingInfo": {
       "dcMax": "175–200 kW",
@@ -15696,9 +15711,9 @@ const carsData = [
     },
     "trims": [
       {
-        "name": "Pro",
-        "priceValue": 61885,
-        "price": "61.885 €",
+        "name": "Business",
+        "priceValue": 53442,
+        "price": "53.442 €",
         "rangeValue": 602,
         "range": "602 km WLTP",
         "battery": "77 kWh útiles",
@@ -15708,9 +15723,21 @@ const carsData = [
         "charging": "175 kW CC · 11 kW CA"
       },
       {
-        "name": "Pro S",
-        "priceValue": 66905,
-        "price": "66.905 €",
+        "name": "Style 77 kWh",
+        "priceValue": 56822,
+        "price": "56.822 €",
+        "rangeValue": 602,
+        "range": "602 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,6 s",
+        "charging": "175 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Style 86 kWh",
+        "priceValue": 61852,
+        "price": "61.852 €",
         "rangeValue": 689,
         "range": "689 km WLTP",
         "battery": "86 kWh útiles",
@@ -15721,8 +15748,8 @@ const carsData = [
       },
       {
         "name": "GTX",
-        "priceValue": 71470,
-        "price": "71.470 €",
+        "priceValue": 52124,
+        "price": "52.124 €",
         "rangeValue": 577,
         "range": "577 km WLTP",
         "battery": "86 kWh útiles",
@@ -15791,11 +15818,12 @@ const carsData = [
       "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
       "https://www.volkswagen.es/es/modelos/id7-tourer.html",
       "https://www.volkswagen-newsroom.com/en/the-new-id7-pro-s-and-id7-tourer-pro-s-international-media-drive-18617/exterior-18624",
-      "https://www.carwow.es/volkswagen/id-7/colores"
+      "https://www.carwow.es/volkswagen/id-7/colores",
+      "https://www.unoauto.com/"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Colores según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifas históricas de referencia; precios actuales al contado y correspondencia con acabados Business/Style pendientes. Garantía general de marca pendiente de confirmar por unidad."
+      "status": "Ofertas comerciales de referencia aportadas en la revisión de noviembre de 2026; condiciones no verificadas. Autonomía y prestaciones heredadas de las motorizaciones equivalentes, pendientes de confirmar por acabado. Garantía específica pendiente."
     }
   }
 ];
