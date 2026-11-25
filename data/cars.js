@@ -15471,5 +15471,269 @@ const carsData = [
       "checkedAt": "25/11/2026",
       "status": "Colores habituales y carga por versión según datos aportados; muestras aproximadas. Techo en contraste vinculado al acabado. PVP, autonomía y aceleración pendientes de contraste independiente; pedidos de fábrica no confirmados."
     }
+  },
+  {
+    "id": 94,
+    "brand": "Volkswagen",
+    "model": "ID.7",
+    "type": "Berlina",
+    "launchYear": 2023,
+    "seats": 5,
+    "priceMin": 61190,
+    "priceMax": 70660,
+    "priceText": "61.190–70.660 €",
+    "rangeText": "595–707 km",
+    "minRangeVal": 595,
+    "maxRangeVal": 707,
+    "batteryText": "77–86 kWh útiles",
+    "batteryType": "NMC",
+    "powerText": "286–340 CV",
+    "trunk": 532,
+    "frunkText": "No disponible",
+    "acceleration": "5,4–6,6 s",
+    "dimensions": "4.961 × 1.862 × 1.536 mm",
+    "charging": "175–200 kW CC · 11 kW CA",
+    "description": "El Volkswagen ID.7 es una berlina eléctrica de cinco puertas con una silueta estilizada y un habitáculo orientado al confort en viajes largos. Su carrocería aerodinámica favorece la eficiencia, mientras que el maletero de 532 litros aporta practicidad para el día a día. Las versiones Pro y Pro S cuentan con 286 CV y tracción trasera; el GTX eleva la potencia a 340 CV con tracción integral. Con baterías de 77 y 86 kWh útiles, la autonomía alcanza 707 kilómetros WLTP. Las variantes de batería grande admiten carga rápida de hasta 200 kW.",
+    "highlights": [
+      "Carrocería aerodinámica de cinco puertas",
+      "Autonomía de hasta 707 km WLTP",
+      "Baterías de 77 y 86 kWh útiles",
+      "Carga rápida de hasta 200 kW",
+      "Amplia distancia entre ejes de 2.971 mm",
+      "GTX con tracción integral"
+    ],
+    "considerations": [
+      "Longitud cercana a cinco metros",
+      "Tarifas históricas de referencia; confirmar oferta al contado actual",
+      "Sin maletero delantero",
+      "El GTX sacrifica autonomía frente al Pro S"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes",
+      "Uso diario"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifas de septiembre de 2025 recogidas por km77 y citadas por UsuarioGeek en noviembre de 2026. No equivalen a una oferta vigente. Se excluyen promociones condicionadas."
+    },
+    "chargingInfo": {
+      "dcMax": "175–200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 26–28 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "paint": "3 años",
+      "corrosion": "12 años"
+    },
+    "trims": [
+      {
+        "name": "Pro",
+        "priceValue": 61190,
+        "price": "61.190 €",
+        "rangeValue": 615,
+        "range": "615 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,5 s",
+        "charging": "175 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Pro S",
+        "priceValue": 66200,
+        "price": "66.200 €",
+        "rangeValue": 707,
+        "range": "707 km WLTP",
+        "battery": "86 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,6 s",
+        "charging": "200 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GTX",
+        "priceValue": 70660,
+        "price": "70.660 €",
+        "rangeValue": 595,
+        "range": "595 km WLTP",
+        "battery": "86 kWh útiles",
+        "batteryType": "NMC",
+        "power": "340 CV",
+        "accel": "5,4 s",
+        "charging": "200 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-id7/vw-id7_01.webp",
+      "img/cars/vw-id7/vw-id7_02.webp",
+      "img/cars/vw-id7/vw-id7_03.webp",
+      "img/cars/vw-id7/vw-id7_04.webp",
+      "img/cars/vw-id7/vw-id7_05.webp",
+      "img/cars/vw-id7/vw-id7_06.webp",
+      "img/cars/vw-id7/vw-id7_07.webp",
+      "img/cars/vw-id7/vw-id7_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volkswagen%20ID.7",
+        "thumb": "img/cars/vw-id7/vw-id7_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Fabricante alemán de automóviles."
+    },
+    "brandUrl": "https://www.volkswagen.es/es/modelos/id7.html",
+    "sources": [
+      "https://usuariogeek.es/volkswagen-id7-precio-ficha-tecnica/",
+      "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
+      "https://www.volkswagen.es/es/modelos/id7.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Tarifas históricas de referencia; precios actuales al contado, colores y correspondencia con los acabados Business/Style del configurador pendientes. Garantía general de marca pendiente de confirmar por unidad."
+    }
+  },
+  {
+    "id": 95,
+    "brand": "Volkswagen",
+    "model": "ID.7 Tourer",
+    "type": "Familiar",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 61885,
+    "priceMax": 71470,
+    "priceText": "61.885–71.470 €",
+    "rangeText": "577–689 km",
+    "minRangeVal": 577,
+    "maxRangeVal": 689,
+    "batteryText": "77–86 kWh útiles",
+    "batteryType": "NMC",
+    "powerText": "286–340 CV",
+    "trunk": 605,
+    "frunkText": "No disponible",
+    "acceleration": "5,5–6,7 s",
+    "dimensions": "4.961 × 1.862 × 1.536–1.551 mm",
+    "charging": "175–200 kW CC · 11 kW CA",
+    "description": "El Volkswagen ID.7 Tourer traslada las cualidades de la berlina eléctrica a una carrocería familiar de líneas elegantes. Su amplio portón facilita el acceso a un maletero de 605 litros según Volkswagen, ampliable a 1.714 litros. Las versiones de referencia Pro y Pro S ofrecen 286 CV y tracción trasera, mientras que el GTX incorpora tracción integral y 340 CV. Con baterías de 77 y 86 kWh útiles, combina espacio, confort y una autonomía de hasta 689 kilómetros WLTP. La carga rápida alcanza 200 kW en las variantes de mayor batería.",
+    "highlights": [
+      "Maletero familiar de 605 litros según Volkswagen",
+      "Autonomía de hasta 689 km WLTP",
+      "Baterías de 77 y 86 kWh útiles",
+      "Carga rápida de hasta 200 kW",
+      "Amplia distancia entre ejes de 2.971 mm",
+      "GTX con tracción integral"
+    ],
+    "considerations": [
+      "Longitud cercana a cinco metros",
+      "Tarifas históricas de referencia; confirmar oferta al contado actual",
+      "Sin maletero delantero",
+      "El GTX sacrifica autonomía frente al Pro S"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes",
+      "Uso diario"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifas de septiembre de 2025 recogidas por km77 y citadas por UsuarioGeek en noviembre de 2026. No equivalen a una oferta vigente. Se excluyen promociones condicionadas."
+    },
+    "chargingInfo": {
+      "dcMax": "175–200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 26–28 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "paint": "3 años",
+      "corrosion": "12 años"
+    },
+    "trims": [
+      {
+        "name": "Pro",
+        "priceValue": 61885,
+        "price": "61.885 €",
+        "rangeValue": 602,
+        "range": "602 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,6 s",
+        "charging": "175 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Pro S",
+        "priceValue": 66905,
+        "price": "66.905 €",
+        "rangeValue": 689,
+        "range": "689 km WLTP",
+        "battery": "86 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,7 s",
+        "charging": "200 kW CC · 11 kW CA"
+      },
+      {
+        "name": "GTX",
+        "priceValue": 71470,
+        "price": "71.470 €",
+        "rangeValue": 577,
+        "range": "577 km WLTP",
+        "battery": "86 kWh útiles",
+        "batteryType": "NMC",
+        "power": "340 CV",
+        "accel": "5,5 s",
+        "charging": "200 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-id7-tourer/vw-id7-tourer_01.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_02.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_03.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_04.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_05.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_06.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_07.webp",
+      "img/cars/vw-id7-tourer/vw-id7-tourer_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volkswagen%20ID.7%20Tourer",
+        "thumb": "img/cars/vw-id7-tourer/vw-id7-tourer_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Fabricante alemán de automóviles."
+    },
+    "brandUrl": "https://www.volkswagen.es/es/modelos/id7-tourer.html",
+    "sources": [
+      "https://usuariogeek.es/volkswagen-id7-precio-ficha-tecnica/",
+      "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
+      "https://www.volkswagen.es/es/modelos/id7-tourer.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Tarifas históricas de referencia; precios actuales al contado, colores y correspondencia con los acabados Business/Style del configurador pendientes. Garantía general de marca pendiente de confirmar por unidad."
+    }
   }
 ];
