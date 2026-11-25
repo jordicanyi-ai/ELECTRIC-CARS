@@ -14629,7 +14629,8 @@ const carsData = [
       "Carga rápida de hasta 370 kW",
       "Potencia de hasta 680 CV",
       "Maletero delantero de 58 litros",
-      "Capacidad de remolque de hasta 2.400 kg"
+      "Capacidad de remolque de hasta 2.400 kg",
+      "Garantía de batería ampliable a 10 años o 200.000 km bajo condiciones de Volvo"
     ],
     "considerations": [
       "Precio elevado",
@@ -14654,9 +14655,10 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente",
-      "battery": "Pendiente",
-      "capacity": "Pendiente"
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km; ampliable a 10 años / 200.000 km con revisión oficial cada 2 años o 40.000 km y mantenimiento según Volvo",
+      "capacity": "70 %",
+      "source": "https://www.volvocars.com/es/l/servicios/mantenimiento/talleres-oficiales/garantia-piezas-volvo/"
     },
     "trims": [
       {
@@ -14732,7 +14734,36 @@ const carsData = [
         "charging": "320–370 kW CC"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Forest Lake",
+        "hex": "#58665C"
+      },
+      {
+        "name": "Ice White",
+        "hex": "#F4F4F4"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Denim Blue",
+        "hex": "#43566B"
+      },
+      {
+        "name": "Vapour Grey",
+        "hex": "#777B7C"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#C5B8A0"
+      },
+      {
+        "name": "Aurora Silver",
+        "hex": "#B9B8B5"
+      }
+    ],
     "images": [
       "img/cars/volvo-ex60/volvo-ex60_01.webp",
       "img/cars/volvo-ex60/volvo-ex60_02.webp",
@@ -14759,7 +14790,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ex60-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Datos de referencia; garantía y colores pendientes.",
+      "status": "Colores y garantía comprobados en Volvo España; muestras de color aproximadas. Precios de referencia pendientes de reconfirmación.",
       "source": "https://www.volvocars.com/es/cars/ex60-electric/"
     }
   },
