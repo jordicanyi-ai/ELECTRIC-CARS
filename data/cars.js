@@ -15569,7 +15569,36 @@ const carsData = [
         "charging": "200 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Gris Cemento",
+        "hex": "#929592"
+      },
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#ECEDEA"
+      },
+      {
+        "name": "Azul Plateado",
+        "hex": "#8399AC"
+      },
+      {
+        "name": "Azul Aguamarina",
+        "hex": "#398B99"
+      },
+      {
+        "name": "Plata Escama",
+        "hex": "#B9BEC4"
+      },
+      {
+        "name": "Negro Granadilla",
+        "hex": "#191B20"
+      },
+      {
+        "name": "Rojo Kings",
+        "hex": "#B32635"
+      }
+    ],
     "images": [
       "img/cars/vw-id7/vw-id7_01.webp",
       "img/cars/vw-id7/vw-id7_02.webp",
@@ -15597,11 +15626,13 @@ const carsData = [
     "sources": [
       "https://usuariogeek.es/volkswagen-id7-precio-ficha-tecnica/",
       "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
-      "https://www.volkswagen.es/es/modelos/id7.html"
+      "https://www.volkswagen.es/es/modelos/id7.html",
+      "https://www.volkswagen-newsroom.com/en/the-new-id7-pro-s-and-id7-tourer-pro-s-international-media-drive-18617/exterior-18624",
+      "https://www.carwow.es/volkswagen/id-7/colores"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Tarifas históricas de referencia; precios actuales al contado, colores y correspondencia con los acabados Business/Style del configurador pendientes. Garantía general de marca pendiente de confirmar por unidad."
+      "status": "Colores según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifas históricas de referencia; precios actuales al contado y correspondencia con acabados Business/Style pendientes. Garantía general de marca pendiente de confirmar por unidad."
     }
   },
   {
@@ -15701,7 +15732,36 @@ const carsData = [
         "charging": "200 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Gris Cemento",
+        "hex": "#929592"
+      },
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#ECEDEA"
+      },
+      {
+        "name": "Azul Plateado",
+        "hex": "#8399AC"
+      },
+      {
+        "name": "Azul Aguamarina",
+        "hex": "#398B99"
+      },
+      {
+        "name": "Plata Escama",
+        "hex": "#B9BEC4"
+      },
+      {
+        "name": "Negro Granadilla",
+        "hex": "#191B20"
+      },
+      {
+        "name": "Rojo Kings",
+        "hex": "#B32635"
+      }
+    ],
     "images": [
       "img/cars/vw-id7-tourer/vw-id7-tourer_01.webp",
       "img/cars/vw-id7-tourer/vw-id7-tourer_02.webp",
@@ -15729,11 +15789,13 @@ const carsData = [
     "sources": [
       "https://usuariogeek.es/volkswagen-id7-precio-ficha-tecnica/",
       "https://www.volkswagen.es/es/modelos/id7-tourer/medidas.html",
-      "https://www.volkswagen.es/es/modelos/id7-tourer.html"
+      "https://www.volkswagen.es/es/modelos/id7-tourer.html",
+      "https://www.volkswagen-newsroom.com/en/the-new-id7-pro-s-and-id7-tourer-pro-s-international-media-drive-18617/exterior-18624",
+      "https://www.carwow.es/volkswagen/id-7/colores"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Tarifas históricas de referencia; precios actuales al contado, colores y correspondencia con los acabados Business/Style del configurador pendientes. Garantía general de marca pendiente de confirmar por unidad."
+      "status": "Colores según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifas históricas de referencia; precios actuales al contado y correspondencia con acabados Business/Style pendientes. Garantía general de marca pendiente de confirmar por unidad."
     }
   }
 ];
