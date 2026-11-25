@@ -737,6 +737,16 @@ document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
             });
         });
     </script>
-<script>window.addEventListener("load",function(){if(location.hash==="#ranking")showMotoRanking(true);});</script></body>
+<script>window.addEventListener("load",function(){if(location.hash==="#ranking")showMotoRanking(true);});</script><script>
+document.addEventListener('DOMContentLoaded', () => {
+    const brand = new URLSearchParams(location.search).get('marca');
+    const search = document.getElementById('hero-search');
+    if (brand && search) {
+        search.value = brand;
+        filterCars();
+    }
+});
+</script>
+</body>
 
 </html>
