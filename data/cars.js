@@ -13995,14 +13995,15 @@ const carsData = [
     "batteryType": "LFP",
     "powerText": "351–575 CV",
     "trunk": 660,
-    "acceleration": "3,9–6,6 s",
+    "acceleration": "4,2–6,6 s",
     "dimensions": "4,891 × 1,937 × 1,680 m",
     "charging": "445–525 kW CC · 11 kW CA",
     "description": "SUV eléctrico de cinco plazas con arquitectura de 800 V, tracción trasera o integral y carga ultrarrápida. Gama actualizada MY2026.",
     "highlights": [
       "Carga rápida de hasta 525 kW",
       "Autonomía WLTP de 585 km en Long Range",
-      "Maletero de 660 litros"
+      "Maletero de 660 litros",
+      "Maletero delantero de 71 litros"
     ],
     "considerations": [
       "Dimensiones grandes para ciudad",
@@ -14025,10 +14026,10 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "5 años / 120.000 km",
-      "battery": "8 años / 160.000 km",
-      "capacity": "No especificado en la ficha oficial",
-      "source": "https://www.xpeng-auto.es/g6"
+      "vehicle": "Hasta 7 años o 160.000 km (según condiciones)",
+      "battery": "8 años o 160.000 km",
+      "capacity": "Pendiente de confirmar",
+      "source": "https://www.xpeng-auto.es/llms-txt"
     },
     "trims": [
       {
@@ -14064,7 +14065,7 @@ const carsData = [
         "power": "575 CV",
         "range": "540 km WLTP",
         "rangeValue": 540,
-        "accel": "3,9 s",
+        "accel": "4,2 s",
         "charging": "525 kW CC · 11 kW CA"
       },
       {
@@ -14076,11 +14077,36 @@ const carsData = [
         "power": "575 CV",
         "range": "540 km WLTP",
         "rangeValue": 540,
-        "accel": "3,9 s",
+        "accel": "4,2 s",
         "charging": "525 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Arctic White",
+        "hex": "#F4F4F3"
+      },
+      {
+        "name": "Graphite Gray",
+        "hex": "#55595D"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#202124"
+      },
+      {
+        "name": "Silver Frost",
+        "hex": "#C1C4C7"
+      },
+      {
+        "name": "Kaitoke Green Matte",
+        "hex": "#53665B"
+      },
+      {
+        "name": "Black Edition",
+        "hex": "#111111"
+      }
+    ],
     "images": [
       "img/cars/xpeng-g9/xpeng-g9_01.webp",
       "img/cars/xpeng-g9/xpeng-g9_02.webp",
@@ -14107,8 +14133,9 @@ const carsData = [
     "brandUrl": "https://www.xpeng-auto.es/g9",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Precios de catálogo Caetano; colores y garantía específica pendientes de verificar. Aceleración Performance según ficha fabricante MY2026.",
+      "status": "Precios de catálogo Caetano noviembre 2026, autonomía WLTP combinada. Colores oficiales con muestras aproximadas; garantía general de XPENG España sujeta a condiciones. Umbral de capacidad de batería pendiente de confirmar.",
       "source": "https://caetano.es/xpeng/precio/"
-    }
+    },
+    "frunk": 71
   }
 ];
