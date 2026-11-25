@@ -51,7 +51,7 @@ body{margin:0;background:#f7f9fc;color:#20313d;font-family:"Plus Jakarta Sans",s
 <main class="brands-main"><nav class="brands-nav" aria-label="Apartados de motos"><a href="/motos/">Catálogo</a><a href="/motos/ranking/">Ranking</a><a href="/motos/mercado/">Mercado</a></nav><h1>MARCAS DE MOTOS ELÉCTRICAS</h1><p class="lead">Explora los fabricantes y descubre sus modelos en nuestro comparador independiente.</p>
 <input class="brands-search" id="brands-search" type="search" placeholder="Buscar marca" aria-label="Buscar marca">
 <p id="brands-count" aria-live="polite"></p><div id="brands-grid" class="brands-grid"></div></main>
-<script src="/data/motos.js?v=honda-cuv"></script><script>
+<script src="/data/motos.js?v=honda-em1"></script><script>
 const counts=new Map();
 for(const car of motorcycles){if(!car.brand || !Array.isArray(car.images) || !car.images.length)continue;const key=car.brand.trim();const prev=counts.get(key)||{count:0,logo:""};prev.count++;prev.logo='/img/logos/motos/'+key.toLowerCase().replaceAll(' ','-')+'.webp';counts.set(key,prev)}
 const names=[...counts.keys()].sort((a,b)=>a.localeCompare(b,"es"));
