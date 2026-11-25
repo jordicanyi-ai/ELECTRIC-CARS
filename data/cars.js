@@ -14817,9 +14817,10 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente",
-      "battery": "Pendiente",
-      "capacity": "Pendiente"
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "source": "https://www.volvocars.com/es/cars/electrification/battery/"
     },
     "trims": [
       {
@@ -14859,7 +14860,40 @@ const carsData = [
         "charging": "350 kW CC · 11 kW CA"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Vapour Grey",
+        "hex": "#777B7C"
+      },
+      {
+        "name": "Crystal White",
+        "hex": "#E9E8E2"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Denim Blue",
+        "hex": "#43566B"
+      },
+      {
+        "name": "Mulberry Red",
+        "hex": "#703D43"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#C5B8A0"
+      },
+      {
+        "name": "Aurora Silver",
+        "hex": "#B9B8B5"
+      },
+      {
+        "name": "Forest Lake",
+        "hex": "#58665C"
+      }
+    ],
     "images": [
       "img/cars/volvo-ex90/volvo-ex90_01.webp",
       "img/cars/volvo-ex90/volvo-ex90_02.webp",
@@ -14886,7 +14920,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ex90-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "MY2027 según Volvo España; autonomía anunciada WLTP, potencia CC y química según tarifa Volvo Italia. Colores, garantía y precio máximo pendientes.",
+      "status": "MY2027; colores y garantía verificados en Volvo España (muestras cromáticas aproximadas). Precio máximo pendiente.",
       "source": "https://www.volvocars.com/es/cars/ex90-electric/specifications/"
     }
   }
