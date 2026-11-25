@@ -49,6 +49,7 @@ if(m.description){
  car.priceText=m.priceEur==null?'No publicado':m.priceEur.toLocaleString('es-ES')+' €';
  car.rangeText=unit(m.rangeKm,'km');
  car.powerText=unit(m.powerKw,'kW');
+ car.topSpeedText=unit(m.topSpeedKmh,'km/h');
  car.batteryText=unit(m.batteryKwh,'kWh');
  car.type=m.category;
  car.description=m.description;
