@@ -14280,5 +14280,241 @@ const carsData = [
       "status": "PVP y WLTP Caetano; colores exteriores según Motor.es y XPENG, muestras aproximadas. Frunk, carga CA y aceleración Long Range pendientes de confirmar.",
       "source": "https://www.xpeng-auto.es/p7"
     }
+  },
+  {
+    "id": 87,
+    "brand": "Volvo",
+    "model": "EX40",
+    "type": "SUV",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 46950,
+    "priceMax": 56800,
+    "priceText": "46.950–56.800 €",
+    "rangeText": "477–575 km",
+    "minRangeVal": 477,
+    "maxRangeVal": 575,
+    "batteryText": "70–82 kWh",
+    "batteryType": "Pendiente de confirmar por versión",
+    "powerText": "238–408 CV",
+    "trunk": 536,
+    "frunk": 31,
+    "acceleration": "4,8–7,3 s",
+    "dimensions": "4,44 m de longitud",
+    "charging": "Pendiente de confirmar",
+    "description": "SUV eléctrico compacto de cinco plazas.",
+    "highlights": [
+      "Maletero delantero de 31 litros",
+      "Versiones de tracción trasera e integral"
+    ],
+    "considerations": [
+      "Autonomía y equipamiento varían según versión y año modelo"
+    ],
+    "idealFor": [
+      "Uso familiar",
+      "Viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de referencia; confirmar tarifa vigente y año modelo.",
+      "source": "https://www.volvocars.com/es/cars/ex40-electric/"
+    },
+    "chargingInfo": {
+      "dcMax": "Pendiente de confirmar",
+      "acMax": "Pendiente de confirmar",
+      "fastChargeText": "Pendiente de confirmar",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "Pendiente de confirmar",
+      "capacity": "Pendiente de confirmar"
+    },
+    "trims": [
+      {
+        "name": "Single Motor",
+        "price": "46.950 €",
+        "priceValue": 46950,
+        "battery": "70 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "238 CV",
+        "range": "477 km WLTP",
+        "rangeValue": 477,
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      },
+      {
+        "name": "Single Motor Extended Range",
+        "price": "51.000 €",
+        "priceValue": 51000,
+        "battery": "82 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "252 CV",
+        "range": "575 km WLTP",
+        "rangeValue": 575,
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      },
+      {
+        "name": "Twin Motor",
+        "price": "56.800 €",
+        "priceValue": 56800,
+        "battery": "82 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "408 CV",
+        "range": "Pendiente de confirmar",
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/volvo-ex40/volvo-ex40_01.webp",
+      "img/cars/volvo-ex40/volvo-ex40_02.webp",
+      "img/cars/volvo-ex40/volvo-ex40_03.webp",
+      "img/cars/volvo-ex40/volvo-ex40_04.webp",
+      "img/cars/volvo-ex40/volvo-ex40_05.webp",
+      "img/cars/volvo-ex40/volvo-ex40_06.webp",
+      "img/cars/volvo-ex40/volvo-ex40_07.webp",
+      "img/cars/volvo-ex40/volvo-ex40_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volvo+EX40",
+        "thumb": "img/cars/volvo-ex40/volvo-ex40_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volvo.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
+    },
+    "brandUrl": "https://www.volvocars.com/es/cars/ex40-electric/",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Datos de referencia pendientes de reconciliar MY2027/MY2027.5; precios, maletero según método de medición, garantías, colores y carga requieren comprobación.",
+      "source": "https://www.volvocars.com/es/cars/ex40-electric/"
+    }
+  },
+  {
+    "id": 88,
+    "brand": "Volvo",
+    "model": "EC40",
+    "type": "SUV coupé",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 50450,
+    "priceMax": 58700,
+    "priceText": "50.450–58.700 €",
+    "rangeText": "486–585 km",
+    "minRangeVal": 486,
+    "maxRangeVal": 585,
+    "batteryText": "70–82 kWh",
+    "batteryType": "Pendiente de confirmar por versión",
+    "powerText": "238–408 CV",
+    "trunk": 480,
+    "frunk": 31,
+    "acceleration": "4,7–7,3 s",
+    "dimensions": "4,44 m de longitud",
+    "charging": "Pendiente de confirmar",
+    "description": "SUV coupé eléctrico de cinco plazas.",
+    "highlights": [
+      "Maletero delantero de 31 litros",
+      "Versiones de tracción trasera e integral"
+    ],
+    "considerations": [
+      "Autonomía y equipamiento varían según versión y año modelo"
+    ],
+    "idealFor": [
+      "Uso familiar",
+      "Viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de referencia; confirmar tarifa vigente y año modelo.",
+      "source": "https://www.volvocars.com/es/cars/ec40-electric/"
+    },
+    "chargingInfo": {
+      "dcMax": "Pendiente de confirmar",
+      "acMax": "Pendiente de confirmar",
+      "fastChargeText": "Pendiente de confirmar",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "Pendiente de confirmar",
+      "capacity": "Pendiente de confirmar"
+    },
+    "trims": [
+      {
+        "name": "Single Motor",
+        "price": "50.450 €",
+        "priceValue": 50450,
+        "battery": "70 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "238 CV",
+        "range": "486 km WLTP",
+        "rangeValue": 486,
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      },
+      {
+        "name": "Single Motor Extended Range",
+        "price": "52.900 €",
+        "priceValue": 52900,
+        "battery": "82 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "252 CV",
+        "range": "585 km WLTP",
+        "rangeValue": 585,
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      },
+      {
+        "name": "Twin Motor",
+        "price": "58.700 €",
+        "priceValue": 58700,
+        "battery": "82 kWh",
+        "batteryType": "Pendiente de confirmar",
+        "power": "408 CV",
+        "range": "Pendiente de confirmar",
+        "accel": "Pendiente de confirmar",
+        "charging": "Pendiente de confirmar"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/volvo-ec40/volvo-ec40_01.webp",
+      "img/cars/volvo-ec40/volvo-ec40_02.webp",
+      "img/cars/volvo-ec40/volvo-ec40_03.webp",
+      "img/cars/volvo-ec40/volvo-ec40_04.webp",
+      "img/cars/volvo-ec40/volvo-ec40_05.webp",
+      "img/cars/volvo-ec40/volvo-ec40_06.webp",
+      "img/cars/volvo-ec40/volvo-ec40_07.webp",
+      "img/cars/volvo-ec40/volvo-ec40_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volvo+EC40",
+        "thumb": "img/cars/volvo-ec40/volvo-ec40_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volvo.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
+    },
+    "brandUrl": "https://www.volvocars.com/es/cars/ec40-electric/",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Datos de referencia pendientes de reconciliar MY2027/MY2027.5; precios, maletero según método de medición, garantías, colores y carga requieren comprobación.",
+      "source": "https://www.volvocars.com/es/cars/ec40-electric/"
+    }
   }
 ];
