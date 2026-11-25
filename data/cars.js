@@ -15123,20 +15123,20 @@ const carsData = [
     "type": "SUV",
     "launchYear": 2020,
     "seats": 5,
-    "priceMin": 46544,
-    "priceMax": 59114,
-    "priceText": "46.544–59.114 €",
+    "priceMin": 45148,
+    "priceMax": 58045,
+    "priceText": "45.148–58.045 €",
     "rangeText": "527–563 km",
     "minRangeVal": 527,
     "maxRangeVal": 563,
-    "batteryText": "77 kWh útiles (configurador)",
+    "batteryText": "77–79 kWh útiles",
     "batteryType": "NMC",
     "powerText": "286–340 CV",
     "trunk": 543,
     "frunkText": "No disponible",
-    "acceleration": "Consultar versión",
+    "acceleration": "5,4–6,7 s",
     "dimensions": "4.584 × 1.852 × 1.612 mm",
-    "charging": "11 kW CA · desde 145 kW CC según versión",
+    "charging": "135–175 kW CC · 11 kW CA",
     "description": "El Volkswagen ID.4 es un SUV eléctrico familiar de cinco plazas que combina una carrocería de líneas limpias con un habitáculo amplio y un maletero de 543 litros. La gama ofrece versiones de propulsión trasera y tracción integral 4Motion, con motores de 286 a 340 CV. Su autonomía homologada alcanza 563 kilómetros según el configurador español. Los acabados Pro, Pro Black y GTX permiten elegir entre un enfoque funcional, un equipamiento más refinado y una orientación deportiva.",
     "highlights": [
       "563 km WLTP en versión Pro",
@@ -15148,7 +15148,7 @@ const carsData = [
     ],
     "considerations": [
       "Sin maletero delantero",
-      "Tarifas de referencia de agosto de 2025",
+      "Precios orientativos de la gama 2026, pendientes de comprobación independiente",
       "Autonomía inferior en versiones integrales",
       "Potencia de carga según versión"
     ],
@@ -15160,12 +15160,12 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Tarifas sin promociones publicadas en agosto de 2025 para gama 2026; vigencia actual pendiente de confirmar."
+      "note": "PVP orientativos aportados para gama 2026, sin ayudas ni financiación; pendientes de comprobación independiente. Pro Black 4Motion: precio específico pendiente."
     },
     "chargingInfo": {
-      "dcMax": "145 kW Pro; resto pendiente de confirmar",
+      "dcMax": "135–175 kW según versión",
       "acMax": "11 kW",
-      "fastChargeText": "Pendiente por versión",
+      "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
     },
     "warranty": {
@@ -15176,58 +15176,63 @@ const carsData = [
     "trims": [
       {
         "name": "Pro",
-        "priceValue": 46544,
-        "price": "46.544 €",
+        "priceValue": 45148,
+        "price": "45.148 €",
         "rangeValue": 563,
         "range": "563 km WLTP",
-        "battery": "77 kWh útiles",
+        "battery": "77 kWh útiles (82 kWh brutos)",
         "batteryType": "NMC",
         "power": "286 CV",
-        "accel": "Pendiente de confirmar"
+        "accel": "6,7 s",
+        "charging": "135–175 kW CC · 11 kW CA"
       },
       {
         "name": "Pro 4Motion",
-        "priceValue": 48454,
-        "price": "48.454 €",
+        "priceValue": 47068,
+        "price": "47.068 €",
         "rangeValue": 551,
         "range": "551 km WLTP",
-        "battery": "77 kWh útiles",
+        "battery": "77 kWh útiles (82 kWh brutos)",
         "batteryType": "NMC",
         "power": "286 CV",
-        "accel": "Pendiente de confirmar"
+        "accel": "6,6–6,7 s",
+        "charging": "175 kW CC · 11 kW CA"
       },
       {
         "name": "Pro Black",
-        "priceValue": 51764,
-        "price": "51.764 €",
+        "priceValue": 50675,
+        "price": "50.675 €",
         "rangeValue": 555,
         "range": "555 km WLTP",
-        "battery": "77 kWh útiles",
+        "battery": "77 kWh útiles (82 kWh brutos)",
         "batteryType": "NMC",
         "power": "286 CV",
-        "accel": "Pendiente de confirmar"
+        "accel": "6,7 s",
+        "charging": "135–175 kW CC · 11 kW CA"
       },
       {
         "name": "Pro Black 4Motion",
-        "priceValue": 53674,
-        "price": "53.674 €",
+        "priceValue": null,
+        "price": "Pendiente de confirmar",
         "rangeValue": 542,
         "range": "542 km WLTP",
-        "battery": "77 kWh útiles",
+        "battery": "77 kWh útiles (82 kWh brutos)",
         "batteryType": "NMC",
         "power": "286 CV",
-        "accel": "Pendiente de confirmar"
+        "accel": "6,6–6,7 s",
+        "charging": "175 kW CC · 11 kW CA"
       },
       {
         "name": "GTX",
-        "priceValue": 59114,
-        "price": "59.114 €",
+        "priceValue": 58045,
+        "price": "58.045 €",
         "rangeValue": 527,
         "range": "527 km WLTP",
-        "battery": "77 kWh útiles",
+        "battery": "79 kWh útiles (82 kWh brutos)",
         "batteryType": "NMC",
         "power": "340 CV",
-        "accel": "Pendiente de confirmar"
+        "accel": "5,4 s",
+        "charging": "175 kW CC · 11 kW CA"
       }
     ],
     "colors": [
@@ -15296,7 +15301,7 @@ const carsData = [
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Colores habituales de España según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifa vigente, aceleración y carga por versión pendientes."
+      "status": "Datos de gama 2026 y colores aportados por el usuario; PVP y especificaciones pendientes de contraste independiente. Precio Pro Black 4Motion pendiente."
     }
   }
 ];
