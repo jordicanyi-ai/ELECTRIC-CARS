@@ -14,6 +14,21 @@ const motoBrands = {
         about: 'Honda fabrica motocicletas y automóviles. Su oferta eléctrica de dos ruedas incluye los scooters EM1 e: y CUV e: y la motocicleta WN7.',
         source: 'https://global.honda/en/investors/faq.html'
     },
+    Kawasaki: {
+        origin: 'Japón', founded: '1961 (primera moto de la marca)', group: 'Kawasaki Heavy Industries',
+        about: 'Kawasaki Motors fabrica motocicletas de carretera y de competición. La Ninja e-1 y la Z e-1 son sus modelos de carretera 100 % eléctricos.',
+        source: 'https://global.kawasaki.com/en/corp/profile/division/motorcycle_engine/history.html'
+    },
+    Piaggio: {
+        origin: 'Italia', founded: '1884', group: 'Grupo Piaggio',
+        about: 'Piaggio nació en Génova y fabrica scooters y vehículos ligeros. La gama eléctrica Piaggio 1 incluye ciclomotores y una versión Active.',
+        source: 'https://www.piaggiogroup.com/en/group/history'
+    },
+    Vespa: {
+        origin: 'Italia', founded: '1946', group: 'Grupo Piaggio',
+        about: 'Vespa nació en Pontedera. Su gama eléctrica urbana incluye la Primavera Elettrica 70.',
+        source: 'https://www.vespa.com/en_EN/vespa-world/news/vespa-80-years-of-an-icon/'
+    },
     NIU: {
         origin: 'China', founded: '2014', group: 'Niu Technologies',
         about: 'Nacida en Pekín, NIU se especializa en movilidad eléctrica urbana. Sus familias NQi y MQi incluyen scooters conectados.',

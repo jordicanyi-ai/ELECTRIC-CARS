@@ -2,7 +2,7 @@ const requestedMotoBrand = new URLSearchParams(location.search).get('marca')?.tr
 const selectedMotoBrand = motorcycles.find(m => m.brand.toLocaleLowerCase('es') === requestedMotoBrand)?.brand;
 
 function motoStat(moto, field, unit, fallback = 'No publicado') {
-    const values = (moto.versions ?? [moto]).map(version => version[field]).filter(Number.isFinite);
+    const values = (moto.versions ?? [moto]).map(version => version[field] ?? moto[field]).filter(Number.isFinite);
     if (!values.length) return fallback;
     const min = Math.min(...values);
     const max = Math.max(...values);
@@ -36,11 +36,13 @@ function renderMotoBrandProfile() {
 }
 
 function minimumMotoLicense(moto) {
+    if (moto.versions?.some(version => version.licenses)) return 'AM o A1, según versión';
     const license = ['AM', 'A1', 'A2', 'A'].find(value => moto.licenses?.includes(value));
     if (license === 'AM') return 'AM · Ciclomotor';
     return license || 'Consultar';
 }
 function motoCarLicense(moto) {
+    if (moto.versions?.some(version => version.licenses)) return 'Sin antigüedad para AM · Más de 3 años para A1 en España';
     if (moto.licenses?.includes('AM')) return 'Sin antigüedad mínima';
     if (moto.licenses?.includes('A1')) return 'Más de 3 años de antigüedad · España';
     return '';
@@ -56,8 +58,11 @@ function filterCars(){
  const q=v('hero-search').trim().toLocaleLowerCase('es');
  const type=v('moto-type'),license=v('moto-license'),removable=v('moto-removable'),power=Number(v('moto-power')),speed=Number(v('moto-speed')),charge=v('moto-charge'),seats=v('moto-seats'),range=Number(v('range-filter')),price=Number(v('price-filter'));
  const filtered=motorcycles.filter(m=>(!selectedMotoBrand || m.brand === selectedMotoBrand)
-  && (!q || [m.brand, m.model, m.category, ...(m.versions ?? []).map(version => version.name)].join(' ').toLocaleLowerCase('es').includes(q))&&(!type||m.category===type)&&(!license || (license === 'B' ? motoCarLicense(m) : m.licenses?.includes(license)))&&(!removable||(m.removableBattery!=null&&(removable==='yes')===m.removableBattery))&&(!power||(m.powerKw!=null&&m.powerKw>=power))&&(!speed||(m.topSpeedKmh!=null&&m.topSpeedKmh>=speed))&&(!charge||(m.fastCharge!=null&&(charge==='yes')===m.fastCharge))&&(!seats||(m.seats!=null&&String(m.seats)===seats))&& (m.versions ?? [m]).some(version =>
-   (!range || (version.rangeKm != null && version.rangeKm >= range))
+  && (!q || [m.brand, m.model, m.category, ...(m.versions ?? []).map(version => version.name)].join(' ').toLocaleLowerCase('es').includes(q))&&(!type||m.category===type)&&(!removable||(m.removableBattery!=null&&(removable==='yes')===m.removableBattery))&&(!charge||(m.fastCharge!=null&&(charge==='yes')===m.fastCharge))&&(!seats||(m.seats!=null&&String(m.seats)===seats))&& (m.versions ?? [m]).some(version =>
+   (!license || (license === 'B' ? motoCarLicense(version.licenses ? version : m) : (version.licenses ?? m.licenses)?.includes(license)))
+   && (!power || (version.powerKw ?? m.powerKw) >= power)
+   && (!speed || (version.topSpeedKmh ?? m.topSpeedKmh) >= speed)
+   && (!range || (version.rangeKm != null && version.rangeKm >= range))
    && (price === 30000 || (version.priceEur != null && version.priceEur <= price))));
  window.motoVisibleList=filtered;window.motoImageIndexes={};const sort=window.motoRankingActive?(v('ranking-metric')||'priceAsc'):v('sort-filter');if(sort==='priceAsc')filtered.sort((a,b)=>(a.priceEur??Infinity)-(b.priceEur??Infinity));else if(sort==='rangeDesc')filtered.sort((a,b)=>motoMax(b, 'rangeKm')-motoMax(a, 'rangeKm'));else if(sort==='powerDesc')filtered.sort((a,b)=>(b.peakPowerKw??-1)-(a.peakPowerKw??-1));else if(sort==='speedDesc')filtered.sort((a,b)=>(b.topSpeedKmh??-1)-(a.topSpeedKmh??-1));else if(sort==='batteryDesc')filtered.sort((a,b)=>motoMax(b, 'batteryKwh')-motoMax(a, 'batteryKwh'));else if(sort==='accelerationAsc')filtered.sort((a,b)=>(a.accel0050Sec??Infinity)-(b.accel0050Sec??Infinity));else if(sort==='brandAsc')filtered.sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model));
  motoEl('range-val').textContent=range+' km';motoEl('price-val').textContent=price===30000?'Sin límite':price.toLocaleString('es-ES')+' €';
@@ -70,8 +75,8 @@ function filterCars(){
  const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');const rankingValue=sort==='priceAsc'?m.priceEur?.toLocaleString('es-ES')+' €':sort==='rangeDesc'?(motoMax(m, 'rangeKm') < 0 ? '—' : motoMax(m, 'rangeKm')+' km'):sort==='powerDesc'?m.peakPowerKw+' kW':sort==='speedDesc'?m.topSpeedKmh+' km/h':sort==='batteryDesc'?(motoMax(m, 'batteryKwh') < 0 ? '—' : motoMax(m, 'batteryKwh')+' kWh'):sort==='accelerationAsc'?(m.accel0050Sec==null?'—':m.accel0050Sec+' s'):'';
  const priceText=motoStat(m, 'priceEur', '€', 'Por verificar');
  const rangeText=motoStat(m, 'rangeKm', 'km', 'Por verificar');
- const powerText=m.powerKw==null?'Por verificar':m.powerKw+' kW';
- const speedText=m.topSpeedKmh==null?'Por verificar':m.topSpeedKmh+' km/h';
+ const powerText=motoStat(m, 'powerKw', 'kW', 'Por verificar');
+ const speedText=motoStat(m, 'topSpeedKmh', 'km/h', 'Por verificar');
  const batteryText=m.removableBattery==null?'Por verificar':m.removableBattery?'Sí':'No';
  return '<article class="car-card" data-moto="'+encodeURIComponent(m.brand+'|'+m.model)+'"><div class="car-photo" onclick="openMotoModal(this.closest(\'article\').dataset.moto)" style="cursor:pointer">'+(m.images?.length?'<img id="moto-img-'+i+'" src="'+m.images[0]+'" alt="'+name+'" loading="lazy">'+(m.images.length>1?'<button type="button" class="car-arrow car-arrow-prev" onclick="changeMotoSlide('+i+',-1,event)" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button><button type="button" class="car-arrow car-arrow-next" onclick="changeMotoSlide('+i+',1,event)" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button><div id="moto-dots-'+i+'" class="car-dots">'+m.images.map((_,n)=>'<span class="'+(n===0?'current':'')+'"></span>').join('')+'</div>':''):m.image?'<img src="'+m.image+'" alt="'+name+'" loading="lazy">':'<div style="height:100%;display:grid;place-items:center;color:#64748b"><i class="fa-solid fa-motorcycle fa-3x"></i></div>')+(window.motoRankingActive?'<span class="car-position moto-rank-number"><strong class="car-rank-number">#'+(i+1)+'</strong><span class="car-rank-label">'+({'priceAsc':'PRECIO DESDE','rangeDesc':'AUTONOMÍA MÁXIMA','powerDesc':'POTENCIA MÁXIMA','speedDesc':'VELOCIDAD MÁXIMA','batteryDesc':'BATERÍA','accelerationAsc':'ACELERACIÓN 0–50'}[sort]||'VALOR')+'</span></span>':'<span class="car-type">'+m.category+'</span>')+'</div><div class="car-content"><div class="car-brand">'+m.brand.toLocaleUpperCase('es-ES')+'</div><h2 class="car-title">'+m.model.toLocaleUpperCase('es-ES')+'</h2>'+(window.motoRankingActive?'<div class="ranking-featured-value"><span>'+({'priceAsc':'PRECIO','rangeDesc':'AUTONOMÍA','powerDesc':'POTENCIA MÁXIMA','speedDesc':'VELOCIDAD MÁXIMA','batteryDesc':'BATERÍA','accelerationAsc':'ACELERACIÓN 0–50'}[sort]||'VALOR')+'</span><strong>'+rankingValue+'</strong></div>':'')+'<div class="car-primary-specs"><div><i class="fa-solid fa-tag"></i><strong>'+priceText+'</strong><small>Precio sin ayudas</small></div><div><i class="fa-solid fa-road"></i><strong>'+rangeText+'</strong><small>Autonomía declarada</small></div></div><div class="car-secondary-specs"><div><i class="fa-solid fa-bolt"></i><strong>'+powerText+'</strong><small>Potencia nominal</small></div><div><i class="fa-solid fa-gauge-high"></i><strong>'+speedText+'</strong><small>Velocidad máxima</small></div><div><i class="fa-solid fa-battery-full"></i><strong>'+batteryText+'</strong><small>Batería extraíble</small></div></div><div class="car-actions"><button type="button" class="car-open" '+'onclick="openMotoModal(this.closest(\'article\').dataset.moto)"'+'>Ver ficha <i class="fa-solid fa-arrow-right"></i></button><button type="button" class="car-compare" onclick="toggleCompare(this.closest(\'article\').dataset.moto)"><i class="fa-solid fa-code-compare"></i> Comparar</button></div></div></article>';
  }).join('')+'</div>':'<div class="empty-results"><p>No encontramos motos con estos filtros</p><button type="button" onclick="resetFilters()">Limpiar filtros</button></div>';
@@ -106,7 +111,7 @@ if(m.description){
  car.type=m.category;
  car.description=m.description;
  car.idealFor=[];
- car.trims=[{name:m.variant||m.model,price:car.priceText,battery:car.batteryText,range:unit(m.rangeKm,'km')+(m.rangeCycle?' · '+m.rangeCycle:''),power:car.powerText,accel:unit(m.accel0050Sec,'s')}];
+ car.trims=[{name:m.variant||m.model,price:car.priceText,battery:car.batteryText,range:unit(m.rangeKm,'km')+(m.rangeCycle?' · '+m.rangeCycle:''),power:car.powerText,accel:unit(m.accel0050Sec,'s'),source:m.priceSource}];
  car.warranty={vehicle:'Consultar condiciones del distribuidor',battery:'Consultar condiciones del distribuidor',capacity:'Consultar condiciones del distribuidor',...m.warranty};
  car.highlights=m.highlights||[];
  car.considerations=m.considerations||[];
@@ -129,12 +134,18 @@ if (m.versions) {
     car.priceText = motoStat(m, 'priceEur', '€');
     car.rangeText = motoStat(m, 'rangeKm', 'km');
     car.batteryText = motoStat(m, 'batteryKwh', 'kWh');
+    car.powerText = motoStat(m, 'powerKw', 'kW');
+    car.topSpeed = motoStat(m, 'topSpeedKmh', 'km/h');
+    car.tech = car.tech.map(row => row[0] === 'Velocidad máxima' ? [row[0], car.topSpeed, row[2]] : row);
     car.trims = m.versions.map(version => ({
         name: version.name,
         price: motoStat(version, 'priceEur', '€'),
         battery: motoStat(version, 'batteryKwh', 'kWh'),
         range: motoStat(version, 'rangeKm', 'km') + ' · ' + m.rangeCycle,
-        power: car.powerText,
+        power: version.powerKw == null ? car.powerText : motoStat(version, 'powerKw', 'kW'),
+        speed: version.topSpeedKmh == null ? '' : motoStat(version, 'topSpeedKmh', 'km/h'),
+        license: version.licenses ? minimumMotoLicense(version) : '',
+        carLicense: version.licenses ? motoCarLicense(version) : '',
         source: version.source
     }));
 }
@@ -146,7 +157,7 @@ if (carLicense) {
     const licenseIndex = car.tech.findIndex(([label]) => label === 'Carnet mínimo');
     car.tech.splice(licenseIndex + 1, 0, ['También con carnet B', carLicense, 'id-card']);
 }
-const trimsHtml=car.trims.map(trim=>`<div class="border border-slate-200 rounded-2xl p-5 bg-white"><div class="text-xs text-blue-600 font-extrabold uppercase">${trim.name}</div><div class="text-xl font-black mt-1">${trim.price}</div><div class="text-[10px] text-slate-400">IVA incluido · Sin ayudas</div><div class="grid grid-cols-2 gap-3 mt-5 text-sm">${[['Batería',trim.battery],['Autonomía',trim.range],['Potencia',trim.power],['0–50 km/h',trim.accel]].filter(([, value]) => value).map(([k,v])=>'<div><span class="text-slate-400 text-xs block">'+k+'</span><strong>'+v+'</strong></div>').join('')}</div>${trim.source ? `<a class="text-xs font-bold text-blue-600 mt-4 inline-block" href="${trim.source}" target="_blank" rel="noopener noreferrer">Ficha oficial ↗</a>` : ''}</div>`).join('');
+const trimsHtml=car.trims.map(trim=>`<div class="border border-slate-200 rounded-2xl p-5 bg-white"><div class="text-xs text-blue-600 font-extrabold uppercase">${trim.name}</div><div class="text-xl font-black mt-1">${trim.price}</div><div class="text-[10px] text-slate-400">IVA incluido · Sin ayudas</div><div class="grid grid-cols-2 gap-3 mt-5 text-sm">${[['Batería',trim.battery],['Autonomía',trim.range],['Potencia',trim.power],['Velocidad máxima',trim.speed],['Carnet mínimo',trim.license],['También con carnet B',trim.carLicense],['0–50 km/h',trim.accel]].filter(([, value]) => value).map(([k,v])=>'<div><span class="text-slate-400 text-xs block">'+k+'</span><strong>'+v+'</strong></div>').join('')}</div>${trim.source ? `<a class="text-xs font-bold text-blue-600 mt-4 inline-block" href="${trim.source}" target="_blank" rel="noopener noreferrer">Ver fuente oficial ↗</a>` : ''}</div>`).join('');
 const colorsHtml=(m.colorSwatches||(m.brand==='Silence'&&m.model==='S01'?[['Blanco','#f5f5f3'],['Negro','#181818'],['Rojo','#a41f35']]:m.brand==='BMW'?[['Light White','#f5f5f3'],['Gravity Blue','#54637a'],['Spacesilver','#a9adb3']]:[['Limited Edition','#444444']])).map(([name,hex])=>`<span class="inline-flex items-center gap-3 text-sm font-medium text-slate-700"><span class="w-8 h-8 rounded-full border border-slate-300 shadow-sm" style="background:${hex}"></span>${name}</span>`).join('');
 const galleryHtml=car.images.map((img,index)=>`<button type="button" onclick="openMotoLightbox(${index})" aria-label="Ampliar fotografía ${index+1}" class="block w-full min-w-0 text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group"><img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full ${index<3?'object-contain':'object-cover'} group-hover:scale-105 transition duration-500"></button>`).join('');
 const positives=car.highlights.map(item=>'<li class="flex gap-3"><span class="text-blue-600 font-black text-base leading-5">+</span><span>'+item+'</span></li>').join('');
@@ -238,7 +249,7 @@ const modal=document.getElementById('modal-content');modal.innerHTML=`
 
                     <!-- MAIN DATA --><section><div class="grid grid-cols-2 lg:grid-cols-5 gap-3">
 <div class="detail-range-stat col-span-2 lg:col-span-1 bg-blue-600 text-white rounded-2xl p-5"><i class="fa-solid fa-road opacity-70"></i><div class="text-2xl font-black mt-2">${car.rangeText}</div><div class="text-xs opacity-80">Autonomía WMTC</div></div>
-<div class="bg-slate-50 rounded-2xl p-5"><i class="fa-solid fa-battery-full text-blue-600"></i><div class="text-xl font-black mt-2">${car.batteryText}</div><div class="text-xs text-slate-400">Batería extraíble</div></div>
+<div class="bg-slate-50 rounded-2xl p-5"><i class="fa-solid fa-battery-full text-blue-600"></i><div class="text-xl font-black mt-2">${car.batteryText}</div><div class="text-xs text-slate-400">Capacidad de batería</div></div>
 <div class="bg-slate-50 rounded-2xl p-5"><i class="fa-solid fa-bolt text-blue-600"></i><div class="text-xl font-black mt-2">${car.powerText}</div><div class="text-xs text-slate-400">Potencia</div></div>
 <div class="bg-slate-50 rounded-2xl p-5"><i class="fa-solid fa-gauge-high text-blue-600"></i><div class="text-xl font-black mt-2">${car.topSpeed}</div><div class="text-xs text-slate-400">Velocidad máxima</div></div>
 <div class="bg-slate-50 rounded-2xl p-5"><i class="fa-solid fa-user-group text-blue-600"></i><div class="text-xl font-black mt-2">${car.seats}</div><div class="text-xs text-slate-400">Plazas</div></div></div></section>
@@ -515,7 +526,7 @@ function renderMotoCompare(){
 function openCompareModal(){
  if(motoCompareSelected.size<2)return;
  const models=[...motoCompareSelected].map(key=>motorcycles.find(m=>m.brand+'|'+m.model===key)).filter(Boolean);
- const fields=[['Precio',m=>motoStat(m, 'priceEur', '€')],['Autonomía',m=>motoStat(m, 'rangeKm', 'km')],['Batería',m=>motoStat(m, 'batteryKwh', 'kWh')],['Potencia nominal',m=>m.powerKw==null?'No publicado':m.powerKw+' kW'],['Potencia máxima',m=>m.peakPowerKw==null?'No publicado':m.peakPowerKw+' kW'],['Velocidad máxima',m=>m.topSpeedKmh==null?'No publicado':m.topSpeedKmh+' km/h'],['Batería extraíble',m=>m.removableBattery==null?'Por verificar':m.removableBattery?'Sí':'No'],['Carnet mínimo',minimumMotoLicense],['También con carnet B',m=>motoCarLicense(m)||'—'],['Peso',m=>m.weightKg?m.weightKg+' kg':'Por verificar'],['Carga',m=>m.brand==='Silence'&&m.model==='S01'?'7–9 h · batería intercambiable':m.brand==='BMW'?(m.model==='CE 02'?m.chargeText:'AC 2,3 kW · opc. 6,9 kW'):m.brand==='Zero'?'AC 6,6 kW · opc. 12,6 kW':m.chargeText||'Por verificar'],['Garantía',m=>m.warranty?[m.warranty.vehicle,m.warranty.battery].join(' · '):m.brand==='Silence'&&m.model==='S01'?'Consultar fabricante':m.brand==='BMW'?(m.model==='CE 02'?'Consultar condiciones de la unidad':'Moto 5 años · batería 5 años/40.000 km'):m.brand==='Zero'?'5 años · km ilimitados':m.guarantee||'Por verificar']];
+ const fields=[['Precio',m=>motoStat(m, 'priceEur', '€')],['Autonomía',m=>motoStat(m, 'rangeKm', 'km')],['Batería',m=>motoStat(m, 'batteryKwh', 'kWh')],['Potencia nominal',m=>motoStat(m, 'powerKw', 'kW')],['Potencia máxima',m=>m.peakPowerKw==null?'No publicado':m.peakPowerKw+' kW'],['Velocidad máxima',m=>motoStat(m, 'topSpeedKmh', 'km/h')],['Batería extraíble',m=>m.removableBattery==null?'Por verificar':m.removableBattery?'Sí':'No'],['Carnet mínimo',minimumMotoLicense],['También con carnet B',m=>motoCarLicense(m)||'—'],['Peso',m=>m.weightKg?m.weightKg+' kg':'Por verificar'],['Carga',m=>m.brand==='Silence'&&m.model==='S01'?'7–9 h · batería intercambiable':m.brand==='BMW'?(m.model==='CE 02'?m.chargeText:'AC 2,3 kW · opc. 6,9 kW'):m.brand==='Zero'?'AC 6,6 kW · opc. 12,6 kW':m.chargeText||'Por verificar'],['Garantía',m=>m.warranty?[m.warranty.vehicle,m.warranty.battery].join(' · '):m.brand==='Silence'&&m.model==='S01'?'Consultar fabricante':m.brand==='BMW'?(m.model==='CE 02'?'Consultar condiciones de la unidad':'Moto 5 años · batería 5 años/40.000 km'):m.brand==='Zero'?'5 años · km ilimitados':m.guarantee||'Por verificar']];
  const cell=(value,head=false)=>'<'+(head?'th':'td')+' class="px-4 py-4 text-left border-b border-slate-200 min-w-[150px]">'+(value??'Por verificar')+'</'+(head?'th':'td')+'>';
  const bestRules={'Precio':{get:m=>m.versions ? null : m.priceEur,low:true},'Autonomía':{get:m=>m.versions ? null : m.rangeKm},'Batería':{get:m=>m.versions ? null : m.batteryKwh},'Potencia nominal':{get:m=>m.powerKw},'Potencia máxima':{get:m=>m.peakPowerKw},'Velocidad máxima':{get:m=>m.topSpeedKmh},'Peso':{get:m=>m.weightKg,low:true}};
  const bestBadge='<span class="inline-flex ml-2 px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 text-[9px] font-extrabold uppercase tracking-wide">Mejor</span>';
