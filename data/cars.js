@@ -14762,5 +14762,132 @@ const carsData = [
       "status": "Datos de referencia; garantía y colores pendientes.",
       "source": "https://www.volvocars.com/es/cars/ex60-electric/"
     }
+  },
+  {
+    "id": 90,
+    "brand": "Volvo",
+    "model": "EX90",
+    "type": "SUV",
+    "launchYear": 2024,
+    "seats": 7,
+    "priceMin": 84111,
+    "priceMax": null,
+    "priceText": "Desde 84.111 €",
+    "rangeText": "564–617 km",
+    "minRangeVal": 564,
+    "maxRangeVal": 617,
+    "batteryText": "92–106 kWh",
+    "batteryType": "NMC",
+    "powerText": "333–680 CV",
+    "trunk": 324,
+    "frunk": 46,
+    "acceleration": "4,2–6,8 s",
+    "dimensions": "5.037 × 1.964 × 1.744 mm",
+    "charging": "310–350 kW CC · 11 kW CA",
+    "description": "El Volvo EX90 es un gran SUV eléctrico de siete plazas que combina la elegancia de las líneas escandinavas con un interior espacioso y una avanzada tecnología de seguridad. Con más de cinco metros de longitud, está pensado para familias que necesitan viajar con comodidad. La gama actual incorpora una arquitectura de 800 voltios, baterías de 92 a 106 kWh y potencias de 333 a 680 CV. Su autonomía anunciada alcanza los 617 kilómetros y puede recargar del 10 al 80 % en 22 minutos. Disponible desde 84.111 euros.",
+    "highlights": [
+      "Siete plazas de serie",
+      "Diseño escandinavo e interior espacioso",
+      "Autonomía anunciada de 617 km",
+      "Arquitectura de 800 V y carga rápida de hasta 350 kW",
+      "Hasta 680 CV y tracción integral disponible",
+      "Maletero de 697 litros con cinco plazas y 46 litros delante",
+      "Capacidad de remolque de hasta 2.200 kg"
+    ],
+    "considerations": [
+      "Precio elevado",
+      "Peso de 2.585–2.765 kg",
+      "Más de cinco metros de longitud dificultan el aparcamiento urbano",
+      "Maletero de 324 litros con siete plazas en uso"
+    ],
+    "idealFor": [
+      "Uso familiar",
+      "Viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de partida por motor publicados por Volvo España; precio máximo de gama pendiente.",
+      "source": "https://www.volvocars.com/es/cars/ex90-electric/specifications/"
+    },
+    "chargingInfo": {
+      "dcMax": "350 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 22 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente",
+      "battery": "Pendiente",
+      "capacity": "Pendiente"
+    },
+    "trims": [
+      {
+        "name": "Single Motor",
+        "priceValue": 84111,
+        "price": "84.111 €",
+        "battery": "92 kWh",
+        "batteryType": "NMC",
+        "power": "333 CV",
+        "range": "564 km WLTP",
+        "rangeValue": 564,
+        "accel": "6,8 s",
+        "charging": "310 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Twin Motor",
+        "priceValue": 89556,
+        "price": "89.556 €",
+        "battery": "106 kWh",
+        "batteryType": "NMC",
+        "power": "456 CV",
+        "range": "617 km WLTP",
+        "rangeValue": 617,
+        "accel": "5,5 s",
+        "charging": "350 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Twin Motor Performance",
+        "priceValue": 100325,
+        "price": "100.325 €",
+        "battery": "106 kWh",
+        "batteryType": "NMC",
+        "power": "680 CV",
+        "range": "617 km WLTP",
+        "rangeValue": 617,
+        "accel": "4,2 s",
+        "charging": "350 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/volvo-ex90/volvo-ex90_01.webp",
+      "img/cars/volvo-ex90/volvo-ex90_02.webp",
+      "img/cars/volvo-ex90/volvo-ex90_03.webp",
+      "img/cars/volvo-ex90/volvo-ex90_04.webp",
+      "img/cars/volvo-ex90/volvo-ex90_05.webp",
+      "img/cars/volvo-ex90/volvo-ex90_06.webp",
+      "img/cars/volvo-ex90/volvo-ex90_07.webp",
+      "img/cars/volvo-ex90/volvo-ex90_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volvo+EX90",
+        "thumb": "img/cars/volvo-ex90/volvo-ex90_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volvo.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
+    },
+    "brandUrl": "https://www.volvocars.com/es/cars/ex90-electric/",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "MY2027 según Volvo España; autonomía anunciada WLTP, potencia CC y química según tarifa Volvo Italia. Colores, garantía y precio máximo pendientes.",
+      "source": "https://www.volvocars.com/es/cars/ex90-electric/specifications/"
+    }
   }
 ];
