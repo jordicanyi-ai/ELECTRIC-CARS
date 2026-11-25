@@ -14186,9 +14186,10 @@ const carsData = [
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmar",
-      "battery": "Pendiente de confirmar",
-      "capacity": "Pendiente de confirmar"
+      "vehicle": "5 años / 120.000 km (hasta 7 años / 160.000 km según condiciones)",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "source": "https://www.carwow.es/xpeng/p7-plus/caracteristicas-tecnicas"
     },
     "trims": [
       {
@@ -14276,7 +14277,7 @@ const carsData = [
     "brandUrl": "https://www.xpeng-auto.es/p7",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "PVP y WLTP Caetano; colores exteriores según Motor.es y XPENG, muestras aproximadas. Garantía, frunk, carga CA y aceleración Long Range pendientes de confirmar.",
+      "status": "PVP y WLTP Caetano; colores exteriores según Motor.es y XPENG, muestras aproximadas. Frunk, carga CA y aceleración Long Range pendientes de confirmar.",
       "source": "https://www.xpeng-auto.es/p7"
     }
   }
