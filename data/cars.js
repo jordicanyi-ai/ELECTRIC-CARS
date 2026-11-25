@@ -14599,5 +14599,168 @@ const carsData = [
       "status": "Autonomía según tabla de motores Volvo España, no estimaciones preliminares MY2027.5. Potencia CC según documentación europea Volvo MY2027; química NMC según EV Database. Colores oficiales con muestras aproximadas.",
       "source": "https://www.volvocars.com/es/cars/ec40-electric/"
     }
+  },
+  {
+    "id": 89,
+    "brand": "Volvo",
+    "model": "EX60",
+    "type": "SUV",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 64900,
+    "priceMax": 81356,
+    "priceText": "64.900–81.356 €",
+    "rangeText": "611–810 km",
+    "minRangeVal": 611,
+    "maxRangeVal": 810,
+    "batteryText": "83–117 kWh",
+    "batteryType": "NMC",
+    "powerText": "374–680 CV",
+    "trunk": 523,
+    "frunk": 58,
+    "acceleration": "3,9–5,9 s",
+    "dimensions": "4.803 × 1.908 × 1.635 mm",
+    "charging": "320–370 kW CC",
+    "description": "El Volvo EX60 representa una nueva generación de SUV eléctricos, combinando la elegancia de las líneas escandinavas con una tecnología de vanguardia. Su diseño exterior, limpio y sofisticado, transmite modernidad sin renunciar a la personalidad de Volvo. Con 4,80 metros de longitud, cinco plazas y una arquitectura eléctrica de 800 voltios, ofrece baterías de hasta 117 kWh, potencias de hasta 680 CV y una autonomía anunciada de 810 kilómetros. Su carga ultrarrápida y su amplio espacio interior lo convierten en una interesante alternativa para viajar en familia. Disponible desde 64.900 euros.",
+    "highlights": [
+      "Autonomía anunciada de 810 km",
+      "Diseño escandinavo elegante",
+      "Arquitectura de 800 V",
+      "Carga rápida de hasta 370 kW",
+      "Potencia de hasta 680 CV",
+      "Maletero delantero de 58 litros",
+      "Capacidad de remolque de hasta 2.400 kg"
+    ],
+    "considerations": [
+      "Precio elevado",
+      "Peso superior a dos toneladas",
+      "Solo cinco plazas",
+      "La carga máxima requiere infraestructura de alta potencia"
+    ],
+    "idealFor": [
+      "Uso familiar",
+      "Viajes"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de referencia pendientes de reconfirmación.",
+      "source": "https://www.volvocars.com/es/cars/ex60-electric/"
+    },
+    "chargingInfo": {
+      "dcMax": "370 kW",
+      "acMax": "Pendiente",
+      "fastChargeText": "10–80 % en 16–19 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente",
+      "battery": "Pendiente",
+      "capacity": "Pendiente"
+    },
+    "trims": [
+      {
+        "name": "P6 RWD Plus",
+        "price": "64.900 €",
+        "priceValue": 64900,
+        "battery": "83 kWh",
+        "batteryType": "NMC",
+        "power": "374 CV",
+        "range": "611 km WLTP",
+        "rangeValue": 611,
+        "accel": "5,9 s",
+        "charging": "320–370 kW CC"
+      },
+      {
+        "name": "P6 RWD Ultra",
+        "price": "72.281 €",
+        "priceValue": 72281,
+        "battery": "83 kWh",
+        "batteryType": "NMC",
+        "power": "374 CV",
+        "range": "611 km WLTP",
+        "rangeValue": 611,
+        "accel": "5,9 s",
+        "charging": "320–370 kW CC"
+      },
+      {
+        "name": "P10 AWD Plus",
+        "price": "67.925 €",
+        "priceValue": 67925,
+        "battery": "95 kWh",
+        "batteryType": "NMC",
+        "power": "510 CV",
+        "range": "660 km WLTP",
+        "rangeValue": 660,
+        "accel": "4,6 s",
+        "charging": "320–370 kW CC"
+      },
+      {
+        "name": "P10 AWD Ultra",
+        "price": "75.306 €",
+        "priceValue": 75306,
+        "battery": "95 kWh",
+        "batteryType": "NMC",
+        "power": "510 CV",
+        "range": "660 km WLTP",
+        "rangeValue": 660,
+        "accel": "4,6 s",
+        "charging": "320–370 kW CC"
+      },
+      {
+        "name": "P12 AWD Plus",
+        "price": "73.975 €",
+        "priceValue": 73975,
+        "battery": "117 kWh",
+        "batteryType": "NMC",
+        "power": "680 CV",
+        "range": "810 km WLTP",
+        "rangeValue": 810,
+        "accel": "3,9 s",
+        "charging": "320–370 kW CC"
+      },
+      {
+        "name": "P12 AWD Ultra",
+        "price": "81.356 €",
+        "priceValue": 81356,
+        "battery": "117 kWh",
+        "batteryType": "NMC",
+        "power": "680 CV",
+        "range": "810 km WLTP",
+        "rangeValue": 810,
+        "accel": "3,9 s",
+        "charging": "320–370 kW CC"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/volvo-ex60/volvo-ex60_01.webp",
+      "img/cars/volvo-ex60/volvo-ex60_02.webp",
+      "img/cars/volvo-ex60/volvo-ex60_03.webp",
+      "img/cars/volvo-ex60/volvo-ex60_04.webp",
+      "img/cars/volvo-ex60/volvo-ex60_05.webp",
+      "img/cars/volvo-ex60/volvo-ex60_06.webp",
+      "img/cars/volvo-ex60/volvo-ex60_07.webp",
+      "img/cars/volvo-ex60/volvo-ex60_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volvo+EX60",
+        "thumb": "img/cars/volvo-ex60/volvo-ex60_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volvo.png",
+      "group": "Geely Holding",
+      "relation": "Marca del grupo",
+      "note": "Volvo Cars es un fabricante sueco de automóviles, con sede en Gotemburgo, que pertenece a Geely Holding."
+    },
+    "brandUrl": "https://www.volvocars.com/es/cars/ex60-electric/",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Datos de referencia; garantía y colores pendientes.",
+      "source": "https://www.volvocars.com/es/cars/ex60-electric/"
+    }
   }
 ];
