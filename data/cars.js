@@ -14300,8 +14300,8 @@ const carsData = [
     "trunk": 536,
     "frunk": 31,
     "acceleration": "4,8–7,3 s",
-    "dimensions": "4,44 m de longitud",
-    "charging": "Pendiente de confirmar",
+    "dimensions": "4.440 × 1.873 × 1.647 mm",
+    "charging": "11 kW CA · 26–28 min (10–80 % en estación CC de 200 kW)",
     "description": "SUV eléctrico compacto de cinco plazas.",
     "highlights": [
       "Maletero delantero de 31 litros",
@@ -14321,15 +14321,16 @@ const carsData = [
       "source": "https://www.volvocars.com/es/cars/ex40-electric/"
     },
     "chargingInfo": {
-      "dcMax": "Pendiente de confirmar",
-      "acMax": "Pendiente de confirmar",
-      "fastChargeText": "Pendiente de confirmar",
+      "dcMax": "No confirmado; ensayo oficial en estación de 200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmar",
-      "battery": "Pendiente de confirmar",
-      "capacity": "Pendiente de confirmar"
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "source": "https://www.volvocars.com/es/l/servicios/mantenimiento/talleres-oficiales/garantia-piezas-volvo/"
     },
     "trims": [
       {
@@ -14341,8 +14342,8 @@ const carsData = [
         "power": "238 CV",
         "range": "477 km WLTP",
         "rangeValue": 477,
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "accel": "7,3 s",
+        "charging": "11 kW CA · 26 min (10–80 % en estación CC de 200 kW)"
       },
       {
         "name": "Single Motor Extended Range",
@@ -14353,8 +14354,8 @@ const carsData = [
         "power": "252 CV",
         "range": "575 km WLTP",
         "rangeValue": 575,
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "accel": "7,3 s",
+        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)"
       },
       {
         "name": "Twin Motor",
@@ -14363,9 +14364,10 @@ const carsData = [
         "battery": "82 kWh",
         "batteryType": "Pendiente de confirmar",
         "power": "408 CV",
-        "range": "Pendiente de confirmar",
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "range": "538 km WLTP",
+        "accel": "4,8 s",
+        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)",
+        "rangeValue": 538
       }
     ],
     "colors": [],
@@ -14395,7 +14397,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ex40-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Datos de referencia pendientes de reconciliar MY2027/MY2027.5; precios, maletero según método de medición, garantías, colores y carga requieren comprobación.",
+      "status": "Especificaciones de Volvo España consultadas 25/11/2026; autonomía según tabla de motores, no estimaciones preliminares MY2027.5. Química exacta y potencia pico CC pendientes de confirmar. Colores EX40 pendientes.",
       "source": "https://www.volvocars.com/es/cars/ex40-electric/"
     }
   },
@@ -14418,8 +14420,8 @@ const carsData = [
     "trunk": 480,
     "frunk": 31,
     "acceleration": "4,7–7,3 s",
-    "dimensions": "4,44 m de longitud",
-    "charging": "Pendiente de confirmar",
+    "dimensions": "4.440 × 1.873 × 1.591 mm",
+    "charging": "11 kW CA · 26–28 min (10–80 % en estación CC de 200 kW)",
     "description": "SUV coupé eléctrico de cinco plazas.",
     "highlights": [
       "Maletero delantero de 31 litros",
@@ -14439,15 +14441,16 @@ const carsData = [
       "source": "https://www.volvocars.com/es/cars/ec40-electric/"
     },
     "chargingInfo": {
-      "dcMax": "Pendiente de confirmar",
-      "acMax": "Pendiente de confirmar",
-      "fastChargeText": "Pendiente de confirmar",
+      "dcMax": "No confirmado; ensayo oficial en estación de 200 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
     },
     "warranty": {
-      "vehicle": "Pendiente de confirmar",
-      "battery": "Pendiente de confirmar",
-      "capacity": "Pendiente de confirmar"
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "source": "https://www.volvocars.com/es/l/servicios/mantenimiento/talleres-oficiales/garantia-piezas-volvo/"
     },
     "trims": [
       {
@@ -14459,8 +14462,8 @@ const carsData = [
         "power": "238 CV",
         "range": "486 km WLTP",
         "rangeValue": 486,
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "accel": "7,3 s",
+        "charging": "11 kW CA · 26 min (10–80 % en estación CC de 200 kW)"
       },
       {
         "name": "Single Motor Extended Range",
@@ -14471,8 +14474,8 @@ const carsData = [
         "power": "252 CV",
         "range": "585 km WLTP",
         "rangeValue": 585,
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "accel": "7,3 s",
+        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)"
       },
       {
         "name": "Twin Motor",
@@ -14481,12 +14484,46 @@ const carsData = [
         "battery": "82 kWh",
         "batteryType": "Pendiente de confirmar",
         "power": "408 CV",
-        "range": "Pendiente de confirmar",
-        "accel": "Pendiente de confirmar",
-        "charging": "Pendiente de confirmar"
+        "range": "551 km WLTP",
+        "accel": "4,7 s",
+        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)",
+        "rangeValue": 551
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Vapour Grey",
+        "hex": "#777B7C"
+      },
+      {
+        "name": "Ice White",
+        "hex": "#F4F4F4"
+      },
+      {
+        "name": "Crystal White",
+        "hex": "#E9E8E2"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Denim Blue",
+        "hex": "#43566B"
+      },
+      {
+        "name": "Aurora Silver",
+        "hex": "#B9B8B5"
+      },
+      {
+        "name": "Forest Lake",
+        "hex": "#58665C"
+      },
+      {
+        "name": "Heather Bronze",
+        "hex": "#927D70"
+      }
+    ],
     "images": [
       "img/cars/volvo-ec40/volvo-ec40_01.webp",
       "img/cars/volvo-ec40/volvo-ec40_02.webp",
@@ -14513,7 +14550,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ec40-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Datos de referencia pendientes de reconciliar MY2027/MY2027.5; precios, maletero según método de medición, garantías, colores y carga requieren comprobación.",
+      "status": "Especificaciones de Volvo España consultadas 25/11/2026; autonomía según tabla de motores, no estimaciones preliminares MY2027.5. Química exacta y potencia pico CC pendientes de confirmar. Colores con muestras aproximadas.",
       "source": "https://www.volvocars.com/es/cars/ec40-electric/"
     }
   }
