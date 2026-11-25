@@ -40,6 +40,12 @@ function minimumMotoLicense(moto) {
     if (license === 'AM') return 'AM · Ciclomotor';
     return license || 'Consultar';
 }
+function motoCarLicense(moto) {
+    if (moto.licenses?.includes('AM')) return 'Sin antigüedad mínima';
+    if (moto.licenses?.includes('A1')) return 'Más de 3 años de antigüedad · España';
+    return '';
+}
+
 const motoEl=id=>document.getElementById(id);
 const motoFields=['moto-type','moto-license','moto-removable','moto-power','moto-speed','moto-charge','moto-seats','range-filter','price-filter'];
 function toggleMobileFilters(){const p=motoEl('filters-panel');p.hidden=!p.hidden;motoEl('filters-toggle').setAttribute('aria-expanded',String(!p.hidden));}
@@ -50,7 +56,7 @@ function filterCars(){
  const q=v('hero-search').trim().toLocaleLowerCase('es');
  const type=v('moto-type'),license=v('moto-license'),removable=v('moto-removable'),power=Number(v('moto-power')),speed=Number(v('moto-speed')),charge=v('moto-charge'),seats=v('moto-seats'),range=Number(v('range-filter')),price=Number(v('price-filter'));
  const filtered=motorcycles.filter(m=>(!selectedMotoBrand || m.brand === selectedMotoBrand)
-  && (!q || [m.brand, m.model, m.category, ...(m.versions ?? []).map(version => version.name)].join(' ').toLocaleLowerCase('es').includes(q))&&(!type||m.category===type)&&(!license||(Array.isArray(m.licenses)&&m.licenses.includes(license)))&&(!removable||(m.removableBattery!=null&&(removable==='yes')===m.removableBattery))&&(!power||(m.powerKw!=null&&m.powerKw>=power))&&(!speed||(m.topSpeedKmh!=null&&m.topSpeedKmh>=speed))&&(!charge||(m.fastCharge!=null&&(charge==='yes')===m.fastCharge))&&(!seats||(m.seats!=null&&String(m.seats)===seats))&& (m.versions ?? [m]).some(version =>
+  && (!q || [m.brand, m.model, m.category, ...(m.versions ?? []).map(version => version.name)].join(' ').toLocaleLowerCase('es').includes(q))&&(!type||m.category===type)&&(!license || (license === 'B' ? motoCarLicense(m) : m.licenses?.includes(license)))&&(!removable||(m.removableBattery!=null&&(removable==='yes')===m.removableBattery))&&(!power||(m.powerKw!=null&&m.powerKw>=power))&&(!speed||(m.topSpeedKmh!=null&&m.topSpeedKmh>=speed))&&(!charge||(m.fastCharge!=null&&(charge==='yes')===m.fastCharge))&&(!seats||(m.seats!=null&&String(m.seats)===seats))&& (m.versions ?? [m]).some(version =>
    (!range || (version.rangeKm != null && version.rangeKm >= range))
    && (price === 30000 || (version.priceEur != null && version.priceEur <= price))));
  window.motoVisibleList=filtered;window.motoImageIndexes={};const sort=window.motoRankingActive?(v('ranking-metric')||'priceAsc'):v('sort-filter');if(sort==='priceAsc')filtered.sort((a,b)=>(a.priceEur??Infinity)-(b.priceEur??Infinity));else if(sort==='rangeDesc')filtered.sort((a,b)=>motoMax(b, 'rangeKm')-motoMax(a, 'rangeKm'));else if(sort==='powerDesc')filtered.sort((a,b)=>(b.peakPowerKw??-1)-(a.peakPowerKw??-1));else if(sort==='speedDesc')filtered.sort((a,b)=>(b.topSpeedKmh??-1)-(a.topSpeedKmh??-1));else if(sort==='batteryDesc')filtered.sort((a,b)=>motoMax(b, 'batteryKwh')-motoMax(a, 'batteryKwh'));else if(sort==='accelerationAsc')filtered.sort((a,b)=>(a.accel0050Sec??Infinity)-(b.accel0050Sec??Infinity));else if(sort==='brandAsc')filtered.sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model));
@@ -59,7 +65,7 @@ function filterCars(){
  const badge=motoEl('active-filter-count');badge.hidden=!active;badge.textContent=active;
  document.querySelectorAll('[data-moto-quick]').forEach(b=>{const k=b.dataset.motoQuick;const on=k==='all'?!active&&!q:k==='price'?price===5000:k==='range'?range===100:k==='scooter'?type==='Scooter':k==='removable'?removable==='yes':license===k;b.setAttribute('aria-pressed',String(on))});
  motoEl('results-count').textContent=(window.motoRankingActive?'Ranking · ':'')+filtered.length+' '+(filtered.length===1?'moto':'motos')
-     +(license === 'B' ? ' · Para motos A1, permiso B con más de 3 años en España' : '');
+     +(license === 'B' ? ' · Ciclomotores AM con B · Motos A1 con B de más de 3 años en España' : '');
  motoEl('cars-grid').innerHTML=filtered.length?'<div class="catalogue-batch">'+filtered.map((m,i)=>{
  const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');const rankingValue=sort==='priceAsc'?m.priceEur?.toLocaleString('es-ES')+' €':sort==='rangeDesc'?(motoMax(m, 'rangeKm') < 0 ? '—' : motoMax(m, 'rangeKm')+' km'):sort==='powerDesc'?m.peakPowerKw+' kW':sort==='speedDesc'?m.topSpeedKmh+' km/h':sort==='batteryDesc'?(motoMax(m, 'batteryKwh') < 0 ? '—' : motoMax(m, 'batteryKwh')+' kWh'):sort==='accelerationAsc'?(m.accel0050Sec==null?'—':m.accel0050Sec+' s'):'';
  const priceText=motoStat(m, 'priceEur', '€', 'Por verificar');
@@ -135,9 +141,10 @@ if (m.versions) {
 
 if(m.warranty)car.warranty=m.warranty;
 car.tech=car.tech.map(row=>row[0]==='Carnet'?['Carnet mínimo',minimumMotoLicense(m),'id-card']:row);
-if (minimumMotoLicense(m) === 'A1' && m.licenses.includes('B')) {
+const carLicense = motoCarLicense(m);
+if (carLicense) {
     const licenseIndex = car.tech.findIndex(([label]) => label === 'Carnet mínimo');
-    car.tech.splice(licenseIndex + 1, 0, ['También con carnet B', 'Más de 3 años de antigüedad · España', 'id-card']);
+    car.tech.splice(licenseIndex + 1, 0, ['También con carnet B', carLicense, 'id-card']);
 }
 const trimsHtml=car.trims.map(trim=>`<div class="border border-slate-200 rounded-2xl p-5 bg-white"><div class="text-xs text-blue-600 font-extrabold uppercase">${trim.name}</div><div class="text-xl font-black mt-1">${trim.price}</div><div class="text-[10px] text-slate-400">IVA incluido · Sin ayudas</div><div class="grid grid-cols-2 gap-3 mt-5 text-sm">${[['Batería',trim.battery],['Autonomía',trim.range],['Potencia',trim.power],['0–50 km/h',trim.accel]].filter(([, value]) => value).map(([k,v])=>'<div><span class="text-slate-400 text-xs block">'+k+'</span><strong>'+v+'</strong></div>').join('')}</div>${trim.source ? `<a class="text-xs font-bold text-blue-600 mt-4 inline-block" href="${trim.source}" target="_blank" rel="noopener noreferrer">Ficha oficial ↗</a>` : ''}</div>`).join('');
 const colorsHtml=(m.colorSwatches||(m.brand==='Silence'&&m.model==='S01'?[['Blanco','#f5f5f3'],['Negro','#181818'],['Rojo','#a41f35']]:m.brand==='BMW'?[['Light White','#f5f5f3'],['Gravity Blue','#54637a'],['Spacesilver','#a9adb3']]:[['Limited Edition','#444444']])).map(([name,hex])=>`<span class="inline-flex items-center gap-3 text-sm font-medium text-slate-700"><span class="w-8 h-8 rounded-full border border-slate-300 shadow-sm" style="background:${hex}"></span>${name}</span>`).join('');
@@ -508,7 +515,7 @@ function renderMotoCompare(){
 function openCompareModal(){
  if(motoCompareSelected.size<2)return;
  const models=[...motoCompareSelected].map(key=>motorcycles.find(m=>m.brand+'|'+m.model===key)).filter(Boolean);
- const fields=[['Precio',m=>motoStat(m, 'priceEur', '€')],['Autonomía',m=>motoStat(m, 'rangeKm', 'km')],['Batería',m=>motoStat(m, 'batteryKwh', 'kWh')],['Potencia nominal',m=>m.powerKw==null?'No publicado':m.powerKw+' kW'],['Potencia máxima',m=>m.peakPowerKw==null?'No publicado':m.peakPowerKw+' kW'],['Velocidad máxima',m=>m.topSpeedKmh==null?'No publicado':m.topSpeedKmh+' km/h'],['Batería extraíble',m=>m.removableBattery==null?'Por verificar':m.removableBattery?'Sí':'No'],['Carnet mínimo',minimumMotoLicense],['Peso',m=>m.weightKg?m.weightKg+' kg':'Por verificar'],['Carga',m=>m.brand==='Silence'&&m.model==='S01'?'7–9 h · batería intercambiable':m.brand==='BMW'?(m.model==='CE 02'?m.chargeText:'AC 2,3 kW · opc. 6,9 kW'):m.brand==='Zero'?'AC 6,6 kW · opc. 12,6 kW':m.chargeText||'Por verificar'],['Garantía',m=>m.warranty?[m.warranty.vehicle,m.warranty.battery].join(' · '):m.brand==='Silence'&&m.model==='S01'?'Consultar fabricante':m.brand==='BMW'?(m.model==='CE 02'?'Consultar condiciones de la unidad':'Moto 5 años · batería 5 años/40.000 km'):m.brand==='Zero'?'5 años · km ilimitados':m.guarantee||'Por verificar']];
+ const fields=[['Precio',m=>motoStat(m, 'priceEur', '€')],['Autonomía',m=>motoStat(m, 'rangeKm', 'km')],['Batería',m=>motoStat(m, 'batteryKwh', 'kWh')],['Potencia nominal',m=>m.powerKw==null?'No publicado':m.powerKw+' kW'],['Potencia máxima',m=>m.peakPowerKw==null?'No publicado':m.peakPowerKw+' kW'],['Velocidad máxima',m=>m.topSpeedKmh==null?'No publicado':m.topSpeedKmh+' km/h'],['Batería extraíble',m=>m.removableBattery==null?'Por verificar':m.removableBattery?'Sí':'No'],['Carnet mínimo',minimumMotoLicense],['También con carnet B',m=>motoCarLicense(m)||'—'],['Peso',m=>m.weightKg?m.weightKg+' kg':'Por verificar'],['Carga',m=>m.brand==='Silence'&&m.model==='S01'?'7–9 h · batería intercambiable':m.brand==='BMW'?(m.model==='CE 02'?m.chargeText:'AC 2,3 kW · opc. 6,9 kW'):m.brand==='Zero'?'AC 6,6 kW · opc. 12,6 kW':m.chargeText||'Por verificar'],['Garantía',m=>m.warranty?[m.warranty.vehicle,m.warranty.battery].join(' · '):m.brand==='Silence'&&m.model==='S01'?'Consultar fabricante':m.brand==='BMW'?(m.model==='CE 02'?'Consultar condiciones de la unidad':'Moto 5 años · batería 5 años/40.000 km'):m.brand==='Zero'?'5 años · km ilimitados':m.guarantee||'Por verificar']];
  const cell=(value,head=false)=>'<'+(head?'th':'td')+' class="px-4 py-4 text-left border-b border-slate-200 min-w-[150px]">'+(value??'Por verificar')+'</'+(head?'th':'td')+'>';
  const bestRules={'Precio':{get:m=>m.versions ? null : m.priceEur,low:true},'Autonomía':{get:m=>m.versions ? null : m.rangeKm},'Batería':{get:m=>m.versions ? null : m.batteryKwh},'Potencia nominal':{get:m=>m.powerKw},'Potencia máxima':{get:m=>m.peakPowerKw},'Velocidad máxima':{get:m=>m.topSpeedKmh},'Peso':{get:m=>m.weightKg,low:true}};
  const bestBadge='<span class="inline-flex ml-2 px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 text-[9px] font-extrabold uppercase tracking-wide">Mejor</span>';
