@@ -1,0 +1,68 @@
+.catalogue-intro.moto-brand-profile {
+    display: block;
+    text-align: left;
+    color: #20313d;
+    padding-block: 12px 0;
+}
+
+.moto-brand-profile .moto-brand-link {
+    color: #2356d6;
+    font-size: .875rem;
+    font-weight: 700;
+}
+
+.moto-brand-profile .moto-brand-hero {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 4vw, 30px);
+    margin-block: 20px;
+}
+
+.moto-brand-profile .moto-brand-hero img {
+    width: clamp(82px, 18vw, 140px);
+    height: auto;
+    max-height: 95px;
+    object-fit: contain;
+}
+
+.moto-brand-profile .moto-brand-hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    text-align: left;
+}
+
+.moto-brand-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-block: 20px;
+}
+
+.moto-brand-facts div {
+    background: #f7faff;
+    border: 1px solid #dce5f0;
+    border-radius: 15px;
+    padding: 16px 20px;
+}
+
+.moto-brand-facts dt {
+    color: #607186;
+    font-size: .875rem;
+}
+
+.moto-brand-facts dd {
+    margin: 4px 0 0;
+    font-weight: 800;
+}
+
+.moto-brand-profile h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-block: 22px 6px;
+}
+
+.moto-brand-profile p {
+    margin: 0 0 6px;
+    line-height: 1.6;
+}
