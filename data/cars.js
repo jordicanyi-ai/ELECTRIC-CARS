@@ -15230,7 +15230,40 @@ const carsData = [
         "accel": "Pendiente de confirmar"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#ECEDEA"
+      },
+      {
+        "name": "Azul Dusk",
+        "hex": "#344D67"
+      },
+      {
+        "name": "Azul claro metalizado",
+        "hex": "#769DB5"
+      },
+      {
+        "name": "Plateado metalizado",
+        "hex": "#B9BEC4"
+      },
+      {
+        "name": "Gris Cemento",
+        "hex": "#929592"
+      },
+      {
+        "name": "Gris Manganeso",
+        "hex": "#55585D"
+      },
+      {
+        "name": "Negro Noche",
+        "hex": "#191B20"
+      },
+      {
+        "name": "Rojo",
+        "hex": "#B32635"
+      }
+    ],
     "images": [
       "img/cars/vw-id4/vw-id4_01.webp",
       "img/cars/vw-id4/vw-id4_02.webp",
@@ -15257,11 +15290,13 @@ const carsData = [
     "brandUrl": "https://www.volkswagen.es/es/modelos/id4.html",
     "sources": [
       "https://www.volkswagen.es/es/configurador.html/__app/id4.app",
-      "https://www.motor.es/noticias/precio-volkswagen-id4-2026-2025109585.html"
+      "https://www.motor.es/noticias/precio-volkswagen-id4-2026-2025109585.html",
+      "https://www.volkswagen.es/idhub/content/dam/onehub_pkw/importers/es/modelos/catalogos/catalogo_id4.pdf",
+      "https://www.carwow.es/volkswagen/id4/colores"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Colores, aceleración, carga por versión y tarifa vigente pendientes. Capacidad GTX discrepante entre página comercial y configurador."
+      "status": "Colores habituales de España según referencias aportadas; muestras aproximadas y disponibilidad según acabado. Tarifa vigente, aceleración y carga por versión pendientes."
     }
   }
 ];
