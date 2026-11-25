@@ -15303,5 +15303,137 @@ const carsData = [
       "checkedAt": "25/11/2026",
       "status": "Datos de gama 2026 y colores aportados por el usuario; PVP y especificaciones pendientes de contraste independiente. Precio Pro Black 4Motion pendiente."
     }
+  },
+  {
+    "id": 93,
+    "brand": "Volkswagen",
+    "model": "ID.5",
+    "type": "SUV",
+    "launchYear": 2022,
+    "seats": 5,
+    "priceMin": 47998,
+    "priceMax": 61498,
+    "priceText": "47.998–61.498 €",
+    "rangeText": "527–554 km",
+    "minRangeVal": 527,
+    "maxRangeVal": 554,
+    "batteryText": "77–79 kWh útiles",
+    "batteryType": "NMC",
+    "powerText": "286–340 CV",
+    "trunk": 549,
+    "frunkText": "No disponible",
+    "acceleration": "5,4–6,7 s",
+    "dimensions": "4.599 × 1.852 × 1.613–1.618 mm",
+    "charging": "135–185 kW CC · 11 kW CA (referencia)",
+    "description": "El Volkswagen ID.5 combina la amplitud de un SUV eléctrico con una silueta coupé de líneas fluidas y un portón trasero inclinado. Su habitáculo de cinco plazas y su maletero de 549 litros ofrecen una solución práctica para el uso familiar. La gama de referencia incluye versiones Pro y Pro Black de 286 CV, junto al GTX de 340 CV con tracción integral. La autonomía alcanza 554 kilómetros según versión. Se encuentran unidades nuevas en stock, aunque conviene consultar la disponibilidad de cada acabado y la posibilidad de realizar pedidos de fábrica.",
+    "highlights": [
+      "Carrocería SUV coupé",
+      "549 litros de maletero y 1.561 con asientos abatidos",
+      "Autonomía de referencia de 554 km",
+      "Versión GTX con tracción integral",
+      "Cinco plazas",
+      "Garantía de batería de 8 años o 160.000 km"
+    ],
+    "considerations": [
+      "Disponibilidad de pedidos de fábrica pendiente de confirmar",
+      "Precios de referencia, no ofertas vigentes verificadas",
+      "Sin maletero delantero",
+      "La caída del techo puede limitar la altura trasera"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes",
+      "Uso diario"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifas de referencia de la gama, pendientes de comprobación independiente y vigencia."
+    },
+    "chargingInfo": {
+      "dcMax": "135–185 kW (referencia; confirmar por versión)",
+      "acMax": "11 kW",
+      "fastChargeText": "Pendiente por versión",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años sin límite de kilometraje",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 %",
+      "paint": "3 años",
+      "corrosion": "12 años"
+    },
+    "trims": [
+      {
+        "name": "Pro",
+        "priceValue": 47998,
+        "price": "47.998 €",
+        "rangeValue": 554,
+        "range": "554 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,7 s",
+        "charging": "Pendiente de confirmar por versión"
+      },
+      {
+        "name": "Pro Black",
+        "priceValue": 53088,
+        "price": "53.088 €",
+        "rangeValue": 549,
+        "range": "549 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "6,7 s",
+        "charging": "Pendiente de confirmar por versión"
+      },
+      {
+        "name": "GTX",
+        "priceValue": 61498,
+        "price": "61.498 €",
+        "rangeValue": 527,
+        "range": "527 km WLTP",
+        "battery": "79 kWh útiles (referencia)",
+        "batteryType": "NMC",
+        "power": "340 CV",
+        "accel": "5,4 s",
+        "charging": "Pendiente de confirmar por versión"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-id5/vw-id5_01.webp",
+      "img/cars/vw-id5/vw-id5_02.webp",
+      "img/cars/vw-id5/vw-id5_03.webp",
+      "img/cars/vw-id5/vw-id5_04.webp",
+      "img/cars/vw-id5/vw-id5_05.webp",
+      "img/cars/vw-id5/vw-id5_06.webp",
+      "img/cars/vw-id5/vw-id5_07.webp",
+      "img/cars/vw-id5/vw-id5_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volkswagen+ID.5",
+        "thumb": "img/cars/vw-id5/vw-id5_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Fabricante alemán de automóviles."
+    },
+    "brandUrl": "https://www.volkswagen.es/es/modelos/stock/id5.html",
+    "sources": [
+      "https://www.motor.es/volkswagen/id5/medidas",
+      "https://www.volkswagen.es/es/clientes/beneficios-volkswagen/garantia-fabricante.html",
+      "https://www.volkswagen.es/es/modelos/stock/id5.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Dimensiones, garantía y disponibilidad en stock según referencias aportadas. Colores, tarifas vigentes, carga por versión y pedidos de fábrica pendientes de contraste."
+    }
   }
 ];
