@@ -58,7 +58,8 @@ function filterCars(){
  const active=Number(Boolean(type))+Number(Boolean(license))+Number(Boolean(removable))+Number(Boolean(power))+Number(Boolean(speed))+Number(Boolean(charge))+Number(Boolean(seats))+Number(Boolean(range))+Number(price<30000);
  const badge=motoEl('active-filter-count');badge.hidden=!active;badge.textContent=active;
  document.querySelectorAll('[data-moto-quick]').forEach(b=>{const k=b.dataset.motoQuick;const on=k==='all'?!active&&!q:k==='price'?price===5000:k==='range'?range===100:k==='scooter'?type==='Scooter':k==='removable'?removable==='yes':license===k;b.setAttribute('aria-pressed',String(on))});
- motoEl('results-count').textContent=(window.motoRankingActive?'Ranking · ':'')+filtered.length+' '+(filtered.length===1?'moto':'motos');
+ motoEl('results-count').textContent=(window.motoRankingActive?'Ranking · ':'')+filtered.length+' '+(filtered.length===1?'moto':'motos')
+     +(license === 'B' ? ' · Para motos A1, permiso B con más de 3 años en España' : '');
  motoEl('cars-grid').innerHTML=filtered.length?'<div class="catalogue-batch">'+filtered.map((m,i)=>{
  const name=(m.brand+' '+m.model).toLocaleUpperCase('es-ES');const rankingValue=sort==='priceAsc'?m.priceEur?.toLocaleString('es-ES')+' €':sort==='rangeDesc'?(motoMax(m, 'rangeKm') < 0 ? '—' : motoMax(m, 'rangeKm')+' km'):sort==='powerDesc'?m.peakPowerKw+' kW':sort==='speedDesc'?m.topSpeedKmh+' km/h':sort==='batteryDesc'?(motoMax(m, 'batteryKwh') < 0 ? '—' : motoMax(m, 'batteryKwh')+' kWh'):sort==='accelerationAsc'?(m.accel0050Sec==null?'—':m.accel0050Sec+' s'):'';
  const priceText=motoStat(m, 'priceEur', '€', 'Por verificar');
@@ -134,6 +135,10 @@ if (m.versions) {
 
 if(m.warranty)car.warranty=m.warranty;
 car.tech=car.tech.map(row=>row[0]==='Carnet'?['Carnet mínimo',minimumMotoLicense(m),'id-card']:row);
+if (minimumMotoLicense(m) === 'A1' && m.licenses.includes('B')) {
+    const licenseIndex = car.tech.findIndex(([label]) => label === 'Carnet mínimo');
+    car.tech.splice(licenseIndex + 1, 0, ['También con carnet B', 'Más de 3 años de antigüedad · España', 'id-card']);
+}
 const trimsHtml=car.trims.map(trim=>`<div class="border border-slate-200 rounded-2xl p-5 bg-white"><div class="text-xs text-blue-600 font-extrabold uppercase">${trim.name}</div><div class="text-xl font-black mt-1">${trim.price}</div><div class="text-[10px] text-slate-400">IVA incluido · Sin ayudas</div><div class="grid grid-cols-2 gap-3 mt-5 text-sm">${[['Batería',trim.battery],['Autonomía',trim.range],['Potencia',trim.power],['0–50 km/h',trim.accel]].filter(([, value]) => value).map(([k,v])=>'<div><span class="text-slate-400 text-xs block">'+k+'</span><strong>'+v+'</strong></div>').join('')}</div>${trim.source ? `<a class="text-xs font-bold text-blue-600 mt-4 inline-block" href="${trim.source}" target="_blank" rel="noopener noreferrer">Ficha oficial ↗</a>` : ''}</div>`).join('');
 const colorsHtml=(m.colorSwatches||(m.brand==='Silence'&&m.model==='S01'?[['Blanco','#f5f5f3'],['Negro','#181818'],['Rojo','#a41f35']]:m.brand==='BMW'?[['Light White','#f5f5f3'],['Gravity Blue','#54637a'],['Spacesilver','#a9adb3']]:[['Limited Edition','#444444']])).map(([name,hex])=>`<span class="inline-flex items-center gap-3 text-sm font-medium text-slate-700"><span class="w-8 h-8 rounded-full border border-slate-300 shadow-sm" style="background:${hex}"></span>${name}</span>`).join('');
 const galleryHtml=car.images.map((img,index)=>`<button type="button" onclick="openMotoLightbox(${index})" aria-label="Ampliar fotografía ${index+1}" class="block w-full min-w-0 text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group"><img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full ${index<3?'object-contain':'object-cover'} group-hover:scale-105 transition duration-500"></button>`).join('');
