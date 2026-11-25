@@ -619,7 +619,12 @@ function showMotoSales(which){
  const models=data?.models;
  if(!Array.isArray(models)||!models.length){box.innerHTML='<p class="rounded-xl bg-slate-50 p-5 text-slate-600 text-sm">Datos oficiales de matriculaciones de motos eléctricas pendientes de incorporar. No se muestran cifras sin verificar.</p>';return;}
  const thumbnails={'SILENCE S01':'/img/ranking/motos/silence-s01-miniatura.webp','SILENCE S02':'/img/ranking/motos/silence-s02-miniatura.webp','STARK VARG':'/img/ranking/motos/stark-varg-miniatura.webp','VMOTO CITI':'/img/ranking/motos/vmoto-citi-miniatura.webp','SILENCE S01+':'/img/ranking/motos/silence-s01-plus-miniatura.webp','EFUN LION':'/img/ranking/motos/efun-lion-miniatura.webp'};
- box.innerHTML=models.map((m,i)=>{const name=String(m.model).replace(/[&<>"]/g,'');const thumb=thumbnails[name.toUpperCase()];return '<div class="flex items-center gap-3 sm:gap-4 rounded-xl border border-slate-200 p-3 sm:p-4 mb-2"><strong class="text-xl text-blue-600 w-8 shrink-0">'+(i+1)+'</strong>'+(thumb?'<img src="'+thumb+'" alt="'+name+'" loading="lazy" class="w-24 sm:w-36 h-16 sm:h-20 object-contain shrink-0">':'')+'<span class="font-bold flex-1">'+name+'</span><strong class="whitespace-nowrap">'+Number(m.units).toLocaleString('es-ES')+' uds.</strong></div>'}).join('');
+ const findRankedMoto=name=>motorcycles.find(item=>(item.rankingName||item.brand+' '+item.model).toUpperCase()===name.toUpperCase());
+ box.innerHTML=models.map((m,i)=>{const name=String(m.model).replace(/[&<>"]/g,'');const entry=findRankedMoto(name);const thumb=thumbnails[name.toUpperCase()]||entry?.image;const tag=entry?'button':'div';return '<'+tag+(entry?' type="button" data-ranking-moto="'+i+'"':'')+' class="flex items-center gap-3 sm:gap-4 rounded-xl border border-slate-200 p-3 sm:p-4 mb-2 w-full text-left"><strong class="text-xl text-blue-600 w-8 shrink-0">'+(i+1)+'</strong>'+(thumb?'<img src="'+thumb+'" alt="'+name+'" loading="lazy" class="w-24 sm:w-36 h-16 sm:h-20 object-contain shrink-0">':'')+'<span class="font-bold flex-1">'+name+'</span><strong class="whitespace-nowrap">'+Number(m.units).toLocaleString('es-ES')+' uds.</strong></'+tag+'>'}).join('');
+ box.querySelectorAll('[data-ranking-moto]').forEach(button=>button.addEventListener('click',()=>{
+  const entry=findRankedMoto(models[Number(button.dataset.rankingMoto)].model);
+  if(entry)openMotoModal(encodeURIComponent(entry.brand+'|'+entry.model));
+ }));
 }
 document.addEventListener('DOMContentLoaded',()=>showMotoSales('monthly'));
 </script>
