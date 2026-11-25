@@ -14295,13 +14295,13 @@ const carsData = [
     "minRangeVal": 477,
     "maxRangeVal": 575,
     "batteryText": "70–82 kWh",
-    "batteryType": "Pendiente de confirmar por versión",
+    "batteryType": "NMC",
     "powerText": "238–408 CV",
     "trunk": 536,
     "frunk": 31,
     "acceleration": "4,8–7,3 s",
     "dimensions": "4.440 × 1.873 × 1.647 mm",
-    "charging": "11 kW CA · 26–28 min (10–80 % en estación CC de 200 kW)",
+    "charging": "180–205 kW CC · 11 kW CA",
     "description": "SUV eléctrico compacto de cinco plazas.",
     "highlights": [
       "Maletero delantero de 31 litros",
@@ -14321,7 +14321,7 @@ const carsData = [
       "source": "https://www.volvocars.com/es/cars/ex40-electric/"
     },
     "chargingInfo": {
-      "dcMax": "No confirmado; ensayo oficial en estación de 200 kW",
+      "dcMax": "205 kW",
       "acMax": "11 kW",
       "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
@@ -14338,39 +14338,72 @@ const carsData = [
         "price": "46.950 €",
         "priceValue": 46950,
         "battery": "70 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "238 CV",
         "range": "477 km WLTP",
         "rangeValue": 477,
         "accel": "7,3 s",
-        "charging": "11 kW CA · 26 min (10–80 % en estación CC de 200 kW)"
+        "charging": "180 kW CC · 11 kW CA"
       },
       {
         "name": "Single Motor Extended Range",
         "price": "51.000 €",
         "priceValue": 51000,
         "battery": "82 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "252 CV",
         "range": "575 km WLTP",
         "rangeValue": 575,
         "accel": "7,3 s",
-        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)"
+        "charging": "205 kW CC · 11 kW CA"
       },
       {
         "name": "Twin Motor",
         "price": "56.800 €",
         "priceValue": 56800,
         "battery": "82 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "408 CV",
         "range": "538 km WLTP",
         "accel": "4,8 s",
-        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)",
+        "charging": "205 kW CC · 11 kW CA",
         "rangeValue": 538
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Vapour Grey",
+        "hex": "#777B7C"
+      },
+      {
+        "name": "Ice White",
+        "hex": "#F4F4F4"
+      },
+      {
+        "name": "Crystal White",
+        "hex": "#E9E8E2"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Denim Blue",
+        "hex": "#43566B"
+      },
+      {
+        "name": "Aurora Silver",
+        "hex": "#B9B8B5"
+      },
+      {
+        "name": "Forest Lake",
+        "hex": "#58665C"
+      },
+      {
+        "name": "Heather Bronze",
+        "hex": "#927D70"
+      }
+    ],
     "images": [
       "img/cars/volvo-ex40/volvo-ex40_01.webp",
       "img/cars/volvo-ex40/volvo-ex40_02.webp",
@@ -14397,7 +14430,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ex40-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Especificaciones de Volvo España consultadas 25/11/2026; autonomía según tabla de motores, no estimaciones preliminares MY2027.5. Química exacta y potencia pico CC pendientes de confirmar. Colores EX40 pendientes.",
+      "status": "Autonomía según tabla de motores Volvo España, no estimaciones preliminares MY2027.5. Potencia CC según documentación europea Volvo MY2027; química NMC según EV Database. Colores oficiales con muestras aproximadas.",
       "source": "https://www.volvocars.com/es/cars/ex40-electric/"
     }
   },
@@ -14415,13 +14448,13 @@ const carsData = [
     "minRangeVal": 486,
     "maxRangeVal": 585,
     "batteryText": "70–82 kWh",
-    "batteryType": "Pendiente de confirmar por versión",
+    "batteryType": "NMC",
     "powerText": "238–408 CV",
     "trunk": 480,
     "frunk": 31,
     "acceleration": "4,7–7,3 s",
     "dimensions": "4.440 × 1.873 × 1.591 mm",
-    "charging": "11 kW CA · 26–28 min (10–80 % en estación CC de 200 kW)",
+    "charging": "180–205 kW CC · 11 kW CA",
     "description": "SUV coupé eléctrico de cinco plazas.",
     "highlights": [
       "Maletero delantero de 31 litros",
@@ -14441,7 +14474,7 @@ const carsData = [
       "source": "https://www.volvocars.com/es/cars/ec40-electric/"
     },
     "chargingInfo": {
-      "dcMax": "No confirmado; ensayo oficial en estación de 200 kW",
+      "dcMax": "205 kW",
       "acMax": "11 kW",
       "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
@@ -14458,35 +14491,35 @@ const carsData = [
         "price": "50.450 €",
         "priceValue": 50450,
         "battery": "70 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "238 CV",
         "range": "486 km WLTP",
         "rangeValue": 486,
         "accel": "7,3 s",
-        "charging": "11 kW CA · 26 min (10–80 % en estación CC de 200 kW)"
+        "charging": "180 kW CC · 11 kW CA"
       },
       {
         "name": "Single Motor Extended Range",
         "price": "52.900 €",
         "priceValue": 52900,
         "battery": "82 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "252 CV",
         "range": "585 km WLTP",
         "rangeValue": 585,
         "accel": "7,3 s",
-        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)"
+        "charging": "205 kW CC · 11 kW CA"
       },
       {
         "name": "Twin Motor",
         "price": "58.700 €",
         "priceValue": 58700,
         "battery": "82 kWh",
-        "batteryType": "Pendiente de confirmar",
+        "batteryType": "NMC",
         "power": "408 CV",
         "range": "551 km WLTP",
         "accel": "4,7 s",
-        "charging": "11 kW CA · 28 min (10–80 % en estación CC de 200 kW)",
+        "charging": "205 kW CC · 11 kW CA",
         "rangeValue": 551
       }
     ],
@@ -14550,7 +14583,7 @@ const carsData = [
     "brandUrl": "https://www.volvocars.com/es/cars/ec40-electric/",
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Especificaciones de Volvo España consultadas 25/11/2026; autonomía según tabla de motores, no estimaciones preliminares MY2027.5. Química exacta y potencia pico CC pendientes de confirmar. Colores con muestras aproximadas.",
+      "status": "Autonomía según tabla de motores Volvo España, no estimaciones preliminares MY2027.5. Potencia CC según documentación europea Volvo MY2027; química NMC según EV Database. Colores oficiales con muestras aproximadas.",
       "source": "https://www.volvocars.com/es/cars/ec40-electric/"
     }
   }
