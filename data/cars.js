@@ -15115,5 +15115,153 @@ const carsData = [
       "status": "MY2027 según Volvo España. Autonomías preliminares. Garantía, química y potencia máxima CC pendientes de comprobación. Colores oficiales con muestras aproximadas.",
       "source": "https://www.volvocars.com/es/cars/es90-electric/specifications/"
     }
+  },
+  {
+    "id": 92,
+    "brand": "Volkswagen",
+    "model": "ID.4",
+    "type": "SUV",
+    "launchYear": 2020,
+    "seats": 5,
+    "priceMin": 46544,
+    "priceMax": 59114,
+    "priceText": "46.544–59.114 €",
+    "rangeText": "527–563 km",
+    "minRangeVal": 527,
+    "maxRangeVal": 563,
+    "batteryText": "77 kWh útiles (configurador)",
+    "batteryType": "NMC",
+    "powerText": "286–340 CV",
+    "trunk": 543,
+    "frunkText": "No disponible",
+    "acceleration": "Consultar versión",
+    "dimensions": "4.584 × 1.852 × 1.612 mm",
+    "charging": "11 kW CA · desde 145 kW CC según versión",
+    "description": "El Volkswagen ID.4 es un SUV eléctrico familiar de cinco plazas que combina una carrocería de líneas limpias con un habitáculo amplio y un maletero de 543 litros. La gama ofrece versiones de propulsión trasera y tracción integral 4Motion, con motores de 286 a 340 CV. Su autonomía homologada alcanza 563 kilómetros según el configurador español. Los acabados Pro, Pro Black y GTX permiten elegir entre un enfoque funcional, un equipamiento más refinado y una orientación deportiva.",
+    "highlights": [
+      "563 km WLTP en versión Pro",
+      "Maletero de 543 litros",
+      "Tracción trasera o integral",
+      "Pantalla de 12,9 pulgadas",
+      "Acabado GTX de 340 CV",
+      "Asistentes de conducción y aparcamiento"
+    ],
+    "considerations": [
+      "Sin maletero delantero",
+      "Tarifas de referencia de agosto de 2025",
+      "Autonomía inferior en versiones integrales",
+      "Potencia de carga según versión"
+    ],
+    "idealFor": [
+      "Familias",
+      "Viajes",
+      "Uso diario"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Tarifas sin promociones publicadas en agosto de 2025 para gama 2026; vigencia actual pendiente de confirmar."
+    },
+    "chargingInfo": {
+      "dcMax": "145 kW Pro; resto pendiente de confirmar",
+      "acMax": "11 kW",
+      "fastChargeText": "Pendiente por versión",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años sin límite de kilómetros",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % (condiciones de garantía)"
+    },
+    "trims": [
+      {
+        "name": "Pro",
+        "priceValue": 46544,
+        "price": "46.544 €",
+        "rangeValue": 563,
+        "range": "563 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "Pendiente de confirmar"
+      },
+      {
+        "name": "Pro 4Motion",
+        "priceValue": 48454,
+        "price": "48.454 €",
+        "rangeValue": 551,
+        "range": "551 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "Pendiente de confirmar"
+      },
+      {
+        "name": "Pro Black",
+        "priceValue": 51764,
+        "price": "51.764 €",
+        "rangeValue": 555,
+        "range": "555 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "Pendiente de confirmar"
+      },
+      {
+        "name": "Pro Black 4Motion",
+        "priceValue": 53674,
+        "price": "53.674 €",
+        "rangeValue": 542,
+        "range": "542 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "286 CV",
+        "accel": "Pendiente de confirmar"
+      },
+      {
+        "name": "GTX",
+        "priceValue": 59114,
+        "price": "59.114 €",
+        "rangeValue": 527,
+        "range": "527 km WLTP",
+        "battery": "77 kWh útiles",
+        "batteryType": "NMC",
+        "power": "340 CV",
+        "accel": "Pendiente de confirmar"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/vw-id4/vw-id4_01.webp",
+      "img/cars/vw-id4/vw-id4_02.webp",
+      "img/cars/vw-id4/vw-id4_03.webp",
+      "img/cars/vw-id4/vw-id4_04.webp",
+      "img/cars/vw-id4/vw-id4_05.webp",
+      "img/cars/vw-id4/vw-id4_06.webp",
+      "img/cars/vw-id4/vw-id4_07.webp",
+      "img/cars/vw-id4/vw-id4_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Volkswagen+ID.4",
+        "thumb": "img/cars/vw-id4/vw-id4_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/volkswagen.svg",
+      "group": "Grupo Volkswagen",
+      "relation": "Marca del grupo",
+      "note": "Fabricante alemán de automóviles."
+    },
+    "brandUrl": "https://www.volkswagen.es/es/modelos/id4.html",
+    "sources": [
+      "https://www.volkswagen.es/es/configurador.html/__app/id4.app",
+      "https://www.motor.es/noticias/precio-volkswagen-id4-2026-2025109585.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Colores, aceleración, carga por versión y tarifa vigente pendientes. Capacidad GTX discrepante entre página comercial y configurador."
+    }
   }
 ];
