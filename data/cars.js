@@ -15324,7 +15324,7 @@ const carsData = [
     "frunkText": "No disponible",
     "acceleration": "5,4–6,7 s",
     "dimensions": "4.599 × 1.852 × 1.613–1.618 mm",
-    "charging": "135–185 kW CC · 11 kW CA (referencia)",
+    "charging": "135–175 kW CC · 11 kW CA",
     "description": "El Volkswagen ID.5 combina la amplitud de un SUV eléctrico con una silueta coupé de líneas fluidas y un portón trasero inclinado. Su habitáculo de cinco plazas y su maletero de 549 litros ofrecen una solución práctica para el uso familiar. La gama de referencia incluye versiones Pro y Pro Black de 286 CV, junto al GTX de 340 CV con tracción integral. La autonomía alcanza 554 kilómetros según versión. Se encuentran unidades nuevas en stock, aunque conviene consultar la disponibilidad de cada acabado y la posibilidad de realizar pedidos de fábrica.",
     "highlights": [
       "Carrocería SUV coupé",
@@ -15348,12 +15348,12 @@ const carsData = [
     "priceInfo": {
       "includesVat": true,
       "includesAid": false,
-      "note": "Tarifas de referencia de la gama, pendientes de comprobación independiente y vigencia."
+      "note": "PVP de referencia aportados para España 2026, sin campañas ni ayudas; pendientes de contraste independiente."
     },
     "chargingInfo": {
-      "dcMax": "135–185 kW (referencia; confirmar por versión)",
+      "dcMax": "135 kW Pro / 175 kW GTX",
       "acMax": "11 kW",
-      "fastChargeText": "Pendiente por versión",
+      "fastChargeText": "10–80 % en 26–28 min",
       "connector": "CCS2"
     },
     "warranty": {
@@ -15374,10 +15374,10 @@ const carsData = [
         "batteryType": "NMC",
         "power": "286 CV",
         "accel": "6,7 s",
-        "charging": "Pendiente de confirmar por versión"
+        "charging": "135 kW CC · 11 kW CA · 28 min (10–80 %)"
       },
       {
-        "name": "Pro Black",
+        "name": "Pro Más Black",
         "priceValue": 53088,
         "price": "53.088 €",
         "rangeValue": 549,
@@ -15386,7 +15386,7 @@ const carsData = [
         "batteryType": "NMC",
         "power": "286 CV",
         "accel": "6,7 s",
-        "charging": "Pendiente de confirmar por versión"
+        "charging": "135 kW CC · 11 kW CA · 28 min (10–80 %)"
       },
       {
         "name": "GTX",
@@ -15398,10 +15398,43 @@ const carsData = [
         "batteryType": "NMC",
         "power": "340 CV",
         "accel": "5,4 s",
-        "charging": "Pendiente de confirmar por versión"
+        "charging": "175 kW CC · 11 kW CA · 26–28 min (10–80 %)"
       }
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#ECEDEA"
+      },
+      {
+        "name": "Azul Dusk",
+        "hex": "#344D67"
+      },
+      {
+        "name": "Azul claro metalizado",
+        "hex": "#769DB5"
+      },
+      {
+        "name": "Gris Manganeso",
+        "hex": "#55585D"
+      },
+      {
+        "name": "Gris Cemento",
+        "hex": "#929592"
+      },
+      {
+        "name": "Negro Noche",
+        "hex": "#191B20"
+      },
+      {
+        "name": "Plateado metalizado",
+        "hex": "#B9BEC4"
+      },
+      {
+        "name": "Rojo",
+        "hex": "#B32635"
+      }
+    ],
     "images": [
       "img/cars/vw-id5/vw-id5_01.webp",
       "img/cars/vw-id5/vw-id5_02.webp",
@@ -15429,11 +15462,14 @@ const carsData = [
     "sources": [
       "https://www.motor.es/volkswagen/id5/medidas",
       "https://www.volkswagen.es/es/clientes/beneficios-volkswagen/garantia-fabricante.html",
-      "https://www.volkswagen.es/es/modelos/stock/id5.html"
+      "https://www.volkswagen.es/es/modelos/stock/id5.html",
+      "https://www.coches.net/s/volkswagen/id5/",
+      "https://exclusive.vwgroupretail.es/coches/nuevos-entrega-inmediata/todas-ciudades/volkswagen/id-5/",
+      "https://www.mcondevolkswagen.com/volkswagen-id5"
     ],
     "dataStatus": {
       "checkedAt": "25/11/2026",
-      "status": "Dimensiones, garantía y disponibilidad en stock según referencias aportadas. Colores, tarifas vigentes, carga por versión y pedidos de fábrica pendientes de contraste."
+      "status": "Colores habituales y carga por versión según datos aportados; muestras aproximadas. Techo en contraste vinculado al acabado. PVP, autonomía y aceleración pendientes de contraste independiente; pedidos de fábrica no confirmados."
     }
   }
 ];
