@@ -14137,5 +14137,147 @@ const carsData = [
       "source": "https://caetano.es/xpeng/precio/"
     },
     "frunk": 71
+  },
+  {
+    "id": 86,
+    "brand": "XPENG",
+    "model": "P7+",
+    "type": "Berlina",
+    "launchYear": 2026,
+    "seats": 5,
+    "priceMin": 45990,
+    "priceMax": 55990,
+    "priceText": "45.990–55.990 €",
+    "rangeText": "455–530 km",
+    "minRangeVal": 455,
+    "maxRangeVal": 530,
+    "batteryText": "61,7–74,9 kWh",
+    "batteryType": "LFP",
+    "powerText": "245–503 CV",
+    "trunk": 573,
+    "acceleration": "4,3–7,9 s",
+    "dimensions": "5,071 × 1,937 × 1,512 m",
+    "charging": "350–446 kW CC",
+    "description": "Berlina eléctrica de cinco plazas, plataforma de 800 V y tracción trasera o integral.",
+    "highlights": [
+      "Carga del 10 al 80 % en unos 12 minutos",
+      "Maletero de 573 litros (1.931 con asientos plegados)",
+      "Asientos con calefacción, ventilación y masaje"
+    ],
+    "considerations": [
+      "Longitud superior a cinco metros",
+      "Carga máxima requiere estación compatible",
+      "Aceleración Performance según Motor.es; confirmar ficha española"
+    ],
+    "idealFor": [
+      "Viajes largos",
+      "Familias que buscan espacio"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP Caetano noviembre 2026 con IVA, sin ofertas, ayudas ni matriculación.",
+      "source": "https://caetano.es/xpeng/precio/"
+    },
+    "chargingInfo": {
+      "dcMax": "446 kW",
+      "acMax": "Pendiente de verificar",
+      "fastChargeText": "10–80 % en unos 12 min",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "Pendiente de confirmar",
+      "battery": "Pendiente de confirmar",
+      "capacity": "Pendiente de confirmar"
+    },
+    "trims": [
+      {
+        "name": "RWD Standard Range",
+        "price": "45.990 €",
+        "priceValue": 45990,
+        "battery": "61,7 kWh",
+        "batteryType": "LFP",
+        "power": "245 CV",
+        "range": "455 km WLTP",
+        "rangeValue": 455,
+        "accel": "7,9 s",
+        "charging": "350 kW CC"
+      },
+      {
+        "name": "RWD Long Range",
+        "price": "49.990 €",
+        "priceValue": 49990,
+        "battery": "74,9 kWh",
+        "batteryType": "LFP",
+        "power": "313 CV",
+        "range": "530 km WLTP",
+        "rangeValue": 530,
+        "accel": "Pendiente de verificar",
+        "charging": "446 kW CC"
+      },
+      {
+        "name": "AWD Performance",
+        "price": "55.990 €",
+        "priceValue": 55990,
+        "battery": "74,9 kWh",
+        "batteryType": "LFP",
+        "power": "503 CV",
+        "range": "500 km WLTP",
+        "rangeValue": 500,
+        "accel": "4,3 s (Motor.es)",
+        "charging": "446 kW CC"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Arctic White",
+        "hex": "#F4F4F3"
+      },
+      {
+        "name": "Graphite Gray",
+        "hex": "#55595D"
+      },
+      {
+        "name": "Silver Frost",
+        "hex": "#C1C4C7"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#202124"
+      },
+      {
+        "name": "Stellar Purple",
+        "hex": "#645C78"
+      }
+    ],
+    "images": [
+      "img/cars/xpeng-p7+/xpeng-p7+_01.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_02.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_03.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_04.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_05.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_06.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_07.webp",
+      "img/cars/xpeng-p7+/xpeng-p7+_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del XPENG P7+ en YouTube",
+        "url": "https://www.youtube.com/results?search_query=XPENG+P7%2B+2026",
+        "thumb": "img/cars/xpeng-p7+/xpeng-p7+_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/XPeng.png",
+      "group": "XPeng Inc.",
+      "relation": "Fabricante",
+      "note": "XPENG es un fabricante chino de automóviles eléctricos especializado en tecnología, conectividad y sistemas de asistencia a la conducción."
+    },
+    "brandUrl": "https://www.xpeng-auto.es/p7",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "PVP y WLTP Caetano; colores exteriores según Motor.es y XPENG, muestras aproximadas. Garantía, frunk, carga CA y aceleración Long Range pendientes de confirmar.",
+      "source": "https://www.xpeng-auto.es/p7"
+    }
   }
 ];
