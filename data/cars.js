@@ -14302,7 +14302,7 @@ const carsData = [
     "acceleration": "4,8–7,3 s",
     "dimensions": "4.440 × 1.873 × 1.647 mm",
     "charging": "180–205 kW CC · 11 kW CA",
-    "description": "SUV eléctrico compacto de cinco plazas.",
+    "description": "El Volvo EX40 combina la elegancia de las líneas escandinavas con la robustez de un SUV compacto. Su diseño limpio, equilibrado y sofisticado transmite personalidad sin estridencias. Con 4,44 metros de longitud y cinco plazas, ofrece baterías de entre 70 y 82 kWh, potencias de 238 a 408 CV y una autonomía WLTP de hasta 575 kilómetros. Disponible con tracción trasera o integral, cuenta con un maletero delantero de 31 litros y carga rápida de hasta 205 kW. Su precio de referencia parte de 46.950 euros.",
     "highlights": [
       "Diseño escandinavo elegante y carrocería SUV de líneas equilibradas",
       "Autonomía WLTP de hasta 575 km en la versión Extended Range",
@@ -14461,7 +14461,7 @@ const carsData = [
     "acceleration": "4,7–7,3 s",
     "dimensions": "4.440 × 1.873 × 1.591 mm",
     "charging": "180–205 kW CC · 11 kW CA",
-    "description": "SUV coupé eléctrico de cinco plazas.",
+    "description": "Elegante, deportivo y con una marcada personalidad escandinava. El Volvo EC40 destaca por sus líneas fluidas y una silueta coupé que le aporta dinamismo y sofisticación. Con 4,44 metros de longitud y cinco plazas, ofrece baterías de entre 70 y 82 kWh, potencias de 238 a 408 CV y una autonomía WLTP de hasta 585 kilómetros. Su carrocería de techo descendente lo diferencia del EX40, con el que comparte tecnología y opciones de tracción trasera o integral. Admite carga rápida de hasta 205 kW y su precio de referencia parte de 50.450 euros.",
     "highlights": [
       "Diseño escandinavo elegante con silueta coupé deportiva",
       "Autonomía WLTP de hasta 585 km en la versión Extended Range",
