@@ -46,6 +46,10 @@ if(m.brand==='BMW'&&m.model==='CE 02'){
 
 if(m.description){
  const unit=(value,label)=>value==null?'No publicado':value+' '+label;
+ car.priceText=m.priceEur==null?'No publicado':m.priceEur.toLocaleString('es-ES')+' €';
+ car.rangeText=unit(m.rangeKm,'km');
+ car.powerText=unit(m.powerKw,'kW');
+ car.batteryText=unit(m.batteryKwh,'kWh');
  car.type=m.category;
  car.description=m.description;
  car.idealFor=[];
@@ -71,7 +75,7 @@ if(m.description){
 
 const trimsHtml=car.trims.map(trim=>`<div class="border border-slate-200 rounded-2xl p-5 bg-white"><div class="text-xs text-blue-600 font-extrabold uppercase">${trim.name}</div><div class="text-xl font-black mt-1">${trim.price}</div><div class="text-[10px] text-slate-400">IVA incluido · Sin ayudas</div><div class="grid grid-cols-2 gap-3 mt-5 text-sm">${[['Batería',trim.battery],['Autonomía',trim.range],['Potencia',trim.power],['0–50 km/h',trim.accel]].map(([k,v])=>'<div><span class="text-slate-400 text-xs block">'+k+'</span><strong>'+v+'</strong></div>').join('')}</div></div>`).join('');
 const colorsHtml=(m.colorSwatches||(m.brand==='Silence'?[['Blanco','#f5f5f3'],['Negro','#181818'],['Rojo','#a41f35']]:m.brand==='BMW'?[['Light White','#f5f5f3'],['Gravity Blue','#54637a'],['Spacesilver','#a9adb3']]:[['Limited Edition','#444444']])).map(([name,hex])=>`<span class="inline-flex items-center gap-3 text-sm font-medium text-slate-700"><span class="w-8 h-8 rounded-full border border-slate-300 shadow-sm" style="background:${hex}"></span>${name}</span>`).join('');
-const galleryHtml=car.images.map((img,index)=>`<button type="button" onclick="openMotoLightbox(${index})" aria-label="Ampliar fotografía ${index+1}" class="block w-full min-w-0 text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group"><img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></button>`).join('');
+const galleryHtml=car.images.map((img,index)=>`<button type="button" onclick="openMotoLightbox(${index})" aria-label="Ampliar fotografía ${index+1}" class="block w-full min-w-0 text-left rounded-2xl overflow-hidden bg-slate-100 aspect-[4/3] cursor-zoom-in group"><img src="${img}" alt="${car.brand} ${car.model}" class="w-full h-full ${index<3?'object-contain':'object-cover'} group-hover:scale-105 transition duration-500"></button>`).join('');
 const positives=car.highlights.map(item=>'<li class="flex gap-3"><span class="text-blue-600 font-black text-base leading-5">+</span><span>'+item+'</span></li>').join('');
 const considerations=car.considerations.map(item=>'<li class="flex gap-3"><span class="text-slate-400 font-black text-base leading-5">−</span><span>'+item+'</span></li>').join('');
 const idealFor=car.idealFor.map(item=>'<span class="bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full text-[11px] font-bold">'+item+'</span>').join('');
