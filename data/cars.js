@@ -13977,5 +13977,138 @@ const carsData = [
       }
     ],
     "colors": []
+  },
+  {
+    "id": 85,
+    "brand": "XPENG",
+    "model": "G9",
+    "type": "SUV grande",
+    "launchYear": 2024,
+    "seats": 5,
+    "priceMin": 60600,
+    "priceMax": 75600,
+    "priceText": "60.600–75.600 €",
+    "rangeText": "502–585 km",
+    "minRangeVal": 502,
+    "maxRangeVal": 585,
+    "batteryText": "79–93,1 kWh",
+    "batteryType": "LFP",
+    "powerText": "351–575 CV",
+    "trunk": 660,
+    "acceleration": "3,9–6,6 s",
+    "dimensions": "4,891 × 1,937 × 1,680 m",
+    "charging": "445–525 kW CC · 11 kW CA",
+    "description": "SUV eléctrico de cinco plazas con arquitectura de 800 V, tracción trasera o integral y carga ultrarrápida. Gama actualizada MY2026.",
+    "highlights": [
+      "Carga rápida de hasta 525 kW",
+      "Autonomía WLTP de 585 km en Long Range",
+      "Maletero de 660 litros"
+    ],
+    "considerations": [
+      "Dimensiones grandes para ciudad",
+      "La potencia máxima de carga requiere un cargador compatible"
+    ],
+    "idealFor": [
+      "Viajes largos",
+      "Familias que buscan espacio y confort"
+    ],
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "PVP de catálogo de Caetano España, noviembre de 2026, sin descuentos ni ayudas.",
+      "source": "https://caetano.es/xpeng/precio/"
+    },
+    "chargingInfo": {
+      "dcMax": "525 kW",
+      "acMax": "11 kW",
+      "fastChargeText": "10–80 % en 12 min en condiciones óptimas",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "5 años / 120.000 km",
+      "battery": "8 años / 160.000 km",
+      "capacity": "No especificado en la ficha oficial",
+      "source": "https://www.xpeng-auto.es/g6"
+    },
+    "trims": [
+      {
+        "name": "Standard Range",
+        "price": "60.600 €",
+        "priceValue": 60600,
+        "battery": "79 kWh",
+        "batteryType": "LFP",
+        "power": "351 CV",
+        "range": "502 km WLTP",
+        "rangeValue": 502,
+        "accel": "6,6 s",
+        "charging": "445 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Long Range",
+        "price": "64.600 €",
+        "priceValue": 64600,
+        "battery": "93,1 kWh",
+        "batteryType": "LFP",
+        "power": "351 CV",
+        "range": "585 km WLTP",
+        "rangeValue": 585,
+        "accel": "6,4 s",
+        "charging": "525 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Performance",
+        "price": "74.600 €",
+        "priceValue": 74600,
+        "battery": "93,1 kWh",
+        "batteryType": "LFP",
+        "power": "575 CV",
+        "range": "540 km WLTP",
+        "rangeValue": 540,
+        "accel": "3,9 s",
+        "charging": "525 kW CC · 11 kW CA"
+      },
+      {
+        "name": "Performance Black Edition",
+        "price": "75.600 €",
+        "priceValue": 75600,
+        "battery": "93,1 kWh",
+        "batteryType": "LFP",
+        "power": "575 CV",
+        "range": "540 km WLTP",
+        "rangeValue": 540,
+        "accel": "3,9 s",
+        "charging": "525 kW CC · 11 kW CA"
+      }
+    ],
+    "colors": [],
+    "images": [
+      "img/cars/xpeng-g9/xpeng-g9_01.webp",
+      "img/cars/xpeng-g9/xpeng-g9_02.webp",
+      "img/cars/xpeng-g9/xpeng-g9_03.webp",
+      "img/cars/xpeng-g9/xpeng-g9_04.webp",
+      "img/cars/xpeng-g9/xpeng-g9_05.webp",
+      "img/cars/xpeng-g9/xpeng-g9_06.webp",
+      "img/cars/xpeng-g9/xpeng-g9_07.webp",
+      "img/cars/xpeng-g9/xpeng-g9_08.webp"
+    ],
+    "videos": [
+      {
+        "title": "Buscar vídeos del XPENG G9 en YouTube",
+        "url": "https://www.youtube.com/results?search_query=XPENG+G9+2026",
+        "thumb": "img/cars/xpeng-g9/xpeng-g9_01.webp"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/XPeng.png",
+      "group": "XPeng Inc.",
+      "relation": "Fabricante",
+      "note": "XPENG es un fabricante chino de automóviles eléctricos especializado en tecnología, conectividad y sistemas de asistencia a la conducción."
+    },
+    "brandUrl": "https://www.xpeng-auto.es/g9",
+    "dataStatus": {
+      "checkedAt": "25/11/2026",
+      "status": "Precios de catálogo Caetano; colores y garantía específica pendientes de verificar. Aceleración Performance según ficha fabricante MY2026.",
+      "source": "https://caetano.es/xpeng/precio/"
+    }
   }
 ];
