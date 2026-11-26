@@ -6145,19 +6145,19 @@ const carsData = [
     "priceMin": 30182,
     "priceMax": 38000,
     "priceText": "30.182–38.000 €",
-    "rangeText": "418–425 km WLTP",
-    "minRangeVal": 418,
+    "rangeText": "370–425 km WLTP",
+    "minRangeVal": 370,
     "maxRangeVal": 425,
     "batteryText": "54 kWh",
     "batteryType": "NMC",
-    "powerText": "156 CV",
+    "powerText": "156–280 CV",
     "trunk": 309,
     "frunkText": "No disponible",
     "seats": 5,
-    "acceleration": "8,2 s",
+    "acceleration": "5,6–8,2 s",
     "dimensions": "4,075 × 1,768 × 1,435 m",
     "charging": "100 kW CC · 20–80 % en 27 min",
-    "description": "Utilitario eléctrico de cinco plazas con motor de 156 CV, batería NMC de 54 kWh (51 útiles) y 309 litros de maletero. La gama se organiza en Ypsilon, LX y HF Line, con una autonomía combinada de 418 a 425 km según configuración.",
+    "description": "Utilitario eléctrico de cinco plazas con motor de 156 CV, batería NMC de 54 kWh (51 útiles) y 309 litros de maletero. La gama se organiza en Ypsilon, LX y HF Line, con una autonomía combinada de 418 a 425 km según configuración. La variante deportiva HF desarrolla 280 CV, homologa 370 km WLTP y acelera de 0 a 100 km/h en 5,6 s.",
     "highlights": [
       "418–425 km de autonomía WLTP combinada",
       "Dos pantallas de 10,25 pulgadas y sistema S.A.L.A.",
@@ -6224,6 +6224,16 @@ const carsData = [
         "range": "421 km WLTP",
         "rangeValue": 421,
         "accel": "8,2 s"
+      },
+      {
+        "name": "HF 280 CV",
+        "price": "Por confirmar",
+        "priceValue": null,
+        "battery": "Por confirmar",
+        "range": "370 km WLTP",
+        "rangeValue": 370,
+        "power": "280 CV",
+        "accel": "5,6 s"
       }
     ],
     "colors": [
@@ -6298,7 +6308,8 @@ const carsData = [
     },
     "sources": [
       "https://www.lancia.es/modelos/ypsilon-elettrica",
-      "https://www.lancia.es/omni/configurador"
+      "https://www.lancia.es/omni/configurador",
+      "https://www.media.stellantis.com/es-es/lancia/press/lancia-ypsilon-hf-toda-la-emocion-de-los-rallies-en-un-automovil-de-serie-con-280-cv-de-potencia"
     ]
   },
   {
@@ -6972,8 +6983,8 @@ const carsData = [
     },
     "brandUrl": "https://www.opel.es/coches/gama-corsa/nuevo-corsa/resumen.html",
     "dataStatus": {
-      "status": "Revisado · gama 136–156 CV",
-      "checkedAt": "30/10/2026"
+      "status": "Gama actualizada con la versión GTi",
+      "checkedAt": "26/11/2026"
     },
     "sources": [
       "https://store.opel.es/selector/configurable/corsa-berlina",
@@ -7165,21 +7176,21 @@ const carsData = [
     "type": "Utilitario",
     "launchYear": 2023,
     "priceMin": 29270,
-    "priceMax": 35900,
-    "priceText": "29.270–35.900 €",
+    "priceMax": 41800,
+    "priceText": "29.270–41.800 €",
     "rangeText": "363–433 km WLTP",
     "minRangeVal": 363,
     "maxRangeVal": 433,
     "batteryText": "46,3–48,1 kWh útiles",
     "batteryType": "Iones de litio",
-    "powerText": "136–156 CV",
+    "powerText": "136–281 CV",
     "trunk": 309,
     "frunkText": "No disponible",
     "seats": 5,
-    "acceleration": "8,2–9,0 s",
+    "acceleration": "5,5 s (GTi) · 8,2–9,0 s",
     "dimensions": "4,055 × 1,745 × 1,430 m",
     "charging": "100 kW CC · 20–80 % en 25–27 min",
-    "description": "Utilitario eléctrico de cinco plazas con dos motores, de 136 y 156 CV, y autonomía de 363 a 433 km WLTP según versión. El diseño renovado incorpora la firma luminosa de tres garras y el i-Cockpit con volante compacto. La gama aquí recogida corresponde a las versiones convencionales; el GTi es una variante deportiva específica.",
+    "description": "Utilitario eléctrico de cinco plazas con dos motores, de 136 y 156 CV, y autonomía de 363 a 433 km WLTP según versión. El diseño renovado incorpora la firma luminosa de tres garras y el i-Cockpit con volante compacto. La gama incluye el GTi de 281 CV, con 375 km WLTP y un 0–100 km/h en 5,5 s.",
     "highlights": [
       "433 km WLTP en el Style de 156 CV",
       "Carga rápida de 100 kW y 20–80 % en 25–27 minutos",
@@ -7286,6 +7297,16 @@ const carsData = [
         "rangeValue": 424,
         "accel": "8,2 s",
         "charging": "100 kW CC"
+      },
+      {
+        "name": "GTi",
+        "price": "41.800 €",
+        "priceValue": 41800,
+        "battery": "Por confirmar",
+        "range": "375 km WLTP",
+        "rangeValue": 375,
+        "power": "281 CV",
+        "accel": "5,5 s"
       }
     ],
     "colors": [
@@ -7343,12 +7364,14 @@ const carsData = [
     },
     "brandUrl": "https://www.peugeot.es/gama/peugeot-208/electrico.html",
     "dataStatus": {
-      "status": "Revisado · gama 136–156 CV",
-      "checkedAt": "30/10/2026"
+      "status": "Gama actualizada con la versión GTi",
+      "checkedAt": "26/11/2026"
     },
     "sources": [
       "https://store.peugeot.es/selector/configurable/208-5-puertas",
-      "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf"
+      "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf",
+      "https://www.caranddriver.com/es/coches/novedades/a65074612/peugeot-208-gti-2026/",
+      "https://www.media.stellantis.com/es-es/peugeot/press/peugeot-e-208-gti-nace-una-leyenda?trk=article-ssr-frontend-pulse_little-text-block"
     ]
   },
   {
@@ -15824,6 +15847,2084 @@ const carsData = [
     "dataStatus": {
       "checkedAt": "25/11/2026",
       "status": "Ofertas comerciales de referencia aportadas en la revisión de noviembre de 2026; condiciones no verificadas. Autonomía y prestaciones heredadas de las motorizaciones equivalentes, pendientes de confirmar por acabado. Garantía específica pendiente."
+    }
+  },
+  {
+    "id": 96,
+    "brand": "Citroën",
+    "model": "ë-C4",
+    "type": "Compacto",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "354 / 416 km WLTP",
+    "minRangeVal": 354,
+    "maxRangeVal": 416,
+    "batteryText": "50 / 54 kWh",
+    "powerText": "136 / 156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Compacto de cinco puertas. Identificar cada versión como Comfort Range o Extended Range.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-C4"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/vehiculos-citroen/e-c4.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 97,
+    "brand": "Citroën",
+    "model": "ë-C4 X",
+    "type": "Berlina fastback",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "360 / 427 km WLTP",
+    "minRangeVal": 360,
+    "maxRangeVal": 427,
+    "batteryText": "50 / 54 kWh",
+    "powerText": "136 / 156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Berlina de cuatro puertas. Mantener ficha propia por carrocería y maletero.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-C4%20X"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/vehiculos-citroen/e-c4-x.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 98,
+    "brand": "Citroën",
+    "model": "ë-C5 Aircross",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": 5,
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "520 / 677 km WLTP",
+    "minRangeVal": 520,
+    "maxRangeVal": 677,
+    "batteryText": "73 / 97 kWh",
+    "powerText": "210 / 230 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "SUV familiar con autonomía estándar o extendida.",
+    "highlights": [],
+    "considerations": [
+      "39.990 € desde, precio anunciado. Validar condiciones antes de publicarlo."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-C5%20Aircross"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.media.stellantis.com/es-es/citroen/press/hybrid-plug-in-hybrid-o-electrico-la-electrificacion-sin-dudas-con-el-nuevo-citroen-c5-aircross"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 99,
+    "brand": "Citroën",
+    "model": "ë-SpaceTourer",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Transporte de pasajeros. Desglosar talla M/XL, plazas y autonomía homologada por configuración.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-SpaceTourer"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/vehiculos-citroen/e-spacetourer.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 100,
+    "brand": "Citroën",
+    "model": "ë-Berlingo Van",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "42 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "La ficha técnica desde octubre de 2026 recoge una talla M FIRST de 42 kWh. Confirmar el resto de variantes y sus autonomías combinadas por talla.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-Berlingo%20Van"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT_NUEVO_BERLINGO_VAN.pdf"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 101,
+    "brand": "Citroën",
+    "model": "ë-Jumpy",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "230 / 330 km WLTP",
+    "minRangeVal": 230,
+    "maxRangeVal": 330,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgoneta mediana en tallas M y XL. Valores de la ficha profesional enlazada. Contrastar con la gama del año-modelo actual antes de publicar.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-Jumpy"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://profesionales.citroen.es/vehiculos-citroen/jumpy-e-jumpy/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 102,
+    "brand": "Citroën",
+    "model": "ë-Jumper",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "424 km WLTP",
+    "minRangeVal": 424,
+    "maxRangeVal": 424,
+    "batteryText": "110 kWh",
+    "powerText": "270 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón grande. Datos de la gama de 110 kWh. Desglosar por longitud, altura y masa máxima.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20%C3%AB-Jumper"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/vehiculos-citroen/comerciales/e-jumper.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 103,
+    "brand": "Citroën",
+    "model": "Ami",
+    "type": "Cuadriciclo ligero",
+    "underReview": true,
+    "photoPending": true,
+    "seats": 2,
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "75 km WMTC",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "5,4 kWh",
+    "powerText": "8 (6 kW)",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Sin carga rápida",
+    "description": "Dos plazas, 45 km/h. Ami Outdoor es un acabado del cuadriciclo.",
+    "highlights": [],
+    "considerations": [
+      "9.090 € Ami Outdoor, tarifa de octubre de 2026. Pendiente de precio vigente."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Citro%C3%ABn%20Ami"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/citroen.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.citroen.es/",
+    "sources": [
+      "https://www.citroen.es/vehiculos-citroen/ami.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 104,
+    "brand": "Peugeot",
+    "model": "E-2008",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "406 km WLTP",
+    "minRangeVal": 406,
+    "maxRangeVal": 406,
+    "batteryText": "54 kWh",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "SUV compacto. La ficha española actual identifica la versión Electric 156.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-2008"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/peugeot-2008/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 105,
+    "brand": "Peugeot",
+    "model": "E-308",
+    "type": "Compacto",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "450 km WLTP",
+    "minRangeVal": 450,
+    "maxRangeVal": 450,
+    "batteryText": "58 kWh",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Compacto de cinco puertas. Datos de la generación actualizada.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-308"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/nuevo-peugeot-308/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 106,
+    "brand": "Peugeot",
+    "model": "E-308 SW",
+    "type": "Familiar",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "444 km WLTP",
+    "minRangeVal": 444,
+    "maxRangeVal": 444,
+    "batteryText": "58 kWh",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Carrocería familiar. Validar la autonomía con el PDF de homologación de la versión SW.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-308%20SW"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/nuevo-peugeot-308-sw/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 107,
+    "brand": "Peugeot",
+    "model": "E-408",
+    "type": "Fastback",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "456 km WLTP",
+    "minRangeVal": 456,
+    "maxRangeVal": 456,
+    "batteryText": "58 (útiles) kWh",
+    "powerText": "213 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Fastback. Carga del 20 al 80 % en 31 min según la presentación española.",
+    "highlights": [],
+    "considerations": [
+      "41.160 € desde, anunciado en marzo de 2026. Confirmar condiciones."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-408"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.media.stellantis.com/es-es/peugeot/press/nuevo-peugeot-e-408-electrificacion-y-tecnologia-al-servicio-del-placer-de-conducir",
+      "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/408-equipamientos-caracteristicas.pdf"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 108,
+    "brand": "Peugeot",
+    "model": "E-3008",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "513–529 / 668–701 / 485–499 km WLTP",
+    "minRangeVal": 485,
+    "maxRangeVal": 701,
+    "batteryText": "Por confirmar",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Gama de cinco plazas. La ficha técnica distingue autonomía estándar, Long Range y Dual Motor. Revisar las cifras por acabado.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-3008"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/3008-equipamientos-caracteristicas.pdf"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 109,
+    "brand": "Peugeot",
+    "model": "E-Traveller",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "5–9",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "220 / 348 km WLTP",
+    "minRangeVal": 220,
+    "maxRangeVal": 348,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Con 50 kWh, de 5 a 9 plazas. La cifra de 348 km corresponde a la configuración de 5 a 7 plazas con 75 kWh.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-Traveller"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/peugeot-e-traveller.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 110,
+    "brand": "Peugeot",
+    "model": "E-Partner",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "343 km WLTP",
+    "minRangeVal": 343,
+    "maxRangeVal": 343,
+    "batteryText": "50 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Furgón compacto. Revisar carga útil por carrocería y distinguirlo del E-Rifter de pasajeros.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-Partner"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/peugeot-partner/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 111,
+    "brand": "Peugeot",
+    "model": "E-Expert",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "221–223 / 347–352 km WLTP",
+    "minRangeVal": 221,
+    "maxRangeVal": 352,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Furgón mediano con volumen de carga de 6,6 m³ en la configuración de mayor capacidad.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-Expert"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/peugeot-expert/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 112,
+    "brand": "Peugeot",
+    "model": "E-Boxer",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "424 km WLTP",
+    "minRangeVal": 424,
+    "maxRangeVal": 424,
+    "batteryText": "110 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón de gran volumen. Especificar longitud, altura, MMA y volumen de la versión concreta.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Peugeot%20E-Boxer"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/peugeot.png",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.peugeot.es/",
+    "sources": [
+      "https://www.peugeot.es/gama/peugeot-boxer/electrico.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 113,
+    "brand": "Opel",
+    "model": "Mokka Electric",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": 37850,
+    "priceMax": 47450,
+    "priceText": "37.850–47.450 €",
+    "rangeText": "402 / 324 km WLTP",
+    "minRangeVal": 324,
+    "maxRangeVal": 402,
+    "batteryText": "54 kWh",
+    "powerText": "156 / 280 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Agrupar la versión de 156 CV y el GSE de 280 CV en la misma ficha. El GSE hace el 0–100 km/h en 5,9 s.",
+    "highlights": [],
+    "considerations": [
+      "37.850 € Edition / 39.200 € GS / 47.450 € GSE, tabla MY26."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Mokka%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.opel.es/hub/datasheet/mokka-my26-es.html",
+      "https://store.opel.es/selector/configurable/mokka-suv?fuel=El%C3%A9ctrico"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 114,
+    "brand": "Opel",
+    "model": "Astra Electric",
+    "type": "Compacto",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "454 km WLTP",
+    "minRangeVal": 454,
+    "maxRangeVal": 454,
+    "batteryText": "Por confirmar",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Compacto de cinco puertas. El modelo 2026 registra 9,3 s en el 0–100 km/h según ficha de referencia.",
+    "highlights": [],
+    "considerations": [
+      "32.900 € anunciados; confirmar condiciones del descuento comercial."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Astra%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.media.stellantis.com/es-es/opel/press/mas-elegante-mas-audaz-mas-moderno-el-nuevo-opel-astra-ya-esta-disponible"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 115,
+    "brand": "Opel",
+    "model": "Astra Sports Tourer Electric",
+    "type": "Familiar",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "445 km WLTP",
+    "minRangeVal": 445,
+    "maxRangeVal": 445,
+    "batteryText": "Por confirmar",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Familiar. Mantener carrocería propia y comprobar volumen de maletero de la versión eléctrica.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Astra%20Sports%20Tourer%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.media.stellantis.com/es-es/opel/press/nuevo-opel-astra-sports-tourer-electric-eficiencia-electrica-en-estado-puro"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 116,
+    "brand": "Opel",
+    "model": "Frontera Electric",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "305 / 405 km WLTP",
+    "minRangeVal": 305,
+    "maxRangeVal": 405,
+    "batteryText": "44,2 / 54 kWh",
+    "powerText": "113 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Separar batería estándar y Extended Range. Confirmar plazas y autonomía por versión eléctrica.",
+    "highlights": [],
+    "considerations": [
+      "27.000 € Extended Range, PVP con IVA anunciado. Revisar vigencia."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Frontera%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.opel.es/hub/datasheet/frontera-my26-es.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 117,
+    "brand": "Opel",
+    "model": "Grandland Electric",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "521 km WLTP (73 kWh)",
+    "minRangeVal": 521,
+    "maxRangeVal": 521,
+    "batteryText": "73 / 97 (según versión) kWh",
+    "powerText": "213 / 325 AWD CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "SUV familiar. Completar el Long Range y distinguirlo del AWD en la ficha.",
+    "highlights": [],
+    "considerations": [
+      "47.450 € Electric 213 de referencia; AWD desde 56.400 €, tabla MY26."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Grandland%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.opel.es/hub/datasheet/grandland-my26-es.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 118,
+    "brand": "Opel",
+    "model": "Combo Electric",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "344 km WLTP",
+    "minRangeVal": 344,
+    "maxRangeVal": 344,
+    "batteryText": "50 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Pasajeros. Confirmar plazas y autonomía de cada longitud.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Combo%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://store.opel.es/trim/configurable/combo-electric-combo"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 119,
+    "brand": "Opel",
+    "model": "Combo Cargo Electric",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "336 km WLTP (versión de referencia)",
+    "minRangeVal": 336,
+    "maxRangeVal": 336,
+    "batteryText": "50 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón compacto. La autonomía y la carga útil varían por longitud y configuración.",
+    "highlights": [],
+    "considerations": [
+      "37.963 € con IVA en la versión de referencia del concesionario."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Combo%20Cargo%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.euroserviciomoreno.es/vehiculos-comerciales/opel/"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 120,
+    "brand": "Opel",
+    "model": "Zafira Electric",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "343 km WLTP",
+    "minRangeVal": 343,
+    "maxRangeVal": 343,
+    "batteryText": "75 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "La oferta oficial revisada corresponde a la variante de 75 kWh. Revisar plazas y si se admite pedido de la batería de 50 kWh.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Zafira%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://store.opel.es/selector/configurable/zafira-electric-zafira"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 121,
+    "brand": "Opel",
+    "model": "Vivaro Electric",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "136 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón mediano. Volumen de carga de 6,6 m³ con FlexCargo. Confirmar WLTP español para furgón y doble cabina.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Vivaro%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.opel.es/comerciales/gama-vivaro/furgon/resumen.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 122,
+    "brand": "Opel",
+    "model": "Movano Electric",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "409 km WLTP (versión de referencia)",
+    "minRangeVal": 409,
+    "maxRangeVal": 409,
+    "batteryText": "110 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón grande. Excluir cifras de la batería anterior al comparar la variante de 110 kWh.",
+    "highlights": [],
+    "considerations": [
+      "65.279 € desde en el concesionario de referencia. Confirmar carrocería y tarifa."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Opel%20Movano%20Electric"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/opel.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.opel.es/",
+    "sources": [
+      "https://www.castromovil.net/vehiculos-comerciales/opel/"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 123,
+    "brand": "Fiat",
+    "model": "600e",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": 5,
+    "priceMin": 29900,
+    "priceMax": 36600,
+    "priceText": "29.900–36.600 €",
+    "rangeText": "400 km WLTP",
+    "minRangeVal": 400,
+    "maxRangeVal": 400,
+    "batteryText": "54 kWh",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "SUV de cinco plazas. Los acabados 600e y La Prima comparten motor.",
+    "highlights": [],
+    "considerations": [
+      "29.900 € 600e / 36.600 € La Prima, recomendados en ficha Fiat."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20600e"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/modelos/fiat-600-electrico/caracteristicas-tecnicas"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 124,
+    "brand": "Fiat",
+    "model": "Topolino",
+    "type": "Cuadriciclo ligero",
+    "underReview": true,
+    "photoPending": true,
+    "seats": 2,
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "75 km WMTC",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "5,4 kWh",
+    "powerText": "8 (6 kW)",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Sin carga rápida",
+    "description": "Dos plazas, 45 km/h. Agrupar Topolino y Dolcevita como variantes.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20Topolino"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/modelos/fiat-topolino/technical-data"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 125,
+    "brand": "Fiat",
+    "model": "E-Doblò",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "Por confirmar",
+    "powerText": "136 CV",
+    "trunk": 775,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Versión MPV. La ficha española indica 775 L de maletero en la configuración de referencia.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20E-Dobl%C3%B2"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/modelos/e-doblo/technical-data"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 126,
+    "brand": "Fiat",
+    "model": "E-Doblò Cargo",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "334 km WLTP",
+    "minRangeVal": 334,
+    "maxRangeVal": 334,
+    "batteryText": "Por confirmar",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Volumen de carga de 4,4 m³ y carga útil de 780 kg según configuración. Revisar Easy Pro como acabado.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20E-Dobl%C3%B2%20Cargo"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/professional/modelo/doblo-electrico"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 127,
+    "brand": "Fiat",
+    "model": "E-Ulysse",
+    "type": "Monovolumen",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Monovolumen eléctrico. La página comercial actual y la ficha de características muestran autonomías distintas. Confirmar por batería y plazas.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20E-Ulysse"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/professional/modelo/ulysse-electrico/features"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 128,
+    "brand": "Fiat",
+    "model": "E-Scudo",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "352 km WLTP (75 kWh)",
+    "minRangeVal": 352,
+    "maxRangeVal": 352,
+    "batteryText": "50 / 75 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "Furgón mediano. Volumen de carga de 6,6 m³ según carrocería.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20E-Scudo"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/professional/modelo/scudo-electrico"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 129,
+    "brand": "Fiat",
+    "model": "E-Ducato",
+    "type": "Furgoneta de carga",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "420 km WLTP",
+    "minRangeVal": 420,
+    "maxRangeVal": 420,
+    "batteryText": "110 kWh",
+    "powerText": "270 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Furgón grande. La gama anuncia volumen de carga de 17 m³ para la mayor carrocería.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Fiat%20E-Ducato"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/fiat.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.fiat.es/",
+    "sources": [
+      "https://www.fiat.es/professional/modelo/ducato-electrico"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 130,
+    "brand": "Jeep",
+    "model": "Avenger eléctrico",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "400 km WLTP",
+    "minRangeVal": 400,
+    "maxRangeVal": 400,
+    "batteryText": "Por confirmar",
+    "powerText": "156 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "100 kW CC",
+    "description": "SUV de tracción delantera. Carga del 20 al 80 % en menos de 30 minutos según Jeep.",
+    "highlights": [],
+    "considerations": [
+      "38.000 € desde, tarifa oficial con IVA desde mayo. Revisar vigencia."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Jeep%20Avenger%20el%C3%A9ctrico"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/jeep.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.jeep.es/",
+    "sources": [
+      "https://www.jeep.es/nuevo-jeep-avenger/electrico",
+      "https://www.jeep.es/content/dam/jeep/es/models/pdf/Avenger-MY27.pdf"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 131,
+    "brand": "Alfa Romeo",
+    "model": "Junior Elettrica",
+    "type": "SUV pequeño",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "414 / 319 km WLTP",
+    "minRangeVal": 319,
+    "maxRangeVal": 414,
+    "batteryText": "Por confirmar",
+    "powerText": "156 / 280 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Agrupar la versión de 156 CV y Veloce de 280 CV. Alfa Romeo España publica un rango combinado de gama de 319 a 414 km.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Alfa%20Romeo%20Junior%20Elettrica"
+      }
+    ],
+    "brandUrl": "https://www.alfaromeo.es/modelos/junior-elettrica",
+    "sources": [
+      "https://www.alfaromeo.es/modelos/junior-elettrica"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 132,
+    "brand": "DS",
+    "model": "N°4 E-TENSE",
+    "type": "Compacto",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "450 km WLTP",
+    "minRangeVal": 450,
+    "maxRangeVal": 450,
+    "batteryText": "61 kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Versión eléctrica. Confirmar potencia en la documentación española por diferencias de denominación.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=DS%20N%C2%B04%20E-TENSE"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/ds.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.dsautomobiles.es/",
+    "sources": [
+      "https://www.dsautomobiles.es/modelos/dsn4/e-tense.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 133,
+    "brand": "DS",
+    "model": "N°7 E-TENSE",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "543 / 740 / 679 km WLTP",
+    "minRangeVal": 543,
+    "maxRangeVal": 740,
+    "batteryText": "Por confirmar",
+    "powerText": "230 / 245 / 350 AWD CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "160 kW CC",
+    "description": "Tres motorizaciones. Confirmar autonomía por acabado: la página de gama y el configurador muestran cifras distintas.",
+    "highlights": [],
+    "considerations": [
+      "49.400 € Standard Range según km77."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=DS%20N%C2%B07%20E-TENSE"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/ds.svg",
+      "group": "Stellantis"
+    },
+    "brandUrl": "https://www.dsautomobiles.es/",
+    "sources": [
+      "https://www.dsautomobiles.es/modelos/dsn7/e-tense.html"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 134,
+    "brand": "Maserati",
+    "model": "Grecale Folgore",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "572 km WLTP",
+    "minRangeVal": 572,
+    "maxRangeVal": 572,
+    "batteryText": "Por confirmar",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "4,1 s",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "SUV eléctrico. Cifra de la versión actualizada recogida por km77. Acelera de 0 a 100 km/h en 4,1 s.",
+    "highlights": [],
+    "considerations": [
+      "99.100 €, referencia km77 sin descuento."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Maserati%20Grecale%20Folgore"
+      }
+    ],
+    "brandUrl": "https://www.maserati.com/es/es/",
+    "sources": [
+      "https://www.km77.com/coches/maserati/grecale/2027/estandar/folgore/grecale-folgore/datos"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 135,
+    "brand": "Maserati",
+    "model": "GranTurismo Folgore",
+    "type": "Coupé",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "542 km WLTP (provisional)",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "92,5 brutos / 83 útiles kWh",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "270 kW CC",
+    "description": "Coupé de 800 V. Maserati marca la autonomía del modelo 2027 como pendiente de homologación definitiva.",
+    "highlights": [],
+    "considerations": [
+      "159.500 €, referencia km77 sin descuento."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Maserati%20GranTurismo%20Folgore"
+      }
+    ],
+    "brandUrl": "https://www.maserati.com/es/es/",
+    "sources": [
+      "https://www.maserati.com/es/es/modelos/granturismo/granturismo-folgore"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 136,
+    "brand": "Maserati",
+    "model": "GranCabrio Folgore",
+    "type": "Cabrio",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "509 km WLTP",
+    "minRangeVal": 509,
+    "maxRangeVal": 509,
+    "batteryText": "Por confirmar",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "2,8 s",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Cabrio eléctrico. Distinguir la versión actualizada de la de 425 km de 2024–2026. Acelera de 0 a 100 km/h en 2,8 s.",
+    "highlights": [],
+    "considerations": [
+      "169.800 €, referencia km77 sin descuento."
+    ],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Maserati%20GranCabrio%20Folgore"
+      }
+    ],
+    "brandUrl": "https://www.maserati.com/es/es/",
+    "sources": [
+      "https://www.km77.com/coches/maserati/grancabrio/2027/estandar/folgore/grancabrio-folgore/datos"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 137,
+    "brand": "Leapmotor",
+    "model": "C10",
+    "type": "SUV",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "420 / 510 / 437 km WLTP",
+    "minRangeVal": 420,
+    "maxRangeVal": 510,
+    "batteryText": "69,9 / 81,9 kWh",
+    "powerText": "218 / 299 / 598 CV",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Pro, ProMax y ProMax AWD en una ficha. Los 437 km corresponden al AWD. Usar solo las tres variantes de batería.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Leapmotor%20C10"
+      }
+    ],
+    "brandInfo": {
+      "logo": "img/brands/leapmotor.png",
+      "group": "Leapmotor International"
+    },
+    "brandUrl": "https://www.leapmotor.net/es-es/modelos/c10",
+    "sources": [
+      "https://www.leapmotor.net/docs/lpmiwebsiteeseslibraries/c10-documents/5750-25_leapmotor_brochure_c10_es_junio_af.pdf?sf_site=2eb2cf99-4308-475d-8276-23e21666ca20&sf_site_temp=true"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+    }
+  },
+  {
+    "id": 138,
+    "brand": "Dodge",
+    "model": "Charger Daytona",
+    "type": "Coupé / berlina",
+    "underReview": true,
+    "photoPending": true,
+    "seats": "Por confirmar",
+    "priceMin": null,
+    "priceMax": null,
+    "priceText": "Por verificar",
+    "rangeText": "Por confirmar",
+    "minRangeVal": null,
+    "maxRangeVal": null,
+    "batteryText": "Por confirmar",
+    "powerText": "Por confirmar",
+    "trunk": null,
+    "acceleration": "Por confirmar",
+    "dimensions": "Por confirmar",
+    "charging": "Por confirmar",
+    "description": "Dodge abrió pedidos europeos a través del importador oficial KWA. Preparar carrocerías de dos y cuatro puertas como variantes y verificar motorizaciones eléctricas disponibles y tarifa española.",
+    "highlights": [],
+    "considerations": [],
+    "idealFor": [],
+    "trims": [],
+    "images": [
+      "img/cars/foto-pendiente.svg"
+    ],
+    "colors": [],
+    "videos": [
+      {
+        "title": "Buscar vídeos en YouTube",
+        "url": "https://www.youtube.com/results?search_query=Dodge%20Charger%20Daytona"
+      }
+    ],
+    "brandUrl": "https://kwauto.com/es/",
+    "sources": [
+      "https://www.media.stellantis.com/es-es/dodge/press/dodge-abre-los-pedidos-para-el-charger-de-nueva-generacion-en-europa",
+      "https://kwauto.com/es/"
+    ],
+    "dataStatus": {
+      "checkedAt": "26/11/2026",
+      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
     }
   }
 ];

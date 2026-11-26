@@ -465,11 +465,11 @@ let currentImageIndexes = {};
                     </div>
                     <div class="car-content">
                         <div class="car-brand">${car.brand.toLocaleUpperCase('es-ES')}</div>
-                        <h2 class="car-title"><a href="${({"1":"/coches/leapmotor-b03x/","2":"/coches/citroen-e-c3/","3":"/coches/renault-5-e-tech-electrico/","4":"/coches/hyundai-inster/","5":"/coches/byd-dolphin-surf/","6":"/coches/kia-ev3/","7":"/coches/volvo-ex30/","9":"/coches/tesla-model-y/","10":"/coches/xpeng-g6/","11":"/coches/peugeot-e-5008/","12":"/coches/citroen-e-c3-outdoor/","13":"/coches/tesla-model-3/","14":"/coches/leapmotor-t03/","15":"/coches/renault-twingo-e-tech-electrico/","16":"/coches/byd-dolphin/","17":"/coches/byd-atto-2/","18":"/coches/byd-atto-3/","19":"/coches/byd-atto-3-evo/","20":"/coches/byd-seal/","21":"/coches/byd-seal-u-ev/","22":"/coches/byd-sealion-7/","23":"/coches/byd-tang/","24":"/coches/byd-han/","25":"/coches/toyota-c-hr/","26":"/coches/kia-ev4-hatchback/","27":"/coches/kia-ev4-fastback/","28":"/coches/dacia-spring-2027/","29":"/coches/peugeot-e-208/","30":"/coches/volkswagen-id-polo/","31":"/coches/opel-corsa-electric/","32":"/coches/fiat-grande-panda-electrico/","33":"/coches/fiat-500e/","34":"/coches/nissan-micra/","35":"/coches/lancia-ypsilon-electrico/","36":"/coches/kia-ev6/","37":"/coches/kia-ev9/","38":"/coches/leapmotor-b05/","39":"/coches/renault-4-e-tech-electrico/","40":"/coches/skoda-epiq/","41":"/coches/mini-cooper-electric/","42":"/coches/smart-5/","43":"/coches/smart-2/","44":"/coches/smart-1/","45":"/coches/smart-3/","46":"/coches/nissan-leaf/","47":"/coches/citroen-e-berlingo/","48":"/coches/volkswagen-id-buzz/","49":"/coches/volkswagen-id-buzz-cargo/","50":"/coches/kia-pv5-passenger/","51":"/coches/kia-pv5-cargo/","52":"/coches/citroen-e-c3-aircross/","53":"/coches/geely-e2/","54":"/coches/geely-e5/","55":"/coches/kia-ev2/","56":"/coches/mg-mg4-ev/","57":"/coches/mg-mg4-urban/","58":"/coches/cupra-born/","59":"/coches/volkswagen-id-3-neo/","60":"/coches/audi-a2-e-tron/","61":"/coches/bmw-ix1/","62":"/coches/hyundai-kona-electrico/","63":"/coches/suzuki-e-vitara/","64":"/coches/ford-e-transit/","65":"/coches/ford-e-transit-custom/","66":"/coches/peugeot-e-rifter/","67":"/coches/denza-d9/","68":"/coches/kia-pv7-passenger/","69":"/coches/kia-pv7-cargo/","70":"/coches/leapmotor-b10/","71":"/coches/mazda-6e/","72":"/coches/mazda-cx-6e/","73":"/coches/subaru-solterra/","74":"/coches/lexus-rz/","75":"/coches/alpine-a290/","76":"/coches/abarth-600e/","77":"/coches/kgm-torres-evx/","78":"/coches/ds-n-8/","79":"/coches/jeep-compass-electric/","80":"/coches/polestar-4-coupe/","81":"/coches/polestar-4-suv/","82":"/coches/ds-3-e-tense/"})[car.id] || '/coches/'}" onclick="if(!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey){event.preventDefault();openCarModal(${car.id});}">${car.model.toLocaleUpperCase('es-ES')}</a></h2>
+                        <h2 class="car-title"><a href="${({"1":"/coches/leapmotor-b03x/","2":"/coches/citroen-e-c3/","3":"/coches/renault-5-e-tech-electrico/","4":"/coches/hyundai-inster/","5":"/coches/byd-dolphin-surf/","6":"/coches/kia-ev3/","7":"/coches/volvo-ex30/","9":"/coches/tesla-model-y/","10":"/coches/xpeng-g6/","11":"/coches/peugeot-e-5008/","12":"/coches/citroen-e-c3-outdoor/","13":"/coches/tesla-model-3/","14":"/coches/leapmotor-t03/","15":"/coches/renault-twingo-e-tech-electrico/","16":"/coches/byd-dolphin/","17":"/coches/byd-atto-2/","18":"/coches/byd-atto-3/","19":"/coches/byd-atto-3-evo/","20":"/coches/byd-seal/","21":"/coches/byd-seal-u-ev/","22":"/coches/byd-sealion-7/","23":"/coches/byd-tang/","24":"/coches/byd-han/","25":"/coches/toyota-c-hr/","26":"/coches/kia-ev4-hatchback/","27":"/coches/kia-ev4-fastback/","28":"/coches/dacia-spring-2027/","29":"/coches/peugeot-e-208/","30":"/coches/volkswagen-id-polo/","31":"/coches/opel-corsa-electric/","32":"/coches/fiat-grande-panda-electrico/","33":"/coches/fiat-500e/","34":"/coches/nissan-micra/","35":"/coches/lancia-ypsilon-electrico/","36":"/coches/kia-ev6/","37":"/coches/kia-ev9/","38":"/coches/leapmotor-b05/","39":"/coches/renault-4-e-tech-electrico/","40":"/coches/skoda-epiq/","41":"/coches/mini-cooper-electric/","42":"/coches/smart-5/","43":"/coches/smart-2/","44":"/coches/smart-1/","45":"/coches/smart-3/","46":"/coches/nissan-leaf/","47":"/coches/citroen-e-berlingo/","48":"/coches/volkswagen-id-buzz/","49":"/coches/volkswagen-id-buzz-cargo/","50":"/coches/kia-pv5-passenger/","51":"/coches/kia-pv5-cargo/","52":"/coches/citroen-e-c3-aircross/","53":"/coches/geely-e2/","54":"/coches/geely-e5/","55":"/coches/kia-ev2/","56":"/coches/mg-mg4-ev/","57":"/coches/mg-mg4-urban/","58":"/coches/cupra-born/","59":"/coches/volkswagen-id-3-neo/","60":"/coches/audi-a2-e-tron/","61":"/coches/bmw-ix1/","62":"/coches/hyundai-kona-electrico/","63":"/coches/suzuki-e-vitara/","64":"/coches/ford-e-transit/","65":"/coches/ford-e-transit-custom/","66":"/coches/peugeot-e-rifter/","67":"/coches/denza-d9/","68":"/coches/kia-pv7-passenger/","69":"/coches/kia-pv7-cargo/","70":"/coches/leapmotor-b10/","71":"/coches/mazda-6e/","72":"/coches/mazda-cx-6e/","73":"/coches/subaru-solterra/","74":"/coches/lexus-rz/","75":"/coches/alpine-a290/","76":"/coches/abarth-600e/","77":"/coches/kgm-torres-evx/","78":"/coches/ds-n-8/","79":"/coches/jeep-compass-electric/","80":"/coches/polestar-4-coupe/","81":"/coches/polestar-4-suv/","82":"/coches/ds-3-e-tense/"})[car.id] || (car.underReview ? '/comparador/?car=' + car.id : '/coches/')}" onclick="if(!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey){event.preventDefault();openCarModal(${car.id});}">${car.model.toLocaleUpperCase('es-ES')}</a></h2>
                         ${isRanking ? `<div class="ranking-featured-value"><span>${metric === 'priceAsc' ? 'PRECIO DESDE' : metric === 'rangeDesc' ? 'AUTONOMÍA MÁXIMA' : metric === 'trunkDesc' ? 'MALETERO' : metric === 'powerDesc' ? 'POTENCIA MÁXIMA' : '0–100 KM/H'}</span><strong>${metric === 'priceAsc' ? (car.priceMin == null ? 'Sin precio' : car.priceMin.toLocaleString('es-ES') + ' €') : metric === 'rangeDesc' ? car.maxRangeVal + ' km' : metric === 'trunkDesc' ? (car.trunk == null ? 'Sin datos' : car.trunk + ' L') : metric === 'powerDesc' ? (maxPowerCv(car) == null ? 'Sin datos' : maxPowerCv(car) + ' CV') : (bestAcceleration(car) == null ? 'Sin datos' : bestAcceleration(car).toLocaleString('es-ES') + ' s')}</strong></div>` : ''}
                         <div class="car-primary-specs">
                             <div><i class="fa-solid fa-tag" aria-hidden="true"></i><strong>${priceText}</strong><small>Precio sin ayudas</small></div>
-                            <div><i class="fa-solid fa-road" aria-hidden="true"></i><strong>${rangeText}</strong><small>Autonomía WLTP</small></div>
+                            <div><i class="fa-solid fa-road" aria-hidden="true"></i><strong>${rangeText}</strong><small>${car.rangeText.includes('WMTC') ? 'Autonomía WMTC' : 'Autonomía WLTP'}</small></div>
                         </div>
                         <div class="car-secondary-specs">
                             <div><i class="fa-solid fa-bolt" aria-hidden="true"></i><strong>${car.powerText}</strong><small>Potencia</small></div>
@@ -841,7 +841,7 @@ let currentImageIndexes = {};
                                 </div>
 
                                 <div class="text-xs opacity-80">
-                                    Autonomía WLTP
+                                    ${car.rangeText.includes('WMTC') ? 'Autonomía WMTC' : 'Autonomía WLTP'}
                                 </div>
 
                             </div>
@@ -966,7 +966,7 @@ let currentImageIndexes = {};
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-4">
-                            ${trimsHtml}
+                            ${trimsHtml || '<p>Versiones por confirmar.</p>'}
                         </div>
 
                     </section>
@@ -1067,7 +1067,7 @@ let currentImageIndexes = {};
                         </div>
 
                         <div class="flex flex-wrap gap-x-6 gap-y-4">
-                            ${colorsHtml}
+                            ${colorsHtml || '<p>Colores por confirmar.</p>'}
                         </div>
 
                     </section>
@@ -1090,7 +1090,7 @@ let currentImageIndexes = {};
 
                         ${car.galleryNote ? `<p class="text-sm text-slate-500 mb-4">${car.galleryNote}</p>` : ''}
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                            ${galleryHtml}
+                            ${car.photoPending ? '<p>Fotos oficiales pendientes.</p>' : galleryHtml}
                         </div>
 
                     </section>
@@ -1161,7 +1161,7 @@ let currentImageIndexes = {};
                                 </div>
 
                                 <ul class="space-y-4 text-sm text-slate-700">
-                                    ${positives}
+                                    ${positives || '<li>Datos pendientes de revisión.</li>'}
                                 </ul>
 
                             </div>
@@ -1184,7 +1184,7 @@ let currentImageIndexes = {};
                                 </div>
 
                                 <ul class="space-y-4 text-sm text-slate-700">
-                                    ${considerations}
+                                    ${considerations || '<li>Datos pendientes de revisión.</li>'}
                                 </ul>
 
                             </div>
@@ -1230,7 +1230,9 @@ let currentImageIndexes = {};
 
                                 <p class="text-xs text-slate-400 mt-1">
 
-                                    Datos obtenidos de fuentes oficiales de los fabricantes y organismos europeos de referencia.
+                                    ${car.underReview
+                                        ? car.sources.map((url, index) => `<a class="text-blue-600 underline mr-3" href="${url}" target="_blank" rel="noopener noreferrer">Fuente ${index + 1} ↗</a>`).join('')
+                                        : 'Datos obtenidos de fuentes oficiales de los fabricantes y organismos europeos de referencia.'}
 
                                 </p>
 
@@ -1442,7 +1444,7 @@ let currentImageIndexes = {};
             const minTrunk = Number(document.getElementById('trunk-filter').value);
             const filtered = carsData.filter(car => {
                 if (!Array.isArray(car.images) || !car.images.length) return false;
-                if (document.body.dataset.catalogueView === 'ranking' && car.upcoming) return false;
+                if (document.body.dataset.catalogueView === 'ranking' && (car.upcoming || car.underReview)) return false;
 
                 const selectedBrand = document.body.dataset.selectedBrand;
                 const brandMatch = !selectedBrand || normalizeCarSearch(car.brand) === selectedBrand;
@@ -1455,7 +1457,7 @@ let currentImageIndexes = {};
                     !seats || Math.max(...(String(car.seats).match(/\d+/g) || []).map(Number)) >= Number(seats);
 
                 const rangeMatch =
-                    car.maxRangeVal >= range;
+                    range === 0 || (car.maxRangeVal != null && car.maxRangeVal >= range);
 
                 const priceMatch =
                     (car.priceMin ?? car.estimatedPrice) == null ? price >= 90000 : (car.priceMin ?? car.estimatedPrice) <= price;
@@ -1475,7 +1477,7 @@ let currentImageIndexes = {};
                     return randomCarOrder.get(a.id) - randomCarOrder.get(b.id);
 
                 if (sort === 'rangeDesc')
-                    return b.maxRangeVal - a.maxRangeVal;
+                    return (b.maxRangeVal ?? -1) - (a.maxRangeVal ?? -1);
 
                 if (sort === 'trunkDesc')
                     return (b.trunk ?? -1) - (a.trunk ?? -1);
