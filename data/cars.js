@@ -15855,7 +15855,6 @@ const carsData = [
     "model": "ë-C4",
     "type": "Compacto",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -15875,7 +15874,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-c4/citroen-e-c4_01.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_02.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_03.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_04.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_05.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_06.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_07.webp",
+      "img/cars/citroen-e-c4/citroen-e-c4_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -15903,7 +15909,6 @@ const carsData = [
     "model": "ë-C4 X",
     "type": "Berlina fastback",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -15923,7 +15928,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_01.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_02.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_03.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_04.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_05.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_06.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_07.webp",
+      "img/cars/citroen-e-c4-x/citroen-e-c4-x_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -15951,7 +15963,6 @@ const carsData = [
     "model": "ë-C5 Aircross",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": 5,
     "priceMin": null,
     "priceMax": null,
@@ -15973,7 +15984,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_01.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_02.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_03.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_04.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_05.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_06.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_07.webp",
+      "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16001,7 +16019,6 @@ const carsData = [
     "model": "ë-SpaceTourer",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16021,7 +16038,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_01.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_02.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_03.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_04.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_05.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_06.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_07.webp",
+      "img/cars/citroen-e-spacetourer/citroen-e-spacetourer_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16049,7 +16073,6 @@ const carsData = [
     "model": "ë-Berlingo Van",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16069,7 +16092,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_01.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_02.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_03.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_04.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_05.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_06.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_07.webp",
+      "img/cars/citroen-e-berlingo-van/citroen-e-berlingo-van_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16097,7 +16127,6 @@ const carsData = [
     "model": "ë-Jumpy",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16117,7 +16146,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_01.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_02.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_03.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_04.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_05.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_06.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_07.webp",
+      "img/cars/citroen-e-jumpy/citroen-e-jumpy_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16145,7 +16181,6 @@ const carsData = [
     "model": "ë-Jumper",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16165,7 +16200,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-e-jumper/citroen-e-jumper_01.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_02.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_03.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_04.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_05.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_06.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_07.webp",
+      "img/cars/citroen-e-jumper/citroen-e-jumper_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16193,7 +16235,6 @@ const carsData = [
     "model": "Ami",
     "type": "Cuadriciclo ligero",
     "underReview": true,
-    "photoPending": true,
     "seats": 2,
     "priceMin": null,
     "priceMax": null,
@@ -16215,7 +16256,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/citroen-ami/citroen-ami_01.webp",
+      "img/cars/citroen-ami/citroen-ami_02.webp",
+      "img/cars/citroen-ami/citroen-ami_03.webp",
+      "img/cars/citroen-ami/citroen-ami_04.webp",
+      "img/cars/citroen-ami/citroen-ami_05.webp",
+      "img/cars/citroen-ami/citroen-ami_06.webp",
+      "img/cars/citroen-ami/citroen-ami_07.webp",
+      "img/cars/citroen-ami/citroen-ami_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16243,7 +16291,6 @@ const carsData = [
     "model": "E-2008",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16263,7 +16310,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-2008/peugeot-e-2008_01.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_02.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_03.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_04.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_05.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_06.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_07.webp",
+      "img/cars/peugeot-e-2008/peugeot-e-2008_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16291,7 +16345,6 @@ const carsData = [
     "model": "E-308",
     "type": "Compacto",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16311,7 +16364,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-308/peugeot-e-308_01.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_02.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_03.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_04.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_05.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_06.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_07.webp",
+      "img/cars/peugeot-e-308/peugeot-e-308_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16339,7 +16399,6 @@ const carsData = [
     "model": "E-308 SW",
     "type": "Familiar",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16359,7 +16418,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_01.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_02.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_03.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_04.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_05.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_06.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_07.webp",
+      "img/cars/peugeot-e-308-sw/peugeot-e-308-sw_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16387,7 +16453,6 @@ const carsData = [
     "model": "E-408",
     "type": "Fastback",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16409,7 +16474,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-408/peugeot-e-408_01.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_02.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_03.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_04.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_05.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_06.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_07.webp",
+      "img/cars/peugeot-e-408/peugeot-e-408_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16438,7 +16510,6 @@ const carsData = [
     "model": "E-3008",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16458,7 +16529,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-3008/peugeot-e-3008_01.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_02.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_03.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_04.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_05.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_06.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_07.webp",
+      "img/cars/peugeot-e-3008/peugeot-e-3008_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16486,7 +16564,6 @@ const carsData = [
     "model": "E-Traveller",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "5–9",
     "priceMin": null,
     "priceMax": null,
@@ -16506,7 +16583,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_01.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_02.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_03.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_04.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_05.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_06.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_07.webp",
+      "img/cars/peugeot-e-traveller/peugeot-e-traveller_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16534,7 +16618,6 @@ const carsData = [
     "model": "E-Partner",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16554,7 +16637,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-partner/peugeot-e-partner_01.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_02.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_03.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_04.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_05.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_06.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_07.webp",
+      "img/cars/peugeot-e-partner/peugeot-e-partner_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16582,7 +16672,6 @@ const carsData = [
     "model": "E-Expert",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16602,7 +16691,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-expert/peugeot-e-expert_01.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_02.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_03.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_04.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_05.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_06.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_07.webp",
+      "img/cars/peugeot-e-expert/peugeot-e-expert_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16630,7 +16726,6 @@ const carsData = [
     "model": "E-Boxer",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16650,7 +16745,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_01.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_02.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_03.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_04.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_05.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_06.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_07.webp",
+      "img/cars/peugeot-e-boxer/peugeot-e-boxer_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -16678,7 +16780,6 @@ const carsData = [
     "model": "Mokka Electric",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": 37850,
     "priceMax": 47450,
@@ -16700,7 +16801,11 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-mokka-electric/opel-mokka-electric_01.webp",
+      "img/cars/opel-mokka-electric/opel-mokka-electric_02.webp",
+      "img/cars/opel-mokka-electric/opel-mokka-electric_03.webp",
+      "img/cars/opel-mokka-electric/opel-mokka-electric_04.webp",
+      "img/cars/opel-mokka-electric/opel-mokka-electric_05.webp"
     ],
     "colors": [],
     "videos": [
@@ -16729,7 +16834,6 @@ const carsData = [
     "model": "Astra Electric",
     "type": "Compacto",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16751,7 +16855,9 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-astra-electric/opel-astra-electric_01.webp",
+      "img/cars/opel-astra-electric/opel-astra-electric_02.webp",
+      "img/cars/opel-astra-electric/opel-astra-electric_03.webp"
     ],
     "colors": [],
     "videos": [
@@ -16779,7 +16885,6 @@ const carsData = [
     "model": "Astra Sports Tourer Electric",
     "type": "Familiar",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16799,7 +16904,9 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-astra-sports-tourer-electric/opel-astra-sports-tourer-electric_01.webp",
+      "img/cars/opel-astra-sports-tourer-electric/opel-astra-sports-tourer-electric_02.webp",
+      "img/cars/opel-astra-sports-tourer-electric/opel-astra-sports-tourer-electric_03.webp"
     ],
     "colors": [],
     "videos": [
@@ -16827,7 +16934,6 @@ const carsData = [
     "model": "Frontera Electric",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16849,7 +16955,12 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-frontera-electric/opel-frontera-electric_01.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_02.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_03.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_04.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_05.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_06.webp"
     ],
     "colors": [],
     "videos": [
@@ -16877,7 +16988,6 @@ const carsData = [
     "model": "Grandland Electric",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16899,7 +17009,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-grandland-electric/opel-grandland-electric_01.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_02.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_03.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_04.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_05.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_06.webp",
+      "img/cars/opel-grandland-electric/opel-grandland-electric_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -16927,7 +17043,6 @@ const carsData = [
     "model": "Combo Electric",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16947,7 +17062,12 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-combo-electric/opel-combo-electric_01.webp",
+      "img/cars/opel-combo-electric/opel-combo-electric_02.webp",
+      "img/cars/opel-combo-electric/opel-combo-electric_03.webp",
+      "img/cars/opel-combo-electric/opel-combo-electric_04.webp",
+      "img/cars/opel-combo-electric/opel-combo-electric_05.webp",
+      "img/cars/opel-combo-electric/opel-combo-electric_06.webp"
     ],
     "colors": [],
     "videos": [
@@ -16975,7 +17095,6 @@ const carsData = [
     "model": "Combo Cargo Electric",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -16997,7 +17116,10 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-combo-cargo-electric/opel-combo-cargo-electric_01.webp",
+      "img/cars/opel-combo-cargo-electric/opel-combo-cargo-electric_02.webp",
+      "img/cars/opel-combo-cargo-electric/opel-combo-cargo-electric_03.webp",
+      "img/cars/opel-combo-cargo-electric/opel-combo-cargo-electric_04.webp"
     ],
     "colors": [],
     "videos": [
@@ -17025,7 +17147,6 @@ const carsData = [
     "model": "Zafira Electric",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17045,7 +17166,12 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-zafira-electric/opel-zafira-electric_01.webp",
+      "img/cars/opel-zafira-electric/opel-zafira-electric_02.webp",
+      "img/cars/opel-zafira-electric/opel-zafira-electric_03.webp",
+      "img/cars/opel-zafira-electric/opel-zafira-electric_04.webp",
+      "img/cars/opel-zafira-electric/opel-zafira-electric_05.webp",
+      "img/cars/opel-zafira-electric/opel-zafira-electric_06.webp"
     ],
     "colors": [],
     "videos": [
@@ -17073,7 +17199,6 @@ const carsData = [
     "model": "Vivaro Electric",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17093,7 +17218,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_01.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_02.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_03.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_04.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_05.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_06.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_07.webp",
+      "img/cars/opel-vivaro-electric/opel-vivaro-electric_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17121,7 +17253,6 @@ const carsData = [
     "model": "Movano Electric",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17143,7 +17274,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/opel-movano-electric/opel-movano-electric_01.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_02.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_03.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_04.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_05.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_06.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_07.webp",
+      "img/cars/opel-movano-electric/opel-movano-electric_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17171,7 +17309,6 @@ const carsData = [
     "model": "600e",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": 5,
     "priceMin": 29900,
     "priceMax": 36600,
@@ -17193,7 +17330,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-600e/fiat-600e_01.webp",
+      "img/cars/fiat-600e/fiat-600e_02.webp",
+      "img/cars/fiat-600e/fiat-600e_03.webp",
+      "img/cars/fiat-600e/fiat-600e_04.webp",
+      "img/cars/fiat-600e/fiat-600e_05.webp",
+      "img/cars/fiat-600e/fiat-600e_06.webp",
+      "img/cars/fiat-600e/fiat-600e_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17221,7 +17364,6 @@ const carsData = [
     "model": "Topolino",
     "type": "Cuadriciclo ligero",
     "underReview": true,
-    "photoPending": true,
     "seats": 2,
     "priceMin": null,
     "priceMax": null,
@@ -17241,7 +17383,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-topolino/fiat-topolino_01.webp",
+      "img/cars/fiat-topolino/fiat-topolino_02.webp",
+      "img/cars/fiat-topolino/fiat-topolino_03.webp",
+      "img/cars/fiat-topolino/fiat-topolino_04.webp",
+      "img/cars/fiat-topolino/fiat-topolino_05.webp",
+      "img/cars/fiat-topolino/fiat-topolino_06.webp",
+      "img/cars/fiat-topolino/fiat-topolino_07.webp",
+      "img/cars/fiat-topolino/fiat-topolino_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17269,7 +17418,6 @@ const carsData = [
     "model": "E-Doblò",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17289,7 +17437,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-e-doblo/fiat-e-doblo_01.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_02.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_03.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_04.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_05.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_06.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_07.webp",
+      "img/cars/fiat-e-doblo/fiat-e-doblo_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17317,7 +17472,6 @@ const carsData = [
     "model": "E-Doblò Cargo",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17337,7 +17491,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_01.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_02.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_03.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_04.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_05.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_06.webp",
+      "img/cars/fiat-e-doblo-cargo/fiat-e-doblo-cargo_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17365,7 +17525,6 @@ const carsData = [
     "model": "E-Ulysse",
     "type": "Monovolumen",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17385,7 +17544,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_01.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_02.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_03.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_04.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_05.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_06.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_07.webp",
+      "img/cars/fiat-e-ulysse/fiat-e-ulysse_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17413,7 +17579,6 @@ const carsData = [
     "model": "E-Scudo",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17433,7 +17598,12 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-e-scudo/fiat-e-scudo_01.webp",
+      "img/cars/fiat-e-scudo/fiat-e-scudo_02.webp",
+      "img/cars/fiat-e-scudo/fiat-e-scudo_03.webp",
+      "img/cars/fiat-e-scudo/fiat-e-scudo_04.webp",
+      "img/cars/fiat-e-scudo/fiat-e-scudo_05.webp",
+      "img/cars/fiat-e-scudo/fiat-e-scudo_06.webp"
     ],
     "colors": [],
     "videos": [
@@ -17461,7 +17631,6 @@ const carsData = [
     "model": "E-Ducato",
     "type": "Furgoneta de carga",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17481,7 +17650,11 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/fiat-e-ducato/fiat-e-ducato_01.webp",
+      "img/cars/fiat-e-ducato/fiat-e-ducato_02.webp",
+      "img/cars/fiat-e-ducato/fiat-e-ducato_03.webp",
+      "img/cars/fiat-e-ducato/fiat-e-ducato_04.webp",
+      "img/cars/fiat-e-ducato/fiat-e-ducato_05.webp"
     ],
     "colors": [],
     "videos": [
@@ -17509,7 +17682,6 @@ const carsData = [
     "model": "Avenger eléctrico",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17531,7 +17703,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_01.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_02.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_03.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_04.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_05.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_06.webp",
+      "img/cars/jeep-avenger-electrico/jeep-avenger-electrico_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17560,7 +17738,6 @@ const carsData = [
     "model": "Junior Elettrica",
     "type": "SUV pequeño",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17580,7 +17757,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_01.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_02.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_03.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_04.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_05.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_06.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_07.webp",
+      "img/cars/alfa-romeo-junior-elettrica/alfa-romeo-junior-elettrica_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17604,7 +17788,6 @@ const carsData = [
     "model": "N°4 E-TENSE",
     "type": "Compacto",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17624,7 +17807,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_01.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_02.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_03.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_04.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_05.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_06.webp",
+      "img/cars/ds-n-4-e-tense/ds-n-4-e-tense_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17652,7 +17841,6 @@ const carsData = [
     "model": "N°7 E-TENSE",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17674,7 +17862,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_01.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_02.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_03.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_04.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_05.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_06.webp",
+      "img/cars/ds-n-7-e-tense/ds-n-7-e-tense_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17702,7 +17896,6 @@ const carsData = [
     "model": "Grecale Folgore",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17724,7 +17917,12 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_01.webp",
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_02.webp",
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_03.webp",
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_04.webp",
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_05.webp",
+      "img/cars/maserati-grecale-folgore/maserati-grecale-folgore_06.webp"
     ],
     "colors": [],
     "videos": [
@@ -17748,7 +17946,6 @@ const carsData = [
     "model": "GranTurismo Folgore",
     "type": "Coupé",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17770,7 +17967,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_01.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_02.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_03.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_04.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_05.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_06.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_07.webp",
+      "img/cars/maserati-granturismo-folgore/maserati-granturismo-folgore_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17794,7 +17998,6 @@ const carsData = [
     "model": "GranCabrio Folgore",
     "type": "Cabrio",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17816,7 +18019,13 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_01.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_02.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_03.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_04.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_05.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_06.webp",
+      "img/cars/maserati-grancabrio-folgore/maserati-grancabrio-folgore_07.webp"
     ],
     "colors": [],
     "videos": [
@@ -17840,7 +18049,6 @@ const carsData = [
     "model": "C10",
     "type": "SUV",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17860,7 +18068,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/leapmotor-c10/leapmotor-c10_01.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_02.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_03.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_04.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_05.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_06.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_07.webp",
+      "img/cars/leapmotor-c10/leapmotor-c10_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17888,7 +18103,6 @@ const carsData = [
     "model": "Charger Daytona",
     "type": "Coupé / berlina",
     "underReview": true,
-    "photoPending": true,
     "seats": "Por confirmar",
     "priceMin": null,
     "priceMax": null,
@@ -17908,7 +18122,14 @@ const carsData = [
     "idealFor": [],
     "trims": [],
     "images": [
-      "img/cars/foto-pendiente.svg"
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_01.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_02.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_03.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_04.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_05.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_06.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_07.webp",
+      "img/cars/dodge-charger-daytona/dodge-charger-daytona_08.webp"
     ],
     "colors": [],
     "videos": [
