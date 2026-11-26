@@ -502,6 +502,40 @@ let currentImageIndexes = {};
         }
 
 
+        const sharedVehicleBases = [
+            { ids: [47, 66, 118, 125], label: 'base de los monovolúmenes compactos de Stellantis', examples: true },
+            { ids: [100, 110, 119, 126], label: 'base de las furgonetas compactas de Stellantis', examples: true },
+            { ids: [99, 109, 120, 127], label: 'base de los monovolúmenes grandes de Stellantis', examples: true },
+            { ids: [101, 111, 121, 128], label: 'base de las furgonetas medianas de Stellantis', examples: true },
+            { ids: [102, 112, 122, 129], label: 'base de las furgonetas grandes de Stellantis', examples: true },
+            { ids: [103, 124], label: 'base técnica de los cuadriciclos eléctricos de Stellantis', examples: true },
+            { ids: [52, 116, 2, 12, 32], label: 'plataforma Smart Car', closest: [52, 116] },
+            { ids: [29, 31, 35, 104, 113, 82, 96, 97, 123, 76, 130, 131], label: 'familia de plataformas e-CMP', clusters: [[29, 31, 35], [104, 113, 82], [96, 97], [123, 76, 130, 131]] },
+            { ids: [105, 106, 114, 115, 107, 132], label: 'plataforma EMP2', clusters: [[105, 114, 106, 115], [107, 132]] },
+            { ids: [108, 11, 117, 98, 79, 78, 133], label: 'plataforma STLA Medium' },
+            { ids: [33, 83, 84], label: 'base eléctrica del Fiat 500e' },
+            { ids: [135, 136], label: 'base técnica Folgore del GranTurismo y el GranCabrio', examples: true }
+        ];
+
+        function sharedVehicleBaseNote(carId) {
+            const base = sharedVehicleBases.find(group => group.ids.includes(carId));
+            if (!base) return '';
+
+            const priority = base.clusters?.find(cluster => cluster.includes(carId)) ?? base.closest ?? [];
+            const ids = [...new Set([...priority, ...base.ids])].filter(id => id !== carId);
+            const relatives = ids.map(id => carsData.find(car => car.id === id)).filter(Boolean);
+            if (!relatives.length) return '';
+
+            const names = relatives.map(car => `<a class="text-blue-700 underline underline-offset-2" href="/comparador/?car=${car.id}">${car.brand} ${car.model}</a>`);
+            const models = new Intl.ListFormat('es', { type: 'conjunction' }).format(names);
+            const description = base.examples
+                ? 'Son alternativas directas. El equipamiento, la carrocería y el precio pueden variar según la versión.'
+                : 'Comparten arquitectura. La batería, la autonomía y las medidas pueden variar según el modelo.';
+
+            return `<p class="mt-3 text-sm text-slate-600 leading-relaxed max-w-4xl"><strong>Base compartida.</strong>
+                Utiliza la ${base.label}, como ${models}. ${description}</p>`;
+        }
+
         function openCarModal(carId) {
 
             const car = carsData.find(c => c.id === carId);
@@ -938,6 +972,8 @@ let currentImageIndexes = {};
                         <p class="text-slate-600 leading-relaxed max-w-4xl">
                             ${car.description}
                         </p>
+
+                        ${sharedVehicleBaseNote(car.id)}
 
                         <div class="flex flex-wrap gap-2 mt-5">
                             ${idealFor}
