@@ -503,6 +503,7 @@ let currentImageIndexes = {};
 
 
         const sharedVehicleBases = [
+            { ids: [3, 34, 39, 15], label: 'plataforma AmpR Small de Renault y Nissan' },
             { ids: [47, 66, 118, 125], label: 'base de los monovolúmenes compactos de Stellantis', examples: true },
             { ids: [100, 110, 119, 126], label: 'base de las furgonetas compactas de Stellantis', examples: true },
             { ids: [99, 109, 120, 127], label: 'base de los monovolúmenes grandes de Stellantis', examples: true },
