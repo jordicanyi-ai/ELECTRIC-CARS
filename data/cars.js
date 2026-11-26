@@ -15851,6 +15851,7 @@ const carsData = [
   },
   {
     "id": 96,
+    "weightKg": 1571,
     "brand": "Citroën",
     "model": "ë-C4",
     "type": "Compacto",
@@ -17474,6 +17475,7 @@ const carsData = [
   },
   {
     "id": 123,
+    "weightKg": 1520,
     "brand": "Fiat",
     "model": "600e",
     "type": "SUV pequeño",
@@ -17550,6 +17552,7 @@ const carsData = [
     },
     "brandUrl": "https://www.fiat.es/",
     "sources": [
+      "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/600/nov-25/CATALOGO-FIAT-600e-297X210_Oct25.pdf",
       "https://www.fiat.es/modelos/fiat-600-electrico/caracteristicas-tecnicas",
       "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/600/giu-25/CATALOGO-FIAT-600e-297X210_Jun25.pdf",
       "https://www.media.stellantis.com/es-es/fiat/press/nuevo-fiat-600e-el-regreso-electrico-de-fiat-al-segmento-b"
@@ -17561,6 +17564,7 @@ const carsData = [
   },
   {
     "id": 124,
+    "weightKg": 487,
     "brand": "Fiat",
     "model": "Topolino",
     "type": "Cuadriciclo ligero",

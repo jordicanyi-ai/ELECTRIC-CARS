@@ -155,6 +155,22 @@ let currentImageIndexes = {};
                 </div>`).join('');
         }
 
+        function compareVehicleWeight(car, trim) {
+            const trimWeights = car.trims?.map(version => version.weightKg);
+            const values = trim
+                ? [trim.weightKg ?? car.weightKg]
+                : trimWeights?.length && trimWeights.every(value => Number.isFinite(value) && value > 0)
+                    ? trimWeights
+                    : [car.weightKg];
+            const weights = values.filter(value => Number.isFinite(value) && value > 0);
+            if (!weights.length) return '—';
+
+            const min = Math.min(...weights);
+            const max = Math.max(...weights);
+            const format = value => value.toLocaleString('es-ES', {useGrouping: 'always'});
+            return format(min) + (max > min ? '–' + format(max) : '') + ' kg';
+        }
+
         function getCompareSelection(car, trimIndex) {
             if (trimIndex === 'range' || trimIndex === undefined || trimIndex === null) {
                 return {
@@ -164,7 +180,7 @@ let currentImageIndexes = {};
                     trunk: car.trunk != null ? `${car.trunk} L` : '—',
                     seats: car.seats != null ? `${car.seats}` : '—',
                     charging: compactCompareCharging(car.chargingInfo?.dcMax || car.charging || '—'),
-                    dimensions: car.dimensions || '—',
+                    dimensions: car.dimensions || '—', weight: compareVehicleWeight(car),
                     warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
                     warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
                     warrantyCapacity: car.warranty?.capacity || 'No especificado'
@@ -179,7 +195,7 @@ let currentImageIndexes = {};
                 trunk: car.trunk != null ? `${car.trunk} L` : '—',
                 seats: car.seats != null ? `${car.seats}` : '—',
                 charging: compactCompareCharging(trim.charging || car.chargingInfo?.dcMax || car.charging || '—'),
-                dimensions: car.dimensions || '—',
+                dimensions: car.dimensions || '—', weight: compareVehicleWeight(car, trim),
                 warrantyVehicle: car.warranty?.vehicle || 'Pendiente de verificar',
                 warrantyBattery: car.warranty?.battery || 'Pendiente de verificar',
                 warrantyCapacity: car.warranty?.capacity || 'No especificado'
@@ -281,6 +297,7 @@ let currentImageIndexes = {};
                 ['Potencia', 'power', 'fa-bolt'], ['0-100 km/h', 'accel', 'fa-gauge-high'],
                 ['Maletero', 'trunk', 'fa-suitcase'], ['Plazas', 'seats', 'fa-user-group'],
                 ['Carga rápida', 'charging', 'fa-bolt-lightning'], ['Dimensiones', 'dimensions', 'fa-ruler-combined'],
+                ['Peso en vacío', 'weight', 'fa-weight-hanging'],
                 ['Garantía del vehículo', 'warrantyVehicle', 'fa-shield-halved'], ['Garantía de batería', 'warrantyBattery', 'fa-battery-full'],
                 ['Capacidad garantizada', 'warrantyCapacity', 'fa-percent']
             ];
