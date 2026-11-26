@@ -16934,35 +16934,114 @@ const carsData = [
     "model": "Frontera Electric",
     "type": "SUV pequeño",
     "underReview": true,
-    "seats": "Por confirmar",
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Por verificar",
-    "rangeText": "305 / 405 km WLTP",
+    "seats": 5,
+    "priceMin": 30700,
+    "priceMax": 34500,
+    "priceText": "30.700–34.500 €",
+    "rangeText": "305–405 km WLTP",
     "minRangeVal": 305,
     "maxRangeVal": 405,
     "batteryText": "44,2 / 54 kWh",
     "powerText": "113 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "100 kW CC",
-    "description": "Separar batería estándar y Extended Range. Confirmar plazas y autonomía por versión eléctrica.",
-    "highlights": [],
-    "considerations": [
-      "27.000 € Extended Range, PVP con IVA anunciado. Revisar vigencia."
+    "trunk": 460,
+    "acceleration": "12,1 s (44,2 kWh)",
+    "dimensions": "4.385 × 1.795 × 1.635–1.655 mm",
+    "charging": "100 kW CC · 7,4 kW CA",
+    "description": "SUV eléctrico de cinco plazas y 113 CV. Puede elegirse con la batería de 44,2 kWh o en versión Extended Range de 54 kWh, ambas en acabados Edition y GS.",
+    "highlights": [
+      "Maletero de 460 litros, ampliable a 1.600 litros.",
+      "Las dos baterías admiten 100 kW de carga rápida en corriente continua."
     ],
-    "idealFor": [],
-    "trims": [],
+    "considerations": [
+      "Precios de tarifa MY26 publicados por Opel España.",
+      "La aceleración de 12,1 s corresponde a la versión de 44,2 kWh."
+    ],
+    "idealFor": [
+      "Familias de hasta cinco personas",
+      "Trayectos urbanos e interurbanos"
+    ],
+    "trims": [
+      {
+        "name": "Edition · 44,2 kWh",
+        "price": "30.700 €",
+        "priceValue": 30700,
+        "battery": "44,2 kWh",
+        "power": "113 CV",
+        "range": "305 km WLTP",
+        "rangeValue": 305,
+        "accel": "12,1 s",
+        "charging": "100 kW CC · 7,4 kW CA"
+      },
+      {
+        "name": "GS · 44,2 kWh",
+        "price": "32.400 €",
+        "priceValue": 32400,
+        "battery": "44,2 kWh",
+        "power": "113 CV",
+        "range": "305 km WLTP",
+        "rangeValue": 305,
+        "accel": "12,1 s",
+        "charging": "100 kW CC · 7,4 kW CA"
+      },
+      {
+        "name": "Edition Extended Range · 54 kWh",
+        "price": "32.800 €",
+        "priceValue": 32800,
+        "battery": "54 kWh",
+        "power": "113 CV",
+        "range": "405 km WLTP",
+        "rangeValue": 405,
+        "accel": "Por verificar",
+        "charging": "100 kW CC · 7,4 kW CA"
+      },
+      {
+        "name": "GS Extended Range · 54 kWh",
+        "price": "34.500 €",
+        "priceValue": 34500,
+        "battery": "54 kWh",
+        "power": "113 CV",
+        "range": "405 km WLTP",
+        "rangeValue": 405,
+        "accel": "Por verificar",
+        "charging": "100 kW CC · 7,4 kW CA"
+      }
+    ],
     "images": [
       "img/cars/opel-frontera-electric/opel-frontera-electric_01.webp",
       "img/cars/opel-frontera-electric/opel-frontera-electric_02.webp",
       "img/cars/opel-frontera-electric/opel-frontera-electric_03.webp",
       "img/cars/opel-frontera-electric/opel-frontera-electric_04.webp",
       "img/cars/opel-frontera-electric/opel-frontera-electric_05.webp",
-      "img/cars/opel-frontera-electric/opel-frontera-electric_06.webp"
+      "img/cars/opel-frontera-electric/opel-frontera-electric_06.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_07.webp",
+      "img/cars/opel-frontera-electric/opel-frontera-electric_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Effekt Blue",
+        "hex": "#205896"
+      },
+      {
+        "name": "Kanyon Orange",
+        "hex": "#d25728"
+      },
+      {
+        "name": "Arktis White",
+        "hex": "#f4f4f2"
+      },
+      {
+        "name": "Kristall Silver",
+        "hex": "#a6aab0"
+      },
+      {
+        "name": "Karbon Black",
+        "hex": "#252528"
+      },
+      {
+        "name": "Khaki Green (según acabado)",
+        "hex": "#7b8071"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -16975,11 +17054,13 @@ const carsData = [
     },
     "brandUrl": "https://www.opel.es/",
     "sources": [
-      "https://www.opel.es/hub/datasheet/frontera-my26-es.html"
+      "https://www.opel.es/hub/datasheet/frontera-my26-es.html",
+      "https://www.media.stellantis.com/em-en/opel/press/opel-is-electric-dealership-debut-for-new-opel-grandland-electric",
+      "https://www.media.stellantis.com/em-en/opel/press/press-kit-new-opel-frontera"
     ],
     "dataStatus": {
       "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+      "status": "Tarifa MY26, medidas, capacidad de carga y autonomías verificadas. Aceleración de la versión Extended Range pendiente de confirmar."
     }
   },
   {
@@ -17318,17 +17399,46 @@ const carsData = [
     "maxRangeVal": 400,
     "batteryText": "54 kWh",
     "powerText": "156 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "100 kW CC",
-    "description": "SUV de cinco plazas. Los acabados 600e y La Prima comparten motor.",
-    "highlights": [],
-    "considerations": [
-      "29.900 € 600e / 36.600 € La Prima, recomendados en ficha Fiat."
+    "trunk": 360,
+    "acceleration": "9,0 s",
+    "dimensions": "4.178 × 1.779 × 1.525 mm",
+    "charging": "100 kW CC · 11 kW CA",
+    "description": "SUV eléctrico de cinco plazas con tracción delantera, motor de 156 CV y batería de 54 kWh.",
+    "highlights": [
+      "Maletero de 360 litros.",
+      "Carga rápida de 100 kW y cargador trifásico de 11 kW."
     ],
-    "idealFor": [],
-    "trims": [],
+    "considerations": [
+      "La ficha técnica y el catálogo de Fiat corresponden a publicaciones distintas. El catálogo técnico de junio de 2025 distingue los acabados (RED) y La Prima."
+    ],
+    "idealFor": [
+      "Uso urbano e interurbano",
+      "Familias que buscan un SUV compacto"
+    ],
+    "trims": [
+      {
+        "name": "600e · tarifa de referencia",
+        "price": "29.900 €",
+        "priceValue": 29900,
+        "battery": "54 kWh",
+        "power": "156 CV",
+        "range": "400 km WLTP",
+        "rangeValue": 400,
+        "accel": "9,0 s",
+        "charging": "100 kW CC · 11 kW CA"
+      },
+      {
+        "name": "La Prima · tarifa de referencia",
+        "price": "36.600 €",
+        "priceValue": 36600,
+        "battery": "54 kWh",
+        "power": "156 CV",
+        "range": "400 km WLTP",
+        "rangeValue": 400,
+        "accel": "9,0 s",
+        "charging": "100 kW CC · 11 kW CA"
+      }
+    ],
     "images": [
       "img/cars/fiat-600e/fiat-600e_01.webp",
       "img/cars/fiat-600e/fiat-600e_02.webp",
@@ -17336,7 +17446,8 @@ const carsData = [
       "img/cars/fiat-600e/fiat-600e_04.webp",
       "img/cars/fiat-600e/fiat-600e_05.webp",
       "img/cars/fiat-600e/fiat-600e_06.webp",
-      "img/cars/fiat-600e/fiat-600e_07.webp"
+      "img/cars/fiat-600e/fiat-600e_07.webp",
+      "img/cars/fiat-600e/fiat-600e_08.webp"
     ],
     "colors": [],
     "videos": [
@@ -17351,11 +17462,13 @@ const carsData = [
     },
     "brandUrl": "https://www.fiat.es/",
     "sources": [
-      "https://www.fiat.es/modelos/fiat-600-electrico/caracteristicas-tecnicas"
+      "https://www.fiat.es/modelos/fiat-600-electrico/caracteristicas-tecnicas",
+      "https://www.fiat.es/content/dam/fiat2023/es/pdf/pricelist/600/giu-25/CATALOGO-FIAT-600e-297X210_Jun25.pdf",
+      "https://www.media.stellantis.com/es-es/fiat/press/nuevo-fiat-600e-el-regreso-electrico-de-fiat-al-segmento-b"
     ],
     "dataStatus": {
       "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+      "status": "Dimensiones, maletero, potencia, aceleración y carga verificados. Precios orientativos pendientes de contrastar por acabado MY26."
     }
   },
   {
@@ -17365,23 +17478,55 @@ const carsData = [
     "type": "Cuadriciclo ligero",
     "underReview": true,
     "seats": 2,
-    "priceMin": null,
+    "priceMin": 8506,
     "priceMax": null,
-    "priceText": "Por verificar",
+    "priceText": "Desde 8.506 € al contado",
     "rangeText": "75 km WMTC",
     "minRangeVal": null,
     "maxRangeVal": null,
     "batteryText": "5,4 kWh",
-    "powerText": "8 (6 kW)",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "Sin carga rápida",
-    "description": "Dos plazas, 45 km/h. Agrupar Topolino y Dolcevita como variantes.",
-    "highlights": [],
-    "considerations": [],
-    "idealFor": [],
-    "trims": [],
+    "powerText": "8,2 CV (6 kW)",
+    "trunk": 63,
+    "acceleration": "No aplicable (velocidad máxima de 45 km/h)",
+    "dimensions": "2.535 × 1.409 × 1.530 mm (retrovisores plegados)",
+    "charging": "Enchufe doméstico de 230 V · sin carga rápida CC",
+    "description": "Cuadriciclo ligero eléctrico de dos plazas con 75 km de autonomía WMTC y velocidad máxima de 45 km/h.",
+    "highlights": [
+      "Dos plazas en 2,54 m de longitud.",
+      "Se recarga en un enchufe doméstico de 230 V."
+    ],
+    "considerations": [
+      "Los 63 litros corresponden al espacio de almacenamiento en la zona de los pies del acompañante.",
+      "Oferta al contado de Stellantis & You para el Topolino, válida hasta el 30/11/2026.",
+      "La galería incluye imágenes del Topolino y del Topolino Dolcevita."
+    ],
+    "idealFor": [
+      "Trayectos urbanos cortos"
+    ],
+    "trims": [
+      {
+        "name": "Topolino",
+        "price": "8.506 €",
+        "priceValue": 8506,
+        "battery": "5,4 kWh",
+        "power": "8,2 CV (6 kW)",
+        "range": "75 km WMTC",
+        "rangeValue": 75,
+        "accel": "No aplicable",
+        "charging": "Enchufe doméstico de 230 V · sin carga rápida CC"
+      },
+      {
+        "name": "Topolino Dolcevita",
+        "price": "Precio por verificar",
+        "priceValue": null,
+        "battery": "5,4 kWh",
+        "power": "8,2 CV (6 kW)",
+        "range": "75 km WMTC",
+        "rangeValue": 75,
+        "accel": "No aplicable",
+        "charging": "Enchufe doméstico de 230 V · sin carga rápida CC"
+      }
+    ],
     "images": [
       "img/cars/fiat-topolino/fiat-topolino_01.webp",
       "img/cars/fiat-topolino/fiat-topolino_02.webp",
@@ -17392,7 +17537,12 @@ const carsData = [
       "img/cars/fiat-topolino/fiat-topolino_07.webp",
       "img/cars/fiat-topolino/fiat-topolino_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Verde Vita",
+        "hex": "#a8c6b3"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -17405,11 +17555,14 @@ const carsData = [
     },
     "brandUrl": "https://www.fiat.es/",
     "sources": [
-      "https://www.fiat.es/modelos/fiat-topolino/technical-data"
+      "https://store.fiat.es/media/pdf/Manual_de_uso_y_de_mantenimiento.pdf",
+      "https://www.stellantisandyou.com/es/nuestras-ofertas/202611-topolino",
+      "https://www.media.stellantis.com/es-es/fiat/press/llega-el-topolino-el-simpatico-y-100-electrico-de-fiat",
+      "https://www.media.stellantis.com/uploads/nl/attachment/3019/consumentenprijslijstfiattopolinoserie3413februari2026-698f20fceeb70.pdf"
     ],
     "dataStatus": {
       "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
+      "status": "Dimensiones, prestaciones y precio al contado del Topolino verificados. Precio del Dolcevita pendiente de confirmar."
     }
   },
   {
