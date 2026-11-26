@@ -499,6 +499,30 @@ body[data-catalogue-view="ranking"] #quick-mobile{display:none!important}
 .homepage-explore-grid>a:hover,.homepage-explore-grid>a:focus-visible{border:2px solid #285cf2!important;box-shadow:0 8px 24px rgba(35,83,205,.15);transform:translateY(-2px)}
 body.home-only .catalogue-main,body.home-only #compare-bar,body.home-only #car-modal,body.home-only #photo-lightbox,body.home-only #compare-modal{display:none!important}
 body.catalogue-only .homepage-hero,body.catalogue-only .homepage-explore{display:none!important}
+#cars-grid .car-open{
+    flex:1 0 auto;
+    padding-inline:8px;
+    background:#fff;
+    border-color:#bfd0e2;
+    color:#315c99;
+    white-space:nowrap
+}
+#cars-grid .car-open i{margin-left:3px}
+#cars-grid .car-open:hover{background:#edf3ff}
+#cars-grid .car-compare{
+    flex:1.55 0 auto;
+    padding-inline:10px;
+    background:var(--electric-blue);
+    border-color:var(--electric-blue);
+    color:#fff;
+    font-size:13px;
+    font-weight:800
+}
+#cars-grid .car-compare:hover{background:#1846b3}
+#cars-grid .car-compare.compare-selected{
+    background:#edf3ff!important;
+    color:#1846b3!important
+}
 </style>
 <style id="brand-embed-styles">
 html.brand-embed-root .site-header,html.brand-embed-root header.site-header,
