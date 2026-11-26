@@ -15854,25 +15854,61 @@ const carsData = [
     "brand": "Citroën",
     "model": "ë-C4",
     "type": "Compacto",
-    "underReview": true,
-    "seats": "Por confirmar",
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Por verificar",
-    "rangeText": "354 / 416 km WLTP",
-    "minRangeVal": 354,
+    "seats": 5,
+    "priceMin": 31540,
+    "priceMax": 32540,
+    "priceText": "31.540–32.540 €",
+    "rangeText": "342–416 km WLTP",
+    "minRangeVal": 342,
     "maxRangeVal": 416,
     "batteryText": "50 / 54 kWh",
     "powerText": "136 / 156 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "100 kW CC",
-    "description": "Compacto de cinco puertas. Identificar cada versión como Comfort Range o Extended Range.",
-    "highlights": [],
-    "considerations": [],
-    "idealFor": [],
-    "trims": [],
+    "trunk": 380,
+    "acceleration": "9,1–9,9 s",
+    "dimensions": "4.350 × 1.800 × 1.525 mm",
+    "charging": "100 kW CC · 7,4 / 11 kW CA",
+    "description": "Compacto eléctrico de cinco puertas y cinco plazas, con tracción delantera y suspensión Citroën Advanced Comfort. El ë-C4 actualizado comercializado desde 2025 se ofrece con dos combinaciones de motor y batería.",
+    "highlights": [
+      "Suspensión con amortiguadores progresivos hidráulicos, orientada al confort.",
+      "Maletero de 380 litros en una carrocería de 4,35 metros.",
+      "Las dos motorizaciones admiten carga rápida de 100 kW CC."
+    ],
+    "considerations": [
+      "Los rangos WLTP corresponden a la ficha técnica y varían con la configuración.",
+      "Los 11 kW en CA requieren el cargador trifásico correspondiente. Comprueba el equipamiento de la unidad.",
+      "El precio al contado del configurador varía según el acabado, el color y los extras."
+    ],
+    "idealFor": [
+      "Uso diario",
+      "Viajes con la batería de 54 kWh",
+      "Conducción orientada al confort"
+    ],
+    "trims": [
+      {
+        "name": "136 CV · Autonomía estándar",
+        "price": "31.540 €",
+        "priceValue": 31540,
+        "battery": "50 kWh",
+        "batteryType": "NMC",
+        "power": "136 CV (100 kW)",
+        "range": "342–354 km WLTP",
+        "rangeValue": 354,
+        "accel": "9,9 s",
+        "charging": "100 kW CC · 20–80 % en 25 min"
+      },
+      {
+        "name": "156 CV · Autonomía ampliada",
+        "price": "32.540 €",
+        "priceValue": 32540,
+        "battery": "54 kWh",
+        "batteryType": "NMC",
+        "power": "156 CV (115 kW)",
+        "range": "414–416 km WLTP",
+        "rangeValue": 416,
+        "accel": "9,1 s",
+        "charging": "100 kW CC · 20–80 % en 27 min"
+      }
+    ],
     "images": [
       "img/cars/citroen-e-c4/citroen-e-c4_01.webp",
       "img/cars/citroen-e-c4/citroen-e-c4_02.webp",
@@ -15883,7 +15919,32 @@ const carsData = [
       "img/cars/citroen-e-c4/citroen-e-c4_07.webp",
       "img/cars/citroen-e-c4/citroen-e-c4_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Negro Perla Nera",
+        "hex": "#232325"
+      },
+      {
+        "name": "Verde Manhattan",
+        "hex": "#586961"
+      },
+      {
+        "name": "Azul Eclipse",
+        "hex": "#253c58"
+      },
+      {
+        "name": "Blanco Okenite",
+        "hex": "#e9e7e1"
+      },
+      {
+        "name": "Gris Mercury",
+        "hex": "#777c81"
+      },
+      {
+        "name": "Rojo Elixir",
+        "hex": "#aa2839"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -15892,16 +15953,43 @@ const carsData = [
     ],
     "brandInfo": {
       "logo": "img/brands/citroen.png",
-      "group": "Stellantis"
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Citroën es una marca francesa del grupo Stellantis. El ë-C4 se fabrica en Madrid."
     },
-    "brandUrl": "https://www.citroen.es/",
+    "brandUrl": "https://www.citroen.es/vehiculos-citroen/e-c4.html",
     "sources": [
-      "https://www.citroen.es/vehiculos-citroen/e-c4.html"
+      "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT-NUEVO-C4.pdf",
+      "https://www.citroen.es/vehiculos-citroen/e-c4.html",
+      "https://store.citroen.es/selector/configurable/c4-berlina-5-p?channel=b2c",
+      "https://www.citroen.es/vehiculos-citroen/e-c4/gallery-fall-in-love.modalwindow.html",
+      "https://www.citroen.es/posventa/citroen-we-care.html",
+      "https://www.citroen.es/gama-electrificada.html"
     ],
     "dataStatus": {
       "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
-    }
+      "status": "Ficha contrastada con la documentación y el configurador de Citroën España."
+    },
+    "launchYear": 2025,
+    "batteryType": "NMC",
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Referencias al contado con IVA del configurador español, consultado el 26/11/2026 para las dos motorizaciones. La horquilla muestra esas configuraciones de referencia y puede variar por acabado y opciones."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "7,4 kW monofásica / 11 kW trifásica, según cargador a bordo",
+      "fastChargeText": "20–80 %: 25 min (50 kWh) o 27 min (54 kWh), según Citroën",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años de garantía legal para consumidores en España. Citroën We Care hasta 8 años / 160.000 km, sujeto al mantenimiento y a las condiciones del programa.",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % de capacidad",
+      "source": "https://www.citroen.es/posventa/citroen-we-care.html"
+    },
+    "colorAvailability": "Colores del configurador español. La disponibilidad depende del acabado."
   },
   {
     "id": 97,
