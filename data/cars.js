@@ -16143,27 +16143,62 @@ const carsData = [
     "brand": "Citroën",
     "model": "ë-C5 Aircross",
     "type": "SUV",
-    "underReview": true,
     "seats": 5,
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Por verificar",
-    "rangeText": "520 / 677 km WLTP",
-    "minRangeVal": 520,
-    "maxRangeVal": 677,
-    "batteryText": "73 / 97 kWh",
+    "priceMin": 36890,
+    "priceMax": 47590,
+    "priceText": "36.890–47.590 €",
+    "rangeText": "517–678 km WLTP",
+    "minRangeVal": 517,
+    "maxRangeVal": 678,
+    "batteryText": "73 / 97 kWh útiles",
     "powerText": "210 / 230 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "Por confirmar",
-    "description": "SUV familiar con autonomía estándar o extendida.",
-    "highlights": [],
-    "considerations": [
-      "39.990 € desde, precio anunciado. Validar condiciones antes de publicarlo."
+    "trunk": 565,
+    "acceleration": "8,8–8,9 s",
+    "dimensions": "4.652 × 1.870 × 1.691 mm",
+    "charging": "160 kW CC · 11 kW CA",
+    "description": "SUV eléctrico de cinco plazas y tracción delantera. Fabricado en Rennes, Francia. Comparte la plataforma STLA Medium con el Peugeot E-3008 y el Opel Grandland Electric.",
+    "highlights": [
+      "Maletero de 565 litros VDA y 1.668 litros con los asientos traseros abatidos.",
+      "Suspensión con amortiguadores progresivos hidráulicos y amplio espacio en las plazas traseras.",
+      "La versión Long Range de 97 kWh llega a 678 km WLTP en la configuración española de referencia."
     ],
-    "idealFor": [],
-    "trims": [],
+    "considerations": [
+      "Las dos versiones superan las dos toneladas.",
+      "La cifra de 650 litros anunciada por Citroën usa una medición de volumen distinta de los 565 litros VDA.",
+      "El consumo homologado de las versiones de referencia es de 17,0 a 17,9 kWh/100 km."
+    ],
+    "idealFor": [
+      "Familias que necesitan un maletero amplio",
+      "Viajes largos con la batería de 97 kWh"
+    ],
+    "trims": [
+      {
+        "name": "210 CV · Comfort Range",
+        "price": "36.890 €",
+        "priceValue": 36890,
+        "battery": "73 kWh útiles",
+        "batteryType": "NMC",
+        "power": "210 CV (157 kW)",
+        "range": "517–520 km WLTP",
+        "rangeValue": 520,
+        "weightKg": 2184,
+        "accel": "8,9 s",
+        "charging": "160 kW CC · 20–80 % en 30 min"
+      },
+      {
+        "name": "230 CV · Long Range",
+        "price": "47.590 €",
+        "priceValue": 47590,
+        "battery": "97 kWh útiles",
+        "batteryType": "NMC",
+        "power": "230 CV (170 kW)",
+        "range": "677–678 km WLTP",
+        "rangeValue": 678,
+        "weightKg": 2246,
+        "accel": "8,8 s",
+        "charging": "160 kW CC · 20–80 % en 27 min"
+      }
+    ],
     "images": [
       "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_01.webp",
       "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_02.webp",
@@ -16174,7 +16209,32 @@ const carsData = [
       "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_07.webp",
       "img/cars/citroen-e-c5-aircross/citroen-e-c5-aircross_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Rojo Rubí",
+        "hex": "#9e283c"
+      },
+      {
+        "name": "Azul Eclipse",
+        "hex": "#253c58"
+      },
+      {
+        "name": "Negro Perla",
+        "hex": "#232325"
+      },
+      {
+        "name": "Blanco Okenite",
+        "hex": "#e9e7e1"
+      },
+      {
+        "name": "Gris Platino",
+        "hex": "#68696a"
+      },
+      {
+        "name": "Verde Astoria",
+        "hex": "#687061"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -16183,16 +16243,47 @@ const carsData = [
     ],
     "brandInfo": {
       "logo": "img/brands/citroen.png",
-      "group": "Stellantis"
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Citroën es una marca francesa de Stellantis. El ë-C5 Aircross se fabrica en Rennes."
     },
-    "brandUrl": "https://www.citroen.es/",
+    "brandUrl": "https://www.citroen.es/vehiculos-citroen/nuevo-e-c5-aircross.html",
     "sources": [
-      "https://www.media.stellantis.com/es-es/citroen/press/hybrid-plug-in-hybrid-o-electrico-la-electrificacion-sin-dudas-con-el-nuevo-citroen-c5-aircross"
+      "https://www.citroen.es/vehiculos-citroen/nuevo-e-c5-aircross.html",
+      "https://www.media.stellantis.com/es-es/citroen/press/hybrid-plug-in-hybrid-o-electrico-la-electrificacion-sin-dudas-con-el-nuevo-citroen-c5-aircross",
+      "https://www.citroen.es/universo-citroen/noticias/nuevo-c5-aircross-mas-espacio-conform-y-tecnologia.html",
+      "https://store.citroen.es/selector/configurable/nuevo-c5-aircross-suv/you/electrico-154-kw-210-cv-73kwh-autonomia-estandar-automatica-electrico/gris-platino/ambiente-urban-grey-con-asientos-advanced-comfort-en-tela-negra-y-gris",
+      "https://www.km77.com/coches/citroen/c5-aircross/2026/estandar/electrico/e-c5-aircross-210-cv-73-kwh/datos",
+      "https://www.km77.com/coches/citroen/c5-aircross/2026/estandar/electrico/e-c5-aircross-230-cv-97-kwh/datos",
+      "https://ev-database.org/car/3231/Citroen-C5-Aircross-Long-Range",
+      "https://ev-database.org/uk/car/3230/Citroen-C5-Aircross-Comfort-Range"
     ],
     "dataStatus": {
-      "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
-    }
+      "checkedAt": "27/11/2026",
+      "status": "Autonomía WLTP contrastada por acabado. Para el 73 kWh se utiliza el dato homologado de Citroën (520 km en el You), ya que otra pantalla del configurador muestra 582 km. Los pesos corresponden al You de 73 kWh y al Max de 97 kWh."
+    },
+    "launchYear": 2025,
+    "weightKg": 2184,
+    "batteryType": "NMC",
+    "frunkText": "Sin maletero delantero",
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Precios de referencia al contado del configurador español. Incluyen el descuento comercial y no se han aplicado las ayudas anunciadas por separado. Varían según acabado y equipamiento."
+    },
+    "chargingInfo": {
+      "dcMax": "160 kW",
+      "acMax": "11 kW trifásica de serie",
+      "fastChargeText": "20–80 %: 30 min (73 kWh) o 27 min (97 kWh), según Citroën",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años de garantía legal para consumidores en España. Citroën We Care hasta 8 años / 160.000 km, sujeto al mantenimiento y a las condiciones del programa.",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % de capacidad",
+      "source": "https://www.citroen.es/posventa/citroen-we-care.html"
+    },
+    "colorAvailability": "Colores del configurador español. La disponibilidad depende del acabado."
   },
   {
     "id": 99,
