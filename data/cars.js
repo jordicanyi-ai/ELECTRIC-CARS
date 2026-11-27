@@ -18476,25 +18476,72 @@ const carsData = [
     "brand": "Leapmotor",
     "model": "C10",
     "type": "SUV",
-    "underReview": true,
-    "seats": "Por confirmar",
+    "seats": 5,
     "priceMin": null,
     "priceMax": null,
-    "priceText": "Por verificar",
-    "rangeText": "420 / 510 / 437 km WLTP",
+    "priceText": "Consultar tarifa al contado",
+    "rangeText": "420–510 km WLTP",
     "minRangeVal": 420,
     "maxRangeVal": 510,
     "batteryText": "69,9 / 81,9 kWh",
     "powerText": "218 / 299 / 598 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "Por confirmar",
+    "trunk": 485,
+    "acceleration": "4,01–7,5 s",
+    "dimensions": "4.739 × 1.900 × 1.680 mm",
+    "charging": "84–180 kW CC · 6,6–11 kW CA",
     "description": "El C10 fue el primer modelo que Leapmotor diseñó para el mercado mundial. Llegó a Europa en 2024 junto al pequeño T03 y hoy se sitúa por encima del B10 como el SUV familiar de la marca. Su gama eléctrica va del Pro de 218 CV al ProMax AWD de 598 CV, mientras que el ProMax de tracción trasera ofrece la mayor autonomía, con 510 km WLTP.",
-    "highlights": [],
-    "considerations": [],
-    "idealFor": [],
-    "trims": [],
+    "highlights": [
+      "El ProMax con tracción trasera homologa 510 km WLTP.",
+      "Maletero trasero de 485 litros según el catálogo de Leapmotor España y compartimento delantero de 32 litros.",
+      "Techo panorámico de cristal fijo con cortinilla eléctrica."
+    ],
+    "considerations": [
+      "El Pro admite 84 kW de carga rápida. Los ProMax y ProMax AWD alcanzan 180 kW.",
+      "Los tiempos de carga publicados corresponden al tramo del 30 al 80 %.",
+      "Los precios anunciados con financiación, ayudas o venta del CAE tienen condiciones propias."
+    ],
+    "idealFor": [
+      "Familias que buscan un SUV eléctrico de cinco plazas",
+      "Viajes con el ProMax de tracción trasera"
+    ],
+    "trims": [
+      {
+        "name": "Pro · Tracción trasera",
+        "price": "Consultar tarifa al contado",
+        "battery": "69,9 kWh",
+        "batteryType": "LFP",
+        "power": "218 CV (160 kW)",
+        "range": "420 km WLTP",
+        "rangeValue": 420,
+        "weightKg": 1980,
+        "accel": "7,5 s",
+        "charging": "84 kW CC · 30–80 % en 30 min"
+      },
+      {
+        "name": "ProMax · Tracción trasera",
+        "price": "Consultar tarifa al contado",
+        "battery": "81,9 kWh",
+        "batteryType": "LFP",
+        "power": "299 CV (220 kW)",
+        "range": "510 km WLTP",
+        "rangeValue": 510,
+        "weightKg": 2061,
+        "accel": "6,64 s",
+        "charging": "180 kW CC · 30–80 % en 22 min"
+      },
+      {
+        "name": "ProMax AWD · Tracción integral",
+        "price": "Consultar tarifa al contado",
+        "battery": "81,9 kWh",
+        "batteryType": "LFP",
+        "power": "598 CV (440 kW)",
+        "range": "437 km WLTP",
+        "rangeValue": 437,
+        "weightKg": 2191,
+        "accel": "4,01 s",
+        "charging": "180 kW CC · 30–80 % en 22 min"
+      }
+    ],
     "images": [
       "img/cars/leapmotor-c10/leapmotor-c10_01.webp",
       "img/cars/leapmotor-c10/leapmotor-c10_02.webp",
@@ -18505,7 +18552,28 @@ const carsData = [
       "img/cars/leapmotor-c10/leapmotor-c10_07.webp",
       "img/cars/leapmotor-c10/leapmotor-c10_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Blanco Perla",
+        "hex": "#e9e8e2"
+      },
+      {
+        "name": "Verde Jade",
+        "hex": "#233d31"
+      },
+      {
+        "name": "Gris Tierra",
+        "hex": "#9d9f9c"
+      },
+      {
+        "name": "Gris Medianoche",
+        "hex": "#42464a"
+      },
+      {
+        "name": "Negro Metálico",
+        "hex": "#202124"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -18514,16 +18582,38 @@ const carsData = [
     ],
     "brandInfo": {
       "logo": "img/brands/leapmotor.png",
-      "group": "Leapmotor International"
+      "group": "Leapmotor International",
+      "note": "Marca china. En Europa comercializa a través de Leapmotor International, empresa conjunta con Stellantis."
     },
     "brandUrl": "https://www.leapmotor.net/es-es/modelos/c10",
     "sources": [
-      "https://www.leapmotor.net/docs/lpmiwebsiteeseslibraries/c10-documents/5750-25_leapmotor_brochure_c10_es_junio_af.pdf?sf_site=2eb2cf99-4308-475d-8276-23e21666ca20&sf_site_temp=true"
+      "https://www.leapmotor.net/docs/lpmiwebsiteeseslibraries/c10-documents/5750-25_leapmotor_brochure_c10_es_junio_af.pdf?sf_site=2eb2cf99-4308-475d-8276-23e21666ca20&sf_site_temp=true",
+      "https://www.leapmotor.net/es-es/modelos/c10",
+      "https://lpwebsite-prod-s3cdn.leapmotor-international.com/public/en-cms/1778670710246GARANTISYSERVICIOS.pdf",
+      "https://www.leapmotor.net/docs/lpmiwebsitededelibraries/c10-documents/preisliste_leapmotor_c10_my25-26_d_20260701_v20260701.pdf",
+      "https://www.media.stellantis.com/em-en/corporate/press/leapmotor-international-s-first-european-media-drive-in-milan"
     ],
     "dataStatus": {
-      "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
-    }
+      "checkedAt": "27/11/2026",
+      "status": "Versiones BEV del catálogo español. Tarifa al contado de toda la gama pendiente de confirmar."
+    },
+    "launchYear": 2024,
+    "weightKg": 1980,
+    "batteryType": "LFP",
+    "frunkText": "32 L",
+    "chargingInfo": {
+      "dcMax": "84 kW (Pro) / 180 kW (ProMax y AWD)",
+      "acMax": "6,6 kW (Pro) / 11 kW (ProMax y AWD)",
+      "fastChargeText": "30–80 %: 30 min en el Pro y 22 min en los ProMax",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "4 años / 100.000 km, según condiciones de Leapmotor",
+      "battery": "8 años / 160.000 km",
+      "capacity": "80 % de capacidad",
+      "source": "https://lpwebsite-prod-s3cdn.leapmotor-international.com/public/en-cms/1778670710246GARANTISYSERVICIOS.pdf"
+    },
+    "colorAvailability": "Colores del catálogo español. La disponibilidad depende de la versión."
   },
   {
     "id": 138,
