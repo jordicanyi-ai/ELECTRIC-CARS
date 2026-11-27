@@ -15997,25 +15997,63 @@ const carsData = [
     "brand": "Citroën",
     "model": "ë-C4 X",
     "type": "Berlina fastback",
-    "underReview": true,
-    "seats": "Por confirmar",
-    "priceMin": null,
-    "priceMax": null,
-    "priceText": "Por verificar",
-    "rangeText": "360 / 427 km WLTP",
-    "minRangeVal": 360,
+    "seats": 5,
+    "priceMin": 30090,
+    "priceMax": 32540,
+    "priceText": "30.090–32.540 €",
+    "rangeText": "352–427 km WLTP",
+    "minRangeVal": 352,
     "maxRangeVal": 427,
     "batteryText": "50 / 54 kWh",
     "powerText": "136 / 156 CV",
-    "trunk": null,
-    "acceleration": "Por confirmar",
-    "dimensions": "Por confirmar",
-    "charging": "100 kW CC",
-    "description": "Berlina de cuatro puertas. Mantener ficha propia por carrocería y maletero.",
-    "highlights": [],
-    "considerations": [],
-    "idealFor": [],
-    "trims": [],
+    "trunk": 510,
+    "acceleration": "9,2–10,0 s",
+    "dimensions": "4.580 × 1.800 × 1.525 mm",
+    "charging": "100 kW CC · 7,4 / 11 kW CA",
+    "description": "Berlina eléctrica fastback de cuatro puertas y cinco plazas, con tracción delantera y suspensión Citroën Advanced Comfort. La actualización comercializada desde 2025 ofrece dos motorizaciones eléctricas y un maletero de 510 litros.",
+    "highlights": [
+      "Maletero de 510 litros y buen espacio para las piernas en la segunda fila.",
+      "Suspensión con amortiguadores progresivos hidráulicos.",
+      "La batería de 54 kWh ofrece entre 424 y 427 km de autonomía homologada."
+    ],
+    "considerations": [
+      "La tapa del maletero abre por debajo de la luneta.",
+      "Los 11 kW de carga en CA requieren el cargador trifásico correspondiente.",
+      "La autonomía y el precio varían según el acabado."
+    ],
+    "idealFor": [
+      "Viajes en familia",
+      "Trayectos diarios y de media distancia",
+      "Conducción orientada al confort"
+    ],
+    "trims": [
+      {
+        "name": "136 CV · Autonomía estándar",
+        "price": "30.090 €",
+        "priceValue": 30090,
+        "battery": "50 kWh brutos · 46,2 kWh útiles",
+        "batteryType": "NMC",
+        "power": "136 CV (100 kW)",
+        "range": "352–360 km WLTP",
+        "rangeValue": 360,
+        "accel": "10,0 s",
+        "charging": "100 kW CC · 20–80 % en 25 min",
+        "weightKg": 1577
+      },
+      {
+        "name": "156 CV · Autonomía ampliada",
+        "price": "32.540 €",
+        "priceValue": 32540,
+        "battery": "54 kWh brutos · 50,8 kWh útiles",
+        "batteryType": "NMC",
+        "power": "156 CV (115 kW)",
+        "range": "424–427 km WLTP",
+        "rangeValue": 427,
+        "accel": "9,2 s",
+        "charging": "100 kW CC · 20–80 % en 27 min",
+        "weightKg": 1577
+      }
+    ],
     "images": [
       "img/cars/citroen-e-c4-x/citroen-e-c4-x_01.webp",
       "img/cars/citroen-e-c4-x/citroen-e-c4-x_02.webp",
@@ -16026,7 +16064,32 @@ const carsData = [
       "img/cars/citroen-e-c4-x/citroen-e-c4-x_07.webp",
       "img/cars/citroen-e-c4-x/citroen-e-c4-x_08.webp"
     ],
-    "colors": [],
+    "colors": [
+      {
+        "name": "Negro Perla Nera",
+        "hex": "#232325"
+      },
+      {
+        "name": "Verde Manhattan",
+        "hex": "#586961"
+      },
+      {
+        "name": "Azul Eclipse",
+        "hex": "#253c58"
+      },
+      {
+        "name": "Blanco Okenite",
+        "hex": "#e9e7e1"
+      },
+      {
+        "name": "Gris Mercury",
+        "hex": "#777c81"
+      },
+      {
+        "name": "Rojo Elixir",
+        "hex": "#aa2839"
+      }
+    ],
     "videos": [
       {
         "title": "Buscar vídeos en YouTube",
@@ -16035,16 +16098,45 @@ const carsData = [
     ],
     "brandInfo": {
       "logo": "img/brands/citroen.png",
-      "group": "Stellantis"
+      "group": "Stellantis",
+      "relation": "Marca del grupo",
+      "note": "Citroën es una marca francesa del grupo Stellantis. El ë-C4 X se fabrica en Madrid."
     },
-    "brandUrl": "https://www.citroen.es/",
+    "brandUrl": "https://www.citroen.es/vehiculos-citroen/e-c4-x.html",
     "sources": [
-      "https://www.citroen.es/vehiculos-citroen/e-c4-x.html"
+      "https://www.citroen.es/vehiculos-citroen/e-c4-x.html",
+      "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT-NUEVO-C4X.pdf",
+      "https://www.citroen.fr/content/dam/citroen/france/showroom/b2c/technical-file/11-25/CT-Nouvelle-C4-X-Nouvelle-e-C4X.pdf",
+      "https://store.citroen.es/selector/configurable/nuevo-c4-x-4-puertas/plus/electrico-136cv-autonomia-estandar-automatica-electrico/negro-perla-nera/urban-grey",
+      "https://www.citroen.es/vehiculos-citroen/e-c4-x/gallery-fall-in-love.modalwindow.html",
+      "https://www.citroen.es/posventa/citroen-we-care.html"
     ],
     "dataStatus": {
-      "checkedAt": "26/11/2026",
-      "status": "Ficha en revisión. Los datos pendientes y las referencias de precio se indican en la ficha."
-    }
+      "checkedAt": "27/11/2026",
+      "status": "Datos contrastados con Citroën. Peso mínimo en vacío sin conductor. Autonomía WLTP y peso sujetos al equipamiento."
+    },
+    "weightKg": 1577,
+    "launchYear": 2025,
+    "batteryType": "NMC",
+    "frunkText": "Sin maletero delantero",
+    "priceInfo": {
+      "includesVat": true,
+      "includesAid": false,
+      "note": "Referencias al contado del configurador español para el 136 CV y el 156 CV. El importe varía con el acabado, el color y el equipamiento."
+    },
+    "chargingInfo": {
+      "dcMax": "100 kW",
+      "acMax": "7,4 kW monofásica / 11 kW trifásica, según cargador a bordo",
+      "fastChargeText": "20–80 %: 25 min (50 kWh) o 27 min (54 kWh), según Citroën",
+      "connector": "CCS2"
+    },
+    "warranty": {
+      "vehicle": "3 años de garantía legal para consumidores en España. Citroën We Care hasta 8 años / 160.000 km, sujeto al mantenimiento y a las condiciones del programa.",
+      "battery": "8 años / 160.000 km",
+      "capacity": "70 % de capacidad",
+      "source": "https://www.citroen.es/posventa/citroen-we-care.html"
+    },
+    "colorAvailability": "Colores del configurador español. La disponibilidad depende del acabado."
   },
   {
     "id": 98,
