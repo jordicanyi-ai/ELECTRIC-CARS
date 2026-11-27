@@ -16156,7 +16156,7 @@ const carsData = [
     "acceleration": "8,8–8,9 s",
     "dimensions": "4.652 × 1.870 × 1.691 mm",
     "charging": "160 kW CC · 11 kW CA",
-    "description": "SUV eléctrico de cinco plazas y tracción delantera. Fabricado en Rennes, Francia. Comparte la plataforma STLA Medium con el Peugeot E-3008 y el Opel Grandland Electric.",
+    "description": "SUV eléctrico de cinco plazas y tracción delantera, fabricado en Rennes, Francia. Ofrece dos baterías de 73 y 97 kWh útiles.",
     "highlights": [
       "Maletero de 565 litros VDA y 1.668 litros con los asientos traseros abatidos.",
       "Suspensión con amortiguadores progresivos hidráulicos y amplio espacio en las plazas traseras.",
