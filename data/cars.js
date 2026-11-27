@@ -18490,7 +18490,7 @@ const carsData = [
     "acceleration": "Por confirmar",
     "dimensions": "Por confirmar",
     "charging": "Por confirmar",
-    "description": "Pro, ProMax y ProMax AWD en una ficha. Los 437 km corresponden al AWD. Usar solo las tres variantes de batería.",
+    "description": "El C10 fue el primer modelo que Leapmotor diseñó para el mercado mundial. Llegó a Europa en 2024 junto al pequeño T03 y hoy se sitúa por encima del B10 como el SUV familiar de la marca. Su gama eléctrica va del Pro de 218 CV al ProMax AWD de 598 CV, mientras que el ProMax de tracción trasera ofrece la mayor autonomía, con 510 km WLTP.",
     "highlights": [],
     "considerations": [],
     "idealFor": [],
